@@ -1,0 +1,24 @@
+[
+  {
+    "title": "ANSSI Views on the Post-Quantum Cryptography Transition",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/guides/en-anssi-views-post-quantum-cryptography-transition",
+    "summary": "Position paper from ANSSI, the French national cybersecurity authority, setting out its views and planned phased approach for the transition to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "France National Quantum Strategy - Annual Report 2022",
+    "country": "FRA",
+    "issuingOrg": "France 2030",
+    "year": 2022,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://quantique.france2030.gouv.fr/wp-content/uploads/2024/05/Quantique_rapport_activite_2022_v8.fr2030.pdf",
+    "summary": "Annual report of the French national quantum strategy established in 2021 under the France 2030 plan, providing a roadmap for the government to coordinate and accelerate quantum research and industrialisation.",
+    "included": false
+  }
+]

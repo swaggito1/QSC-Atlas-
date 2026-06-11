@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Planning for Post-Quantum Cryptography",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
+    "summary": "Guidance from the Australian Signals Directorate's ACSC to prepare organisations for post-quantum cryptography, with advice on transition timelines, milestones, and a framework to map the transition.",
+    "included": true
+  },
+  {
+    "title": "Stay Ahead of the Quantum Threat with Post-Quantum Cryptography",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/stay-ahead-of-the-quantum-threat-with-post-quantum-cryptography",
+    "summary": "News item from the Australian Signals Directorate's ACSC announcing updated advice to help organisations plan and prepare for post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "The Quantum Safe Transition",
+    "country": "AUS",
+    "issuingOrg": "CSIRO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.csiro.au/-/media/D61/Reports/Quantum-safe-transition/Quantum-safe-transition-report-accessible.txt",
+    "summary": "Report from CSIRO, Australia's national science agency, on the quantum-safe transition, covering requirements for government agencies to begin testing quantum-safe systems.",
+    "included": false
+  }
+]

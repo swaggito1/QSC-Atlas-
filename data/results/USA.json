@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Post-Quantum Cryptography Initiative",
+    "country": "USA",
+    "issuingOrg": "CISA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "summary": "CISA's initiative page on preparing for post-quantum cryptography, with guidance to aid PQC adoption across hardware and software product categories.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography Standardization Project",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": null,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "summary": "NIST's post-quantum cryptography standardization project page, noting that with the first three final PQC standards released, organizations should begin migrating to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cybersecurity Resources",
+    "country": "USA",
+    "issuingOrg": "NSA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "summary": "NSA's resource hub on post-quantum cybersecurity for National Security Systems, including its position that quantum key distribution is not recommended for securing NSS data transmission.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography",
+    "country": "USA",
+    "issuingOrg": "DHS",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.dhs.gov/quantum",
+    "summary": "DHS guidance to help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially vulnerable data and systems.",
+    "included": true
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography",
+    "country": "USA",
+    "issuingOrg": "NIST NCCoE",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "summary": "NCCoE collaborative project on migration to post-quantum cryptography, addressing how to discover quantum-vulnerable public-key algorithms in hardware, software, and services and plan their replacement.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend How to Prepare Now",
+    "country": "USA",
+    "issuingOrg": "NSA",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "summary": "Joint CISA, NIST, and NSA press release announcing the Quantum-Readiness factsheet, recommending that organizations develop a quantum-readiness roadmap and prepare for implementation of post-quantum cryptographic standards.",
+    "included": true
+  }
+]

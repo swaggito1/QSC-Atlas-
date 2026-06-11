@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Stay ahead of the quantum threat with post-quantum cryptography",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/stay-ahead-of-the-quantum-threat-with-post-quantum-cryptography",
+    "description": "Get updated advice to help your organisation plan and prepare for post-quantum cryptography ... Authorised by the Australian Government, Canberra.",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products ...",
+    "markdown": ""
+  },
+  {
+    "title": "Australia's Formal Embrace of Post-Quantum Cryptography - LinkedIn",
+    "url": "https://www.linkedin.com/pulse/australias-formal-embrace-post-quantum-cryptography-what-bocharnikov-jbunc",
+    "description": "Under these new guidelines, all legacy cryptographic methods must be phased out in favor of PQC solutions by 2030, providing a relatively short ...",
+    "markdown": ""
+  },
+  {
+    "title": "Planning for post-quantum cryptography | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
+    "description": "Prepare your organisation for post-quantum cryptography with advice on transition timelines, milestones, and a framework to map transition ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Post Quantum Cryptography - UNSW",
+    "url": "https://www.unsw.edu.au/content/dam/images/canberra/unsw-canberra/ifcyber/stock/2025-03-stockimages/PQC-guide.pdf",
+    "description": "The Australian Signals Directorate (ASD) recommends migrating to PQC by 2030–2035, but these are guidelines, not mandates. To meet these ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "The report contains recommendations for organizations. NIST expects to publish in 2024, including steps to effectively prioritize migration ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA and NIST urge federal agencies to use quantum cryptography",
+    "url": "https://www.linkedin.com/posts/alec-wyhs-529a916a_agencies-explore-post-quantum-cryptography-activity-7333187733193940993-HK_D",
+    "description": "Federal agencies are being urged to incorporate post quantum cryptography requirements into acquisition processes to safeguard sensitive data. ...",
+    "markdown": ""
+  },
+  {
+    "title": "The Quantum Safe Transition - CSIRO",
+    "url": "https://www.csiro.au/-/media/D61/Reports/Quantum-safe-transition/Quantum-safe-transition-report-accessible.txt",
+    "description": "National Quantum Cybersecurity Migration Strategy Act in July 2025, which requires government agencies to start testing quantum-safe systems ...",
+    "markdown": ""
+  },
+  {
+    "title": "Australia releases CRQC strategy for post-quantum ...",
+    "url": "https://www.linkedin.com/posts/cyble-global_australia-urges-immediate-action-on-post-quantum-activity-7375883720517529600-u7IF",
+    "description": "... Quantum Cryptography (CRQC) strategy has been released, outlining a roadmap to ensure encryption remains safe in the era of quantum computing.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The question is no longer if you need to transition to quantum-safe cryptography, but how and when. This resource is designed to show a central view of how ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum-safe security: Progress towards next-generation ...",
+    "url": "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/",
+    "description": "The QSP strategy is guided by three priorities: Make Microsoft quantum safe by updating Microsoft first- and third-party services, supply chain ...",
+    "markdown": ""
+  }
+]

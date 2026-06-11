@@ -15,7 +15,7 @@ For a given country it:
    the public Atlas site renders.
 
 It is deliberately credit-frugal: search runs WITHOUT page-scraping by default, and
-only three queries per country.
+the query plan is capped per country (see Step 1 flags and Credit management).
 
 ## Prerequisites (already set up)
 
@@ -31,11 +31,30 @@ For each country, identified by its ISO3 code (for example `GBR`, `FRA`, `USA`):
 
 ### Step 1: gather candidates (Firecrawl)
 ```
-node scripts/scrape-country.mjs <ISO3>
+node scripts/scrape-country.mjs <ISO3> [--lite] [--deep] [--max N]
 ```
-This runs three targeted searches and writes `data/candidates/<ISO3>.json`
+This builds a query plan from `data/dorks.json` and writes `data/candidates/<ISO3>.json`
 (title, url, description for each unique result). It prints a compact list to the
-screen. Cost: roughly 3 to 5 Firecrawl credits (search only, no page scraping).
+screen.
+
+The default plan combines three kinds of query (site-scoped dorks find the agency
+position papers, parliamentary records, and native-language documents that generic
+English searches miss):
+- `site:` dorks against the country's institutional domains (agency, parliament,
+  standards body) listed in `data/dorks.json`;
+- native-language PQC terms (for example "cryptographie post-quantique",
+  "Post-Quanten-Kryptografie", "耐量子計算機暗号"), both OR-ed into the site dorks
+  and searched on their own;
+- the three generic English queries.
+
+Flags: `--lite` runs only the generic queries (cheapest); `--deep` also dorks the
+`deepSites` (parliament archives, central bank, regulators); `--max N` caps the
+query count (default 12). Countries without a `dorks.json` entry fall back to the
+generic queries; add an entry to upgrade them.
+
+Cost: each query is roughly one Firecrawl credit (search only, no page scraping).
+Default is ~6-9 credits per country, `--lite` ~3, `--deep` ~10-12. The script
+prints the query plan and cost estimate before searching.
 
 ### Step 2: classify (this is where Claude's judgement goes)
 Read `data/candidates/<ISO3>.json` and apply the rules in `scraper/SCRAPER_BRIEF.md`.
@@ -88,10 +107,14 @@ cat data/coverage.json
 
 ## Credit management (important)
 
-- Each country costs about 3 to 5 Firecrawl credits (search only).
+- Each search query costs roughly 1 Firecrawl credit. Defaults per country:
+  `--lite` ~3, default ~6-9, `--deep` ~10-12. The script prints the plan up front.
 - Do NOT add `{ scrape: true }` to searches unless a specific page genuinely needs its
   full text; page-scraping multiplies the cost.
-- A batch of 10 countries is roughly 30 to 50 credits. Size batches to your plan.
+- A default batch of 10 countries is roughly 60 to 90 credits. Size batches to your
+  plan; use `--lite` for low-priority countries, `--deep` for the QSC-active ones.
+- Re-running a country is dedupe-safe (ingest skips known URLs), so it is fine to
+  re-scrape a thin country with `--deep` later.
 
 ## Hard rules (do not break these)
 
@@ -136,8 +159,10 @@ profile fields a human fills in later.
   "QSC Data Analysis 26" page in Notion.
 - Notion `object_not_found`: the integration is not shared with the databases, or the
   wrong id is used. The `NOTION_DB_*` values are DATA SOURCE ids and are correct.
-- Search returns junk: tighten the queries in `scripts/scrape-country.mjs`
-  (`queriesFor`), or just exclude the junk during classification.
+- Search returns junk: tighten the country's entry in `data/dorks.json` (sites,
+  terms, extraQueries), or just exclude the junk during classification.
+- A country's harvest is thin: add its agency/parliament/standards domains and
+  native-language PQC terms to `data/dorks.json`, then re-run with `--deep`.
 
 ## Kickoff prompt for a new chat
 
@@ -157,3 +182,25 @@ For each one, in order:
 Stay credit-frugal (search only, no page scraping). Do NOT fill country profile
 analytical fields. Give me a short summary per country (added / flagged / skipped).
 ```
+
+## Step 4 (end of every scraping session): hand off the mise en forme
+
+The scraper only adds documents; the analytical profile fields (the "mise en forme")
+are a second pass governed by `scraper/PROFILE_GUIDE.md`. End every scraping session
+by printing a handoff block for the user to paste into the profile-elaboration
+conversation (or a fresh session in `~/qsc-atlas`):
+
+```
+MISE EN FORME HANDOFF
+Scraped this session: <ISO3 list, with included/flagged counts each>
+No qualifying documents (set Placeholder): <ISO3 list or "none">
+Inputs are on disk: data/results/<ISO3>.json and data/candidates/<ISO3>.json.
+Next: follow scraper/PROFILE_GUIDE.md - draft data/profiles/<ISO3>.json for each
+country, then run:
+  node scripts/update-profile.mjs data/profiles/<A>.json data/profiles/<B>.json ... --deploy
+Anything noteworthy for review: <one line per oddity, e.g. "JPN: only QKD material
+found, flagged not-included; re-scrape with --deep">
+```
+
+Also commit the session's data files (results, candidates, coverage, dorks) so the
+handoff is reproducible.

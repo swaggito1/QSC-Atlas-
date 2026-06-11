@@ -1,0 +1,18 @@
+{
+  "iso3": "USA",
+  "summary": "The United States sets the pace through NIST, which has released the first three final post-quantum standards, while CISA, the NSA and DHS direct federal agencies and critical infrastructure to plan and execute migration. National Security Systems follow the NSA CNSA 2.0 suite, with full migration targeted by 2035.",
+  "dominantProcess": "NIST",
+  "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
+  "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
+  "processParticipation": "NIST PQC Standardization | runs the process",
+  "migrationTimeline": "2035 | National Security Systems complete migration to CNSA 2.0",
+  "targetCompletion": "2035",
+  "govActors": "NIST | National Institute of Standards and Technology, runs the post-quantum standardisation process\nCISA | Cybersecurity and Infrastructure Security Agency, leads migration guidance for critical infrastructure\nNSA | National Security Agency, sets CNSA 2.0 requirements for National Security Systems\nDHS | Department of Homeland Security, transition preparation guidance",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NIST standards + algorithms: csrc.nist.gov project page (results summary)",
+    "CISA/NSA/DHS roles: respective ingested pages",
+    "2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub",
+    "Verifier: FIPS names + algorithm names not in captured text (weak) - REVIEW"
+  ]
+}

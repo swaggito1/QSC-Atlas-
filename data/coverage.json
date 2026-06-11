@@ -3,5 +3,30 @@
     "lastScraped": "2026-06-11T21:06:18.479Z",
     "docCount": 3,
     "status": "Partial"
+  },
+  "USA": {
+    "lastScraped": "2026-06-11T21:54:30.778Z",
+    "docCount": 6,
+    "status": "Partial"
+  },
+  "FRA": {
+    "lastScraped": "2026-06-11T21:55:38.694Z",
+    "docCount": 2,
+    "status": "Partial"
+  },
+  "DEU": {
+    "lastScraped": "2026-06-11T21:56:19.283Z",
+    "docCount": 1,
+    "status": "Partial"
+  },
+  "AUS": {
+    "lastScraped": "2026-06-11T21:57:21.295Z",
+    "docCount": 3,
+    "status": "Partial"
+  },
+  "JPN": {
+    "lastScraped": "2026-06-11T22:13:49.463Z",
+    "docCount": 10,
+    "status": "Partial"
   }
 }

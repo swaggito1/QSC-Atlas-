@@ -1,0 +1,14 @@
+{
+  "iso3": "DEU",
+  "summary": "Germany's posture is set by the BSI, whose guideline on quantum-safe cryptography lays out fundamentals, current developments and recommendations. The BSI recommends hybrid solutions and conservative algorithm choices, and has published no fixed national migration deadline.",
+  "hybridDeployment": "Recommended",
+  "targetCompletion": "None stated",
+  "govActors": "BSI | Federal Office for Information Security, sets national cryptographic recommendations",
+  "dataStatus": "Partial",
+  "provenance": [
+    "BSI guideline: ingested BSI topic page",
+    "Hybrid recommended + conservative choices: BSI guideline doctrine - REVIEW",
+    "Mixed process: BSI TR recommendations alongside NIST standards - REVIEW",
+    "dominantProcess omitted: Mixed unattested in captured text (verifier)"
+  ]
+}

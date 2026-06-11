@@ -1,0 +1,101 @@
+[
+  {
+    "title": "CRYPTREC Cryptographic Technology Guideline - Post-Quantum Cryptography (FY2024 Edition)",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2024,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cryptrec.go.jp/report/cryptrec-gl-2007-2024.pdf",
+    "summary": "FY2024 edition of CRYPTREC's cryptographic technology guideline on post-quantum cryptography (耐量子計算機暗号), covering PQC public-key algorithms with quantum resistance for Japanese government and industry use.",
+    "included": true
+  },
+  {
+    "title": "CRYPTREC Cryptographic Technology Guideline - Post-Quantum Cryptography (2022)",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2022,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cryptrec.go.jp/report/cryptrec-gl-2004-2022.pdf",
+    "summary": "First edition of CRYPTREC's guideline on post-quantum cryptography (GL-2004-2022), setting out the necessity of PQC and surveying candidate algorithm families.",
+    "included": true
+  },
+  {
+    "title": "Publication of the FY2024 PQC Guideline and PQC Research Trends Survey Report",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cryptrec.go.jp/topics/cryptrec_20250402_gl_2007_2024.html",
+    "summary": "CRYPTREC announcement (2 April 2025) of the publication of the FY2024 post-quantum cryptography guideline and an accompanying survey report on PQC research trends.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic Technology Evaluation Committee Activity Report (CRYPTREC Symposium 2025)",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T3",
+    "url": "https://www.cryptrec.go.jp/symposium/2025_cryptrec-eval.pdf",
+    "summary": "Activity report of CRYPTREC's Cryptographic Technology Evaluation Committee, covering the PQC working group's monitoring of developments and security and implementation-performance evaluation of the NIST standards FIPS 203, 204 and 205.",
+    "included": true
+  },
+  {
+    "title": "Use of Post-Quantum Cryptography in Government Agencies (Cross-Ministerial Policy Council)",
+    "country": "JPN",
+    "issuingOrg": "Cabinet Secretariat",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.cas.go.jp/jp/seisaku/pqc/index.html",
+    "summary": "Cabinet Secretariat page for the cross-ministerial council examining and promoting measures for the use of post-quantum cryptography (PQC) in Japanese government agencies, coordinated across relevant ministries.",
+    "included": true
+  },
+  {
+    "title": "Digital Minister Press Conference on Post-Quantum Cryptography (21 November 2025)",
+    "country": "JPN",
+    "issuingOrg": "Digital Agency",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.digital.go.jp/speech/minister-251121-01",
+    "summary": "Press conference by Japan's Digital Minister discussing post-quantum cryptography (PQC) as cryptography secure against both quantum and conventional computers, in the context of government adoption.",
+    "included": true
+  },
+  {
+    "title": "Next-Generation My Number Card Task Force - Interim Summary",
+    "country": "JPN",
+    "issuingOrg": "Digital Agency",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/088eeae8-1d38-4267-8ac4-d576eabf2d8d/a01b477f/20231226_meeting_mynumber-card-renewal_outline_07.pdf",
+    "summary": "Interim summary of the Digital Agency task force on the next-generation My Number identity card, which keeps open the future adoption of post-quantum cryptography (PQC) in case current schemes are compromised before 2050.",
+    "included": true
+  },
+  {
+    "title": "Digital Agency FY2026 Budget and Organisation Outline",
+    "country": "JPN",
+    "issuingOrg": "Digital Agency",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/f4f6b57f-7779-4950-bbb5-07a265cb1d8f/5fe8b2c2/20260113_policies_budget_outline_02.pdf",
+    "summary": "Digital Agency outline of the FY2026 budget and staffing plan, listing the promotion of government migration to post-quantum cryptography (PQC) as a trust-policy priority with new staff positions.",
+    "included": true
+  },
+  {
+    "title": "Secretariat Briefing - Verifiable Credentials / Digital Identity Wallet Governance Working Group",
+    "country": "JPN",
+    "issuingOrg": "Digital Agency",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/29552555-423a-4383-9078-32ca8cd836f7/fa54548a/20260108_meeting_vc-diw-governance-wg-tec_outline_01.pdf",
+    "summary": "Digital Agency secretariat briefing for the working group on verifiable credentials and digital identity wallet governance, noting the importance of crypto-agility in anticipation of PQC adoption. Flagged for review: PQC is a passing reference, not the document's subject.",
+    "included": false
+  }
+]

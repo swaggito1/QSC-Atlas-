@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Quantum Technologies and Quantum-Safe Cryptography",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-post-quanten-kryptografie_node.html",
+    "summary": "BSI's topic page on quantum technologies and quantum-safe cryptography, presenting its guideline 'Quantum-safe cryptography - fundamentals, current developments and recommendations'.",
+    "included": true
+  }
+]

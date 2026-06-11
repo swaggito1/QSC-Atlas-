@@ -1,0 +1,9 @@
+{
+  "iso3": "JPN",
+  "summary": "Japan's approach is evaluation-led. CRYPTREC, the national cryptographic evaluation body, publishes post-quantum cryptography guidelines and research surveys, and a cross-ministerial council under the Cabinet Secretariat promotes the use of post-quantum cryptography across government agencies. The Digital Agency carries the migration among its trust-policy priorities.",
+  "dominantProcess": "Mixed",
+  "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
+  "govActors": "CRYPTREC | National cryptographic technology evaluation body, publishes PQC guidelines\nCabinet Secretariat | Runs the cross-ministerial council on government PQC adoption\nDigital Agency | Carries PQC migration in its trust-policy priorities",
+  "dataStatus": "Partial",
+  "provenance": ["CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows", "FIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)", "Cross-ministerial council: Cabinet Secretariat row", "Digital Agency priorities: FY2026 budget row", "Mixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW", "No timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule"]
+}

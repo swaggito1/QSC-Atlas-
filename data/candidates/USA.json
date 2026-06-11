@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography - NIST CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "description": "With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "description": "NSA does not recommend the usage of quantum key distribution and quantum cryptography for securing the transmission of data in National Security Systems (NSS) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "On August 13, 2024, NIST released three principle PQC standards, “which are mandatory for federal systems,”[3] and recommended other ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | Homeland Security",
+    "url": "https://www.dhs.gov/quantum",
+    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC) Compliance Standards",
+    "url": "https://www.safelogic.com/compliance/pqc-standards",
+    "description": "Governments around the world are issuing directives, guidance, and timelines to sunset vulnerable algorithms and mandate migration to quantum-resistant ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "In 2025, the UK's National Center for Cybersecurity (NCSC) published a detailed roadmap and Next Steps in preparing for post-quantum cryptography including ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum-safe security: Progress towards next-generation ... - Microsoft",
+    "url": "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/",
+    "description": "Microsoft is proactively leading the transition to quantum-safe security by advancing post-quantum cryptography, collaborating with global ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "NIST's New Standards: The August 2024 launch of post-quantum cryptography (PQC) standards signals the need for immediate action. ​Lengthy Transition: Migrating ...",
+    "markdown": ""
+  },
+  {
+    "title": "From risk to readiness: A guide to quantum safety - Guidehouse",
+    "url": "https://guidehouse.com/insights/technology/2025/quantum-safe-cryptography",
+    "description": "How financial institutions can leverage post-quantum cryptography to proactively and comprehensively enhance data security.",
+    "markdown": ""
+  }
+]

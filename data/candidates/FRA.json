@@ -1,0 +1,92 @@
+[
+  {
+    "title": "ANSSI views on the Post-Quantum Cryptography transition",
+    "url": "https://messervices.cyber.gouv.fr/guides/en-anssi-views-post-quantum-cryptography-transition",
+    "description": "As the national cybersecurity authority in France, ANSSI has followed closely and participated to the progress in post-quantum cryptography. ANSSI has planned ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "PQShield comprises a world-class collaboration of post-quantum cryptographers, engineers, and operators. We've helped shape all of the first international PQC ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] FRANCE NATIONAL QUANTUM STRATEGY ANNUAL REPORT 2022",
+    "url": "https://quantique.france2030.gouv.fr/wp-content/uploads/2024/05/Quantique_rapport_activite_2022_v8.fr2030.pdf",
+    "description": "The french quantum strategy established in 2021, and supported by France. 2030 plan provides a roadmap for the government to coordinate and accelerate research ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] STRENGTHENING THE EU TRANSITION TO A QUANTUM-SAFE ...",
+    "url": "https://cdn.ceps.eu/2025/12/2025-12-Quantum-TF-report-formatted.pdf",
+    "description": "In Europe, Germany, France, and the Netherlands have taken a leading role in issuing guidance and running post- quantum cryptography (PQC) pilot ...",
+    "markdown": ""
+  },
+  {
+    "title": "2026, the year of Post-Quantum Cybersecurity Planning - LinkedIn",
+    "url": "https://www.linkedin.com/pulse/2026-year-post-quantum-cybersecurity-planning-qurisk-nndke",
+    "description": "On 13 January 2026, the G7 Cyber Expert Group (G7 CEG) issued a statement on advancing a coordinated roadmap for the transition to post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  },
+  {
+    "title": "French National Quantum Update -- March 2024",
+    "url": "https://thequantuminsider.com/2024/03/29/french-national-quantum-update-march-2024/",
+    "description": "France also launched PROQCIMA, a program that aims to have two prototypes of universal quantum computers of French design by 2030. It was also ...",
+    "markdown": ""
+  }
+]

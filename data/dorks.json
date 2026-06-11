@@ -1,0 +1,223 @@
+{
+  "comment": "Per-country search-query config for scripts/scrape-country.mjs. 'sites' are institutional domains hit with site: dorks on every run; 'deepSites' (parliament, central bank, regulators) are added with --deep; 'terms' are native-language PQC phrases OR-ed into site queries and also searched on their own; 'extraQueries' are literal extra searches ({name} is replaced by the country name). Countries without an entry fall back to the generic queries. Each query costs roughly one Firecrawl credit. Edit freely.",
+  "generic": [
+    "{name} post-quantum cryptography government guidance",
+    "{name} national cyber security agency post-quantum migration",
+    "{name} quantum-safe cryptography strategy roadmap"
+  ],
+  "countries": {
+    "USA": {
+      "terms": [],
+      "sites": ["nist.gov", "cisa.gov", "nsa.gov", "whitehouse.gov"],
+      "deepSites": ["congress.gov", "gao.gov", "dhs.gov"],
+      "extraQueries": [
+        "site:bidenwhitehouse.archives.gov post-quantum OR PQC",
+        "OMB memorandum federal agencies post-quantum cryptography migration"
+      ]
+    },
+    "GBR": {
+      "terms": [],
+      "sites": ["ncsc.gov.uk", "gov.uk", "parliament.uk"],
+      "deepSites": ["bankofengland.co.uk"],
+      "extraQueries": []
+    },
+    "FRA": {
+      "terms": ["cryptographie post-quantique"],
+      "sites": ["cyber.gouv.fr", "assemblee-nationale.fr", "senat.fr"],
+      "deepSites": ["banque-france.fr", "legifrance.gouv.fr", "quantique.france2030.gouv.fr"],
+      "extraQueries": ["ANSSI avis transition cryptographie post-quantique"]
+    },
+    "DEU": {
+      "terms": ["Post-Quanten-Kryptografie", "quantensichere Kryptografie"],
+      "sites": ["bsi.bund.de", "bundestag.de"],
+      "deepSites": ["bundesbank.de", "bundesrat.de", "bmbf.de"],
+      "extraQueries": ["BSI TR-02102 quantensicher Empfehlungen Migration"]
+    },
+    "AUS": {
+      "terms": [],
+      "sites": ["cyber.gov.au", "aph.gov.au", "industry.gov.au"],
+      "deepSites": ["asd.gov.au", "csiro.au", "rba.gov.au"],
+      "extraQueries": ["Australia National Quantum Strategy post-quantum cryptography"]
+    },
+    "JPN": {
+      "terms": ["耐量子計算機暗号", "ポスト量子暗号"],
+      "sites": ["cryptrec.go.jp", "nisc.go.jp", "digital.go.jp"],
+      "deepSites": ["soumu.go.jp", "meti.go.jp", "boj.or.jp"],
+      "extraQueries": ["Japan government agencies post-quantum cryptography transition 2035"]
+    },
+    "CAN": {
+      "terms": ["cryptographie post-quantique"],
+      "sites": ["cyber.gc.ca", "canada.ca", "parl.ca"],
+      "deepSites": ["bankofcanada.ca"],
+      "extraQueries": []
+    },
+    "NLD": {
+      "terms": ["quantumveilige cryptografie"],
+      "sites": ["ncsc.nl", "rijksoverheid.nl", "tweedekamer.nl"],
+      "deepSites": ["aivd.nl", "dnb.nl"],
+      "extraQueries": ["PQC Migration Handbook AIVD TNO CWI"]
+    },
+    "KOR": {
+      "terms": ["양자내성암호"],
+      "sites": ["kisa.or.kr", "msit.go.kr", "kpqc.or.kr"],
+      "deepSites": ["assembly.go.kr", "etri.re.kr"],
+      "extraQueries": []
+    },
+    "SGP": {
+      "terms": [],
+      "sites": ["csa.gov.sg", "mas.gov.sg", "imda.gov.sg"],
+      "deepSites": ["parliament.gov.sg"],
+      "extraQueries": []
+    },
+    "CHE": {
+      "terms": ["Post-Quanten-Kryptografie", "cryptographie post-quantique"],
+      "sites": ["ncsc.admin.ch", "admin.ch"],
+      "deepSites": ["parlament.ch", "snb.ch"],
+      "extraQueries": []
+    },
+    "EUU": {
+      "terms": [],
+      "sites": ["digital-strategy.ec.europa.eu", "enisa.europa.eu", "europarl.europa.eu"],
+      "deepSites": ["etsi.org", "eur-lex.europa.eu", "ecb.europa.eu"],
+      "extraQueries": ["NIS Cooperation Group coordinated implementation roadmap post-quantum cryptography"]
+    },
+    "ITA": {
+      "terms": ["crittografia post-quantistica"],
+      "sites": ["acn.gov.it"],
+      "deepSites": ["bancaditalia.it", "senato.it"],
+      "extraQueries": []
+    },
+    "ESP": {
+      "terms": ["criptografía postcuántica", "criptografía post-cuántica"],
+      "sites": ["ccn-cert.cni.es", "incibe.es"],
+      "deepSites": ["bde.es", "congreso.es"],
+      "extraQueries": []
+    },
+    "POL": {
+      "terms": ["kryptografia postkwantowa"],
+      "sites": ["gov.pl", "cert.pl"],
+      "deepSites": ["nask.pl", "nbp.pl", "sejm.gov.pl"],
+      "extraQueries": []
+    },
+    "SWE": {
+      "terms": ["kvantsäker kryptografi", "postkvantkryptografi"],
+      "sites": ["msb.se", "ncsc.se"],
+      "deepSites": ["riksbank.se", "riksdagen.se", "pts.se"],
+      "extraQueries": []
+    },
+    "DNK": {
+      "terms": ["kvantesikker kryptografi"],
+      "sites": ["cfcs.dk"],
+      "deepSites": ["nationalbanken.dk", "ft.dk", "digst.dk"],
+      "extraQueries": []
+    },
+    "FIN": {
+      "terms": ["postkvanttikryptografia", "kvanttiturvallinen kryptografia"],
+      "sites": ["kyberturvallisuuskeskus.fi", "traficom.fi"],
+      "deepSites": ["suomenpankki.fi", "eduskunta.fi"],
+      "extraQueries": []
+    },
+    "IRL": {
+      "terms": [],
+      "sites": ["ncsc.gov.ie"],
+      "deepSites": ["centralbank.ie", "oireachtas.ie"],
+      "extraQueries": []
+    },
+    "AUT": {
+      "terms": ["Post-Quanten-Kryptografie"],
+      "sites": ["onlinesicherheit.gv.at", "a-sit.at"],
+      "deepSites": ["parlament.gv.at", "oenb.at"],
+      "extraQueries": []
+    },
+    "BEL": {
+      "terms": ["cryptographie post-quantique", "post-kwantumcryptografie"],
+      "sites": ["ccb.belgium.be"],
+      "deepSites": ["nbb.be", "dekamer.be"],
+      "extraQueries": []
+    },
+    "CZE": {
+      "terms": ["postkvantová kryptografie"],
+      "sites": ["nukib.gov.cz"],
+      "deepSites": ["cnb.cz", "psp.cz"],
+      "extraQueries": []
+    },
+    "PRT": {
+      "terms": ["criptografia pós-quântica"],
+      "sites": ["cncs.gov.pt"],
+      "deepSites": ["bportugal.pt", "parlamento.pt"],
+      "extraQueries": []
+    },
+    "GRC": {
+      "terms": ["μετακβαντική κρυπτογραφία"],
+      "sites": ["mindigital.gr"],
+      "deepSites": [],
+      "extraQueries": []
+    },
+    "HUN": {
+      "terms": ["posztkvantum-kriptográfia"],
+      "sites": ["nki.gov.hu"],
+      "deepSites": ["mnb.hu"],
+      "extraQueries": []
+    },
+    "ROU": {
+      "terms": ["criptografie post-cuantică"],
+      "sites": ["dnsc.ro"],
+      "deepSites": ["bnr.ro"],
+      "extraQueries": []
+    },
+    "BGR": {
+      "terms": ["постквантова криптография"],
+      "sites": [],
+      "deepSites": [],
+      "extraQueries": []
+    },
+    "HRV": {
+      "terms": ["postkvantna kriptografija"],
+      "sites": ["cert.hr"],
+      "deepSites": [],
+      "extraQueries": []
+    },
+    "SVK": {
+      "terms": ["postkvantová kryptografia"],
+      "sites": ["nbu.gov.sk"],
+      "deepSites": ["nbs.sk"],
+      "extraQueries": []
+    },
+    "SVN": {
+      "terms": ["postkvantna kriptografija"],
+      "sites": ["gov.si", "si-cert.si"],
+      "deepSites": [],
+      "extraQueries": []
+    },
+    "EST": {
+      "terms": ["kvantkindel krüptograafia"],
+      "sites": ["ria.ee"],
+      "deepSites": ["riigikogu.ee", "eestipank.ee"],
+      "extraQueries": []
+    },
+    "LVA": {
+      "terms": ["pēckvantu kriptogrāfija"],
+      "sites": ["cert.lv"],
+      "deepSites": [],
+      "extraQueries": []
+    },
+    "LTU": {
+      "terms": ["postkvantinė kriptografija"],
+      "sites": ["nksc.lt"],
+      "deepSites": ["lb.lt"],
+      "extraQueries": []
+    },
+    "LUX": {
+      "terms": ["cryptographie post-quantique"],
+      "sites": ["nc3.lu", "circl.lu"],
+      "deepSites": ["bcl.lu"],
+      "extraQueries": []
+    },
+    "CYP": {
+      "terms": [],
+      "sites": ["dsa.cy"],
+      "deepSites": [],
+      "extraQueries": []
+    }
+  }
+}

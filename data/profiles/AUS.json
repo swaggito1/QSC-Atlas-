@@ -1,0 +1,9 @@
+{
+  "iso3": "AUS",
+  "summary": "Australia's transition is led by the Australian Signals Directorate, whose guidance sets transition timelines and milestones for organisations. Australia runs one of the most compressed official timelines, with migration to be complete by 2030.",
+  "migrationTimeline": "2026 | Transition plan in place\n2028 | Migration underway\n2030 | Migration complete",
+  "targetCompletion": "2030",
+  "govActors": "ASD | Australian Signals Directorate, national cyber security agency (ACSC)",
+  "dataStatus": "Partial",
+  "provenance": ["ASD guidance with timelines: ingested cyber.gov.au pages", "2026/2028/2030: backend brief reference line", "dominantProcess omitted: NIST link unattested in captured text (verifier)"]
+}

@@ -138,6 +138,44 @@ export async function findCountryByIso3(countriesDsId, iso3) {
 }
 
 /**
+ * Write a country's analytical profile fields (the "mise en forme" step).
+ * `fields` maps profile keys to values; only keys present are written, so a
+ * partial profile never blanks existing data. Creates the row if missing.
+ */
+export async function updateCountryProfile(countriesDsId, iso3, name, fields) {
+  const props = await getSchema(countriesDsId);
+  const titleName = findByType(props, 'title') ?? 'Country';
+  const values = {};
+  const map = {
+    summary: 'Summary',
+    govActors: 'Gov Actors',
+    standardFamilies: 'Standard Families',
+    algorithms: 'Algorithms',
+    dominantProcess: 'Dominant Standards Process',
+    processParticipation: 'Process Participation',
+    hybridDeployment: 'Hybrid Deployment',
+    migrationTimeline: 'Migration Timeline',
+    targetCompletion: 'Target Completion',
+    dataStatus: 'Data Status',
+  };
+  for (const [key, propName] of Object.entries(map)) {
+    if (fields[key] !== undefined && fields[key] !== null) values[propName] = fields[key];
+  }
+  values['Last Updated'] = new Date().toISOString().slice(0, 10);
+
+  const existing = await findCountryByIso3(countriesDsId, iso3);
+  if (existing) {
+    await notion.pages.update({ page_id: existing.id, properties: buildProps(props, values) });
+    return existing.id;
+  }
+  const page = await createPage(
+    countriesDsId,
+    buildProps(props, { [titleName]: name, ISO3: iso3, ...values }),
+  );
+  return page.id;
+}
+
+/**
  * Create the country row if missing, or update only its Data Status if present.
  * Never overwrites profile fields (dominant process, timeline, etc.) - those are
  * left for human review per the brief.
