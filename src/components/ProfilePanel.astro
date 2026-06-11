@@ -1,0 +1,251 @@
+---
+// The country profile: the heart of the site. Renders the sections in the brief's
+// order with calm empty states. Used both as the slide-in panel on the map (later,
+// by Claude Design) and as the body of the country profile page. Institution names
+// link through to the Documents tool pre-filtered to that issuing organisation.
+import ProcessChip from './ProcessChip.astro';
+import MigrationTimeline from './MigrationTimeline.astro';
+import { parseNameRole, parseList } from '../lib/parse';
+
+interface CountryData {
+  country: string;
+  iso3: string;
+  summary?: string | null;
+  govActors?: string | null;
+  standardFamilies?: string | null;
+  algorithms?: string | null;
+  dominantProcess?: string | null;
+  processParticipation?: string | null;
+  hybridDeployment?: string | null;
+  migrationTimeline?: string | null;
+  targetCompletion?: string | null;
+  lastUpdated?: string | null;
+}
+interface DocData {
+  title: string;
+  issuingOrg?: string | null;
+  year?: number | null;
+  tier?: string | null;
+  url?: string | null;
+}
+interface Props {
+  country: CountryData;
+  documents?: DocData[];
+}
+const { country, documents = [] } = Astro.props;
+
+const families = parseList(country.standardFamilies);
+const algorithms = parseList(country.algorithms);
+const govActors = parseNameRole(country.govActors);
+const participation = parseNameRole(country.processParticipation);
+const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
+---
+
+<article class="profile">
+  <header class="profile-head">
+    <h1>{country.country}</h1>
+    <ProcessChip value={country.dominantProcess} />
+  </header>
+
+  {/* 1. Summary */}
+  {
+    country.summary ? (
+      <p class="prose summary">{country.summary}</p>
+    ) : (
+      <p class="empty">No summary recorded yet.</p>
+    )
+  }
+
+  {/* 2. Standards and algorithms */}
+  <section class="block">
+    <h2>Standards and algorithms</h2>
+    {
+      families.length || algorithms.length ? (
+        <dl class="data">
+          {families.length > 0 && (
+            <div>
+              <dt>Standard families</dt>
+              <dd>{families.join(', ')}</dd>
+            </div>
+          )}
+          {algorithms.length > 0 && (
+            <div>
+              <dt>Algorithms</dt>
+              <dd class="mono">{algorithms.join(', ')}</dd>
+            </div>
+          )}
+        </dl>
+      ) : (
+        <p class="empty">No standards or algorithms recorded yet.</p>
+      )
+    }
+  </section>
+
+  {/* 3. Hybrid stance */}
+  <section class="block">
+    <h2>Hybrid stance</h2>
+    <p class="hybrid">{country.hybridDeployment?.trim() || 'None stated'}</p>
+  </section>
+
+  {/* 4. Migration timeline */}
+  <section class="block">
+    <h2>Migration timeline</h2>
+    <MigrationTimeline
+      raw={country.migrationTimeline}
+      process={country.dominantProcess}
+      target={country.targetCompletion}
+    />
+    {country.targetCompletion && <p class="target mono">Target completion: {country.targetCompletion}</p>}
+  </section>
+
+  {/* 5. International standards processes */}
+  {
+    participation.length > 0 && (
+      <section class="block">
+        <h2>International standards processes</h2>
+        <ul class="actors">
+          {participation.map((p) => (
+            <li>
+              <span class="actor-name">{p.name}</span>
+              {p.role && <span class="actor-role">{p.role}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {/* 6. Standards-body actors */}
+  <section class="block">
+    <h2>Governmental and standards bodies</h2>
+    {
+      govActors.length ? (
+        <ul class="actors">
+          {govActors.map((a) => (
+            <li>
+              <a class="actor-name" href={orgLink(a.name)}>
+                {a.name}
+              </a>
+              {a.role && <span class="actor-role">{a.role}</span>}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">No institutional actors recorded yet.</p>
+      )
+    }
+  </section>
+
+  {/* 7. Key documents */}
+  <section class="block">
+    <h2>Key institutional documents</h2>
+    {
+      documents.length ? (
+        <ul class="docs">
+          {documents.map((d) => (
+            <li>
+              <a href={d.url ?? '#'} target={d.url ? '_blank' : undefined} rel={d.url ? 'noopener' : undefined}>
+                {d.title}
+              </a>
+              <span class="doc-meta mono">
+                {[d.issuingOrg, d.year, d.tier].filter(Boolean).join(' · ')}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">No institutional documents recorded yet.</p>
+      )
+    }
+  </section>
+
+  {country.lastUpdated && <p class="updated mono">Last updated {country.lastUpdated}</p>}
+</article>
+
+<style>
+  .profile {
+    max-width: 40rem;
+  }
+  .profile-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-4);
+  }
+  .profile-head h1 {
+    font-family: var(--font-reading);
+    font-size: 2rem;
+    margin: 0;
+  }
+  .summary {
+    margin-bottom: var(--space-6);
+  }
+  .block {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .block h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+  }
+  .data {
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .data dt {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .data dd {
+    margin: 0;
+  }
+  .hybrid {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .actors,
+  .docs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .actor-name {
+    font-weight: 600;
+  }
+  .actor-role {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+  }
+  .docs li {
+    display: grid;
+    gap: 2px;
+  }
+  .doc-meta {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .target {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    margin-top: var(--space-2);
+  }
+  .empty {
+    color: var(--ink-muted);
+    font-style: italic;
+    margin: 0;
+  }
+  .updated {
+    margin-top: var(--space-8);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>

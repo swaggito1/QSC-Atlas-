@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProcessChip from '../../components/ProcessChip.astro';
+import { getCollection } from 'astro:content';
+
+const countries = (await getCollection('countries')).sort((a, b) =>
+  a.data.country.localeCompare(b.data.country),
+);
+---
+
+<Base title="Countries">
+  <div class="container">
+    <h1>Countries</h1>
+    <p class="prose intro">
+      Every country for which institutional QSC documents are recorded. Browse here, or use the
+      <a href="/">map</a>.
+    </p>
+
+    {
+      countries.length ? (
+        <ul class="grid">
+          {countries.map((c) => (
+            <li class="card">
+              <a href={`/countries/${c.data.iso3.toLowerCase()}`} class="card-title">
+                {c.data.country}
+              </a>
+              <ProcessChip value={c.data.dominantProcess} />
+              {c.data.targetCompletion && (
+                <span class="target mono">Target: {c.data.targetCompletion}</span>
+              )}
+              {c.data.summary && <p class="clip">{c.data.summary}</p>}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">
+          No country profiles are recorded yet. They will appear here once data is loaded from
+          Notion.
+        </p>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-8);
+  }
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-6);
+  }
+  .card {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    background: var(--surface);
+    align-content: start;
+  }
+  .card-title {
+    font-family: var(--font-reading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .target {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .clip {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .empty {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+</style>

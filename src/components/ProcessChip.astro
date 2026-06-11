@@ -1,0 +1,46 @@
+---
+// A small chip showing a country's standards process in its functional colour,
+// with the plain-language label. One of the only places colour echoes off the map.
+import { processMeta } from '../lib/process';
+
+interface Props {
+  value: string | null | undefined;
+}
+const { value } = Astro.props;
+const meta = processMeta(value);
+---
+
+{
+  meta ? (
+    <span class="process-chip" style={`--chip:${meta.color}`}>
+      <span class="dot" aria-hidden="true" />
+      {meta.label}
+    </span>
+  ) : (
+    <span class="process-chip process-chip--none">No data recorded</span>
+  )
+}
+
+<style>
+  .process-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-instrument);
+    font-size: 0.85rem;
+    padding: 0.2em 0.6em;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .dot {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: var(--chip);
+  }
+  .process-chip--none {
+    color: var(--ink-muted);
+  }
+</style>

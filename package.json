@@ -1,0 +1,28 @@
+{
+  "name": "qsc-atlas",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "dump": "node --experimental-strip-types scripts/dump-notion.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@notionhq/client": "^5.22.0",
+    "astro": "^5.5.0",
+    "firecrawl": "^4.25.3",
+    "fuse.js": "^7.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "world-countries": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.7.0"
+  }
+}

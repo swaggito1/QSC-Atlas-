@@ -1,0 +1,134 @@
+---
+// The migration timeline: a horizontal axis fixed from 2025 to 2036 so countries
+// are visually comparable (a country finishing in 2030 sits left of one finishing
+// 2035). Milestones are ticks at their year. The final marker may carry the
+// country's process colour. Empty state is a calm statement, never a broken visual.
+import { parseTimeline } from '../lib/parse';
+import { processMeta } from '../lib/process';
+
+interface Props {
+  raw: string | null | undefined;
+  process?: string | null;
+  target?: string | null;
+}
+const { raw, process = null, target = null } = Astro.props;
+
+const AXIS_START = 2025;
+const AXIS_END = 2036;
+const span = AXIS_END - AXIS_START;
+const pct = (year: number) => Math.max(0, Math.min(100, ((year - AXIS_START) / span) * 100));
+
+const milestones = parseTimeline(raw);
+const numeric = milestones.filter((m) => typeof m.year === 'number') as { year: number; label: string }[];
+const accent = processMeta(process)?.color ?? 'var(--ink)';
+const today = new Date().getFullYear();
+const phased = target === 'Phased (no fixed end)' || milestones.some((m) => typeof m.year === 'string');
+const hasData = milestones.length > 0;
+---
+
+{
+  hasData ? (
+    <figure class="timeline" style={`--accent:${accent}`}>
+      <div class="track">
+        {today >= AXIS_START && today <= AXIS_END && (
+          <div class="today" style={`left:${pct(today)}%`}>
+            <span class="today-label mono">today</span>
+          </div>
+        )}
+        {numeric.map((m, i) => (
+          <div class="milestone" style={`left:${pct(m.year)}%`}>
+            <span class="year mono">{m.year}</span>
+            <span class:list={['tick', { 'tick--final': i === numeric.length - 1 }]} />
+            <span class="label">{m.label}</span>
+          </div>
+        ))}
+        {phased && <span class="phased mono">phased</span>}
+      </div>
+      <div class="ends mono">
+        <span>{AXIS_START}</span>
+        <span>{AXIS_END}</span>
+      </div>
+    </figure>
+  ) : (
+    <p class="timeline-empty">no published migration timeline</p>
+  )
+}
+
+<style>
+  .timeline {
+    margin: var(--space-4) 0;
+  }
+  .track {
+    position: relative;
+    height: 84px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .milestone {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7rem;
+    text-align: center;
+  }
+  .year {
+    font-size: 0.8rem;
+    color: var(--ink);
+  }
+  .tick {
+    width: 1px;
+    height: 14px;
+    background: var(--ink);
+    margin: 2px 0;
+  }
+  .tick--final {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-bottom: -5px;
+  }
+  .label {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    line-height: 1.2;
+  }
+  .today {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-left: 1px dashed var(--ink-muted);
+  }
+  .today-label {
+    position: absolute;
+    top: -1.1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--ink-muted);
+  }
+  .phased {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+  }
+  .ends {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    margin-top: var(--space-1);
+  }
+  .timeline-empty {
+    color: var(--ink-muted);
+    font-style: italic;
+    border-top: 2px solid var(--hairline);
+    padding-top: var(--space-2);
+    margin: var(--space-4) 0;
+  }
+</style>

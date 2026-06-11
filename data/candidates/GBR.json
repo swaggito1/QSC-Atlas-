@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "... UK industry, government and regulators can follow. In this guidance, the NCSC sets out some key target dates for migration activities.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC Post-Quantum Cryptography Guidance - Venari Security",
+    "url": "https://www.venarisecurity.com/post-quantum-cryptography-guide/ncsc-guidance/",
+    "description": "Understand NCSC guidance on post-quantum cryptography, its alignment with NIST standards, and what UK and EU organisations should do now.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "In 2025, the UK's National Center for Cybersecurity (NCSC) published a detailed roadmap and Next Steps in preparing for post-quantum cryptography including ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Global Roadmap for Quantum Computing & Quantum Encryption ...",
+    "url": "https://leonidasgorgo.medium.com/global-roadmap-for-quantum-computing-quantum-encryption-implementation-2025-2035-e3700b25d877",
+    "description": "Based on current national strategies and policy documents, here is a consolidated overview of implementation plans countries worldwide ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "CEG has developed this roadmap to encourage a coordinated approach for migration to quantum-resistant cryptography and transition to cryptographic agility.1",
+    "markdown": ""
+  },
+  {
+    "title": "A New National Purpose: A UK Quantum Strategy for Sovereignty ...",
+    "url": "https://institute.global/insights/tech-and-digitalisation/a-new-national-purpose-a-uk-quantum-strategy-for-sovereignty-and-scale",
+    "description": "The UK must be more ambitious with its quantum strategy – focusing on R&D, commercialisation and sovereignty – in order to reap the economic ...",
+    "markdown": ""
+  },
+  {
+    "title": "US Treasury & Bank of England Publish Post-Quantum ... - LinkedIn",
+    "url": "https://www.linkedin.com/posts/malak-trabelsi-loeb-872289137_g7-postquantumcryptography-quantumsecurity-activity-7417062692068249600-Fdq0",
+    "description": "The roadmap, issued from primary government sources in the United States and the United Kingdom, frames quantum-related cryptographic risk ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] National Quantum Strategy Roadmap",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
+    "description": "This roadmap has two distinct, but related elements: developing a national secure quantum communication network and a post-quantum cryptography initiative.",
+    "markdown": ""
+  }
+]

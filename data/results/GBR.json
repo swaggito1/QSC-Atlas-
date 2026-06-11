@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "country": "GBR",
+    "issuingOrg": "NCSC",
+    "year": 2025,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "summary": "NCSC guidance setting key UK target dates (2028, 2031, 2035) for migration to post-quantum cryptography across industry, government and regulators.",
+    "included": true
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "country": "GBR",
+    "issuingOrg": "NCSC",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "summary": "NCSC white paper advising UK organisations on practical steps to prepare for migration to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "CMORG Guidance for Post-Quantum Cryptography",
+    "country": "GBR",
+    "issuingOrg": "CMORG",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "summary": "Cross Market Operational Resilience Group guidance for the UK finance sector on managing quantum risk, aligned with NCSC guidance.",
+    "included": false
+  }
+]

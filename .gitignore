@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+.vercel/
+
+# environment - NEVER commit the Notion token
+.env
+.env.local
+.env.*.local
+
+# local backups of Notion data (kept off GitHub)
+backups/
+
+# os / editor cruft
+.DS_Store
+*.log
+npm-debug.log*
+.vscode/
+.idea/

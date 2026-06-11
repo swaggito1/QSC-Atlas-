@@ -1,0 +1,100 @@
+/* QSC Atlas - design tokens and base styles.
+   A monochrome instrument: ink on paper. Colour enters in exactly ONE role,
+   encoding which standards process a country aligns with. These are a starting
+   point per the design brief; Claude Design refines from here (incl. web fonts). */
+
+:root {
+  /* Neutrals - the whole interface */
+  --ink: #1a1a1a;
+  --ink-muted: #5c5c5c;
+  --hairline: #d8d6d0;
+  --paper: #f7f5f0; /* warm off-white, not pure white */
+  --surface: #ffffff;
+
+  /* Standards-process encoding - the only functional colour */
+  --process-nist: #2b4c7e;
+  --process-etsi: #2e7d6f;
+  --process-iso: #b07a2b;
+  --process-sovereign: #7a3b5e;
+  --process-mixed: #6b7280;
+  --process-none: #e7e5df; /* no data on the map; recedes */
+
+  /* Type registers: grotesque runs the instrument, serif is the reading layer,
+     mono carries dates and codes. Named faces first, system fallbacks after, so
+     it works before web fonts are wired up. */
+  --font-instrument: 'Public Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-reading: 'Spectral', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Spacing - calm and generous; let the data breathe */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius: 2px; /* minimal; sharp edges suit an instrument */
+  --measure: 68ch; /* comfortable reading width */
+  --content-max: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-instrument);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 var(--space-4);
+}
+
+/* The reading layer (summaries, blog, about) uses the serif. */
+.prose {
+  font-family: var(--font-reading);
+  max-width: var(--measure);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Monospace for years, tier codes, numeric fields. */
+.mono { font-family: var(--font-mono); }
+
+/* A quiet, centred page container for reading pages. The map page goes full width. */
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

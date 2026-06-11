@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProfilePanel from '../../components/ProfilePanel.astro';
+import { getCollection } from 'astro:content';
+
+// One static page per country. Each page also gathers the documents whose
+// Country matches this country's ISO3 or name, for the Key documents section.
+export async function getStaticPaths() {
+  const countries = await getCollection('countries');
+  const documents = await getCollection('documents');
+  return countries.map((c) => {
+    const iso3 = c.data.iso3;
+    const name = c.data.country.toUpperCase();
+    const docs = documents
+      .filter((d) => {
+        const dc = (d.data.country ?? '').toUpperCase();
+        return dc === iso3 || dc === name;
+      })
+      .map((d) => d.data);
+    return { params: { iso3: iso3.toLowerCase() }, props: { country: c.data, documents: docs } };
+  });
+}
+
+const { country, documents } = Astro.props;
+---
+
+<Base title={country.country} description={country.summary ?? undefined}>
+  <div class="container">
+    <p class="back"><a href="/countries">&larr; All countries</a></p>
+    <ProfilePanel country={country} documents={documents} />
+  </div>
+</Base>
+
+<style>
+  .back {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-6);
+  }
+  .back a {
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+</style>

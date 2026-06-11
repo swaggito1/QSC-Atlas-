@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort((a, b) =>
+  (b.data.published ?? '').localeCompare(a.data.published ?? ''),
+);
+---
+
+<Base title="Analysis">
+  <div class="container">
+    <h1>Analysis</h1>
+    <p class="prose intro">
+      Commentary and change notes on the quantum-safe transition, country by country.
+    </p>
+
+    {
+      posts.length ? (
+        <ul class="posts">
+          {posts.map((p) => (
+            <li class="post">
+              <a href={`/analysis/${p.data.slug}`} class="post-title">
+                {p.data.title}
+              </a>
+              {p.data.published && <span class="date mono">{p.data.published}</span>}
+              {p.data.excerpt && <p class="excerpt prose">{p.data.excerpt}</p>}
+              {p.data.tags.length > 0 && (
+                <ul class="tags">
+                  {p.data.tags.map((t) => (
+                    <li class="tag mono">{t}</li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">No published articles yet.</p>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-8);
+  }
+  .posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-8);
+  }
+  .post {
+    display: grid;
+    gap: var(--space-2);
+    max-width: var(--measure);
+  }
+  .post-title {
+    font-family: var(--font-reading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .date {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .excerpt {
+    margin: 0;
+    color: var(--ink-muted);
+  }
+  .tags {
+    list-style: none;
+    margin: var(--space-1) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .tag {
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 0.1em 0.5em;
+  }
+  .empty {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+// The map legend: colour-to-plain-label key. Always labelled in words, so colour
+// is never the only carrier of meaning.
+import { PROCESS_ORDER, PROCESS_META } from '../lib/process';
+---
+
+<ul class="legend" aria-label="Map legend: standards process">
+  {
+    PROCESS_ORDER.map((key) => (
+      <li>
+        <span class="swatch" style={`background:${PROCESS_META[key].color}`} aria-hidden="true" />
+        {PROCESS_META[key].label}
+      </li>
+    ))
+  }
+  <li>
+    <span class="swatch swatch--none" aria-hidden="true" />
+    No data
+  </li>
+</ul>
+
+<style>
+  .legend {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+    font-size: 0.9rem;
+    font-family: var(--font-instrument);
+  }
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .swatch {
+    width: 0.95em;
+    height: 0.95em;
+    border-radius: 2px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .swatch--none {
+    background: var(--process-none);
+  }
+</style>

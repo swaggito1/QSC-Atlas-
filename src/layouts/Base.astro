@@ -1,0 +1,103 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'QSC Atlas',
+  description = 'How governments are migrating to quantum-safe cryptography, country by country.',
+} = Astro.props;
+
+const pageTitle = title === 'QSC Atlas' ? title : `${title} - QSC Atlas`;
+
+const nav = [
+  { href: '/', label: 'Map' },
+  { href: '/countries', label: 'Countries' },
+  { href: '/analysis', label: 'Analysis' },
+  { href: '/documents', label: 'Documents' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/">QSC Atlas</a>
+      <nav class="site-nav" aria-label="Primary">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        The QSC Atlas presents, country by country, how governments are migrating to
+        quantum-safe cryptography. Institutional sources only.
+      </p>
+      <p class="mono footer-meta">
+        A research instrument. <a href="/about">Methodology</a> &middot;
+        <a href="/about#briefing">Request a briefing</a>
+      </p>
+    </footer>
+
+    <style>
+      .site-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-6);
+        padding: var(--space-4) var(--space-6);
+        border-bottom: 1px solid var(--hairline);
+      }
+      .wordmark {
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        font-size: 1.05rem;
+      }
+      .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        font-size: 0.95rem;
+      }
+      .site-nav a {
+        color: var(--ink-muted);
+        text-decoration: none;
+      }
+      .site-nav a:hover {
+        color: var(--ink);
+      }
+      main {
+        min-height: 60vh;
+      }
+      .site-footer {
+        margin-top: var(--space-16);
+        padding: var(--space-8) var(--space-6);
+        border-top: 1px solid var(--hairline);
+        color: var(--ink-muted);
+        font-size: 0.9rem;
+      }
+      .site-footer p {
+        max-width: var(--measure);
+        margin: 0 0 var(--space-2);
+      }
+      .footer-meta a {
+        color: var(--ink-muted);
+      }
+    </style>
+  </body>
+</html>

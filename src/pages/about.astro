@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About">
+  <div class="container prose about">
+    <h1>About the QSC Atlas</h1>
+    <p>
+      The QSC Atlas shows, country by country, how governments are migrating to quantum-safe
+      cryptography: which post-quantum standards dominate, which international standards processes
+      a country takes part in, and where one exists, its migration timeline.
+    </p>
+    <p>
+      It draws on institutional sources only: government bodies, national agencies, and standards
+      organisations. Each country profile links to the primary documents it is built from, so you
+      can read the source for yourself. The Atlas is rebuilt as new institutional documents appear,
+      so it reflects the current public record rather than a one-off snapshot.
+    </p>
+
+    <h2 id="briefing">Request a briefing</h2>
+    <p>
+      The Atlas is maintained alongside a consulting practice on the quantum-safe transition. If you
+      would like a briefing tailored to your organisation or sector, get in touch.
+    </p>
+    <p>
+      <a class="briefing-link" href="mailto:hello@example.com?subject=QSC%20Atlas%20briefing">
+        Request a briefing
+      </a>
+    </p>
+    <p class="note">Replace the contact address above with your real one before launch.</p>
+  </div>
+</Base>
+
+<style>
+  .about h1 {
+    font-family: var(--font-reading);
+  }
+  .about h2 {
+    font-family: var(--font-reading);
+    margin-top: var(--space-12);
+  }
+  .briefing-link {
+    display: inline-block;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-2) var(--space-4);
+    text-decoration: none;
+    font-family: var(--font-instrument);
+  }
+  .note {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+</style>

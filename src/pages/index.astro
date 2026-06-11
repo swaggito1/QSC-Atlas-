@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import MapView from '../components/MapView';
+import ProcessLegend from '../components/ProcessLegend.astro';
+import { getCollection } from 'astro:content';
+
+// The map is the hero. Pull every country and pass the minimal data the map needs.
+const countries = await getCollection('countries');
+const mapData = countries.map((c) => ({
+  iso3: c.data.iso3,
+  country: c.data.country,
+  process: c.data.dominantProcess ?? null,
+}));
+---
+
+<Base title="QSC Atlas">
+  <section class="map-hero">
+    <MapView client:load countries={mapData} />
+
+    <p class="caption prose">
+      The world is splitting into cryptographic standards camps with different deadlines.
+      Each country is coloured by the standards process it aligns with.
+    </p>
+
+    <div class="legend-wrap">
+      <h2 class="legend-title">Legend</h2>
+      <ProcessLegend />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .map-hero {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+  }
+  .caption {
+    margin: var(--space-6) 0;
+    color: var(--ink-muted);
+  }
+  .legend-wrap {
+    margin-top: var(--space-8);
+  }
+  .legend-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    margin-bottom: var(--space-3);
+  }
+</style>
