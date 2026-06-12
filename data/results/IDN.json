@@ -1,0 +1,46 @@
+[
+  {
+    "title": "BSN and BSSN Strengthen Synergy to Prepare Migration to Post-Quantum Cryptography Algorithms",
+    "country": "IDN",
+    "issuingOrg": "BSN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://bsn.go.id/main/berita/detail/25342/bsn-bssn-perkuat-sinergi-persiapan-migrasi-ke-algoritma-post-quantum-cryptography",
+    "summary": "Official news from Indonesia's National Standardization Agency (BSN) reporting joint work with BSSN to prepare migration to post-quantum cryptography algorithms, including standardization support and conformity assessment for the PQC transition.",
+    "included": true
+  },
+  {
+    "title": "BSSN Technical Guidance on Implementing Indonesian Cryptographic Algorithms, including Introduction to Post-Quantum Cryptography (v1.0)",
+    "country": "IDN",
+    "issuingOrg": "BSSN",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cybersecurity.or.id/2026/02/bssn-panduan-teknis-implementasi.html",
+    "summary": "Account of BSSN technical guidance for implementing Indonesian cryptographic algorithms and BSSN's 'Pengenalan Post-Quantum Cryptography' (Introduction to Post-Quantum Cryptography) v1.0, prepared as input for stakeholders' anticipatory steps on PQC migration. Hosted on a non-government site, so flagged for review pending an official BSSN URL.",
+    "included": false
+  },
+  {
+    "title": "BSSN Holds FGD on Policy and Implementation of Indonesian Cryptographic Algorithms (Post-Quantum Cryptography)",
+    "country": "IDN",
+    "issuingOrg": "BSSN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://csirt.makassarkota.go.id/posts/perkuat-keamanan-siber-indonesia-bssn-gelar-fgd-kebijakan-dan-implementasi-algoritma-kriptografi-indonesia",
+    "summary": "Report on a BSSN focus-group discussion on the policy and implementation of Indonesian cryptographic algorithms that addresses post-quantum cryptography. Published by the Makassar city government CSIRT (local-government republisher), so flagged for review.",
+    "included": false
+  },
+  {
+    "title": "JakTek Series 2: Developments in Post-Quantum Cryptography and SNI ISO Standards",
+    "country": "IDN",
+    "issuingOrg": "BSSN / Makassar CSIRT",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://csirt.makassarkota.go.id/posts/jaktek-series-2",
+    "summary": "Post on developments in post-quantum cryptography and related SNI ISO standards in Indonesia, published by the Makassar city government CSIRT reporting on national cryptographic-policy activity. Local-government republisher, so flagged for review.",
+    "included": false
+  }
+]

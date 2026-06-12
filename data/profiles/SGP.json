@@ -1,0 +1,16 @@
+{
+  "iso3": "SGP",
+  "summary": "Singapore's transition is led by the Cyber Security Agency, which has released a Quantum-Safe Handbook and Quantum Readiness Index and states that post-quantum cryptography will be the mainstream solution for quantum-safe migration. The Monetary Authority of Singapore drives financial-sector work and the IMDA runs the National Quantum-Safe Network, with guidance referencing the NIST standardisation process alongside quantum key distribution.",
+  "dominantProcess": "NIST",
+  "govActors": "CSA | Cyber Security Agency of Singapore, the Quantum-Safe Handbook, Quantum Readiness Index and the position that PQC will be the mainstream quantum-safe solution\nMAS | Monetary Authority of Singapore, advisory on quantum computing referencing the NIST PQC process, plus sandbox experiments and quantum funding for the financial sector\nIMDA | Infocomm Media Development Authority, the National Quantum-Safe Network Plus and reference specifications combining post-quantum cryptography with quantum key distribution",
+  "hybridDeployment": "None stated",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (CSA): Quantum-Safe Handbook and Quantum Readiness Index row, Committee of Supply 2026 speech (PQC the mainstream solution) row, and draft Quantum-Safe Migration Handbook row",
+    "dominantProcess NIST: MAS advisory references NIST's global standardisation process for PQC; CSA draft handbook references PQC roadmap categories from the Post-Quantum Cryptography Coalition. No Singaporean sovereign algorithm scheme stated, so NIST assigned. Note strong parallel QKD emphasis (IMDA), but the algorithm camp is NIST - REVIEW",
+    "MAS role: MAS advisory, Banque de France joint experiment, sandbox reports, FSTI Quantum track and S$100 million commitment rows",
+    "IMDA role: National Quantum-Safe Network, QKD reference specifications (combining PQC and QKD), and Quantum-Safe Singapore fact sheet rows",
+    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
+    "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries"
+  ]
+}

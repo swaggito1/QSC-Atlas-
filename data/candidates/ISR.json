@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Organizational cyber preparedness for the Post-Quantum Age (INCD landing page)",
+    "url": "https://www.gov.il/he/departments/general/quantum_computing",
+    "description": "Israel National Cyber Directorate directory page collecting its guidance on organizational cyber readiness for the post-quantum era."
+  },
+  {
+    "title": "Organizational Cyber Readiness for the Post-Quantum Age (Hebrew PDF, v.1.85)",
+    "url": "https://www.gov.il/BlobFolder/generalpage/quantum_computing/he/%D7%94%D7%99%D7%A2%D7%A8%D7%9B%D7%95%D7%AA%20%D7%90%D7%A8%D7%92%D7%95%D7%A0%D7%99%D7%AA%20%D7%91%D7%A1%D7%99%D7%99%D7%91%D7%A8%20%D7%9C%D7%A2%D7%99%D7%93%D7%9F%20%D7%94%D7%A4%D7%95%D7%A1%D7%98-%D7%A7%D7%95%D7%95%D7%A0%D7%98%D7%99%201.85.pdf",
+    "description": "INCD Hebrew best-practices document on organizational cyber readiness to the post-quantum age, addressing the quantum threat to encryption and recommended preparedness steps."
+  },
+  {
+    "title": "Best Practices - Organizational Cyber Readiness to the Post-Quantum Age (English PDF, v.1.85)",
+    "url": "https://www.gov.il/BlobFolder/generalpage/quantum_computing/he/Best%20Practices%20-%20Organizational%20Cyber%20Readiness%20to%20the%20Post-Quantum%20Age%20v.1.85.pdf",
+    "description": "INCD English best-practices document recommending courses of action for organizational cyber readiness to the post-quantum age, covering quantum-computing threats to current encryption."
+  },
+  {
+    "title": "Bank of Israel Banking Supervision letter on banking system preparedness for the quantum computing era (English)",
+    "url": "https://boi.org.il/media/sm4f1ssu/202501en.pdf",
+    "description": "January 7, 2025 supervisory letter from the Banking Supervision Department to banking corporations on preparing for the quantum computing era, including migration to post-quantum (quantum-resistant) encryption and cryptographic inventory mapping."
+  },
+  {
+    "title": "Bank of Israel Banking Supervision letter on banking system preparedness for the quantum computing era (Hebrew)",
+    "url": "https://www.boi.org.il/media/sfbbtjvt/202501.pdf",
+    "description": "Hebrew version of the January 7, 2025 Banking Supervision supervisory letter to banking corporations on preparedness for quantum computing and migration to post-quantum encryption."
+  },
+  {
+    "title": "Israel National Cyber Security Strategy 2025",
+    "url": "https://www.gov.il/BlobFolder/news/cyber_strategy_2025/he/israel_national_cybersecurity_strategy_feb2025.pdf",
+    "description": "INCD national cybersecurity strategy published February 2025; PQC mention not confirmed in available search snippets."
+  },
+  {
+    "title": "Israel ramps up encryption efforts / National Digital Agency directive to government bodies (journalism)",
+    "url": "https://www.ynetnews.com/business/article/h1srzlgqkl",
+    "description": "Ynet news report that Israel's National Digital Agency instructed government bodies to require post-quantum encryption in new vendor contracts and complete a quantum threat assessment by end of 2025. No official source URL located."
+  }
+]

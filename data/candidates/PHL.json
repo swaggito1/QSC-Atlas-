@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Philippine enterprises may be sitting on a ticking time bomb—and most of them do not know it yet.",
+    "url": "https://www.manilatimes.net/2026/05/16/business/science-technology/philippine-enterprises-may-be-sitting-on-a-ticking-time-bomband-most-of-them-do-not-know-it-yet/2345804",
+    "description": "Manila Times feature on quantum threats to Philippine banking, digital ID and critical infrastructure encryption; notes BSP, DICT and private-sector CISOs have begun engaging with post-quantum standards. Journalism, not an institutional issuer."
+  },
+  {
+    "title": "How Philippine Banks Can Move Directly to Quantum-Safe Security Before BSP's Deadline",
+    "url": "https://www.wultra.com/blog/how-philippine-banks-can-move-directly-to-quantum-safe-security-before-bsps-deadline",
+    "description": "Vendor (Wultra) blog framing the June 2026 BSP Circular 1213 / AFASA authentication deadline as an opportunity to adopt quantum-safe / post-quantum authentication. Vendor marketing; the BSP deadline itself is not a PQC mandate."
+  },
+  {
+    "title": "DICT fortifies PH cybersafety with National Cybersecurity Plan '23-'28",
+    "url": "https://pia.gov.ph/press-release/dict-fortifies-ph-cybersafety-with-national-cybersecurity-plan-23-28/",
+    "description": "Philippine Information Agency press release on the National Cybersecurity Plan 2023-2028 approved by President Marcos Jr. No explicit post-quantum / PQC reference found."
+  },
+  {
+    "title": "National Cyber Security Plan (NCSP) 2023-2028 page",
+    "url": "https://dict.gov.ph/national-cyber-security-plan",
+    "description": "DICT landing page for the National Cybersecurity Plan 2023-2028. General cyber strategy; no explicit PQC mention found."
+  },
+  {
+    "title": "National Cybersecurity Plan 2023-2028 (final PDF)",
+    "url": "https://cms-cdn.e.gov.ph/DICT/pdf/NCSP-2023-2028-FINAL-DICT.pdf",
+    "description": "DICT National Cybersecurity Plan 2023-2028 full PDF (Republic of the Philippines). Could not extract text to confirm; general strategy predating NIST's 2024 PQC standards, no evidence of explicit PQC content."
+  },
+  {
+    "title": "BSP Memorandum M-2024-029",
+    "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/M-2024-029.pdf",
+    "description": "Bangko Sentral ng Pilipinas 2024 memorandum surfaced under a cybersecurity query; PDF text not extractable. No confirmed quantum/PQC content."
+  },
+  {
+    "title": "BSP Circular No. 1213 (IT Risk Management / AFASA implementation)",
+    "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/1198.pdf",
+    "description": "Related BSP IT-risk-management and merchant-payment issuances (Circulars 1213 / 1198). Confirmed via secondary sources to contain no quantum-cryptography provisions; June 2026 deadline concerns phishing-resistant authentication, not PQC."
+  },
+  {
+    "title": "Philippines Pushes Quantum Readiness Through Multi-Sector National Workshop",
+    "url": "https://onequantumphilippines.substack.com/p/philippines-pushes-quantum-readiness",
+    "description": "Substack account of the Quantum Readiness Workshop (Apr 2026) organised by the Quantum Computing Society of the Philippines with IBM Quantum, DOST-PCIEERD, DICT Cybersecurity Bureau and others; covered PQC as session content. Society-run event write-up, not a government issuance."
+  },
+  {
+    "title": "PH ramps up push for quantum computing readiness",
+    "url": "https://newsbytes.ph/2026/04/28/ph-ramps-up-push-for-quantum-computing-readiness/",
+    "description": "Tech-news coverage of the Philippine quantum readiness workshop and roadmap. Journalism; quantum-computing focus."
+  },
+  {
+    "title": "DOST advances quantum technology dev't for national progress",
+    "url": "https://pia.gov.ph/news/dost-advances-quantum-technology-devt-for-national-progress/",
+    "description": "Philippine Information Agency story on DOST quantum technology development under the national Quantum Technology Roadmap (to 2035). Focus on quantum computing R&D capacity; no explicit PQC migration content."
+  },
+  {
+    "title": "Quantum computing, AI, and smart agri to elevate PH's innovation",
+    "url": "https://www.dost.gov.ph/knowledge-resources/news/86-2025-news/3905-quantum-computing-ai-and-smart-agri-to-elevate-ph-s-innovation.html",
+    "description": "DOST news page on quantum computing as a national innovation priority (HTTP 403 on fetch). Quantum-computing framing; no confirmed explicit PQC reference."
+  },
+  {
+    "title": "Quantum Hackathon Sparks Innovation at Cebu Institute of Technology",
+    "url": "https://asti.dost.gov.ph/communications/news-articles/quantum-hackathon-sparks-innovation-at-cebu-institute-of-technology/",
+    "description": "DOST-ASTI news article on a quantum hackathon. Quantum-computing capacity building; no explicit PQC cryptography-migration content."
+  },
+  {
+    "title": "Quantum Computing and Telesurgery Seen as New Areas to be supported by Research Infrastructures",
+    "url": "https://asti.dost.gov.ph/communications/news-articles/quantum-computing-and-telesurgery-seen-as-new-areas-to-be-supported-by-research-infrastructures/",
+    "description": "DOST-ASTI news on research infrastructure priorities including quantum computing. No explicit PQC reference."
+  },
+  {
+    "title": "The Philippines looks to tap into quantum computing",
+    "url": "https://govinsider.asia/intl-en/article/the-philippines-looks-to-tap-into-quantum-computing",
+    "description": "GovInsider article on the Philippine Quantum Technology Roadmap (target year pushed to 2035). Journalism; quantum-computing R&D focus."
+  },
+  {
+    "title": "Patero and Calibr8 Systems Form Strategic Alliance to Accelerate Post Quantum Cryptography Adoption in Australia and the Philippines",
+    "url": "https://www.businesswire.com/news/home/20251009983062/en/Patero-and-Calibr8-Systems-Form-Strategic-Alliance-to-Accelerate-Post-Quantum-Cryptography-Adoption-in-Australia-and-the-Philippines",
+    "description": "Vendor press release (BusinessWire) on a private PQC commercial alliance covering the Philippines. Commercial; not an institutional issuer."
+  }
+]

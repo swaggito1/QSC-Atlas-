@@ -1,0 +1,62 @@
+[
+  {
+    "title": "BSN-BSSN Perkuat Sinergi Persiapan Migrasi ke Algoritma Post-Quantum Cryptography",
+    "url": "https://bsn.go.id/main/berita/detail/25342/bsn-bssn-perkuat-sinergi-persiapan-migrasi-ke-algoritma-post-quantum-cryptography",
+    "description": "BSN (national standards body) and BSSN news on strengthening synergy to prepare migration to post-quantum cryptography algorithms, covering standardization support and conformity assessment."
+  },
+  {
+    "title": "BSSN : Panduan Teknis Implementasi Algoritma Kriptografi (Pengenalan Post-Quantum Cryptography v1.0)",
+    "url": "https://www.cybersecurity.or.id/2026/02/bssn-panduan-teknis-implementasi.html",
+    "description": "Blog (cybersecurity.or.id) describing BSSN technical guidance for implementing Indonesian cryptographic algorithms and BSSN's 'Pengenalan Post-Quantum Cryptography' v1.0 document."
+  },
+  {
+    "title": "Perkuat Keamanan Siber Indonesia, BSSN Gelar FGD Kebijakan dan Implementasi Algoritma Kriptografi Indonesia",
+    "url": "https://csirt.makassarkota.go.id/posts/perkuat-keamanan-siber-indonesia-bssn-gelar-fgd-kebijakan-dan-implementasi-algoritma-kriptografi-indonesia",
+    "description": "Makassar city government CSIRT post reporting on a BSSN FGD on policy and implementation of Indonesian cryptographic algorithms, referencing post-quantum cryptography."
+  },
+  {
+    "title": "JakTek Series 2: Perkembangan Post Quantum Cryptography dan SNI ISO",
+    "url": "https://csirt.makassarkota.go.id/posts/jaktek-series-2",
+    "description": "Makassar city government CSIRT post on developments in post-quantum cryptography and related SNI ISO standards."
+  },
+  {
+    "title": "Peraturan BSSN No. 11 Tahun 2024 tentang Penyelenggaraan Algoritma Kriptografi Indonesia dan Penilaian Kesesuaian Keamanan Modul Kriptografi",
+    "url": "https://peraturan.bpk.go.id/Details/309832/peraturan-bssn-no-11-tahun-2024",
+    "description": "BSSN regulation on the implementation of Indonesian cryptographic algorithms and conformity assessment of cryptographic module security. No explicit PQC reference confirmed."
+  },
+  {
+    "title": "UJI PUBLIK RANCANGAN PERATURAN BSSN TENTANG PENYELENGGARAAN ALGORITMA KRIPTOGRAFI INDONESIA",
+    "url": "https://www.bssn.go.id/uji-publik-rancangan-peraturan-bssn-tentang-penyelenggaraan-algoritma-kriptografi-indonesia-dan-rancangan-peraturan-bssn-tentang-penyelenggaraan-skema-sertifikasi-common-criteria-indonesia/",
+    "description": "BSSN public consultation on draft regulations on Indonesian cryptographic algorithm implementation and Common Criteria certification scheme. No explicit PQC reference confirmed."
+  },
+  {
+    "title": "BSSN And PTPK Malaysia Strengthen Cyber Diplomacy In The Post-Quantum Era",
+    "url": "https://voi.id/en/technology/528291",
+    "description": "Journalism (VOI) on BSSN and Malaysia's PTPKM discussing bilateral cooperation in cryptography and readiness for the post-quantum cryptography era."
+  },
+  {
+    "title": "Mengamankan Keuangan Indonesia di Era Ancaman Kuantum",
+    "url": "https://www.kompas.com/tren/read/2026/03/08/174305265/mengamankan-keuangan-indonesia-di-era-ancaman-kuantum",
+    "description": "Kompas opinion/news on securing Indonesian finance in the quantum-threat era, referencing PQC, Bank Indonesia, ASPI, and a national agenda. Journalism."
+  },
+  {
+    "title": "Periset BRIN Ungkap Potensi Komputasi Kuantum sebagai Teknologi Masa Depan",
+    "url": "https://brin.go.id/news/124781/periset-brin-ungkap-potensi-komputasi-kuantum-sebagai-teknologi-masa-depan",
+    "description": "BRIN news on quantum computing potential as a future technology. General quantum, no explicit PQC migration reference confirmed."
+  },
+  {
+    "title": "Songsong Revolusi Kuantum, BRIN Fasilitasi Pusat Kolaborasi Riset Kuantum 2.0 dan HPC",
+    "url": "https://www.brin.go.id/news/110889/songsong-revolusi-kuantum-indonesia-dan-dunia-brin-fasilitasi-pusat-kolaborasi-riset-kuantum-20-dan-high-performance-computer-hpc",
+    "description": "BRIN news on facilitating a quantum research collaboration center and HPC. General quantum research, no explicit PQC reference confirmed."
+  },
+  {
+    "title": "PQC Lab Indonesia",
+    "url": "https://pqclab.id/",
+    "description": "PQC learning, experimentation and testing platform for Indonesia (ML-DSA, ML-KEM, Hybrid TLS, X.509). Non-government platform."
+  },
+  {
+    "title": "Industri Pembayaran Siaga Hadapi Ancaman Siber dan Era Quantum Computing",
+    "url": "https://keuangan.kontan.co.id/news/industri-pembayaran-siaga-hadapi-ancaman-siber-dan-era-quantum-computing",
+    "description": "Kontan news on the payments industry preparing for cyber threats and the quantum computing era, referencing Bank Indonesia and ASPI. Journalism."
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Best Practices - Organizational Cyber Readiness to the Post-Quantum Age",
+    "country": "ISR",
+    "issuingOrg": "INCD",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.gov.il/BlobFolder/generalpage/quantum_computing/he/Best%20Practices%20-%20Organizational%20Cyber%20Readiness%20to%20the%20Post-Quantum%20Age%20v.1.85.pdf",
+    "summary": "Israel National Cyber Directorate best-practices document setting out the threat from quantum-computing-based attacks and recommended courses of action for organizations to achieve cyber readiness for the post-quantum age, including migration to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Banking system preparedness for the quantum computing era (Banking Supervision letter)",
+    "country": "ISR",
+    "issuingOrg": "Bank of Israel",
+    "year": 2025,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://boi.org.il/media/sm4f1ssu/202501en.pdf",
+    "summary": "Bank of Israel Banking Supervision Department supervisory letter (7 January 2025) directing banking corporations to prepare for the quantum computing era, including assessing infrastructure suitability for post-quantum encryption, mapping cryptographic inventory, and submitting an initial preparedness plan within a year.",
+    "included": true
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "iso3": "EST",
+  "dataStatus": "Placeholder",
+  "provenance": [
+    "No included institutional documents. The only scraped item is a Cybernetica announcement that it was awarded Estonian government procurements to lead the e-governance quantum-safe transition, flagged included: false because the issuer is a vendor-in-programme rather than a government body.",
+    "Candidates contain academic and foreign-government sources (CCDCOE conference paper, GSMA, NCCoE, US/UK/Canada material) but no ingested Estonian institutional document.",
+    "Profile left empty deliberately. Note for a later re-scrape with --deep to seek an Estonian government or RIA source."
+  ]
+}

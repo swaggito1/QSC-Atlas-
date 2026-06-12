@@ -1,0 +1,67 @@
+[
+  {
+    "title": "The National Cryptographic Standards (NCS) | NCA",
+    "url": "https://nca.gov.sa/en/regulatory-documents/frameworks-and-standard-list/ncs/",
+    "description": "NCA landing page for the National Cryptographic Standards (NCS-1:2020). The document includes appendices on topics of importance to cryptographic operations including Post-Quantum Cryptography, Pseudo Random Number Generation and Side-Channel Attacks. Defines MODERATE and ADVANCED security levels."
+  },
+  {
+    "title": "National Cryptographic Standards (NCS - 1 : 2020) - English PDF",
+    "url": "https://cdn.nca.gov.sa/ar/ncs_en.pdf",
+    "description": "Full English PDF of the National Cryptographic Standards issued by the NCA, including a Post-Quantum Cryptography appendix among accepted primitives, schemes, PKI and key lifecycle management."
+  },
+  {
+    "title": "National Cryptographic Standards (NCS - 1 : 2020) - Arabic PDF",
+    "url": "https://nca.gov.sa/ncs_ar.pdf",
+    "description": "Arabic PDF of the National Cryptographic Standards (المعايير الوطنية للتشفير) issued by the NCA, covering cryptographic primitives, designs, protocols, PKI, KLM and a post-quantum cryptography appendix."
+  },
+  {
+    "title": "NCA seeks public opinion on updates to the National Cryptographic Standards (post-quantum computing algorithms added)",
+    "url": "https://nca.gov.sa/ar/news/2078/",
+    "description": "NCA news item announcing a public consultation on updates to the National Cryptographic Standards document; the updates add post-quantum computing algorithms (خوارزميات ما بعد الحوسبة الكمية), random number generators, and quantum key distribution, plus updated cryptographic designs."
+  },
+  {
+    "title": "NCA issues the National Cryptographic Standards document (SPA announcement)",
+    "url": "https://www.spa.gov.sa/2121036",
+    "description": "Saudi Press Agency announcement (16 Aug 2020) that the NCA issued the National Cryptographic Standards document defining minimum cryptographic requirements for civilian and commercial purposes."
+  },
+  {
+    "title": "Securing Data in the Quantum Computing Era for the ICT Sector | CST",
+    "url": "https://www.cst.gov.sa/en/knowledge-center/digital-knowledge/securing-data-in-the-quantum-computing-era",
+    "description": "Communications, Space & Technology Commission (CST) guidance for the ICT sector on the quantum threat and post-quantum cryptography: define PQC capability needs, verify vendors' ability to shift to PQC, integrate PQC into transformation plans, monitor NIST/ETSI/ENISA guidance, and run PQC pilots to evaluate crypto-agility."
+  },
+  {
+    "title": "Quantum Computing in Government Sector | Digital Government Authority (DGA)",
+    "url": "https://dga.gov.sa/en/digital-knowledge/quantum-computing-in-government-sector",
+    "description": "Digital Government Authority (DGA) digital-knowledge page on quantum computing in the government sector, including the quantum threat to traditional encryption. PQC-specific content not confirmed (page returned 403 / Arabic mirror only)."
+  },
+  {
+    "title": "NCA announces update of the Essential Cybersecurity Controls (ECC)",
+    "url": "https://nca.gov.sa/ar/news/1558/",
+    "description": "NCA news item on updating the Essential Cybersecurity Controls. Surfaced alongside cryptographic-standards queries; ECC references cryptography but PQC reference not confirmed for this item."
+  },
+  {
+    "title": "Saudi Arabia Focuses on Quantum Future at World Quantum Day Event (SPA)",
+    "url": "https://www.spa.gov.sa/en/N2085874",
+    "description": "Saudi Press Agency item on a World Quantum Day event. General quantum coverage; explicit PQC reference not confirmed."
+  },
+  {
+    "title": "National Quantum Hub | Research, Development and Innovation Authority (RDIA)",
+    "url": "https://rdia.gov.sa/en/programs/infrastructure/national-quantum",
+    "description": "RDIA National Quantum program page (infrastructure). General quantum/national-quantum program; explicit PQC reference not confirmed."
+  },
+  {
+    "title": "MCIT Announces the Quantum Challenge in Partnership with IBM and the Saudi Quantum Technology Association | MCIT",
+    "url": "https://www.mcit.gov.sa/en/node/198069",
+    "description": "Ministry of Communications and Information Technology announcement of a Quantum Challenge with IBM. General quantum computing; explicit PQC reference not confirmed."
+  },
+  {
+    "title": "Quantum Economy Landscape in Saudi Arabia December 2024 (C4IR Saudi Arabia)",
+    "url": "https://www.c4irsaudiarabia.org/docs/Quantum%20Economy%20Landscape%20in%20Saudi%20Arabia%20%20(23).pdf",
+    "description": "Report on Saudi Arabia's quantum economy landscape published by C4IR Saudi Arabia (WEF-affiliated centre). Not a core domestic government issuer; PQC coverage uncertain."
+  },
+  {
+    "title": "SAMA Rulebook - 3.3.9 Cryptography",
+    "url": "https://rulebook.sama.gov.sa/en/339-cryptography-0",
+    "description": "Saudi Central Bank (SAMA) rulebook section on cryptography for member organisations. No explicit post-quantum / quantum-safe reference found."
+  }
+]

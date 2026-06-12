@@ -1,0 +1,112 @@
+[
+  {
+    "title": "National Encryption Policy",
+    "country": "ARE",
+    "issuingOrg": "UAE Cyber Security Council",
+    "year": null,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://csc.gov.ae/en/w/national-encryption-policy",
+    "summary": "UAE Cyber Security Council policy mandating national encryption controls and requiring entities to protect information from future quantum-computing threats, including approved transition plans from traditional encryption to post-quantum cryptography. Underpinned by an issued executive regulation.",
+    "included": true
+  },
+  {
+    "title": "UAE announces approval of National Encryption Policy",
+    "country": "ARE",
+    "issuingOrg": "WAM (Emirates News Agency)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.wam.ae/en/article/15w563h-uae-announces-approval-national-encryption-policy",
+    "summary": "Official Emirates News Agency report on the UAE's approval of the National Encryption Policy and issuance of its executive regulation, calling on government entities to develop officially approved transition plans from traditional encryption to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "UAE Cyber Security Council partners with QuantumGate to launch national Crypto Discovery Tool",
+    "country": "ARE",
+    "issuingOrg": "UAE Cyber Security Council",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mediaoffice.abudhabi/en/security/uae-cybersecurity-council-partners-with-quantumgate-to-launch-crypto-discovery-tool/",
+    "summary": "Official Abu Dhabi Media Office announcement that the UAE Cyber Security Council partnered with QuantumGate on a national Crypto Discovery Tool, customised to UAE National Cryptography Center requirements, as part of the National Post-Quantum Migration Programme to direct migration to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "UAE Cyber Security Council partners with ATRC to advance national post-quantum security transition",
+    "country": "ARE",
+    "issuingOrg": "ATRC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.atrc.gov.ae/news/uae-cyber-security-council-partners-atrc-advance-national-post-quantum-security-transition",
+    "summary": "ATRC announcement of a partnership with the UAE Cyber Security Council to advance the national transition to post-quantum security, including deployment of QuantumGate's Crypto Discovery Tool across critical national infrastructure.",
+    "included": true
+  },
+  {
+    "title": "UAE Cybersecurity Council advances national readiness for future quantum threats with ATRC's QuantumGate",
+    "country": "ARE",
+    "issuingOrg": "ATRC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.atrc.gov.ae/news/uae-cybersecurity-council-advances-national-readiness-future-quantum-threats-atrcs-quantumgate",
+    "summary": "ATRC announcement that the UAE Cyber Security Council is advancing national readiness against future quantum threats using ATRC's QuantumGate platform to support migration to quantum-safe / post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Technology Innovation Institute contributes to post-quantum cryptographic standardisation via NIST digital signature schemes",
+    "country": "ARE",
+    "issuingOrg": "ATRC / TII",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://atrc.gov.ae/news/technology-innovation-institute-contributes-post-quantum-cryptographic-standardization-nist",
+    "summary": "ATRC/TII news that its Cryptography Research Centre contributed post-quantum digital signature schemes (MiRitH, PERK, RYDE) to NIST's call for additional PQC digital signatures, reflecting national research capacity in post-quantum standardisation.",
+    "included": true
+  },
+  {
+    "title": "Abu Dhabi's Technology Innovation Institute unveils first post-quantum cryptography library in UAE",
+    "country": "ARE",
+    "issuingOrg": "Abu Dhabi Media Office / TII",
+    "year": 2021,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.mediaoffice.abudhabi/en/technology/AD-technology-innovation-institute-unveils-first-post-quantum-cryptography-library-in-uae/",
+    "summary": "Official Abu Dhabi Media Office report that TII's Cryptography Research Centre launched the first post-quantum cryptography software library in the UAE, guarding against quantum-computer attacks and integrated into secure communication products.",
+    "included": true
+  },
+  {
+    "title": "Abu Dhabi's Technology Innovation Institute unveils first post-quantum cryptography library in UAE (WAM)",
+    "country": "ARE",
+    "issuingOrg": "WAM (Emirates News Agency)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://wam.ae/en/details/1395302922399",
+    "summary": "Official Emirates News Agency report on TII's Cryptography Research Centre launching the first post-quantum cryptography software library in the UAE.",
+    "included": true
+  },
+  {
+    "title": "Dubai Electronic Security Center launches Post-Quantum Cryptography Guideline at GISEC Global 2025",
+    "country": "ARE",
+    "issuingOrg": "DESC",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.desc.gov.ae/dubai-electronic-security-center-launches-new-innovative-projects-at-gisec-global-2025/",
+    "summary": "DESC announcement that it launched a Post-Quantum Cryptography Guideline at GISEC Global 2025 to prepare Dubai's digital infrastructure against emerging quantum-computing threats.",
+    "included": true
+  },
+  {
+    "title": "Abu Dhabi's TII unveils first post-quantum cryptography library in UAE (TII)",
+    "country": "ARE",
+    "issuingOrg": "TII",
+    "year": 2021,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.tii.ae/news/abu-dhabis-tii-unveils-first-post-quantum-cryptography-library-uae",
+    "summary": "TII (applied research pillar of the government's Advanced Technology Research Council) announcement that its Cryptography Research Centre launched the first post-quantum cryptography software library in the UAE.",
+    "included": false
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "iso3": "CZE",
+  "summary": "The Czech Republic's posture is set by the National Cyber and Information Security Agency, which explains the quantum threat and quantum-resistant cryptography in an appendix to its minimum requirements and sets out expectations for when post-quantum cryptography should be deployed for sensitive information of critical confidentiality in higher-risk environments. The agency's portal now supports quantum-resistant cryptography, and its National Cyber Security Strategy 2026-2030 names post-quantum cryptography among the technologies for strengthening cyber security. No specific algorithm list or dated national migration deadline has been published.",
+  "govActors": "NÚKIB | National Cyber and Information Security Agency, national authority for cyber security\nČNB | Czech National Bank, central bank research on quantum-resistant signature schemes",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Deployment expectations for sensitive information in higher-risk environments: NÚKIB portal announcement on quantum-resistant cryptography (ingested)",
+    "Quantum threat and definition of post-quantum cryptography: NÚKIB minimum requirements appendix (ingested)",
+    "PQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)",
+    "ČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW",
+    "dominantProcess omitted: no standards camp attested in the documents",
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
+  ]
+}

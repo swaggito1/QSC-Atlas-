@@ -1,0 +1,12 @@
+{
+  "iso3": "IRL",
+  "summary": "Ireland's posture is set out by the National Cyber Security Centre, which states that the global shift to post-quantum cryptography is already underway and that Ireland must ensure a secure transition for Government, regulated sectors and critical infrastructure. The NCSC has named post-quantum cryptography as a research and innovation priority but has not published algorithm guidance or a migration timeline.",
+  "govActors": "NCSC-IE | Ireland's National Cyber Security Centre, national authority for cyber security",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Posture and transition need: NCSC-IE research and innovation priorities page (ingested)",
+    "PQC named as a challenge: Director's opening statement to the Oireachtas Joint Committee on Foreign Affairs and Defence, 2023 (ingested)",
+    "dominantProcess omitted: no standards camp attested in the documents",
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
+  ]
+}

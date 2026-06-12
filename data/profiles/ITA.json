@@ -1,0 +1,15 @@
+{
+  "iso3": "ITA",
+  "summary": "Italy's posture is led by the National Cybersecurity Agency, whose guidance on post-quantum and quantum cryptography references the NIST standardisation process and the EU material on the transition. The Bank of Italy is active on the financial-sector side, having run post-quantum experiments in real payment systems through the BIS Project Leap.",
+  "dominantProcess": "NIST",
+  "govActors": "ACN | Agenzia per la Cybersicurezza Nazionale, guidance on post-quantum and quantum cryptography referencing the NIST process and EU transition material\nBanca d'Italia | Bank of Italy, post-quantum experiments in real payment systems via BIS Project Leap and notices on the G7 financial-sector roadmap\nSenato | Italian Senate documents covering the defence multi-year acquisition programme including post-quantum cryptography and national PQC activities",
+  "hybridDeployment": "None stated",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (ACN): ACN post-quantum and quantum cryptography guidance row and the European joint-position announcement",
+    "dominantProcess NIST: ACN guidance summary explicitly references the NIST PQC standardization process (alongside EU material). No Italian sovereign scheme stated, so NIST assigned, though the EU-coordination dimension is also present - REVIEW",
+    "Banca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)",
+    "Senato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows",
+    "standardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries"
+  ]
+}

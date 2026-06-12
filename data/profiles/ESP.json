@@ -1,0 +1,14 @@
+{
+  "iso3": "ESP",
+  "summary": "Spain's posture is carried by INCIBE and its INCIBE-CERT, which address the quantum threat and the need to adopt post-quantum cryptography, with the national coordination centre presenting the European public-administration transition roadmap. Parliamentary guidance states that the transition must begin from a complete inventory of cryptographic systems, protocols and algorithms.",
+  "govActors": "INCIBE | Spanish National Cybersecurity Institute, leads national cybersecurity work and hosts the national coordination centre (NCC-ES)\nINCIBE-CERT | national CERT, publishes guidance and advisories on the quantum threat and post-quantum cryptography\nCongreso de los Diputados | Spanish Congress, parliamentary bulletins framing the transition around a complete cryptographic inventory\nOficina Nacional de Prospectiva | national foresight office, trend analysis on post-quantum cryptography\nBanco de España | central bank, studies post-quantum cryptography against the store-now-decrypt-later threat",
+  "dataStatus": "Partial",
+  "provenance": [
+    "INCIBE / INCIBE-CERT lead and quantum-threat framing: INCIBE-CERT guidance and advisory (ingested)",
+    "EU public-administration transition roadmap presented via NCC-ES: INCIBE (NCC-ES) dossier (ingested)",
+    "Transition must start from a complete cryptographic inventory: BOCG bulletin no. 223, Congreso de los Diputados (ingested) - source is a portal redirect link, REVIEW",
+    "Store-now-decrypt-later study: Banco de Espana occasional paper and FSR box (ingested) - bde.es flagged, REVIEW",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
+    "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Post-Quantum Cryptography Initiatives",
+    "url": "https://www.cybersecurity.my/portal-main/services/post-quantum-overview",
+    "description": "CyberSecurity Malaysia's overview page describing its PQC strategy, PQC Migration Framework, algorithm research, encryption standards (MySEAL), and quantum-safe migration services."
+  },
+  {
+    "title": "Post-quantum Cryptography Migration Framework (PDF)",
+    "url": "https://mykripto.cybersecurity.my/index.php/files/109/Post-Quantum/18/Post-quantum-Cryptography-Migration-Framework.pdf",
+    "description": "CyberSecurity Malaysia (MyKripto) PQC Migration Framework document providing a structured pathway to transition organisations from classical cryptography to quantum-safe alternatives."
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiatives - Documents (MyKripto)",
+    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/documents",
+    "description": "MyKripto documents listing for PQC, including the PQC Migration Framework and the technical guide 'Recommendations for the Adoption and Implementation of Post-Quantum Cryptographic Solutions'."
+  },
+  {
+    "title": "PQC Services (MyKripto - CyberSecurity Malaysia)",
+    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/pqc-services",
+    "description": "CyberSecurity Malaysia PQC service offerings: migration consultations, awareness sessions and technical workshops for transition to quantum-safe cryptography."
+  },
+  {
+    "title": "PQC Activities (MyKripto - CyberSecurity Malaysia)",
+    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/activities",
+    "description": "MyKripto page describing CyberSecurity Malaysia's PQC-related activities, research and awareness work."
+  },
+  {
+    "title": "post-quantum cryptography initiatives - FAQ (MyKripto)",
+    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/faq",
+    "description": "MyKripto FAQ on CyberSecurity Malaysia's post-quantum cryptography initiatives."
+  },
+  {
+    "title": "MyKriptografi - National Cryptography Policy",
+    "url": "https://www.nacsa.gov.my/kriptografi-view.php",
+    "description": "NACSA page on MyKriptografi, the National Cryptography Policy approved by Cabinet 28 Nov 2025; references threats of the 'quantum computing era' but does not explicitly name PQC/post-quantum cryptography."
+  },
+  {
+    "title": "MYNIC's Preparing For Tomorrow's Threat: The Impact Of Quantum Computing On Internet Security",
+    "url": "https://www.digital.gov.my/en-GB/siaran/MYNIC'S-Preparing-For-Tomorrow's-Threat:-The-Impact-Of-Quantum-Computing-On-Internet-Security",
+    "description": "Ministry of Digital announcement on MYNIC and quantum computing's impact on internet security (DNSSEC). Could not verify explicit PQC reference (page fetch failed on certificate)."
+  },
+  {
+    "title": "Malaysia launches national plan and sandbox for post-quantum cryptography",
+    "url": "https://thesun.my/news/malaysia-news/malaysia-national-plan-post-quantum-cryptography/",
+    "description": "News (The Sun) on the November 2025 launch of the National PQC Migration Plan 2025-2030 and PQC Sandbox PoC Programme by NACSA/Ministry of Digital. Non-institutional (journalism)."
+  },
+  {
+    "title": "Navigating National Cyber Resilience in the Quantum Era (NACSA conference slides)",
+    "url": "https://pkic.org/events/2025/pqc-conference-kuala-lumpur-my/WED_P_1000_megat-zuhairy-bin-megat-tajuddin_navigating-national-cyber-resilience-in-the-quantum-era_merged.pdf",
+    "description": "Conference presentation by NACSA chief executive Megat Zuhairy on Malaysia's national PQC readiness, hosted on the PKI Consortium (non-domestic) site."
+  },
+  {
+    "title": "Quantum-Safe Cryptography and the Future of Malaysia's Cybersecurity Strategy",
+    "url": "https://www.researchgate.net/publication/397705888_Quantum-Safe_Cryptography_and_the_Future_of_Malaysia's_Cybersecurity_Strategy",
+    "description": "Academic paper on ResearchGate analysing Malaysia's quantum-safe strategy. Academic, not institutional."
+  },
+  {
+    "title": "Quantum-safe encryption emerges as new standard",
+    "url": "https://www.thestar.com.my/business/business-news/2026/06/03/quantum-safe-encryption-emerges-as-new-standard",
+    "description": "The Star news article on quantum-safe encryption in Malaysia. Journalism, not institutional."
+  },
+  {
+    "title": "ICE-PQC 2025 - Universiti Putra Malaysia",
+    "url": "https://ice-pqc.upm.edu.my/",
+    "description": "International Conference and Exhibition on Post-Quantum Cryptography 2025, hosted by Universiti Putra Malaysia. University, not a government/standards institution."
+  }
+]

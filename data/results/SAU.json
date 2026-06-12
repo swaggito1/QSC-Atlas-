@@ -1,0 +1,68 @@
+[
+  {
+    "title": "National Cryptographic Standards (NCS-1:2020) - English",
+    "country": "SAU",
+    "issuingOrg": "NCA",
+    "year": 2020,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://cdn.nca.gov.sa/ar/ncs_en.pdf",
+    "summary": "Saudi National Cybersecurity Authority cryptographic standard specifying minimum cryptographic requirements for national data, systems and networks for civilian and commercial use, defining MODERATE and ADVANCED levels. Includes a dedicated appendix on Post-Quantum Cryptography alongside accepted primitives, schemes, PKI and key lifecycle management.",
+    "included": true
+  },
+  {
+    "title": "National Cryptographic Standards (NCS-1:2020) - Arabic",
+    "country": "SAU",
+    "issuingOrg": "NCA",
+    "year": 2020,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://nca.gov.sa/ncs_ar.pdf",
+    "summary": "Arabic edition of the NCA National Cryptographic Standards (المعايير الوطنية للتشفير), setting minimum cryptographic requirements for national entities. The document includes a post-quantum cryptography appendix among cryptographic designs, protocols, PKI and key lifecycle management topics.",
+    "included": true
+  },
+  {
+    "title": "The National Cryptographic Standards (NCS) - overview page",
+    "country": "SAU",
+    "issuingOrg": "NCA",
+    "year": 2020,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://nca.gov.sa/en/regulatory-documents/frameworks-and-standard-list/ncs/",
+    "summary": "NCA overview page for the National Cryptographic Standards (NCS-1:2020), stating that the standard's appendices cover topics of importance to cryptographic operations including Post-Quantum Cryptography, Pseudo Random Number Generation and Side-Channel Attacks.",
+    "included": true
+  },
+  {
+    "title": "NCA seeks public feedback on updates to the National Cryptographic Standards adding post-quantum computing algorithms",
+    "country": "SAU",
+    "issuingOrg": "NCA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nca.gov.sa/ar/news/2078/",
+    "summary": "NCA announcement of a public consultation on updates to the National Cryptographic Standards. The stated updates add post-quantum computing algorithms (خوارزميات ما بعد الحوسبة الكمية), random number generators and quantum key distribution, and update cryptographic designs in line with international best practice.",
+    "included": true
+  },
+  {
+    "title": "Securing Data in the Quantum Computing Era for the ICT Sector",
+    "country": "SAU",
+    "issuingOrg": "CST",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cst.gov.sa/en/knowledge-center/digital-knowledge/securing-data-in-the-quantum-computing-era",
+    "summary": "Communications, Space & Technology Commission (CST) guidance for the ICT sector on the quantum threat and post-quantum cryptography. It advises organisations to define internal PQC capability needs, verify vendors' ability to shift to post-quantum cryptography, integrate PQC into transformation plans, monitor NIST/ETSI/ENISA guidance, and run PQC pilots to evaluate crypto-agility.",
+    "included": true
+  },
+  {
+    "title": "Quantum Computing in the Government Sector",
+    "country": "SAU",
+    "issuingOrg": "DGA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://dga.gov.sa/en/digital-knowledge/quantum-computing-in-government-sector",
+    "summary": "Digital Government Authority (DGA) digital-knowledge page on quantum computing in the government sector, including the threat quantum computing poses to traditional encryption. Explicit post-quantum cryptography reference could not be confirmed (page blocked direct fetch), so flagged for human review.",
+    "included": false
+  }
+]

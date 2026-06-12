@@ -1,0 +1,15 @@
+{
+  "iso3": "SWE",
+  "summary": "Sweden's transition is steered by the National Cyber Security Centre, hosted by the National Defence Radio Establishment (FRA), which has issued national recommendations for how organisations should carry out the move to quantum-safe cryptography. The recommendations are framed in relation to NIS2 and the Swedish cybersecurity act, and Parliament has welcomed the European approach to promoting the transition.",
+  "govActors": "NCSC Sweden | National Cyber Security Centre, issues national recommendations for the transition to quantum-safe cryptography\nFRA | National Defence Radio Establishment, hosts the NCSC and presents on the transition\nRiksdagen | Swedish Parliament, fact memos welcoming the EU quantum strategy and digital-infrastructure approach\nGovernment of Sweden | identifies the transition to quantum-safe cryptography as part of strengthening Europe's cybersecurity",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NCSC Sweden national recommendations, framed against NIS2 and the Swedish cybersecurity act: NCSC Sweden guidance 2026 (ingested)",
+    "NCSC hosted by FRA: FRA news page (ingested)",
+    "Parliament welcomes EU approach: Riksdagen fact memos (ingested)",
+    "Government identifies the transition as part of European cybersecurity: Government Communication 2025/26:115 (ingested)",
+    "Tillvaxtverket quantum-ecosystem report ingested but flagged for no explicit PQC reference, not used for posture - REVIEW",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
+    "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

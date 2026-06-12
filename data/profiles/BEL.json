@@ -1,0 +1,16 @@
+{
+  "iso3": "BEL",
+  "summary": "Belgium's posture is led by the Centre for Cybersecurity Belgium, which urges organisations to prepare for the quantum era and frames its advice around the European Union's strategic roadmap milestones. The federal public service BOSA points organisations to the NIST 2024 standards, and the National Bank of Belgium tracks post-quantum cryptography as an emerging risk for financial market infrastructures. No Belgian national migration deadline or sovereign algorithm list has been published.",
+  "migrationTimeline": "2026 | National strategies for the post-quantum transition in place (EU roadmap milestone referenced by the CCB)\n2030 | Critical infrastructure protected (EU roadmap milestone referenced by the CCB)\n2035 | Broad adoption of post-quantum cryptography (EU roadmap milestone referenced by the CCB)",
+  "govActors": "CCB | Centre for Cybersecurity Belgium, national cyber security authority\nBOSA | Federal public service for policy and support, quantum cybersecurity guidance\nNBB | National Bank of Belgium, financial market infrastructure oversight",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CCB lead posture and EU roadmap milestones (2026 national strategies, 2030 critical infrastructure, 2035 broad adoption): CCB news item 'Preparing for the Quantum Era' (ingested)",
+    "CCB on maturity uncertainty: CCB 10-year anniversary publication, 2025 (ingested)",
+    "BOSA reference to NIST 2024 standards: Quantum4Belgium page (ingested)",
+    "NBB tracking PQC as emerging risk: NBB FMI and payment services report 2025, Swift oversight factsheet, NBB annual report 2025 (ingested)",
+    "migrationTimeline reflects EU roadmap milestones referenced by the CCB, not Belgian-set deadlines - REVIEW",
+    "dominantProcess omitted: BOSA references NIST standards but no single Belgian standards camp is stated across the documents",
+    "No standardFamilies, algorithms, hybridDeployment or targetCompletion: none stated in the documents"
+  ]
+}

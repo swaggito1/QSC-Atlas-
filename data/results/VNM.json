@@ -1,0 +1,79 @@
+[
+  {
+    "title": "The post-quantum cryptography migration process and national security",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://antoanthongtin.vn/tin/qua-trinh-dich-chuyen-mat-ma-hau-luong-tu-va-an-ninh-quoc-gia",
+    "summary": "Article in the Government Cipher Committee's journal arguing Vietnam needs a national-level post-quantum cryptography (PQC) transition roadmap led by the Committee, including risk-classifying critical systems, piloting PQC and moving to hybrid cryptography. States the Committee has advised on PQC since NIST's 2017 process.",
+    "included": false
+  },
+  {
+    "title": "Institute of Cryptographic Science and Technology strengthens post-quantum cryptography research capacity in Vietnam",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://coyeu.antoanthongtin.vn/tin/vien-khoa-hoc-cong-nghe-mat-ma-tang-cuong-nang-luc-nghien-cuu-mat-ma-hau-luong-tu-tai-viet-nam",
+    "summary": "Reports that the Institute of Cryptographic Science and Technology, under the Government Cipher Committee, is building post-quantum cryptography research capacity focused on lattice-based schemes (Kyber/ML-KEM, Dilithium) and hash-based signatures, with a dedicated quantum-cryptography group established in 2023.",
+    "included": false
+  },
+  {
+    "title": "New milestone in quantum-resistant cryptography research at the Academy of Cryptography Techniques",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://antoanthongtin.vn/tin/dau-moc-moi-trong-nghien-cuu-mat-ma-khang-luong-tu-tai-hoc-vien-ky-thuat-mat-ma",
+    "summary": "Reports that the Academy of Cryptography Techniques, directed by the Government Cipher Committee, conducted research integrating post-quantum cryptography including the CRYSTALS-Dilithium algorithm into Vietnamese-developed hardware security modules (HSM).",
+    "included": false
+  },
+  {
+    "title": "Development of hash-based quantum-resistant digital signature schemes",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://antoanthongtin.gov.vn/tin/su-phat-trien-cua-luoc-do-chu-ky-so-khang-luong-tu-dua-tren-ham-bam",
+    "summary": "Technical article in the Government Cipher Committee's official journal on the development of hash-based quantum-resistant digital signature schemes, relevant to Vietnam's domestic VN-PQSign post-quantum signature work.",
+    "included": true
+  },
+  {
+    "title": "The role of quantum cryptography in ensuring national information security",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://antoanthongtin.vn/tin/vai-tro-mat-ma-luong-tu-trong-bao-dam-an-toan-thong-tin-quoc-gia",
+    "summary": "Article stating that the Government Cipher Committee, as national cryptographic agency, is advising on national quantum-resistant cryptographic standards and technical regulations to prepare for the quantum-computer era in the 2030-2035 period.",
+    "included": false
+  },
+  {
+    "title": "Trends in cryptographic science and technology and challenges to national defence and security in the new period (part 2)",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://antoanthongtin.vn/tin/xu-huong-phat-trien-khoa-hoc-cong-nghe-mat-ma-va-thach-thuc-doi-voi-quoc-phong-an-ninh-trong-gia",
+    "summary": "Policy/strategy article in the Government Cipher Committee's journal identifying quantum computers as a major threat to national critical systems and prioritising research and development of quantum-computer-resistant cryptographic systems.",
+    "included": false
+  },
+  {
+    "title": "Continuing in-depth research in the field of quantum cryptography",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://antoanthongtin.gov.vn/an-ninh-quoc-phong/tiep-tuc-nghien-cuu-chuyen-sau-ve-linh-vuc-mat-ma-luong-tu-109880",
+    "summary": "Item in the Government Cipher Committee's official journal on continued in-depth quantum cryptography research within the cipher/defence-security sector, including post-quantum-resistant cryptographic work.",
+    "included": true
+  }
+]

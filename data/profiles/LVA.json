@@ -1,0 +1,13 @@
+{
+  "iso3": "LVA",
+  "summary": "Latvia's posture is carried by CERT.LV, the national computer security incident response team, which engages with both post-quantum cryptography and quantum key distribution and frames quantum-safe infrastructure within the European EuroQCI initiative. Its Q-Ready conference brings together work on quantum-safe security, but no national migration timeline or standards selection has been published.",
+  "govActors": "CERT.LV | Latvian national computer security incident response team, hosts the Q-Ready conference and events on quantum-safe cryptography",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CERT.LV lead, PQC and QKD, EuroQCI framing: Q-Ready 25 conference announcement (ingested)",
+    "Survey of PQC methods (lattice-based NTRU/LWE, code-based McEliece, multivariate): presentation hosted on CERT.LV events area, authored by an academic researcher rather than CERT.LV, flagged for review (ingested, T4)",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries",
+    "algorithms families named only inside an academic survey, not adopted as Latvian guidance, so standardFamilies/algorithms omitted - REVIEW",
+    "hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

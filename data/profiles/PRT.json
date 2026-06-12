@@ -1,0 +1,13 @@
+{
+  "iso3": "PRT",
+  "summary": "Portugal's activity is centred on the National Cybersecurity Centre, whose National Coordination Centre funds work on the security evaluation of post-quantum cryptography primitives and the security of post-quantum algorithm implementations, and which lists post-quantum cryptography among the priority topics for its C-DAYS 2026 conference. The posture is one of research and awareness, with no published national migration guidance, algorithm list or timeline.",
+  "govActors": "CNCS | National Cybersecurity Centre, national authority for cyber security",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Funded PQC primitive and implementation security work: CNCS NCC-PT National Coordination Centre page (ingested)",
+    "PQC as a priority conference topic: CNCS C-DAYS 2026 call for presentations (ingested)",
+    "Emerging technologies and R&D context: CNCS Observatory Emerging Technologies Report 2023 and ROSE R&D document (ingested, PQC reference not explicitly confirmed in snippets) - REVIEW",
+    "dominantProcess omitted: no standards camp attested in the documents",
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
+  ]
+}

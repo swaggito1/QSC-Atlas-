@@ -1,0 +1,77 @@
+[
+  {
+    "title": "National Encryption Policy",
+    "url": "https://csc.gov.ae/en/w/national-encryption-policy",
+    "description": "UAE Cyber Security Council page for the National Encryption Policy, which mandates encryption controls and requires entities to protect non-open information from future quantum-computing threats and develop transition plans from traditional encryption to post-quantum cryptography."
+  },
+  {
+    "title": "UAE announces approval of National Encryption Policy",
+    "url": "https://www.wam.ae/en/article/15w563h-uae-announces-approval-national-encryption-policy",
+    "description": "Emirates News Agency (WAM) official report on the UAE's approval of the National Encryption Policy and issuance of its executive regulation, calling on government entities to develop approved transition plans from traditional encryption to post-quantum cryptography."
+  },
+  {
+    "title": "UAE Cyber Security Council partners with QuantumGate to launch Crypto Discovery Tool",
+    "url": "https://www.mediaoffice.abudhabi/en/security/uae-cybersecurity-council-partners-with-quantumgate-to-launch-crypto-discovery-tool/",
+    "description": "Abu Dhabi Media Office announcement that the UAE Cyber Security Council partnered with QuantumGate on a national Crypto Discovery Tool, customised to UAE National Cryptography Center requirements, as part of the National Post-Quantum Migration Programme."
+  },
+  {
+    "title": "UAE Cyber Security Council Partners with ATRC to Advance National Post-Quantum Security Transition",
+    "url": "https://www.mediaoffice.abudhabi/en/security/uae-cyber-security-council-partners-with-atrc-to-advance-national-post-quantum-security-transition/",
+    "description": "Abu Dhabi Media Office announcement on the Cyber Security Council-ATRC partnership to advance the UAE's national post-quantum security transition."
+  },
+  {
+    "title": "UAE Cyber Security Council Partners with ATRC to Advance National Post-Quantum Security Transition (ATRC)",
+    "url": "https://www.atrc.gov.ae/news/uae-cyber-security-council-partners-atrc-advance-national-post-quantum-security-transition",
+    "description": "ATRC news on the Cyber Security Council-ATRC partnership to advance the UAE's national post-quantum security transition, including QuantumGate Crypto Discovery Tool deployment."
+  },
+  {
+    "title": "UAE Cybersecurity Council Advances National Readiness for Future Quantum Threats with ATRC's QuantumGate",
+    "url": "https://www.atrc.gov.ae/news/uae-cybersecurity-council-advances-national-readiness-future-quantum-threats-atrcs-quantumgate",
+    "description": "ATRC news on the UAE Cyber Security Council advancing national readiness for future quantum threats with QuantumGate, supporting migration to quantum-safe / post-quantum cryptography."
+  },
+  {
+    "title": "Technology Innovation Institute Contributes to Post-Quantum Cryptographic Standardization via NIST Digital Signature Schemes",
+    "url": "https://atrc.gov.ae/news/technology-innovation-institute-contributes-post-quantum-cryptographic-standardization-nist",
+    "description": "ATRC/TII news on the Cryptography Research Center contributing post-quantum digital signature schemes (MiRitH, PERK, RYDE) to NIST's call for additional PQC digital signatures."
+  },
+  {
+    "title": "Abu Dhabi's Technology Innovation Institute Unveils First Post-Quantum Cryptography Library in UAE (TII)",
+    "url": "https://www.tii.ae/news/abu-dhabis-tii-unveils-first-post-quantum-cryptography-library-uae",
+    "description": "TII (applied research pillar of ATRC) announcement that its Cryptography Research Centre launched the first post-quantum cryptography software library in the UAE."
+  },
+  {
+    "title": "Abu Dhabi's Technology Innovation Institute unveils first post-quantum cryptography library in UAE (WAM)",
+    "url": "https://wam.ae/en/details/1395302922399",
+    "description": "Emirates News Agency (WAM) report on TII's Cryptography Research Centre launching the first post-quantum cryptography software library in the UAE."
+  },
+  {
+    "title": "Abu Dhabi's Technology Innovation Institute Unveils First Post-Quantum Cryptography Library in UAE (Media Office)",
+    "url": "https://www.mediaoffice.abudhabi/en/technology/AD-technology-innovation-institute-unveils-first-post-quantum-cryptography-library-in-uae/",
+    "description": "Abu Dhabi Media Office report on TII unveiling the first post-quantum cryptography library in the UAE."
+  },
+  {
+    "title": "Dubai Electronic Security Center launches new innovative projects at GISEC Global 2025",
+    "url": "https://www.desc.gov.ae/dubai-electronic-security-center-launches-new-innovative-projects-at-gisec-global-2025/",
+    "description": "DESC announcement that it launched a Post-Quantum Cryptography Guideline (among other initiatives) at GISEC Global 2025 to prepare Dubai's digital infrastructure against quantum-based threats."
+  },
+  {
+    "title": "Technology Innovation Institute Unveils the World's First Open-Source Software Library for Cryptographic Hardness Estimation",
+    "url": "https://www.atrc.gov.ae/news/technology-innovation-institute-unveils-worlds-first-open-source-software-library",
+    "description": "ATRC/TII news on an open-source software library for cryptographic hardness estimation relevant to assessing post-quantum cryptographic schemes."
+  },
+  {
+    "title": "How UAE Banks and Fintechs Can Leapfrog to Quantum-Safe Security Before CBUAE's Deadline (Wultra)",
+    "url": "https://www.wultra.com/blog/how-uae-banks-and-fintechs-can-leapfrog-to-quantum-safe-security-before-cbuaes-deadline",
+    "description": "Vendor blog discussing UAE bank readiness for quantum-safe security; references CBUAE deadlines (vendor source, not a CBUAE document)."
+  },
+  {
+    "title": "UAE establishes requirements for cryptographic controls and migration planning (PQShield)",
+    "url": "https://pqshield.com/uae-establishes-requirements-for-cryptographic-controls-and-migration-planning/",
+    "description": "Vendor analysis of the UAE National Encryption Policy's cryptographic control and PQC migration-planning requirements (vendor source, not a UAE government document)."
+  },
+  {
+    "title": "UAE Mandates PQC Migration Plans in a Global First (postquantum.com)",
+    "url": "https://postquantum.com/security-pqc/uae-national-encryption-policy-pqc/",
+    "description": "Third-party analysis of the UAE National Encryption Policy as a binding national PQC migration mandate (non-institutional source)."
+  }
+]

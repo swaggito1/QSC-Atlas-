@@ -1,0 +1,14 @@
+{
+  "iso3": "FIN",
+  "summary": "Finland's gathered material centres on quantum technology broadly rather than a dedicated post-quantum migration policy. The Finnish Government's Quantum Technology Strategy 2025 to 2035 aims to give Finland a prominent role in developing and using quantum technology, and the state research centre VTT discusses quantum-safe cryptography and the need for near-term solutions to maintain digital trust. No national post-quantum migration timeline or lead cryptographic authority is attested in the gathered documents.",
+  "govActors": "Finnish Government (Valtioneuvosto) | publishes the national Quantum Technology Strategy 2025 to 2035\nVTT Technical Research Centre of Finland | state research centre, discusses quantum-safe cryptography and the need for near-term solutions",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Quantum Technology Strategy 2025-2035, prominent role in quantum technology: Finnish Government strategy (ingested) - explicit PQC reference not confirmed from metadata, REVIEW",
+    "Quantum-safe cryptography and near-term need for digital trust: VTT story page (ingested) - T4 news/story page, REVIEW",
+    "InstituteQ roadmap excluded (included: false), not used",
+    "migrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
+    "algorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

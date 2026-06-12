@@ -1,0 +1,12 @@
+{
+  "iso3": "HRV",
+  "summary": "Croatia's published activity is led by the national CERT (CERT.hr), which ran a webinar on the quantum threat and how organisations can prepare a defence, explicitly covering post-quantum cryptography. No national migration timeline, algorithm guidance or standards camp has been set out in the available material.",
+  "govActors": "CERT.hr | Croatia's national CERT, ran an awareness webinar on the quantum threat and post-quantum cryptography",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CERT.hr as lead: CERT.hr webinar notice (ingested)",
+    "Post-quantum cryptography coverage: webinar notice summary",
+    "dominantProcess omitted: no standards camp attested in the captured documents",
+    "No algorithms, hybrid stance, timeline or target stated in the ingested documents"
+  ]
+}

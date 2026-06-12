@@ -1,0 +1,156 @@
+[
+  {
+    "title": "Quantum migration",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/",
+    "summary": "NSM's quantum migration section providing advice and recommendations for how Norwegian organisations should transition to quantum-safe IT systems and post-quantum cryptographic solutions.",
+    "included": true
+  },
+  {
+    "title": "What is quantum migration?",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/hva-er-kvantemigrasjon",
+    "summary": "NSM explainer stating that quantum computers could break today's encryption and that organisations can and should now plan migration to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum migration - guide",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/kvantemigrasjon-veileder/kvantemigrasjon/",
+    "summary": "NSM guide introducing the issues and giving advice on how organisations begin quantum migration, aimed at system owners handling sensitive information in telecom, finance, health, energy and petroleum.",
+    "included": true
+  },
+  {
+    "title": "Vulnerable algorithms (quantum migration)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/sarbare-algoritmer",
+    "summary": "NSM overview of cryptographic algorithms currently in use (RSA, ECDH, ECDSA, Diffie-Hellman) that will be vulnerable to cryptographically relevant quantum computers, as part of quantum migration planning.",
+    "included": true
+  },
+  {
+    "title": "Overview report for cryptographic resources and systems",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/oversiktsrapport-for-kryptografiske-ressurser-og-systemer",
+    "summary": "NSM guidance on what organisations should report about cryptographic resources and systems expected to be vulnerable to cryptographically relevant quantum computers, supporting quantum migration.",
+    "included": true
+  },
+  {
+    "title": "Quantum migration guide (PDF) - NSM guide to quantum relocation",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/getfile.php/1313362-1697097505/NSM/Filer/Dokumenter/Rapporter/Veileder%20i%20kvanteflytting%20fra%20NSM.pdf",
+    "summary": "NSM PDF guide on quantum migration (kvanteflytting), advising Norwegian organisations on transitioning to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic recommendations",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kryptografiske-anbefalinger/",
+    "summary": "NSM cryptographic recommendations giving concrete advice on algorithms and use cases, including preparing for quantum computers by creating a plan for migration to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic Recommendations - a guidance document from NSM (English)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/advice-and-guidance/publications/cryptographic-recommendations",
+    "summary": "English-language NSM cryptographic recommendations that advise organisations to create and implement a plan for successful migration to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic recommendations - a guidance document from NSM (Security Act guidance)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/regelverk-og-hjelp/veiledere-og-handboker-til-sikkerhetsloven/kryptografiske-anbefalinger-en-veileder-fra-nsm",
+    "summary": "NSM cryptographic recommendations issued as a guidance document under the Security Act framework, including guidance on preparing for migration to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum computers challenge today's cryptographic solutions",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://nsm.no/hold-deg-oppdatert/meninger/kvantedatamaskiner-utfordrer-dagens-kryptolosninger",
+    "summary": "NSM commentary article explaining how quantum computers challenge current cryptographic solutions and the need to migrate towards post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "NSM opens Centre for Applied Cryptology",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/aktuelt/nsm-apner-senter-for-anvendt-kryptologi",
+    "summary": "NSM announcement of a Centre for Applied Cryptology to strengthen Norway's quantum-safe preparedness, including work on post-quantum cryptography, civilly and militarily.",
+    "included": true
+  },
+  {
+    "title": "Migration to post-quantum cryptography (Security Conference 2023 session)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/program-sikkerhetskonferansen-2023/migrasjon-til-postkvantekryptografi",
+    "summary": "NSM Security Conference 2023 programme session on migration to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Post-quantum algorithms (Security Conference 2024 session)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/sikkerhetskonferansen-2024/program/postkvante-algoritmer",
+    "summary": "NSM Security Conference 2024 programme session on post-quantum algorithms and how quantum-secure cryptosystems rest on new mathematical assumptions.",
+    "included": true
+  },
+  {
+    "title": "QCNorway - Towards a Norwegian Quantum Computing Strategy",
+    "country": "NOR",
+    "issuingOrg": "Research Council of Norway",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://prosjektbanken.forskningsradet.no/en/project/FORISS/341168",
+    "summary": "Research Council of Norway project-bank entry for QCNorway, a project towards a Norwegian quantum computing strategy that references post-quantum cryptography as a security challenge. Borderline: a funded-research listing rather than a dedicated PQC document.",
+    "included": false
+  }
+]

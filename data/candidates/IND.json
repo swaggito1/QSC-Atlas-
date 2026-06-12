@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Implementation of Quantum Safe Ecosystem in India - Report of the Task Force",
+    "url": "https://dst.gov.in/sites/default/files/Report_TaskForce_PQMigration_4Feb26%20(v1).pdf",
+    "description": "DST National Quantum Mission task force report (Feb 2026) recommending phased PQC migration for critical sectors, cryptographic inventories, crypto-agile design, and a national testing/certification framework."
+  },
+  {
+    "title": "Report on Quantum-Safe Ecosystem in India",
+    "url": "https://dst.gov.in/sites/default/files/Quantum-Safe-Ecosystem-in-India.pdf",
+    "description": "DST report under the National Quantum Mission setting national targets for quantum resiliency of Critical Information Infrastructure by 2029 and enterprise-wide PQC adoption by 2033."
+  },
+  {
+    "title": "Quantum Safe Ecosystem in India (landing page)",
+    "url": "https://dst.gov.in/quantum-safe-ecosystem-in-india",
+    "description": "DST page on the Quantum-Safe Ecosystem initiative under the National Quantum Mission, covering PQC migration pathways and certification."
+  },
+  {
+    "title": "Report on Implementation of Quantum Safe Ecosystem in India (news)",
+    "url": "https://dst.gov.in/news/report-implementation-quantum-safe-ecosystem-india",
+    "description": "DST news item announcing the task force report on implementation of a quantum safe ecosystem and PQC migration."
+  },
+  {
+    "title": "The National Quantum Mission: Marching towards a safer future with quantum security",
+    "url": "https://dst.gov.in/national-quantum-mission-marching-towards-safer-future-quantum-security",
+    "description": "DST article on the National Quantum Mission including deployment of post-quantum cryptographic solutions."
+  },
+  {
+    "title": "Transitioning to Quantum Cyber Readiness (CERT-In whitepaper CIWP-2025-0002)",
+    "url": "https://www.cert-in.org.in/PDF/CIWP-2025-0002.pdf",
+    "description": "CERT-In information whitepaper (with MeitY and SISA) providing a strategic roadmap to transition India's digital ecosystem to quantum-resilient / post-quantum cryptography."
+  },
+  {
+    "title": "MeitY Launches Whitepaper to guide India's shift towards an Atmanirbhar & Quantum-Safe Cybersecurity (PIB)",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2144023",
+    "description": "Press Information Bureau (Government of India) release announcing MeitY's whitepaper 'Transitioning to Quantum Cyber Readiness' on post-quantum / quantum-safe cybersecurity, July 2025."
+  },
+  {
+    "title": "TEC 910018:2025 - Technical Report on Migration to Post-Quantum Cryptography (PQC)",
+    "url": "https://tec.gov.in/pdf/TR/Final%20technical%20report%20on%20migration%20to%20PQC%2028-03-25.pdf",
+    "description": "Telecommunication Engineering Centre technical report (TEC 910018:2025) on migration to post-quantum cryptography for the telecom sector."
+  },
+  {
+    "title": "Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)",
+    "url": "https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html",
+    "description": "SEBI circular (Aug 2024) requiring regulated entities to maintain cryptographic asset inventories and prepare for post-quantum cryptography migration."
+  },
+  {
+    "title": "CSCRF circular PDF (SEBI/HO/ITD-1/ITD_CSC_EXT/P/CIR/2024/113)",
+    "url": "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf",
+    "description": "PDF of the SEBI CSCRF circular for regulated entities, referencing post-quantum risks and PQC migration inventories."
+  },
+  {
+    "title": "Technical Clarifications to CSCRF for SEBI Regulated Entities",
+    "url": "https://www.sebi.gov.in/legal/circulars/aug-2025/technical-clarifications-to-cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_96329.html",
+    "description": "SEBI Aug 2025 technical clarifications to the CSCRF, including guidance on post-quantum cryptography cryptographic-asset inventories."
+  },
+  {
+    "title": "RBI sets up Q-SAFE expert committee on quantum technology for the financial sector",
+    "url": "https://www.business-standard.com/finance/news/rbi-forms-panel-to-study-quantum-technology-risks-in-finance-sector-126052501562_1.html",
+    "description": "Reporting on RBI's May 2026 press release constituting the Q-SAFE expert committee to assess cryptographic inventory (CBOM), crypto-agility and a roadmap for quantum-safe cryptography in finance. (Official rbi.org.in URL not located.)"
+  },
+  {
+    "title": "Securing the Indian Banking Sector in the Age of Quantum Computing (RBIH whitepaper)",
+    "url": "https://rbih-website-assets.s3.ap-south-1.amazonaws.com/resources/whitepaper-on-securing-indian-banks-in-the-age-of-quantum-computing.pdf",
+    "description": "Reserve Bank Innovation Hub whitepaper recommending Indian banks proactively transition to post-quantum cryptography (PQC) algorithms."
+  },
+  {
+    "title": "India Reveals National Plan for Quantum-Safe Security",
+    "url": "https://thequantuminsider.com/2026/02/09/india-reveals-national-plan-for-quantum-safe-security/",
+    "description": "Trade-press coverage of India's national PQC roadmap (non-institutional; for context only)."
+  },
+  {
+    "title": "India's Post-Quantum Cryptography Migration Roadmap (ORF)",
+    "url": "https://www.orfonline.org/expert-speak/india-s-post-quantum-cryptography-migration-roadmap",
+    "description": "Observer Research Foundation think-tank analysis of India's PQC roadmap (non-institutional; for context only)."
+  }
+]

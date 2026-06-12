@@ -1,0 +1,15 @@
+{
+  "iso3": "ROU",
+  "summary": "Romania's posture is led by the DNSC, whose guide on the transition to post-quantum cryptography points organisations to the NIST-standardised algorithms while noting that they are mathematically validated but still lack operational maturity, and stresses crypto-agility. The government has also adopted a national strategy on quantum technologies covering post-quantum cryptography, and an EU-funded call supports integrating post-quantum algorithms into high-level protocols. No fixed national migration deadline has been published.",
+  "dominantProcess": "NIST",
+  "govActors": "DNSC | Romania's National Cyber Security Directorate, issues transition guidance and cryptography analysis\nSGG | General Secretariat of the Government, adopted the national strategy on quantum technologies\nOportunitati UE (Government of Romania) | EU-funding opportunities portal listing the post-quantum integration call",
+  "dataStatus": "Partial",
+  "provenance": [
+    "DNSC as lead: DNSC transition guide and cryptography analysis (ingested)",
+    "dominantProcess NIST: DNSC guide points to NIST-standardised PQC algorithms as the validated reference set - REVIEW",
+    "Crypto-agility emphasis: DNSC transition guide summary",
+    "National quantum strategy: SGG Annex 41, 2024 (ingested)",
+    "EU funding call for PQC integration: Oportunitati UE portal (ingested)",
+    "No specific algorithms, hybrid stance, timeline or target stated in the ingested documents"
+  ]
+}

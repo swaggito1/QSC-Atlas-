@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Qatar National Cryptographic Standard - Version 1.0",
+    "url": "https://qcert.ncsa.gov.qa/sites/default/files/public/documents/qatar_national_cryptographic_standard_-_version_1.0.pdf",
+    "description": "Official cryptographic standard hosted on the NCSA Qatar Q-CERT subdomain. On inspection it covers conventional symmetric/asymmetric algorithms and does NOT mention post-quantum/quantum-resistant cryptography (fails explicit-PQC test)."
+  },
+  {
+    "title": "National Cyber Security Strategy 2024-2030 (NCSA Qatar)",
+    "url": "https://ncsa.gov.qa/en/national-cyber-security-strategy",
+    "description": "NCSA Qatar national strategy page. Five-pillar strategy aligned with Qatar Vision 2030. No explicit mention of post-quantum cryptography surfaced (page is a JS app; not verifiable as PQC-explicit)."
+  },
+  {
+    "title": "National Cyber Security Strategy 2024-2030 launch (Government Communications Office)",
+    "url": "https://www.gco.gov.qa/en/media-centre/top-news/the-national-cyber-security-strategy-2024-2030-is-launched/",
+    "description": "Government Communications Office announcement of the launch of the National Cyber Security Strategy 2024-2030. General cyber, no explicit PQC reference found."
+  },
+  {
+    "title": "National Cyber Security Strategy (Ministry of Transport and Communications - Arabic)",
+    "url": "https://www.motc.gov.qa/ar/cyber-security/national-cyber-security-strategy",
+    "description": "Ministry of Transport and Communications Arabic page on the national cyber security strategy. General cyber security; no explicit PQC reference found."
+  },
+  {
+    "title": "Emiri Decision No. 1 of 2021 establishing the National Cyber Security Agency",
+    "url": "https://www.almeezan.qa/LawView.aspx?opt=&LawID=8560&language=ar",
+    "description": "Qatari legal portal (Al Meezan) text of the Emiri decision establishing the NCSA. Foundational instrument; no PQC content."
+  },
+  {
+    "title": "NCSA - Cybersecurity Advisories",
+    "url": "https://ncsa.gov.qa/en/media/cybersecurity-advisories",
+    "description": "NCSA Qatar cybersecurity advisories listing page. Index page; no specific PQC advisory surfaced in search."
+  },
+  {
+    "title": "Qatar Common Criteria Scheme (QCCS)",
+    "url": "https://ncsa.gov.qa/en/pages/qccs",
+    "description": "NCSA Qatar Common Criteria certification scheme page. Evaluation/certification scheme; no explicit PQC reference found."
+  },
+  {
+    "title": "Future-Proof Encryption with Quantum-Safe PKI (eMudhra)",
+    "url": "https://emudhra.com/en/blog/quantum-ready-key-management-for-qatar-enterprises",
+    "description": "Vendor (eMudhra) blog on quantum-safe PKI for Qatar enterprises. Explicit PQC but non-institutional, non-domestic vendor source. EXCLUDE."
+  },
+  {
+    "title": "Qatar Cybersecurity and technology developments late 2025 (US Dept of Commerce / trade.gov)",
+    "url": "https://www.trade.gov/market-intelligence/qatar-cybersecurity-and-technology-developments-late-2025",
+    "description": "US Department of Commerce market intelligence noting Qatar's iGA and Qatar Central Bank are evaluating post-quantum guidelines. Foreign-government (US) source about Qatar; belongs to another entity. EXCLUDE for QAT."
+  },
+  {
+    "title": "Strategic National Alliance Establishes Qatar Quantum Encryption Infrastructure (INTLBM)",
+    "url": "https://intlbm.com/2026/06/01/strategic-national-alliance-establishes-qatar-quantum-encryption-infrastructure/",
+    "description": "Journalism on QKD link between HBKU, Ooredoo and the Ministry of Defence. Quantum key distribution (not PQC) and a media source. EXCLUDE."
+  },
+  {
+    "title": "Aride announces establishment of first secure quantum communications link in Qatar (Al-Sharq)",
+    "url": "https://al-sharq.com/article/31/05/2026/%D8%A3%D8%B1%D9%8A%D8%AF-%D8%AA%D8%B9%D9%84%D9%86-%D8%AA%D8%A3%D8%B3%D9%8A%D8%B3-%D8%A3%D9%88%D9%84-%D8%B1%D8%A7%D8%A8%D8%B7-%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%D8%A7%D8%AA-%D9%83%D9%85%D9%8A-%D8%A2%D9%85%D9%86-%D9%81%D9%8A-%D9%82%D8%B7%D8%B1",
+    "description": "Arabic journalism on first secure quantum (QKD) communications link in Qatar. QKD, not PQC; media source. EXCLUDE."
+  },
+  {
+    "title": "Cybersecurity experts: preparing for the post-quantum era is essential to protect data (Bloom Gate)",
+    "url": "https://bloom-gate.com/%D8%A3%D8%B3%D9%88%D8%A7%D9%82/%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D8%A3%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A-%D9%8A%D8%AF%D8%B9%D9%88%D9%86-%D9%84%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84/",
+    "description": "Arabic journalism: experts call to accelerate preparation for the post-quantum era. Explicit PQC but a media/blog source, not institutional. EXCLUDE."
+  },
+  {
+    "title": "Qatar National Cyber Security Strategy (National Security Archive PDF copy)",
+    "url": "https://nsarchive.gwu.edu/sites/default/files/documents/3903662/Qatari-Government-Qatar-National-Cyber-Security.pdf",
+    "description": "Copy of an (older) Qatar National Cyber Security Strategy hosted by the George Washington University National Security Archive. Third-party host; general cyber, no explicit PQC found. EXCLUDE."
+  }
+]

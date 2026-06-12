@@ -1,0 +1,18 @@
+{
+  "iso3": "LUX",
+  "summary": "Luxembourg's posture is set by the Ministry of State, whose national quantum technologies strategy charts a roadmap toward secure quantum networks and treats post-quantum cryptography as a quantum-resistant solution that can be integrated with existing systems. The government's digital-trust portal, run by ILNAS, has opened a public consultation on the European Union roadmap for the transition to post-quantum cryptography, which recommends that critical use cases migrate by the end of 2030 at the latest.",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "2030 | critical use cases migrate to post-quantum cryptography (EU roadmap recommendation noted in the national consultation)",
+  "targetCompletion": "Phased (no fixed end)",
+  "govActors": "Ministry of State | Luxembourg Ministry of State, issues the national quantum technologies strategy and roadmap\nILNAS | Luxembourg Institute for Standardisation, Accreditation, Safety and Quality of products and services, runs the digital-trust portal and the consultation on the EU post-quantum roadmap\nGovernment of Luxembourg | publishes the national quantum communication roadmap factsheet (Phase 1 2025-2027, Phase 2 2027-2030, Phase 3)",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Ministry of State lead, strategy and roadmap, PQC as integrable quantum-resistant solution: Luxembourg's Quantum Technologies Strategy 2024 (ingested, T1)",
+    "ILNAS digital-trust portal consultation on the EU PQC roadmap, end-2030 recommendation for critical use cases: portail-qualite announcement 2025 (ingested, T1)",
+    "Phased roadmap (Phase 1 2025-2027, Phase 2 2027-2030, Phase 3): Quantum Communication in Luxembourg factsheet (ingested, T1); PQC reference not explicit in the snippet, flagged for review",
+    "migrationTimeline 2030 milestone is an EU roadmap recommendation that Luxembourg notes, not a Luxembourg national deadline - REVIEW",
+    "targetCompletion Phased: roadmap describes phases without a terminal date for the cryptographic transition",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries",
+    "algorithms/standardFamilies omitted: not stated in captured summaries"
+  ]
+}

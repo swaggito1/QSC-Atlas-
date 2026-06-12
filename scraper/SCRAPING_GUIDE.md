@@ -56,6 +56,30 @@ Cost: each query is roughly one Firecrawl credit (search only, no page scraping)
 Default is ~6-9 credits per country, `--lite` ~3, `--deep` ~10-12. The script
 prints the query plan and cost estimate before searching.
 
+### Step 1, Firecrawl-free mode (preferred when credits are scarce)
+
+`scrape-country.mjs` bills Firecrawl for every query. The discovery step can instead
+be done with Claude's built-in `WebSearch`/`WebFetch` tools, which cost **zero
+Firecrawl credits**. This is the preferred mode for large batches.
+
+You cannot call `WebSearch` from a Node script (it is an agent tool), so discovery
+moves into an agent. The pattern (see `scraper/scan-region.wf.js` for a full
+multi-country example):
+
+1. Give one agent a country: its name, ISO3, and institution hints (national cyber
+   agency, standards body, ministry, central bank, parliament) plus the
+   native-language phrase for "post-quantum cryptography".
+2. The agent runs ~8-14 `WebSearch` queries: generic English, **native-language**
+   (often decisive for non-English countries), and institution-scoped (via
+   `allowed_domains`). It writes the unique hits to `data/candidates/<ISO3>.json`.
+3. The same agent classifies per `SCRAPER_BRIEF.md` and writes
+   `data/results/<ISO3>.json`, then you run `ingest.mjs` as normal.
+
+`scan-region.wf.js` does this for a batch of countries grouped by region; run it with
+the Workflow tool (`agentType: 'general-purpose'` so the subagents have WebSearch +
+Write). Validated on NZL (English) and NOR (Norwegian, where native-language search
+was decisive) before scaling. Ingest is unchanged and already Firecrawl-free.
+
 ### Step 2: classify (this is where Claude's judgement goes)
 Read `data/candidates/<ISO3>.json` and apply the rules in `scraper/SCRAPER_BRIEF.md`.
 Keep only sources that pass BOTH inclusion tests:

@@ -1,0 +1,14 @@
+{
+  "iso3": "SVN",
+  "summary": "Slovenia's posture is led by the Government Information Security Office (URSIV), which warns that post-quantum cryptography is becoming a necessary part of cybersecurity because today's cryptographic solutions will not withstand quantum computers. URSIV has published a recommendation explaining the European Union's roadmap for post-quantum cryptography and has run training for information security leaders in critical infrastructure and public administration covering post-quantum cryptography and NIS2 obligations. No separate fixed national migration deadline has been published.",
+  "govActors": "URSIV | Slovenia's Government Information Security Office, issues guidance and recommendations on post-quantum cryptography",
+  "dataStatus": "Partial",
+  "provenance": [
+    "URSIV as lead: URSIV guidance, EU roadmap FAQ and training news item (all ingested)",
+    "PQC becoming necessary: URSIV 'Secure Digital Future in the Age of Quantum Computers' summary",
+    "EU roadmap explained: URSIV FAQ recommendation, May 2026 (ingested)",
+    "NIS2 link: URSIV WB3C training news item, 2023 (ingested)",
+    "dominantProcess omitted: documents explain the EU roadmap rather than adopting a specific standards camp; conservative omission",
+    "No specific algorithms, hybrid stance, dated national milestones or target stated in the ingested documents"
+  ]
+}

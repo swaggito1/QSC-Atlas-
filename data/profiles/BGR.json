@@ -1,0 +1,9 @@
+{
+  "iso3": "BGR",
+  "dataStatus": "Placeholder",
+  "provenance": [
+    "No included documents: data/results/BGR.json is empty",
+    "Candidates are all non-institutional or foreign (Mastercard, ssl.com, EU reporter, CISA, NIST, NCSC, ENISA); no Bulgarian government or national authority document qualified",
+    "Recommend re-scrape with --deep for a national source (e.g. national cyber security authority)"
+  ]
+}

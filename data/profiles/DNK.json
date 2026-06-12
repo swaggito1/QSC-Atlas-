@@ -1,0 +1,15 @@
+{
+  "iso3": "DNK",
+  "summary": "Denmark's posture is led by the Centre for Cyber Security, whose theme page explains the transition to quantum-safe cryptography and the migration of Danish organisations to quantum-resistant algorithms. Parliament supports a coordinated European effort, and the central bank advises that preparations for the financial sector should be strengthened. No national migration timeline is attested in the gathered documents.",
+  "govActors": "CFCS | Centre for Cyber Security, sets out the transition to quantum-safe cryptography for Danish organisations\nSAMSIK | Danish Agency for Societal Security, hosts the transition guidance on its newer domain\nFolketinget | Danish Parliament, background note supporting a coordinated EU effort on the transition\nNationalbanken | central bank, advises strengthening preparations for quantum-safe cryptography in the financial sector",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CFCS lead, transition and migration to quantum-resistant algorithms: CFCS theme page (ingested)",
+    "Same content on newer domain: SAMSIK theme page (ingested) - samsik.dk flagged, REVIEW",
+    "Support for a coordinated EU effort: Folketinget background and subsidiarity note (ingested)",
+    "Strengthen financial-sector preparations: Nationalbanken risk report (ingested)",
+    "National Strategy for Quantum Technology ingested but flagged for no clear explicit QSC migration reference, not used for posture - REVIEW",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
+    "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Icelandic National Cybersecurity Strategy 2022-2037 (PDF)",
+    "url": "https://www.stjornarradid.is/library/04-Raduneytin/Haskola---idnadar--og-nyskopunarraduneytid/Icelandic%20National%20Cybersecurity%20Strategy%202022-2037.pdf",
+    "description": "National cybersecurity strategy published by the Government of Iceland (Ministry of Higher Education, Science and Innovation). Names artificial intelligence and quantum computers as the main cybersecurity challenges for the coming years, but does NOT explicitly reference post-quantum / quantum-safe cryptography or migration to quantum-resistant algorithms."
+  },
+  {
+    "title": "Netoryggisstefna Islands 2022-2037 (Icelandic National Cybersecurity Strategy, landing page)",
+    "url": "https://www.stjornarradid.is/gogn/rit-og-skyrslur/stakt-rit/2022/02/25/Netoryggisstefna-Islands-2022-2037/",
+    "description": "Government of Iceland (Stjornarradid) landing page for the national cybersecurity strategy 2022-2037. General cyber strategy; no explicit PQC / quantum-safe cryptography reference found."
+  },
+  {
+    "title": "Icelandic National Cybersecurity Strategy 2022-2037 (Digital Watch Observatory summary)",
+    "url": "https://dig.watch/resource/icelandic-national-cybersecurity-strategy-2022-2037",
+    "description": "Third-party (DiploFoundation Digital Watch) summary of the Icelandic strategy. Not a domestic institutional issuer; no explicit PQC reference."
+  },
+  {
+    "title": "Hollrad netoryggissveitarinnar CERT-IS (Advice from CERT-IS)",
+    "url": "https://cert.is/frettasafn/hollrad-netoryggissveitarinnar-cert-is/",
+    "description": "CERT-IS cybersecurity advice article (published 5 Oct 2023). Covers passwords, MFA, updates, password managers. Verified by fetch: does NOT mention post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "Arsskyrslur (Annual reports) - CERT-IS",
+    "url": "https://cert.is/frettir-og-utgefid-efni/arsskyrslur/",
+    "description": "Index page for CERT-IS annual reports. No PQC / quantum-safe cryptography content surfaced in searches; listing page only."
+  },
+  {
+    "title": "English - CERT-IS",
+    "url": "https://cert.is/english/",
+    "description": "CERT-IS English overview page describing its mandate as Iceland's national CERT. No explicit PQC / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Fjarskiptastofa | Netoryggi (Electronic Communications Office - Cybersecurity)",
+    "url": "https://www.pfs.is/netoryggi/",
+    "description": "Fjarskiptastofa (Electronic Communications Office / former Post and Telecom Administration) cybersecurity page. General cyber/network security; no explicit PQC reference found."
+  },
+  {
+    "title": "Reglugerd nr. 480/2021 um netoryggissveit Post- og fjarskiptastofnunar (CERT-IS)",
+    "url": "https://island.is/reglugerdir/nr/0480-2021",
+    "description": "Regulation establishing the CERT-IS cybersecurity unit. Mentions encryption generally for secure data transmission; no explicit PQC / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Seblabanki Islands | Forsida (Central Bank of Iceland homepage)",
+    "url": "https://sedlabanki.is/",
+    "description": "Central Bank of Iceland. Searches combining the bank with quantum computing / post-quantum cryptography returned no relevant PQC document."
+  },
+  {
+    "title": "Stadlarad Islands - Islenskir stadlar (Icelandic Standards Council)",
+    "url": "https://www.stadlar.is/",
+    "description": "Iceland's standards body (member of ISO, IEC, CEN, CENELEC, ETSI). No Iceland-specific PQC / quantum-safe cryptography standard or publication found."
+  }
+]

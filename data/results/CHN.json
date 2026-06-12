@@ -1,0 +1,46 @@
+[
+  {
+    "title": "State Cryptography Administration Announcement No. 55: National Cryptography Science Fund (2nd batch) application guidelines",
+    "country": "CHN",
+    "issuingOrg": "OSCCA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://sca.gov.cn/sca/xwdt/2026-01/30/content_1061322.shtml",
+    "summary": "OSCCA (State Cryptography Administration) announcement releasing application guidelines for the second batch of the National Cryptography Science Fund. The first listed research direction is 'anti-quantum computing cryptography key theory and technology', covering quantum provable-security theory and quantum-resistant cryptographic algorithms.",
+    "included": true
+  },
+  {
+    "title": "Announcement on launching the new-generation commercial cryptographic algorithm solicitation",
+    "country": "CHN",
+    "issuingOrg": "ICCS (Commercial Cryptography Standards Research Institute)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1937422988373135360/content_1937422988373135360.html",
+    "summary": "The Commercial Cryptography Standards Research Institute (under OSCCA's standards system) announces a global solicitation for next-generation public key, hash and block cipher algorithms, explicitly to address quantum computing threats and develop China's next-generation commercial cryptographic algorithm standards.",
+    "included": false
+  },
+  {
+    "title": "Notice soliciting comments on Public Key Cryptographic Algorithm Submission Requirements and Evaluation Criteria (drafts)",
+    "country": "CHN",
+    "issuingOrg": "ICCS (Commercial Cryptography Standards Research Institute)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.niccs.org.cn/tzgg/202502/t20250205_378197.html",
+    "summary": "ICCS notice seeking public comment on draft submission requirements and evaluation criteria for the next-generation public-key cryptographic algorithm call, which is framed as a response to quantum computing threats and aims to select algorithms for standardisation.",
+    "included": false
+  },
+  {
+    "title": "Quantum Information Technology Development and Application Research Report (2023)",
+    "country": "CHN",
+    "issuingOrg": "CAICT",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202312/P020240326616760506829.pdf",
+    "summary": "Research report by CAICT, the state research institute under MIIT, surveying quantum information technology developments. It covers post-quantum cryptography (PQC) standardisation progress, including NIST PQC algorithm standardisation, alongside global strategy and investment context.",
+    "included": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Post Quantum Cryptography (NCSA PDF)",
+    "url": "https://www.ncsa.or.th/media/uploads/2025/02/16/post-quantum-cryptography-rw8_uid_67b2025cb56d1.pdf",
+    "description": "PDF hosted on the official NCSA (Office of the National Cyber Security Committee, สกมช.) domain describing post-quantum cryptography and Thailand's preparation for the quantum era. Uploaded 2025-02-16 per URL path."
+  },
+  {
+    "title": "QUANTA Platform | NCSA",
+    "url": "https://pqc-learn.ncsa.or.th/",
+    "description": "NCSA's national PQC learning and readiness platform (QUANTA). States NCSA's mission to lead Thai organisations through the quantum transition, prepare public and private bodies, and provide tools and labs to support migration to Post-Quantum Cryptography standards."
+  },
+  {
+    "title": "QUANTA PQC Migration Roadmap | NCSA",
+    "url": "https://pqc-learn.ncsa.or.th/migration.html",
+    "description": "NCSA PQC migration roadmap on the QUANTA platform. Phased transition: discovery/risk assessment, PQC integration, full system migration, targeting completion by 2035; notes organisations may need 5-20 years to transition."
+  },
+  {
+    "title": "QUANTA PQC Standards | NCSA",
+    "url": "https://pqc-learn.ncsa.or.th/standards.html",
+    "description": "NCSA QUANTA page listing recommended PQC standards: FIPS 203 (ML-KEM) for key encapsulation, FIPS 204 (ML-DSA) for signatures, FIPS 205 (SLH-DSA) for long-term archival."
+  },
+  {
+    "title": "NCSA standards page",
+    "url": "https://www.ncsa.or.th/standards",
+    "description": "NCSA national standards listing page (สกมช.). Header/index page; PQC content surfaced via QUANTA sub-pages."
+  },
+  {
+    "title": "NCSA homepage",
+    "url": "https://www.ncsa.or.th/",
+    "description": "Homepage of the National Cyber Security Agency of Thailand (สกมช.)."
+  },
+  {
+    "title": "Thai banks evaluate quantum impacts (Bangkok Post)",
+    "url": "https://www.bangkokpost.com/business/general/3138720/thai-banks-evaluate-quantum-impacts",
+    "description": "Journalism. TB-CERT/Thai Bankers' Association working with Bank of Thailand on a task force to study quantum impacts and develop guidelines. No BOT-issued PQC document."
+  },
+  {
+    "title": "NCSA warns state websites at risk, urges upgrade to new standards (Nation Thailand)",
+    "url": "https://www.nationthailand.com/news/general/40055681",
+    "description": "Journalism. Reports NCSA's 'Building the Digital Future' seminar (19 Sep 2025) and Thailand's PQC roadmap (awareness/working groups by 2025; PQC/hybrid for new sensitive-data projects by 2030; full migration by 2035)."
+  }
+]

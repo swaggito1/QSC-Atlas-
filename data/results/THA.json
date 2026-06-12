@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Post-Quantum Cryptography",
+    "country": "THA",
+    "issuingOrg": "NCSA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsa.or.th/media/uploads/2025/02/16/post-quantum-cryptography-rw8_uid_67b2025cb56d1.pdf",
+    "summary": "Document hosted on Thailand's National Cyber Security Agency (NCSA / สกมช.) domain explaining post-quantum cryptography and the need for Thai organisations to prepare information systems for the arrival of quantum computers and adopt PQC standards.",
+    "included": false
+  },
+  {
+    "title": "QUANTA: National Post-Quantum Cryptography Readiness Platform",
+    "country": "THA",
+    "issuingOrg": "NCSA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://pqc-learn.ncsa.or.th/",
+    "summary": "NCSA's national platform (QUANTA) to lead Thailand's transition to the quantum era, educating and preparing public and private organisations and providing tools and labs to support migration to Post-Quantum Cryptography standards.",
+    "included": false
+  },
+  {
+    "title": "Post-Quantum Cryptography Migration Roadmap (QUANTA)",
+    "country": "THA",
+    "issuingOrg": "NCSA",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://pqc-learn.ncsa.or.th/migration.html",
+    "summary": "NCSA phased PQC migration roadmap setting out discovery and risk assessment, PQC integration, and full system migration, targeting completion of the national transition to quantum-resistant cryptography by 2035.",
+    "included": false
+  },
+  {
+    "title": "Recommended Post-Quantum Cryptography Standards (QUANTA)",
+    "country": "THA",
+    "issuingOrg": "NCSA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://pqc-learn.ncsa.or.th/standards.html",
+    "summary": "NCSA QUANTA page recommending NIST PQC standards for Thai organisations: FIPS 203 (ML-KEM) for key encapsulation, FIPS 204 (ML-DSA) for digital signatures, and FIPS 205 (SLH-DSA) for long-term archival.",
+    "included": false
+  }
+]

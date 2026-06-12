@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Implementation of Quantum Safe Ecosystem in India - Report of the Task Force",
+    "country": "IND",
+    "issuingOrg": "DST (National Quantum Mission)",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://dst.gov.in/sites/default/files/Report_TaskForce_PQMigration_4Feb26%20(v1).pdf",
+    "summary": "Department of Science & Technology task force report under the National Quantum Mission setting out India's national strategy for migration to post-quantum cryptography, including phased timelines for critical information infrastructure, mandatory cryptographic inventories, crypto-agile design and a national PQC testing and certification framework.",
+    "included": true
+  },
+  {
+    "title": "Report on Quantum-Safe Ecosystem in India",
+    "country": "IND",
+    "issuingOrg": "DST (National Quantum Mission)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://dst.gov.in/sites/default/files/Quantum-Safe-Ecosystem-in-India.pdf",
+    "summary": "Department of Science & Technology report under the National Quantum Mission on building a quantum-safe ecosystem, covering post-quantum cryptography migration pathways, a national testing and certification programme, hybrid deployment frameworks and crypto-agile PKI.",
+    "included": true
+  },
+  {
+    "title": "Transitioning to Quantum Cyber Readiness (CERT-In Whitepaper CIWP-2025-0002)",
+    "country": "IND",
+    "issuingOrg": "CERT-In",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cert-in.org.in/PDF/CIWP-2025-0002.pdf",
+    "summary": "CERT-In information whitepaper (with MeitY and SISA) providing a strategic, step-by-step roadmap for public and private organisations to transition cybersecurity frameworks to quantum-resilient / post-quantum cryptography, prioritising critical sectors such as BFSI, defence and health.",
+    "included": true
+  },
+  {
+    "title": "MeitY launches whitepaper to guide India's shift towards Atmanirbhar & Quantum-Safe Cybersecurity",
+    "country": "IND",
+    "issuingOrg": "PIB / MeitY",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2144023",
+    "summary": "Press Information Bureau (Government of India) release announcing the Ministry of Electronics and Information Technology whitepaper 'Transitioning to Quantum Cyber Readiness', which sets out India's approach to post-quantum / quantum-safe cybersecurity.",
+    "included": true
+  },
+  {
+    "title": "Technical Report on Migration to Post-Quantum Cryptography (TEC 910018:2025)",
+    "country": "IND",
+    "issuingOrg": "TEC",
+    "year": 2025,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://tec.gov.in/pdf/TR/Final%20technical%20report%20on%20migration%20to%20PQC%2028-03-25.pdf",
+    "summary": "Telecommunication Engineering Centre technical report (TEC 910018:2025) on migration to post-quantum cryptography, providing a reference framework for the Indian telecom sector's transition to quantum-safe algorithms.",
+    "included": true
+  },
+  {
+    "title": "Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities",
+    "country": "IND",
+    "issuingOrg": "SEBI",
+    "year": 2024,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html",
+    "summary": "SEBI circular establishing the Cybersecurity and Cyber Resilience Framework for regulated entities, which requires periodic post-quantum risk assessment and maintenance of cryptographic-asset inventories to prepare for migration to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Technical Clarifications to the CSCRF for SEBI Regulated Entities",
+    "country": "IND",
+    "issuingOrg": "SEBI",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.sebi.gov.in/legal/circulars/aug-2025/technical-clarifications-to-cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_96329.html",
+    "summary": "SEBI circular issuing technical clarifications to the CSCRF, including the expected approach for maintaining cryptographic-asset inventories and prioritising assets for post-quantum cryptography migration.",
+    "included": true
+  },
+  {
+    "title": "Securing the Indian Banking Sector in the Age of Quantum Computing",
+    "country": "IND",
+    "issuingOrg": "RBIH (Reserve Bank Innovation Hub)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://rbih-website-assets.s3.ap-south-1.amazonaws.com/resources/whitepaper-on-securing-indian-banks-in-the-age-of-quantum-computing.pdf",
+    "summary": "Reserve Bank Innovation Hub (an RBI subsidiary) whitepaper recommending that Indian banks proactively transition to post-quantum cryptography algorithms designed to resist quantum attacks. Flagged for review: hosted on a non-government S3 domain and issued by an RBI subsidiary rather than the central bank directly.",
+    "included": false
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "title": "TC26 Structure (Working Group 2.5 Post-Quantum Cryptographic Mechanisms)",
+    "url": "https://tc26.ru/about/structure/",
+    "description": "Structure page of TC26 (Technical Committee for Standardization 'Cryptographic Information Protection', a committee of Rosstandart). Lists Working Group 2.5 'Постквантовые криптографические механизмы' (Post-Quantum Cryptographic Mechanisms) under Subcommittee No. 2."
+  },
+  {
+    "title": "About TC26",
+    "url": "https://tc26.ru/about/",
+    "description": "About page of the Technical Committee for Standardization 'Cryptographic Information Protection' (TC26), Rosstandart's committee responsible for cryptographic standards including post-quantum work."
+  },
+  {
+    "title": "Standardization documents developed with participation of TC26 members and experts",
+    "url": "https://tc26.ru/standarts/",
+    "description": "Index of standardization documents (national standards, recommendations, technical specifications) developed within TC26, including the GOST R 34 cryptographic series that post-quantum mechanisms are intended to complement."
+  },
+  {
+    "title": "Draft documents (Проекты документов)",
+    "url": "https://tc26.ru/discussions/",
+    "description": "TC26 page hosting draft standardization documents under discussion. Reviewed: no post-quantum-specific draft currently published here as of June 2026."
+  },
+  {
+    "title": "Recommendations for standardization (Рекомендации по стандартизации)",
+    "url": "https://tc26.ru/standarts/rekomendatsii-po-standartizatsii/",
+    "description": "TC26 listing of standardization recommendations. No explicitly post-quantum recommendation visible in search results."
+  },
+  {
+    "title": "Quantum cryptography: today or only tomorrow?",
+    "url": "https://tc26.ru/events/publikatcii-i-izdaniia/kvantovaya-kriptografiya-uzhe-segodnya-ili-poka-tolko-zavtra.html",
+    "description": "TC26 publication/event page on quantum cryptography. Concerns quantum key distribution rather than post-quantum (algorithmic) cryptography."
+  },
+  {
+    "title": "Information Security Library / financial sector cybersecurity (Bank of Russia)",
+    "url": "https://www.cbr.ru/information_security/acts/",
+    "description": "Bank of Russia information-security legal acts page. No post-quantum-cryptography-specific document identified in search."
+  },
+  {
+    "title": "Main Directions for the Development of Information Security in the Credit and Financial Sphere",
+    "url": "https://cbr.ru/Content/Document/File/83253/onrib_2021.pdf",
+    "description": "Bank of Russia strategic document on information-security development in the financial sector (2021). No explicit post-quantum cryptography reference confirmed."
+  },
+  {
+    "title": "National Technology Center for Digital Cryptography (НТЦ ЦК)",
+    "url": "https://digitalcryptography.ru/",
+    "description": "Official site of the ANO National Technology Center for Digital Cryptography, established under the Ministry of Digital Development (Mintsifry). Reported to include a quantum and post-quantum cryptography laboratory, but no explicit PQC document found on the front page."
+  },
+  {
+    "title": "Post-Quantum Cryptography (TAdviser article)",
+    "url": "https://www.tadviser.ru/index.php/Статья:Постквантовая_криптография",
+    "description": "TAdviser news/encyclopedia article aggregating Russian post-quantum cryptography developments (TC26, financial-sector pilots, Shipovnik). Non-institutional (industry news aggregator)."
+  },
+  {
+    "title": "Gazprombank, Moscow Exchange and NSPK tested post-quantum cryptography",
+    "url": "https://tadviser.com/index.php/Article:Post-quantum_cryptography",
+    "description": "TAdviser report on Russian financial-sector post-quantum pilots presented to the Bank of Russia. Non-institutional news aggregator."
+  },
+  {
+    "title": "Shipovnik post-quantum signature open implementation (Kryptonite)",
+    "url": "https://kryptonite.ru/news/postkvantovyi-algoritm-shipovnik-realisatsiya/",
+    "description": "Vendor (Kryptonite/NPK Kriptonit) announcement of the 'Shipovnik' code-based post-quantum signature, submitted to TC26 working group. Non-institutional issuer (vendor)."
+  },
+  {
+    "title": "Post-quantum cryptography as a new standard (Habr / Kryptonite)",
+    "url": "https://habr.com/ru/companies/kryptonite/articles/678366/",
+    "description": "Vendor blog post (Kryptonite on Habr) on Russian post-quantum standardization. Non-institutional."
+  },
+  {
+    "title": "Russian post-quantum cryptography and ... (RusCrypto conference paper)",
+    "url": "https://ruscrypto.ru/resource/archive/rc2022/files/09_googlya_grebnev_kot.pdf",
+    "description": "RusCrypto 2022 conference presentation on Russian post-quantum cryptography. Academic/conference, non-institutional issuer."
+  },
+  {
+    "title": "Quantum MEPhI: post-quantum cryptography a breakthrough of the year (NRNU MEPhI)",
+    "url": "https://mephi.ru/press/news/22063",
+    "description": "University (MEPhI) press release on post-quantum cryptography work. University source - excluded by inclusion rules."
+  }
+]

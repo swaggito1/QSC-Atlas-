@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Kvantemigrasjon (Quantum migration) - landing page",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/",
+    "description": "NSM section on quantum migration: advice and recommendations for how Norwegian organisations should transition to quantum-safe IT systems and cryptographic solutions."
+  },
+  {
+    "title": "Hva er kvantemigrasjon? (What is quantum migration?)",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/hva-er-kvantemigrasjon",
+    "description": "NSM explainer: quantum computers could break today's encryption; it is now possible and important to plan an organisation's migration to post-quantum cryptography."
+  },
+  {
+    "title": "Kvantemigrasjon - veileder (Quantum migration - guide)",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/kvantemigrasjon-veileder/kvantemigrasjon/",
+    "description": "NSM guide introducing the issues and giving advice on how organisations get started with quantum migration; aimed at system owners handling sensitive information (telecom, finance, health, energy, petroleum)."
+  },
+  {
+    "title": "Sårbare algoritmer - kvantemigrasjon (Vulnerable algorithms)",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/sarbare-algoritmer",
+    "description": "NSM overview of algorithms in use that will be vulnerable to cryptographically relevant quantum computers (RSA, ECDH, ECDSA, DH)."
+  },
+  {
+    "title": "Oversiktsrapport for kryptografiske ressurser og systemer (Overview report for cryptographic resources and systems)",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kvantemigrasjon/oversiktsrapport-for-kryptografiske-ressurser-og-systemer",
+    "description": "NSM guidance on what to report about cryptographic resources/systems vulnerable to cryptographically relevant quantum computers as part of quantum migration."
+  },
+  {
+    "title": "Kvantemigrasjon Veileder (PDF) - Veileder i kvanteflytting fra NSM",
+    "url": "https://nsm.no/getfile.php/1313362-1697097505/NSM/Filer/Dokumenter/Rapporter/Veileder%20i%20kvanteflytting%20fra%20NSM.pdf",
+    "description": "NSM PDF guide on quantum migration (kvanteflytting / kvantemigrasjon) to quantum-safe cryptography."
+  },
+  {
+    "title": "Kryptografiske anbefalinger (Cryptographic recommendations)",
+    "url": "https://nsm.no/fagomrader/digital-sikkerhet/kryptosikkerhet/kryptografiske-anbefalinger/",
+    "description": "NSM cryptographic recommendations; includes preparing for quantum computers by creating a plan for migration to quantum-resistant cryptography."
+  },
+  {
+    "title": "Cryptographic Recommendations - a guidance document from NSM (English)",
+    "url": "https://nsm.no/advice-and-guidance/publications/cryptographic-recommendations",
+    "description": "English-language NSM cryptographic recommendations; recommends creating and implementing a plan for successful migration to quantum-resistant cryptography."
+  },
+  {
+    "title": "Kryptografiske anbefalinger - en veileder fra NSM (guidance document)",
+    "url": "https://nsm.no/regelverk-og-hjelp/veiledere-og-handboker-til-sikkerhetsloven/kryptografiske-anbefalinger-en-veileder-fra-nsm",
+    "description": "NSM guidance document version of the cryptographic recommendations under the Security Act framework; covers preparing for quantum-resistant cryptography migration."
+  },
+  {
+    "title": "Kvantedatamaskiner utfordrer dagens kryptoløsninger (Quantum computers challenge today's crypto solutions)",
+    "url": "https://nsm.no/hold-deg-oppdatert/meninger/kvantedatamaskiner-utfordrer-dagens-kryptolosninger",
+    "description": "NSM opinion/commentary article on how quantum computers challenge current cryptographic solutions and the need for post-quantum migration."
+  },
+  {
+    "title": "NSM åpner senter for anvendt kryptologi (NSM opens centre for applied cryptology)",
+    "url": "https://nsm.no/aktuelt/nsm-apner-senter-for-anvendt-kryptologi",
+    "description": "NSM announcement of a Centre for Applied Cryptology to strengthen Norway's quantum-safe preparedness, civil and military."
+  },
+  {
+    "title": "Migrasjon til postkvantekryptografi (Migration to post-quantum cryptography) - conference session 2023",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/program-sikkerhetskonferansen-2023/migrasjon-til-postkvantekryptografi",
+    "description": "NSM security conference 2023 session on migration to post-quantum cryptography."
+  },
+  {
+    "title": "Postkvante algoritmer (Post-quantum algorithms) - conference session 2024",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/sikkerhetskonferansen-2024/program/postkvante-algoritmer",
+    "description": "NSM security conference 2024 session on post-quantum algorithms and how quantum-secure cryptosystems are based on new mathematical assumptions."
+  },
+  {
+    "title": "Kvantedatamaskiner og kryptografi (Quantum computers and cryptography) - conference session",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/program-4/kvantedatamaskiner-og-kryptografi",
+    "description": "NSM security conference session on quantum computers and cryptography."
+  },
+  {
+    "title": "Slik kvantesikres Norges største hemmeligheter (How Norway's biggest secrets are made quantum-safe) - conference session",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/program-4/slik-kvantesikres-norges-storste-hemmeligheter",
+    "description": "NSM security conference session on quantum-securing Norway's most sensitive information."
+  },
+  {
+    "title": "Sikkerhet (Security) - Digdir DPI documentation",
+    "url": "https://docs.digdir.no/dpi_sikkerhet_index.html",
+    "description": "Digitaliseringsdirektoratet (Digdir) security documentation page. Checked: does NOT mention post-quantum/quantum-safe cryptography."
+  },
+  {
+    "title": "Praktiske råd om egenberedskap for betalinger (Practical advice on payment self-preparedness)",
+    "url": "https://www.norges-bank.no/en/topics/financial-stability/practical-guide-to-payment-preparedness/",
+    "description": "Norges Bank payment-system preparedness guidance. Borderline - no confirmed explicit PQC reference."
+  },
+  {
+    "title": "Memo 2-2024 crypto-assets web report",
+    "url": "https://www.norges-bank.no/en/news-events/publications/Norges-Bank-Papers/2024/memo-2-2024-crypto-assets/web-report-papers-2-2024-crypto-assets/",
+    "description": "Norges Bank memo on crypto-assets (cryptocurrencies), not cryptographic algorithms; no PQC reference - excluded."
+  },
+  {
+    "title": "QCNorway - Towards a Norwegian Quantum Computing Strategy (Forskningsradet Prosjektbanken)",
+    "url": "https://prosjektbanken.forskningsradet.no/en/project/FORISS/341168",
+    "description": "Research Council of Norway project entry on a Norwegian quantum computing strategy; research-funding context, mentions PQC as a challenge."
+  }
+]

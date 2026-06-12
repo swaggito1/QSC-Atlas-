@@ -1,0 +1,17 @@
+{
+  "iso3": "CAN",
+  "summary": "Canada's transition is led by the Canadian Centre for Cyber Security, which has published a roadmap for migrating Government of Canada non-classified IT systems to post-quantum cryptography, with the Treasury Board Secretariat issuing the matching policy implementation notice. The Cyber Centre aligns with the NIST standardisation process, having reviewed the NIST candidate algorithms.",
+  "dominantProcess": "NIST",
+  "govActors": "CCCS | Canadian Centre for Cyber Security, publishes the migration roadmap (ITSM.40.001) and quantum-threat guidance, and reviewed the NIST PQC candidates\nTBS | Treasury Board Secretariat, issues the policy implementation notice requiring migration of government systems\nISED | Innovation, Science and Economic Development Canada, National Quantum Strategy roadmap and national quantum-readiness best practices\nSSC | Shared Services Canada, campaign material on quantum computing and cybersecurity\nNRC | National Research Council, Quantum Safe Technologies Initiative supporting testing and integration of post-quantum cryptography",
+  "migrationTimeline": "2031 | High-priority Government of Canada systems migrated to post-quantum cryptography\n2035 | Remaining Government of Canada systems migrated to post-quantum cryptography",
+  "targetCompletion": "2035",
+  "hybridDeployment": "None stated",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (CCCS, TBS): roadmap ITSM.40.001 and TBS policy implementation notice results rows",
+    "dominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned",
+    "ISED, SSC, NRC roles: respective results rows",
+    "migrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035",
+    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries"
+  ]
+}

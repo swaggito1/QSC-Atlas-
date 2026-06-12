@@ -1,0 +1,13 @@
+{
+  "iso3": "POL",
+  "summary": "Poland's published material is so far explanatory rather than directive. NASK, the national research institute and CSIRT operator, names post-quantum cryptography and quantum key distribution as responses to the quantum threat, and the National Institute of Telecommunications has produced introductory material and a seminar. No national post-quantum migration policy or timeline is attested in the gathered documents.",
+  "govActors": "NASK | national research institute and CSIRT operator, presents post-quantum cryptography and quantum key distribution as responses to quantum threats\nInstytut Łączności (National Institute of Telecommunications) | state research institute, introductory material and a seminar on post-quantum cryptography",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NASK names PQC and QKD as responses to quantum threats: NASK QKD presentation (ingested)",
+    "Introductory explainer and seminar: Instytut Lacznosci items (ingested) - T4 research-institute material",
+    "RAD-on project profile and NASK Cyberpolicy US-strategy analysis: ingested but flagged as a research-database record and as analysis of another country, not used for posture - REVIEW",
+    "dominantProcess omitted: no Polish standards camp or national policy attested in captured summaries",
+    "summary/standardFamilies/algorithms/hybridDeployment/timeline/targetCompletion omitted or minimal: no national migration policy stated in captured summaries"
+  ]
+}

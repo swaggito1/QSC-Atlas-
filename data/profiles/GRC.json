@@ -1,0 +1,13 @@
+{
+  "iso3": "GRC",
+  "summary": "Greece's activity is led through the Ministry of Digital Governance, whose observatory registry lists the EU-funded PQ-REACT project on a post-quantum cryptography framework and which has promoted Greece's standing in European quantum communications. The posture is one of research and infrastructure participation, with no published national migration guidance, algorithm list or timeline.",
+  "govActors": "Ministry of Digital Governance | Greek ministry responsible for digital policy and cyber security",
+  "dataStatus": "Partial",
+  "provenance": [
+    "PQ-REACT post-quantum cryptography framework project: Ministry of Digital Governance observatory registry listing (ingested)",
+    "European quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW",
+    "HellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used",
+    "dominantProcess omitted: no standards camp attested in the documents",
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
+  ]
+}

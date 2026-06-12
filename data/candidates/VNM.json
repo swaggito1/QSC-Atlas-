@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Quá trình dịch chuyển mật mã hậu lượng tử và an ninh quốc gia (The post-quantum cryptography migration process and national security)",
+    "url": "https://antoanthongtin.vn/tin/qua-trinh-dich-chuyen-mat-ma-hau-luong-tu-va-an-ninh-quoc-gia",
+    "description": "Tạp chí An toàn thông tin (journal of Ban Cơ yếu Chính phủ). As the national cryptographic agency, the Government Cipher Committee has been advising on PQC since 2017; Vietnam needs a national-level PQC transition roadmap led by the Committee, reviewing and risk-classifying critical systems, piloting PQC and moving to hybrid cryptography."
+  },
+  {
+    "title": "Quá trình dịch chuyển mật mã hậu lượng tử và an ninh quốc gia (Cơ yếu Việt Nam portal mirror)",
+    "url": "https://coyeu.antoanthongtin.vn/tin/qua-trinh-dich-chuyen-mat-ma-hau-luong-tu-va-an-ninh-quoc-gia",
+    "description": "Same PQC migration/national-security article on the Cơ yếu Việt Nam (Government Cipher Committee) portal."
+  },
+  {
+    "title": "Quá trình dịch chuyển mật mã hậu lượng tử và an ninh quốc gia (antoanthongtin.gov.vn new version)",
+    "url": "https://phienbanmoi.antoanthongtin.gov.vn/tin/qua-trinh-dich-chuyen-mat-ma-hau-luong-tu-va-an-ninh-quoc-gia",
+    "description": "Same article on the official .gov.vn version of Tạp chí An toàn thông tin."
+  },
+  {
+    "title": "Viện Khoa học - Công nghệ mật mã tăng cường năng lực nghiên cứu mật mã hậu lượng tử tại Việt Nam (Institute of Cryptographic Science and Technology strengthens PQC research capacity in Vietnam)",
+    "url": "https://coyeu.antoanthongtin.vn/tin/vien-khoa-hoc-cong-nghe-mat-ma-tang-cuong-nang-luc-nghien-cuu-mat-ma-hau-luong-tu-tai-viet-nam",
+    "description": "Cơ yếu Việt Nam / Ban Cơ yếu Chính phủ. The Institute of Cryptographic Science and Technology (under the Government Cipher Committee) is building PQC research capacity, focusing on lattice-based cryptography (Kyber/ML-KEM, Dilithium) and hash-based signatures; a dedicated quantum cryptography group was established 26 July 2023."
+  },
+  {
+    "title": "Dấu mốc mới trong nghiên cứu mật mã kháng lượng tử tại Học viện Kỹ thuật mật mã (New milestone in quantum-resistant cryptography research at the Academy of Cryptography Techniques)",
+    "url": "https://antoanthongtin.vn/tin/dau-moc-moi-trong-nghien-cuu-mat-ma-khang-luong-tu-tai-hoc-vien-ky-thuat-mat-ma",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ). The Academy of Cryptography Techniques, directed by the Government Cipher Committee, conducted research/experiments integrating PQC including the CRYSTALS-Dilithium algorithm into Vietnamese-developed hardware security modules (HSM)."
+  },
+  {
+    "title": "Sự phát triển của lược đồ chữ ký số kháng lượng tử dựa trên hàm băm (Development of hash-based quantum-resistant digital signature schemes)",
+    "url": "https://antoanthongtin.gov.vn/tin/su-phat-trien-cua-luoc-do-chu-ky-so-khang-luong-tu-dua-tren-ham-bam",
+    "description": "Tạp chí An toàn thông tin (.gov.vn), Ban Cơ yếu Chính phủ. Technical article on hash-based quantum-resistant digital signature schemes, relevant to Vietnam's VN-PQSign work."
+  },
+  {
+    "title": "Vai trò mật mã lượng tử trong bảo đảm an toàn thông tin quốc gia (The role of quantum cryptography in ensuring national information security)",
+    "url": "https://antoanthongtin.vn/tin/vai-tro-mat-ma-luong-tu-trong-bao-dam-an-toan-thong-tin-quoc-gia",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ). The Government Cipher Committee, as national cryptographic agency, advises on building national quantum-resistant cryptographic standards and technical regulations, readying for the quantum-computer era in the 2030-2035 period."
+  },
+  {
+    "title": "Xu hướng phát triển khoa học - công nghệ mật mã và thách thức đối với quốc phòng - an ninh trong giai đoạn mới (phần 2) (Trends in cryptographic S&T development and challenges to defence-security in the new period, part 2)",
+    "url": "https://antoanthongtin.vn/tin/xu-huong-phat-trien-khoa-hoc-cong-nghe-mat-ma-va-thach-thuc-doi-voi-quoc-phong-an-ninh-trong-gia",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ), policy/strategy section. Identifies quantum computers as a major challenge to national critical systems and prioritises R&D of quantum-computer-resistant cryptographic systems."
+  },
+  {
+    "title": "Viện Khoa học - Công nghệ mật mã: 45 năm vững truyền thống, sáng tương lai (Institute of Cryptographic Science and Technology: 45 years)",
+    "url": "https://antoanthongtin.vn/tin/vien-khoa-hoc-cong-nghe-mat-ma-45-nam-vung-truyen-thong-sang-tuong-lai",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ). Anniversary feature; references the Institute's standards work and short course on lattice-based PQC (Kyber, Dilithium) held end-March 2026, plus national standard TCVN 14236:2024 (MKV block cipher)."
+  },
+  {
+    "title": "Bước tiến mới trong mã hóa hậu lượng tử (New advance in post-quantum encryption)",
+    "url": "https://antoanthongtin.vn/tin/buoc-tien-moi-trong-ma-hoa-hau-luong-tu",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ). Article on developments in post-quantum encryption."
+  },
+  {
+    "title": "Tiếp tục nghiên cứu chuyên sâu về lĩnh vực mật mã lượng tử (Continuing in-depth research in the field of quantum cryptography)",
+    "url": "https://antoanthongtin.gov.vn/an-ninh-quoc-phong/tiep-tuc-nghien-cuu-chuyen-sau-ve-linh-vuc-mat-ma-luong-tu-109880",
+    "description": "Tạp chí An toàn thông tin (.gov.vn), Ban Cơ yếu Chính phủ. Defence-security section article on continued in-depth quantum cryptography research."
+  },
+  {
+    "title": "Quy chuẩn quốc gia về đặc tính kỹ thuật mật mã sử dụng trong các sản phẩm mật mã dân sự (National technical regulation on cryptographic characteristics used in civil cryptographic products)",
+    "url": "https://antoanthongtin.vn/tin/quy-chuan-quoc-gia-ve-dac-tinh-ky-thuat-mat-ma-su-dung-trong-cac-san-pham-mat-ma-dan-su",
+    "description": "Tạp chí An toàn thông tin (Ban Cơ yếu Chính phủ). National technical regulation (QCVN) on cryptographic characteristics for civil cryptographic products (IPsec/TLS IP-flow protection); needs verification of explicit PQC content."
+  },
+  {
+    "title": "Ban Cơ yếu Chính phủ ra mắt Lab nghiên cứu chung về mật mã tiên tiến (Government Cipher Committee launches joint advanced cryptography research lab)",
+    "url": "https://daibieunhandan.vn/ban-co-yeu-chinh-phu-ra-mat-lab-nghien-cuu-chung-ve-mat-ma-tien-tien-10406537.html",
+    "description": "Đại biểu Nhân dân (National Assembly newspaper). Coverage of the Government Cipher Committee launching a joint advanced-cryptography research lab; secondary press, not the issuer itself."
+  },
+  {
+    "title": "Việt Nam trước bài toán an ninh hậu lượng tử (Vietnam facing the post-quantum security problem) - VnEconomy",
+    "url": "https://baomoi.com/viet-nam-truoc-bai-toan-an-ninh-hau-luong-tu-c55354805.epi",
+    "description": "VnEconomy via Baomoi aggregator. Reports the Government Cipher Committee tasked with a 2026-2030 plan for Vietnam's quantum-resistant cryptographic system; journalism, not an official issuer."
+  },
+  {
+    "title": "Vietnam Security Summit 2026: Cảnh báo làn sóng tấn công mạng thời hậu lượng tử (Warning on post-quantum-era cyberattacks)",
+    "url": "https://daidoanket.vn/vietnam-security-summit-2026-canh-bao-lan-song-tan-cong-mang-thoi-hau-luong-tu.html",
+    "description": "Đại đoàn kết newspaper. Conference coverage on post-quantum-era cyber threats; journalism, not an official issuer."
+  },
+  {
+    "title": "Vai trò mật mã lượng tử trong bảo đảm an toàn thông tin quốc gia (dinre.mae.gov.vn mirror)",
+    "url": "https://dinre.mae.gov.vn/vai-tro-mat-ma-luong-tu-trong-bao-am-an-toan-thong-tin-quoc-gia-2852.htm",
+    "description": "Reposted on a Ministry of Foreign Affairs sub-site (dinre.mae.gov.vn); duplicate content of the antoanthongtin article on the role of quantum cryptography."
+  }
+]

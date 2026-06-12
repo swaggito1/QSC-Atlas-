@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Government focused on potential and threat of quantum computing",
+    "url": "https://htxt.co.za/2025/11/government-focused-on-potential-and-threat-of-quantum-computing/",
+    "description": "Hypertext (journalism). Reports DCDT Deputy Minister Mondli Gungubele calling post-quantum cryptography 'a global security priority'; references National Cybersecurity Policy Framework and SA Connect. Secondary/journalistic, not a primary government document."
+  },
+  {
+    "title": "Rainbow Nation to Quantum Nation: South African Telecom's Quantum-Safe Cryptography Era",
+    "url": "https://www.telecomreviewafrica.com/articles/features/12433-rainbow-nation-to-quantum-nation-south-african-telecoms-quantum-safe-cryptography-era/",
+    "description": "Telecom Review Africa (trade journalism). Discusses DCDT, ICASA cryptographic agility, Cybersecurity Hub coordination on quantum-safe cryptography in telecom. Not an institutional primary document."
+  },
+  {
+    "title": "South Africa needs a national 'quantum defence strategy'",
+    "url": "https://techcentral.co.za/south-africa-needs-a-national-quantum-defence-strategy/276500/",
+    "description": "TechCentral (journalism/opinion). Argues South Africa lacks a national quantum defence strategy; mentions CSIR, Wits Quantum Research Group testing PQC. Not a government document."
+  },
+  {
+    "title": "South Africa Inc must wake up to quantum threat",
+    "url": "https://techcentral.co.za/south-africa-inc-must-wake-up-to-quantum-threat/279822/",
+    "description": "TechCentral (journalism/opinion). Commentary on quantum threat to South African encryption and critical infrastructure. Not a government document."
+  },
+  {
+    "title": "South African organisations face cybersecurity tipping point",
+    "url": "https://htxt.co.za/2026/03/south-african-organisations-face-cybersecurity-tipping-point/",
+    "description": "Hypertext (journalism). Cybersecurity commentary referencing quantum risk for South African organisations. Not a government document."
+  },
+  {
+    "title": "The accelerated 2029 quantum computing deadline turns current encryption into a looming crisis",
+    "url": "https://ai-impact.co.za/the-accelerated-2029-quantum-computing-deadline-turns-current-encryption-into-a-looming-crisis/",
+    "description": "AI Impact (blog/journalism). Commentary on quantum computing deadline and encryption risk in a South African framing. Not a government document."
+  },
+  {
+    "title": "How the South African financial sector can embrace quantum (Working Paper 13)",
+    "url": "https://coefs.org.za/wp-content/uploads/2025/04/WP-13-How-the-South-African-financial-sector-can-embrace-quantum.pdf",
+    "description": "Centre of Excellence in Financial Services (COEFS), an industry/research think-tank, not a government or standards body. Working paper on quantum (including post-quantum security) for the SA financial sector. Non-institutional issuer."
+  },
+  {
+    "title": "Post-Quantum Cryptography for securing Electronic Health Records in the South African Public Healthcare System",
+    "url": "https://journal-isi.org/index.php/isi/article/view/1423",
+    "description": "Academic journal article (Journal of Information Systems and Informatics). PQC applied to SA public healthcare records. Academic, not institutional/government."
+  },
+  {
+    "title": "Opening Address by Ms Khumbudzo Ntshavheni at the 23rd Annual SATNAC",
+    "url": "https://www.dcdt.gov.za/minister-s-speeches/335-opening-address-by-ms-khumbudzo-ntshavheni-at-the-23rd-annual-southern-africa-telecommunications-networks-and-applications-conference-satnac.html",
+    "description": "DCDT (Department of Communications and Digital Technologies), official .gov.za. Verified via fetch (dated 22 Nov 2021): covers 5G, satellite, AI, cloud, data sovereignty. NO post-quantum/quantum-safe cryptography mention. Domestic institutional but fails PQC-explicit test."
+  },
+  {
+    "title": "DCDT Media Statement - 3rd Digital Economy Working Group 2025",
+    "url": "https://www.dcdt.gov.za/images/Media_Statement_3rd_DEWG_2025.pdf",
+    "description": "DCDT (official .gov.za) media statement on G20 Digital Economy Working Group 2025. Verified via fetch: NO post-quantum/quantum-safe cryptography mention. Domestic institutional but fails PQC-explicit test."
+  },
+  {
+    "title": "Deputy Minister Nomalungelo Gina unveils Centre for Quantum Computing and Technology at UKZN",
+    "url": "https://www.gov.za/news/media-statements/deputy-minister-nomalungelo-gina-unveils-centre-quantum-computing-and",
+    "description": "South African Government (gov.za) media statement, Dept of Science, Technology and Innovation. Unveils CQCtec quantum computing centre at UKZN (SAQuTI node). Quantum technology, but no explicit post-quantum cryptography migration content surfaced; fails PQC-explicit test."
+  },
+  {
+    "title": "Deputy Minister Gungubele's 2025 Budget Vote Speech",
+    "url": "https://www.dcdt.gov.za/deputy-minister-speeches/603-deputy-minister-gungubele-s-2025-budget-vote-speech.html",
+    "description": "DCDT (official .gov.za) Deputy Minister budget vote speech 2025. Surfaced in PQC-themed search but no verified explicit post-quantum/quantum-safe cryptography reference; cybersecurity-general."
+  }
+]

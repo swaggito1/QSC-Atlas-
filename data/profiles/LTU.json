@@ -1,0 +1,14 @@
+{
+  "iso3": "LTU",
+  "summary": "Lithuania's posture is led by the National Cyber Security Centre (NKSC), which presents the transition to post-quantum cryptography as one of the most important near-term decisions for the country's digital resilience. Its guidance directs organisations to begin with a cryptographic inventory and to prepare for the move to quantum-resistant algorithms, while its annual reporting follows the standardisation of these algorithms and the NIST post-quantum project. No national migration deadline has been published.",
+  "govActors": "NKSC | National Cyber Security Centre of Lithuania, sets national guidance on post-quantum cryptography and cryptographic inventory",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NKSC lead and PQC as a key near-term decision: NKSC overview of cybersecurity status and NKSC news item on post-quantum cryptography (ingested)",
+    "Cryptographic inventory as the starting step: NKSC guidelines for cryptography use inventory and NKSC Cyberpusryciai PQC presentation (ingested)",
+    "Tracking standardisation of quantum-resistant algorithms and the NIST PQC project: NKSC CTAC 2024 Yearly Report (ingested)",
+    "PQC deployment funding via Digital Europe Programme: NKSC info-day presentation 2024 (ingested)",
+    "dominantProcess omitted: the NIST PQC project is discussed in the yearly report as the standardisation reference, but no document adopts the NIST FIPS suite as Lithuanian national guidance, so the camp is not clearly attested - REVIEW",
+    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

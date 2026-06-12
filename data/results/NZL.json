@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Preparation for Post-Quantum Cryptography (NZISM Section 2.4)",
+    "country": "NZL",
+    "issuingOrg": "NCSC / GCSB",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nzism.gcsb.govt.nz/ism-document/pdf/Section/12224",
+    "summary": "Section 2.4 of the New Zealand Information Security Manual advises government agencies to inventory their cryptographically protected assets and begin planning migration to post-quantum cryptographic standards, referencing NIST PQC work. PDF identifies the manual as version 3.9, November 2025.",
+    "included": true
+  },
+  {
+    "title": "January 2022 New Zealand Information Security Manual v3.5 Release",
+    "country": "NZL",
+    "issuingOrg": "NCSC",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ncsc.govt.nz/news/january-2022-new-zealand-information-security-manual-v3-5-release/",
+    "summary": "NCSC news item announcing NZISM version 3.5, which added a new section advising agencies to start planning for migration to post-quantum cryptographic standards. URL returned a 404 on verification (site appears restructured), so flagged for human review.",
+    "included": false
+  }
+]

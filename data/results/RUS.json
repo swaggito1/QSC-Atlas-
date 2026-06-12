@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Working Group 2.5 'Post-Quantum Cryptographic Mechanisms' (TC26 structure)",
+    "country": "RUS",
+    "issuingOrg": "TC26 (Rosstandart)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://tc26.ru/about/structure/",
+    "summary": "Structure page of TC26, the Rosstandart Technical Committee for Standardization 'Cryptographic Information Protection', listing Working Group 2.5 'Постквантовые криптографические механизмы' (Post-Quantum Cryptographic Mechanisms) under Subcommittee No. 2. Documents the official national standards body's dedicated post-quantum cryptography standardization track, intended to complement the GOST R 34 series.",
+    "included": false
+  },
+  {
+    "title": "Standardization documents of TC26 (national cryptographic standards index)",
+    "country": "RUS",
+    "issuingOrg": "TC26 (Rosstandart)",
+    "year": null,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://tc26.ru/standarts/",
+    "summary": "Index maintained by TC26 of Russian cryptographic standardization documents (national GOST R 34 standards, recommendations, technical specifications) developed by the committee. The body whose Working Group 2.5 is developing post-quantum signature and key-encapsulation standards to extend the GOST R 34 family; no adopted national PQC standard is published as of June 2026.",
+    "included": false
+  }
+]

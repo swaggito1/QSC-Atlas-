@@ -1,0 +1,13 @@
+{
+  "iso3": "HUN",
+  "summary": "Hungary's published material comes mainly from the National Cyber Security Institute (NKI), which has covered post-quantum and quantum-resistant cryptography in its IT security news and press reviews, including a noted need to develop a migration plan that accounts for existing systems. Government-linked work on post-quantum cryptography also appears through KIFU and the QCI Hungary project, the national node of the EU EuroQCI initiative. No fixed national migration timeline or standards camp has been set out.",
+  "govActors": "NKI | Hungary's National Cyber Security Institute, publishes IT security news and press reviews\nKIFU / QCI Hungary | Hungarian Governmental Agency for IT Development, national node of the EU EuroQCI initiative",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NKI as lead: NKI news article and weekly press reviews (ingested)",
+    "Need for a migration plan: NKI press review (week 47), a press digest rather than an original policy position - REVIEW",
+    "KIFU / QCI Hungary: project presentation by Janos Mohacsi (ingested), a presentation not on the trusted-domains list - REVIEW",
+    "dominantProcess omitted: no standards camp attested in the captured documents",
+    "No algorithms, hybrid stance, timeline or target stated in the ingested documents"
+  ]
+}

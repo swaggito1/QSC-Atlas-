@@ -1,0 +1,57 @@
+[
+  {
+    "title": "State Cryptography Administration Announcement No. 55 (National Cryptography Science Fund, 2nd batch guidelines)",
+    "url": "https://sca.gov.cn/sca/xwdt/2026-01/30/content_1061322.shtml",
+    "description": "OSCCA announcement (29 Jan 2026) releasing application guidelines for the second batch of the National Cryptography Science Fund. First research direction is explicitly 'anti-quantum computing cryptography key theory and technology' (抗量子计算密码关键理论与技术), including quantum provable security theory and quantum-resistant algorithms."
+  },
+  {
+    "title": "State Cryptography Administration Announcement No. 55 (mirror on nca.gov.cn)",
+    "url": "http://nca.gov.cn/sca/xwdt/2026-01/30/content_1061322.shtml",
+    "description": "Duplicate of OSCCA Announcement No. 55 on an alternate official OSCCA host."
+  },
+  {
+    "title": "Announcement on launching the new-generation commercial cryptographic algorithm solicitation",
+    "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1937422988373135360/content_1937422988373135360.html",
+    "description": "Commercial Cryptography Standards Research Institute (ICCS) announcement (5 Feb 2025) launching a global solicitation for next-generation public key, hash and block cipher algorithms to address quantum computing threats, for standardisation."
+  },
+  {
+    "title": "Notice soliciting comments on Public Key Cryptographic Algorithm Submission Requirements and Evaluation Criteria (drafts)",
+    "url": "https://www.niccs.org.cn/tzgg/202502/t20250205_378197.html",
+    "description": "ICCS notice (5 Feb 2025) seeking public comment on draft submission requirements and evaluation criteria for the next-generation public key algorithm call responding to quantum computing threats."
+  },
+  {
+    "title": "Notice soliciting proposals for new-generation public key cryptographic algorithms",
+    "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1976155884915003392/content_1976155884915003392.html",
+    "description": "ICCS notice (9 Oct 2025) formally opening proposal submission for next-generation public key cryptographic algorithms (part of the quantum-threat-driven NGCC program), deadline 30 June 2026."
+  },
+  {
+    "title": "Notice soliciting proposals for new-generation cryptographic hash algorithms",
+    "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1976158633115258880/content_1976158633115258880.html",
+    "description": "ICCS notice (Oct 2025) opening proposal submission for next-generation cryptographic hash algorithms under the same quantum-threat-driven NGCC solicitation program."
+  },
+  {
+    "title": "Quantum Information Technology Development and Application Research Report (2023)",
+    "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202312/P020240326616760506829.pdf",
+    "description": "CAICT (China Academy of Information and Communications Technology) research report (Dec 2023) covering quantum information technology including NIST post-quantum cryptography (PQC) standardisation progress and global strategy/investment landscape."
+  },
+  {
+    "title": "State Cryptography Administration Announcement No. 50 (19 commercial cryptography industry standards)",
+    "url": "https://www.oscca.gov.cn/sca/xwdt/2024-12/27/content_1061224.shtml",
+    "description": "OSCCA announcement (27 Dec 2024) releasing 19 commercial cryptography industry standards (e.g. ZUC GM/T 0001.4-2024). No explicit post-quantum content."
+  },
+  {
+    "title": "Research on Key Issues of Post-Quantum Cryptography Upgrade and Migration (journal article)",
+    "url": "http://ictp.caict.ac.cn/CN/abstract/abstract1441.shtml",
+    "description": "Authored academic article in CAICT journal 'Information and Communications Technology and Policy' (2025, Vol 51(7)) on PQC upgrade/migration key issues."
+  },
+  {
+    "title": "TC260 2025 first batch of national cybersecurity standard requirements",
+    "url": "https://www.tc260.org.cn/front/postDetail.html?id=20250401144126",
+    "description": "National Cybersecurity Standardization Technical Committee (TC260) notice releasing the 2025 first batch of national cybersecurity standard needs; PQC relevance not confirmed in snippet."
+  },
+  {
+    "title": "Beijing Municipal Cryptography Administration - PQC latest progress (Apr 2025)",
+    "url": "https://www.bjgm.gov.cn/xwdt/hydt/bd0a27240c114ff496c06e2c2062a4b5.html",
+    "description": "Beijing Municipal Cryptography Administration industry-news page summarising latest post-quantum cryptography developments (April 2025); a news roundup rather than an original policy document."
+  }
+]

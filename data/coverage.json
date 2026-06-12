@@ -178,5 +178,15 @@
     "lastScraped": "2026-06-12T12:15:25.707Z",
     "docCount": 0,
     "status": "Placeholder"
+  },
+  "NZL": {
+    "lastScraped": "2026-06-12T21:06:43.171Z",
+    "docCount": 2,
+    "status": "Partial"
+  },
+  "NOR": {
+    "lastScraped": "2026-06-12T21:07:05.497Z",
+    "docCount": 14,
+    "status": "Partial"
   }
 }

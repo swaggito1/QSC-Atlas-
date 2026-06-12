@@ -1,0 +1,13 @@
+{
+  "iso3": "CYP",
+  "summary": "Cyprus's posture is represented by the Digital Security Authority, the national agency under the Commissioner of Communications, which has engaged with quantum computing and post-quantum cryptography through the ENISA Telecom and Digital Infrastructure Security Forum alongside 5G and Internet of Things security. No national guidance, migration timeline or standards selection has been published.",
+  "govActors": "DSA | Cyprus Digital Security Authority, independent governmental agency under the Commissioner of Communications, engages with post-quantum cryptography through the ENISA telecom forum",
+  "dataStatus": "Partial",
+  "provenance": [
+    "DSA as national authority and its engagement with quantum computing and PQC: DSA news item on the ENISA Telecom and Digital Infrastructure Security Forum (ingested, T1)",
+    "DSA described as an independent governmental agency under the Commissioner of Communications: DSA home page (candidate)",
+    "Single included document, so the profile is minimal and provisional - REVIEW",
+    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
+    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
+  ]
+}

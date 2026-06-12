@@ -1,0 +1,9 @@
+{
+  "iso3": "SVK",
+  "dataStatus": "Placeholder",
+  "provenance": [
+    "No included documents: data/results/SVK.json is empty",
+    "Candidates reference the National Security Authority (NBU) on PQC but only via LinkedIn and Facebook posts, plus an ITAPA discussion of a 'Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia'; none qualified as an ingested institutional document",
+    "Recommend re-scrape with --deep to capture the NBU strategy as a formal published source"
+  ]
+}

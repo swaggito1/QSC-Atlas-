@@ -1,0 +1,18 @@
+{
+  "iso3": "EUU",
+  "summary": "The European Union coordinates the post-quantum transition through a Commission Recommendation and a Coordinated Implementation Roadmap, asking Member States to migrate in a synchronised way, with ENISA providing technical studies and ETSI developing European quantum-safe standards. A 2026 legislative proposal would require Member States to adopt post-quantum migration policies.",
+  "dominantProcess": "Mixed",
+  "govActors": "European Commission | Issues the Coordinated Implementation Roadmap and Recommendation (EU) 2024/1101 and the proposal to require Member State PQC migration policies\nENISA | EU Agency for Cybersecurity, publishes studies on the state of post-quantum standardisation and integration\nETSI | European standards body developing quantum-safe standards including a hybrid key exchange standard and the TC ESI PQC working group\nNIS Cooperation Group | Sets out the Coordinated Implementation Roadmap recommendations for Member States\nEuropean Parliament | Resolution on the EU Cybersecurity Strategy calling for further research into post-quantum algorithms\nEPRS | European Parliamentary Research Service, briefings on cryptographic security and digital sovereignty\nEESC | Opinion noting the need to transition to quantum-resistant cryptography\nECB | Speeches and the Pontes user requirements document requiring post-quantum resilient cryptographic capabilities through crypto-agility",
+  "hybridDeployment": "None stated",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (Commission, NIS Cooperation Group): Coordinated Implementation Roadmap and Commission Recommendation (EU) 2024/1101 results rows",
+    "mandatory migration policy: COM(2026) 13 final results row",
+    "ENISA role: ENISA current-state, integration-study and news results rows",
+    "ETSI role + dominantProcess Mixed: ETSI hybrid key exchange standard and TC ESI PQC working group rows, set alongside ENISA work and references to the NIST process (ECB speech notes NIST finalised the first standards). Camp is genuinely blended (European ENISA/ETSI work plus NIST references), so Mixed assigned conservatively - REVIEW",
+    "ECB Pontes crypto-agility: ECB Pontes user requirements row",
+    "dominantProcess: assigned Mixed rather than omitted because both European (ETSI/ENISA) and NIST references are attested in included docs - REVIEW",
+    "targetCompletion / migrationTimeline (the EU 2030 date): OMITTED. A 2030 critical-infrastructure target appears only in third-party write-ups (industrialcyber, LinkedIn, medium) in candidates, not in the included EUR-Lex/europa.eu institutional summaries. Not attested by an institutional document, so left out per the iron rule - REVIEW",
+    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names stated in the included EU document summaries"
+  ]
+}
