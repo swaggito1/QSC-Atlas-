@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Webinar: The Qubits Attack - How to Prepare a Defence Against the Quantum Threat?",
+    "country": "HRV",
+    "issuingOrg": "CERT.hr",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cert.hr/webinar-qubiti-napadaju-kako-pripremiti-obranu-od-kvantne-prijetnje/",
+    "summary": "National CERT.hr webinar notice addressing the quantum threat and how organisations can prepare a defence, explicitly covering post-quantum cryptography (postkvantna kriptografija), qubits, superposition and quantum cryptography.",
+    "included": true
+  }
+]

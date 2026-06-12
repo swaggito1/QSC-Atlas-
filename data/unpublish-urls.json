@@ -1,0 +1,18 @@
+{
+  "comment": "URLs to force Included=false in ATLAS_DOCUMENTS (pulled from the public site). Used by scripts/unpublish.mjs. These are non-government issuers (industry associations, research consortia, a vendor, a conference, an international body) that fall outside the Atlas 'government / agency / standards / parliament / central-bank' editorial rule.",
+  "urls": [
+    "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "https://www.bis.org/review/r240924s.htm",
+    "https://www.bitkom.org/sites/main/files/2024-10/21.10.24-lf-quantensichere-kommunikation.pdf",
+    "https://bundesquantenallianz.de/Info/index_en.shtml",
+    "https://cybersecuritycoalition.be/resource/white-paper-preparing-for-the-quantum-era/",
+    "https://cybersecuritycoalition.be/resource/post-quantum-cryptography-its-time-to-act/",
+    "https://www.agoria.be/nl/diensten/expertise/digitalisering/cybersecurity/nieuwe-werkgroep-zal-europese-cyberveiligheidsnormen-voor-cryptografie-ontwikkelen",
+    "https://hellasqci.eu/hellasqci-pqc-survey-nis-cooperation-group/",
+    "https://instituteq.fi/finnish-quantum-technology-roadmap/",
+    "https://www.kpqc.or.kr/competition.html",
+    "https://kpqc.or.kr/contents/02_notice/board.html?board_id=board_notice&mode=view&no=71&cate=%EA%B8%B0%ED%83%80",
+    "https://cyber.ee/resources/news/estonia-pqc-transition/",
+    "https://pqc-conference.eu/"
+  ]
+}

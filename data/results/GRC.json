@@ -1,0 +1,35 @@
+[
+  {
+    "title": "PQ-REACT — Post-Quantum Cryptography Framework for Energy Aware Contexts (project listing)",
+    "country": "GRC",
+    "issuingOrg": "Ministry of Digital Governance",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://observatory.mindigital.gr/home/list",
+    "summary": "Entry in the Greek Ministry of Digital Governance observatory registry listing the PQ-REACT (Post-Quantum Cryptography Framework for Energy Aware Contexts) project, an EU-funded (CEF) initiative on post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Greece at the forefront of quantum communications in Europe",
+    "country": "GRC",
+    "issuingOrg": "Ministry of Digital Governance",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mindigital.gr/archives/7834",
+    "summary": "Greek Ministry of Digital Governance news item on two highly-rated European proposals placing Greece at the forefront of quantum communications. Domestic and institutional, but the title/description reference quantum communications (QKD) rather than an explicit post-quantum/quantum-safe cryptography migration; flagged for human review to confirm a PQC reference.",
+    "included": true
+  },
+  {
+    "title": "HellasQCI invites participation in the EU public consultation on PQC (NIS Cooperation Group)",
+    "country": "GRC",
+    "issuingOrg": "HellasQCI",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://hellasqci.eu/hellasqci-pqc-survey-nis-cooperation-group/",
+    "summary": "HellasQCI, the Greek national quantum communication infrastructure consortium (part of EuroQCI), invites participation in an EU public consultation, stating that the transition to quantum-resistant cryptography (PQC and QKD) is essential to protect Greece's and Europe's critical infrastructures. Domestic funded consortium with an explicit PQC reference; not on the trusted-domain list, so flagged for human review.",
+    "included": false
+  }
+]

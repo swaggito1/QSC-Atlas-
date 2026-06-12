@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+    "summary": "The Canadian Centre for Cyber Security's recommended roadmap for the Government of Canada to migrate non-classified IT systems to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Preparing your organization for the quantum threat to cryptography (ITSAP.00.017)",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/sites/default/files/itsap.00.017-en.pdf",
+    "summary": "Cyber Centre guidance explaining post-quantum cryptography as algorithms designed to be quantum-safe while running on conventional computers, and advising organizations on preparing for the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "Cyber Centre's summary review of final candidates for NIST Post-Quantum Cryptography standards",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": null,
+    "docType": "Evaluation",
+    "tier": "T3",
+    "url": "https://www.cyber.gc.ca/en/news-events/cyber-centres-summary-review-final-candidates-nist-post-quantum-cryptography-standards",
+    "summary": "Summary review by Cyber Centre cryptographic scientists evaluating the remaining finalist and alternate candidates in the NIST Post-Quantum Cryptography standardization process.",
+    "included": true
+  },
+  {
+    "title": "GC Migration to Post-Quantum Cryptography (PQC) - Course CRY102S",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://www.cyber.gc.ca/fr/education-communaute/carrefour-apprentissage/cours/migration-gc-vers-cryptographie-post-quantique-cpq",
+    "summary": "Online training course (CRY102S) from the Cyber Centre's Learning Hub presenting the Government of Canada's plan for migrating to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Migration to post-quantum cryptography for the Government of Canada (policy implementation notice)",
+    "country": "CAN",
+    "issuingOrg": "TBS",
+    "year": null,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/politiques-normes/amops/migration-cryptographie-post-quantique-gouvernement-canada.html",
+    "summary": "Government of Canada digital policy implementation notice on migrating government systems to post-quantum cryptography, referencing the Cyber Centre's migration roadmap.",
+    "included": true
+  },
+  {
+    "title": "Looking ahead: Quantum computing and cybersecurity",
+    "country": "CAN",
+    "issuingOrg": "SSC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.canada.ca/fr/services-partages/campagnes/histoires/informatique-quantique-cybersecurite.html",
+    "summary": "Shared Services Canada campaign article on quantum computing and cybersecurity, discussing post-quantum cryptography and citing the Communications Security Establishment's assessment of the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "National Quantum Strategy Roadmap: Quantum communication and post-quantum cryptography",
+    "country": "CAN",
+    "issuingOrg": "ISED",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
+    "summary": "Roadmap under Canada's National Quantum Strategy addressing quantum communication and post-quantum cryptography as responses to the threat posed by cryptographically relevant quantum computers.",
+    "included": true
+  },
+  {
+    "title": "Canadian National Quantum-Readiness: Best Practices",
+    "country": "CAN",
+    "issuingOrg": "ISED",
+    "year": 2024,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://ised-isde.canada.ca/site/spectrum-management-telecommunications/sites/default/files/documents/Quantum-Readiness%20Best%20Practices%20-%20v04%20-%2010%20July%202024.pdf",
+    "summary": "Quantum-readiness best practices document (v04, July 2024) published via ISED, addressing preparation for quantum-safe post-quantum cryptography while noting that quantum-resistant solutions were not yet fully available.",
+    "included": true
+  },
+  {
+    "title": "Quantum Safe Technologies Initiative",
+    "country": "CAN",
+    "issuingOrg": "NRC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://nrc.canada.ca/en/research-development/research-collaboration/programs/quantum-safe-technologies-initiative",
+    "summary": "National Research Council of Canada programme supporting the testing and integration of post-quantum cryptography into critical systems and building Canadian capacity through training.",
+    "included": true
+  },
+  {
+    "title": "Cryptography and quantum computing (technical advisory services)",
+    "country": "CAN",
+    "issuingOrg": "NRC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/cryptography-quantum-computing",
+    "summary": "NRC technical advisory services page on the design, development and implementation of cryptographic solutions and quantum computing; the candidate description does not explicitly name post-quantum cryptography.",
+    "included": true
+  }
+]

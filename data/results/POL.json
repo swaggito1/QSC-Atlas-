@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Post-quantum cryptography without quanta",
+    "country": "POL",
+    "issuingOrg": "Instytut Łączności (National Institute of Telecommunications)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T4",
+    "url": "https://www.gov.pl/web/instytut-lacznosci/kryptografia-postkwantowa-bez-kwantow",
+    "summary": "Explainer from Poland's National Institute of Telecommunications (Instytut Łączności, a state research institute) introducing post-quantum cryptography and clarifying that it relies on classical methods resistant to quantum attacks rather than on quantum mechanics.",
+    "included": true
+  },
+  {
+    "title": "Post-quantum cryptography - seminar with Prof. Kris Gaj",
+    "country": "POL",
+    "issuingOrg": "Instytut Łączności (National Institute of Telecommunications)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.gov.pl/web/instytut-lacznosci/kryptografia-postkwantowa---seminarium-z-udzialem-prof-krisa-gaja",
+    "summary": "Announcement by Poland's National Institute of Telecommunications of a post-quantum cryptography seminar held on 27 June 2025 featuring Prof. Kris Gaj.",
+    "included": true
+  },
+  {
+    "title": "Poland at the forefront of quantum technology solutions - QKD presentation",
+    "country": "POL",
+    "issuingOrg": "NASK",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nask.pl/aktualnosci/polska-w-czolowce-rozwiazan-technologii-kwantowej-prezentacja-qkd",
+    "summary": "NASK (Poland's national research institute and CSIRT operator) news item presenting quantum technology work, naming post-quantum cryptography (PQC) and quantum key distribution (QKD) as responses to quantum threats.",
+    "included": true
+  },
+  {
+    "title": "Efficient post-quantum cryptography from the perspective of resource consumption",
+    "country": "POL",
+    "issuingOrg": "RAD-on / Ministry of Science (Poland)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://radon.nauka.gov.pl/dane/profil/64afaa0424064c5d26654e7e",
+    "summary": "Polish government research-information system (RAD-on) project profile describing work on PQC migration paths across different deployment contexts. Flagged for review: this is a research-project database record rather than a formal institutional document.",
+    "included": true
+  },
+  {
+    "title": "USA - National Cybersecurity Strategy (NASK Cyberpolicy analysis)",
+    "country": "POL",
+    "issuingOrg": "NASK (Cyberpolicy)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://cyberpolicy.nask.pl/usa-krajowa-strategia-cyberbezpieczenstwa/",
+    "summary": "NASK Cyberpolicy commentary on the US National Cybersecurity Strategy, noting post-quantum cryptography among priority technologies. Flagged for review: issuer is domestic (NASK) but the document analyses another country's strategy rather than a Polish PQC document.",
+    "included": true
+  }
+]

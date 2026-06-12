@@ -1,0 +1,68 @@
+[
+  {
+    "title": "The transition to quantum-safe cryptography",
+    "country": "DNK",
+    "issuingOrg": "CFCS",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cfcs.dk/da/temasider/overgangen-til-kvantesikker-kryptografi/",
+    "summary": "Centre for Cyber Security (CFCS) theme page on the transition to quantum-safe cryptography, explaining post-quantum/PQC concepts and the migration of Danish organisations to quantum-resistant algorithms.",
+    "included": true
+  },
+  {
+    "title": "The transition to quantum-safe cryptography",
+    "country": "DNK",
+    "issuingOrg": "SAMSIK",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://samsik.dk/cybersikkerhed/temaer/overgangen-til-kvantesikker-kryptografi/",
+    "summary": "Theme page from the Danish Agency for Societal Security (Styrelsen for Samfundssikkerhed/SAMSIK) on the transition to quantum-safe cryptography; appears to be the same content as the CFCS page on the agency's newer domain. Flagged for review because samsik.dk is not yet on the trusted-domains list.",
+    "included": true
+  },
+  {
+    "title": "Grund- og nærhedsnotat on the recommendation for a coordinated implementation plan for the transition to post-quantum cryptography",
+    "country": "DNK",
+    "issuingOrg": "Folketinget",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ft.dk/samling/20231/almdel/FOU/bilag/149/2864791.pdf",
+    "summary": "Danish Parliament (Folketinget) background and subsidiarity note in which the government welcomes the recommendation and supports a coordinated effort on the transition to quantum-safe cryptography in the EU.",
+    "included": true
+  },
+  {
+    "title": "Council meeting samlenotat referencing 5G/6G and quantum-safe cryptography",
+    "country": "DNK",
+    "issuingOrg": "Folketinget",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ft.dk/samling/20241/almdel/DIU/bilag/25/2943425/index.htm",
+    "summary": "Danish Parliament (Folketinget) consolidated note for an EU Council meeting noting cybersecurity and resilience conclusions, including 5G/6G and quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Global tensions, rising house prices and the cyber threat dominate the risk picture",
+    "country": "DNK",
+    "issuingOrg": "Nationalbanken",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.nationalbanken.dk/media/ytda2stf/globale-spaendinger-stigende-boligpriser-og-cybertruslen-dominerer-risikobilledet.pdf",
+    "summary": "Danish central bank (Nationalbanken) risk report stating that preparations for implementing quantum-safe cryptography in the financial sector should be strengthened.",
+    "included": true
+  },
+  {
+    "title": "National Strategy for Quantum Technology",
+    "country": "DNK",
+    "issuingOrg": "Ministry of Industry, Business and Financial Affairs",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.eng.em.dk/Media/638315714019915522/National%20Strategy%20for%20Quantum%20Technology.pdf",
+    "summary": "Danish national strategy for quantum technology development. Flagged for review because the candidate text describes quantum technology broadly and does not clearly contain an explicit post-quantum/QSC cryptography migration reference.",
+    "included": true
+  }
+]

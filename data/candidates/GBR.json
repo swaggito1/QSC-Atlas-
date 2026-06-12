@@ -1,8 +1,104 @@
 [
   {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "The best mitigation against the threat of quantum computers to traditional PKC is post-quantum cryptography (PQC). Also known as 'quantum-safe cryptography' or ...",
+    "markdown": ""
+  },
+  {
+    "title": "RFC 9794: a new standard for post-quantum terminology",
+    "url": "https://www.ncsc.gov.uk/blog-post/new-standard-for-post-quantum-terminology",
+    "description": "The study of these mathematical problems and algorithms is known as post-quantum cryptography (PQC). In August 2024, NIST published ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography (PQC) pilot | National Cyber Security ...",
+    "url": "https://www.ncsc.gov.uk/schemes/assured-cyber-security-consultancy/pqc-pilot",
+    "description": "The pilot assures consultancies that meet the scheme Standard for post-quantum cryptography. The consultancies will support the NCSC in its work with ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timeline for PQC migration revealed - National Cyber Security Centre",
+    "url": "https://www.ncsc.gov.uk/news/pqc-migration-roadmap-unveiled",
+    "description": "New guidance from the NCSC outlines a three-phase timeline for organisations to transition to quantum-resistant encryption methods by 2035.",
+    "markdown": ""
+  },
+  {
     "title": "Timelines for migration to post-quantum cryptography",
     "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
-    "description": "... UK industry, government and regulators can follow. In this guidance, the NCSC sets out some key target dates for migration activities.",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/collection/ncsc-annual-review-2025/chapter-03-keeping-pace-with-evolving-technology/migrating-to-post-quantum-cryptography",
+    "description": "Migration to post-quantum cryptography (PQC) to protect against the threat from a future large-scale quantum computer, is an international, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography - NCSC",
+    "url": "https://www.ncsc.gov.uk/collection/ncsc-annual-review-2024/chapter-04/post-quantum-cryptography",
+    "description": "Migration to post-quantum cryptography (PQC) – cryptography that is resistant to attack by quantum computers – is the primary mitigation to this threat.",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/blog-post/migrating-to-post-quantum-cryptography-pqc",
+    "description": "New guidance from the NCSC helps system and risk owners plan their migration to post-quantum cryptography (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "Perspectives on the plan for PQC transition - GOV.UK",
+    "url": "https://www.gov.uk/government/publications/perspectives-on-the-plan-for-pqc-transition",
+    "description": "Independent research setting out regulator and industry perspectives on the current plan for transition to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum computing, sensing and communications - POST Parliament",
+    "url": "https://post.parliament.uk/research-briefings/post-pn-0742/",
+    "description": "The UK National Cyber Security Centre has recommended that organisations start to move to 'post-quantum cryptographic' methods now.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technology - Written questions, answers and statements",
+    "url": "https://questions-statements.parliament.uk/written-questions/detail/2025-03-20/40037/",
+    "description": "The guidance is focused on migrating to post-quantum cryptography to mitigate the potential future quantum threat to encryption services, and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Our use of cookies - UK Parliament Committees",
+    "url": "https://committees.parliament.uk/writtenevidence/121374/html/",
+    "description": "“post-quantum” cryptography (PQC) algorithms (classical algorithms hoped to be secure against quantum computers).",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technology - Written questions, answers and statements",
+    "url": "https://questions-statements.parliament.uk/written-questions/detail/2024-10-10/8496",
+    "description": "Post Quantum Cryptography (PQC) standards this summer, NCSC has published details of how it will help organisations plan their migration to PQC.",
+    "markdown": ""
+  },
+  {
+    "title": "The importance of preserving individual privacy in Immunity Passports",
+    "url": "https://committees.parliament.uk/writtenevidence/5536/pdf/",
+    "description": "Post-Quantum has developed unique key splitting technology that can solve the long-standing problem of 'privileged access' to centralised databases which is of.",
+    "markdown": ""
+  },
+  {
+    "title": "QUT0015 - Evidence on Quantum technologies",
+    "url": "https://committees.parliament.uk/writtenevidence/88833/html/",
+    "description": "Post-quantum cryptography refers to classical cryptographic protocols that are believed to be resilient to quantum computing attacks.",
+    "markdown": ""
+  },
+  {
+    "title": "Written evidence submitted by Professor Marco Lucamarini ...",
+    "url": "https://committees.parliament.uk/writtenevidence/120239/pdf/",
+    "description": "“post-quantum” cryptography (PQC) algorithms. PQC is a software solution that promises a level of security higher than the one provided by the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Google Quantum Computing Chip - Hansard - UK Parliament",
+    "url": "https://hansard.parliament.uk/commons/2025-02-12/debates/386557E0-6A83-4FBE-946B-8433D2D240E2/GoogleQuantumComputingChip",
+    "description": "considering post-quantum cryptography to prevent the so-called Y2Q—year to quantum—end of privacy, the development of quantum computing in the ...",
     "markdown": ""
   },
   {
@@ -36,9 +132,33 @@
     "markdown": ""
   },
   {
+    "title": "Post-Quantum Cryptography (PQC) Compliance Standards",
+    "url": "https://www.safelogic.com/compliance/pqc-standards",
+    "description": "Stay ahead of PQC compliance mandates with an overview of post-quantum cryptography standards and global regulatory timelines.",
+    "markdown": ""
+  },
+  {
+    "title": "UK CMORG Guidance for Post-Quantum Cryptography - FSSCC",
+    "url": "https://fsscc.org/uk-cmorg-guidance-for-post-quantum-cryptography/",
+    "description": "The guidance is intended to provide clarity to banks and other financial institutions on how they will switch to post-quantum cryptography—a new kind of ...",
+    "markdown": ""
+  },
+  {
     "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
     "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
     "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "The UK's National Cyber Security Centre Presents Timeline and ...",
+    "url": "https://www.appviewx.com/blogs/the-uks-national-cyber-security-centre-presents-timeline-and-roadmap-for-pqc-migration/",
+    "description": "The United Kingdom's National Cyber Security Centre (NCSC) has just released updated guidance on migrating to post-quantum cryptography (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
     "markdown": ""
   },
   {
@@ -69,6 +189,54 @@
     "title": "[PDF] National Quantum Strategy Roadmap",
     "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
     "description": "This roadmap has two distinct, but related elements: developing a national secure quantum communication network and a post-quantum cryptography initiative.",
+    "markdown": ""
+  },
+  {
+    "title": "The Bank of England's approach to innovation in artificial ...",
+    "url": "https://www.bankofengland.co.uk/report/2025/the-boes-approach-to-innovation-in-ai-dlt-quantum-computing",
+    "description": "We have developed risk scenarios for post-quantum threats, including encrypted data harvesting and quantum-enhanced trading,",
+    "markdown": ""
+  },
+  {
+    "title": "A systemic risk perspective on operational resilience − speech by ...",
+    "url": "https://www.bankofengland.co.uk/speech/2025/september/liz-oakes-keynote-speech-at-the-cross-market-operational-resilience-group-2025-conference",
+    "description": "Given firm dependencies on third-party vendors, the transition to post-quantum cryptography is broader than individual firms' risk appetites. It ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] John Taylor Questionnaire January 2024.pdf - Bank of England",
+    "url": "https://www.bankofengland.co.uk/-/media/boe/files/about/people/john-taylor/john-taylor-questionnaire-january-2024.pdf",
+    "description": "quantum computing could undermine the standard methods for encrypting data, encrypting data (“post-quantum cryptography”).",
+    "markdown": ""
+  },
+  {
+    "title": "2025 CBEST thematic | Bank of England",
+    "url": "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/2025-cbest-thematic",
+    "description": "This in turn supports an organisation's progress to post-quantum cryptography (PQC) readiness, where a key milestone is discovery and ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Enhancing the Privacy of a Digital Pound - Bank of England",
+    "url": "https://www.bankofengland.co.uk/-/media/boe/files/digital-pound/mit-report-enhancing-the-privacy-of-a-digital-pound.pdf",
+    "description": "Post-quantum security Any assessment of PETs in the context of CBDCs like a digital pound, should also consider compatibility with post-quantum computing ...",
+    "markdown": ""
+  },
+  {
+    "title": "Financial Stability Report - December 2025 | Bank of England",
+    "url": "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025",
+    "description": "... post-quantum cryptography (PQC). Preparing and planning for PQC migration now – including mapping the software and hardware needed to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Letter from the Governor to Harriett Baldwin - Bank of England",
+    "url": "https://www.bankofengland.co.uk/-/media/boe/files/letter/2024/letter-from-the-governor-to-harriett-baldwin.pdf",
+    "description": "AI and machine learning could deliver significant benefits to the UK financial services sector, by driving greater operational efficiency, ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Financial Stability Report - December 2025 - Bank of England",
+    "url": "https://www.bankofengland.co.uk/-/media/boe/files/financial-stability-report/2025/financial-stability-report-december-2025.pdf",
+    "description": "post-quantum cryptography (PQC). Preparing and planning for PQC migration now. PQC – post-quantum cryptography.",
     "markdown": ""
   }
 ]

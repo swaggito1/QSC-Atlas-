@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Quantum computing threats to current cryptography: reality or hype (post-quantum cryptography presentation)",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/cyberpusryciai/Postkvantin%C4%97%20kriptografija_NKSC%20Cyberpusry%C4%8Diai.pdf",
+    "summary": "NKSC Cyberpusryciai presentation on post-quantum cryptography, covering PQC algorithm selection, cryptographic inventory and testing for the transition to quantum-resistant algorithms.",
+    "included": true
+  },
+  {
+    "title": "Post-quantum cryptography",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/naujienos/ilgalaikiam_saugumui__postkvantine_kripto_86a184d1.html",
+    "summary": "NKSC news item presenting post-quantum cryptography as a key step in strengthening Lithuania's digital resilience and ensuring long-term security.",
+    "included": true
+  },
+  {
+    "title": "Digital Europe Programme calls (info day presentation)",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/nkc/2024-01-26-infoday-pristatymas.pdf",
+    "summary": "NKSC info-day presentation on Digital Europe Programme funding calls, including the deployment of post-quantum cryptography (PQC) in systems across industrial sectors.",
+    "included": true
+  },
+  {
+    "title": "Guidelines for cryptography use inventory",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/biuleteniai/Kriptografijos_taikymo_inventorizacijos_gaires.pdf",
+    "summary": "NKSC guidance on conducting a cryptographic inventory, explicitly referencing post-quantum cryptography (PQC) as part of preparing for the quantum-resistant transition.",
+    "included": true
+  },
+  {
+    "title": "CTAC 2024 Yearly Report",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/rkgc/CTAC_2024_Yearly_Report.pdf",
+    "summary": "Yearly report published via Lithuania's NKSC discussing standardisation of quantum-resistant algorithms and the NIST Post-Quantum Cryptography (PQC) project.",
+    "included": true
+  },
+  {
+    "title": "Overview of the cybersecurity status in Lithuania: key information",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/en/2024_key-trends-and-statistics-of-cyber-security.pdf",
+    "summary": "NKSC overview of cybersecurity trends and statistics in Lithuania, identifying the transition to post-quantum cryptography as one of the most important decisions for the near future.",
+    "included": true
+  }
+]

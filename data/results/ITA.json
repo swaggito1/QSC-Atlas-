@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Post-Quantum and Quantum Cryptography",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_Crittografia_Quantum_Safe.pdf",
+    "summary": "Document by the Italian National Cybersecurity Agency (ACN) on post-quantum and quantum cryptography, referencing the NIST PQC standardization process and EU material on the transition to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Europe United in the Urgency of the Transition to Post-Quantum Cryptography",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/w/europa-unita-nell-urgenza-della-transizione-alla-crittografia-post-quantum",
+    "summary": "ACN announcement on the European joint position on the urgency of transitioning to post-quantum cryptography, with details on the main vulnerabilities and possible precautions to adopt.",
+    "included": true
+  },
+  {
+    "title": "G7 Cybersecurity Working Group: Priorities Set in Paris",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/w/gruppo-di-lavoro-g7-sulla-cybersicurezza.-definite-a-parigi-le-priorita-fino-alla-prossima-presidenza-statunitense-del-gruppo.",
+    "summary": "ACN announcement on the G7 Cybersecurity Working Group meeting in Paris, which set priorities including artificial intelligence security, post-quantum cryptography, telecommunications and SME protection.",
+    "included": true
+  },
+  {
+    "title": "First Italian Quantum Internet Testbed Inaugurated at the University Federico II of Naples",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T3",
+    "url": "https://www.acn.gov.it/portale/en/w/inaugurato-all-universita-federico-ii-di-napoli-il-primo-quantum-internet-testbed-italiano",
+    "summary": "ACN announcement of the inauguration of the first Italian Quantum Internet Testbed at the University Federico II of Naples, citing post-quantum cryptography (PQC) as a means to guarantee the country's resilience.",
+    "included": true
+  },
+  {
+    "title": "Project Leap 2: Results of the Post-Quantum Cryptography Experimentation in Real Payment Systems",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.bancaditalia.it/media/notizia/progetto-leap-2-risultati-della-sperimentazione-della-crittografia-post-quantistica-nei-sistemi-di-pagamento-reali/",
+    "summary": "Bank of Italy notice presenting the final report of Project Leap 2, illustrating the results of applying post-quantum cryptography protocols in real payment systems and the main findings.",
+    "included": true
+  },
+  {
+    "title": "The G7 Cyber Expert Group Publishes the Roadmap for the Financial Sector's Transition to Post-Quantum Cryptography",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bancaditalia.it/media/notizia/il-g7-cyber-expert-group-pubblica-la-roadmap-per-la-transizione-del-settore-finanziario-verso-la-crittografia-post-quantistica/",
+    "summary": "Bank of Italy notice on the publication of the G7 Cyber Expert Group roadmap for the financial sector's transition to post-quantum cryptography, confirming the commitment to a timely and secure transition to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Bank of Italy Joins Phase 2 of the BIS Project Leap to Test Post-Quantum Cryptography in Payment Systems",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.bancaditalia.it/media/notizia/banca-d-italia-partecipa-alla-fase-2-del-progetto-leap-della-bri-per-sperimentare-la-crittografia-post-quantistica-nei-sistemi-di-pagamento/",
+    "summary": "Bank of Italy notice announcing its participation in Phase 2 of the BIS Project Leap, which broadens the experimentation of post-quantum cryptography to payment infrastructures after positive initial-phase results.",
+    "included": true
+  },
+  {
+    "title": "Steering the Transition to a Quantum-Safe Financial System (Speech by Alessandra Perrazzelli)",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bis.org/review/r240924s.htm",
+    "summary": "Speech by Bank of Italy Deputy Governor Alessandra Perrazzelli on protecting the financial system from quantum-computing threats, outlining the Bank of Italy's proposals in the context of ongoing international work. Hosted on the BIS central bankers' speeches archive.",
+    "included": false
+  },
+  {
+    "title": "Multi-Year Programme SMD 41/2025 (Defence Acquisition Including Post-Quantum Cryptography)",
+    "country": "ITA",
+    "issuingOrg": "Senato",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.senato.it/service/PDF/PDFServer/BGT/001495351.pdf",
+    "summary": "Italian Senate document on the multi-year acquisition programme SMD 41/2025, which includes post-quantum cryptography (PQC) to protect the digital infrastructures and services of the public administration and other entities.",
+    "included": true
+  },
+  {
+    "title": "Senate Document CCXVIII No. 3 (National Activities Including Post-Quantum Cryptography)",
+    "country": "ITA",
+    "issuingOrg": "Senato",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.senato.it/service/PDF/PDFServer/DF/437223.pdf",
+    "summary": "Report transmitted to the Italian Senate (Doc. CCXVIII no. 3) describing national activities also in the field of post-quantum cryptography and outlining training pathways in applied cryptography.",
+    "included": true
+  }
+]

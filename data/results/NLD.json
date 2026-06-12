@@ -1,0 +1,178 @@
+[
+  {
+    "title": "What is quantum-safe cryptography?",
+    "country": "NLD",
+    "issuingOrg": "NCSC-NL",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsc.nl/quantumveilige-cryptografie/wat-is-quantumveilige-cryptografie",
+    "summary": "NCSC-NL explainer stating that the most effective way to mitigate the quantum-computer threat is to migrate to quantum-safe cryptography (QVC), also called post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "NIST releases three quantum-safe cryptography standards: what does this mean for your organisation?",
+    "country": "NLD",
+    "issuingOrg": "NCSC-NL",
+    "year": 2024,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.ncsc.nl/expertblogs/nist-brengt-drie-quantumveilige-cryptografiestandaarden-uit-wat-betekent-dit-voor-jouw-organisatie",
+    "summary": "NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards on 13 August 2024 and what the new quantum-safe standards mean for Dutch organisations.",
+    "included": true
+  },
+  {
+    "title": "Make your organization quantum secure: kicking off your quantum migration program",
+    "country": "NLD",
+    "issuingOrg": "NCSC-NL",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsc.nl/api/media/sites/default/files/Make_your_organization_quantum_secure.pdf",
+    "summary": "NCSC-NL guidance document (English edition) on starting a quantum migration programme, defining post-quantum cryptography (PQC) as cryptography impervious to the threat of quantum computing.",
+    "included": true
+  },
+  {
+    "title": "TNO: Cryptographic Asset Discovery and Inventory",
+    "country": "NLD",
+    "issuingOrg": "NCSC-NL",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://www.ncsc.nl/databeveiliging/tno-cryptographic-asset-discovery-and-inventory",
+    "summary": "NCSC-NL page presenting a TNO approach to cryptographic asset discovery and inventory as a key first step for organisations that must migrate to quantum-safe cryptography in time.",
+    "included": true
+  },
+  {
+    "title": "Speech by State Secretary Van Marum at the Post-Quantum Cryptography symposium",
+    "country": "NLD",
+    "issuingOrg": "Rijksoverheid",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.rijksoverheid.nl/documenten/2026/02/04/toespraak-staatssecretaris-van-marum-tijdens-het-symposium-post-quantum-cryptography",
+    "summary": "Speech delivered by State Secretary Eddie van Marum at the Post Quantum Cryptography symposium on 2 December 2025, published by the Dutch central government.",
+    "included": true
+  },
+  {
+    "title": "The PQC Migration Handbook (revised and extended second edition)",
+    "country": "NLD",
+    "issuingOrg": "AIVD",
+    "year": 2024,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://english.aivd.nl/documents/2024/12/3/the-pqc-migration-handbook",
+    "summary": "Joint AIVD, CWI and TNO handbook providing guidelines for migrating to post-quantum cryptography, supporting organisations in mitigating the quantum-computer threat to cryptography; revised and extended second edition.",
+    "included": true
+  },
+  {
+    "title": "Letter to Parliament accompanying the renewed handbook for quantum-safe cryptography",
+    "country": "NLD",
+    "issuingOrg": "BZK",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.rijksoverheid.nl/documenten/2025/01/20/kamerbrief-bij-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "summary": "Letter in which Minister Uitermark (Interior and Kingdom Relations) informs the House of Representatives about the renewed handbook for the migration to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Decision memorandum accompanying the letter to Parliament on the renewed quantum-safe cryptography handbook",
+    "country": "NLD",
+    "issuingOrg": "BZK",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.rijksoverheid.nl/documenten/2025/01/07/beslisnota-bij-kamerbrief-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "summary": "Decision memorandum containing background information on the letter to Parliament about the renewed handbook for quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum computers are coming and the Netherlands is prepared",
+    "country": "NLD",
+    "issuingOrg": "Rijksoverheid",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.rijksoverheid.nl/actueel/nieuws/2025/07/10/quantumcomputers-komen-eraan",
+    "summary": "Government news item on the central-government programme Quantumveilige Cryptografie Rijk, which develops tools to mitigate the risks quantum technology poses to current security systems.",
+    "included": true
+  },
+  {
+    "title": "Protect yourself now against the threat of quantum computers (2026)",
+    "country": "NLD",
+    "issuingOrg": "AIVD",
+    "year": 2026,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2026/03/27/bescherm-je-nu-tegen-de-dreiging-van-quantumcomputer-2026/bescherm-je-nu-tegen-de-dreiging-van-quantumcomputers-2026.pdf",
+    "summary": "AIVD publication urging organisations to protect themselves against the quantum-computer threat, referencing the central-government programme Quantumveilige Cryptografie Nederland (QvC NL) set up to support the central government and other organisations.",
+    "included": true
+  },
+  {
+    "title": "Securing Tomorrow, Today: Transition to Post-Quantum Cryptography",
+    "country": "NLD",
+    "issuingOrg": "AIVD",
+    "year": 2025,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2025/03/05/transitie-naar-post-quantumcryptografie/Statement+Transitie+naar+post-quantumcryptografie+.pdf",
+    "summary": "Statement on the transition to post-quantum cryptography hosted by the AIVD, warning of the risk that the migration to quantum-safe cryptography will not be completed in time.",
+    "included": true
+  },
+  {
+    "title": "Prepare for the threat of quantum computers",
+    "country": "NLD",
+    "issuingOrg": "AIVD",
+    "year": 2021,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2021/09/23/bereid-je-voor-op-de-dreiging-van-quantumcomputers/Bereid+je+voor+op+de+dreiging+van+quantumcomputers.pdf",
+    "summary": "AIVD brochure advising organisations to prepare now for migration to quantum-safe cryptography and explaining how to secure systems against the threat of quantum computers.",
+    "included": true
+  },
+  {
+    "title": "Answers to parliamentary questions from MP Sneller on quantum-proof encryption",
+    "country": "NLD",
+    "issuingOrg": "Tweede Kamer",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.tweedekamer.nl/kamerstukken/kamervragen/detail?id=2024Z00327&did=2024D08724",
+    "summary": "Government answers to parliamentary questions on quantum-proof encryption, addressing quantum-safe cryptography, the opportunities it offers, and risks such as insufficient awareness and knowledge.",
+    "included": true
+  },
+  {
+    "title": "Decision memorandum on the report concerning new EU Commission proposals (PQC and QKD)",
+    "country": "NLD",
+    "issuingOrg": "BZK",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.tweedekamer.nl/downloads/document?id=2024D34801",
+    "summary": "Decision memorandum from the Ministry of the Interior and Kingdom Relations, published via the House of Representatives, distinguishing post-quantum cryptography (based on mathematical problems that cannot be broken by quantum computers) from quantum key distribution in the context of EU proposals.",
+    "included": true
+  },
+  {
+    "title": "Communication on the EU Quantum Strategy (parliamentary document)",
+    "country": "NLD",
+    "issuingOrg": "Tweede Kamer",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.tweedekamer.nl/downloads/document?id=2025D37585",
+    "summary": "Parliamentary document on the EU quantum strategy referencing the Dutch programme Quantumveilige Cryptografie NL, which supports vital sectors in migrating to post-quantum encryption and contributes to the European effort.",
+    "included": true
+  },
+  {
+    "title": "New tools available to mitigate the threat of quantum computers",
+    "country": "NLD",
+    "issuingOrg": "BZK",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nldigitalgovernment.nl/news/new-tools-available-to-help-mitigate-the-threat-of-quantum-computers/",
+    "summary": "News item on the Dutch digital government portal announcing the updated handbook on quantum-safe cryptography and the PQChoiceAssistant tool, which support governments in future-proofing their security.",
+    "included": true
+  }
+]

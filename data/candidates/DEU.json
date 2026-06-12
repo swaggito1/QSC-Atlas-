@@ -1,5 +1,239 @@
 [
   {
+    "title": "Post-Quanten-Kryptografie - BSI",
+    "url": "https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/Post-Quanten-Kryptografie/post-quanten-kryptografie_node.html",
+    "description": "Quantentechnologien und quantensichere Kryptografie; Post-Quanten-Kryptografie ... Post-Quantum Cryptography Project\" des US-amerikanischen National ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantentechnologien und quantensichere Kryptografie - BSI",
+    "url": "https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-quantensichere-kryptografie_node.html",
+    "description": "Quantentechnologien und quantensichere Kryptografie ... Erste Post-Quanten-Verfahren wurden von NIST zur Standardisierung ausgewählt und Post-Quanten-Kryptografie ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Transitioning to Post-Quantum Cryptography - BSI",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/PQC-joint-statement-2025.pdf?__blob=publicationFile&v=3",
+    "description": "Several well-studied post-quantum cryptography (PQC) alternatives to currently deployed vulnerable cryptography are either already ...",
+    "markdown": ""
+  },
+  {
+    "title": "VS-IT: Umstellungsfristen für Post-Quanten-Kryptografie vereinbart",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Alle-Meldungen-News/Meldungen/PQC-Umstellungsfristen_251031.html",
+    "description": "Quantentechnologien und quantensichere Kryptografie · Post-Quanten-Kryptografie · Download Kryptografie quantensicher gestalten (PDF) · Studie ...",
+    "markdown": ""
+  },
+  {
+    "title": "Kooperationsgruppe veröffentlicht EU -Roadmap für quantensichere ...",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Alle-Meldungen-News/Meldungen/EU-Roadmap_Quantenkryptografie_250711.html",
+    "description": "Die Roadmap wurde von einer im Jahr 2024 eingerichteten Arbeitsgruppe zu Post-Quanten-Kryptografie ... Sie müssen auf quantensichere Kryptografie ...",
+    "markdown": ""
+  },
+  {
+    "title": "BSI and partners from 17 other EU member states demand transition ...",
+    "url": "https://www.bsi.bund.de/EN/Service-Navi/Presse/Pressemitteilungen/Presse2024/241127_Post-Quantum_Cryptography.html",
+    "description": "BSI and partners from 17 other EU member states demand transition to Post-Quantum Cryptography. BSI and partners from 17 other EU member states ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography - BSI",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/Post-Quanten-Kryptografie/post-quanten-kryptografie.html",
+    "description": "Post-quantum cryptography refers to cryptographic schemes that are assumed to be unbreakable even with the help of a quantum computer.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technologies and Quantum-Safe Cryptography - BSI",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-post-quanten-kryptografie.html",
+    "description": "First post-quantum algorithms have been selected by NIST for standardisation and post-quantum cryptography will be used by default. Therefore, the migration ...",
+    "markdown": ""
+  },
+  {
+    "title": "Regierung will Roadmap für die „Post-Quanten-Kryptografie“",
+    "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1102528",
+    "description": "Mit der Förderrichtlinie „Post-Quanten-Kryptografie in die Anwendungen bringen“ unterstütze die Bundesregierung außerdem die Umsetzung ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Positionspapier Empfehlungen zur quantensicheren Kryptographie",
+    "url": "https://www.lobbyregister.bundestag.de/media/33/8c/492086/Stellungnahme-Gutachten-SG2503170079.pdf",
+    "description": "Stattdessen wird empfohlen, bei der notwendigen Migration zu quantensicheren Verfahren die Priorität auf die PQC zu legen. Kontakt.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Handlungskonzept Quantentechnologien der Bundesregierung",
+    "url": "https://dserver.bundestag.de/btd/20/066/2006610.pdf",
+    "description": "Auch wenn sie selbst keine Quantentechnologie ist, spielt die Post-Quanten-Kryptografie in diesem Kontext eine wichtige Rolle. Aus Sicht der IT- ...",
+    "markdown": ""
+  },
+  {
+    "title": "[XML] https://www.bundestag.de/dip-api/api/v1/drucksache-text/280533 ...",
+    "url": "https://www.bundestag.de/dip-api/api/v1/drucksache-text/280533?ref=bt&format=xml",
+    "description": "... Post- Quanten-Kryptografie in Deutschland vorzulegen (vgl. Antwort ... quantensichere Kryptografie informiert und die Migration vorangetrieben ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Drucksache 21/2526 - Deutscher Bundestag",
+    "url": "https://dserver.bundestag.de/btd/21/025/2102526.pdf",
+    "description": "Entsprechend dieser Empfehlung wird zurzeit ein nationaler Projektplan zur Umstellung auf quantensichere Kryptografie erarbeitet. 3. Wie ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Drucksache 20/8104 - Deutscher Bundestag",
+    "url": "https://dserver.bundestag.de/btd/20/081/2008104.pdf",
+    "description": "Post-Quanten-Kryptografie gut aufgestellt. Das BSI hat frühzeitig erste Emp- fehlungen zur Migration zu Post-Quanten-Kryptografie gemacht ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] How to master Europe's digital infrastructure needs? - Lobbyregister",
+    "url": "https://www.lobbyregister.bundestag.de/media/de/a7/345848/Stellungnahme-Gutachten-SG2407080010.pdf",
+    "description": "Moreover, the Commission focuses on the resilience of submarine cables as a pressing issue for. European sovereignty. Post-Quantum Cryptography ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Positionspapier Förderung des Quantencomputings in Deutschland",
+    "url": "https://www.lobbyregister.bundestag.de/media/c5/3e/492084/Stellungnahme-Gutachten-SG2503170078.pdf",
+    "description": "o Kritische Infrastrukturen und öffentliche Einrichtungen müssen dringend auf die Post-Quantum-. Kryptografie (PQC) umgestellt werden. Wir ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography - BSI",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/Post-Quanten-Kryptografie/post-quanten-kryptografie_node.html",
+    "description": "Post-quantum cryptography refers to cryptographic schemes that are assumed to be unbreakable even with the help of a quantum computer.",
+    "markdown": ""
+  },
+  {
+    "title": "Germany joins EU in classifying quantum threat to digital systems",
+    "url": "https://www.linkedin.com/posts/marinivezic_regierung-will-roadmap-f%C3%BCr-die-post-quanten-kryptografie-activity-7354401554361171968-GU8q",
+    "description": "Regierung will Roadmap für die 'Post-Quanten-Kryptografie' bundestag.de. 17 1 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Crypto Cryptanalysis (PQ-CCA) • Cybersecurity and AI",
+    "url": "https://www.mi.fu-berlin.de/en/inf/groups/ag-comm/projects/current-projects/Quantenkryptoanalyse/index.html",
+    "description": "Post-Quanten-Kryptografie in die Anwendung bringen. PARTNERS. Freie Universität Berlin, Arbeitsgruppe Informationssicherheit & Arbeitsgruppe Cybersecurity and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: The Role of Cryptoagility and Migrability",
+    "url": "https://www.governikus.de/en/loesungen/themen/post-quanten-kryptografie/",
+    "description": "Post-quantum cryptography ✓Quantum key exchange ✓Migrability ✓Cryptoagility: How companies can become quantum-secure! ➝ Learn more now.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie: Was jetzt zu tun ist | EY - Deutschland",
+    "url": "https://www.ey.com/de_de/insights/consulting/post-quanten-kryptografie-was-jetzt-zu-tun-ist",
+    "description": "Quantencomputer bedrohen die heutige Datensicherheit – sind Sie bereit für die Post-Quanten-Kryptografie? Erfahren Sie, warum der Umstieg",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] cryptovision - Post-Quanten-Kryptografie – verständlich erklärt",
+    "url": "https://www.cryptovision.com/wp-content/uploads/2023/08/Post-Quantum-Whitepaper-DE.pdf",
+    "description": "Was ist Post-Quanten-Kryptografie? 11. Welche Familien von Post-Quanten-Krypto-Verfahren gibt es? 12. Was ist der NIST-Post-Quanten- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technologies and Quantum-Safe Cryptography - BSI",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-post-quanten-kryptografie_node.html",
+    "description": "The BSI published the guideline “Quantum-safe cryptography – fundamentals, current developments and recommendations”.",
+    "markdown": ""
+  },
+  {
+    "title": "What do Germany and France think about Post-Quantum ... - YouTube",
+    "url": "https://www.youtube.com/watch?v=9yzVAMtWD8Q",
+    "description": "... German report on \"Post-Quanten-Kryptografie\": https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und ...",
+    "markdown": ""
+  },
+  {
+    "title": "Johanna Sepúlveda's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/johanna-sep%C3%BAlveda-a9553b20_cybersecurity-postquantumcryptography-activity-7269762471807139841-sPCg",
+    "description": "Deswegen haben wir in München diese Woche mit Unterstützung von Airbus ein \"Executive Meeting zur Migration auf quantensichere Kryptografie\" ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Quantensichere Kommunikation",
+    "url": "https://www.bitkom.org/sites/main/files/2024-10/21.10.24-lf-quantensichere-kommunikation.pdf",
+    "description": "Angesichts dieser Entwicklungen gewinnt die quantensichere Kryptografie, die. Methoden entwickelt, die auch den Fähigkeiten von Quantencomputern ...",
+    "markdown": ""
+  },
+  {
+    "title": "Was ist quantensichere Kryptografie? - IBM",
+    "url": "https://www.ibm.com/de-de/think/topics/quantum-safe-cryptography",
+    "description": "Quantensichere Kryptografie sichert sensible Daten, den Zugriff und die Kommunikation für das Zeitalter des Quantencomputings.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantensichere Kryptografie - warum und wie? - genua",
+    "url": "https://www.genua.de/knowledgebase/quantensichere-kryptografie",
+    "description": "Mit dem kommenden Quantenzeitalter wachsen die Anforderungen an die eingesetzten kryptografischen Verschlüsselungsverfahren.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptographie - DARZ",
+    "url": "https://da-rz.de/de/post-quanten-kryptographie/",
+    "description": "PQC-Migration & quantensichere Kryptografie für Unternehmen. Quantencomputer werden bestehende Verschlüsselungsverfahren wie RSA und ECC ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie | Quantensicherheit im digitalen Zeitalter",
+    "url": "https://www.gi-de.com/de/digital-security/digital-infrastructures/post-quanten-kryptographie",
+    "description": "Erfahren Sie in unserem Whitepaper alles, was Sie über quantensichere Kryptografie wissen müssen, wie sie sich auf Ihr Unternehmen auswirkt und welche Best ...",
+    "markdown": ""
+  },
+  {
+    "title": "Position Paper on Quantum Key Distribution - BSI",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/Quantum_Positionspapier.html",
+    "description": "Unternehmen und Organisationen · Quantentechnologien und quantensichere Kryptografie; Position Paper on Quantum Key Distribution ...",
+    "markdown": ""
+  },
+  {
+    "title": "BSI TR-02102-1 \"Cryptographic Mechanisms: Recommendations ...",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.html?nn=916626",
+    "description": "Technical Guideline TR-02102 With this Technical Guideline, the Federal Office for Information Security (BSI) provides an assessment of the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Germany BSI (Federal Office for Information Security) - QNu Labs",
+    "url": "https://www.qnulabs.com/glossary/germany-bsi-federal-office-for-information-security-quantum-guidelines",
+    "description": "Explore Germany BSI (Federal Office for Information Security) Quantum Guidelines, its cryptographic mechanism, advantages, and importance in quantum-safe ...",
+    "markdown": ""
+  },
+  {
+    "title": "The Tangle of Quantum Safe Migration Recommendations - LinkedIn",
+    "url": "https://www.linkedin.com/pulse/tangle-quantum-safe-migration-recommendations-wasilij-beskorovajnov-1zxfe",
+    "description": "Kryptografie quantensicher gestalten: Grundlagen ... BSI TR-02102-1 \"Kryptographische Verfahren: Empfehlungen und Schlüssellängen\" (2023) ...",
+    "markdown": ""
+  },
+  {
+    "title": "BSI expands cryptographic recommendations with a view ... - Q-PrEP",
+    "url": "https://qprep.eu/news/bsi-expands-cryptographic-recommendations-with-a-view-to-quantum-computers/",
+    "description": "... BSI has updated the recommendations on post-quantum cryptography in particular. The switch to post-quantum cryptography is more complex than ...",
+    "markdown": ""
+  },
+  {
+    "title": "BSI TR-02102 Cryptographic Mechanisms",
+    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02102/tr02102_node.html",
+    "description": "This Technical Guideline provides recommendations for the use of the cryptographic protocol Transport Layer Security (TLS). It is used for the secure ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] PQC update from BSI: policies, activities and roadmap",
+    "url": "https://na.eventscloud.com/file_uploads/c9f25b762af766cbbc0aaa3d2f7c2c1f_Day2-1700-BSIPQCUpdate.pdf",
+    "description": "• Continue the migration to post-quantum cryptography for high ... • BSI TR 02102-1 (Click on English version): https://www.bsi.bund.de ...",
+    "markdown": ""
+  },
+  {
+    "title": "BSI TR-02102-2 \"Cryptographic Mechanisms: Recommendations ...",
+    "url": "https://www.allianz-fuer-cybersicherheit.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-2.html",
+    "description": "This Technical Guideline provides recommendations for the use of the cryptographic protocol Transport Layer Security (TLS). It is used for the secure ...",
+    "markdown": ""
+  },
+  {
+    "title": "Federal Quantum Alliance: Ressources - Bundesquantenallianz",
+    "url": "https://bundesquantenallianz.de/Info/index_en.shtml",
+    "description": "Die Bundesquantenallianz ist eine Kooperation von Unternehmen im Bundesbesitz um sich auf das Zeitalter des Quantencomputings vorzubereiten.",
+    "markdown": ""
+  },
+  {
     "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
     "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
     "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
@@ -24,15 +258,21 @@
     "markdown": ""
   },
   {
-    "title": "Quantum Technologies and Quantum-Safe Cryptography - BSI",
-    "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Quantentechnologien-und-Post-Quanten-Kryptografie/quantentechnologien-und-post-quanten-kryptografie_node.html",
-    "description": "The BSI published the guideline “Quantum-safe cryptography – fundamentals, current developments and recommendations”.",
-    "markdown": ""
-  },
-  {
     "title": "Post-Quantum Cryptography | Homeland Security",
     "url": "https://www.dhs.gov/quantum",
     "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "Key Federal Government Reports and Guidance on PQC · PQC Transition Plans and Deadlines for Federal Systems · Key Federal Transition Steps.",
+    "markdown": ""
+  },
+  {
+    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
     "markdown": ""
   },
   {
@@ -48,15 +288,21 @@
     "markdown": ""
   },
   {
-    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
-    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
-    "description": "NIST's National Cybersecurity Center of Excellence (NCCoE) has an ongoing project on the Migration to Post-Quantum Cryptography. The Trump ...",
-    "markdown": ""
-  },
-  {
     "title": "Timelines for migration to post-quantum cryptography",
     "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
     "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Federal Office for Information Security (BSI) - LinkedIn",
+    "url": "https://www.linkedin.com/posts/bsibund_cybersecurity-postquantum-pqc-activity-7402683587109593089-p_eu",
+    "description": "Leading the way in post-quantum security: the European Conference on PQC Migration 2025 Post-Quantum Cryptography is no longer a distant ...",
+    "markdown": ""
+  },
+  {
+    "title": "ANSSI views on the Post-Quantum Cryptography transition",
+    "url": "https://messervices.cyber.gouv.fr/guides/en-anssi-views-post-quantum-cryptography-transition",
+    "description": "A complete survey on the status of quantum computer development has been detailed by the BSI, the German counterpart of ANSSI [7]. Quantum threat: what is the ...",
     "markdown": ""
   },
   {
@@ -87,6 +333,84 @@
     "title": "European Commission published Roadmap for Coordinated Post ...",
     "url": "https://qbn.world/european-commission-published-roadmap-for-coordinated-post-quantum-cryptography-implementation-in-eu-member-states-industry-should-be-aware/",
     "description": "The roadmap takes into account the current assessment of the status of quantum computer development by the German Federal Office for Information ...",
+    "markdown": ""
+  },
+  {
+    "title": "German BSI take on Post Quantum Cryptography - ISC2 Community",
+    "url": "https://community.isc2.org/t5/Industry-News/German-BSI-take-on-Post-Quantum-Cryptography/td-p/68040",
+    "description": "Stephan Ehlen from the Federal Office for Information Security (BSI) in Germany unveil its post-quantum cryptography policy and roadmap. He ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU Presses for Quantum-Safe Encryption by 2030 as Risks Grow",
+    "url": "https://thequantuminsider.com/2025/06/30/eu-presses-for-quantum-safe-encryption-by-2030-as-risks-grow/",
+    "description": "The European Union has called on member states to transition to quantum-safe encryption by 2030, citing urgent cybersecurity risks.",
+    "markdown": ""
+  },
+  {
+    "title": "Blick in die Zukunft: Wie verändert Quantencomputing das Banking?",
+    "url": "https://www.bundesbank.de/de/presse/reden/blick-in-die-zukunft-wie-veraendert-quantencomputing-das-banking--919824",
+    "description": "Auch die Bundesregierung hat bis 2026 „das Einleiten der Migration zu Post-Quanten-Kryptografie in (…) sicherheitskritischen Bereichen“[5] ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Neuerwerbungen Bibliothek der Zentrale - Deutsche Bundesbank",
+    "url": "https://www.bundesbank.de/resource/blob/831848/6ab6180341abb85e52f6a7f0a4399f68/472B63F073F071307366337C94F8C870/neuerwerbungsliste-2025-24-data.pdf",
+    "description": "Codebasierte Post-Quanten-Kryptografie : Goppa. Codes und das McEliece Kryptosystem / Felix Peter. Paul. - Wiesbaden, Germany : Springer ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 1065. Sitzung des Bundesrates am 08.05.26 - Drucksache 0149-26",
+    "url": "https://www.bundesrat.de/SharedDocs/TO/1065/erl/55.pdf?__blob=publicationFile&v=1",
+    "description": "– Verpflichtung der Mitgliedstaaten, im Rahmen ihrer nationalen Cybersicher- heitsstrategie Konzepte für die Migration zur Post-Quanten-Kryptografie (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Drucksache 166/24 - Bundesrat",
+    "url": "https://www.bundesrat.de/drs.html?id=166-24",
+    "description": "Die Post-Quantum-Kryptografie (PQC) ist ein vielversprechender Ansatz, um unsere ... Post-Quanten-Kryptografie – Handlungsempfehlungen · des BSI ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] B u n d e s r a t",
+    "url": "https://www.bundesrat.de/SharedDocs/TO/1065/download/1065-erlaeuterungen.pdf?__blob=publicationFile&v=5",
+    "description": "heitsstrategie Konzepte für die Migration zur Post-Quanten-Kryptografie (PQC) anzunehmen, um künftige Risiken durch Quantenangriffe zu ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie in die Anwendungen bringen - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Bekanntmachungen/DE/2022/12/2022-12-30-Bekanntmachung-PostQuantenKryptografie.html",
+    "description": "Die Post-Quanten-Kryptografie beschäftigt sich mit der Entwicklung und Untersuchung von kryptografischen Verfahren, die mit Quantencomputern ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Handlungskonzept Quantentechnologien - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Downloads/DE/230426-handlungskonzept-quantentechnologien.pdf?__blob=publicationFile&v=4",
+    "description": "Dabei ist zu bemerken, dass Post-Quanten-Kryptografie genauso wie die zurzeit eingesetzten Public-Key-Verfahren auf klassischer Hardware implementiert werden ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Agenda Cybersicherheitsforschung - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Publikationen/DE/5/725662_Agenda_Cybersicherheitsforschung.pdf?__blob=publicationFile&v=4",
+    "description": "Post-Quanten-Kryptografie erforschen und in die breite Anwendung bringen, um für das künftige Zeitalter der Quantencomputer gerüstet zu sein;. ▻ durch die ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Forschungsprogramm Quantensysteme - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/31714_Forschungsprogramm_Quantensysteme.pdf?__blob=publicationFile&v=5",
+    "description": "Einfache. Beispiele sind durchstimmbare Laser mit Cavity und. Braggspiegel auf demselben Chip. PQK: Post-Quanten-Kryptografie. Bezeichnung für ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Digital. Sicher. Souverän. - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/31672_Digital_Sicher_Souveraen.pdf?__blob=publicationFile&amp;v=3",
+    "description": "Insbesondere bei neuen Algorithmen, wie bei der Post-Quanten-Kryptografie, werden diver- gierende Entwicklungen in den genannten Wirtschafts- räumen erwartet.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Bundesbericht Forschung und Innovation 2020 - BMFTR",
+    "url": "https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/1/31611_1_BUFI_2020_Hauptband.pdf?__blob=publicationFile&v=7",
+    "description": "... Post-Quanten-Kryptografie, deren Ziel es ist,. Verschlüsselungsverfahren zu entwickeln, die auch in der Zeit der Quantencomputer Bestand haben. Im.",
     "markdown": ""
   }
 ]

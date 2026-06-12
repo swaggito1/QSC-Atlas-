@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Secure Digital Future in the Age of Quantum Computers",
+    "country": "SVN",
+    "issuingOrg": "URSIV",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.gov.si/assets/vladne-sluzbe/URSIV/Datoteke/Dokumenti/Varna-digitalna-prihodnost-v-dobi-kvantnih-racunalnikov.pdf",
+    "summary": "Document from Slovenia's Government Information Security Office (URSIV) warning that post-quantum cryptography (PQC) is becoming a necessary part of ensuring cybersecurity, as today's cryptographic solutions will not suffice against quantum computers.",
+    "included": true
+  },
+  {
+    "title": "The European Union's Roadmap for Post-Quantum Cryptography (FAQ)",
+    "country": "SVN",
+    "issuingOrg": "URSIV",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.gov.si/assets/vladne-sluzbe/URSIV/Datoteke/Priporocila/Nacrt-EU-za-postkvantno-kriptografijo_FAQ_maj-2026.pdf",
+    "summary": "FAQ recommendation document published by Slovenia's Government Information Security Office (URSIV) explaining the EU roadmap for post-quantum cryptography (PQC) and related terminology such as PQC and NIS.",
+    "included": true
+  },
+  {
+    "title": "WB3C Training for Information Security Leaders in Critical Infrastructure and Public Administration",
+    "country": "SVN",
+    "issuingOrg": "URSIV",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.si/novice/2023-11-24-wb3c-usposabljanje-za-vodje-informacijske-varnosti-v-kriticni-infrastrukturi-in-drzavni-upravi/",
+    "summary": "Slovenian government news item on a WB3C training for information security leaders in critical infrastructure and public administration, covering post-quantum cryptography and NIS2 directive obligations.",
+    "included": true
+  }
+]

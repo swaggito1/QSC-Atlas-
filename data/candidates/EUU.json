@@ -1,0 +1,410 @@
+[
+  {
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "It includes a set of recommendations that Member States need to implement for a synchronised transition to PQC, as well as measures to ensure ...",
+    "markdown": ""
+  },
+  {
+    "title": "Recommendation on a Coordinated Implementation Roadmap for ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "This Commission Recommendation encourages Member States to develop a comprehensive strategy for the adoption of Post-Quantum Cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "EU reinforces its cybersecurity with post-quantum cryptography",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/eu-reinforces-its-cybersecurity-post-quantum-cryptography",
+    "description": "An effective solution to these challenges is post-quantum cryptography, which uses encryption methods based on complex mathematical problems ...",
+    "markdown": ""
+  },
+  {
+    "title": "Commission publishes Recommendation on Post-Quantum ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-recommendation-post-quantum-cryptography",
+    "description": "The Commission published a Recommendation on Post-Quantum Cryptography to encourage Member States to develop and implement a harmonised approach.",
+    "markdown": ""
+  },
+  {
+    "title": "Survey - EU Roadmap on Post-Quantum Cryptography",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/survey-eu-roadmap-post-quantum-cryptography",
+    "description": "Quantum computing is set to radically transform cryptography, creating new threats to data security with the Commission committed to engaging ...",
+    "markdown": ""
+  },
+  {
+    "title": "European Commission welcomes G7 cybersecurity declaration to ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/news/european-commission-welcomes-g7-cybersecurity-declaration-strengthen-global-digital-resilience",
+    "description": "Post-Quantum Cryptography (PQC) Migration: With the advances in quantum computing, the G7 calls for a coordinated action across industry and ...",
+    "markdown": ""
+  },
+  {
+    "title": "NIS Cooperation Group | Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/nis-cooperation-group",
+    "description": "The Network and Information Systems Cooperation Group was established by the NIS Directive to ensure cooperation and information exchange among Member States.",
+    "markdown": ""
+  },
+  {
+    "title": "Digital privacy | Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-privacy",
+    "description": "The ePrivacy Directive and the General Data Protection Regulation help ensure digital privacy for EU citizens.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: Current state and quantum mitigation",
+    "url": "https://www.enisa.europa.eu/publications/post-quantum-cryptography-current-state-and-quantum-mitigation",
+    "description": "This study provides an overview of the current state of affairs on the standardization process of Post-Quantum Cryptography (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: Anticipating Threats and Preparing the ...",
+    "url": "https://www.enisa.europa.eu/news/enisa-news/post-quantum-cryptography-anticipating-threats-and-preparing-the-future",
+    "description": "... . The transition to post-quantum cryptography (PQC) does not end with the selection and standardisation of post-quantum algorithms.",
+    "markdown": ""
+  },
+  {
+    "title": "Engineering Data Protection in the wake of PQC - ENISA",
+    "url": "https://www.enisa.europa.eu/events/engineering-data-protection-in-the-wake-of-pqc",
+    "description": "ENISA organized a webinar aiming to discuss the latest developments and considerations on engineering personal data protection in the Post-Quantum Cryptography ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CRYPTOGRAPHY - ENISA",
+    "url": "https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Report%20-%20Post-Quantum%20Cryptography%20Current%20state%20and%20quantum%20mitigation-V2.pdf",
+    "description": "It is important to make a distinction between Post-Quantum Cryptography (PQC) and Quantum Cryptography. PQC is about designing cryptographic solutions that can ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography - Integration study - ENISA",
+    "url": "https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study",
+    "description": "The new report explores the necessity to design new cryptographic protocols and integrate post-quantum systems into existing protocols.",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptography | ENISA - European Union",
+    "url": "https://www.enisa.europa.eu/topics/digital-identity-and-data-protection/cryptography",
+    "description": "ENISA's work provides a concise overview of the current progress of the standardisation process for post-quantum cryptography (PQC) schemes and introduces a ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Cryptographic governance today Preparation to Post-Quantum ...",
+    "url": "https://www.enisa.europa.eu/sites/default/files/all_files/06-challenges-solutions-04-primekey-pierre-codis.pdf",
+    "description": "Create a post- quantum CA and issue PQC certificates. Supports FALCON and Dilithium certificate issuance. Sign code and artifacts with post- quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum Computing & Crypto-assets Blockchain Puzzles - ENISA",
+    "url": "https://www.enisa.europa.eu/news/enisa-news/solving-the-cryptography-riddle-post-quantum-computing-crypto-assets-blockchain-puzzles",
+    "description": "The European Union Agency for Cybersecurity releases two reports on cryptography: one on the progress of post-quantum cryptography standardisation.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Cryptographic security: A question for Europe's digital sovereignty",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/766237/EPRS_BRI(2024)766237_EN.pdf",
+    "description": "In 2021, the Republic of Korea established a. PQC cryptography research group that held a competition to select post-quantum standards for public-key encryption ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographic security: Critical to Europe's digital sovereignty",
+    "url": "https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2024)766237",
+    "description": "Post-quantum cryptography (which uses classical computer properties) and quantum cryptography (which uses quantum mechanical properties) are ...",
+    "markdown": ""
+  },
+  {
+    "title": "Actions - Carriages preview | Legislative Train Schedule",
+    "url": "https://www.europarl.europa.eu/legislative-train/package-digital-package/file-targeted-amendments-to-the-nis2-directive",
+    "description": "introducing the requirement for Member States to adopt policies for the migration to post-quantum cryptography (PQC) as part of their national cybersecurity ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] World Economic Forum - Global Risks Report 2026",
+    "url": "https://espas.secure.europarl.europa.eu/orbis/system/files/generated/document/en/WEF_Global_Risks_Report_2026_0.pdf",
+    "description": "new PQC algorithms that are resistant to Shor's algorithm. EU Member states have also developed a roadmap for the transition to PQC.123.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Resolution on the EU's Cybersecurity Strategy for the Digital Decade",
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-document-summary/pdf?id=1666087",
+    "description": "for further research into post-quantum algorithms as a standard for cyber security. Parliament insisted that cybersecurity policies should be integrated ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Lista över publikationer från parlamentets Think Tank",
+    "url": "https://www.europarl.europa.eu/thinktank/sv/research/advanced-search/pdf?keywords=c_8c5cfba6",
+    "description": "Several countries are adopting strategies to address post-quantum cryptography. The EU is working with Member States and the United States to speed up the ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Quantum technologies: Can they boost the EU's decarbonisation?",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2026/774707/EPRS_BRI(2026)774707_EN.pdf",
+    "description": "Accordingly, it is appropriate to regard post-quantum cryptography (PQC) as the near-to-medium-term priority, as presented in the Commission's roadmap for ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU-US Trade and Technology Council: Modest progress in a ...",
+    "url": "https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2023)739336",
+    "description": "The aim was to revitalise transatlantic cooperation, boost bilateral trade and investment, and strengthen the parties' technological and industrial leadership.",
+    "markdown": ""
+  },
+  {
+    "title": "Cybersecurity Coalition Shares Views on EU Roadmap on Post ...",
+    "url": "https://www.centerforcybersecuritypolicy.org/insights-and-research/cybersecurity-coalition-shares-views-on-eu-roadmap-on-post-quantum-cryptography",
+    "description": "Having recommended in our 2024-2029 EU Cyber Policy Roadmap that the EU “proactively manage the transition to post-quantum cryptography,” the ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU PQC Workstream publishes 'A Coordinated Implementation ...",
+    "url": "https://pqshield.com/eu-pqc-workstream-publishes-a-coordinated-implementation-roadmap-for-the-transition-to-post-quantum-cryptography/",
+    "description": "The Roadmap presents a comprehensive approach for Member States to navigate the transition both on a political level, and with collaboration between industry ...",
+    "markdown": ""
+  },
+  {
+    "title": "Survey - EU Roadmap on Post-Quantum Cryptography",
+    "url": "https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/jjPLpVXpKII",
+    "description": "Following the publication of the “Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (PQC)” [1], the NIS ...",
+    "markdown": ""
+  },
+  {
+    "title": "Bart Preneel's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/bart-preneel-4451412_a-coordinated-implementation-roadmap-for-activity-7343171973776072705-TY3B",
+    "description": "The EU NIS Cooperation group has published its post-quantum migration roadmap. Nothing surprising, but it would be good for the EU to put up a document for ...",
+    "markdown": ""
+  },
+  {
+    "title": "European Commission recommends Coordinated Implementation ...",
+    "url": "https://industrialcyber.co/critical-infrastructure/european-commission-recommends-coordinated-implementation-roadmap-for-transition-to-post-quantum-cryptography/",
+    "description": "European Commission recommends Coordinated Implementation Roadmap for transition to Post-Quantum Cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://community.isc2.org/t5/Industry-News/A-Coordinated-Implementation-Roadmap-for-the-Transition-to-Post/td-p/81739",
+    "description": "It includes a set of recommendations that Member States need to implement for a synchronised transition to PQC, as well as measures to ensure ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "G7 CYBER EXPERT GROUP STATEMENT ON. Advancing a Coordinated Roadmap for the Transition to Post-Quantum. Cryptography in the Financial Sector. January 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "EU begins coordinated effort for Member States to switch critical ...",
+    "url": "https://industrialcyber.co/regulation-standards-and-compliance/eu-begins-coordinated-effort-for-member-states-to-switch-critical-infrastructure-to-quantum-resistant-encryption-by-2030/",
+    "description": "EU begins coordinated effort for Member States to switch critical infrastructure to quantum-resistant encryption by 2030.",
+    "markdown": ""
+  },
+  {
+    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The EC (European Commission) initially released recommendations on a co-ordinated roadmap intended as a broad outline for Member States to prepare for, plan, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Frequently Asked Questions about Post-Quantum Cryptography",
+    "url": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/",
+    "description": "We're working with industry and government stakeholders on two workstreams, and will develop demonstrations in each: Cryptographic Visibility and Risk ...",
+    "markdown": ""
+  },
+  {
+    "title": "The EU's Roadmap for Post-Quantum Cryptography - Utimaco",
+    "url": "https://utimaco.com/news/blog-posts/eus-roadmap-post-quantum-cryptography",
+    "description": "This blog post highlights the most important takeaways and deadlines from t the EU's roadmap for post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "EU Member States Warn of the Quantum Threat and Call for the ...",
+    "url": "https://nukib.gov.cz/en/infoservis-en/news/2209-eu-member-states-warn-of-the-quantum-threat-and-call-for-the-transition-to-post-quantum-cryptography/",
+    "description": "The National Cyber and Information Security Agency (NÚKIB) of the Czech Republic has joined the joint statement \"Securing Tomorrow, ...",
+    "markdown": ""
+  },
+  {
+    "title": "2nd European Conference on PQC Migration",
+    "url": "https://pqc-conference.eu/",
+    "description": "The Conference addresses such questions about PQC transition in a program featuring international experts and stakeholders in the cyber security domain, with ...",
+    "markdown": ""
+  },
+  {
+    "title": "We need to urgently strengthen the EU's transition to a quantum ...",
+    "url": "https://www.ceps.eu/we-need-to-urgently-strengthen-the-eus-transition-to-a-quantum-safe-world/",
+    "description": "Promoting Europe's secure transition to quantum-safe cryptography is an urgent necessity to stop the unauthorised decryption of private messages ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Quantum Europe Strategy",
+    "url": "https://qt.eu/media/pdf/Quantum_Europe_Strategy_July_2025.pdf",
+    "description": "Cryptography roadmap to ensure that quantum communication, sensing and computing ... 49 This roadmap specifies the quantum-safe algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "European Commission Recommends PQC Roadmap for the whole EU",
+    "url": "https://pqshield.com/european-commission-recommends-pqc-roadmap-for-the-eu/",
+    "description": "The purpose of the EC's recommendation is as follows: The goal is a comprehensive strategy for the adoption of PQC, defining clear milestones and timelines.",
+    "markdown": ""
+  },
+  {
+    "title": "Global Roadmap for Quantum Computing & Quantum Encryption ...",
+    "url": "https://leonidasgorgo.medium.com/global-roadmap-for-quantum-computing-quantum-encryption-implementation-2025-2035-e3700b25d877",
+    "description": "European Union · End of 2026: All member states begin PQC implementation planning · 2030: All critical infrastructure (energy, finance, telecom, ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU post-quantum cryptography roadmap: is a timeline alone ...",
+    "url": "https://www.telefonica.com/en/communication-room/blog/eu-post-quantum-cryptography-roadmap-timeline-sufficient/",
+    "description": "The EU has set quantum-safe cryptography transition deadlines: deployment starts in 2026, concluding by 2030 for critical use cases, ...",
+    "markdown": ""
+  },
+  {
+    "title": "ETSI launches new standard for Quantum-Safe Hybrid Key ...",
+    "url": "https://www.etsi.org/newsroom/press-releases/2513-etsi-launches-new-standard-for-quantum-safe-hybrid-key-exchanges-to-secure-future-post-quantum-encryption/",
+    "description": "ETSI launches new standard for Quantum-Safe Hybrid Key Exchanges to secure future post-quantum encryption. Sophia Antipolis, France, 25 March ...",
+    "markdown": ""
+  },
+  {
+    "title": "ETSI/IQC Quantum Safe Cryptography Conference 2026",
+    "url": "https://www.etsi.org/events/2592-etsi-iqc-qsc-conference-2026/",
+    "description": "Learn about cutting-edge quantum-safe technologies. From post quantum algorithms and quantum key distribution to hardware security modules and secure elements.",
+    "markdown": ""
+  },
+  {
+    "title": "Next generation technologies - ETSI",
+    "url": "https://www.etsi.org/technologies/next-generation-technologies/",
+    "description": "Reinforcing ETSI's position as a key player in Europe's quantum strategy, while supporting European policy objectives including contributions to the European ...",
+    "markdown": ""
+  },
+  {
+    "title": "ETSI/IQC conference: Migrate now to post-quantum cryptography!",
+    "url": "https://www.etsi.org/newsroom/press-releases/2544-etsi-iqc-conference-migrate-now-to-post-quantum-cryptography/",
+    "description": "But if post-quantum cryptography has become a mature technology, there is nevertheless a need to raise awareness of quantum safety, focusing on ...",
+    "markdown": ""
+  },
+  {
+    "title": "ETSI/IQC Quantum Safe Cryptography Conference 2025",
+    "url": "https://www.etsi.org/events/2450-etsi-iqc-quantum-safe-cryptography-conference-2025/",
+    "description": "Securing Europe's Digital Future: Post-Quantum Cryptography (PQC) Transition with QUBIP & PQ-REACT Akis Kourtis, NCSR Demokritos; Working with post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "ESI PQC WG ToR - ETSI Portal",
+    "url": "https://portal.etsi.org/TB-SiteMap/ESI/ESI-PQC-WG-ToR",
+    "description": "The work of the TC ESI PQC includes: Post Quantum cryptographic signatures and certificates; Post Quantum public key infrastructures; Policies for post quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "NIST PQC: The road ahead - ETSI",
+    "url": "https://www.etsi.org/activities/nist-pqc-the-road-ahead/",
+    "description": "Dustin Moody is a mathematician at the Computer Security Division, National Institute of Standards and Technology (NIST), and he leads the post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Muckle++ Protocol: An experimental analysis of Provably Quantum ...",
+    "url": "https://docbox.etsi.org/Workshop/2023/02_QUANTUMSAFECRYPTOGRAPHY/TECHNICALTRACK/PQCandQDKINTEGRATION/QueensUniBelfast_KHALID.pdf",
+    "description": "PQC refers to cryptographic schemes, thought to be secure even against quantum computers. • Other names include Quantum-resistant Cryptography, Quantum-. Safe ...",
+    "markdown": ""
+  },
+  {
+    "title": "32024H1101 - EN - EUR-Lex - European Union",
+    "url": "https://eur-lex.europa.eu/eli/reco/2024/1101/oj/eng",
+    "description": "Commission Recommendation (EU) 2024/1101 of 11 April 2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Commission Recommendation (EU) 2024/1101 of 11 ... - EUR-Lex",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AL_202401101",
+    "description": "The Commission has been funding research and development Post-Quantum Cryptography for over a decade, recognizing the potential threat quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "COM(2026) 13 final - EUR-Lex - European Union",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=COM:2026:13:FIN",
+    "description": "post-quantum cryptography (PQC). Therefore, Member States should be required to adopt policies for the migration to PQC as part of their ...",
+    "markdown": ""
+  },
+  {
+    "title": "Roadmap for lawful and effective access to data for law enforcement",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52025DC0349",
+    "description": "post-quantum cryptography (PQC) deploying PQC solutions and developing quantum key distribution will be crucial to safeguarding data in the new ...",
+    "markdown": ""
+  },
+  {
+    "title": "a European Internal Security Strategy - EUR-Lex",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52025DC0148",
+    "description": "Deploying post-quantum cryptography (PQC) solutions will be crucial to safeguard sensitive communications, data at rest and to protecting ...",
+    "markdown": ""
+  },
+  {
+    "title": "IMMC.COM%282024%2981%20final.ENG.xhtml ... - EUR-Lex",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52024DC0081",
+    "description": "Post-Quantum Cryptography (PQC) is a promising approach to make our communications and data resistant to quantum attacks, as it is based on ...",
+    "markdown": ""
+  },
+  {
+    "title": "Search results - EUR-Lex - European Union",
+    "url": "https://eur-lex.europa.eu/search.html?DC_CODED=c_8c5cfba6&DTS_DOM=EU_LAW&DTS_SUBDOM=LEGISLATION&SUBDOM_INIT=LEGISLATION&lang=en&sortOne=DD&sortOneOrder=desc&type=advanced",
+    "description": "Commission Recommendation (EU) 2024/1101 of 11 April 2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography. Select: 2.",
+    "markdown": ""
+  },
+  {
+    "title": "C_2021286EN.01007601.xml - EUR-Lex - European Union",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52020AE5923",
+    "description": "This motivates the need for a transition to quantum-resistant or post-quantum cryptography. ... Post-Quantum Cryptography Standardisation ...",
+    "markdown": ""
+  },
+  {
+    "title": "Technology as a new frontier for macroprudential policy",
+    "url": "https://www.ecb.europa.eu/press/key/date/2024/html/ecb.sp240926~60b239f99b.en.html",
+    "description": "In August, for example, the National Institute of Standards and Technology in the United States finalised the first post-quantum encryption ...",
+    "markdown": ""
+  },
+  {
+    "title": "One step ahead: protecting the cyber resilience of financial ...",
+    "url": "https://www.ecb.europa.eu/press/key/date/2024/html/ecb.sp240117~3e839b396f.en.html",
+    "description": "Discussing post-quantum cryptography environments within the ECRB will help us understand the opportunities and risks. Identifying potential ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Annual Stock Taking Exercise Report | European Central Bank",
+    "url": "https://www.ecb.europa.eu/paym/groups/erpb/shared/pdf/24th-ERPB-meeting/European_Payments_Stakeholders_Group_status_report.pdf",
+    "description": "Analysis of the announced EC Program for the Post-Quantum migration of sensitive. EU infrastructures and the impact for the Banking/Payments industry. • Review ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] ECSG Status Report on cards standardisation",
+    "url": "https://www.ecb.europa.eu/paym/groups/erpb/shared/pdf/18th-ERPB-meeting/European_Cards_Stakeholders_Group_-_status_report_on_cards_standardisation.en.pdf",
+    "description": "The NIST has released the list of post-quantum crypto-algorithms to be standardized. They intend to counter future threats coming from the development of.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] User Requirements Document v0.5 - Pontes - European Central Bank",
+    "url": "https://www.ecb.europa.eu/paym/target/target-professional-use-documents-links/pontes/shared/pdf/ecb.pontes260312_URD.sl.pdf?eaf93f88443ec0dff0b7b27cca9563e0",
+    "description": "Post-quantum resilient cryptographic capabilities by means of crypto-agility mechanisms enabling progressive migration towards standardised post-quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] European Payments Stakeholders Group Status Report",
+    "url": "https://www.ecb.europa.eu/paym/groups/erpb/shared/pdf/22nd-ERPB-meeting/European_Payments_Stakeholders_Group_Status_Report.pdf",
+    "description": "The evolvement of Post-Quantum Cryptography remains to be continuously observed and assessed by the Inno Expert Team. • The EPSG aligns its internal working ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Nets: Network Estimation for Time Series - European Central Bank",
+    "url": "https://www.ecb.europa.eu/events/pdf/conferences/140407/Brownlees_NetsNetworkEstimationForTimeSeries.pdf?24a680bbbbcab8fe47dd0cc19db39929",
+    "description": "Abstract. This work proposes novel network analysis techniques for multivariate time se- ries. We define the network of a multivariate time series as a ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] European Payments Stakeholders Group status report",
+    "url": "https://www.ecb.europa.eu/paym/groups/erpb/shared/pdf/20th-ERPB-meeting/European_Payments_Stakeholders_Group_status_update.pdf",
+    "description": "The evolvement of Post-Quantum Cryptography remains a cornerstone of this. Team's work. On the other hand, the EPSG has already integrated new contents in ...",
+    "markdown": ""
+  }
+]

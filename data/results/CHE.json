@@ -1,0 +1,167 @@
+[
+  {
+    "title": "Technology consideration: Quantum computers and post-quantum cryptography (FR)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/fr/dokumente/dokumentation/technologiebetrachtungen/technologiebetrachtung-qcpqc-fr.pdf.download.pdf/technologiebetrachtung-qcpqc-fr.pdf",
+    "summary": "Technology consideration by the Swiss National Cyber Security Centre on quantum computers and post-quantum cryptography, stressing that migration to PQC is a long process requiring planning in line with current standardisation.",
+    "included": true
+  },
+  {
+    "title": "Technology consideration: Quantum computers and post-quantum cryptography (DE)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/technologiebetrachtungen/technologiebetrachtung-qcpqc-de.pdf.download.pdf/technologiebetrachtung-qcpqc-de.pdf",
+    "summary": "German-language technology consideration by the Swiss National Cyber Security Centre explaining post-quantum cryptography (PQK), what has been achieved and where matters stand.",
+    "included": true
+  },
+  {
+    "title": "BACS assessment: Post-quantum cryptography and measures to be taken (FR)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/fr/dokumente/dokumentation/technologiebetrachtungen/Einsch%C3%A4tzung%20BACS%20PQC-FR.pdf.download.pdf/Einsch%C3%A4tzung%20BACS%20PQC-FR.pdf",
+    "summary": "Assessment by the Swiss Federal Office for Cybersecurity (BACS) on post-quantum cryptography, following its technology consideration, setting out the situation and the measures to be taken.",
+    "included": true
+  },
+  {
+    "title": "BACS assessment: Post-quantum cryptography (DE)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/technologiebetrachtungen/einschaetzung_bacs_pqc-de.pdf.download.pdf/einschaetzung_bacs_pqc-de.pdf",
+    "summary": "German-language assessment by the Swiss Federal Office for Cybersecurity (BACS) on quantum-computer-resistant methods and algorithms developed as post-quantum cryptography (PQK).",
+    "included": true
+  },
+  {
+    "title": "Annual Report 2025 - National Cyber Security Centre NCSC",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/dokumentation/jahresberichte/2025/2026-02-16_Jahresbericht_2025_EN.pdf.download.pdf/2026-02-16_Jahresbericht_2025_EN.pdf",
+    "summary": "Annual report of the Swiss National Cyber Security Centre, listing technology considerations including quantum computers and post-quantum cryptography among its published work.",
+    "included": true
+  },
+  {
+    "title": "Report on the implementation of the National Cyber Strategy (NCS) 2024",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/strategie/cyberstrategie-ncs/Bericht-zur-Umsetzung-der-NCS_2024-EN.pdf.download.pdf/Bericht-zur-Umsetzung-der-NCS_2024-EN.pdf",
+    "summary": "Report on the implementation of Switzerland's National Cyber Strategy, citing quantum computing and post-quantum cryptography among the technology considerations produced.",
+    "included": true
+  },
+  {
+    "title": "Annual Report 2024 - Federal Office for Cybersecurity BACS (DE)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/jahresberichte/2024/2025-03-28_jahresbericht_2024_de.pdf.download.pdf/2025-03-28_jahresbericht_2024_de.pdf",
+    "summary": "Annual report of the Swiss Federal Office for Cybersecurity (BACS), referencing its assessment of the need for action in relation to post-quantum cryptography (PQK).",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography (BIT/FOITT)",
+    "country": "CHE",
+    "issuingOrg": "BIT (FOITT)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bit.admin.ch/dam/en/sd-web/rMtZYMHddSKl/post-quantum-cryptography-de.pdf",
+    "summary": "Document from the Swiss Federal Office of Information Technology, Systems and Telecommunication (BIT) emphasising the need to switch early to post-quantum cryptography, especially for long-term confidential data.",
+    "included": true
+  },
+  {
+    "title": "Action Plan to a Quantum-Safe Financial Future",
+    "country": "CHE",
+    "issuingOrg": "SIF",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.sif.admin.ch/dam/de/sd-web/5jN0vjz3EBDi/Action%20Plan%20to%20a%20Quantum-Safe%20Financial%20Future.pdf",
+    "summary": "Action plan hosted by the Swiss State Secretariat for International Financial Matters (SIF) proposing a coordinated transition to post-quantum cryptography for the financial sector.",
+    "included": true
+  },
+  {
+    "title": "Confederation's transition to post-quantum cryptography (Curia Vista affair 24.4398)",
+    "country": "CHE",
+    "issuingOrg": "Swiss Parliament",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244398",
+    "summary": "Swiss parliamentary affair on the use of quantum-safe / post-quantum cryptography by the Confederation, noting the federal focus on post-quantum cryptography over quantum key distribution.",
+    "included": true
+  },
+  {
+    "title": "Quantum-safe systems in the Confederation (Curia Vista affair 23.3689)",
+    "country": "CHE",
+    "issuingOrg": "Swiss Parliament",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://ws-old.parlament.ch/affairs/20233689",
+    "summary": "Swiss parliamentary affair on quantum-safe systems in the Confederation, referencing the federal selection process for post-quantum cryptography expected to conclude in 2024.",
+    "included": true
+  },
+  {
+    "title": "Positioning Switzerland as a leader in quantum computing and post-quantum cryptography (Curia Vista affair 24.4511)",
+    "country": "CHE",
+    "issuingOrg": "Swiss Parliament",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244511",
+    "summary": "Swiss parliamentary affair seeking proposals on how Switzerland can take a leading role in international bodies on quantum computing and post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Report of the Security Policy Committee of the Council of States (22.4270)",
+    "country": "CHE",
+    "issuingOrg": "Swiss Parliament (SiK-S)",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.parlament.ch/centers/kb/Documents/2022/Kommissionsbericht_SiK-S_22.4270_2023-07-04.pdf",
+    "summary": "Committee report of the Council of States Security Policy Committee listing cryptography including post-quantum cryptography, quantum computers and AI among priority technologies.",
+    "included": true
+  },
+  {
+    "title": "Swiss National Bank, 118th Annual Report 2025",
+    "country": "CHE",
+    "issuingOrg": "SNB",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.snb.ch/public/asset/fr/www-snb-ch/publications/communication/annual-report/annrep_2025_komplett/publications0_fr/annrep_2025_komplett.fr.pdf",
+    "summary": "Annual report of the Swiss National Bank noting the adaptation of existing infrastructure to the requirements of post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Swiss National Bank, 116th Annual Report 2023",
+    "country": "CHE",
+    "issuingOrg": "SNB",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.snb.ch/public/asset/fr/www-snb-ch/publications/communication/annual-report/annrep_2023_komplett/publications0_fr/annrep_2023_komplett.fr.pdf",
+    "summary": "Annual report of the Swiss National Bank noting that a post-quantum cryptography mode was used to protect central bank digital currency (CBDC) against attacks by quantum computers.",
+    "included": true
+  }
+]

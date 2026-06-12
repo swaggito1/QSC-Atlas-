@@ -1,0 +1,218 @@
+[
+  {
+    "title": "Feuille de route pour la migration vers la cryptographie post ...",
+    "url": "https://www.cyber.gc.ca/fr/orientation/feuille-route-migration-vers-cryptographie-post-quantique-sein-gouvernement-canada-itsm40001",
+    "description": "Feuille de route pour la migration vers la cryptographie post-quantique au sein du gouvernement du Canada (ITSM.40.001)",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Préparez votre organisation à la menace que pose l'informatique ...",
+    "url": "https://www.cyber.gc.ca/sites/default/files/itsap.00.017-fr.pdf",
+    "description": "Par cryptographie post-quantique (CPQ), on entend les algorithmes qui sont conçus pour fournir une résistance quantique et qui peuvent être exécutés sur un ...",
+    "markdown": ""
+  },
+  {
+    "title": "Évaluation sommaire des candidats à la cryptographie post ...",
+    "url": "https://www.cyber.gc.ca/fr/nouvelles-evenements/evaluation-sommaire-des-candidats-la-cryptographie-post-quantique-du-nist-realisee-par-le-centre",
+    "description": "Évaluation sommaire des candidats à la cryptographie post-quantique du NIST réalisée par le Centre pour la cybersécurité.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration du GC vers la cryptographie post-quantique (CPQ)",
+    "url": "https://lh-ca.cyber.gc.ca/mod/forum/discuss.php?d=79&lang=fr_ca",
+    "description": "... cryptographie post-quantique (CPQ). Cette série de 4 vidéos vise à soutenir et à orienter le plan du gouvernement du Canada (GC) visant à ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Preparing your organization for the quantum threat to cryptography",
+    "url": "https://www.cyber.gc.ca/sites/default/files/itsap.00.017-en.pdf",
+    "description": "Post-quantum cryptography (PQC) refers to algorithms that are designed to be quantum-safe but that can be run on a conventional computer. PQC includes ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration du GC vers la cryptographie post-quantique (CPQ)",
+    "url": "https://www.cyber.gc.ca/fr/education-communaute/carrefour-apprentissage/cours/migration-gc-vers-cryptographie-post-quantique-cpq",
+    "description": "Migration du GC vers la cryptographie post-quantique (CPQ). Cours CRY102S. Description. Ce vidéo en ligne présente aux participantes et participants le plan de ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cyber Centre's summary review of final candidates for NIST Post ...",
+    "url": "https://www.cyber.gc.ca/en/news-events/cyber-centres-summary-review-final-candidates-nist-post-quantum-cryptography-standards",
+    "description": "Cyber Centre cryptographic scientists are focused on the evaluation of the remaining finalist and alternate Post-Quantum Cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Learning Hub - Canadian Centre for Cyber Security",
+    "url": "https://www.cyber.gc.ca/en/education-community/learning-hub",
+    "description": "New! Course CRY102S - GC Migration to Post-Quantum Cryptography (PQC). The Learning Hub is pleased to announce the launch of the new CRY102S – ...",
+    "markdown": ""
+  },
+  {
+    "title": "La migration vers la cryptographie post-quantique au sein du ...",
+    "url": "https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/politiques-normes/amops/migration-cryptographie-post-quantique-gouvernement-canada.html",
+    "description": "Ces algorithmes constituent ce que l'on appelle la cryptographie post-quantique (CPQ). Comme il est indiqué dans le document Feuille de route ...",
+    "markdown": ""
+  },
+  {
+    "title": "Feuille de route de la Stratégie quantique nationale",
+    "url": "https://ised-isde.canada.ca/site/strategie-quantique-nationale/fr/feuille-route-strategie-quantique-nationale-communication-quantique-cryptographie-post-quantique",
+    "description": "La cryptographie post-quantique (CPQ) s'entend du développement d'algorithmes cryptographiques qui résistent aux attaques perpétrées par un CRQC ...",
+    "markdown": ""
+  },
+  {
+    "title": "Regard vers l'avenir : Informatique quantique et cybersécurité",
+    "url": "https://www.canada.ca/fr/services-partages/campagnes/histoires/informatique-quantique-cybersecurite.html",
+    "description": "... cryptographie post-quantique (CPQ). Le Centre de la sécurité des télécommunications Canada (CST) estime qu'un ordinateur quantique ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] National Quantum Strategy Roadmap - Government of Canada",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
+    "description": "quantique et cryptographie post-quantique. Page 3. ii. National Quantum ... To address these challenges, post-quantum cryptography (PQC), also known as quantum- ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Canadian National Quantum-Readiness - Government of Canada",
+    "url": "https://ised-isde.canada.ca/site/spectrum-management-telecommunications/sites/default/files/documents/Quantum-Readiness%20Best%20Practices%20-%20v04%20-%2010%20July%202024.pdf",
+    "description": "safe” Post-Quantum Cryptography (PQC). Unfortunately, quantum-resistant solutions are not yet available. The U.S. National Institute of.",
+    "markdown": ""
+  },
+  {
+    "title": "National quantum strategy roadmap : quantum communication and ...",
+    "url": "https://publications.aws.tpsgc-pwgsc.cloud-nuage.canada.ca/site/eng/9.944196/publication.html?wbdisable=true",
+    "description": "Issued also in French under title: Feuille de route de la Stratégie quantique nationale : communication quantique et cryptographie post-quantique. Includes ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptography and quantum computing",
+    "url": "https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/cryptography-quantum-computing",
+    "description": "We work on the design, development and implementation of innovative cryptographic solutions for data security and privacy, as well as on quantum computing.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Safe Technologies Initiative",
+    "url": "https://nrc.canada.ca/en/research-development/research-collaboration/programs/quantum-safe-technologies-initiative",
+    "description": "Supporting the testing and integration of post-quantum cryptography into critical systems; Building Canadian capacity through training ...",
+    "markdown": ""
+  },
+  {
+    "title": "Qu'est-ce que la cryptographie post-quantique et la menace PQC",
+    "url": "https://www.mastercard.com/be/fr/Actualit%C3%A9s-et-tendances/stories/2025/what-is-post-quantum-cryptography.html",
+    "description": "La cryptographie post-quantique (PQC) est conçue pour résister aux attaques des futurs ordinateurs quantiques qui pourraient casser les ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration des systèmes d'information à la cryptographie post ...",
+    "url": "https://www.usherbrooke.ca/recherche/fr/repertoire-de-projets-de-recherche/projet/1206",
+    "description": "Face à l'évolution rapide de l'informatique quantique, la recherche en cryptographie post-quantique (PQC) a souligné l'urgence pour les organisations d ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique (PQC) : Objectif du chiffrement et ...",
+    "url": "https://www.entrust.com/fr/resources/learn/post-quantum-cryptography",
+    "description": "La cryptographie post-quantique (PQC) est conçue pour résister à ces attaques futures et protéger les données devant rester sécurisées pour les années à venir.",
+    "markdown": ""
+  },
+  {
+    "title": "Solutions de cryptographie post-quantique (PQC) | Sectigo® Officiel",
+    "url": "https://www.sectigo.com/fr/quantum-labs",
+    "description": "Ne donnez pas l'avantage aux menaces quantiques - commencez à construire votre plan de cryptographie post-quantique (PQC) avec Sectigo PQC Labs dès ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique | Glossaire | HPE Canada",
+    "url": "https://www.hpe.com/ca/fr/what-is/post-quantum-cryptography.html",
+    "description": "La cryptographie post-quantique (CPQ), également connue sous le nom de résistance quantique, est une forme de chiffrement résistant aux quanta qui peut ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique (PQC) - Cybersécurité - Fortinet",
+    "url": "https://www.fortinet.com/fr/resources/cyberglossary/post-quantum-cryptography",
+    "description": "L'adoption de la cryptographie post-quantique (PQC) est essentielle pour protéger les données sensibles, garantir la sécurité des communications et maintenir l' ...",
+    "markdown": ""
+  },
+  {
+    "title": "Roadmap for the migration to post-quantum cryptography for the ...",
+    "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+    "description": "This publication outlines the Cyber Centre's recommended roadmap for the Government of Canada (GC) to migrate non-classified IT systems",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "Canada released its post-quantum cryptography roadmap in June 2025, outlining the Canadian government's plan to transition non-classified IT systems to PQC ...",
+    "markdown": ""
+  },
+  {
+    "title": "Canada Sets Timeline to Shield Government Systems from Quantum ...",
+    "url": "https://thequantuminsider.com/2025/06/28/canada-sets-timeline-to-shield-government-systems-from-quantum-threat/",
+    "description": "Federal departments must submit an initial post-quantum cryptography (PQC) migration plan by April 2026 and continue reporting annually. High- ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Canada's Migration to Post-Quantum Cryptography: Public-Private ...",
+    "url": "https://www.cigionline.org/documents/3579/PQC.indd_revised_of0tjcX.pdf",
+    "description": "This special report assesses Canada's approach to PQC migration by comparing regulatory frameworks, public-private collaboration and sector- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Planning for post-quantum cryptography | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
+    "description": "Canada's Canadian Centre for Cyber Security provide their Roadmap for the migration to post-quantum cryptography for the Government of Canada",
+    "markdown": ""
+  },
+  {
+    "title": "Government of Canada Launches Post-Quantum Cryptography ...",
+    "url": "https://www.linkedin.com/pulse/government-canada-launches-post-quantum-cryptography-pqc-marin-ivezic-na2cc",
+    "description": "This guidance, “Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)” lays out deadlines and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "Is your organization ready for post-quantum encryption? A strategic ...",
+    "url": "https://mnpdigital.ca/insights/is-your-organization-ready-for-post-quantum-encryption-strategic-data-security-guide/",
+    "description": "On June 23, 2025, the Government of Canada released its official roadmap for migrating federal systems to post-quantum encryption.",
+    "markdown": ""
+  },
+  {
+    "title": "Canada publishes new PQC migration roadmap - PQShield",
+    "url": "https://pqshield.com/canada-publishes-new-pqc-migration-roadmap/",
+    "description": "Canada outlines a comprehensive multi-year strategy for migrating non-classified IT systems to PQC, and specifies milestones, leading to a full transition of ...",
+    "markdown": ""
+  },
+  {
+    "title": "Frequently Asked Questions about Post-Quantum Cryptography",
+    "url": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/",
+    "description": "Canadian Centre for Cyber Security, Roadmap for the migration to post-quantum cryptography for the Govenrment of Canda (ITSM.40.001)",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "G7 Cybersecurity Working Group Statement on preparing for a post ...",
+    "url": "https://www.cyber.gc.ca/en/news-events/g7-cybersecurity-working-group-statement-preparing-post-quantum-cryptography-migration",
+    "description": "Position PQC migration as an opportunity for organizations to: modernize infrastructure improve resilience demonstrate their dedication to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  }
+]

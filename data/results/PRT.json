@@ -1,0 +1,46 @@
+[
+  {
+    "title": "NCC-PT - National Coordination Centre (CNCS)",
+    "country": "PRT",
+    "issuingOrg": "CNCS",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "http://www.cncs.gov.pt/pt/ncc-pt",
+    "summary": "Page of the Portuguese National Cybersecurity Centre's National Coordination Centre (NCC-PT) listing funded actions, including security evaluations of Post-Quantum Cryptography (PQC) primitives and security of PQC algorithm implementations.",
+    "included": true
+  },
+  {
+    "title": "Call for Presentations - C-DAYS 2026 (CNCS)",
+    "country": "PRT",
+    "issuingOrg": "CNCS",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://c-days.cncs.gov.pt/call-for-presentations/index_CallForPresentations.html",
+    "summary": "Call for presentations for the Portuguese National Cybersecurity Centre's C-DAYS 2026 conference, listing Post-Quantum Cryptography among the priority thematic topics.",
+    "included": true
+  },
+  {
+    "title": "Emerging Technologies Report 2023 (CNCS Observatory)",
+    "country": "PRT",
+    "issuingOrg": "CNCS",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cncs.gov.pt/docs/rel-tecemer2023-observ-cncs.pdf",
+    "summary": "Report from the Portuguese National Cybersecurity Centre's Observatory on emerging technologies in cybersecurity. The candidate snippet does not explicitly confirm a post-quantum cryptography reference, so this is flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "ROSE - CNCS R&D Document",
+    "country": "PRT",
+    "issuingOrg": "CNCS",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cncs.gov.pt/docs/rose-cncs-id.pdf",
+    "summary": "Research and development document published by the Portuguese National Cybersecurity Centre. The candidate snippet describes the general cybersecurity landscape and does not explicitly confirm a post-quantum cryptography reference, so this is flagged for human review.",
+    "included": true
+  }
+]

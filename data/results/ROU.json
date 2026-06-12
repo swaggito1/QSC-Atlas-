@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Guide on the transition to post-quantum cryptography",
+    "country": "ROU",
+    "issuingOrg": "DNSC",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.dnsc.ro/vezi/document/dnsc-ghid-tranzitia-la-criptografia-post-cuantica",
+    "summary": "DNSC guide on migrating to post-quantum cryptography, noting that NIST-standardised PQC algorithms are mathematically validated but lack operational maturity, and addressing crypto-agility for Romanian organisations.",
+    "included": true
+  },
+  {
+    "title": "Analysis: Current state of cryptography in cybersecurity",
+    "country": "ROU",
+    "issuingOrg": "DNSC",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.dnsc.ro/vezi/document/dnsc-analiza-stadiul-actual-al-criptografiei-in-securitatea-cibernetica",
+    "summary": "DNSC analysis of the current state of cryptography in cybersecurity, including the need to transition to post-quantum cryptography (PQC) to protect digital infrastructure.",
+    "included": true
+  },
+  {
+    "title": "National strategy on quantum technologies (Annex 41)",
+    "country": "ROU",
+    "issuingOrg": "SGG",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://sgg.gov.ro/1/wp-content/uploads/2024/08/ANEXA-41.pdf",
+    "summary": "Romanian government national strategy on quantum technologies, covering quantum communications and post-quantum cryptography among the addressed quantum technology domains.",
+    "included": true
+  },
+  {
+    "title": "Funding call: Integration of post-quantum cryptography (PQC) algorithms into high-level protocols",
+    "country": "ROU",
+    "issuingOrg": "Oportunitati UE (Government of Romania)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://oportunitati-ue.gov.ro/apel/integrarea-algoritmilor-de-criptografie-post-cuantica-pqc-in-protocoale-de-nivel-inalt/",
+    "summary": "Romanian government EU-funding opportunities portal listing a call for the integration of post-quantum cryptography (PQC) algorithms into high-level protocols.",
+    "included": true
+  }
+]

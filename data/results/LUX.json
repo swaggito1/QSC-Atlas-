@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Luxembourg's Quantum Technologies Strategy",
+    "country": "LUX",
+    "issuingOrg": "Ministry of State",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://gouvernement.lu/dam-assets/images-documents/actualites/2025/05/16-strategies-ai-donnees-quantum/2024115332-ministere-etat-quantum-en-bat-acc-ua.pdf",
+    "summary": "National quantum technologies strategy issued by the Luxembourg Ministry of State, setting a roadmap toward secure quantum networks and explicitly addressing post-quantum cryptography (PQC) as a quantum-resistant solution integrable with existing systems.",
+    "included": true
+  },
+  {
+    "title": "Public consultation on the European Union roadmap for the transition to post-quantum cryptography",
+    "country": "LUX",
+    "issuingOrg": "ILNAS / portail-qualite",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://portail-qualite.public.lu/fr/actualites/confiance-numerique/2025/consultation-publique-feuille-de-route-union-europeenne-transition-cryptographie-post-quantique.html",
+    "summary": "Luxembourg government digital-trust portal announcement of a public consultation on the EU roadmap for transition to post-quantum cryptography, noting the recommendation that critical use cases migrate to PQC by end-2030 at the latest.",
+    "included": true
+  },
+  {
+    "title": "Quantum Communication in Luxembourg (factsheet)",
+    "country": "LUX",
+    "issuingOrg": "Government of Luxembourg",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://innovative-initiatives.public.lu/initiatives/factsheet-quantum-communication-luxembourg",
+    "summary": "Official Luxembourg government factsheet outlining the national quantum strategy roadmap (Phase 1 2025-2027, Phase 2 2027-2030, Phase 3) for quantum communication infrastructure. PQC reference is not explicit in the available snippet, so flagged for human review.",
+    "included": true
+  }
+]

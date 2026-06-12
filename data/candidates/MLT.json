@@ -1,0 +1,128 @@
+[
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The Roadmap on Post Quantum Cryptography sets out recommendations based around three milestones: 31 Dec 2026: Initial national transition roadmaps and first ...",
+    "markdown": ""
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC): Application Security Migration ...",
+    "url": "https://www.contrastsecurity.com/security-influencers/post-quantum-cryptography-pqc-application-security-migration-guide",
+    "description": "Prepare for the shift to Post-Quantum Cryptography (PQC). Learn how PCI DSS v4.0 and NIST mandates impact application security and how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography | Quantum-safe security | G+D",
+    "url": "https://www.gi-de.com/en/digital-security/digital-infrastructures/post-quantum-cryptography",
+    "description": "Prepare your organization for the quantum age with post-quantum cryptography (PQC), ensuring long-term protection against quantum cyber-attacks.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "description": "NSA does not recommend the usage of quantum key distribution and quantum cryptography for securing the transmission of data in National Security Systems (NSS) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "US Senate introduces Quantum Cybersecurity Migration Act - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_quantum-cybersecurity-migration-act-us-activity-7356954428723130368-pL9B",
+    "description": "Another legislative boost for quantum readiness: Yesterday the U.S. Senate introduced the bipartisan Quantum Cybersecurity Migration Act, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "NIST's National Cybersecurity Center of Excellence (NCCoE) has an ongoing project on the Migration to Post-Quantum Cryptography. The Trump ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "NIST National Cybersecurity Center of Excellence | SandboxAQ",
+    "url": "https://www.sandboxaq.com/post/sandboxaq-selected-for-nists-national-cybersecurity-center-of-excellence-migration-to-post-quantum-cryptography-project",
+    "description": "On July 16, NIST announced the 12 technology collaborators for the National Cybersecurity Center of Excellence's “Migration to Post-Quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] National Quantum Strategy Roadmap",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
+    "description": "To address these challenges, post-quantum cryptography (PQC), also known as quantum-safe or quantum-resistant cryptography, is being developed. PQC enables ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
+    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
+    "description": "This roadmap sets out clear expectations and timelines for Member States to begin and progress their migration away from vulnerable classical ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Readiness: How to Prepare for Post ... - Palo Alto Networks",
+    "url": "https://www.paloaltonetworks.com/cyberpedia/quantum-readiness",
+    "description": "Prepare for quantum readiness by identifying cryptographic risk, prioritizing PQC migration, and building crypto-agility before quantum threats emerge.",
+    "markdown": ""
+  },
+  {
+    "title": "Key Steps to Prepare for Quantum Security - SISA",
+    "url": "https://sisa.ai/resource/cyberpedia/key-steps-to-prepare-for-quantum-security-a-strategic-approach-to-transition",
+    "description": "The roadmap should include a clear plan for selecting and implementing PQC algorithms, as well as considerations for regulatory compliance. This ensures that ...",
+    "markdown": ""
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "title": "NÚKIB portal now supports quantum-resistant cryptography",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/cs/infoservis/aktuality/2156-portal-nukib-nove-podporuje-kvantove-odolnou-kryptografii/",
+    "summary": "Announcement by the Czech National Cyber and Information Security Agency that its portal now supports quantum-resistant cryptography, and setting out expectations for when post-quantum cryptography should be deployed for sensitive information of critical confidentiality in higher-risk environments.",
+    "included": true
+  },
+  {
+    "title": "The quantum threat and quantum-resistant cryptography (minimum requirements appendix)",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/download/uredni_deska/Minimalni_pozadavky_Priloha_v2_FINAL.pdf",
+    "summary": "Official NÚKIB document (appendix to minimum requirements) explaining the quantum threat and quantum-resistant (post-quantum) cryptography, including the origins and definition of post-quantum asymmetric algorithms.",
+    "included": true
+  },
+  {
+    "title": "National Cyber Security Strategy 2026-2030",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/download/publikace/strategie_akcni_plany/narodni_strategie_kb_2026-2030.pdf",
+    "summary": "Czech national cyber security strategy for 2026-2030, which identifies emerging disruptive technologies including artificial intelligence and post-quantum cryptography as means to strengthen cyber security.",
+    "included": true
+  },
+  {
+    "title": "Czech research mission to Taiwan strengthens cooperation in cybersecurity",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/cs/infoservis/aktuality/2328-ceska-vyzkumna-mise-na-tchaj-wan-posilila-spolupraci-v-oblasti-kyberneticke-bezpecnosti/",
+    "summary": "NÚKIB news item on a Czech research mission to Taiwan whose discussions covered quantum key distribution, post-quantum cryptography, and the use of artificial intelligence in cybersecurity. Flagged for review as the PQC reference is one topic in a diplomatic mission readout rather than the document's substance.",
+    "included": true
+  },
+  {
+    "title": "Analysis of investment options in further asset classes: Part I, digital assets",
+    "country": "CZE",
+    "issuingOrg": "ČNB",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cnb.cz/export/sites/cnb/cs/ekonomicky-vyzkum/.galleries/cnb_lab/digital-assets-pilot/analyza_moznosti_investic_do_dalsich_trid_aktiv_cast_i_digitalni_aktiva.pdf",
+    "summary": "Czech National Bank (central bank) research analysis on investment in digital assets which notes the quantum threat and discusses quantum-resistant signature schemes (post-quantum cryptography). Flagged for review as the PQC mention is incidental to a financial-research paper rather than a dedicated QSC document.",
+    "included": true
+  }
+]

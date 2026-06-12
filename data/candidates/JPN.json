@@ -36,6 +36,18 @@
     "markdown": ""
   },
   {
+    "title": "[PDF] 耐量子計算機暗号への移行に関する 技術動向調査 - CRYPTREC",
+    "url": "https://www.cryptrec.go.jp/exreport/cryptrec-ex-3503-2025.pdf",
+    "description": "本報告書は、耐量子計算機暗号（PQC）への移行を、暗号アルゴリズムの置換にとどまらないシス. テム全体の取り組みとして整理する。",
+    "markdown": ""
+  },
+  {
+    "title": "暗号技術ガイドライン2件の公開 - CRYPTREC",
+    "url": "https://www.cryptrec.go.jp/topics/cryptrec_20230417_guidelines.html",
+    "description": "... 耐量子計算機暗号）」及び「CRYPTREC 暗号技術ガイドライン（高機能暗号）」を作成しましたので、公開いたします。 「CRYPTREC 暗号技術ガイドライン ...",
+    "markdown": ""
+  },
+  {
     "title": "国家サイバー統括室",
     "url": "https://www.nisc.go.jp/",
     "description": "G7サイバーセキュリティワーキンググループ会合より、ポスト量子暗号移行の準備に関するG7サイバーセキュリティWG声明が発出されました. 2026年05月. 2026年05月28日.",
@@ -78,6 +90,18 @@
     "markdown": ""
   },
   {
+    "title": "[PDF] 令和8年3月 - デジタル庁 戦略・組織グループ 政策評価・行政事業 ...",
+    "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/644f5207-77f8-4da6-b6ab-0d17f7a880bc/04aae5c4/20260327_%20about_%20policy_evaluation_evaluation_paper_01.pdf",
+    "description": "（PQC）への. 移行に係る. 調査検討業. 務. 量子計算機技術等の進展が見込ま ... 耐量子計算機暗号 · （PQC）への移行に係 · る調査検討業務 | 行 · 政事業 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 次期個人番号カードタスクフォース 最終とりまとめ概要",
+    "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/58b82d5b-338d-4f5b-be7e-7b771135e2c3/94233fc3/20240318_meeting_mynumber-card-renewal_outline_07.pdf",
+    "description": "とが想定され得るところ、将来的なPQC（耐量子計算機暗号）の採用を否定するものではなく、万が一移行後に2050年より前に暗号方式. が危殆化する見込み ...",
+    "markdown": ""
+  },
+  {
     "title": "耐量子計算機暗号（PQC）とは？｜標準化が進む次世代暗号と各国 ...",
     "url": "https://www.nri-secure.co.jp/blog/pqc1",
     "description": "耐量子計算機暗号（PQC）とは？｜標準化が進む次世代暗号と各国の対応状況を解説 · 量子コンピュータが及ぼす従来の暗号技術への影響 · PQCとは？PQCの標準化動向.",
@@ -111,6 +135,18 @@
     "title": "政府機関等における耐量子計算機暗号（PQC）利用に関し - 内閣官房",
     "url": "https://www.cas.go.jp/jp/seisaku/pqc/index.html",
     "description": "政府機関等における耐量子計算機暗号（PQC）利用に関し、関係府省庁の緊密な連携のもとに必要な施策を検討・推進するため、「政府機関等における耐量子計算機暗号（PQC） ...",
+    "markdown": ""
+  },
+  {
+    "title": "耐量子計算機暗号（PQC）の現状と今後 | レポート",
+    "url": "https://www.nri.com/jp/knowledge/report/2025forum397.html",
+    "description": "この脅威に対応するため、量子コンピュータの処理能力にも耐性を持つ新しい暗号技術として、耐量子計算機暗号（以下、PQC）が注目を集めています。 本 ...",
+    "markdown": ""
+  },
+  {
+    "title": "AlmaLinux 10 で PQC（耐量子計算機暗号）をお試し（その1）",
+    "url": "https://www.cybertrust.co.jp/blog/rd/pqc/almalinux10-pqc-01.html",
+    "description": "PQC（Post Quantum Cryptography、耐量子計算機暗号）は、量子コンピューターが今後更に発展し、既存のRSA暗号や楕円曲線暗号などの技術が解読される ...",
     "markdown": ""
   },
   {
@@ -150,6 +186,18 @@
     "markdown": ""
   },
   {
+    "title": "ポスト量子暗号 - STマイクロエレクトロニクス - STMicroelectronics",
+    "url": "https://www.st.com/content/st_com/ja/about/innovation-and-technology/post-quantum-cryptography.html",
+    "description": "ポスト量子暗号（PQC）は、量子コンピュータによる攻撃に耐える新たなアルゴリズムです。新たな数学的基礎に基づくポスト量子暗号アルゴリズムは、RSAやECCといった現行の ...",
+    "markdown": ""
+  },
+  {
+    "title": "ポスト量子暗号 - 数理情報第1研究室 - 東京大学",
+    "url": "http://crypto.mist.i.u-tokyo.ac.jp/activities/pqc.html",
+    "description": "本研究室では，代表的なポスト量子暗号となる格子暗号や多変数多項式暗号に対して，安全性の評価と効率的な実装方法に関して研究を進めている．格子暗号の安全性は，実n次元 ...",
+    "markdown": ""
+  },
+  {
     "title": "2035: Japan's NCO sets the timeline for quantum security | PQShield",
     "url": "https://pqshield.com/2035-japans-nco-sets-the-timeline-for-quantum-security/",
     "description": "Japan's National Cyber Command Office (NCO) has concluded that its government agencies must transition to post-quantum cryptography by 2035.",
@@ -186,6 +234,18 @@
     "markdown": ""
   },
   {
+    "title": "Quantum Computing Urgency and Timeline - ISARA Corporation",
+    "url": "https://www.isara.com/blog-posts/quantum-computing-urgency-and-timeline.html",
+    "description": "What is the quantum computing urgency, the latest post-quantum cryptography (PQC) timeline, and why should organizations prioritize this?",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
     "title": "Migration to Post-Quantum Cryptography - NCCoE",
     "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
     "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
@@ -204,6 +264,18 @@
     "markdown": ""
   },
   {
+    "title": "[PDF] FINAL 508c Post Quantum Cryptography Buyers Guide - GSA",
+    "url": "https://buy.gsa.gov/api/system/files/documents/final-508c-pqc_buyer-s_guide_2025.pdf",
+    "description": "The Post-Quantum Cryptography (PQC) Buyer's Guide for federal agencies is a resource designed to assist agencies in their efforts to prepare ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "Government contractors supplying or operating NSS are required to implement the NIST-approved quantum resistant algorithms – ML-KEM and ML-DSA ...",
+    "markdown": ""
+  },
+  {
     "title": "Post-Quantum Cryptography Initiative | CISA",
     "url": "https://www.cisa.gov/topics/risk-management/quantum",
     "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
@@ -219,6 +291,18 @@
     "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
     "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
     "description": "The report contains recommendations. NIST expects to publish in 2024, including steps to effectively prioritize migration efforts.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Japan's National Cyber Command Office (NCO) has published an ...",
+    "url": "https://x.com/CreusMoreira/status/2027315729263898888",
+    "description": "Japan's National Cyber Command Office (NCO) has concluded that its government agencies must transition to post-quantum cryptography by 2035.",
     "markdown": ""
   },
   {
@@ -243,6 +327,156 @@
     "title": "[PDF] Roadmap to Quantum Network - NICT",
     "url": "https://www.nict.go.jp/en/data/report/NICTREPORT2022_ebook/book/pdf/67.pdf",
     "description": "The roadmap for R&D of quantum net- works is shown in Fig. 13. □Promotion Strategy. A promotion strategy will be important for NICT to develop QKD networks and.",
+    "markdown": ""
+  },
+  {
+    "title": "Japan's Quantum Technology Innovation Strategy Roadmap",
+    "url": "https://dig.watch/resource/japans-basic-act-on-cybersecurity",
+    "description": "The roadmap provides a structured plan to advance quantum computing, quantum sensing, and quantum communication, ensuring Japan remains at the forefront.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 耐量子計算機暗号(PQC)と NICTの研究開発 - 総務省",
+    "url": "https://www.soumu.go.jp/main_content/000948621.pdf",
+    "description": "耐量子計算機暗号について. ○ 耐量子計算機暗号（PQC）. ✓ 従来の公開鍵暗号が使われている環境で従来と同様に使用でき、. 量子コンピュータ及び旧来の ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 令和7年度事後事業評価書",
+    "url": "https://www.soumu.go.jp/main_content/001027299.pdf",
+    "description": "大規模量子コンピュータへの対策としては、共通鍵暗号方式 1においては、. 鍵長の増加、公開鍵暗号方式 2においては、耐量子計算機暗号（以下「PQC3」という。） ... 3 Post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 「安全な無線通信サービスのための新世代暗号技術に関する 研究 ...",
+    "url": "https://www.soumu.go.jp/main_content/000948622.pdf",
+    "description": "▫ 画期的な耐量子計算機暗号（PQC）基礎技術を開発. ○ 同種写像問題に基づく新たな鍵共有方式を開発し、トップクラス国際会議EUROCRYPT 2023で発表 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] これまでの論点整理（案） - 総務省",
+    "url": "https://www.soumu.go.jp/main_content/000952546.pdf",
+    "description": "... 耐量子計算機暗号（PQC）への移行が必要となる。 •. CRYPTRECでは各種現代暗号の安全性監視を実施しており、NICTもPQCを含む現代暗号の安全性評価に関する研究開発を実施.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 量子コンピュータと その暗号技術への影響",
+    "url": "https://www.soumu.go.jp/main_content/000655118.pdf",
+    "description": "号を耐量子計算機暗号と入れ替える. • 現在使っている公開鍵暗号から耐量子計算機暗号(PQC)に. 移行することで対応可能. • PQCとして、格子暗号、多変数多項式暗号など世界 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 安全な無線通信サービスのための新世代暗号技術に関する研究開発",
+    "url": "https://www.tele.soumu.go.jp/resource/j/fees/purpose/pdf/R6_RD02.pdf",
+    "description": "そのため、耐量子計算機暗号（Post-Quantum. Cryptography：PQC）と呼ばれる、大 ... 子コンピュータも解読できないポスト量子暗号への挑戦. ～6G対応目指した ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 参考資料2 - 総務省",
+    "url": "https://www.soumu.go.jp/main_content/000952781.pdf",
+    "description": "資料8－1 耐量子計算機暗号（PQC）と NICT の研究開発（NICT）. 資料8 ... これは現在の暗号だけでなく、耐量子計算機暗号にも言えることである。",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 量子暗号・量子通信の推進に向けて - 総務省",
+    "url": "https://www.soumu.go.jp/main_content/000790353.pdf",
+    "description": "せて耐量子計算機暗号等に関するガイドラインを策. 定するとともに、量子暗号装置の普及等により量子. 暗号システムの社会実装を推進する。【耐量子計.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 第9回 産業サイバーセキュリティ研究会 事務局説明資料",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/pdf/009_03_00.pdf",
+    "description": "量子コンピュータの進展による既存暗号の危殆化のリスクに備え、米国をはじめとした各国において、. 耐量子計算機暗号（PQC）への移行に係る検討が進められ ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] デジタル・サイバーセキュリティWG 第1回 事務局参考資料",
+    "url": "https://www.meti.go.jp/policy/mono_info_service/joho/conference/seichosenryakuwg/digitalcyber01/digitalcyber01-3-2.pdf",
+    "description": "（1）耐量子計算機暗号（PQC）への移行期限. 原則として、2035 年を目処に、耐量子計算機暗号（PQC）へ移行を行うこととする。ただし、情報の重要性.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 第10回 産業サイバーセキュリティ研究会 事務局説明資料",
+    "url": "https://www.meti.go.jp/press/2026/04/20260403003/20260403003-b.pdf",
+    "description": "量子コンピュータの進展による既存暗号の危殆化のリスクに備え、各国において、耐量子計算機暗号. （PQC）への移行に係る検討が進められている。我が国でも ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 民間宇宙システムにおけるサイバーセキュリティ対策ガイドライン",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/wg_seido/wg_uchu_sangyo/pdf/008_05_02.pdf",
+    "description": "【参考】耐量子計算機暗号（Post-Quantum Cryptography: PQC）について. 現在広く使用されている公開鍵暗号方式として RSA 暗号方式や楕円曲線暗号方式が挙げられる ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 事務局説明資料 産業サイバーセキュリティ研究会 WG1 第12回",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/wg_seido/pdf/012_03_00.pdf",
+    "description": "耐量子計算機暗号（PQC）への対応に向けた検討. • 経済産業省でも、産業界によるPQCへの円滑な移行を後押しすべく、移行に向けた第一歩となるクリプ. ト ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 事務局説明資料 産業サイバーセキュリティ研究会 ワーキング ...",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/wg_seido/pdf/011_04_00.pdf",
+    "description": "このため、量子コンピュータ時代にも安全に利用できる. 暗号技術が求められており、米国NIST等が耐量子計算. 機暗号（PQC）に係る国際標準化作業を進めて ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 事務局説明資料 産業サイバーセキュリティ研究会 WG3 第9回",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/wg_cybersecurity/pdf/009_03_00.pdf",
+    "description": "✓耐量子計算機暗号（量子計算機が実用化されても、安全性確保が. 可能な暗号技術）の実装技術の開発. ✓耐タンパー性（情報・機器のための、外部からの ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 宇宙分野のセキュリティに関する近年の動向 及びガイドラインの ...",
+    "url": "https://www.meti.go.jp/shingikai/mono_info_service/sangyo_cyber/wg_seido/wg_uchu_sangyo/pdf/008_05_01.pdf",
+    "description": "暗号（PQC）に関する参考情報を追加。【3.2.2】. ✓ SBOMに基づく脆弱性管理に関して、経産省の「ソフトウェア管理に向けたSBOM（Software Bill of ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 海外における耐量子計算機暗号（PQC） への移行を見据えた取組み",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/23sec_semi01_docs/23sec_semi01_s1.pdf",
+    "description": "PQC: Post-Quantum Cryptography. 耐量子計算機暗号. Page 7. インフラ化した暗号への対処は容易でない？ • 公開鍵暗号を使用している機器やサービスは ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 耐量子計算機暗号(PQC)と金融機関の対応について - 日本銀行",
+    "url": "https://www.boj.or.jp/finsys/c_aft/data/aft250213a9.pdf",
+    "description": "□ 耐量子計算機暗号（PQC）について. □ まとめ. アジェンダ. Page 4. 3 ... 耐量子計算機暗号(Post-Quantum Cryptography: PQC)とは何か. • 一定 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Recent Trends on Research and Development of Quantum ...",
+    "url": "https://www.imes.boj.or.jp/research/papers/english/me39-6.pdf",
+    "description": "... Post-Quantum Cryptography. VI. Challenges in PQC Implementation. There are growing industry efforts toward the implementation of PQC candidate al- gorithms in ...",
+    "markdown": ""
+  },
+  {
+    "title": "情報セキュリティ・セミナー「量子コンピュータが暗号を解読する ...",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/23sec_semi01.html",
+    "description": "情報技術研究センター情報技術研究グループでは、9月21日（木）、「量子コンピュータが暗号を解読する日はくるのか？～耐量子計算機暗号（PQC）への移行に向けた取組み～」と ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 耐量  計算機暗号（PQC）への暗号移  に向けた 技術動向",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/23sec_semi01_docs/23sec_semi01_s2.pdf",
+    "description": "「PQCへの暗号移⾏」の期⽇が2030年 ⇨ 「暗号の2030年問題」. • NISTが2024年にPQCに関する標準仕様を公開. • 2030年までに暗号移⾏を実⾏（あと6年︕︕）. • 守るべきデータは︖ 移 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 量子耐性を有するシステム の実現に向けた 金融分野での取組み",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/25sympo/files/25sympo_file3%E5%AE%87%E6%A0%B9.pdf",
+    "description": "• 耐量子計算機暗号（PQC: Post-Quantum. Cryptography）の新アルゴリズムを標準化[3]. • EU. • 欧州委員会：加盟国に対して、PQC移行のロード. マップを ...",
+    "markdown": ""
+  },
+  {
+    "title": "Recent Trends on Research and Development of Quantum ...",
+    "url": "https://www.imes.boj.or.jp/research/abstracts/english/21-E-05.html",
+    "description": "... post-quantum cryptography (PQC), which is designed to be secure against quantum computers. NIST has been scrutinizing the security and performance of 15 ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] PQCと標準化動向 - 日本銀行金融研究所",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/26sympo/files/26sympo_file6%EF%BC%9A%E4%BC%8A%E8%97%A4%E6%A7%98.pdf",
+    "description": "一言でPQC移行と言っても、複数のアプローチが存在. Page 6. ©︎ 2026 SECOM CO., LTD. 一言でPQCと言っても、複数のアプローチが存在. 6. プロトコル.",
     "markdown": ""
   }
 ]

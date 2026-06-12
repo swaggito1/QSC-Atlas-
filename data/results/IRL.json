@@ -1,0 +1,24 @@
+[
+  {
+    "title": "National Cyber Security Centre Research & Innovation Priorities",
+    "country": "IRL",
+    "issuingOrg": "NCSC-IE",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.ncsc.gov.ie/ncc-ie/research/",
+    "summary": "Ireland's National Cyber Security Centre sets out research and innovation priorities, stating that the global shift to post-quantum cryptography is already underway and that Ireland must ensure a secure transition for Government, regulated sectors and critical infrastructure.",
+    "included": true
+  },
+  {
+    "title": "Opening Statement by Richard Browne, Director of the National Cyber Security Centre, to the Joint Committee on Foreign Affairs and Defence",
+    "country": "IRL",
+    "issuingOrg": "Oireachtas / NCSC-IE",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_foreign_affairs_and_defence/submissions/2023/2023-05-23_opening-statement-richard-browne-director-national-cyber-security-centre-ncsc_en.pdf",
+    "summary": "Opening statement by the Director of Ireland's National Cyber Security Centre to an Oireachtas joint committee, which references the challenges associated with the shift to post-quantum computing alongside other cyber threats.",
+    "included": true
+  }
+]

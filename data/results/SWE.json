@@ -1,0 +1,90 @@
+[
+  {
+    "title": "National recommendations for the transition to quantum-safe cryptography",
+    "country": "SWE",
+    "issuingOrg": "NCSC Sweden",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsc.se/siteassets/publikationer/nationella-rekommendationer-for-overgangen-till-kvantsaker-kryptografi-2026_tga.pdf",
+    "summary": "Sweden's National Cyber Security Centre sets out national recommendations for how organisations should carry out the transition to quantum-safe (post-quantum) cryptography. It frames the migration in relation to NIS2 and the Swedish cybersecurity act.",
+    "included": true
+  },
+  {
+    "title": "This is how the transition to quantum-safe cryptography should be done",
+    "country": "SWE",
+    "issuingOrg": "NCSC Sweden",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ncsc.se/sv/aktuellt/kvantsaker-kryptografi/",
+    "summary": "News article in which the National Cyber Security Centre announces and explains its recommendations for how Sweden should carry out the transition to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Cybersecurity Conference 2025 - Together we strengthen our digital society",
+    "country": "SWE",
+    "issuingOrg": "NCSC Sweden",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ncsc.se/sv/aktuellt/tillsammans-starker-vi-vart-digitala-samhalle/",
+    "summary": "NCSC conference report in which Alexander Engstrom of FRA presented on the transition to quantum-safe cryptography during the in-depth session.",
+    "included": true
+  },
+  {
+    "title": "Together we strengthen our digital society",
+    "country": "SWE",
+    "issuingOrg": "FRA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.fra.se/nyheter/nyheter/nyhetsarkiv/news/tillsammansstarkervivartdigitalasamhalle.5.6b4b0ae819565f845bb123.html",
+    "summary": "News page from the Swedish National Defence Radio Establishment (FRA), which hosts NCSC, referencing the national recommendations for the transition to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Notice on the EU quantum strategy (fact memo on EU proposal)",
+    "country": "SWE",
+    "issuingOrg": "Riksdagen",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/fakta-pm-om-eu-forslag/meddelande-om-kvantstrategi_hc06fpm64/",
+    "summary": "Swedish Parliament fact memo on the EU quantum strategy in which the government welcomes the Commission's approach to promoting the transition to quantum-safe cryptography to strengthen information and cyber security.",
+    "included": true
+  },
+  {
+    "title": "White paper and recommendation on the EU's digital infrastructure (fact memo)",
+    "country": "SWE",
+    "issuingOrg": "Riksdagen",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/fakta-pm-om-eu-forslag/vitbok-och-rekommendation-om-eus-digitala_hb06fpm49/",
+    "summary": "Swedish Parliament fact memo on the EU digital infrastructure white paper which defines post-quantum cryptography (PQC) as quantum-computer-secure public-key cryptography usable on classical computers.",
+    "included": true
+  },
+  {
+    "title": "Activities in the European Union during 2025 (Government Communication 2025/26:115)",
+    "country": "SWE",
+    "issuingOrg": "Government of Sweden / Riksdagen",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://data.riksdagen.se/dokument/hd03115",
+    "summary": "Annual government written communication to Parliament on EU activities, identifying the transition to quantum-safe cryptography as an important part of strengthening Europe's cybersecurity.",
+    "included": true
+  },
+  {
+    "title": "Towards a Swedish quantum ecosystem",
+    "country": "SWE",
+    "issuingOrg": "Tillvaxtverket",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://tillvaxtverket.se/download/18.1c06a14f19a7bcc07d367b24/1763564910015/Towards%20a%20Swedish%20quantum%20ecosystem.pdf",
+    "summary": "Report by the Swedish Agency for Economic and Regional Growth on building a Swedish quantum ecosystem. Flagged for review: candidate text describes quantum technologies broadly and does not show an explicit post-quantum/quantum-safe cryptography reference.",
+    "included": true
+  }
+]

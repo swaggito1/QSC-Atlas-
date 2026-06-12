@@ -1,0 +1,101 @@
+[
+  {
+    "title": "CCB 10-year anniversary publication (post-quantum cryptography)",
+    "country": "BEL",
+    "issuingOrg": "CCB",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://ccb.belgium.be/sites/default/files/2025-12/251204_CCB_Publicatie_10j_FR.pdf",
+    "summary": "Centre for Cybersecurity Belgium publication that addresses post-quantum cryptography, noting it remains difficult to predict when the technology will mature.",
+    "included": true
+  },
+  {
+    "title": "Preparing for the Quantum Era: A Strategic Imperative for Belgian Organisations",
+    "country": "BEL",
+    "issuingOrg": "CCB",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://ccb.belgium.be/news/preparing-quantum-era-strategic-imperative-belgian-organisations",
+    "summary": "CCB news item urging Belgian organisations to prepare for the quantum era, referencing the EU strategic roadmap milestones (national strategies by 2026, critical infrastructure protected by 2030, broad adoption by 2035).",
+    "included": true
+  },
+  {
+    "title": "Quantum cybersecurity (Quantum4Belgium)",
+    "country": "BEL",
+    "issuingOrg": "BOSA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://bosa.belgium.be/nl/themas/digitale-overheid/artificiele-intelligentie-en-nieuwe-technologieen/quantum4belgium-1",
+    "summary": "Belgian federal public service BOSA page on quantum cybersecurity, explaining the threat to long-term sensitive data and post-quantum cryptography, referencing NIST's 2024 standards.",
+    "included": true
+  },
+  {
+    "title": "Financial Market Infrastructures and Payment Services 2025",
+    "country": "BEL",
+    "issuingOrg": "NBB",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nbb.be/doc/ts/publications/fmi-and-paymentservices/2025/fmi-report2025.pdf",
+    "summary": "National Bank of Belgium report identifying post-quantum cryptography as an emerging cybersecurity issue addressing future quantum-computer threats to current encryption.",
+    "included": true
+  },
+  {
+    "title": "Swift oversight factsheet (Financial Market Infrastructures)",
+    "country": "BEL",
+    "issuingOrg": "NBB",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nbb.be/doc/ts/publications/fmi-and-paymentservices/latest/fmi_swift.pdf",
+    "summary": "National Bank of Belgium oversight factsheet on Swift noting work on post-quantum cryptography to ensure the long-term security of sensitive financial messaging.",
+    "included": true
+  },
+  {
+    "title": "NBB Annual Report 2025 - Prudential regulation and supervision",
+    "country": "BEL",
+    "issuingOrg": "NBB",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nbb.be/doc/ts/publications/nbbreport/2025/en/t1/report2025_tiii_h2.pdf",
+    "summary": "National Bank of Belgium 2025 annual report section noting specific attention to post-quantum cryptography, alongside the enshrinement of Swift supervision in Belgian law since May 2025.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography: It's time to act!",
+    "country": "BEL",
+    "issuingOrg": "Cyber Security Coalition Belgium",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T2",
+    "url": "https://cybersecuritycoalition.be/resource/post-quantum-cryptography-its-time-to-act/",
+    "summary": "Belgian Cyber Security Coalition resource urging action on post-quantum cryptography to safeguard digital trust. Public-private association rather than a government body, flagged for review.",
+    "included": false
+  },
+  {
+    "title": "White Paper - Preparing for the Quantum Era",
+    "country": "BEL",
+    "issuingOrg": "Cyber Security Coalition Belgium",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://cybersecuritycoalition.be/resource/white-paper-preparing-for-the-quantum-era/",
+    "summary": "Joint white paper by Belgian cybersecurity and quantum experts explaining why post-quantum cryptography is a strategic imperative. Public-private association rather than a government body, flagged for review.",
+    "included": false
+  },
+  {
+    "title": "New working group to develop European cybersecurity standards for cryptography",
+    "country": "BEL",
+    "issuingOrg": "Agoria",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.agoria.be/nl/diensten/expertise/digitalisering/cybersecurity/nieuwe-werkgroep-zal-europese-cyberveiligheidsnormen-voor-cryptografie-ontwikkelen",
+    "summary": "Belgian technology industry federation Agoria reports on a working group and a post-quantum cryptography feasibility study to address unmet standardisation needs. Industry federation, EU-standards focused, flagged for review.",
+    "included": false
+  }
+]

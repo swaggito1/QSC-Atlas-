@@ -1,14 +1,182 @@
 [
   {
+    "title": "Planning for post-quantum cryptography | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
+    "description": "Post-quantum cryptography (PQC) involves the creation and analysis of quantum-resistant cryptographic algorithms, known as post-quantum ...",
+    "markdown": ""
+  },
+  {
     "title": "Stay ahead of the quantum threat with post-quantum cryptography",
     "url": "https://www.cyber.gov.au/about-us/view-all-content/news/stay-ahead-of-the-quantum-threat-with-post-quantum-cryptography",
-    "description": "Get updated advice to help your organisation plan and prepare for post-quantum cryptography ... Authorised by the Australian Government, Canberra.",
+    "description": "Post-quantum cryptography (PQC) involves the creation and use of quantum-resistant cryptographic algorithms. In principle, these algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Planning for Post-Quantum Cryptography",
+    "url": "https://www.cyber.gov.au/sites/default/files/2023-05/PROTECT%20-%20Planning%20for%20Post-Quantum%20Cryptography%20%28May%202023%29.pdf",
+    "description": "Post-quantum cryptography PQC is a field of cryptography dedicated to the creation and analysis of cryptographic algorithms that derive their security",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Planning for post-quantum cryptography",
+    "url": "https://www.cyber.gov.au/sites/default/files/2025-03/Planning%20for%20post-quantum%20cryptography%20%28August%202023%29.pdf",
+    "description": "Post-quantum cryptography PQC is a field of cryptography dedicated to the creation and analysis of cryptographic algorithms that derive their security from ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Quantum technology primer: Computing",
+    "url": "https://www.cyber.gov.au/sites/default/files/2026-02/quantum_technology_primer_-_computing.pdf",
+    "description": "As CRQCs emerge, organisations will need to rely on quantum- resistant cryptography, known as post-quantum cryptography (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Guidelines for Cryptography - Information Security Manual",
+    "url": "https://www.cyber.gov.au/sites/default/files/2024-12/22.%20ISM%20-%20Guidelines%20for%20Cryptography%20%28December%202024%29.pdf",
+    "description": "A post-quantum traditional hybrid scheme is a multi-algorithm scheme where at least one cryptographic algorithm is a post-quantum cryptographic algorithm (e.g. ...",
+    "markdown": ""
+  },
+  {
+    "title": "Guidelines for cryptography | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cyber-security-guidelines/guidelines-for-cryptography",
+    "description": "A post-quantum traditional hybrid scheme is a multi-algorithm scheme where at least one cryptographic algorithm is a post-quantum cryptographic ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum technology primer: Computing | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/quantum/quantum-technology-primer-computing",
+    "description": "As CRQCs emerge, organisations will need to rely on quantum-resistant cryptography — known as post-quantum cryptography (PQC) — to maintain the ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] official",
+    "url": "https://www.aph.gov.au/DocumentStore.ashx?id=5d669f39-3556-4273-8407-069299510783&subId=715515",
+    "description": "The length of time required to implement post-quantum cryptography will vary greatly depending on a Commonwealth entity's cyber security ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] AUCLOUD",
+    "url": "https://www.aph.gov.au/DocumentStore.ashx?id=343cef68-9a18-4151-9e72-84f9d8e0f8a3&subId=751839",
+    "description": "Sovereign Cloud Australia Limited, trading as 'AUCloud', is an Australian sovereign cloud and cyber security services provider.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] The impact of new and emerging information and communications ...",
+    "url": "https://www.aph.gov.au/DocumentStore.ashx?id=d99b6738-240d-475a-95c1-68844508b898&subId=562378",
+    "description": "○ Post-Quantum Encryption. ○ There are many vulnerable software and hardware devices, with many known current and exploitable weaknesses. ○ Keylogging is ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] BE24-0018 2024-25 Budget estimates Legal and Constitutional ...",
+    "url": "https://www.aph.gov.au/api/qon/downloadestimatesquestions/EstimatesQuestion-CommitteeId6-EstimatesRoundId24-PortfolioId20-QuestionNumber18?utm_source=stilgherrian&utm_medium=email&utm_campaign=the-weekly-cybers-29",
+    "description": "will also be encouraged to prepare for the post-quantum future by conducting a review of their data holdings, and developing a plan to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] ACCENTURE SUBMISSION",
+    "url": "https://www.aph.gov.au/DocumentStore.ashx?id=e8b0293b-60d0-4f9e-afd3-ae0e56eedaf4&subId=780401",
+    "description": "While countries such as the United States and China are already investing heavily in quantum- resilient encryption and post-quantum planning, Australian ...",
+    "markdown": ""
+  },
+  {
+    "title": "Hansard - Committee 2/12/2025 Parliament of Australia",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=committees/estimate/29010/&sid=0006",
+    "description": "Senator CHANDLER: I will move on to a slightly different topic: post-quantum cryptography. Is that something that has come across Home Affairs's desk as ...",
+    "markdown": ""
+  },
+  {
+    "title": "Chapter 2 - The PwC breach of confidentiality obligations",
+    "url": "https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Corporations_and_Financial_Services/ConsultancyFirms/Report/Chapter_2_-_The_PwC_breach_of_confidentiality_obligations",
+    "description": "The PwC breach of confidentiality obligations was revealed when it was identified in January 2023 by Neil Chenoweth in the Australian Financial Review.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] UOW Response to the Inquiry into Defence Trade Controls ...",
+    "url": "https://www.aph.gov.au/DocumentStore.ashx?id=07524e27-acd5-4961-ac88-1d45f90a4151&subId=752300",
+    "description": "UOW's capabilities in Defence include signal processing, robotic welding, steels, human performance, radiation physics/detection, post-quantum cryptography, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Appendix A: Support for quantum across the Australian Government",
+    "url": "https://www.industry.gov.au/publications/state-australian-quantum-report-2024/appendix-support-quantum-across-australian-government",
+    "description": "Its Plan of Action deals explicitly with the future challenge posed by the importance of adopting post-quantum cryptographic standards.",
+    "markdown": ""
+  },
+  {
+    "title": "Appendix: Categories of quantum technologies",
+    "url": "https://www.industry.gov.au/publications/national-quantum-strategy/appendix-categories-quantum-technologies",
+    "description": "Post-quantum cryptography (also called quantum-resistant cryptography) is a cryptographic system that is secure against both quantum and classical computers.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum technologies",
+    "url": "https://www.industry.gov.au/publications/list-critical-technologies-national-interest/quantum-technologies",
+    "description": "Post-quantum cryptography ed These technologies can be used for: improved data security, management and analysis modelling and simulation to discover new drugs ...",
+    "markdown": ""
+  },
+  {
+    "title": "Interview with Greg Jennett, ABC Afternoon Briefing",
+    "url": "https://www.minister.industry.gov.au/ministers/husic/transcripts/interview-greg-jennett-abc-afternoon-briefing-0",
+    "description": "Interview discusses quantum physics, the National Reconstruction Fund, and National Quantum Strategy.",
+    "markdown": ""
+  },
+  {
+    "title": "List of Critical Technologies in the National Interest",
+    "url": "https://www.industry.gov.au/publications/list-critical-technologies-national-interest",
+    "description": "Post-quantum cryptography; Quantum communications; Quantum sensors. Autonomous systems, robotics, positioning, timing and sensing. Advanced ...",
+    "markdown": ""
+  },
+  {
+    "title": "Critical Technologies Challenge Program round 1 projects",
+    "url": "https://www.industry.gov.au/science-technology-and-innovation/industry-innovation/critical-technologies-challenge-program/critical-technologies-challenge-program-round-1-projects",
+    "description": "SecuComm post-Quantum Cryptography supportive hardware further reduces the risks of eavesdropping, including quantum-enabled eavesdropping.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum | Department of Industry Science and Resources",
+    "url": "https://www.industry.gov.au/science-technology-and-innovation/technology/quantum",
+    "description": "Quantum technology could unlock improvements in: advanced medical research and imaging; satellite navigation; weather modelling; disaster response management.",
     "markdown": ""
   },
   {
     "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
     "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
     "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "Microsoft breakthrough challenges Australia's quantum strategy",
+    "url": "https://www.aspistrategist.org.au/microsoft-breakthrough-challenges-australias-quantum-strategy/",
+    "description": "This breakthrough demands an urgent rethinking of Australia's move to post-quantum encryption, as it challenges the foundations of our defence and intelligence ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum technologies",
+    "url": "https://www.industry.gov.au/publications/national-quantum-strategy/quantum-technologies",
+    "description": "The National Quantum Strategy addresses the full spectrum of quantum technologies. ... Post-quantum cryptography. 5 to 10 years. Quantum sensing technologies.",
+    "markdown": ""
+  },
+  {
+    "title": "National Quantum Strategy | STIP Compass - OECD",
+    "url": "https://stip.oecd.org/stip/interactive-dashboards/policy-initiatives/2025%2Fdata%2FpolicyInitiatives%2F99997852",
+    "description": "The National Quantum Strategy aims to grow Australia's quantum technology sector so that by 2030, Australia is recognised as a leader of the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Safe Transition - CSIRO",
+    "url": "https://www.csiro.au/en/research/technology-space/quantum-technology/quantum-safe-transition",
+    "description": "Report explores how Australia can prepare for quantum computers by moving to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum technology: what Australian Industry Group members need ...",
+    "url": "https://www.australianindustrygroup.com.au/news/blogs/2025/quantum-technology-what-australian-industry-group-members-need-to-know/",
+    "description": "This allows quantum computers to explore multiple solutions simultaneously, making them exponentially more powerful for certain calculations.",
+    "markdown": ""
+  },
+  {
+    "title": "The Future of Quantum - Australia's National Strategy - YouTube",
+    "url": "https://www.youtube.com/watch?v=KlPlF7jg0FE",
+    "description": "Australia released its National Quantum Strategy in May 2023, which seeks to grow the quantum industry in Australia and lays out a long-term ...",
     "markdown": ""
   },
   {
@@ -24,15 +192,21 @@
     "markdown": ""
   },
   {
-    "title": "Planning for post-quantum cryptography | Cyber.gov.au",
-    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
-    "description": "Prepare your organisation for post-quantum cryptography with advice on transition timelines, milestones, and a framework to map transition ...",
-    "markdown": ""
-  },
-  {
     "title": "[PDF] Post Quantum Cryptography - UNSW",
     "url": "https://www.unsw.edu.au/content/dam/images/canberra/unsw-canberra/ifcyber/stock/2025-03-stockimages/PQC-guide.pdf",
     "description": "The Australian Signals Directorate (ASD) recommends migrating to PQC by 2030–2035, but these are guidelines, not mandates. To meet these ...",
+    "markdown": ""
+  },
+  {
+    "title": "Frequently Asked Questions about Post-Quantum Cryptography",
+    "url": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/",
+    "description": "GSMA, Post Quantum Government Initiatives by Country and Region provides a summary of the existing government and region PQC guidelines (last updated March 2025) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Planning Australia - Orro Group",
+    "url": "https://orro.group/service/cyber-security/post-quantum-cryptography-planning-australia/",
+    "description": "However, Australian government agencies are expected to align with ASD guidance, which draws on the Five Eyes relationship with US and UK ...",
     "markdown": ""
   },
   {
@@ -60,6 +234,18 @@
     "markdown": ""
   },
   {
+    "title": "Post quantum safe transition and cyber resilience - CSIRO Research",
+    "url": "https://research.csiro.au/cybersecurity-quantum-systems/post-quantum-safe-transition-and-cyber-resilience/",
+    "description": "The solution provides guidance, tools and frameworks to identify critical assets, assess cryptographic dependencies, and plan migration pathways ...",
+    "markdown": ""
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "How system owners can begin planning for the migration to post-quantum cryptography (PQC).",
+    "markdown": ""
+  },
+  {
     "title": "Australia releases CRQC strategy for post-quantum ...",
     "url": "https://www.linkedin.com/posts/cyble-global_australia-urges-immediate-action-on-post-quantum-activity-7375883720517529600-u7IF",
     "description": "... Quantum Cryptography (CRQC) strategy has been released, outlining a roadmap to ensure encryption remains safe in the era of quantum computing.",
@@ -81,6 +267,78 @@
     "title": "Quantum-safe security: Progress towards next-generation ...",
     "url": "https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/",
     "description": "The QSP strategy is guided by three priorities: Make Microsoft quantum safe by updating Microsoft first- and third-party services, supply chain ...",
+    "markdown": ""
+  },
+  {
+    "title": "Roadmap for the migration to post-quantum cryptography ...",
+    "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+    "description": "This publication is the Cyber Centre's recommended roadmap for the migration of non-classified IT systems within the GC to use PQC.",
+    "markdown": ""
+  },
+  {
+    "title": "Australian Signals Directorate releases the Annual Cyber Threat ...",
+    "url": "https://www.asd.gov.au/news/2025-10-14-australian-signals-directorate-releases-annual-cyber-threat-report-2024-25",
+    "description": "Prepare for post-quantum cryptography. Download the latest report for a full understanding of the current cyber threat environment. The ...",
+    "markdown": ""
+  },
+  {
+    "title": "Research priorities | Australian Signals Directorate",
+    "url": "https://www.asd.gov.au/about/what-we-do/research-priorities",
+    "description": "Mathematics & Post Quantum Cryptography; High Performance Computing; Quantum Computing & Algorithms; Vulnerability Research; Quantum Sensing, Classical Sensors ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] ASD Science, Technology, Innovation and Research Priorities",
+    "url": "https://www.asd.gov.au/sites/default/files/2025-10/ASD%20Research%20Priorities.pdf",
+    "description": "Mathematics & Post Quantum Cryptography. High Performance Computing. Quantum Computing & Algorithms. Vulnerability Research. Quantum Sensing, Classical Sensors ...",
+    "markdown": ""
+  },
+  {
+    "title": "ASD's Blueprint for Secure Cloud",
+    "url": "https://blueprint.asd.gov.au/",
+    "description": "The Blueprint is an online tool to support the design, configuration and deployment of collaborative and secure cloud and hybrid workspaces.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Safe Transition - CSIRO",
+    "url": "https://www.csiro.au/en/research/technology-space/quantum-technology/Quantum-Safe-Transition",
+    "description": "The Quantum Safe Transition: Reality, Hurdles and Pathways paper explores why transitioning to post-quantum cryptography (PQC) is a priority for Australia's ...",
+    "markdown": ""
+  },
+  {
+    "title": "Enabling Post-Quantum Cryptography (PQC) Migration",
+    "url": "https://research.csiro.au/iphd-opportunities/enabling-post-quantum-cryptography-pqc-migration/",
+    "description": "This project develops techniques for the migration to post-quantum cryptography (PQC) to secure critical infrastructure from quantum attacks.",
+    "markdown": ""
+  },
+  {
+    "title": "MIKA: A Minimalist Approach to Hybrid Key Exchange",
+    "url": "https://publications.csiro.au/publications/#publication/PIcsiro:EP2024-0701",
+    "description": "This approach uses both classical and post-quantum cryptographic techniques with the aim of keeping the system secure as long as any one of the cryptosystems ...",
+    "markdown": ""
+  },
+  {
+    "title": "Scalable and Efficient Hybrid QKD with Post-quantum Authentications",
+    "url": "https://publications.csiro.au/publications/#publication/PIcsiro:EP2023-0412",
+    "description": "It is commonly believed that using post-quantum signatures as the QKD authentication method will severely degrade the QKD performance due to its high ...",
+    "markdown": ""
+  },
+  {
+    "title": "Securing Communications in the Post-quantum Era",
+    "url": "https://publications.csiro.au/publications/#publication/PIcsiro:EP2023-2788",
+    "description": "Post-quantum cryptography (PQC) is secure against quantum attacks even after a large-scale quantum computer becomes available. However, the PQC migration of ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] How are Australian organisations navigating the quantum frontier?",
+    "url": "https://www.csiro.au/-/media/D61/Reports/Quantum-shift-readiness/Quantum-shift---How-are-Australian-organisations-navigating-the-quantum-frontier.pdf",
+    "description": "Among the organisations taking proactive steps, key focus areas include transitioning to post-quantum cryptography, conducting quantum threat.",
+    "markdown": ""
+  },
+  {
+    "title": "High Value Payments - Reserve Bank of Australia",
+    "url": "https://www.rba.gov.au/payments-and-infrastructure/financial-market-infrastructure/high-value-payments/",
+    "description": "In assessing whether such a payment system is systemically important in Australia, the Bank will take into account five considerations that build on those ...",
     "markdown": ""
   }
 ]

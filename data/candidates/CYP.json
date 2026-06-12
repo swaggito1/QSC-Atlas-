@@ -1,0 +1,140 @@
+[
+  {
+    "title": "ENISA Telecom and Digital Infrastructure Security Forum 2026",
+    "url": "https://dsa.cy/en/category/news/enisa-telco-forum-en",
+    "description": "Topics of discussion included quantum computing and post-quantum cryptography, the safeguarding of 5G networks and the Internet of Things ...",
+    "markdown": ""
+  },
+  {
+    "title": "Digital Security Authority - Home",
+    "url": "https://dsa.cy/en/",
+    "description": "Digital Security Authority. The DSA is a new independent governmental agency under the supervision of the Commissioner of Communications.",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
+    "markdown": ""
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "This resource is designed to show a central view of how governments and agencies around the world are building compliance regulations to help navigate the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC) Compliance Standards",
+    "url": "https://www.safelogic.com/compliance/pqc-standards",
+    "description": "Stay ahead of PQC compliance mandates with an overview of post-quantum cryptography standards and global regulatory timelines.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "This guide explains the federal PQC mandate, key requirements, and how solutions like IGEL and wolfSSL enable crypto-agility and long-term ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "UK's plan for post-quantum cryptography by 2035 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/zygmuntlozinski_timelines-for-migration-to-post-quantum-cryptography-activity-7308425014054178818-T48Q",
+    "description": "UK timeline for Post-Quantum Cryptography published today by National Cyber Security Centre. 2025-2028 Cryptographic discovery and create a ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC): Application Security Migration ...",
+    "url": "https://www.contrastsecurity.com/security-influencers/post-quantum-cryptography-pqc-application-security-migration-guide",
+    "description": "Prepare for the shift to Post-Quantum Cryptography (PQC). Learn how PCI DSS v4.0 and NIST mandates impact application security and how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
+    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
+    "description": "This roadmap sets out clear expectations and timelines for Member States to begin and progress their migration away from vulnerable classical ...",
+    "markdown": ""
+  },
+  {
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  },
+  {
+    "title": "ETSI/IQC Quantum Safe Cryptography Conference 2025",
+    "url": "https://www.etsi.org/events/2450-etsi-iqc-quantum-safe-cryptography-conference-2025/",
+    "description": "ETSI and the Institute for Quantum Computing organized the 2025 edition of their joint event, the ETSI/IQC Quantum Safe Cryptography Conference.",
+    "markdown": ""
+  },
+  {
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "It includes a set of recommendations that Member States need to implement for a synchronised transition to PQC, as well as measures to ensure ...",
+    "markdown": ""
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "title": "National Cyber Security Centre Research & Innovation Priorities",
+    "url": "https://www.ncsc.gov.ie/ncc-ie/research/",
+    "description": "The global shift to post-quantum cryptography is already underway. Ireland must ensure a secure transition for Government, regulated sectors, and critical ...",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC: National Cyber Security Centre",
+    "url": "https://www.ncsc.gov.ie/",
+    "description": "The NCSC is responsible for advising and informing Government IT and Critical National Infrastructure providers of current threats and vulnerabilities.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography - NIST CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "description": "With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "Planning for post-quantum cryptography | Cyber.gov.au",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/planning-for-post-quantum-cryptography",
+    "description": "Prepare your organisation for post-quantum cryptography with advice on transition timelines, milestones, and a framework to map transition ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | Homeland Security",
+    "url": "https://www.dhs.gov/quantum",
+    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "CMORG-endorsed capabilities (including good practice guidance, response frameworks and contingency tools) have been developed collectively ...",
+    "markdown": ""
+  },
+  {
+    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "Learn how U.S. federal agencies can meet Post-Quantum Cryptography (PQC) mandates using secure hardware, crypto-agile operating systems, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography (PQC)",
+    "url": "https://www.iisf.ie/Post-Quantum-Cryptography",
+    "description": "Organisations are encouraged to proactively prepare for future migration to products implementing the post-quantum cryptographic standards.",
+    "markdown": ""
+  },
+  {
+    "title": "UK's plan for post-quantum cryptography by 2035 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/zygmuntlozinski_timelines-for-migration-to-post-quantum-cryptography-activity-7308425014054178818-T48Q",
+    "description": "UK timeline for Post-Quantum Cryptography published today by National Cyber Security Centre. 2031-2035 complete migration across all systems.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "CNSA 2.0 provides a detailed roadmap for migration, with the goal of complete transition for all NSS to quantum-resistance by 2035.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "Ireland (NCSC-IE) explaining the need for quantum-safe key exchange and encryption. the next 15 to 30 years for the past 30 years.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
+    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
+    "description": "The roadmap anticipates that by 2030, Member States will have completed the PQC migration for all high-risk systems. Key actions include:.",
+    "markdown": ""
+  },
+  {
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "Quantum computing has been identified as a threat to many cryptographic algorithms used to protect the confidentiality and authenticity of ...",
+    "markdown": ""
+  },
+  {
+    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
+    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
+    "description": "The roadmap-based approach enables security leaders to implement the transitions in a logical order and make cryptographic transitions compatible with ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Oireachtas Committee on Foreign Affairs and Defence 23rd May 2023",
+    "url": "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_foreign_affairs_and_defence/submissions/2023/2023-05-23_opening-statement-richard-browne-director-national-cyber-security-centre-ncsc_en.pdf",
+    "description": "Were I sitting here a year ago, I would have spoken about the shift to cloud computing, the challenges associated with post quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Joint Committee on Foreign Affairs and Defence debate - Oireachtas",
+    "url": "https://www.oireachtas.ie/en/debates/debate/joint_committee_on_foreign_affairs_and_defence/2023-05-23/2/",
+    "description": "Were I sitting here a year ago, I would have spoken about the shift to cloud computing, the challenges associated with post-quantum ...",
+    "markdown": ""
+  }
+]

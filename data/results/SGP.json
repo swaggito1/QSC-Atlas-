@@ -1,0 +1,211 @@
+[
+  {
+    "title": "CSA Releases a Quantum-Safe Handbook and Quantum Readiness Index",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/press-releases/csa-releases-a-quantum-safe-handbook-and-quantum-readiness-index/",
+    "summary": "Press release announcing the Cyber Security Agency of Singapore's Quantum-Safe Handbook and Quantum Readiness Index. Public consultation on the quantum-safe materials runs until end December 2025.",
+    "included": true
+  },
+  {
+    "title": "Senior Minister of State Tan Kiat How, Committee of Supply 2026 Speech",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/speeches/senior-minister-of-state-tan-kiat-how-committee-of-supply-2026-speech/",
+    "summary": "Committee of Supply 2026 speech stating the Singapore government's position that Post-Quantum Cryptography (PQC) will be the mainstream solution for quantum-safe migration.",
+    "included": true
+  },
+  {
+    "title": "18 Projects Awarded a Total of $16 Million in Funding at CyberSG Innovation Day 2025",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/press-releases/18-projects-awarded-a-total-of--16-million-in-funding-for-research-and-innovation-projects-at-cybersg-innovation-day-2025/",
+    "summary": "Press release announcing S$16 million of CSA funding for 18 cybersecurity research and innovation projects under the CyberSG R&D Programme. The visible description does not explicitly confirm a PQC component, so it is flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "Opening Address by Minister Josephine Teo at the High-Level Panel (AI), 22 October 2025",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/speeches/opening-address-by-minister-josephine-teo-at-hlp--ai--on-22-oct-2025/",
+    "summary": "Ministerial speech referencing Singapore's intent to thrive in a post-quantum future, both harnessing opportunities and managing risks. The visible excerpt does not explicitly name post-quantum cryptography, so it is flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "Banque de France and Monetary Authority of Singapore Conduct Post-Quantum Cryptography Experiment",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.mas.gov.sg/news/media-releases/2024/bdf-and-mas-conduct-groundbreaking-post-quantum-cryptography-experiment",
+    "summary": "Media release on a joint post-quantum cryptography experiment between the Banque de France and the Monetary Authority of Singapore, aimed at strengthening communication and data security against quantum computing advancements.",
+    "included": true
+  },
+  {
+    "title": "MAS Advisory on Quantum Computing and Post-Quantum Cryptography",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/-/media/mas-media-library/regulation/circulars/trpd/mas-quantum-advisory/mas-quantum-advisory.pdf",
+    "summary": "Regulatory advisory circular from the Monetary Authority of Singapore on the cybersecurity risks of quantum computing for financial institutions, referencing NIST's global standardisation process for post-quantum cryptography (PQC).",
+    "included": true
+  },
+  {
+    "title": "MAS and Industry Partners Publish Technical Report on Proof-of-Concept Quantum Security Sandbox",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.mas.gov.sg/news/media-releases/2025/mas-and-industry-partners-publish-technical-report-on-proof-of-concept-sandbox",
+    "summary": "Media release announcing publication of a technical report on a proof-of-concept quantum security sandbox, following the Post-Quantum Cryptography (PQC) experiment with the Banque de France the previous year.",
+    "included": true
+  },
+  {
+    "title": "Singapore Financial Sector Quantum-Safe Technology Sandbox Report",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T3",
+    "url": "https://www.mas.gov.sg/-/media/mas/news/media-releases/2025/singapore-financial-sector-qkd-sandbox-report.pdf",
+    "summary": "Technical report on the Singapore financial sector quantum key distribution (QKD) sandbox, including tests combining QKD with Post-Quantum Cryptography (PQC) digital signing for file transfer to address QKD's limitations.",
+    "included": true
+  },
+  {
+    "title": "FSTI Quantum Track",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/schemes-and-initiatives/fsti-quantum-track",
+    "summary": "MAS funding scheme page for the Financial Sector Technology and Innovation (FSTI) Quantum track, supporting pilots that explore approaches such as Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD).",
+    "included": true
+  },
+  {
+    "title": "MAS Commits up to S$100 Million to Support Quantum and Artificial Intelligence Capabilities",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/news/media-releases/2024/mas-commits-up-to-s$100-million-to-support-quantum-and-artificial-intelligence-capabilities",
+    "summary": "Media release on MAS committing up to S$100 million to support quantum and AI capabilities in the financial sector, including Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD) to safeguard firms' critical data.",
+    "included": true
+  },
+  {
+    "title": "Request for Proposal: Quantum Computing and Its Implication on Cybersecurity of the Financial Sector",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/~/media/MAS/News%20and%20Publications/RFP/AIDA%20RFP005%20%20Quantum%20Computing%20and%20its%20Implication%20on%20Cybersecurity%20of%20the%20Financial%20Sector.pdf",
+    "summary": "MAS request for proposal exploring the potential post-quantum landscape of the financial sector, including the development of quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum-Safe Technologies",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/quantum-safe-technologies",
+    "summary": "IMDA programme page on quantum-safe technologies under which businesses can work with National Quantum-Safe Network Plus (NQSN+) operators to integrate quantum-safe solutions such as Quantum Key Distribution (QKD) and Post-Quantum Cryptography (PQC).",
+    "included": true
+  },
+  {
+    "title": "Reference Specification: Secure Deployment of Quantum Key Distribution Networks (Draft for Public Comment)",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/ict-standards/telecommunication-standards/imda-technical/2026/imda-rs-secqkdn-draft-public-comment.pdf",
+    "summary": "Draft IMDA reference specification, issued for public comment, on the secure deployment of quantum key distribution networks; it requires the QKD module to key manager link to use cryptographic algorithms with appropriate computational security, including post-quantum cryptographic techniques.",
+    "included": true
+  },
+  {
+    "title": "Reference Specification: Quantum Key Distribution Networks (Issue 1, Draft for Public Comment)",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": null,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/ict-standards/telecommunication-standards/imda-technical/1c-draft-imda-rs-qkdn--issue-1--public-comment.pdf",
+    "summary": "Draft IMDA reference specification for quantum key distribution networks, noting that QKD keys can be combined with Post-Quantum Cryptography (PQC) and that PQC can be used as an authentication method to initialise QKD operation.",
+    "included": true
+  },
+  {
+    "title": "Fact Sheet: Quantum-Safe Singapore",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/assets/f2d78e9e-6132-4e97-9b27-a650276e9c43.pdf",
+    "summary": "IMDA fact sheet on Singapore's quantum-safe activities, including training programmes on quantum technologies covering QKD, Post-Quantum Cryptography and quantum computing.",
+    "included": true
+  },
+  {
+    "title": "Technology Roadmap Working Group 4: AI, Data and Blockchain (Slides)",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T4",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/industry-development/infrastructure/technology/technology-roadmap/wg4-artificial-intelligence--data-and-blockchain-ppt-slides.pdf",
+    "summary": "IMDA technology roadmap working group slides covering post-quantum cryptographic schemes, blockchains using quantum cryptography, and the quantum-proofing of existing blockchains by replacing vulnerable components.",
+    "included": true
+  },
+  {
+    "title": "Singapore Launches Southeast Asia's First Quantum-Safe Network Infrastructure",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2023/sg-launches-southeast-asias-first-quantum-safe-network-infrastructure",
+    "summary": "Press release announcing the National Quantum-Safe Network Plus (NQSN+), which aims to deliver quantum-safe communications across Singapore.",
+    "included": true
+  },
+  {
+    "title": "Digital Connectivity Blueprint Report",
+    "country": "SGP",
+    "issuingOrg": "IMDA",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/programme/digital-connectivity-blueprint/digital-connectivity-blueprint-report.pdf",
+    "summary": "IMDA Digital Connectivity Blueprint stating that Singapore needs to be ready to adopt quantum security technologies such as Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD).",
+    "included": true
+  },
+  {
+    "title": "Quantum-Safe Migration Handbook (Draft for Public Consultation)",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://isomer-user-content.by.gov.sg/36/11227d39-4350-4ded-9046-d62f99f561ab/Draft%20for%20Public%20Consultation%20-%20Quantum-Safe%20Handbook%20(Oct%202025).pdf",
+    "summary": "Draft Quantum-Safe Migration Handbook released by CSA for public consultation, offering practical migration guidance and referencing PQC roadmap categories recommended by the Post-Quantum Cryptography Coalition.",
+    "included": true
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "title": "[PDF] Ordinateur quantique et cryptographie post",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/fr/dokumente/dokumentation/technologiebetrachtungen/technologiebetrachtung-qcpqc-fr.pdf.download.pdf/technologiebetrachtung-qcpqc-fr.pdf",
+    "description": "à la cryptographie post-quantique est un long processus. Il s'agit donc de bien le planifier en tenant compte de la standardisation actuelle ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Évaluation par l'OFCS - Cryptographie post-quantique et mesures à ...",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/fr/dokumente/dokumentation/technologiebetrachtungen/Einsch%C3%A4tzung%20BACS%20PQC-FR.pdf.download.pdf/Einsch%C3%A4tzung%20BACS%20PQC-FR.pdf",
+    "description": "Il a ainsi publié des Considérations technologiques sur l'ordinateur quantique et la cryptographie post-quantique (CPQ). La situation et la ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Technologiebetrachtung - Bundesamt für Cybersicherheit BACS",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/technologiebetrachtungen/technologiebetrachtung-qcpqc-de.pdf.download.pdf/technologiebetrachtung-qcpqc-de.pdf",
+    "description": "tisch ist, was sich hinter dem Begriff Post-Quanten-Kryptografie (PQK) verbirgt, was man diesbezüglich erreicht hat und wo es ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Einschätzung BACS",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/technologiebetrachtungen/einschaetzung_bacs_pqc-de.pdf.download.pdf/einschaetzung_bacs_pqc-de.pdf",
+    "description": "In der Zwischenzeit werden Quantencomputer-resistente Verfahren und Algorithmen als. Post-Quanten-Kryptografie (PQK) entwickelt und vom U.S. ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Measurability and testability of IT security",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/dokumentation/technologiebetrachtungen/betrachtung_pruef-messbarkeit_v1-0-en.pdf.download.pdf/betrachtung_pruef-messbarkeit_v1-0-en.pdf",
+    "description": "... Quantum computers and post-quantum cryptography, 2024. [20] National Cyber Security Centre NCSC, Technology considerations: SCION, 2025.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Annual Report 2025 National Cyber Security Centre NCSC",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/dokumentation/jahresberichte/2025/2026-02-16_Jahresbericht_2025_EN.pdf.download.pdf/2026-02-16_Jahresbericht_2025_EN.pdf",
+    "description": "Technology consideration: Quantum computers and post-quantum. •. Technology consideration: Cybersecurity and resilience. •. Technology ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Report on the implementation of the National Cyber Strategy (NCS ...",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/strategie/cyberstrategie-ncs/Bericht-zur-Umsetzung-der-NCS_2024-EN.pdf.download.pdf/Bericht-zur-Umsetzung-der-NCS_2024-EN.pdf",
+    "description": "tum computing and post-quantum cryptography\", \"Large language models in cybersecurity\",. \"Anti-phishing report\" and \"Telephone fraud in the cyber area\". They ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Jahresbericht 2024 Bundesamt für Cybersicherheit BACS",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/jahresberichte/2024/2025-03-28_jahresbericht_2024_de.pdf.download.pdf/2025-03-28_jahresbericht_2024_de.pdf",
+    "description": "• Einschätzung zum Handlungsbedarf im Zusammenhang mit Post-Quanten-Kryptografie (PQK). • Bericht Informatiksicherheit Bund 2023.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Post Quantum Cryptography",
+    "url": "https://www.bit.admin.ch/dam/en/sd-web/rMtZYMHddSKl/post-quantum-cryptography-de.pdf",
+    "description": "Es betont die Notwendigkeit, frühzeitig auf Post-Quanten-Kryptografie (PQC) umzustellen, insbesondere für langfristig vertrauliche Daten. Die. Dringlichkeit ...",
+    "markdown": ""
+  },
+  {
+    "title": "Die Post-Quanten-Kryptografie: Eine neue Ära der Sicherheit - AWS",
+    "url": "https://aws.amazon.com/blogs/alps/die-post-quanten-kryptografie-eine-neue-ara-der-sicherheit/",
+    "description": "Diese sogenannten “Post-Quanten-Kryptografie” (PQC) Algorithmen basieren auf mathematischen Problemen, die auch für Quantencomputer schwer ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografielösungen und -Services - Entrust",
+    "url": "https://www.entrust.com/de/solutions/post-quantum-cryptography",
+    "description": "Post-Quanten-Kryptografie. Schaffen Sie sicheres digitales Vertrauen in einer Post-Quantum-Welt für Menschen, Geräte, KI-Agenten und Daten. Entrust ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie",
+    "url": "https://www.forschung-it-sicherheit-kommunikationssysteme.de/foerderung/bekanntmachungen/pqk",
+    "description": "Post-Quanten-Kryptografie. Technologische Fortschritte in der Entwicklung von Quantencomputern stellen neue Herausforderungen an ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie | Quantensicherheit im digitalen Zeitalter",
+    "url": "https://www.gi-de.com/de/digital-security/digital-infrastructures/post-quanten-kryptographie",
+    "description": "Um die Daten der Welt vor dieser neuen Bedrohung zu schützen, ist eine neue Form der Kryptografie erforderlich: die Post-Quanten-Kryptografie ... Switzerland ...",
+    "markdown": ""
+  },
+  {
+    "title": "Was ist Post-Quantum-Kryptografie (PQC)? Ein quantenresistenter ...",
+    "url": "https://www.fortinet.com/de/resources/cyberglossary/post-quantum-cryptography",
+    "description": "Die Rolle der Post-Quanten-Kryptografie in der Cybersicherheit. PQC spielt eine entscheidende Rolle bei der Sicherung von Daten in Netzwerken, Endpunkten und ...",
+    "markdown": ""
+  },
+  {
+    "title": "Federal Office for Information Security (BSI) - LinkedIn",
+    "url": "https://www.linkedin.com/posts/bsibund_cybersecurity-postquantum-pqc-activity-7402683587109593089-p_eu",
+    "description": "... Post-Quanten-Kryptografie ist kein abstraktes Konzept mehr; sie ist eine Realität, die die Cybersicherheit neu definiert. Am 2. und 3 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quanten-Kryptografie: Was jetzt zu tun ist | EY - Deutschland",
+    "url": "https://www.ey.com/de_de/insights/consulting/post-quanten-kryptografie-was-jetzt-zu-tun-ist",
+    "description": "Quantencomputer bedrohen die heutige Datensicherheit – sind Sie bereit für die Post-Quanten-Kryptografie? Erfahren Sie, warum der Umstieg",
+    "markdown": ""
+  },
+  {
+    "title": "Codebasierte Post-Quanten-Kryptografie: Goppa Codes und das ...",
+    "url": "https://www.ebay.com/itm/397508434121",
+    "description": "Codebasierte Post-Quanten-Kryptografie: Goppa Codes und das McEliece Kryptosyste ; Author Felix Peter Paul ; Format Paperback ; Year 2025 ; Pages 72 ; Publisher ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie quantique et cryptographie post-quantique",
+    "url": "https://technology-outlook.satw.ch/fr/les-technologies-en-point-de-mire/cryptographie-quantique-et-cryptographie-post-quantique",
+    "description": "La cryptographie post-quantique se penche précisément sur ce type de systèmes de chiffrement en mesure de faire échouer une attaque quantique.",
+    "markdown": ""
+  },
+  {
+    "title": "Qu'est-ce que la cryptographie post-quantique et la menace PQC",
+    "url": "https://www.mastercard.com/be/fr/Actualit%C3%A9s-et-tendances/stories/2025/what-is-post-quantum-cryptography.html",
+    "description": "La cryptographie post-quantique (PQC) est conçue pour résister aux attaques des futurs ordinateurs quantiques qui pourraient casser les ...",
+    "markdown": ""
+  },
+  {
+    "title": "Passage de la Confédération à la cryptographie post-quantique | Objet",
+    "url": "https://www.parlament.ch/fr/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244398",
+    "description": "En avril 2024, les États membres de l'UE ont été invités à élaborer une stratégie globale pour l'adoption de la cryptographie post-quantique, afin de garantir ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie postquantique - Entrust",
+    "url": "https://www.entrust.com/fr/solutions/post-quantum-cryptography",
+    "description": "La cryptographie post-quantique (PQC) est une nouvelle génération d'algorithmes cryptographiques conçus pour résister aux attaques des ordinateurs quantiques.",
+    "markdown": ""
+  },
+  {
+    "title": "Solutions de cryptographie post-quantique (PQC) | Sectigo® Officiel",
+    "url": "https://www.sectigo.com/fr/quantum-labs",
+    "description": "Ne donnez pas l'avantage aux menaces quantiques - commencez à construire votre plan de cryptographie post-quantique (PQC) avec Sectigo PQC Labs dès ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Avis de l'ANSSI sur la migration vers la cryptographie.pdf",
+    "url": "https://messervices.cyber.gouv.fr/documents-guides/Avis%20de%20l'ANSSI%20sur%20la%20migration%20vers%20la%20cryptographie.pdf",
+    "description": "Cet investissement comprend cinq projets de recherche en cryptographie post-quantique (PQTLS, RESQUE, HYPERFORM,. iPQRS, X7PQC). En outre ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique (PQC) - Cybersécurité - Fortinet",
+    "url": "https://www.fortinet.com/fr/resources/cyberglossary/post-quantum-cryptography",
+    "description": "L'adoption de la cryptographie post-quantique (PQC) est essentielle pour protéger les données sensibles, garantir la sécurité des communications et maintenir l' ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Computing - Digital Finance et cybersécurité - Thèmes",
+    "url": "https://www.swissbanking.ch/fr/themes/numerisation-innovation-et-cybersecurite/quantum-computing",
+    "description": "... cryptographie post-quantique, l'informatique quantique constitue d'ores et déjà un défi à ne pas négliger. Les auteures du rapport d'experts recommandent ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Action Plan to a Quantum-Safe Financial Future ... - Swiss government",
+    "url": "https://www.sif.admin.ch/dam/de/sd-web/5jN0vjz3EBDi/Action%20Plan%20to%20a%20Quantum-Safe%20Financial%20Future.pdf",
+    "description": "It suggests an action plan for the coordinated implementation of the transition to post-quantum cryptography in the EU within two years. It ...",
+    "markdown": ""
+  },
+  {
+    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Threat Readiness for Financial Institutions: A Guide to Post ...",
+    "url": "https://www.netbankaudit.com/resources/quantum-threat-readiness-for-financial-institutions",
+    "description": "This guide explores what quantum threat readiness means, why the White House and NIST are driving the transition to post-quantum cryptography (PQC), and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | Homeland Security",
+    "url": "https://www.dhs.gov/quantum",
+    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "Canada released its post-quantum cryptography roadmap in June 2025, outlining the Canadian government's plan to transition non-classified IT systems to PQC with ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC names eight firms ready for post-quantum cryptography",
+    "url": "https://www.linkedin.com/posts/stackpublishing_eight-firms-blessed-by-the-ncsc-for-pqc-migration-activity-7374045912265854977-V8HN",
+    "description": "The National Cyber Security Centre has blessed eight firms (Arqit, Avella Cambridge Consultants, Capgemini CGI, Frazer-Nash Consultancy, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "National Quantum Strategy roadmap: Quantum communication and ...",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/en/national-quantum-strategy-roadmap-quantum-communication-and-post-quantum-cryptography",
+    "description": "This roadmap charts a course forward for the quantum communication and post-quantum cryptography mission. It will be updated periodically.",
+    "markdown": ""
+  },
+  {
+    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
+    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
+    "description": "The roadmap anticipates that by 2030, Member States will have completed the PQC migration for all high-risk systems. Key actions include:.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technologies and Quantum Computing in Switzerland",
+    "url": "https://postquantum.com/quantum-computing/quantum-switzerland/",
+    "description": "This report provides a technical overview of Switzerland's quantum ecosystem – from historical milestones and national initiatives to academic leadership, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Are Enterprises Ready for Quantum-Safe Cybersecurity? - arXiv",
+    "url": "https://arxiv.org/html/2509.01731v1",
+    "description": "We recommend immediate steps: establishing crypto-agility, creating quantum transition roadmaps, prioritizing PQC deployment in high-value ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
+    "markdown": ""
+  },
+  {
+    "title": "Passage de la Confédération à la cryptographie post-quantique",
+    "url": "https://www.parlament.ch/fr/ratsbetrieb/amtliches-bulletin/amtliches-bulletin-die-verhandlungen?SubjectId=67735",
+    "description": "24.4398 - Passage de la Confédération à la cryptographie post-quantique. Conseil national Session de printemps 2025 Quinzième séance 21.03.25 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantensichere Systeme beim Bund",
+    "url": "https://ws-old.parlament.ch/affairs/20233689",
+    "description": "... Post-Quanten-Kryptografie durchführt. Dieser Auswahlprozess wird voraussichtlich 2024 abgeschlossen. Es ist davon auszugehen, dass danach die neuen ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 22333 :;<=>?@>=AB<C DEDF G>= H;=I;J>KC",
+    "url": "https://www.parlament.ch/centers/documents/_layouts/15/DocIdRedir.aspx?ID=DOCID-1-11161",
+    "description": "... \"#\"$ &'(')*' +(' ,-).-/'0*-)(123' 4')5-.*6071890*)9..' :,4;< (3) =#> ?6@(.A6/>. B/ C-6&' +'1 ?-3)'1 56)+'0 D5'( (3)') E0*')1623607'0 F6@.",
+    "markdown": ""
+  },
+  {
+    "title": "Einsatz Quantum Safe/quantensichere Kryptografie beim Bund",
+    "url": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244398",
+    "description": "Zu 9) Der Fokus des Bundes liegt auf der Post-Quantum Kryptografie. Verfahren, welche eine Quantum Key Distribution nutzen, bieten mindestens im aktuellen ...",
+    "markdown": ""
+  },
+  {
+    "title": "Faire de la Suisse un pays à la pointe de l'informatique quantique et ...",
+    "url": "https://www.parlament.ch/fr/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244511",
+    "description": "... cryptographie post-quantique; préparer des propositions sur la manière dont la Suisse peut jouer un rôle de premier plan dans des instances et des ...",
+    "markdown": ""
+  },
+  {
+    "title": "24.4511 | Quantencomputing. Positionierung der Schweiz als ...",
+    "url": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20244511",
+    "description": "... Post-Quanten-Kryptografie. Vorschläge, wie die Schweiz eine führende Rolle in internationalen Gremien und Kooperationen einnehmen kann, um ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Sicherheitspolitische Kommission des Ständerates - Parlament",
+    "url": "https://www.parlament.ch/centers/kb/Documents/2022/Kommissionsbericht_SiK-S_22.4270_2023-07-04.pdf",
+    "description": "- Kryptografie, einschliesslich der Post-Quanten-Kryptografie,. - Quantencomputer,. - künstliche Intelligenz,. - erweiterte Realität (augmented ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Banque nationale suisse, 118e rapport de gestion 2025 - SNB",
+    "url": "https://www.snb.ch/public/asset/fr/www-snb-ch/publications/communication/annual-report/annrep_2025_komplett/publications0_fr/annrep_2025_komplett.fr.pdf",
+    "description": "existante aux exigences de la cryptographie post-quantique. De telles adaptations sont nécessaires, car du fait de leur puissance de calcul ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Banque nationale suisse, 116e rapport de gestion 2023, Compte ...",
+    "url": "https://www.snb.ch/dam/jcr:9846c50a-cf59-449c-b2b5-74d33e65f754/annrep_2023_rechenschaft.fr.pdf",
+    "description": "la cybersécurité, un mode de cryptographie post-quantique a été utilisé en vue de protéger les MNBC contre des attaques lancées au moyen d'ordinateurs ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Banque nationale suisse, 116e rapport de gestion 2023 - SNB",
+    "url": "https://www.snb.ch/public/asset/fr/www-snb-ch/publications/communication/annual-report/annrep_2023_komplett/publications0_fr/annrep_2023_komplett.fr.pdf",
+    "description": "la cybersécurité, un mode de cryptographie post-quantique a été utilisé en vue de protéger les MNBC contre des attaques lancées au moyen d'ordinateurs ...",
+    "markdown": ""
+  }
+]

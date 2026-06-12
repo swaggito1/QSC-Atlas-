@@ -1,0 +1,122 @@
+[
+  {
+    "title": "NATO ühilduvuse alus — Sõdur : Eesti sõjandusajakiri March 2025 ...",
+    "url": "https://dea.digar.ee/?a=d&d=AKsodur202503.2.11.1&l=en",
+    "description": "Samuti on selle raamistiku ülesanne kaasata uusi lahendusi, nagu tehisaru rakendamine või kvantkindel krüptograafia. Selle kõige loomiseks on moodustatud ...",
+    "markdown": ""
+  },
+  {
+    "title": "Küberturvalisuse põhitõed inseneriettevõtetele: innovatsiooni ja ...",
+    "url": "https://www.ssl.com/et/artikkel/k%C3%BCberturvalisuse-p%C3%B5hialused-insenerib%C3%BCroodele--kes-kaitsevad-innovatsiooni-ja-andmeid/",
+    "description": "Kvantkindel krüptograafia: edusammud kvantarvutuses sunnivad ettevõtteid uurima ja kasutusele võtma kvantkindlaid krüptoalgoritme, et ...",
+    "markdown": ""
+  },
+  {
+    "title": "Krüptovaluutaturg tõuseb 2.27. aasta esimesel poolel 2024 triljoni ...",
+    "url": "https://financefeeds.com/et/cryptocurrency-market-soars-to-2-27-trillion-in-first-half-of-2024-and-institutional-inflows/",
+    "description": "Kvantkindel krüptograafia: Kvantarvutite arenedes muutub vajadus kvantkindlate krüptomeetodite järele üha tungivamaks. Eeldatakse, et selle valdkonna teadus ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Identifying Obstacles of PQC Migration in E-Estonia - CCDCOE",
+    "url": "https://ccdcoe.org/uploads/2024/05/CyCon_2024_Vakarjuk_Snetkov_Laud-1.pdf",
+    "description": "In this paper, we study Estonia's e-government ecosystem, outline systems and products that rely on potentially vulnerable cryptographic primitives, identify ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The Roadmap on Post Quantum Cryptography sets out recommendations based around three milestones: 31 Dec 2026: Initial national transition roadmaps and first ...",
+    "markdown": ""
+  },
+  {
+    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC) Compliance Standards",
+    "url": "https://www.safelogic.com/compliance/pqc-standards",
+    "description": "Stay ahead of PQC compliance mandates with an overview of post-quantum cryptography standards and global regulatory timelines.",
+    "markdown": ""
+  },
+  {
+    "title": "Cybernetica to lead Estonia's transition to quantum-safe e-governance",
+    "url": "https://cyber.ee/resources/news/estonia-pqc-transition/",
+    "description": "Cybernetica has been awarded three strategic procurements by the Estonian government to lead the nation's transition of e-governance systems ...",
+    "markdown": ""
+  },
+  {
+    "title": "Bart Preneel's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/bart-preneel-4451412_a-coordinated-implementation-roadmap-for-activity-7343171973776072705-TY3B",
+    "description": "The EU NIS Cooperation group has published its post-quantum migration roadmap. by the end of 2026",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "National Cybersecurity Center of Excellence (NCCoE) Migration to ...",
+    "url": "https://www.federalregister.gov/documents/2021/10/13/2021-22223/national-cybersecurity-center-of-excellence-nccoe-migration-to-post-quantum-cryptography",
+    "description": "This notice is the initial step for the National Cybersecurity Center of Excellence (NCCoE) to address cybersecurity challenges identified ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Estonia's Roadmap for Encryption in the Age of Quantum Computing",
+    "url": "https://thequantuminsider.com/2024/06/13/estonias-roadmap-for-encryption-in-the-age-of-quantum-computing/",
+    "description": "Willemson outlined three areas where pre-quantum cryptography may suffice even after large quantum computers emerge based on risk analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "National Quantum Strategy roadmap: Quantum communication and ...",
+    "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/en/national-quantum-strategy-roadmap-quantum-communication-and-post-quantum-cryptography",
+    "description": "This roadmap charts a course forward for the quantum communication and post-quantum cryptography mission. It will be updated periodically.",
+    "markdown": ""
+  },
+  {
+    "title": "EU's Post-Quantum Implementation Roadmap. | Antti Tolvanen",
+    "url": "https://www.linkedin.com/posts/antti12tolvanen_eus-post-quantum-implementation-roadmap-activity-7343207499463909379-OAYx",
+    "description": "The post-quantum cryptography roadmap provides a clear direction to ensure the robust security of our digital infrastructure by 2030.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029.",
+    "markdown": ""
+  },
+  {
+    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
+    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
+    "description": "Quantum-safe readiness relies on how cryptography is embedded across network infrastructure, identity systems, encrypted traffic flows, and long-lived data ...",
+    "markdown": ""
+  }
+]

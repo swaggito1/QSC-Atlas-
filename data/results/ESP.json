@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Supercomputing and quantum computing in cybersecurity",
+    "country": "ESP",
+    "issuingOrg": "INCIBE-CERT",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.incibe.es/incibe-cert/blog/supercomputacion-y-computacion-cuantica-en-ciberseguridad",
+    "summary": "INCIBE-CERT article on supercomputing and quantum computing in cybersecurity, addressing the need to adopt post-quantum cryptography to protect systems against the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "NCC-ES INCIBE dossier: European public administrations and the post-quantum transition",
+    "country": "ESP",
+    "issuingOrg": "INCIBE (NCC-ES)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.incibe.es/sites/default/files/eventos/Infoday%2025%20enero/NCC-ES%20INCIBE%20DOSIER%20.pdf",
+    "summary": "Dossier from Spain's National Coordination Centre (NCC-ES) at INCIBE describing the roadmap for European public administrations to transition to Post-Quantum Cryptography (PQC). Subject matter is the EU-level transition, presented through the Spanish coordination centre.",
+    "included": true
+  },
+  {
+    "title": "Vulnerability in liboqs (CVE-2025-48946)",
+    "country": "ESP",
+    "issuingOrg": "INCIBE-CERT",
+    "year": 2025,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2025-48946",
+    "summary": "INCIBE-CERT early-warning advisory on a vulnerability (CVE-2025-48946) in liboqs, an open-source C library implementing post-quantum cryptographic algorithms.",
+    "included": true
+  },
+  {
+    "title": "INCIBE inaugurates the 9th edition of the Spanish Cybersecurity Research Conference",
+    "country": "ESP",
+    "issuingOrg": "INCIBE",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.incibe.es/en/incibe/press-room/incibe-inaugurates-9th-edition-spanish-cybersecurity-research-conference-0",
+    "summary": "INCIBE press release on the national cybersecurity research conference, noting post-quantum cryptography among the accepted research topics.",
+    "included": true
+  },
+  {
+    "title": "Post-quantum cryptography: how to protect our information in the quantum era",
+    "country": "ESP",
+    "issuingOrg": "Oficina Nacional de Prospectiva (futuros.gob.es)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://futuros.gob.es/tendencias/criptografia-post-cuantica",
+    "summary": "Spanish government foresight portal (futuros.gob.es) trend analysis explaining post-quantum cryptography (PQC) as new security methods designed to protect information against quantum-capable adversaries.",
+    "included": true
+  },
+  {
+    "title": "The path towards quantum supremacy",
+    "country": "ESP",
+    "issuingOrg": "Banco de España",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/24/Fich/do2421.pdf",
+    "summary": "Banco de España Occasional Paper examining quantum computing risks to data security, studying post-quantum and quantum cryptography as solutions to the store-now-decrypt-later (SNDL) threat. Central bank publication; bde.es is not on the trusted-domains list, flagged for review.",
+    "included": true
+  },
+  {
+    "title": "Financial stability implications of post-quantum cryptography (FSR Box 5.3)",
+    "country": "ESP",
+    "issuingOrg": "Banco de España",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bde.es/f/webbe/Secciones/Publicaciones/InformesBoletinesRevistas/InformesEstabilidadFinancera/26/FSR_2026_1_Box5_3.pdf",
+    "summary": "Banco de España Financial Stability Report box noting that a future transition to post-quantum cryptography would entail substantial technical and organisational effort and requires advance planning. Central bank publication not on the trusted-domains list, flagged for review.",
+    "included": true
+  },
+  {
+    "title": "Parliamentary bulletin on post-quantum cryptography (BOCG, Cortes Generales, no. 223)",
+    "country": "ESP",
+    "issuingOrg": "Congreso de los Diputados",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.congreso.es/es/c/portal/update_language?p_l_id=696133&redirect=%2Fes%2Fbusqueda-de-publicaciones%3Fp_p_id%3Dpublicaciones%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_publicaciones_mode%3DmostrarTextoIntegro%26_publicaciones_legislatura%3DXV%26_publicaciones_id_texto%3D(BOCG-15-CG-A-223.CODI.)&languageId=en_GB",
+    "summary": "Official bulletin of the Spanish Cortes Generales (BOCG, serie A, no. 223) stating that the transition to post-quantum cryptography must start from a complete inventory of cryptographic systems, protocols and algorithms. Parliamentary source; URL is a portal language-redirect link, flagged for review.",
+    "included": true
+  },
+  {
+    "title": "Cybersecurity report (Congreso de los Diputados)",
+    "country": "ESP",
+    "issuingOrg": "Congreso de los Diputados",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.congreso.es/backoffice_doc/prensa/notas_prensa/94233_1668420206649.pdf",
+    "summary": "Spanish Congress cybersecurity document discussing post-quantum and quantum cryptography, i.e. the development of algorithms to encrypt information against quantum attacks. Parliamentary source not on the trusted-domains list, flagged for review.",
+    "included": true
+  },
+  {
+    "title": "Parliamentary written response citing post-quantum cryptography research",
+    "country": "ESP",
+    "issuingOrg": "Congreso de los Diputados",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.congreso.es/entradap/l14p/e25/e_0255546_n_000.pdf",
+    "summary": "Spanish Congress written reply referencing recent work including post-quantum biometric authentication research. Institutional parliamentary record; PQC reference is a citation of research rather than a policy document, flagged for review.",
+    "included": true
+  }
+]

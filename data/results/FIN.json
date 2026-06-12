@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Finland's Quantum Technology Strategy 2025–2035",
+    "country": "FIN",
+    "issuingOrg": "Finnish Government (Valtioneuvosto)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://julkaisut.valtioneuvosto.fi/bitstreams/d58ab039-a9c7-47dd-a816-58718208a18e/download",
+    "summary": "National strategy published in the Finnish Government publications repository aiming to give Finland a prominent role in developing and using quantum technology over 2025–2035. Whether it contains an explicit post-quantum/quantum-safe cryptography reference is not confirmed from the candidate metadata, so flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "From threat scenarios to quantum-safe cryptography: how to secure digital trust",
+    "country": "FIN",
+    "issuingOrg": "VTT Technical Research Centre of Finland",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.vttresearch.com/fi/uutiset-ja-tarinat/uhkakuvista-kvanttiturvalliseen-kryptografiaan-miten-digitaalinen-luottamus",
+    "summary": "Article from Finland's state research institute VTT discussing quantum-safe cryptography and the need for near-term solutions to maintain digital trust. Institutional Finnish research body and explicitly PQC-themed, but a news/story page rather than a formal publication, so flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "Finnish Quantum Technology Roadmap",
+    "country": "FIN",
+    "issuingOrg": "InstituteQ",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T4",
+    "url": "https://instituteq.fi/finnish-quantum-technology-roadmap/",
+    "summary": "Evolving Finnish quantum technology roadmap from InstituteQ (the Finnish national quantum institute) covering quantum computing, communication and sensing. An explicit post-quantum/quantum-safe cryptography focus is not confirmed from the candidate metadata, so flagged for human review.",
+    "included": false
+  }
+]

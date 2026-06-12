@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Post-Quantum Cryptography and Quantum-Resistant Cryptography",
+    "country": "HUN",
+    "issuingOrg": "NKI",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nki.gov.hu/it-biztonsag/hirek/maris-elkesett-az-eu-a-kvantum-haboruban/post-quantum-cryptography-and-quantum-resistant-cryptography-p/",
+    "summary": "News article from Hungary's National Cyber Security Institute (NKI) on post-quantum and quantum-resistant cryptography, published in its IT security news section.",
+    "included": true
+  },
+  {
+    "title": "IT Security Press Review (week 28)",
+    "country": "HUN",
+    "issuingOrg": "NKI",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nki.gov.hu/wp-content/uploads/2025/07/Sajtoszemle_28.-het.pdf",
+    "summary": "Weekly IT-security press review published by Hungary's National Cyber Security Institute (NKI) that discusses quantum communication and post-quantum cryptography (PQC). This is a press-digest compilation of external news rather than an original NKI policy position; flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "IT Security Newsletter / Press Review (week 47)",
+    "country": "HUN",
+    "issuingOrg": "NKI",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nki.gov.hu/wp-content/uploads/2025/11/Sajtoszemle-47.-het.pdf",
+    "summary": "Press-review newsletter published by Hungary's National Cyber Security Institute (NKI) referencing the need to develop a post-quantum cryptography (PQC) migration plan accounting for existing systems. This is a press-digest compilation rather than an original NKI policy document; flagged for human review.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography and the QCI Hungary Project",
+    "country": "HUN",
+    "issuingOrg": "KIFU / QCI Hungary",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://qcihungary.hu/wp-content/uploads/2024/04/QCIHungary_Uton_-a_kvantuminformatikaba_Mohacsi_Janos_KIFU.pdf",
+    "summary": "Presentation on post-quantum cryptography and the QCI Hungary project, authored by Janos Mohacsi of KIFU (the Hungarian Governmental Agency for IT Development), the national node of the EU EuroQCI initiative. Domestic and government-linked but a project presentation rather than a formal published document, and not on the trusted-domains list; flagged for human review.",
+    "included": true
+  }
+]

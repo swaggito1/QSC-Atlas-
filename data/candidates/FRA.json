@@ -1,8 +1,236 @@
 [
   {
+    "title": "Cryptographie post-quantique (PQC) - ANSSI",
+    "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/",
+    "description": "La cryptographie post-quantique (communément abrégée en PQC pour Post Quantum Cryptography) est un ensemble d'algorithmes de cryptographie classique ...",
+    "markdown": ""
+  },
+  {
     "title": "ANSSI views on the Post-Quantum Cryptography transition",
     "url": "https://messervices.cyber.gouv.fr/guides/en-anssi-views-post-quantum-cryptography-transition",
-    "description": "As the national cybersecurity authority in France, ANSSI has followed closely and participated to the progress in post-quantum cryptography. ANSSI has planned ...",
+    "description": "Post-Quantum Cryptography (PQC) is a family of cryptographic algorithms ... Cryptographie post-quantique. ANSSI. 1 février 2026. Illustration du guide.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-quantum cryptography (PQC) - ANSSI",
+    "url": "https://cyber.gouv.fr/en/technological-and-cybersecurity-challenges/post-quantum-cryptography/",
+    "description": "Post-quantum cryptography (PQC) refers to a set of traditional cryptographic algorithms including key establishment and digital signatures and intended to ...",
+    "markdown": ""
+  },
+  {
+    "title": "FaQ sur la Cryptographie post-quantique (PQC) - ANSSI",
+    "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+    "description": "La transition vers la cryptographie post-quantique repose sur la mise à disposition d'une offre de produits PQC de confiance sur le marché, ainsi que sur une ...",
+    "markdown": ""
+  },
+  {
+    "title": "L'ANSSI partage deux études de marché sur la cryptographie post ...",
+    "url": "https://cyber.gouv.fr/actualites/lanssi-partage-deux-%C3%A9tudes-de-march%C3%A9-sur-la-cryptographie-post-quantique-men%C3%A9es-aupr%C3%A8s-de-l%C3%A9cosyst%C3%A8me/",
+    "description": "La cryptographie post-quantique (PQC) est un ensemble d'algorithmes cryptographiques classiques comprenant les établissements de clés et les ...",
+    "markdown": ""
+  },
+  {
+    "title": "Premiers visas de sécurité incluant de la cryptographie post-quantique",
+    "url": "https://cyber.gouv.fr/actualites/pour-lanssi-la-cryptographie-post-quantique-post-quantum-cryptography-ou-pqc-repr%C3%A9sente-la-voie-la-plus-prometteuse-pour-se-pr%C3%A9munir-contre-la-menace-quantique-la-transition-post-quantique-repose-notamment-sur-la-mise-%C3%A0-disposition-pour-les-uti/",
+    "description": "Pour l'ANSSI, la cryptographie post-quantique (post-quantum cryptography, ou « PQC ») représente la voie la plus prometteuse pour se prémunir ...",
+    "markdown": ""
+  },
+  {
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://cyber.gouv.fr/nous-connaitre/publications/publications-internationales/a-coordinated-implementation-roadmap-for-the-transition-to-post-quantum-cryptography/",
+    "description": "Le groupe de travail de l'UE sur la cryptographie post-quantique (PQC) a publié sa feuille de route pour une mise en œuvre coordonnée de la ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique, les travaux de l'ANSSI",
+    "url": "https://cyber.gouv.fr/actualites/cryptographie-post-quantique-les-travaux-de-lanssi/",
+    "description": "La cryptographie post-quantique est un ensemble d'algorithmes de cryptographie de nouvelle génération. Ces derniers offrent les fonctionnalités ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] cryptographies quantiques et post-quantiques - Assemblée nationale",
+    "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/83087/file/18.%20Note_CryptoQuantique_PostQuantique_20190725.pdf",
+    "description": "En parallèle de la cryptographie post-quantique (qui repose, en réalité, sur des algorithmes de chiffrement classiques), et pour anticiper la ...",
+    "markdown": ""
+  },
+  {
+    "title": "Science and technology briefings - Assemblée nationale",
+    "url": "https://www2.assemblee-nationale.fr/15/les-delegations-comite-et-office-parlementaire/office-parlementaire-d-evaluation-des-choix-scientifiques-et-technologiques/articles-caches/science-and-technology-briefings",
+    "description": "- Quantum Technologies : Quantum and Post-Quantum Cryptography - (N°18 July 2019) In English. - Vaccination Policy in France - (N°17 July 2019) In English.",
+    "markdown": ""
+  },
+  {
+    "title": "cryptographies quantiques et post-quantiques (n°18 - juillet 2019)",
+    "url": "https://www2.assemblee-nationale.fr/15/les-delegations-comite-et-office-parlementaire/office-parlementaire-d-evaluation-des-choix-scientifiques-et-technologiques/secretariat/notes-scientifiques-de-l-office/technologies-quantiques-cryptographies-quantiques-et-post-quantiques-n-18-juillet-2019",
+    "description": "... cryptographie post-quantique, qui se base sur de nouveaux concepts mathématiques pour chiffrer les protocoles de communication, d'autre part ...",
+    "markdown": ""
+  },
+  {
+    "title": "CRCANR5L15S2022PO273589...",
+    "url": "https://www.assemblee-nationale.fr/dyn/docs/CRCANR5L15S2022PO273589N119.raw",
+    "description": "... cryptographie post-quantique. Cette audition est publique. Elle est diffusée en direct puis en différé sur le site du Sénat. Dans la salle et en ...",
+    "markdown": ""
+  },
+  {
+    "title": "[XML] https://www.assemblee-nationale.fr/dyn/opendata ...",
+    "url": "https://www.assemblee-nationale.fr/dyn/opendata/AMANR5L17PO59046B2630P0D1N000439.xml",
+    "description": "... cryptographie post-quantique. &#x00BB;</p></dispositif> ... cryptographie post-quantique et les communications. Ils doivent &amp ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] ASSEMBLÉE NATIONALE AMENDEMENT",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/1906C/CION_FIN/CF1171.pdf",
+    "description": "quantique, à la cryptographie post-quantique et à la détection quantique. La Chine, de son côté, a annoncé la production en série d'un ...",
+    "markdown": ""
+  },
+  {
+    "title": "Jeudi 20 janvier 2022",
+    "url": "https://www.assemblee-nationale.fr/dyn/opendata/CRCANR5L15S2022PO273589N128.html",
+    "description": "Je rappelle que la cryptographie quantique permet de développer des chiffrements extrêmement sûrs, tandis que la cryptographie post-quantique ...",
+    "markdown": ""
+  },
+  {
+    "title": "Rapport, n° 4933 - 15e législature - Assemblée nationale",
+    "url": "https://www.assemblee-nationale.fr/dyn/old/15/rap-off/i4933.asp",
+    "description": "La cryptographie post-quantique ou les protocoles de cryptographie à l ... cryptographie post-quantique, après un appel à candidatures qui a fortement ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Science and Technology Briefings - Sénat",
+    "url": "https://www.senat.fr/fileadmin/import/files/fileadmin/Fichiers/Images/opecst/quatre_pages_anglais/OPECST_2019_0106_quantum_post_quantum_crypotography_briefing.pdf",
+    "description": "▫ To respond to this threat, two main and complementary aspects are being developed: post-quantum cryptography based on new mathematical concepts to encrypt ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] La Stratégie quantique de la France - Sénat",
+    "url": "https://www.senat.fr/fileadmin/Office_et_delegations/OPECST/Syntheses/2022-01_Strategie_quantique_FR.pdf",
+    "description": "La seconde portait sur les communications quantiques et les méthodes de cryptographie post-quantique. Présentation générale de la stratégie quantique ...",
+    "markdown": ""
+  },
+  {
+    "title": "Sécurité des paiements par carte bancaire face au développement ...",
+    "url": "https://www.senat.fr/questions/base/2025/qSEQ250504828.html",
+    "description": "... cryptographie post-quantique. L'Agence nationale de la sécurité des systèmes d'information (ANSSI) participe activement à ces travaux, en ...",
+    "markdown": ""
+  },
+  {
+    "title": "La stratégie quantique française - Sénat",
+    "url": "https://www.senat.fr/rap/r21-377/r21-377.html",
+    "description": "La seconde table ronde portait sur les communications quantiques et les méthodes de cryptographie post-quantique. Sont intervenus ...",
+    "markdown": ""
+  },
+  {
+    "title": "Audition publique sur la stratégie quantique de la France",
+    "url": "https://videos.senat.fr/video.2549255_616f7a92e3f5b.audition-publique-sur-la-strategie-quantique-de-la-france",
+    "description": "... cryptographie post-quantique, donc j'ai Alice et Bob qui veulent communiquer de manière sécurisée, donc à la fois avec confidentialité authenticité et Alice ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] P R O G R A M M E - Sénat",
+    "url": "https://www.senat.fr/fileadmin/import/files/fileadmin/Fichiers/Images/opecst/programme_auditions_publiques/OPECST_2021_0057_programme_audition_strategie_quantique_21oct21.pdf",
+    "description": "11 h 15 – Table ronde 2 : Communications quantiques et cryptographie post-quantique. M. Sébastien Tanzilli, directeur de recherche à l ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] SCIENCE AND TECHNOLOGY BRIEFINGS",
+    "url": "https://www.senat.fr/fileadmin/Office_et_delegations/OPECST/Notes_scientifiques_en_anglais/OPECST_Note_45_EN.pdf",
+    "description": "post-quantum cryptography.26. Lastly, research must also incorporate environmental and climate resilience. Infrastructure must be designed to withstand ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] The Data Explosion",
+    "url": "https://www.senat.fr/fileadmin/cru-1779899989/Office_et_delegations/OPECST/Notes_scientifiques_en_anglais/OPECST_note36_EN.pdf",
+    "description": "18 “Quantum technologies: Quantum and Post-Quantum. Cryptography”) available at the following links: http://www.senat.fr/opecst/notes.html or https://www2 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Projets de cryptographie post quantique",
+    "url": "https://quantique.france2030.gouv.fr/recherche-innovation/projets-de-cryptographie-post-quantique/",
+    "description": "CryptoNext Security est spécialiste de la cryptographie post quantique, éditeur de bibliothèques logicielles. ... Des logiciels sécurisés à la biométrie et au ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie postquantique - Entrust",
+    "url": "https://www.entrust.com/fr/solutions/post-quantum-cryptography",
+    "description": "La cryptographie post-quantique (PQC) est une nouvelle génération d'algorithmes cryptographiques conçus pour résister aux attaques des ordinateurs quantiques.",
+    "markdown": ""
+  },
+  {
+    "title": "Appel à projets : « Cryptographie post quantique » | Bpifrance",
+    "url": "https://www.bpifrance.fr/nos-appels-a-projets-concours/appel-a-projets-cryptographie-post-quantique",
+    "description": "L'appel à projets « Cryptographie post quantique » est porté par la Stratégie Nationale Quantique « Développer l'offre de cryptographie ...",
+    "markdown": ""
+  },
+  {
+    "title": "Qu'est-ce que la cryptographie post-quantique et la menace PQC",
+    "url": "https://www.mastercard.com/be/fr/Actualit%C3%A9s-et-tendances/stories/2025/what-is-post-quantum-cryptography.html",
+    "description": "La cryptographie post-quantique (PQC) est conçue pour résister aux attaques des futurs ordinateurs quantiques qui pourraient casser les ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique : les chercheurs du laboratoire Xlim et ...",
+    "url": "https://www.unilim.fr/recherche/2025/04/14/cryptographie-post-quantique-les-chercheurs-du-laboratoire-xlim-et-de-linstitut-de-mathematiques-de-bordeaux-consacres-par-le-nist/",
+    "description": "Il y a plus de 25 ans, la cryptographie post-quantique était peu étudiée, mais nos collègues s'y sont intéressés avec persévérance. Aujourd'hui, ...",
+    "markdown": ""
+  },
+  {
+    "title": "La cryptographie post-quantique, qu'est-ce que c'est ? - Red Hat",
+    "url": "https://www.redhat.com/fr/topics/security/post-quantum-cryptography",
+    "description": "Le terme « cryptographie post-quantique », ou PQC (Post-Quantum Cryptography), désigne les algorithmes de chiffrement qui résistent aux ...",
+    "markdown": ""
+  },
+  {
+    "title": "Une feuille de route de mise en œuvre coordonnée pour la transition ...",
+    "url": "https://digital-strategy.ec.europa.eu/fr/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "Cette menace peut être contrée par une transition rapide, complète et coordonnée vers la cryptographie post-quantique (PCQ). Par conséquent, le ...",
+    "markdown": ""
+  },
+  {
+    "title": "emplois Cryptographie post quantique - Indeed",
+    "url": "https://fr.indeed.com/q-cryptographie-post-quantique-emplois.html",
+    "description": "La cryptographie post-quantique (PQC) vise à développer des algorithmes cryptographiques sécurisés contre les attaques quantiques. Connaissance des algorithmes ...",
+    "markdown": ""
+  },
+  {
+    "title": "Guide de l'ANSSI - Cryptographie post-quantique.pdf - LinkedIn",
+    "url": "https://fr.linkedin.com/posts/anssi-fr_guide-de-lanssi-cryptographie-post-quantiquepdf-activity-7424403953423056896-AjGI",
+    "description": "Signal majeur de l'ANSSI qui confirme une réalité critique : la transition vers la PQC n'est plus une option de recherche, mais une nécessité d' ...",
+    "markdown": ""
+  },
+  {
+    "title": "Avis de l'ANSSI sur la migration vers la cryptographie post-quantique",
+    "url": "https://messervices.cyber.gouv.fr/guides/avis-de-lanssi-sur-la-migration-vers-la-cryptographie-post-quantique",
+    "description": "Dans cet avis scientifique et technique, l'ANSSI résume les différents aspects et enjeux de la menace quantique sur les systèmes cryptographiques actuels. Après ...",
+    "markdown": ""
+  },
+  {
+    "title": "ANSSI et cryptographie post-quantique - Orange Cyberdefense",
+    "url": "https://www.orangecyberdefense.com/fr/insights/actualites/anticiper-la-menace-quantique-la-position-de-l-anssi",
+    "description": "L'ANSSI souligne l'urgence de migrer vers la cryptographie post-quantique d'ici 2035 pour préserver la sécurité face aux ordinateurs ...",
+    "markdown": ""
+  },
+  {
+    "title": "Menace quantique : l'ANSSI sonne le tocsin - INCYBER NEWS",
+    "url": "https://incyber.org/article/menace-quantique-lanssi-sonne-tocsin/",
+    "description": "Pour autant, la cryptographie post-quantique ne repose pas sur des technologies quantiques, mais sur de nouveaux algorithmes mathématiques conç ...",
+    "markdown": ""
+  },
+  {
+    "title": "Bien gérer la transition post-quantique de son produit certifié",
+    "url": "https://blog.oppida.apave.com/posts/Transition-Post-Quantique/",
+    "description": "Avis scientifique et technique de l'ANSSI sur la migration vers la cryptographie post-quantique, ANSSI, avril 2022; Avis de l'ANSSI sur la ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Transition post-quantique : aspects techniques - PTCC",
+    "url": "https://ptcc.fr/wp-content/uploads/2024/04/25-06-2024-Objectifs-Techniques-de-la-quantique-post-quantique-last-version-ANSSI.pdf",
+    "description": "Cryptographie, ANSSI. La sécurité post-quantique sera vivement recommandée pour la sécurité à long terme. L'ANSSI établit une liste de critères ...",
+    "markdown": ""
+  },
+  {
+    "title": "L'ANSSI accélère sur la cryptographie post-quantique - Next.ink",
+    "url": "https://next.ink/124074/lanssi-accelere-sur-la-cryptographie-post-quantique/",
+    "description": "Il y a maintenant deux ans que l'ANSSI a publié son avis sur la migration vers la cryptographie post-quantique. L'Agence vient de le mettre ...",
     "markdown": ""
   },
   {
@@ -36,6 +264,18 @@
     "markdown": ""
   },
   {
+    "title": "2026, the year of Post-Quantum Cybersecurity Planning - LinkedIn",
+    "url": "https://www.linkedin.com/pulse/2026-year-post-quantum-cybersecurity-planning-qurisk-nndke",
+    "description": "On 13 January 2026, the G7 Cyber Expert Group (G7 CEG) issued a statement on advancing a coordinated roadmap for the transition to post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC Post-Quantum Cryptography Guidance - Venari Security",
+    "url": "https://www.venarisecurity.com/post-quantum-cryptography-guide/ncsc-guidance/",
+    "description": "Understand NCSC guidance on post-quantum cryptography, its alignment with NIST standards, and what UK and EU organisations should do now.",
+    "markdown": ""
+  },
+  {
     "title": "Migration to Post-Quantum Cryptography - NCCoE",
     "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
     "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
@@ -54,6 +294,18 @@
     "markdown": ""
   },
   {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "Over the past several years, there has been a steady drumbeat of warnings about the impact of quantum computing on traditional encryption ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
     "title": "[PDF] FRANCE NATIONAL QUANTUM STRATEGY ANNUAL REPORT 2022",
     "url": "https://quantique.france2030.gouv.fr/wp-content/uploads/2024/05/Quantique_rapport_activite_2022_v8.fr2030.pdf",
     "description": "The french quantum strategy established in 2021, and supported by France. 2030 plan provides a roadmap for the government to coordinate and accelerate research ...",
@@ -63,12 +315,6 @@
     "title": "[PDF] STRENGTHENING THE EU TRANSITION TO A QUANTUM-SAFE ...",
     "url": "https://cdn.ceps.eu/2025/12/2025-12-Quantum-TF-report-formatted.pdf",
     "description": "In Europe, Germany, France, and the Netherlands have taken a leading role in issuing guidance and running post- quantum cryptography (PQC) pilot ...",
-    "markdown": ""
-  },
-  {
-    "title": "2026, the year of Post-Quantum Cybersecurity Planning - LinkedIn",
-    "url": "https://www.linkedin.com/pulse/2026-year-post-quantum-cybersecurity-planning-qurisk-nndke",
-    "description": "On 13 January 2026, the G7 Cyber Expert Group (G7 CEG) issued a statement on advancing a coordinated roadmap for the transition to post-quantum ...",
     "markdown": ""
   },
   {
@@ -87,6 +333,150 @@
     "title": "French National Quantum Update -- March 2024",
     "url": "https://thequantuminsider.com/2024/03/29/french-national-quantum-update-march-2024/",
     "description": "France also launched PROQCIMA, a program that aims to have two prototypes of universal quantum computers of French design by 2030. It was also ...",
+    "markdown": ""
+  },
+  {
+    "title": "G7 Sets Quantum Deadline: Roadmap Signals Industry Urgency for All",
+    "url": "https://www.forescout.com/blog/g7-sets-quantum-deadline-roadmap-signals-industry-urgency-for-all/",
+    "description": "The G7's new roadmap details the protection journey for post-quantum cryptography. Forescout's CSO breaks down what it means and what to do.",
+    "markdown": ""
+  },
+  {
+    "title": "The Post-Quantum Security Roadmap: A Step-by-Step Guide For ...",
+    "url": "https://cypfer.com/the-post-quantum-security-roadmap-a-step-by-step-guide-for-cisos/",
+    "description": "Quantum computing is changing the cybersecurity landscape. This roadmap offers CISOs a clear path to assess risk, plan strategically, and prepare their ...",
+    "markdown": ""
+  },
+  {
+    "title": "L'ACPR sensibilise l'écosystème à se préparer à la cryptographie ...",
+    "url": "https://acpr.banque-france.fr/fr/actualites/lacpr-sensibilise-lecosysteme-se-preparer-la-cryptographie-post-quantique",
+    "description": "L'ACPR sensibilise l'écosystème à se préparer à la cryptographie post-quantique · La migration « PQC » : un chantier technique au long cours pour ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] POST- QUANTUM CRYPTO- GRAPHY - Banque de France",
+    "url": "https://www.banque-france.fr/system/files/2024-11/BDFxMAS%20report%20final.pdf",
+    "description": "quantum cryptography (PQC) post- quantum cryptography (PQC) to strengthen communication and data security in the face of quantum computing advancements.",
+    "markdown": ""
+  },
+  {
+    "title": "La Banque de France annonce le succès d'une expérimentation de ...",
+    "url": "https://www.banque-france.fr/fr/communiques-de-presse/la-banque-de-france-annonce-le-succes-dune-experimentation-de-securisation-des-donnees",
+    "description": "La cryptographie post-quantique vise à développer des méthodes de protection inviolables même par des technologies quantiques avancées. À propos ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] SECURING CENTRAL BANK REGULATORY FILES TRANSFERS ...",
+    "url": "https://www.banque-france.fr/system/files/2025-10/825446-Rapport-Quantique-Allianz-vF.pdf",
+    "description": "Post Quantum Cryptography (PQC): A field of cryptography focused on developing algorithms resistant to attacks from quantum computers.",
+    "markdown": ""
+  },
+  {
+    "title": "La Banque de France et l'Autorité Monétaire de Singapour réalisent ...",
+    "url": "https://www.banque-france.fr/fr/communiques-de-presse/la-banque-de-france-et-lautorite-monetaire-de-singapour-realisent-une-experimentation-en-matiere-de",
+    "description": "La cryptographie post-quantique désigne un ensemble de techniques et d'algorithmes cryptographiques conçus pour résister aux capacités des ...",
+    "markdown": ""
+  },
+  {
+    "title": "Déclaration relative à l'avancement d'une feuille de route ...",
+    "url": "https://www.banque-france.fr/fr/communiques-de-presse/declaration-relative-lavancement-dune-feuille-de-route-coordonnee-pour-la-transition-vers-la",
+    "description": "Déclaration relative à l'avancement d'une feuille de route coordonnée pour la transition vers la cryptographie post quantique dans le secteur ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Banque de France and Monetary Authority of Singapore conduct ...",
+    "url": "https://www.banque-france.fr/system/files/2024-11/CP_BDF%20MAS_241106_EN.pdf",
+    "description": "By integrating. PQC ... The collaborative efforts with Banque de. France on post-quantum cryptography have been immensely valuable to MAS.",
+    "markdown": ""
+  },
+  {
+    "title": "La Banque de France annonce le succès d'une expérimentation de ...",
+    "url": "https://innovation.banque-france.fr/fr/challenges/fr",
+    "description": "La Banque de France annonce le succès d'une expérimentation de sécurisation des données réglementaires grâce à la cryptographie post-quantique.",
+    "markdown": ""
+  },
+  {
+    "title": "Vocabulaire de l'informatique quantique (liste de termes ... - Légifrance",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046761612",
+    "description": "Équivalent étranger : post-quantum cryptography. cryptographie quantique. Domaine : Télécommunications-Informatique/Informatique quantique ...",
+    "markdown": ""
+  },
+  {
+    "title": "Arrêté du 17 mars 2022 relatif à l'approbation du cahier des charges ...",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045378512",
+    "description": "Le cahier des charges de l'appel à projets « Cryptographie Post-Quantique » du Plan France 2030, relatif à l'action « Maturation de technologies, R&D ...",
+    "markdown": ""
+  },
+  {
+    "title": "LOI n° 2023-703 du 1er août 2023 relative à la programmation ...",
+    "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000047914986/2026-05-16",
+    "description": "c) Transition vers la cryptographie post-quantique ; d) Canon électromagnétique et armes à énergie dirigée ; e) Hélicoptère de combat du ...",
+    "markdown": ""
+  },
+  {
+    "title": "Résolutions - Légifrance",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046165773",
+    "description": "... cryptographie post-quantique, les modalités de cette transition devant être adaptées en fonction du calendrier de déploiement de la ...",
+    "markdown": ""
+  },
+  {
+    "title": "Article Annexe - Légifrance",
+    "url": "https://www.legifrance.gouv.fr/loda/article_lc/JORFARTI000002103447",
+    "description": "... PQC, TG18-LPH10, TG18-LPH50, TG18-LPH89, TG18-LPV10, TG18-LPV50, TG18-LPV89 ... Sur le cliché de la mire AAPM TG 18-PQC, mesurer la densité optique des 18 niveaux ...",
+    "markdown": ""
+  },
+  {
+    "title": "JORF n° 0066 du 19 mars 2022 - Légifrance",
+    "url": "https://www.legifrance.gouv.fr/jorf/jo/2022/03/19/0066?fonds=JORF&nor=RCAC2208593S&page=2&pageSize=25&query=%7B%28%40ALL%5Bt%22Arr%C3%AAt%C3%A9+du+3+juillet+2024+portant+cr%C3%A9ation+d%27une+zone+prot%C3%A9g%C3%A9e%22%5D%29%7D&typePagination=ARTICLE",
+    "description": "Arrêté du 17 mars 2022 relatif à l'approbation du cahier des charges de l'appel à projets « Cryptographie Post-Quantique » · Convention du 16 mars 2022 entre ...",
+    "markdown": ""
+  },
+  {
+    "title": "Décision du 22 novembre 2010 modifiant la décision du 30 janvier ...",
+    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000023305680",
+    "description": "... PQC\" est remplacée par la référence : \"TG-QC\". 46. Au point 8.8.5.2, l'alinéa unique est ainsi rédigé : \"Sur le cliché de la mire AAPM TG 18-PQC ...",
+    "markdown": ""
+  },
+  {
+    "title": "JORF n° 0066 du 19 mars 2022 - Légifrance",
+    "url": "https://www.legifrance.gouv.fr/jorf/jo/2022/03/19/0066",
+    "description": "Arrêté du 17 mars 2022 relatif à l'approbation du cahier des charges de l'appel à projets « Cryptographie Post-Quantique » · Convention du 16 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post quantique - Portail de la stratégie nationale ...",
+    "url": "https://quantique.france2030.gouv.fr/perimetre/cryptographie-post-quantique/",
+    "description": "Dans cet esprit, l'ANSSI a récemment publié une mise à jour de son avis sur la migration vers la cryptographie post-quantique (PQC), offrant des perspectives et ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post quantique - Portail de la stratégie nationale ...",
+    "url": "https://quantique.france2030.gouv.fr/appel-a-proposition/cryptographie-post-quantique/",
+    "description": "Portail de la stratégie nationale quantique > Appels à Propositions > Cryptographie post quantique. Cryptographie post quantique. Partager la page. Partager ...",
+    "markdown": ""
+  },
+  {
+    "title": "Archives des Cryptographie Post-Quantique - Portail de la stratégie ...",
+    "url": "https://quantique.france2030.gouv.fr/category/pqc/",
+    "description": "Cryptographie Post-Quantique. 01/12/2022. Annonces et Communiqués · Cryptographie Post-Quantique · La France envoie son premier télégramme post-quantique.",
+    "markdown": ""
+  },
+  {
+    "title": "Cryptographie post-quantique - Portail de la stratégie nationale ...",
+    "url": "https://quantique.france2030.gouv.fr/cours/cryptographie-post-quantique/",
+    "description": "Cryptographie post-quantique · Enseignant : Antoine Joux · Période d'enseignement : 25 mai 2023 · Lien.",
+    "markdown": ""
+  },
+  {
+    "title": "Mieux de protéger des risques Cyber",
+    "url": "https://quantique.france2030.gouv.fr/impacts/mieux-de-proteger-des-risques-cyber/",
+    "description": "La cryptographie post-quantique est une branche de la cryptographie visant à garantir la sécurité de l'information face à un attaquant disposant d'un ...",
+    "markdown": ""
+  },
+  {
+    "title": "Articles - Page 2 sur 2 - Portail de la stratégie nationale quantique",
+    "url": "https://quantique.france2030.gouv.fr/articles/page/2/",
+    "description": "Cryptographie Post-Quantique · La France envoie son premier télégramme post-quantique. L'ambassade de France aux États-Unis a envoyé à Paris son premier ...",
     "markdown": ""
   }
 ]

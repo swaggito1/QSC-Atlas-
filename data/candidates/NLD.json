@@ -1,0 +1,374 @@
+[
+  {
+    "title": "Wat is quantumveilige cryptografie? - NCSC",
+    "url": "https://www.ncsc.nl/quantumveilige-cryptografie/wat-is-quantumveilige-cryptografie",
+    "description": "De meest effectieve manier om de dreiging van de quantumcomputer te mitigeren is door over te stappen naar quantumveilige cryptografie (QVC), ook wel Post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantumveilige cryptografie - NCSC",
+    "url": "https://www.ncsc.nl/quantumveilige-cryptografie",
+    "description": "Quantumveilige cryptografie. Quantumcomputers vormen met hun enorme rekenkracht een bedreiging voor onze huidige beveiligingssystemen.",
+    "markdown": ""
+  },
+  {
+    "title": "Make your organization quantum secure | NCSC-NL",
+    "url": "https://www.ncsc.nl/en/quantumveilige-cryptografie/maak-je-organisatie-quantumveilig",
+    "description": "Quantumveilige cryptografie. Make your organization quantum secure. Publications and reports. Quantumveilige cryptografie. Intermediate. Quantum computers ...",
+    "markdown": ""
+  },
+  {
+    "title": "NIST brengt drie quantumveilige cryptografiestandaarden uit - NCSC",
+    "url": "https://www.ncsc.nl/expertblogs/nist-brengt-drie-quantumveilige-cryptografiestandaarden-uit-wat-betekent-dit-voor-jouw-organisatie",
+    "description": "Op 13 augustus 2024 heeft NIST drie standaarden voor quantumveilige cryptografie gepubliceerd. De nieuwe quantumveilige standaarden richten zich ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Kicking off your quantum migration program",
+    "url": "https://www.ncsc.nl/api/media/sites/default/files/Make_your_organization_quantum_secure.pdf",
+    "description": "2 Post-quantum cryptography (PQC) is understood to mean cryptography that is impervious to the threat of quantum com- puting. However, PQC is defined in ...",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC NL | Kwetsbaarheden",
+    "url": "https://vulnerabilities.ncsc.nl/vulnerability.html?id=2026/cve-2026-40048",
+    "description": "The Camel-PQC FileBasedKeyLifecycleManager class deserializes the contents of <keyId>.key files in the configured key directory using java.io.",
+    "markdown": ""
+  },
+  {
+    "title": "TNO: Cryptographic Asset Discovery and Inventory - NCSC",
+    "url": "https://www.ncsc.nl/databeveiliging/tno-cryptographic-asset-discovery-and-inventory",
+    "description": "Organisaties moeten nu in actie komen om tijdig te kunnen migreren naar quantumveilige cryptografie. Een belangrijke eerste stap hierin is om een ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Maak je organisatie quantumveilig | NCSC",
+    "url": "https://www.ncsc.nl/api/media/sites/default/files/2025-11/Maak_je_organisatie_quantumveilig.pdf",
+    "description": "In deze handreiking refereren we met quantumveilige cryptografie aan zowel asymmetrische als symmetrische cryptografie die weerbaar is tegen de dreiging van de ...",
+    "markdown": ""
+  },
+  {
+    "title": "Toespraak staatssecretaris Van Marum tijdens het symposium Post ...",
+    "url": "https://www.rijksoverheid.nl/documenten/2026/02/04/toespraak-staatssecretaris-van-marum-tijdens-het-symposium-post-quantum-cryptography",
+    "description": "Eddie van Marum hield een toespraak tijdens het symposium Post Quantum Cryptography op 2 december 2025.",
+    "markdown": ""
+  },
+  {
+    "title": "Het PQC-migratiehandboek | Rijksoverheid.nl",
+    "url": "https://www.rijksoverheid.nl/documenten/2024/12/02/het-pqc-migratiehandboek",
+    "description": "Het PQC-migratiehandboek. Dit document is een bijlage bij. Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie. Kamerstuk20-01 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Het PQC-migratiehandboek | Rapport | Rijksoverheid.nl",
+    "url": "https://www.rijksoverheid.nl/documenten/rapporten/2024/12/02/het-pqc-migratiehandboek",
+    "description": "Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie. Minister Uitermark (BZK) informeert de Tweede Kamer over het vernieuwde ...",
+    "markdown": ""
+  },
+  {
+    "title": "Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie",
+    "url": "https://www.rijksoverheid.nl/documenten/2025/01/20/kamerbrief-bij-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "Minister Uitermark (BZK) informeert de Tweede Kamer over het vernieuwde handboek voor de migratie naar quantumveilige cryptografie.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantumcomputers komen eraan en Nederland is voorbereid",
+    "url": "https://www.rijksoverheid.nl/actueel/nieuws/2025/07/10/quantumcomputers-komen-eraan",
+    "description": "Vanuit de Nederlandse overheid werkt het programma Quantumveilige Cryptografie Rijk aan hulpmiddelen om de risico's van quantumtechnologie op ...",
+    "markdown": ""
+  },
+  {
+    "title": "Beslisnota bij Kamerbrief vernieuwd handboek voor quantumveilige ...",
+    "url": "https://www.rijksoverheid.nl/documenten/2025/01/07/beslisnota-bij-kamerbrief-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "Beslisnota bij Kamerbrief vernieuwd handboek voor quantumveilige cryptografie ... In een beslisnota staat achtergrondinformatie die ...",
+    "markdown": ""
+  },
+  {
+    "title": "Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie",
+    "url": "https://www.rijksoverheid.nl/documenten/beleidsnotas/2025/01/07/beslisnota-bij-kamerbrief-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie ... Minister Uitermark (BZK) informeert de Tweede Kamer over het vernieuwde ...",
+    "markdown": ""
+  },
+  {
+    "title": "Agenda staatssecretaris Van Marum week 49 - Rijksoverheid",
+    "url": "https://www.rijksoverheid.nl/actueel/agenda/2025/12/01/agenda-staatssecretaris-van-marum-week-49",
+    "description": "spreken op de Europese conferentie over post-quantum cryptografie (Den Haag) De computers van de toekomst, de zogenoemde quantumcomputers ...",
+    "markdown": ""
+  },
+  {
+    "title": "Informatie- en communicatietechnologie (ICT) | Tweede Kamer der ...",
+    "url": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2025Z00699&did=2025D01672",
+    "description": "PQC ... is de publicatie van internationaal omarmde standaarden voor postquantum ... quantumveilige cryptografie (PDF) · Bijlage Download bestand: Het PQC- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Beslisnota bij Kamerbrief bij vernieuwd handboek voor ...",
+    "url": "https://www.tweedekamer.nl/kamerstukken/kamervragen/detail?id=2025D01674&did=2025D01674",
+    "description": "Bijlage : Beslisnota bij Kamerbrief bij vernieuwd handboek voor quantumveilige cryptografie. Download. Datum:20 januari 2025. Nummer:2025D01674. Bijlage.",
+    "markdown": ""
+  },
+  {
+    "title": "Opkomende en toekomstige technologieën | Debat Direct",
+    "url": "https://debatdirect.tweedekamer.nl/2025-01-30/digitale-zaken/groen-van-prinstererzaal/opkomende-en-toekomstige-technologieen-10-00/stukken",
+    "description": "... quantumveilige cryptografie (26643, nr. 1273). Vernieuwd handboek voor quantumveilige cryptografie. De brief van de minister voor Rechtsbescherming d.d. 16 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Nieuwe Commissievoorstellen en initiatieven van de lidstaten van ...",
+    "url": "https://www.tweedekamer.nl/kamerstukken/detail?id=2024Z14168&did=2024D34799",
+    "description": "... zich tot de kabinetsinzet op dit fiche, zo vragen de leden van de VVD-fractie? Dit betreft het programma Quantumveilige Cryptografie Rijk. Dit programma is.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] StasBZK/KRD Via: SG BZK Van: DGAIVD Beslisnota bij Verslag ...",
+    "url": "https://www.tweedekamer.nl/downloads/document?id=2024D34801",
+    "description": "PQC en QKD zijn volstrekt andere technologieën. PQC is gebaseerd op onderliggende wiskundige problemen die niet gekraakt kunnen worden met ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Mededeling EU kwantumstrategie (PDF) - Tweede Kamer",
+    "url": "https://www.tweedekamer.nl/downloads/document?id=2025D37585",
+    "description": "programma Quantumveilige Cryptografie NL, dat vitale sectoren ondersteunt bij de migratie naar post-quantum encryptie. Dit draagt direct bij aan de Europese ...",
+    "markdown": ""
+  },
+  {
+    "title": "Antwoord op vragen van lid Sneller over 'Quantumproof encryptie'",
+    "url": "https://www.tweedekamer.nl/kamerstukken/kamervragen/detail?id=2024Z00327&did=2024D08724",
+    "description": "quantumveilige cryptografie en een aantal kansen die dit biedt. Daarnaast zijn er risico's zoals onvoldoende bewustzijn en kennis. Voor dat ...",
+    "markdown": ""
+  },
+  {
+    "title": "Commissiedebat : Opkomende en toekomstige technologieën",
+    "url": "https://www.tweedekamer.nl/debat_en_vergadering/commissievergaderingen/details?id=2021A04825",
+    "description": "7. Vernieuwd handboek voor quantumveilige cryptografie. Te behandelen: - 26643-1273 Brief regering d.d. 20 januari 2025 - J.J.M. Uitermark, minister van ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantumveilige Cryptografie - ISACA Netherlands Chapter",
+    "url": "https://isaca.nl/nl/training-registratie/quantumveilige-cryptografie/",
+    "description": "U wilt leren hoe u de transitie kan maken naar een quantumveilige cryptografie,; U bent verantwoordelijk voor het quantumveilig maken en houden van applicaties ...",
+    "markdown": ""
+  },
+  {
+    "title": "Vernieuwd handboek voor quantumveilige cryptografie - TNO",
+    "url": "https://www.tno.nl/nl/newsroom/2024/12/vernieuwd-handboek-quantumveilige-crypto/",
+    "description": "... quantumveilige cryptografie. Deze uitgebreide tweede editie (pdf) (opent in nieuw venster) bevat, onder andere, de nieuwste ontwikkelingen ...",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD, CWI en TNO publiceren vernieuwd handboek voor ...",
+    "url": "https://www.aivd.nl/actueel/nieuws/2024/12/03/aivd-cwi-en-tno-publiceren-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "... quantumveilige cryptografie. Deze uitgebreide tweede editie bevat, onder andere, de nieuwste ontwikkelingen en adviezen voor de overstap ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantumveilige Cryptografie:​ praktische start voor organisaties",
+    "url": "https://securitytalent.nl/events/quantumveilige-cryptografie-praktische-start-voor-organisaties-2026-05-19",
+    "description": "Quantumveilige Cryptografie:​ praktische start voor organisaties. 19. May. Date: 19 May 2026. Time: 14:00 - 17:30 hrs. Location: The Hague ...",
+    "markdown": ""
+  },
+  {
+    "title": "Informatieset quantumveilige cryptografie ... - Dutch IT Leaders",
+    "url": "https://www.dutchitleaders.nl/news/593995/informatieset-quantumveilige-cryptografie-gepubliceerd",
+    "description": "De Informatieset quantumveilige cryptografie is een uitgave van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties (BZK). Meer weten over dit ...",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD, CWI en TNO publiceren vernieuwd ... - Holland High Tech",
+    "url": "https://hollandhightech.nl/nieuws-agenda/nieuws/archief/2024/aivd-cwi-en-tno-publiceren-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "AIVD, CWI en TNO publiceren vernieuwd handboek voor quantumveilige cryptografie ...",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD, CWI en TNO publiceren vernieuwd handboek voor ...",
+    "url": "https://www.dutchitchannel.nl/news/585749/aivd-cwi-en-tno-publiceren-vernieuwd-handboek-voor-quantumveilige-cryptografie",
+    "description": "AIVD, CWI en TNO publiceren vernieuwd handboek voor quantumveilige cryptografie.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] The PQC Migration Handbook - TNO (Publications)",
+    "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+    "description": "AIVD CWI TNO. The PQC Migration. Handbook. GUIDELINES FOR MIGRATING TO POST-QUANTUM CRYPTOGRAPHY. Revised and Extended Second Edition. Page 2 ...",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD, TNO and CWI publish PQC Migration Handbook",
+    "url": "https://www.cwi.nl/en/news/aivd-tno-and-cwi-publish-handbook-on-migration-to-quantum-secure-communication/",
+    "description": "The PQC Migration Handbook provides guidance on how to properly prepare and execute the transition to quantum-secure communication using post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "The PQC migration handbook: a comprehensive resource | PQShield",
+    "url": "https://pqshield.com/the-pqc-migration-handbook-a-comprehensive-resource/",
+    "description": "With this updated PQC Migration Handbook, the authors provide a comprehensive resource for organizations wanting to understand the quantum threat.",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD, CWI, and TNO publish renewed handbook for quantum-safe ...",
+    "url": "https://english.aivd.nl/latest/news/2024/12/03/aivd-cwi-and-tno-publish-renewed-handbook-for-quantum-safe-cryptography",
+    "description": "This handbook helps organizations identify risks and provides concrete steps to work on a migration strategy, which uses the know-how that has ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] The PQC Migration Handbook Revised and Extended 2nd Edition",
+    "url": "https://post-quantum.nl/slides/PQC7_Slides_Stevens_Leuken_Wehmann.pdf",
+    "description": "The PQC Migration Handbook. Revised and Extended 2nd Edition ... ◦ 1st PQC Migration Handbook published in March 2023. ◦ Collaboration between AIVD, CWI & TNO.",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Cryptography Conversation, based on the The PQC ...",
+    "url": "https://www.youtube.com/watch?v=cDZgfl3nBtg",
+    "description": "The PQC Migration handbook is available via https://english.aivd ... PQC Migration Handbook of AIVD + CWI + TNO. 24 views · 1 year ago",
+    "markdown": ""
+  },
+  {
+    "title": "Frequently Asked Questions about Post-Quantum Cryptography",
+    "url": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/",
+    "description": "We've grouped the most common questions into six key phases of the PQC migration journey, guiding you through the transition needed to protect against the ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] The PQC Migration Handbook - Marc Stevens",
+    "url": "https://www.marc-stevens.nl/research/papers/2023_PQC_Migration_Handbook.pdf",
+    "description": "This handbook has been created with the highest standard of care and expertise of the parties involved. The aim of this publication is to create awareness ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "markdown": ""
+  },
+  {
+    "title": "New tools available to mitigate the threat of quantum computers",
+    "url": "https://www.nldigitalgovernment.nl/news/new-tools-available-to-help-mitigate-the-threat-of-quantum-computers/",
+    "description": "The updated handbook on quantum-safe cryptography and the PQChoiceAssistant tool support governments with future-proofing their security.",
+    "markdown": ""
+  },
+  {
+    "title": "Government guidance on PQC migration accelerates, consensus ...",
+    "url": "https://www.linkedin.com/posts/zygmuntlozinski_quantum-quantumsafe-pqc-activity-7360632343205683200-ApBg",
+    "description": "Organizations should be planning for PQC migration now. High priority systems should be migrated to PQC by 2030 (or 2031). All systems should ...",
+    "markdown": ""
+  },
+  {
+    "title": "What Are NIST PQC Standards? - Palo Alto Networks",
+    "url": "https://www.paloaltonetworks.com/cyberpedia/pqc-standards",
+    "description": "NIST PQC Standards are a suite of formal cryptographic specifications to protect electronic information from future quantum computer attacks.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Conference - November 7 and 8, 2023",
+    "url": "https://pkic.org/events/2023/pqc-conference-amsterdam-nl/",
+    "description": "This indispensable resource equips organizations with pragmatic guidance on how to proactively mitigate the imminent threat posed by quantum computers",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "2nd European Conference on PQC Migration",
+    "url": "https://pqc-conference.eu/",
+    "description": "This 2nd European Conference on the subject of migration to post-quantum cryptography (PQC) is organized by our Dutch-French-German consortium. Dates: 9 & 10 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "NIST expects to publish in 2024, including steps to effectively prioritize migration efforts.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "CNSA 2.0 provides a detailed roadmap for migration, with the goal of complete transition for all NSS to quantum-resistance by 2035.",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "European Conference on PQC Migration, 2-3 December 2025, The ...",
+    "url": "https://cybersecurity-centre.europa.eu/events/european-conference-pqc-migration-2-3-december-2025-hague-netherlands-2025-12-02_en",
+    "description": "This European conference on the subject of migration to post-quantum cryptography (PQC) is organized by our Dutch-French-German consortium ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum computers are coming, and the Netherlands is ready",
+    "url": "https://www.government.nl/latest/news/2025/07/17/quantum-computers",
+    "description": "Whenever you share sensitive information, caution is essential. Strong passwords and two-step verification offer protection.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU post-quantum cryptography roadmap: is a timeline alone ...",
+    "url": "https://www.reddit.com/r/quantumcomputingEU/comments/1ph8qgz/eu_postquantum_cryptography_roadmap_is_a_timeline/",
+    "description": "The EU has established a strict timeline to migrate all public and private systems towards quantum-safe cryptography, with early transition ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] STRENGTHENING THE EU TRANSITION TO A QUANTUM-SAFE ...",
+    "url": "https://cdn.ceps.eu/2025/12/2025-12-Quantum-TF-report-formatted.pdf",
+    "description": "In Europe, Germany, France, and the Netherlands have taken a leading role in issuing guidance and running post- quantum cryptography (PQC) pilot ...",
+    "markdown": ""
+  },
+  {
+    "title": "The PQC Migration Handbook - AIVD",
+    "url": "https://english.aivd.nl/documents/2024/12/3/the-pqc-migration-handbook",
+    "description": "This publication supports organisations with taking steps to mitigate the threath of quantum computers to crypotgraphy.",
+    "markdown": ""
+  },
+  {
+    "title": "Het PQC-migratie handboek - AIVD",
+    "url": "https://www.aivd.nl/documenten/2024/12/3/het-pqc-migratie-handboek",
+    "description": "De meest veelbelovende oplossing is de zogenaamde post-quantumcryptografie (PQC). Deze publicatie is een tweede herziene en uitgebreide editie.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Bescherm je nu tegen de dreiging van quantumcomputers | AIVD",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2026/03/27/bescherm-je-nu-tegen-de-dreiging-van-quantumcomputer-2026/bescherm-je-nu-tegen-de-dreiging-van-quantumcomputers-2026.pdf",
+    "description": "Zo is er binnen de Rijksoverheid het programma Quantumveilige Cryptografie. Nederland (QvC NL) ingericht om de Rijksoverheid en andere ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Securing Tomorrow, Today: Transifie naar Post- Quantumcryptografie",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2025/03/05/transitie-naar-post-quantumcryptografie/Statement+Transitie+naar+post-quantumcryptografie+.pdf",
+    "description": "ontstaat er nog steeds het risico dat de overgang naar quantumveilige cryptografie niet op tijd voltooid kan worden. Dit brengt de ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Bereid je voor op de dreiging van quantum computers - AIVD",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2021/09/23/bereid-je-voor-op-de-dreiging-van-quantumcomputers/Bereid+je+voor+op+de+dreiging+van+quantumcomputers.pdf",
+    "description": "Hoe beveilig je je tegen de dreiging van quantumcomputers? • Bereid je nu voor op migratie naar quantumveilige cryptografie. • Gebruik voor ...",
+    "markdown": ""
+  },
+  {
+    "title": "AIVD-publicaties over informatiebeveiliging",
+    "url": "https://www.aivd.nl/onderwerpen/aandachtsgebieden/informatiebeveiliging/aivd-publicaties-over-informatiebeveiliging",
+    "description": "Organisaties moeten nu in actie komen en zich voorbereiden om de overstap te maken naar quantumveilige cryptografie. De AIVD en het NCSC hebben daarom deze ...",
+    "markdown": ""
+  }
+]

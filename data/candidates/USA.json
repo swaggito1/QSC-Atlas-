@@ -1,26 +1,278 @@
 [
   {
-    "title": "Post-Quantum Cryptography Initiative | CISA",
-    "url": "https://www.cisa.gov/topics/risk-management/quantum",
-    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products ...",
+    "title": "Post-Quantum Cryptography - NIST CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "description": "NIST's Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat ...",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography - NIST CSRC",
-    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
-    "description": "With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography.",
+    "title": "Post-quantum cryptography | NIST",
+    "url": "https://www.nist.gov/pqc",
+    "description": "NIST cryptographic standards — including the new PQC standards — are widely used across government and industry. Federal agencies are required to use them, and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
+    "markdown": ""
+  },
+  {
+    "title": "What Is Post-Quantum Cryptography? | NIST",
+    "url": "https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography",
+    "description": "Though their names sound the same, they are very different. Post-quantum cryptography is a defense against potential cyberattacks from quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography/faqs",
+    "description": "A KeyGen seed is considered an acceptable alternative format for a key-pair, or for the private (ie, decapsulation or signing) key.",
+    "markdown": ""
+  },
+  {
+    "title": "Workshops and Timeline - Post-Quantum Cryptography | CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography/workshops-and-timeline",
+    "description": "Date. September 24-26, 2025. Sixth PQC Standardization Conference (In-Person / Virtual) Venue: NIST Gaithersburg, Maryland, USA. Call for Papers.",
+    "markdown": ""
+  },
+  {
+    "title": "New Draft White Paper | PQC Migration: Mappings to Risk ... - NCCoE",
+    "url": "https://www.nccoe.nist.gov/news-insights/new-draft-white-paper-pqc-migration-mappings-risk-framework-docs",
+    "description": "These methods are referred to as post-quantum cryptography (PQC). The NCCoE Migration to PQC project is a collaboration with industry and ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] NIST IR 8547 initial public draft, Transition to Post-Quantum ...",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf",
+    "description": "These methods are referred to as post-quantum cryptography (PQC). In response, NIST has released three PQC standards to start the next and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Releases Product Categories List to Propel Post-Quantum ...",
+    "url": "https://www.cisa.gov/news-events/news/cisa-releases-product-categories-list-propel-post-quantum-cryptography-adoption-pursuant-president",
+    "description": "This resource identifies hardware and software categories that currently support or are expected to support-post quantum cryptography (PQC) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Considerations for Operational Technology - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/post-quantum-considerations-operational-technology",
+    "description": "CISA has also examined post-quantum threats to National Critical Functions (NCFs) and contributed to guidance on the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Certified Quantum & Post-Quantum Cryptography Professional ...",
+    "url": "https://niccs.cisa.gov/training/catalog/tonex/certified-quantum-post-quantum-cryptography-professional-qpqcp",
+    "description": "Become an expert in cryptographic transitions with the Certified Quantum & Post-Quantum Cryptography Professional (QPQCP). Learn the latest encryption methods.",
+    "markdown": ""
+  },
+  {
+    "title": "CISA, NSA and NIST Publish New Resource for Migrating to Post ...",
+    "url": "https://www.cisa.gov/news-events/news/cisa-nsa-and-nist-publish-new-resource-migrating-post-quantum-cryptography",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography - CISA",
+    "url": "https://www.cisa.gov/resources-tools/resources/quantum-readiness-migration-post-quantum-cryptography",
+    "description": "Quantum-Readiness: Migration to Post-Quantum Cryptography (PQC) includes recommendations to establish a Quantum-Readiness Roadmap, steps to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Post-Quantum Considerations for Operational Technology - CISA",
+    "url": "https://www.cisa.gov/sites/default/files/2024-10/Post-Quantum%20Considerations%20for%20Operational%20Technology%20%28508%29.pdf",
+    "description": "This document builds on those efforts by examining the specific risks that quantum computing could pose to industrial control systems (ICS) and other ...",
     "markdown": ""
   },
   {
     "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
     "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
-    "description": "NSA does not recommend the usage of quantum key distribution and quantum cryptography for securing the transmission of data in National Security Systems (NSS) ...",
+    "description": "Quantum key distribution utilizes the unique properties of quantum mechanical systems to generate and distribute cryptographic keying material using special ...",
+    "markdown": ""
+  },
+  {
+    "title": "NSAs Cybersecurity Perspective on Post Quantum Cryptography ...",
+    "url": "https://www.nsa.gov/Cybersecurity/NSAs-Cybersecurity-Perspective-on-Post-Quantum-Cryptography-Algorithms/",
+    "description": "At the present time, NSA CSD does not anticipate the need to approve other post-quantum cryptographic technologies for NSS usage, but recognizes circumstances ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CSfC Post Quantum Cryptography Guidance Addendum 1.0 Draft.5",
+    "url": "https://www.nsa.gov/Portals/75/documents/resources/everyone/csfc/capability-packages/CSfC%20Post%20Quantum%20Cryptography%20Guidance%20Addendum%201_0%20Draft%20_5.pdf?ver=wCGPoDQXcJKEWTgbH8xsRA%3D%3D",
+    "description": "to clarify the usage of post quantum cryptography (PQC) technologies, product selections, and other. 9 changes. This addendum is provided to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cybersecurity Speaker Series: Preparing for Post-Quantum",
+    "url": "https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3630145/cybersecurity-speaker-series-preparing-for-post-quantum/",
+    "description": "Through the Cybersecurity Speaker Series, the center highlights NSA experts to share their insights, lessons, and contributions of their work in cybersecurity.",
+    "markdown": ""
+  },
+  {
+    "title": "CSI: Quantum-Readiness: Migration to Post-Quantum Cryptography",
+    "url": "https://www.nsa.gov/Press-Room/Digital-Media-Center/Photo-Gallery/igphoto/2003284209/",
+    "description": "CSI: Quantum-Readiness: Migration to Post-Quantum Cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Resources for News Media - Tag Quantum - National Security Agency",
+    "url": "https://www.nsa.gov/Press-Room/News-Highlights/Tag/182434/quantum/",
+    "description": "Jan. 3, 2024. Cybersecurity Speaker Series: Preparing for Post-Quantum. Cryptography is our first and last line of defense for the nation's most sensitive ...",
+    "markdown": ""
+  },
+  {
+    "title": "NSA Releases Future Quantum-Resistant (QR) Algorithm ...",
+    "url": "https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/",
+    "description": "The CNSA 2.0 algorithms have been analyzed as secure against both classical and quantum computers, and they will eventually be required for NSS.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf",
+    "url": "https://www.whitehouse.gov/wp-content/uploads/2022/11/M-23-02-M-Memo-on-Migrating-to-Post-Quantum-Cryptography.pdf",
+    "description": "This memorandum describes preparatory steps for agencies to undertake as they begin their transition to PQC by conducting a prioritized ...",
+    "markdown": ""
+  },
+  {
+    "title": "Sustaining Select Efforts to Strengthen the Nation's Cybersecurity ...",
+    "url": "https://www.whitehouse.gov/presidential-actions/2025/06/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694-and-executive-order-14144/",
+    "description": "... post-quantum cryptography (PQC) are widely available. (ii) By December 1, 2025, to prepare for transition to PQC, the Director of the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Fact Sheet: President Donald J. Trump Reprioritizes Cybersecurity ...",
+    "url": "https://www.whitehouse.gov/fact-sheets/2025/06/fact-sheet-president-donald-j-trump-reprioritizes-cybersecurity-efforts-to-protect-america/",
+    "description": "The Order directs department and agency level actions on post-quantum cryptography to ensure protection against threats that may leverage next ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] President Trump's CYBER STRATEGY for America | The White House",
+    "url": "https://www.whitehouse.gov/wp-content/uploads/2026/03/president-trumps-cyber-strategy-for-america.pdf",
+    "description": "We will promote the adoption of post-quantum cryptography and secure quantum computing. And we will secure the AI technology stack—including our data centers— ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] STRENGTHENING AMERICAN LEADERSHIP IN DIGITAL ...",
+    "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/digital-Assets-Report-EO14178.pdf",
+    "description": "In 2016, NIST launched the post-quantum cryptography (PQC) standardization project to solicit, evaluate, and standardize one or more of ...",
+    "markdown": ""
+  },
+  {
+    "title": "Promoting The Export of the American AI Technology Stack",
+    "url": "https://www.whitehouse.gov/presidential-actions/2025/07/promoting-the-export-of-the-american-ai-technology-stack/",
+    "description": "Section 1. Purpose. Artificial intelligence (AI) is a foundational technology that will define the future of economic growth, national security, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Office of Science and Technology Policy - The White House",
+    "url": "https://www.whitehouse.gov/ostp/",
+    "description": "The OSTP Director oversees the development and execution of the nation's science and technology policy agenda, leading White House efforts in critical and ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] M-25-34-NSTM-2-Fiscal-Year-FY-2027-Administration-Research ...",
+    "url": "https://www.whitehouse.gov/wp-content/uploads/2025/09/M-25-34-NSTM-2-Fiscal-Year-FY-2027-Administration-Research-and-Development-Budget-Priorities-and-Cross-Cutting-Actions.pdf",
+    "description": "\"We are going to conquer the vast frontiers of science, and we are going to lead humanity into space and plant the American flag on the ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] REPORT ON POST-QUANTUM CRYPTOGRAPHY",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/07/REF_PQC-Report_FINAL_Send.pdf",
+    "description": "PQC solves this security challenge by utilizing a different type of mathematical algorithm, one that a CRQC cannot easily solve. However, before ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] NATIONAL CYBERSECURITY STRATEGY IMPLEMENTATION PLAN",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/05/National-Cybersecurity-Strategy-Implementation-Plan-Version-2.pdf",
+    "description": "Prepare for Our Post-Quantum Future ... These investments will promote C-SCRM, including assessing the impacts of Post-Quantum. Cryptography on the supply chain.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] OFCIO Impact Report 2024 - Biden White House",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/12/OFCIO-Impact-Report.pdf",
+    "description": "Post-Quantum Cryptography (PQC) initiating steps for agencies to migrate to PQC. • Established interagency PQC. Migration Working Group. Advancing American AI ...",
+    "markdown": ""
+  },
+  {
+    "title": "[XLS] C-Project Cyber Risk Mitigation - Biden White House",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/12/Project-Cyber-Risk-Assessment-and-Project-Cybersecurity-Risk-Mitigation-Activities-Sample-Template.xlsx",
+    "description": "... post-quantum cryptography. OT: To minimize the impact to latency and availability; encryption is used where feasible, usually for OT communications ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] for a us central - bank digital currency system - Biden White House",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2022/09/09-2022-Technical-Design-Choices-US-CBDC-System.pdf",
+    "description": "How would quantum computers affect public-key cryptography systems and how would the system change post-quantum? How can the system be protected against ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Playbook for Strengthening Cybersecurity in Federal Grant ...",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/12/Playbook-for-Strengthening-Cybersecurity-in-Federal-Grant-Programs.pdf",
+    "description": "post-quantum cryptography. OT: To minimize the impact to latency and availability; encryption is used where feasible, usually for OT. Date: □ Implemented.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] 2024 Report on the Cybersecurity Posture of the United States",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/05/2024-Report-on-the-Cybersecurity-Posture-of-the-United-States.pdf",
+    "description": "The Federal Government continues to engage with a wide range of stakeholders to prepare for a post-quantum future. In August 2023, NIST submitted for public ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] cybersecurity strategy implementation plan - Biden White House",
+    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/07/National-Cybersecurity-Strategy-Implementation-Plan-WH.gov_.pdf",
+    "description": "4.3.3 Standardize, and support transition to, post-quantum cryptographic algorithms. 4.4 Secure Our Clean Energy Future. 4.4.1 Drive adoption of cyber secure ...",
+    "markdown": ""
+  },
+  {
+    "title": "OMB draft memo sets agency and vendor quantum security standards",
+    "url": "https://www.nextgov.com/cybersecurity/2025/07/omb-draft-memo-sets-agency-and-vendor-quantum-security-standards/406703/",
+    "description": "The Office of Management and Budget has drafted a memorandum that directs federal agencies to fully migrate to a post-quantum cryptographic standard.",
     "markdown": ""
   },
   {
     "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
     "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
-    "description": "On August 13, 2024, NIST released three principle PQC standards, “which are mandatory for federal systems,”[3] and recommended other ...",
+    "description": "Of note, the Office of Management and Budget (OMB) is working on a memorandum under the Quantum Computing Cybersecurity Preparedness Act to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Strategy for Migrating to Automated Post-Quantum Cryptography ...",
+    "url": "https://www.cisa.gov/sites/default/files/2024-09/Strategy-for-Migrating-to-Automated-PQC-Discovery-and-Inventory-Tools.pdf",
+    "description": "On November 18, 2022, the Director of the Office of Management and Budget (OMB) issued Memorandum 23-. 02 (M-23-02), “Migrating to Post-Quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "OMB directs federal agencies to adopt post-quantum cryptography",
+    "url": "https://www.linkedin.com/posts/marion-square_omb-draft-memo-sets-agency-and-vendor-quantum-activity-7350933982915510272-oQ0m",
+    "description": "2. Quantum-safe migration: Migration is a multi-year process involving five domains: • Risk Assessment – identify critical assets and quantum- ...",
+    "markdown": ""
+  },
+  {
+    "title": "Memorandum on Preparing for Post-Quantum Cryptography",
+    "url": "https://www.dhs.gov/publication/memorandum-preparing-post-quantum-cryptography",
+    "description": "This memorandum provides guidance to Component Heads to begin preparing for a transition from current cryptography standards to post-quantum encryption now.",
+    "markdown": ""
+  },
+  {
+    "title": "XQ's Zero Trust Data Supports M-23-02 Migration to Post Quantum ...",
+    "url": "https://xqmsg.co/xq-blog/how-xq-zero-trust-data-applies-to-the-m-2m-23-02-memo-on-migrating-to-post-quantum-cryptography",
+    "description": "The purpose of this document is to illustrate how XQ's Zero Trust Data Protection assists the government's migration to post quantum cryptography.",
     "markdown": ""
   },
   {
@@ -36,21 +288,27 @@
     "markdown": ""
   },
   {
-    "title": "Migration to Post-Quantum Cryptography - NCCoE",
-    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
-    "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
+    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "Federal guidance now requires agencies to adopt the first set of NIST-approved post-quantum algorithms. These include FIPS 203 for key ...",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
-    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
-    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
     "markdown": ""
   },
   {
     "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
     "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
     "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Agencies Question Security Protocols Amid Shift to Post-Quantum ...",
+    "url": "https://fedtechmagazine.com/article/2026/05/agencies-question-security-protocols-amid-shift-post-quantum-cryptography",
+    "description": "Google has announced its plans to complete its PQC migrations by 2029, six years ahead of the federal government's 2035 target. NIST expects ...",
     "markdown": ""
   },
   {
@@ -75,6 +333,150 @@
     "title": "From risk to readiness: A guide to quantum safety - Guidehouse",
     "url": "https://guidehouse.com/insights/technology/2025/quantum-safe-cryptography",
     "description": "How financial institutions can leverage post-quantum cryptography to proactively and comprehensively enhance data security.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Post-Quantum Financial Infrastructure Framework (PQFIF) - SEC.gov",
+    "url": "https://www.sec.gov/files/cft-written-input-daniel-bruno-corvelo-costa-090325.pdf",
+    "description": "This document proposes the Post-Quantum Financial Infrastructure Framework (PQFIF), a strategic and technical roadmap designed to guide a secure ...",
+    "markdown": ""
+  },
+  {
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "Text - H.R.3259 - 119th Congress (2025-2026): Post Quantum ...",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3259/text",
+    "description": "This Act may be cited as the “Post Quantum Cybersecurity Standards Act”. SEC. 2. NIST cryptography programs and NSF cryptography research. (a) ...",
+    "markdown": ""
+  },
+  {
+    "title": "H.R.3259 - Post Quantum Cybersecurity Standards Act - Congress.gov",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3259",
+    "description": "Summary of H.R.3259 - 119th Congress (2025-2026): Post Quantum Cybersecurity Standards Act.",
+    "markdown": ""
+  },
+  {
+    "title": "Titles - H.R.3259 - 119th Congress (2025-2026): Post Quantum ...",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3259/titles",
+    "description": "To advance the rapid deployment of post quantum cybersecurity standards across the United States economy, support United States cryptography research, and for ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Preparing Secrets for a Post-Quantum World—National Security ...",
+    "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN11921/IN11921.2.pdf",
+    "description": "Preparing Secrets for a Post-Quantum. World—National Security Memorandum 10. May 9, 2022. On May 4, 2022, President Biden signed National Security ...",
+    "markdown": ""
+  },
+  {
+    "title": "Untitled",
+    "url": "https://www.congress.gov/119/bills/s3312/BILLS-119s3312is.htm",
+    "description": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 3312 Introduced in Senate (IS)] <DOC> 119th CONGRESS 1st Session S.",
+    "markdown": ""
+  },
+  {
+    "title": "All Info - H.R.3259 - 119th Congress (2025-2026): Post Quantum ...",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3259/all-info",
+    "description": "To amend the National Quantum Initiative Act and the Cyber Security Research and Development Act to advance the rapid deployment of post quantum cybersecurity ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Cybersecurity Standards Act 119th Congress (2025 ...",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3259/history",
+    "description": "A bill to amend the National Quantum Initiative Act and the Cyber Security Research and Development Act to advance the rapid deployment of post quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] S. 2558 - GovInfo",
+    "url": "https://www.congress.gov/119/bills/s2558/BILLS-119s2558is.pdf",
+    "description": "To require the Subcommittee on the Economic and Security Implications of Quantum Information Science to assess possible migration by Federal.",
+    "markdown": ""
+  },
+  {
+    "title": "Science & Tech Spotlight: Securing Data for a Post-Quantum World",
+    "url": "https://www.gao.gov/products/gao-23-106559",
+    "description": "This spotlight looks at how to better secure data before quantum computers capable of breaking those encryption methods are ready in possibly 10-20 years.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] SECURING DATA FOR A POST-QUANTUM WORLD",
+    "url": "https://www.gao.gov/assets/gao-23-106559.pdf",
+    "description": "To combat the threat of CRQCs, researchers are developing and standardizing new encryption methods collectively referred to as post- quantum cryptography (PQC).",
+    "markdown": ""
+  },
+  {
+    "title": "Leadership Needed to Coordinate Cyber Threat Mitigation Strategy",
+    "url": "https://files.gao.gov/reports/GAO-25-108590/index.html",
+    "description": "In particular, the assessment explained that it may be costly and challenging to migrate these systems to post-quantum cryptography (PQC)— ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] GAO-25-107703, Future of Cybersecurity",
+    "url": "https://www.gao.gov/assets/gao-25-107703.pdf",
+    "description": "Specifically, the Office of Management and Budget's. (OMB) Report on Post-Quantum Cryptography provided a cost estimate of. $7.1 billion to ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Leadership Needed to Coordinate Cyber Threat Mitigation Strategy",
+    "url": "https://www.gao.gov/assets/gao-25-108590.pdf",
+    "description": "In particular, the assessment explained that it may be costly and challenging to migrate these systems to post-quantum cryptography. (PQC)— ...",
+    "markdown": ""
+  },
+  {
+    "title": "Leadership Needed to Fully Define Quantum Threat Mitigation ...",
+    "url": "https://www.gao.gov/products/gao-25-107703",
+    "description": "With regard to methodology, three post-quantum cryptography standards documents provided information on how they were developed. However ...",
+    "markdown": ""
+  },
+  {
+    "title": "Leadership Needed to Coordinate Cyber Threat Mitigation Strategy",
+    "url": "https://www.gao.gov/products/gao-25-108590",
+    "description": "Based on review of these documents, GAO identified three central goals in the strategy: (1) standardize post-quantum cryptography that is ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Technology | U.S. GAO",
+    "url": "https://www.gao.gov/quantum-technology",
+    "description": "Quantum technology could revolutionize sensors, computation, and communication. This type of technology uses quantum physics, often occurring at atomic scales.",
+    "markdown": ""
+  },
+  {
+    "title": "Preparing for Post-Quantum Cryptography: Infographic",
+    "url": "https://www.dhs.gov/publication/preparing-post-quantum-cryptography-infographic",
+    "description": "This guide will help organizations create effective plans to ensure the continued security of their essential data against the post-quantum threat.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Frequently Asked Questions",
+    "url": "https://www.dhs.gov/publication/post-quantum-cryptography-frequently-asked-questions",
+    "description": "A roadmap to help organizations protect their data and systems and to reduce risks related to the advancement of quantum computing technology.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Post-Quantum Cryptography FAQ - Homeland Security",
+    "url": "https://www.dhs.gov/sites/default/files/publications/post_quantum_cryptography_faq_3_seals_october_2021_508.pdf",
+    "description": "A quantum machine's ability to find the cryptographic key. NIST plans to publish standards for post-quantum cryptography in 2024 and at that ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Preparing for Post-Quantum Cryptography Infographic",
+    "url": "https://www.dhs.gov/sites/default/files/publications/post-quantum_cryptography_infographic_october_2021_508.pdf",
+    "description": "This guide will help organizations create effective plans to ensure the continued security of their essential data against the post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Preparing for Post-Quantum Cryptography Memo - Homeland Security",
+    "url": "https://www.dhs.gov/sites/default/files/publications/usm_quantum_memo_0.pdf",
+    "description": "This memorandum provides guidance to Component Heads to begin preparing for a transition from current cryptography standards to post-quantum ...",
+    "markdown": ""
+  },
+  {
+    "title": "Cybersecurity - Homeland Security",
+    "url": "https://www.dhs.gov/publications-library/cybersecurity?page=2",
+    "description": "Memorandum on Preparing for Post-Quantum Cryptography. This memorandum provides guidance to Component Heads to begin preparing for a transition from current ...",
     "markdown": ""
   }
 ]

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Q-Ready 25: Quantum-Security Horizons Conference",
+    "country": "LVA",
+    "issuingOrg": "CERT.LV",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://cert.lv/lv/2025/10/konference-q-ready-25-kvantu-drosibas-apvarsni",
+    "summary": "CERT.LV announcement for the Q-Ready 25 conference covering quantum key distribution (QKD) and post-quantum (quantum-safe) cryptography (PQC), with attention to quantum-safe infrastructure under the EuroQCI initiative.",
+    "included": true
+  },
+  {
+    "title": "Cryptography Secure Against Quantum Computers (presentation)",
+    "country": "LVA",
+    "issuingOrg": "CERT.LV",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://cert.lv/uploads/pasakumi/Andris_Ambainis_final.pdf",
+    "summary": "Presentation hosted on CERT.LV's events area surveying post-quantum cryptography methods (lattice-based such as NTRU/LWE, code-based such as McEliece, and multivariate-quadratic schemes). Authored by an academic researcher rather than CERT.LV itself, so flagged for human review.",
+    "included": true
+  }
+]

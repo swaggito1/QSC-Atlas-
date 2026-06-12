@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Next-generation cryptography: Post-Quantum Cryptography",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://seed.kisa.or.kr/kisa/ngc/pqc.do",
+    "summary": "KISA's reference page on post-quantum cryptography (PQC), describing it as new public-key cryptography enabling secure use of cryptographic technology in a quantum-computing environment.",
+    "included": true
+  },
+  {
+    "title": "2026 Post-Quantum Cryptography Pilot Transition Project: Call for Participating Companies (FAQ added)",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/401/form?postSeq=3592",
+    "summary": "KISA notice recruiting companies for the 2026 PQC pilot transition programme, stating the need to migrate IT infrastructure to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "2025 Post-Quantum Cryptography Pilot Transition Support Project: Call for Participating Companies (revised)",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/401/form?postSeq=3424",
+    "summary": "KISA notice recruiting companies for the 2025 sector-by-sector (energy, medical, public administration) PQC pilot transition support programme, prompted by quantum-computer threats to existing cryptosystems.",
+    "included": true
+  },
+  {
+    "title": "2026 Post-Quantum Cryptography Pilot Transition Project: Briefing Session (28 Jan, FKI Tower, Seoul)",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/401/form?postSeq=3588&lang_type=KO",
+    "summary": "KISA announcement of a briefing session for the 2026 PQC pilot transition project covering the telecom, finance, transport, defence and space sectors.",
+    "included": true
+  },
+  {
+    "title": "2025 Post-Quantum Cryptography Pilot Transition Performance-Sharing Event (3 Dec)",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/401/form?postSeq=3571",
+    "summary": "KISA announcement of an event sharing results of the 2025 PQC pilot transition and introducing the 2026 PQC pilot project plan.",
+    "included": true
+  },
+  {
+    "title": "First demonstration case of applying post-quantum cryptography to a commercial ICT product",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/402/form?postSeq=2108&lang_type=KO",
+    "summary": "KISA press release reporting the first case of extending PQC testing from the research lab to a domestic commercial ICT product.",
+    "included": true
+  },
+  {
+    "title": "MSIT to establish a National Post-Quantum Cryptography transition infrastructure",
+    "country": "KOR",
+    "issuingOrg": "MSIT",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.msit.go.kr/eng/bbs/view.do;jsessionid=CoFI0Vxt19IRf4ewnm9Ki5_auc1N2U23_DgL-JuE.AP_msit_1?sCode=eng&nttSeqNo=830&bbsSeqNo=42&mId=4&mPid=2",
+    "summary": "MSIT press release stating the ministry aims to establish an implementation infrastructure for systematic transition to post-quantum cryptography, including a national PQC body.",
+    "included": true
+  },
+  {
+    "title": "MSIT to Invest KRW 8.12 Trillion in 2026 to Drive Science and ICT, including transition to post-quantum cryptography",
+    "country": "KOR",
+    "issuingOrg": "MSIT",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&nttSeqNo=1216&pageIndex=2&searchTxt=&searchOpt=ALL&bbsSeqNo=42&mId=4&mPid=2",
+    "summary": "MSIT press release on its 2026 R&D budget, noting increased cybersecurity investment including AI-embedded security and transition to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "National achievements: expansion of post-quantum cryptography pilot transition and start of technology development",
+    "country": "KOR",
+    "issuingOrg": "MSIT",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.msit.go.kr/contents/cont.do?sCode=user&mPid=340&mId=353",
+    "summary": "MSIT national-achievements page listing expansion of PQC pilot transition support and the start of related technology development. Listing-style page; flagged for human review to confirm it points to a discrete document.",
+    "included": true
+  },
+  {
+    "title": "US House introduces the Post Quantum Cybersecurity Standards Act (7 May 2025)",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/post/fileDownload?menuSeq=20201&postSeq=247&attachSeq=1&lang_type=KO",
+    "summary": "KISA-published briefing summarising a US House bill on quantum-resistant cybersecurity standards and the NIST PQC standardisation effort. Issuer is domestic (KISA) but the document reports on foreign legislation; flagged for review.",
+    "included": true
+  },
+  {
+    "title": "Comprehensive Plan for Nationwide Transition to a Post-Quantum-Resistant Cryptosystem (master plan, July 2023) — notice",
+    "country": "KOR",
+    "issuingOrg": "KpqC Research Group",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://kpqc.or.kr/contents/02_notice/board.html?board_id=board_notice&mode=view&no=71&cate=%EA%B8%B0%ED%83%80",
+    "summary": "Notice by the Korean PQC Research Group pointing to the official national PQC transition master plan (July 2023). Posted by a government-coupled research consortium rather than a listed government domain; flagged for review.",
+    "included": false
+  },
+  {
+    "title": "KpqC Competition Round 1 (national PQC algorithm standardisation competition)",
+    "country": "KOR",
+    "issuingOrg": "KpqC Research Group",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.kpqc.or.kr/competition.html",
+    "summary": "Page describing Round 1 of the Korean PQC (KpqC) competition to standardise domestic post-quantum cryptographic algorithms. Run by a government-coupled research consortium not on the trusted-domains list; flagged for review.",
+    "included": false
+  }
+]
