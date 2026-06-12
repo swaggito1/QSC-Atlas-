@@ -1,97 +1,167 @@
-import { useState } from 'react';
-import { PROCESS_META, NO_DATA_COLOR, type StandardsProcess } from '../lib/process';
+import { useEffect, useState } from 'react';
+import { geoNaturalEarth1, geoPath } from 'd3-geo';
+import { feature } from 'topojson-client';
 
-// React island stub for the interactive map. This proves the island wiring and
-// gives a navigable interim list. Claude Design replaces the placeholder canvas
-// with the real react-simple-maps world map, coloured by standards process, and
-// wires selection to slide in the ProfilePanel.
+// MapHero - the signature view. A real world choropleth (d3-geo Natural Earth)
+// coloured by standards process. Hover gives a quiet tooltip; click opens the
+// country's profile. Countries with no data recede in the faint no-data tone.
+// Adapted from the QSC Atlas design system; fed from Notion at build time.
 
-export interface CountryDot {
+interface MapEntry {
   iso3: string;
-  country: string;
-  process: string | null;
+  name: string;
+  process: string;
 }
 interface Props {
-  countries: CountryDot[];
+  // keyed by ISO numeric code (no leading zeros), matching world-atlas topojson ids
+  mapProcess: Record<string, MapEntry>;
 }
 
-function colorFor(process: string | null): string {
-  if (process && process in PROCESS_META) {
-    return PROCESS_META[process as StandardsProcess].color;
-  }
-  return NO_DATA_COLOR;
-}
+const PROCESS_HEX: Record<string, string> = {
+  NIST: '#2b4c7e',
+  ETSI: '#2e7d6f',
+  ISO: '#b07a2b',
+  Sovereign: '#7a3b5e',
+  Mixed: '#6b7280',
+};
+const NO_DATA = '#e7e5df';
+const W = 980;
+const H = 500;
 
-export default function MapView({ countries }: Props) {
-  const [selected, setSelected] = useState<string | null>(null);
-  const withData = countries.filter((c) => c.process);
-  const sorted = [...countries].sort((a, b) => a.country.localeCompare(b.country));
-  const sel = countries.find((c) => c.iso3 === selected) ?? null;
+const key = (id: unknown) => String(Number(id));
+
+export default function MapView({ mapProcess }: Props) {
+  const [paths, setPaths] = useState<{ id: string; d: string }[]>([]);
+  const [error, setError] = useState(false);
+  const [hover, setHover] = useState<(MapEntry & { x: number; y: number }) | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+        const world = await res.json();
+        if (!alive) return;
+        const fc: any = feature(world, world.objects.countries);
+        const feats = fc.features.filter((f: any) => String(f.id) !== '010'); // drop Antarctica
+        const projection = geoNaturalEarth1().fitSize(
+          [W, H],
+          { type: 'FeatureCollection', features: feats } as any,
+        );
+        const gp = geoPath(projection as any);
+        setPaths(feats.map((f: any) => ({ id: key(f.id), d: gp(f) || '' })));
+      } catch {
+        if (alive) setError(true);
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const metaFor = (id: string) => mapProcess[id] ?? null;
+  const fillFor = (id: string) => {
+    const meta = metaFor(id);
+    return meta ? PROCESS_HEX[meta.process] ?? NO_DATA : NO_DATA;
+  };
 
   return (
-    <div className="mapview">
-      <div className="mapview-canvas" role="img" aria-label="World map placeholder">
-        <p className="mapview-note">
-          Interactive world map goes here. Claude Design builds this with react-simple-maps,
-          coloured by standards process, with click-to-open profile.
-        </p>
-        <p className="mapview-count mono">{withData.length} countries with data</p>
-      </div>
-
-      {countries.length > 0 ? (
-        <>
-          <ul className="mapview-list">
-            {sorted.map((c) => (
-              <li key={c.iso3}>
-                <button
-                  type="button"
-                  className={selected === c.iso3 ? 'is-selected' : ''}
-                  onClick={() => setSelected(c.iso3)}
-                >
-                  <span className="dot" style={{ background: colorFor(c.process) }} aria-hidden="true" />
-                  {c.country}
-                </button>
-              </li>
-            ))}
-          </ul>
-          {sel && (
-            <aside className="mapview-selected">
-              <strong>{sel.country}</strong>{' '}
-              <a href={`/countries/${sel.iso3.toLowerCase()}`}>open full profile &rarr;</a>
-            </aside>
-          )}
-        </>
-      ) : (
-        <p className="mapview-empty">
-          No country data loaded yet. Add your NOTION_TOKEN to .env and restart to pull live data.
+    <div style={{ position: 'relative' }}>
+      {error && (
+        <p
+          style={{
+            color: 'var(--ink-muted)',
+            fontStyle: 'italic',
+            padding: 'var(--space-8)',
+            textAlign: 'center',
+          }}
+        >
+          The map could not be loaded. Check your connection and try again.
         </p>
       )}
-
-      <style>{`
-        .mapview-canvas {
-          border: 1px solid var(--hairline);
-          background: var(--surface);
-          padding: var(--space-8);
-          text-align: center;
-          border-radius: var(--radius);
-        }
-        .mapview-note { color: var(--ink-muted); max-width: 34rem; margin: 0 auto var(--space-2); }
-        .mapview-count { color: var(--ink); }
-        .mapview-list {
-          list-style: none; margin: var(--space-6) 0 0; padding: 0;
-          display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-2);
-        }
-        .mapview-list button {
-          display: flex; align-items: center; gap: var(--space-2);
-          width: 100%; text-align: left; background: none; border: 1px solid transparent;
-          padding: var(--space-2); font: inherit; color: inherit; cursor: pointer; border-radius: var(--radius);
-        }
-        .mapview-list button:hover { border-color: var(--hairline); }
-        .mapview-list button.is-selected { border-color: var(--ink); }
-        .mapview-list .dot { width: 0.8em; height: 0.8em; border-radius: 50%; flex: none; }
-        .mapview-selected { margin-top: var(--space-4); padding: var(--space-3); border-top: 1px solid var(--hairline); }
-        .mapview-empty { color: var(--ink-muted); font-style: italic; margin-top: var(--space-6); }
-      `}</style>
+      {!error && !paths.length && (
+        <div
+          style={{
+            height: 360,
+            display: 'grid',
+            placeItems: 'center',
+            color: 'var(--ink-faint)',
+            fontFamily: 'var(--font-mono)',
+            fontSize: 'var(--text-sm)',
+          }}
+        >
+          drawing the world&hellip;
+        </div>
+      )}
+      {!!paths.length && (
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          role="img"
+          aria-label="World map coloured by standards process"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          onMouseLeave={() => setHover(null)}
+        >
+          <rect x="0" y="0" width={W} height={H} fill="transparent" />
+          {paths.map((p, idx) => {
+            const meta = metaFor(p.id);
+            const dim = hover && meta && hover.iso3 !== meta.iso3;
+            return (
+              <path
+                key={`${p.id}-${idx}`}
+                d={p.d}
+                fill={fillFor(p.id)}
+                stroke={hover && meta && hover.iso3 === meta.iso3 ? '#1a1a1a' : '#f7f5f0'}
+                strokeWidth={hover && meta && hover.iso3 === meta.iso3 ? 1.4 : 0.5}
+                style={{ cursor: meta ? 'pointer' : 'default', transition: 'opacity 120ms' }}
+                opacity={dim ? 0.82 : 1}
+                onMouseMove={(e) => {
+                  if (!meta) return;
+                  const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
+                  setHover({
+                    ...meta,
+                    x: ((e.clientX - r.left) / r.width) * 100,
+                    y: ((e.clientY - r.top) / r.height) * 100,
+                  });
+                }}
+                onClick={() => meta && (window.location.href = `/countries/${meta.iso3.toLowerCase()}`)}
+              />
+            );
+          })}
+        </svg>
+      )}
+      {hover && (
+        <div
+          style={{
+            position: 'absolute',
+            left: `${hover.x}%`,
+            top: `${hover.y}%`,
+            transform: 'translate(-50%, -130%)',
+            pointerEvents: 'none',
+            background: 'var(--ink)',
+            color: 'var(--paper)',
+            padding: '6px 10px',
+            borderRadius: 'var(--radius)',
+            fontFamily: 'var(--font-instrument)',
+            fontSize: 'var(--text-xs)',
+            whiteSpace: 'nowrap',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            zIndex: 5,
+          }}
+        >
+          <span
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: '50%',
+              background: PROCESS_HEX[hover.process] ?? NO_DATA,
+            }}
+          />
+          {hover.name}
+          <span style={{ opacity: 0.7 }}>{hover.process}-aligned</span>
+        </div>
+      )}
     </div>
   );
 }

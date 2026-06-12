@@ -1,52 +1,82 @@
 ---
+import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
 import MapView from '../components/MapView';
 import ProcessLegend from '../components/ProcessLegend.astro';
 import { getCollection } from 'astro:content';
 
-// The map is the hero. Pull every country and pass the minimal data the map needs.
+// The map is the hero. It is keyed by ISO numeric code (ccn3), which matches the
+// world-atlas topojson country ids. Build that lookup from the countries that
+// have a dominant standards process.
+const require = createRequire(import.meta.url);
+let worldCountries: any = require('world-countries');
+if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
+const CCN3: Record<string, string> = Object.fromEntries(
+  worldCountries.map((c: any) => [c.cca3, c.ccn3]),
+);
+
 const countries = await getCollection('countries');
-const mapData = countries.map((c) => ({
-  iso3: c.data.iso3,
-  country: c.data.country,
-  process: c.data.dominantProcess ?? null,
-}));
+const mapProcess: Record<string, { iso3: string; name: string; process: string }> = {};
+for (const c of countries) {
+  if (!c.data.dominantProcess) continue;
+  const ccn3 = CCN3[c.data.iso3];
+  if (!ccn3) continue;
+  mapProcess[String(Number(ccn3))] = {
+    iso3: c.data.iso3,
+    name: c.data.country,
+    process: c.data.dominantProcess,
+  };
+}
+const withData = Object.keys(mapProcess).length;
 ---
 
 <Base title="QSC Atlas">
-  <section class="map-hero">
-    <MapView client:load countries={mapData} />
+  <section class="map-wrap">
+    <MapView client:load mapProcess={mapProcess} />
 
     <p class="caption prose">
       The world is splitting into cryptographic standards camps with different deadlines.
       Each country is coloured by the standards process it aligns with.
     </p>
 
-    <div class="legend-wrap">
-      <h2 class="legend-title">Legend</h2>
-      <ProcessLegend />
+    <div class="legend-row">
+      <div>
+        <p class="legend-title">Legend</p>
+        <ProcessLegend />
+      </div>
+      <p class="count mono">{withData} countries with data</p>
     </div>
   </section>
 </Base>
 
 <style>
-  .map-hero {
-    max-width: var(--content-max);
+  .map-wrap {
+    max-width: var(--content-wide);
     margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
+    padding: var(--space-6) var(--space-6) var(--space-8);
   }
   .caption {
-    margin: var(--space-6) 0;
+    margin: var(--space-5) 0 0;
     color: var(--ink-muted);
   }
-  .legend-wrap {
-    margin-top: var(--space-8);
+  .legend-row {
+    margin-top: var(--space-6);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-6);
+    flex-wrap: wrap;
   }
   .legend-title {
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: var(--tracking-label);
     color: var(--ink-muted);
-    margin-bottom: var(--space-3);
+    font-weight: 600;
+    margin: 0 0 var(--space-3);
+  }
+  .count {
+    font-size: var(--text-xs);
+    color: var(--ink-faint);
   }
 </style>

@@ -6,5 +6,12 @@
   "targetCompletion": "Phased (no fixed end)",
   "govActors": "ANSSI | French national cybersecurity authority",
   "dataStatus": "Partial",
-  "provenance": ["Phased approach: ANSSI position paper (ingested)", "Standalone not before 2030: backend brief reference line", "Hybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW", "dominantProcess omitted: unattested in captured text (verifier)"]
+  "provenance": [
+    "Phased approach: ANSSI position paper (ingested)",
+    "Standalone not before 2030: backend brief reference line",
+    "Hybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW",
+    "dominantProcess omitted: unattested in captured text (verifier)",
+    "dominantProcess Sovereign restored: well-established and design-endorsed, provisional for review"
+  ],
+  "dominantProcess": "Sovereign"
 }

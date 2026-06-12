@@ -14,10 +14,12 @@
     "@astrojs/react": "^4.2.0",
     "@notionhq/client": "^5.22.0",
     "astro": "^5.5.0",
+    "d3-geo": "^3.1.1",
     "firecrawl": "^4.25.3",
     "fuse.js": "^7.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "topojson-client": "^3.1.0",
     "world-countries": "^5.1.0"
   },
   "devDependencies": {

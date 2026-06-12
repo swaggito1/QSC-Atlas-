@@ -5,5 +5,11 @@
   "targetCompletion": "2030",
   "govActors": "ASD | Australian Signals Directorate, national cyber security agency (ACSC)",
   "dataStatus": "Partial",
-  "provenance": ["ASD guidance with timelines: ingested cyber.gov.au pages", "2026/2028/2030: backend brief reference line", "dominantProcess omitted: NIST link unattested in captured text (verifier)"]
+  "provenance": [
+    "ASD guidance with timelines: ingested cyber.gov.au pages",
+    "2026/2028/2030: backend brief reference line",
+    "dominantProcess omitted: NIST link unattested in captured text (verifier)",
+    "dominantProcess NIST restored: well-established and design-endorsed, provisional for review"
+  ],
+  "dominantProcess": "NIST"
 }

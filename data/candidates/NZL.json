@@ -1,0 +1,47 @@
+[
+  {
+    "title": "2.4. Preparation for Post-Quantum Cryptography (NZISM)",
+    "url": "https://nzism.gcsb.govt.nz/ism-document/pdf/Section/12224",
+    "description": "Section 2.4 of the New Zealand Information Security Manual setting out objective, context and controls for agencies preparing for post-quantum cryptography; PDF filename indicates V3.9, November 2025. Issued by NCSC/GCSB."
+  },
+  {
+    "title": "ISM Document - New Zealand Information Security Manual",
+    "url": "https://nzism.gcsb.govt.nz/ism-document",
+    "description": "Landing page for the full NZISM document, which contains the Cryptography chapter and the Preparation for Post-Quantum Cryptography section. NCSC/GCSB."
+  },
+  {
+    "title": "New Zealand Information Security Manual (NZISM)",
+    "url": "https://www.gcsb.govt.nz/our-work/national-cyber-security-centre-ncsc/new-zealand-information-security-manual-nzism",
+    "description": "GCSB/NCSC overview page for the NZISM, the manual detailing processes and controls for protecting NZ Government information and systems, including PQC preparation guidance."
+  },
+  {
+    "title": "New Zealand Information Security Manual",
+    "url": "https://www.ncsc.govt.nz/what-we-do/regulations-and-standards/nzism/",
+    "description": "NCSC regulations-and-standards page for the NZISM, NZ Government's baseline information security manual that includes post-quantum cryptography preparation guidance."
+  },
+  {
+    "title": "January 2022 New Zealand Information Security Manual v3.5 Release",
+    "url": "https://www.ncsc.govt.nz/news/january-2022-new-zealand-information-security-manual-v3-5-release/",
+    "description": "NCSC news item on the NZISM v3.5 release, which added a new section advising agencies to start planning for migration to post-quantum cryptographic standards. URL returned 404 on verification (site restructured)."
+  },
+  {
+    "title": "Annual Report 2024 - Government Communications Security Bureau",
+    "url": "https://www.gcsb.govt.nz/about-us/annual-reports/annual-report-2024",
+    "description": "GCSB Annual Report 2024; references preparing agencies for the impacts of quantum computing on encryption via NZISM guidance, but does not use the explicit term 'post-quantum cryptography'."
+  },
+  {
+    "title": "Cryptographic Services - GCSB",
+    "url": "https://www.gcsb.govt.nz/our-work/information-assurance/cryptographic-services/",
+    "description": "GCSB information assurance / cryptographic services page. General cryptographic services description; no explicit PQC reference found."
+  },
+  {
+    "title": "Government told to prepare for quantum computers able to break encryption - RNZ News",
+    "url": "https://www.rnz.co.nz/news/political/594378/government-told-to-prepare-for-quantum-computers-able-to-break-encryption",
+    "description": "RNZ (public broadcaster, journalism) news article on NZ government quantum-encryption preparation. Non-institutional journalism source."
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region",
+    "url": "https://www.gsma.com/newsroom/wp-content/uploads//Post-Quantum-Government-Initiatives-by-Country-and-Region-02-Mar-2025.pdf",
+    "description": "GSMA listing of PQC government initiatives by country including NZ. Issued by GSMA (international industry association), not a NZ institution."
+  }
+]

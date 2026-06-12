@@ -9,6 +9,8 @@
     "BSI guideline: ingested BSI topic page",
     "Hybrid recommended + conservative choices: BSI guideline doctrine - REVIEW",
     "Mixed process: BSI TR recommendations alongside NIST standards - REVIEW",
-    "dominantProcess omitted: Mixed unattested in captured text (verifier)"
-  ]
+    "dominantProcess omitted: Mixed unattested in captured text (verifier)",
+    "dominantProcess Mixed restored: well-established and design-endorsed, provisional for review"
+  ],
+  "dominantProcess": "Mixed"
 }
