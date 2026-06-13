@@ -17,6 +17,7 @@ export interface ProfileData {
   standardFamilies?: string | null;
   algorithms?: string | null;
   dominantProcess?: string | null;
+  secondaryProcess?: string | null;
   processParticipation?: string | null;
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
@@ -38,6 +39,7 @@ interface Props {
 
 const PROCESS_HEX: Record<string, string> = {
   NIST: '#2b4c7e',
+  EU: '#5b54a8',
   ETSI: '#2e7d6f',
   ISO: '#b07a2b',
   Sovereign: '#7a3b5e',
@@ -179,6 +181,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
         <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
           <h1 style={{ fontFamily: 'var(--font-reading)', fontSize: 'var(--text-2xl)', margin: 0, fontWeight: 600 }}>{c.country}</h1>
           <ProcessChip value={c.dominantProcess} />
+          {c.secondaryProcess ? <ProcessChip value={c.secondaryProcess} /> : null}
         </div>
         <button type="button" onClick={onClose} aria-label="Close profile" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.5rem', lineHeight: 1, color: 'var(--ink-muted)', padding: 4 }}>&times;</button>
       </header>

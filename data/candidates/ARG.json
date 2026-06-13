@@ -1,0 +1,57 @@
+[
+  {
+    "title": "ARSAT desarrolló CryptoComm, un sistema de seguridad criptográfica post-cuántica",
+    "url": "https://www.arsat.com.ar/arsat-desarrollo-cryptocomm-un-sistema-de-seguridad-criptografica-post-cuantica/",
+    "description": "ARSAT (state telecommunications company) announces CryptoComm, a post-quantum (PQC) secure communications system for messages and files, with a high-speed symmetric cipher (318-bit keys) and post-quantum key/certificate generation; presented Jan 2023, hardware version with INVAP planned."
+  },
+  {
+    "title": "Comunicaciones seguras: Métodos Cuánticos y Poscuánticos 2022",
+    "url": "https://www.arsat.com.ar/multimedia/comunicaciones-seguras/",
+    "description": "ARSAT page on a 2022 secure-communications conference addressing quantum threats to public-key and symmetric cryptography, and ARSAT's development of quantum-resistant (post-quantum) defense tools."
+  },
+  {
+    "title": "Se aprobó la Segunda Estrategia Nacional de Ciberseguridad",
+    "url": "https://www.argentina.gob.ar/noticias/se-aprobo-la-segunda-estrategia-nacional-de-ciberseguridad",
+    "description": "Argentine government announcement (2023) of the Second National Cybersecurity Strategy. WebFetch confirmed it does NOT explicitly mention post-quantum cryptography or quantum-resistant algorithms."
+  },
+  {
+    "title": "Segunda Estrategia Nacional de Ciberseguridad (consulta pública)",
+    "url": "https://www.argentina.gob.ar/sites/default/files/2023/06/consulta_publica_segunda_estrategia.pdf",
+    "description": "Public-consultation draft of the Second National Cybersecurity Strategy. No confirmed explicit PQC reference in search snippets."
+  },
+  {
+    "title": "Centro Nacional de Ciberseguridad",
+    "url": "https://www.argentina.gob.ar/jefatura/innovacion-ciencia-y-tecnologia/centro-nacional-de-ciberseguridad",
+    "description": "Argentine National Cybersecurity Center institutional page. No explicit PQC document; general cybersecurity mandate."
+  },
+  {
+    "title": "Normativa - Ciberseguridad | Dirección Nacional de Ciberseguridad",
+    "url": "https://www.argentina.gob.ar/jefatura/innovacion-publica/direccion-nacional-ciberseguridad/normativa",
+    "description": "Index of cybersecurity regulations from Argentina's National Cybersecurity Directorate. Listing page; no explicit PQC document identified."
+  },
+  {
+    "title": "El BCRA actualiza las normas de riesgos de tecnología y seguridad de la información",
+    "url": "https://www.bcra.gob.ar/noticias/el-bcra-actualiza-las-normas-de-riesgos-de-tecnologia-y-seguridad-de-la-informacion-para-fortalecer-la-ciberresiliencia-de-las-entidades-financieras/",
+    "description": "Central Bank of Argentina update to technology and information-security risk rules for financial entities. Addresses cryptography algorithms generally; no explicit post-quantum/quantum-resistant reference found."
+  },
+  {
+    "title": "Comunicación A 8249 (BCRA, riesgos de TI y seguridad de la información)",
+    "url": "https://www.bcra.gob.ar/Pdfs/comytexord/A8249.pdf",
+    "description": "BCRA communication on minimum requirements for management of technology and information-security risks. No explicit PQC reference confirmed."
+  },
+  {
+    "title": "Cyber.Ar 2026: lanzan el primer Congreso de Ciberdefensa de las Fuerzas Armadas",
+    "url": "https://defonline.com.ar/defensa/cyber-ar-2026-lanzan-el-primer-congreso-de-ciberdefensa-de-las-fuerzas-armadas/",
+    "description": "Announcement of Argentina's first Armed Forces Cyberdefense Congress (Sept 2026), organized by Army/Joint military faculties; post-quantum cryptography listed among topics. Journalistic source about an academic/military event, not an institutional PQC document."
+  },
+  {
+    "title": "Ciberdefensa, inteligencia artificial y riesgo cuántico: una agenda estratégica para la Argentina",
+    "url": "https://www.itsitio.com/columna-de-opinion/ciberdefensa-inteligencia-artificial-y-riesgo-cuantico-una-agenda-estrategica-para-la-argentina/",
+    "description": "Opinion column arguing Argentina must integrate post-quantum cryptography into national policy. Non-institutional (journalism/opinion)."
+  },
+  {
+    "title": "Ciberseguridad poscuántica en América Latina: desafíos y estrategias regulatorias (UCALP)",
+    "url": "https://repositorio.ucalp.edu.ar/entities/publication/4c5a2156-510c-4cc4-98dc-9ebe44b59ec7",
+    "description": "Academic article (Universidad Católica de La Plata) on post-quantum cybersecurity in Latin America with Argentina as a case study. University publication, not institutional/government."
+  }
+]

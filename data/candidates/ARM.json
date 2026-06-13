@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Government Computer Incident Response Center (AM-CERT) - cert.gov.am",
+    "url": "https://cert.gov.am/en/",
+    "description": "Armenian government computer incident response center. National-agency cybersecurity site. No explicit post-quantum / quantum-safe cryptography reference found."
+  },
+  {
+    "title": "AM-CERT - National CERT/CSIRT Armenia",
+    "url": "https://am-cert.am/",
+    "description": "National Computer Emergency Response Team / CSIRT of Armenia, operating in partnership with the Armenian Government. TF-CSIRT accredited member. No explicit PQC content found."
+  },
+  {
+    "title": "Information Systems Agency of Armenia - Cybersecurity",
+    "url": "https://isaa.am/en/cybersecurity",
+    "description": "Information Systems Agency of Armenia (ISAA), the body co-developing national cybersecurity policy and operating AM-CERT. No explicit post-quantum cryptography reference found."
+  },
+  {
+    "title": "Ministry of High-Tech Industry (Armenia)",
+    "url": "https://www.gov.am/en/structure/277/",
+    "description": "Central executive body responsible for information security and cybersecurity policy in Armenia. Develops the unified cybersecurity legislative framework. No explicit PQC reference found."
+  },
+  {
+    "title": "Government Approves the Package of Draft Laws Including the Draft Law 'On Cybersecurity' - hightech.gov.am",
+    "url": "https://hightech.gov.am/en/tegekatvakan-kentron/ayl/norutyunner/government-approved-package-draft-laws",
+    "description": "Ministry of High-Tech Industry announcement on a draft cybersecurity law package. Addresses cybersecurity standards and critical information infrastructure but contains no explicit post-quantum / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Government of the Republic of Armenia decision - on determining a cyber security strategy",
+    "url": "https://dig.watch/resource/government-of-the-republic-of-armenia-decision-on-determining-a-cyber-security-strategy",
+    "description": "Reference to the Government of Armenia's decision establishing a national Cyber Security Strategy. General cyber strategy; no indication it mentions post-quantum / quantum-safe cryptography. Hosted on a third-party (Digital Watch) domain, not an official Armenian government domain."
+  },
+  {
+    "title": "ՀՀ ազգային անվտանգության ռազմավարություն (Armenia National Security Strategy) - arlis.am",
+    "url": "https://www.arlis.am/DocumentView.aspx?docID=31189",
+    "description": "Armenia's National Security Strategy on the official Armenian legal information system (ARLIS). General national security document; no explicit post-quantum / quantum-safe cryptography content found."
+  },
+  {
+    "title": "CERT-AM (Internet Society of Armenia) - cert.am",
+    "url": "https://www.cert.am/",
+    "description": "Computer Security Incident Response Team operated by the (non-governmental) Internet Society of Armenia; manages the .AM TLD root. Non-governmental issuer. No explicit PQC reference found."
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "UkrCrypto2026: International Conference on Cryptographic Research (post-quantum and quantum cryptography section)",
+    "country": "UKR",
+    "issuingOrg": "SSSCIP / DerzhNDI (State Scientific and Research Institute of Cybersecurity Technologies and Information Protection)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://csi.cip.gov.ua/uk/pages/ukrcrypto2026",
+    "summary": "Announcement page for UkrCrypto2026 (Kyiv, 23-25 September 2026), the international cryptographic-research conference organised by the State Scientific and Research Institute of Cybersecurity Technologies and Information Protection under Ukraine's State Service of Special Communications. Its thematic sections explicitly include 'Постквантова та квантова криптографія' (post-quantum and quantum cryptography).",
+    "included": true
+  },
+  {
+    "title": "Parliamentary research document (Verkhovna Rada Research Service) surfaced under post-quantum cryptography queries",
+    "country": "UKR",
+    "issuingOrg": "Research Service of the Verkhovna Rada of Ukraine",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://research.rada.gov.ua/uploads/documents/33304.pdf",
+    "summary": "A parliamentary research PDF from the Research Service of Ukraine's parliament that repeatedly matched Ukrainian-language post-quantum cryptography searches. Its full text could not be parsed to confirm an explicit PQC reference, so it is flagged for human review rather than auto-included.",
+    "included": false
+  }
+]

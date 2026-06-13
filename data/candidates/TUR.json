@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Geleceğin Teknolojisi: Kuantum Kriptolojisi (Cybersecurity and Post-Quantum Cryptology program)",
+    "url": "https://www.btk.gov.tr/haberler/gelecegin-teknolojisi-kuantum-kriptolojisi",
+    "description": "BTK (Information and Communication Technologies Authority) news page on a program themed 'Cybersecurity and Post-Quantum Cryptology', opened by Transport and Infrastructure Minister Mehmet Cahit Turhan, Deputy Minister Omer Fatih Sayan and others; stresses the importance of spreading quantum-resistant cryptography algorithms and studies in Turkey."
+  },
+  {
+    "title": "Quantum Technologies - TÜBİTAK BİLGEM",
+    "url": "https://bilgem.tubitak.gov.tr/en/quantum-technologies/",
+    "description": "TÜBİTAK BİLGEM page on its quantum technologies / quantum cryptography research. URL redirects to the BILGEM English homepage; explicit post-quantum cryptography text could not be confirmed."
+  },
+  {
+    "title": "Bilgem Teknoloji Dergi Sayı 9 (page 83) - TÜBİTAK BİLGEM",
+    "url": "https://bilgem.tubitak.gov.tr/sites/images/bilgem/dergi/Bilgem_Dergi_S9/files/basic-html/page83.html",
+    "description": "Page from TÜBİTAK BİLGEM's in-house technology magazine (Issue 9) surfaced under a post-quantum cryptography query; institutional publisher but a magazine article rather than a policy/standard document."
+  },
+  {
+    "title": "Siber Güvenlik Stratejisi ve Eylem Planı (Cyber Security Strategy and Action Plan)",
+    "url": "https://www.btk.gov.tr/siber-guvenlik-stratejisi-ve-eylem-plani",
+    "description": "BTK landing page for Turkey's National Cyber Security Strategy and Action Plan. General cyber strategy; no explicit post-quantum cryptography reference confirmed."
+  },
+  {
+    "title": "Bilişim Teknolojilerindeki Gelişmeler Işığında Kripto ... (TÜBA chapter)",
+    "url": "https://tuba.gov.tr/files/yayinlar/bilim-ve-dusun/TUBA-978-605-2249-48-2_Ch20.pdf",
+    "description": "Book chapter on cryptography published by TÜBA (Turkish Academy of Sciences). Academy publication, academic in nature; surfaced under cryptography queries."
+  },
+  {
+    "title": "TS 13638 / TS 13638-T2 - Türk Standardları Enstitüsü",
+    "url": "https://www.tse.org.tr/tag/ts-13638-t2/",
+    "description": "TSE Turkish national standard TS 13638/T2. On inspection this standard covers penetration-testing personnel and firms (information security techniques), NOT post-quantum cryptography."
+  }
+]

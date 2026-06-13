@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Xüsusi Rabitə və İnformasiya Təhlükəsizliyi Dövlət Xidməti (State Service for Special Communication and Information Security)",
+    "url": "https://scis.gov.az/en/pages/view/cyber",
+    "description": "National state service responsible for cybersecurity and the parent body of CERT.GOV.AZ. Cybersecurity overview page; no explicit post-quantum/PQC mention."
+  },
+  {
+    "title": "Kriptoqrafiya — Xüsusi Rabitə və İnformasiya Təhlükəsizliyi Dövlət Xidməti (Cryptography page, State Service for Special Communication and Information Security)",
+    "url": "https://scis.gov.az/az/pages/view/kriptoqrafiya",
+    "description": "Official cryptography services page of the State Service. Verified via WebFetch: covers cryptographic protection and confidentiality services; does NOT mention post-quantum, quantum-safe, PQC, or quantum-resistant migration. Copyright 2026."
+  },
+  {
+    "title": "Kompüter insidentlərinə qarşı mübarizə mərkəzi (CERT.GOV.AZ — Computer Incident Response Center)",
+    "url": "https://cert.gov.az/",
+    "description": "Azerbaijan national government CERT, under the State Service for Special Communication and Information Security. No explicit PQC advisory or guidance located."
+  },
+  {
+    "title": "MİLLİ KİBERTƏHLÜKƏSİZLİK MƏRKƏZİ — requirements page (National Cyber Security Center)",
+    "url": "https://ncsc.gov.az/requirements-page",
+    "description": "Azerbaijan National Cyber Security Center security-requirements page. Borderline: a search snippet referenced 'NIST-approved post-quantum end-to-end encryption' in a tooling/communications context. Could NOT be verified — site returns a TLS certificate error on WebFetch. Apparent passing mention, not a PQC policy/guidance/standard document."
+  },
+  {
+    "title": "The Strategy of the Republic of Azerbaijan on Information Security and Cybersecurity for 2023–2027",
+    "url": "https://dig.watch/resource/the-strategy-of-the-republic-of-azerbaijan-on-information-security-and-cybersecurity-for-2023-2027",
+    "description": "National cybersecurity strategy approved by Presidential Decree (Aug 2023). No explicit post-quantum/PQC reference found; record hosted on a third-party (Digital Watch) site, not an official AZ government domain."
+  },
+  {
+    "title": "Azərbaycan Standartlaşdırma İnstitutu (AZSTAND — Azerbaijan Standardization Institute)",
+    "url": "https://azstand.gov.az/en",
+    "description": "National standards body (ISO member). No adopted national post-quantum/quantum-resistant cryptography standard located."
+  },
+  {
+    "title": "Ministry of Digital Development and Transport — Azerbaijan Cybersecurity Center project",
+    "url": "https://mincom.gov.az/en/projects/azerbaijan-cybersecurity-center",
+    "description": "Ministry handling digital policy. Cybersecurity center project page; no explicit post-quantum/PQC content located."
+  },
+  {
+    "title": "Müasir Kriptoqrafik Alqoritmlər və Gələcək Texnologiyalar (Modern Cryptographic Algorithms and Future Technologies)",
+    "url": "https://www.researchgate.net/publication/391367339_Muasir_Kriptoqrafik_Alqoritmlr_v_Glck_Texnologiyalar",
+    "description": "Azerbaijani-language academic paper discussing post-quantum cryptography (Kyber, Dilithium). Academic/research source — not institutional/government; excluded."
+  },
+  {
+    "title": "İnformasiya təhlükəsizliyinin multidissiplinar problemləri üzrə konfrans (ICT.az conference proceedings)",
+    "url": "https://ict.az/uploads/konfrans/2_konfrans/53.pdf",
+    "description": "Conference paper touching on quantum/post-quantum cryptography hosted on ICT.az (Institute of Information Technology, academic). Academic — excluded."
+  }
+]

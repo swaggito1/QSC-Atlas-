@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Government of Belize 2020-2023 National Cybersecurity Strategy: Towards a Secure Cyberspace",
+    "url": "https://www.pressoffice.gov.bz/wp-content/uploads/2019/12/belize-cybersecurity-strategy-2020-2023.pdf",
+    "description": "Belize's national cybersecurity strategy issued via the Government Press Office. Domestic and institutional, but WebFetch of the full PDF confirms it contains NO reference to post-quantum, quantum-safe, or quantum-resistant cryptography. Fails the explicit-PQC inclusion test."
+  },
+  {
+    "title": "The Belize National Cybersecurity Strategy 2020-2023 (Digital Watch Observatory record)",
+    "url": "https://dig.watch/resource/the-belize-national-cybersecurity-strategy-2020-2023",
+    "description": "Third-party (DiploFoundation Digital Watch) summary record of Belize's strategy. Not a domestic Belizean institution; no PQC content."
+  },
+  {
+    "title": "Belize National Cybersecurity Assessment Maturity Consultation Review Meeting - February 20th, 2026",
+    "url": "https://digitalagenda.gov.bz/2026/02/27/belize-national-cybersecurity-assessment-maturity-consultation-review-meeting-february-20th2026/",
+    "description": "Ministry of E-Governance / Digital Agenda notice on the World-Bank-supported national cybersecurity maturity assessment (2025-2026). Domestic and institutional, but covers incident response, leadership and a five-year plan with no mention of post-quantum or quantum-safe cryptography."
+  },
+  {
+    "title": "Belize National Cybersecurity Assessment Maturity Consultation Review Meeting (BreakingBelizeNews)",
+    "url": "https://www.breakingbelizenews.com/2026/02/23/belize-national-cybersecurity-assessment-maturity-consultation-review-meeting/",
+    "description": "Belizean news coverage of the February 2026 cybersecurity assessment meeting. Journalism, not institutional; no PQC content."
+  },
+  {
+    "title": "Towards Belize's National Digital Cybersecurity Framework (7News Belize)",
+    "url": "https://www.7newsbelize.com/sstory.php?nid=77375",
+    "description": "Belizean news report on the developing national digital cybersecurity framework. Journalism, not institutional; no PQC content."
+  },
+  {
+    "title": "NCSI :: Belize - National Cyber Security Index 2022",
+    "url": "https://ncsi.ega.ee/country/bz_2022/",
+    "description": "Estonian e-Governance Academy index entry profiling Belize's cyber posture. International third-party body, not domestic; no PQC content."
+  },
+  {
+    "title": "Support to Belize National Cyber Security Strategy (Cybil Portal)",
+    "url": "https://cybilportal.org/projects/support-to-belize-national-cyber-security-strategy/",
+    "description": "GFCE Cybil Portal record of a capacity-building project supporting Belize's strategy. International portal, not a domestic institution; no PQC content."
+  },
+  {
+    "title": "Belize Public Utilities Commission (telecommunications regulator)",
+    "url": "https://www.puc.bz/",
+    "description": "Belize's telecom/utilities regulator (puc.bz). Domestic and institutional, but no post-quantum or quantum-safe cryptography material surfaced on the site."
+  },
+  {
+    "title": "The Belize Bureau of Standards (Wikipedia profile)",
+    "url": "https://en.wikipedia.org/wiki/The_Belize_Bureau_of_Standards",
+    "description": "National standards body of Belize, under the Ministry of Economic Development. No cryptography or quantum standards activity found; only an encyclopaedia profile surfaced, not an official PQC publication."
+  },
+  {
+    "title": "Belize country page (Council of Europe Octopus cybercrime wiki)",
+    "url": "https://www.coe.int/en/web/octopus/country-wiki-ap/-/asset_publisher/CmDb7M4RGb4Z/content/belize/pop_up",
+    "description": "Council of Europe profile of Belize's cybercrime/cybersecurity legal framework. International body, not domestic; no PQC content."
+  }
+]

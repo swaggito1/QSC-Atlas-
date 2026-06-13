@@ -1,0 +1,67 @@
+[
+  {
+    "title": "UkrCrypto2026: International Conference on Cryptographic Research",
+    "url": "https://csi.cip.gov.ua/uk/pages/ukrcrypto2026",
+    "description": "Conference (23-25 Sept 2026, Kyiv) organised by the State Scientific and Research Institute of Cybersecurity Technologies and Information Protection (a Derzhspetszviazku body); section list explicitly includes 'Постквантова та квантова криптографія' (Post-quantum and quantum cryptography)."
+  },
+  {
+    "title": "State Scientific and Research Institute of Cybersecurity Technologies and Information Protection (homepage)",
+    "url": "https://csi.cip.gov.ua/en",
+    "description": "English homepage of the SSSCIP research institute (DerzhNDI) that runs cybersecurity research, testing and certification in Ukraine; organiser of UkrCrypto2026."
+  },
+  {
+    "title": "CSIRT of State Scientific and Research Institute of Cybersecurity Technologies and Information Protection",
+    "url": "https://csirt.csi.cip.gov.ua/en",
+    "description": "CSIRT under the SSSCIP research institute; no explicit PQC document surfaced."
+  },
+  {
+    "title": "Information technology and cyber security qualification center (DerzhNDI)",
+    "url": "https://qc.csi.cip.gov.ua/en",
+    "description": "Qualification/certification centre of the SSSCIP research institute; certification of cybersecurity specialists. No explicit PQC document."
+  },
+  {
+    "title": "Parliamentary research document (Verkhovna Rada Research Service)",
+    "url": "https://research.rada.gov.ua/uploads/documents/33304.pdf",
+    "description": "PDF from the Research Service of the Verkhovna Rada that repeatedly surfaced under post-quantum-cryptography native-language queries; content could not be parsed (binary) so explicit PQC reference unconfirmed."
+  },
+  {
+    "title": "Catalogue of analytical and information materials of the Research Service of the Verkhovna Rada",
+    "url": "https://research.rada.gov.ua/documents/analyticRSmaterialsDocs/73288.html",
+    "description": "Index/catalogue page of parliamentary research materials; no quantum/PQC title confirmed on the page."
+  },
+  {
+    "title": "Order No. 54 of 30.01.2025 - Basic cyber-defence measures and methodological recommendations",
+    "url": "https://cip.gov.ua/ua/news/nakaz-administraciyi-derzhspeczv-yazku-vid-30-01-2025-54-pro-zatverdzhennya-bazovikh-zakhodiv-z-kiberzakhistu-ta-metodichnikh-rekomendacii-shodo-zdiisnennya-bazovikh-zakhodiv-z-kiberzakhistu",
+    "description": "Derzhspetszviazku order approving basic cyber-defence measures; general cyber, no explicit PQC mention found."
+  },
+  {
+    "title": "Order No. 75 of 30.01.2026 - Catalogue of cyber-defence measures",
+    "url": "https://cip.gov.ua/ua/news/nakaz-administraciyi-derzhspeczv-yazku-vid-30-01-2026-75-pro-zatverdzhennya-katalogu-zakhodiv-z-kiberzakhistu-bazovikh-zakhodiv-z-kiberzakhistu-formi-planu-kiberzakhistu-ta-metodichnikh-rekomendacii-shodo-zdiisnennya-zakhodiv-z-kiberzakhistu",
+    "description": "Derzhspetszviazku order approving a catalogue of cyber-defence measures; general cyber, no explicit PQC mention found."
+  },
+  {
+    "title": "Recommendations (cip.gov.ua attachment id=53982)",
+    "url": "https://cip.gov.ua/services/cm/api/attachment/download?id=53982",
+    "description": "Derzhspetszviazku recommendations document; returned HTTP 403 and could not be verified for PQC content."
+  },
+  {
+    "title": "Draft Cybersecurity Strategy of Ukraine (2021-2025)",
+    "url": "https://www.rnbo.gov.ua/files/2021/STRATEGIYA%20KYBERBEZPEKI/proekt%20strategii_kyberbezpeki_Ukr.pdf",
+    "description": "National Security and Defence Council (RNBO) draft national cybersecurity strategy; general strategy, no confirmed explicit PQC/post-quantum reference."
+  },
+  {
+    "title": "Cybersecurity Strategy of Ukraine 3.0 (announcement)",
+    "url": "https://rnbo.gov.ua/ua/Diialnist/7637.html",
+    "description": "RNBO announcement of Cybersecurity Strategy 3.0 (cyber resilience, digital sovereignty); references emerging tech including quantum computing but no confirmed explicit PQC-migration reference."
+  },
+  {
+    "title": "Overview of the national cybersecurity system of Ukraine 2025",
+    "url": "https://www.rnbo.gov.ua/files/2026/NATIONAL_CYBER_SCC/kiber_2025.pdf",
+    "description": "RNBO 2025 review of Ukraine's national cybersecurity system; mentions impact of AI and quantum computing on cyberspace but no confirmed explicit PQC reference."
+  },
+  {
+    "title": "SSSCIP - State Service of Special Communications (homepage)",
+    "url": "https://cip.gov.ua/en",
+    "description": "Main portal of the State Service of Special Communications and Information Protection of Ukraine (Derzhspetszviazku); lead cryptographic-policy and CERT-UA host. No dedicated PQC document surfaced."
+  }
+]

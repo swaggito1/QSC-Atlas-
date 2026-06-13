@@ -1,0 +1,24 @@
+[
+  {
+    "title": "National Quantum Technologies Strategy",
+    "country": "CHL",
+    "issuingOrg": "Ministry of Science (MinCiencia)",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://minciencia.gob.cl/uploads/filer_public/a9/2b/a92b6e0d-40ae-48dc-9b48-2da0ba5c7585/tecnologiascuanticas.pdf",
+    "summary": "Chile's national quantum technologies strategy, issued by the Ministry of Science, Technology, Knowledge and Innovation. It explicitly defines and prioritises post-quantum cryptography (PQC), directing the state to 'impulsar la investigación en criptografía post-cuántica (PQC)' and to develop quantum-safe communications for critical infrastructure.",
+    "included": true
+  },
+  {
+    "title": "Expert Commission on Quantum Technologies delivers report with recommendations to strengthen the ecosystem",
+    "country": "CHL",
+    "issuingOrg": "ANCI / National Cybersecurity Coordination",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://anci.gob.cl/noticias/comisi%C3%B3n-experta-en-tecnolog%C3%ADas-cu%C3%A1nticas-entreg%C3%B3-informe-con-recomendaciones-para-fortalecer-el-ecosistema/",
+    "summary": "Official page on the report of the Expert Commission on Quantum Technologies, convened by the Ministries of Interior and Science. The recommendations explicitly call to 'implementar de forma inmediata tecnologias de comunicacion Quantum-Safe' and to foster R&D in 'criptografia post-cuantica'. Dated 1 October 2024. The ciberseguridad.gob.cl URL 307-redirects to this ANCI page.",
+    "included": true
+  }
+]

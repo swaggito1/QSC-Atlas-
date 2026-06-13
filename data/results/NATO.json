@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Summary of NATO's Quantum Technologies Strategy",
+    "country": "NATO",
+    "issuingOrg": "NATO",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.nato.int/cps/en/natohq/official_texts_221777.htm",
+    "summary": "NATO official text summarising the Alliance's first Quantum Technologies Strategy. Sets the desired end-state of transitioning NATO cryptographic systems to quantum-safe cryptography and committing Allies and NATO bodies to develop and implement post-quantum cryptography and quantum key distribution.",
+    "included": true
+  },
+  {
+    "title": "NATO releases first ever quantum strategy",
+    "country": "NATO",
+    "issuingOrg": "NATO",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nato.int/en/news-and-events/articles/news/2024/01/17/nato-releases-first-ever-quantum-strategy",
+    "summary": "NATO news article announcing the Alliance's first quantum strategy, including the aim to upgrade and secure data communications using quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Using quantum technologies to make communications secure",
+    "country": "NATO",
+    "issuingOrg": "NATO",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nato.int/en/news-and-events/articles/news/2022/09/27/using-quantum-technologies-to-make-communications-secure",
+    "summary": "NATO news article describing Alliance efforts on post-quantum cryptography and quantum key distribution to secure communications against the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "NATO works on quantum cryptography with Malta",
+    "country": "NATO",
+    "issuingOrg": "NATO SPS",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nato.int/cps/en/natohq/news_165733.htm",
+    "summary": "NATO news on a Science for Peace and Security (SPS) project with Malta to establish and implement post-quantum cryptographic solutions and protocols, alongside quantum key distribution over submarine optical fibre.",
+    "included": true
+  },
+  {
+    "title": "Quantum Technologies and the Science for Peace and Security Programme",
+    "country": "NATO",
+    "issuingOrg": "NATO SPS",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nato.int/content/dam/nato/webready/documents/sps/sps-activities/2023-sps-quantum.pdf",
+    "summary": "NATO Science for Peace and Security Programme document on quantum technology activities, including funded post-quantum cryptography and quantum key distribution projects.",
+    "included": true
+  },
+  {
+    "title": "NATO Cyber Security Centre experiments with secure network capable of withstanding attack by quantum computers",
+    "country": "NATO",
+    "issuingOrg": "NCI Agency / NATO Cyber Security Centre",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.ncia.nato.int/about-us/newsroom/nato-cyber-security-centre-experiments-with-secure-network-capable-of-withstanding-attack-by-quantum-computers",
+    "summary": "NCI Agency / NATO Cyber Security Centre press release reporting successful testing of a hybrid post-quantum VPN combining post-quantum and traditional algorithms, with the solution proposed to the IETF for open standardisation.",
+    "included": true
+  },
+  {
+    "title": "Quantum Leap",
+    "country": "NATO",
+    "issuingOrg": "NCI Agency",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.ncia.nato.int/about-us/newsroom/quantum-leap",
+    "summary": "NCI Agency newsroom feature on NATO quantum-safe work, including post-quantum cryptography and quantum key distribution to enhance network resilience.",
+    "included": true
+  },
+  {
+    "title": "NATO Exploring Quantum Technology for Future Challenges",
+    "country": "NATO",
+    "issuingOrg": "NATO ACT",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.act.nato.int/article/nato-exploring-quantum-technology-for-future-challenges/",
+    "summary": "NATO Allied Command Transformation article on quantum technology for defence, noting the need to secure digital infrastructure with quantum-resistant / post-quantum cryptography and an experiment using PQC for friend-or-foe identification of tactical drones.",
+    "included": true
+  },
+  {
+    "title": "Advanced Communication Technologies (DIANA Challenge 26-02)",
+    "country": "NATO",
+    "issuingOrg": "NATO DIANA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.diana.nato.int/resources/site1/general/challenges/docs/cha-26-02-advanced-communication-technologies.pdf",
+    "summary": "NATO Defence Innovation Accelerator for the North Atlantic (DIANA) challenge document featuring communication systems with integrated post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Towards a Quantum-Secure Hybrid Encryptor Using Post-Quantum Cryptography and Quantum Key Distribution",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.sto.nato.int/document/towards-a-quantum-secure-hybrid-encryptor-using-post-quantum-cryptography-and-quantum-key-distribution/",
+    "summary": "NATO Science and Technology Organization meeting paper proposing a hybrid encryptor combining post-quantum cryptography and quantum key distribution for quantum-resistant security. Authored by external researchers presented at a NATO STO symposium, so flagged for review.",
+    "included": false
+  },
+  {
+    "title": "Towards Resilient and Quantum-Safe RADAR Communication",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.sto.nato.int/document/towards-resilient-and-quantum-safe-radar-communication/",
+    "summary": "NATO Science and Technology Organization meeting paper proposing post-quantum cryptography / quantum communication for resilient military RADAR communication. Authored by external industry researchers (Terma A/S) at a NATO STO symposium, so flagged for review.",
+    "included": false
+  },
+  {
+    "title": "DISCRETION: Quantum Secure Communications for European Defence",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.sto.nato.int/document/discretion-quantum-secure-communications-for-european-defence/",
+    "summary": "NATO Science and Technology Organization meeting paper on QKD-based quantum secure communications for European defence, framed against the post-quantum cryptography transition. Authored by external researchers at a NATO STO symposium, so flagged for review.",
+    "included": false
+  },
+  {
+    "title": "NATO Cyber Security Centre presentation on PQC migration approaches (ETSI/IQC Quantum Safe Cryptography event)",
+    "country": "NATO",
+    "issuingOrg": "NATO Cyber Security Centre",
+    "year": 2023,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://docbox.etsi.org/Workshop/2023/02_QUANTUMSAFECRYPTOGRAPHY/TECHNICALTRACK/MIGRATION_APPROACHES/NATO_SLIWA.pdf",
+    "summary": "Presentation by NATO Cyber Security Centre scientists (Sliwa, Wrona) on NATO post-quantum cryptography migration approaches, delivered at the ETSI/IQC Quantum Safe Cryptography event. Authored by NATO CSC but hosted on the ETSI docbox, so flagged for review.",
+    "included": false
+  }
+]

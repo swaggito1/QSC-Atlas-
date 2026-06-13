@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Is Bosnia and Herzegovina Ready for the Digital Age in the EU Integration Process",
+    "url": "https://ssrc.ibu.edu.ba/blog/is-bosnia-and-herzegovina-ready-for-the-digital-age-in-the-eu-integration-process",
+    "description": "Blog post by the Social Science Research Center at International Burch University (private academic institution, Sarajevo). Discusses BiH digital readiness and recommends the country adopt regulatory provisions for quantum cybersecurity, QKD and PQC. Academic commentary, not an official government document."
+  },
+  {
+    "title": "Ministry of Security of Bosnia and Herzegovina (msb.gov.ba)",
+    "url": "https://msb.gov.ba/onama/default.aspx?id=1641&langTag=en-US",
+    "description": "Official website of the BiH Ministry of Security, which hosts the (non-operational) state-level BiH CERT. No published document explicitly references post-quantum or quantum-safe cryptography."
+  },
+  {
+    "title": "Komunikacije i informatizacija - Dokumenti (Ministry of Communications and Transport)",
+    "url": "https://mkt.gov.ba/Content/Read/komunikacije-informatizacija-dokumenti",
+    "description": "Documents page of the BiH Ministry of Communications and Transport (the ministry handling digital/communications policy). Page returned HTTP 404 on fetch; no PQC-explicit document identified."
+  },
+  {
+    "title": "Institut za standardizaciju Bosne i Hercegovine (ISBIH/BAS)",
+    "url": "https://bs.wikipedia.org/wiki/Institut_za_standardizaciju_Bosne_i_Hercegovine",
+    "description": "BiH national standards body, ISO member since 1997. No evidence of any adopted BiH standard or publication explicitly addressing post-quantum/quantum-safe cryptography."
+  },
+  {
+    "title": "Centralna banka Bosne i Hercegovine (Central Bank of Bosnia and Herzegovina)",
+    "url": "https://www.cbbh.ba/?lang=bs",
+    "description": "BiH central bank official site. No published material explicitly referencing post-quantum or quantum-safe cryptography found."
+  },
+  {
+    "title": "Cybersecurity in Bosnia and Herzegovina: Everyone's problem - no one's responsibility (CESS Volten Brief #12)",
+    "url": "https://cess.org/wp-content/uploads/2025/06/CESS-Volten-Brief_12-2025_EN.pdf",
+    "description": "Policy brief by the Centre for Security Studies (CESS), an NGO/think tank. Discusses absence of a national CERT and cyber strategy in BiH. NGO source; does not explicitly address PQC."
+  }
+]

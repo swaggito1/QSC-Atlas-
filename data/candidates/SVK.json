@@ -6,12 +6,6 @@
     "markdown": ""
   },
   {
-    "title": "DISKUSIA Stratégia rozvoja kvantového počítania a postkvantová ...",
-    "url": "https://www.itapa.sk/19963-en/diskusia-strategia-rozvoja-kvantoveho-pocitania-a-postkvantova-kryptografia-na-slovensku/",
-    "description": "DISCUSSION \"Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia\" · How a quantum computer works and where we are today.",
-    "markdown": ""
-  },
-  {
     "title": "Stratégia rozvoja kvantového počítania a postkvantová kryptografia ...",
     "url": "https://www.youtube.com/watch?v=CU-MLSGZuEM",
     "description": "Stratégia rozvoja kvantového počítania a postkvantová kryptografia na Slovensku ... Slovakia – The Country That Shouldn't Exist | 4K ...",
@@ -24,15 +18,15 @@
     "markdown": ""
   },
   {
-    "title": "Čo je postkvantová kryptografia a hrozba PQC? | Mastercard Slovakia",
-    "url": "https://www.mastercard.com/sk/sk/news-and-trends/stories/2025/what-is-post-quantum-cryptography.html",
-    "description": "Postkvantová kryptografia je súhrnný termín pre nové šifrovacie metódy určené na odolávanie útokom kvantových počítačov. Normy PQC na celom ...",
+    "title": "DISKUSIA Stratégia rozvoja kvantového počítania a postkvantová ...",
+    "url": "https://www.itapa.sk/19963-en/diskusia-strategia-rozvoja-kvantoveho-pocitania-a-postkvantova-kryptografia-na-slovensku/",
+    "description": "DISCUSSION \"Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia\" · How a quantum computer works and where we are today.",
     "markdown": ""
   },
   {
-    "title": "Postkvantová kryptografia - STU",
-    "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-stuzp87588-Postkvantova-kryptografia/",
-    "description": "Postkvantová kryptografia ; Mikulec, Ján (Author) - FEI Ústav informatiky a matematiky · Zajac, Pavol Z1 (Thesis advisor) - FEI Ústav informatiky a matematiky.",
+    "title": "Čo je postkvantová kryptografia a hrozba PQC? | Mastercard Slovakia",
+    "url": "https://www.mastercard.com/sk/sk/news-and-trends/stories/2025/what-is-post-quantum-cryptography.html",
+    "description": "Postkvantová kryptografia je súhrnný termín pre nové šifrovacie metódy určené na odolávanie útokom kvantových počítačov. Normy PQC na celom ...",
     "markdown": ""
   },
   {
@@ -48,15 +42,27 @@
     "markdown": ""
   },
   {
-    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
-    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
-    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis.",
+    "title": "Éra postkvantovej bezpečnosti sa začala. Má aj oficiálny začiatok ...",
+    "url": "https://www.pressreader.com/slovakia/hospodarske-noviny-9zzt/20251212/281913074439682?srsltid=AfmBOooWnZIRMVUSZEahgvI6PRRAA0gVIPCgpvIAWKFHK3rE8MZV7v8i",
+    "description": "Preto postkvantová kryptografia vyvíja a zavádza šifrovacie algoritmy odolné voči budúcim útokom kvantových počítačov, aby chránila dnešnú aj dlhodobú ...",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography - NIST CSRC",
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis. Slovakia NIST SK-2025 ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | CSRC",
     "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
     "description": "With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Slovakia's Quantum Cryptography Strategy Is Shaping The Future",
+    "url": "https://decentcybersecurity.eu/slovakia-quantum-cryptography-strategy/",
+    "description": "Slovakia's quantum cryptography strategy sets new standards for secure communication and national resilience in the post-quantum era.",
     "markdown": ""
   },
   {
@@ -66,33 +72,27 @@
     "markdown": ""
   },
   {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "Key Federal Government Reports and Guidance on PQC · PQC Transition Plans and Deadlines for Federal Systems · Key Federal Transition Steps.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "This resource is designed to show a central view of how governments and agencies around the world are building compliance regulations to help navigate the ...",
+    "markdown": ""
+  },
+  {
     "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
     "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
     "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
     "markdown": ""
   },
   {
-    "title": "Applus+ Laboratories' Post - LinkedIn",
-    "url": "https://www.linkedin.com/posts/applus-laboratories_appluslaboratories-cryptography-quantum-activity-7343585331817975808-SFCL",
-    "description": "Reposting Zygmunt Lozinski's article: Government guidance on #Post-Quantum #Cryptography (PQC) migration is accelerating. Organizations ...",
-    "markdown": ""
-  },
-  {
-    "title": "Post-Quantum Cryptography Initiative | CISA",
-    "url": "https://www.cisa.gov/topics/risk-management/quantum",
-    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products ...",
-    "markdown": ""
-  },
-  {
-    "title": "Post-Quantum Cryptography (PQC): Application Security Migration ...",
-    "url": "https://www.contrastsecurity.com/security-influencers/post-quantum-cryptography-pqc-application-security-migration-guide",
-    "description": "After March 31, 2025, organizations must maintain an up-to-date, documented inventory of all cryptographic ciphers and protocols in use. They ...",
-    "markdown": ""
-  },
-  {
-    "title": "PQC Roadmaps and Transition Guidance - PQShield",
-    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
-    "description": "Canada released its post-quantum cryptography roadmap in June 2025, outlining the Canadian government's plan to transition non-classified IT systems to PQC with ...",
+    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "This guide explains the federal PQC mandate, key requirements, and how solutions like IGEL and wolfSSL enable crypto-agility and long-term ...",
     "markdown": ""
   },
   {
@@ -108,27 +108,27 @@
     "markdown": ""
   },
   {
-    "title": "National Cybersecurity Center of Excellence (NCCoE) Migration to ...",
-    "url": "https://www.federalregister.gov/documents/2021/10/13/2021-22223/national-cybersecurity-center-of-excellence-nccoe-migration-to-post-quantum-cryptography",
-    "description": "Components are listed in section 3 of the Migration to Post-Quantum Cryptography project description at https://www.nccoe.nist.gov/​projects/​ ...",
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "Slovakia steps into the quantum era On October 8, 2025, the National Security ... Great post from National Cyber Security Centre, Ireland (NCSC-IE) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Q-Day Clock: Enterprise Post-Quantum Migration Imperative",
+    "url": "https://labs.cloudsecurityalliance.org/research/strategic-post-quantum-cryptography-migration-enterprise-roa/",
+    "description": "The National Security Agency's CNSA 2.0 framework provides a concrete implementation timeline extending through 2031 for national security ...",
     "markdown": ""
   },
   {
     "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
     "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
     "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
-    "markdown": ""
-  },
-  {
-    "title": "Slovakia's Quantum Cryptography Strategy Is Shaping The Future",
-    "url": "https://decentcybersecurity.eu/slovakia-quantum-cryptography-strategy/",
-    "description": "Slovakia's quantum cryptography strategy sets new standards for secure communication and national resilience in the post-quantum era.",
-    "markdown": ""
-  },
-  {
-    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
-    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
-    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
     "markdown": ""
   },
   {

@@ -18,12 +18,6 @@
     "markdown": ""
   },
   {
-    "title": "Codebasierte Post-Quanten-Kryptografie: Goppa Codes und das ...",
-    "url": "https://www.ebay.com/itm/397508434121",
-    "description": "Entdecken Sie die Zukunft der Kryptographie mit \"Codebasierte Post-Quanten-Kryptografie - Goppa Codes und das McEliece Kryptosystem\".",
-    "markdown": ""
-  },
-  {
     "title": "Post-Quanten-Kryptografie: Was jetzt zu tun ist | EY - Deutschland",
     "url": "https://www.ey.com/de_de/insights/consulting/post-quanten-kryptografie-was-jetzt-zu-tun-ist",
     "description": "Quantencomputer bedrohen die heutige Datensicherheit – sind Sie bereit für die Post-Quanten-Kryptografie? Erfahren Sie, warum der Umstieg",
@@ -33,6 +27,12 @@
     "title": "Datensicherheit im post-quanten Zeitalter - PwC",
     "url": "https://www.pwc.de/de/cyber-security/datensicherheit-im-post-quanten-zeitalter.html",
     "description": "Der Wechsel zu post-quanten Kryptografie (PQC) erfordert eine strategische und koordinierte Herangehensweise. 1. Analyse. Bestandsaufnahme ...",
+    "markdown": ""
+  },
+  {
+    "title": "Alternativen zur Post-Quanten-Kryptografie? : r/cryptography - Reddit",
+    "url": "https://www.reddit.com/r/cryptography/comments/x82hfz/alternatives_to_postquantum_cryptography/?tl=de",
+    "description": "Mit nem Laptop, nicht mal mit nem Quantencomputer. Sollten wir unsere Zeit mit Post-Quanten-Kryptografie verschwenden? Oder gibt's da Alternativen? https:// ...",
     "markdown": ""
   },
   {
@@ -104,7 +104,19 @@
   {
     "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
     "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
-    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Q-Day Clock: Enterprise Post-Quantum Migration Imperative",
+    "url": "https://labs.cloudsecurityalliance.org/research/strategic-post-quantum-cryptography-migration-enterprise-roa/",
+    "description": "The National Security Agency's CNSA 2.0 framework provides a concrete implementation timeline extending through 2031 for national security ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "NIST's National Cybersecurity Center of Excellence (NCCoE) has an ongoing project on the Migration to Post-Quantum Cryptography. The Trump ...",
     "markdown": ""
   },
   {
@@ -114,21 +126,9 @@
     "markdown": ""
   },
   {
-    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
-    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
-    "description": "NIST's National Cybersecurity Center of Excellence (NCCoE) has an ongoing project on the Migration to Post-Quantum Cryptography.",
-    "markdown": ""
-  },
-  {
     "title": "CISA and NIST urge federal agencies to use quantum cryptography",
     "url": "https://www.linkedin.com/posts/alec-wyhs-529a916a_agencies-explore-post-quantum-cryptography-activity-7333187733193940993-HK_D",
-    "description": "Federal agencies are being urged to incorporate post quantum cryptography requirements into acquisition processes to safeguard sensitive data ...",
-    "markdown": ""
-  },
-  {
-    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
-    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
-    "description": "Post-quantum cryptography migration must begin with clear ownership and a well-defined scope that reflects how cryptographic trust is established and maintained ...",
+    "description": "Federal agencies are being urged to incorporate post quantum cryptography requirements into acquisition processes to safeguard sensitive ...",
     "markdown": ""
   },
   {
@@ -156,6 +156,12 @@
     "markdown": ""
   },
   {
+    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
+    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
+    "description": "Quantum-safe readiness relies on how cryptography is embedded across network infrastructure, identity systems, encrypted traffic flows, and long-lived data ...",
+    "markdown": ""
+  },
+  {
     "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
     "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
     "description": "Gain post-quantum readiness with expert-led cryptographic assessment, migration strategy, and hands-on implementation aligned to NIST standards.",
@@ -165,12 +171,6 @@
     "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
     "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
     "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
-    "markdown": ""
-  },
-  {
-    "title": "EMPFEHLUNG DER KOMMISSION vom 11.4.2024 über einen ...",
-    "url": "https://www.parlament.gv.at/gegenstand/XXVII/EU/181794",
-    "description": "EMPFEHLUNG DER KOMMISSION vom 11.4.2024 über einen Fahrplan für die koordinierte Umsetzung des Übergangs zur Post-Quanten-Kryptografie (181794/EU XXVII.GP).",
     "markdown": ""
   },
   {

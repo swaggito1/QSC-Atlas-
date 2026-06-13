@@ -6,9 +6,9 @@
     "markdown": ""
   },
   {
-    "title": "Migration to Post-Quantum Cryptography - NCCoE",
-    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
-    "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
+    "title": "Post-Quantum Cryptography | CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "description": "NIST's Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat ...",
     "markdown": ""
   },
   {
@@ -30,9 +30,9 @@
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography (PQC): Application Security Migration ...",
-    "url": "https://www.contrastsecurity.com/security-influencers/post-quantum-cryptography-pqc-application-security-migration-guide",
-    "description": "Prepare for the shift to Post-Quantum Cryptography (PQC). Learn how PCI DSS v4.0 and NIST mandates impact application security and how to ...",
+    "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "description": "NSA views quantum-resistant (or post-quantum) cryptography as a more cost effective and easily maintained solution than quantum key distribution.",
     "markdown": ""
   },
   {
@@ -42,9 +42,15 @@
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
-    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
-    "description": "NSA does not recommend the usage of quantum key distribution and quantum cryptography for securing the transmission of data in National Security Systems (NSS) ...",
+    "title": "What Are NIST PQC Standards? - Palo Alto Networks",
+    "url": "https://www.paloaltonetworks.com/cyberpedia/pqc-standards",
+    "description": "NIST PQC Standards are a suite of formal cryptographic specifications to protect electronic information from future quantum computer attacks.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
     "markdown": ""
   },
   {
@@ -54,15 +60,15 @@
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography Initiative | CISA",
-    "url": "https://www.cisa.gov/topics/risk-management/quantum",
-    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
     "markdown": ""
   },
   {
-    "title": "US Senate introduces Quantum Cybersecurity Migration Act - LinkedIn",
-    "url": "https://www.linkedin.com/posts/marinivezic_quantum-cybersecurity-migration-act-us-activity-7356954428723130368-pL9B",
-    "description": "Another legislative boost for quantum readiness: Yesterday the U.S. Senate introduced the bipartisan Quantum Cybersecurity Migration Act, ...",
+    "title": "UK's plan for post-quantum cryptography by 2035 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/zygmuntlozinski_timelines-for-migration-to-post-quantum-cryptography-activity-7308425014054178818-T48Q",
+    "description": "UK timeline for Post-Quantum Cryptography published today by National Cyber Security Centre. 2025-2028 Cryptographic discovery and create a ...",
     "markdown": ""
   },
   {
@@ -72,21 +78,15 @@
     "markdown": ""
   },
   {
-    "title": "Timelines for migration to post-quantum cryptography",
-    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
-    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
     "markdown": ""
   },
   {
-    "title": "NIST National Cybersecurity Center of Excellence | SandboxAQ",
-    "url": "https://www.sandboxaq.com/post/sandboxaq-selected-for-nists-national-cybersecurity-center-of-excellence-migration-to-post-quantum-cryptography-project",
-    "description": "On July 16, NIST announced the 12 technology collaborators for the National Cybersecurity Center of Excellence's “Migration to Post-Quantum ...",
-    "markdown": ""
-  },
-  {
-    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
-    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
-    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "title": "Q-Day Clock: Enterprise Post-Quantum Migration Imperative",
+    "url": "https://labs.cloudsecurityalliance.org/research/strategic-post-quantum-cryptography-migration-enterprise-roa/",
+    "description": "The National Security Agency's CNSA 2.0 framework provides a concrete implementation timeline extending through 2031 for national security ...",
     "markdown": ""
   },
   {
@@ -96,15 +96,21 @@
     "markdown": ""
   },
   {
-    "title": "[PDF] National Quantum Strategy Roadmap",
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] National Quantum Strategy Roadmap - Government of Canada",
     "url": "https://ised-isde.canada.ca/site/national-quantum-strategy/sites/default/files/documents/nqsr-qcqc-en.pdf",
     "description": "To address these challenges, post-quantum cryptography (PQC), also known as quantum-safe or quantum-resistant cryptography, is being developed. PQC enables ...",
     "markdown": ""
   },
   {
-    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
-    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
-    "description": "This roadmap sets out clear expectations and timelines for Member States to begin and progress their migration away from vulnerable classical ...",
+    "title": "India Reveals National Plan for Quantum-Safe Security",
+    "url": "https://thequantuminsider.com/2026/02/09/india-reveals-national-plan-for-quantum-safe-security/",
+    "description": "India's proactive approach to quantum safety is reflected in its strategic roadmap, which aims to make India a leader in both quantum technology ...",
     "markdown": ""
   },
   {
@@ -114,7 +120,7 @@
     "markdown": ""
   },
   {
-    "title": "Quantum Readiness: How to Prepare for Post ... - Palo Alto Networks",
+    "title": "Quantum Readiness: How to Prepare for Post-Quantum Security",
     "url": "https://www.paloaltonetworks.com/cyberpedia/quantum-readiness",
     "description": "Prepare for quantum readiness by identifying cryptographic risk, prioritizing PQC migration, and building crypto-agility before quantum threats emerge.",
     "markdown": ""

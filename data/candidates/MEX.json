@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Plan Nacional de Ciberseguridad (Diciembre 2025) [PDF]",
+    "url": "https://www.portal.atdt.gob.mx/wp-content/uploads/2026/01/Plan_Nacional_de_Ciberseguridad-2.pdf",
+    "description": "Official Plan Nacional de Ciberseguridad 2025-2030 issued by Mexico's Agencia de Transformacion Digital y Telecomunicaciones (ATDT). Image-rendered PDF (Google/Skia producer); references quantum computing (computacion cuantica) only as a generic emerging threat. No explicit post-quantum/quantum-resistant cryptography reference found in available text or secondary coverage."
+  },
+  {
+    "title": "Liderara Mexico ciberresiliencia en la region con Plan Nacional de Ciberseguridad",
+    "url": "https://www.gob.mx/atdt/comunicacion/liderara-mexico-ciberresiliencia-en-la-region-con-plan-nacional-de-ciberseguridad",
+    "description": "ATDT press announcement of the Plan Nacional de Ciberseguridad 2025-2030. Mentions emerging technologies (AI, quantum computing) generically; no explicit PQC reference."
+  },
+  {
+    "title": "ACUERDO por el que se emite la Politica General de Ciberseguridad para la Administracion Publica Federal (DOF 17 dic 2025) [PDF]",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/1043595/2025_12_17_MAT_atdt.pdf",
+    "description": "Binding cybersecurity policy for Mexico's Federal Public Administration, published in the Diario Oficial de la Federacion on 17 December 2025 by the ATDT. Extracted PDF text contains zero mentions of quantum or post-quantum cryptography."
+  },
+  {
+    "title": "Programa Sectorial de la Agencia de Transformacion Digital y Telecomunicaciones 2025-2030",
+    "url": "https://sidof.segob.gob.mx/notas/docFuente/5768198",
+    "description": "ATDT sectoral programme 2025-2030. Confirmed (via fetch) to contain no mention of quantum computing or post-quantum cryptography."
+  },
+  {
+    "title": "Centro de Ciberseguridad Gubernamental",
+    "url": "https://www.gob.mx/atdt/articulos/centro-de-ciberseguridad-gubernamental-388329",
+    "description": "ATDT article on the Government Cybersecurity Centre. General cybersecurity governance; no PQC reference found."
+  },
+  {
+    "title": "Ciberseguridad (agenda)",
+    "url": "https://www.gob.mx/atdt/agendas/ciberseguridad",
+    "description": "ATDT cybersecurity agenda landing page. Index/listing page; no explicit PQC content found."
+  },
+  {
+    "title": "Guardia Nacional recibe declaracion de cumplimiento del CERT-MX bajo el Modelo SIM3 CSIRTAmericas Baseline",
+    "url": "https://gabinetedeseguridad.gob.mx/contenido/6650/guardia-nacional-recibe-declaracion-de-cumplimiento-del-cert-mx-bajo-el-modelo-sim3-csirtamericas-baseline",
+    "description": "Announcement on CERT-MX (Guardia Nacional) attaining SIM3 incident-handling maturity compliance. Concerns CSIRT maturity, not cryptography; no PQC reference."
+  },
+  {
+    "title": "Inicia evaluacion del CERT-MX de la Guardia Nacional, con base al modelo de madurez de gestion de incidentes de seguridad",
+    "url": "https://gabinetedeseguridad.gob.mx/contenido/5042/inicia-evaluacion-del-cert-mx-de-la-guardia-nacional-con-base-al-modelo-de-madurez-de-gestion-de-incidentes-de-seguridad",
+    "description": "Announcement that CERT-MX began a SIM3 incident-management maturity evaluation. No cryptography or PQC content."
+  },
+  {
+    "title": "Ciberseguridad Ciudadana | Guardia Nacional CERT-MX",
+    "url": "https://www.gob.mx/gncertmx/articulos/ciberseguridad-ciudadana-263949",
+    "description": "CERT-MX citizen cybersecurity awareness article. General awareness content; no PQC reference."
+  },
+  {
+    "title": "Estrategia de Ciberseguridad del Banco de Mexico [PDF]",
+    "url": "https://www.banxico.org.mx/sistema-financiero/d/%7B1C588DE0-FC6F-5C53-E43B-2A6079957069%7D.pdf",
+    "description": "Banco de Mexico cybersecurity strategy for the financial system. Extracted PDF text (1.3M chars) contains zero mentions of quantum, post-quantum, or cryptography migration."
+  },
+  {
+    "title": "Reporte de estabilidad financiera dic 2025 (resumen visual)",
+    "url": "https://www.banxico.org.mx/publicaciones-y-prensa/resumenes-visuales/reporte-de-estabilidad-financiera-html/reporte-estabilidad-financi00007.html",
+    "description": "Banco de Mexico financial stability report (Dec 2025). Covers cyber risk and AI; no quantum/PQC reference found in available material."
+  },
+  {
+    "title": "Proteccion cibernetica | Instituto Nacional de la Economia Social (INAES)",
+    "url": "https://www.gob.mx/inaes/articulos/proteccion-cibernetica?idiom=es",
+    "description": "INAES general cyber-protection article surfaced under a PQC-themed query. Basic cyber hygiene content; no PQC reference."
+  },
+  {
+    "title": "Estrategia Nacional de Ciberseguridad (2017) [PDF]",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/271884/Estrategia_Nacional_Ciberseguridad.pdf",
+    "description": "Mexico's 2017 National Cybersecurity Strategy (pre-PQC era). Predates post-quantum standardisation; no PQC reference."
+  },
+  {
+    "title": "Curvas elipticas en la criptografia clasica y post-cuantica (tesis)",
+    "url": "https://www.cs.cinvestav.mx/tesisgraduados/2019/resumenJavierChi.html",
+    "description": "CINVESTAV graduate thesis abstract on elliptic curves in classical and post-quantum cryptography. ACADEMIC (research institution) - excluded per brief."
+  },
+  {
+    "title": "Aceleracion de operaciones en el algoritmo de criptografia postcuantica Crystals-Kyber",
+    "url": "https://repositorio.cinvestav.mx/handle/cinvestav/5564",
+    "description": "CINVESTAV repository thesis on accelerating the Crystals-Kyber post-quantum algorithm. ACADEMIC - excluded per brief."
+  },
+  {
+    "title": "Un acercamiento a la linea del tiempo de los algoritmos criptograficos - RDU UNAM",
+    "url": "https://www.revista.unam.mx/2019v20n5/un-acercamiento-a-la-linea-del-tiempo-de-los-algoritmos-criptograficos/",
+    "description": "UNAM journal article on the timeline of cryptographic algorithms, touching post-quantum cryptography. ACADEMIC/journalism - excluded per brief."
+  },
+  {
+    "title": "Post-Quantum Digital Signature for the Mexican Digital Invoices by Internet",
+    "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-55462021000400729",
+    "description": "Academic paper (SciELO Mexico) proposing post-quantum digital signatures for Mexico's CFDI digital-invoice PKI run by SAT. ACADEMIC - excluded per brief; notes domestic relevance to SAT's national PKI."
+  }
+]

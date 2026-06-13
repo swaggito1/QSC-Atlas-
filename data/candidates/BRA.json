@@ -1,0 +1,107 @@
+[
+  {
+    "title": "ITI publishes Normative Instruction incorporating post-quantum algorithms into ICP-Brasil",
+    "url": "https://www.gov.br/iti/pt-br/assuntos/noticias/indice-de-noticias/iti-publica-instrucao-normativa-que-incorpora-algoritmos-pos-quanticos-a-icp-brasil",
+    "description": "ITI announcement that Normative Instruction No. 35 (30 Jan 2026) adds post-quantum cryptographic algorithms (PQC) to ICP-Brasil services and to the advanced signature on the GOV.BR platform."
+  },
+  {
+    "title": "Normative Instruction ITI No. 35/2026 - DOC-ICP-01.01 (Standards and Cryptographic Algorithms of ICP-Brasil, PQC)",
+    "url": "https://repositorio.iti.gov.br/instrucoes-normativas/IN2026_35_DOC_ICP_01.01_PQC.htm",
+    "description": "Full text of ITI Normative Instruction 35/2026 in the official ITI repository, establishing post-quantum cryptographic algorithms (e.g. ML-DSA per FIPS 204), key sizes and signature suites for ICP-Brasil."
+  },
+  {
+    "title": "Standards and Cryptographic Algorithms of ICP-Brasil (DOC-ICP-01.01 v4.2)",
+    "url": "https://www.gov.br/iti/pt-br/central-de-conteudo/doc-icp-01-01-v-4-2-padroes-e-algoritmos-criptograficos-da-icp-brasil-copy-pdf",
+    "description": "ITI technical standard document setting the cryptographic standards and algorithms required for Brazil's Public Key Infrastructure (ICP-Brasil)."
+  },
+  {
+    "title": "Instrucoes Normativas (ITI legislation index)",
+    "url": "https://www.gov.br/iti/pt-br/assuntos/legislacao/instrucoes-normativas",
+    "description": "ITI index page listing normative instructions."
+  },
+  {
+    "title": "ITI announces advances in the Electronic Signatures Solution",
+    "url": "https://www.gov.br/iti/pt-br/centrais-de-conteudo/por-dentro-do-iti/iti-anuncia-avancos-na-solucao-de-assinaturas-eletronicas",
+    "description": "ITI note on advances in the GOV.BR advanced electronic signature solution, including plans to apply first advanced signatures using post-quantum algorithms in H1 2026."
+  },
+  {
+    "title": "Secretary's visit to ITI aims at implementing quantum algorithms in the public key system",
+    "url": "https://www.gov.br/iti/pt-br/assuntos/noticias/indice-de-noticias/visita-de-secretario-ao-iti-visa-implementacao-de-algoritmos-quanticos-em-sistema-de-chaves-publicas",
+    "description": "ITI announcement (Jan 2024) on a partnership with the Secretariat of Technological Development to evaluate post-quantum algorithms and their impact on electronic signatures."
+  },
+  {
+    "title": "ABIN launches cryptography with post-quantum algorithms for the elections",
+    "url": "https://www.gov.br/abin/pt-br/centrais-de-conteudo/noticias/abin-lanca-criptografia-com-algoritmos-pos-quanticos-para-as-eleicoes",
+    "description": "Brazilian Intelligence Agency (ABIN) announcement that its libharpia cryptographic library with post-quantum algorithms, developed by Cepesc, will be used in the elections."
+  },
+  {
+    "title": "ABIN presents Intelligence Challenges for 2026",
+    "url": "https://www.gov.br/abin/pt-br/centrais-de-conteudo/noticias/abin-apresenta-desafios-de-inteligencia-para-2026",
+    "description": "ABIN note highlighting the transition to post-quantum cryptography as one of the intelligence challenges for 2026."
+  },
+  {
+    "title": "OSIC 15/2024 - Information and Cybersecurity Guidance (emerging technologies)",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/osic/copy_of_osic-15-2024",
+    "description": "GSI Information and Cybersecurity Guidance (OSIC 15/2024) covering emerging technologies including quantum computing and post-quantum cryptography, with recommendations to plan PQC migration."
+  },
+  {
+    "title": "OSIC 15/24 (PDF)",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/osic/osic-15-24.pdf",
+    "description": "PDF of GSI OSIC 15/2024 guidance on emerging technologies, including a section on quantum computing and post-quantum cryptography."
+  },
+  {
+    "title": "Panorama of regulation of emerging technologies (GSI webinar presentation)",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/eventos/Apresentacao_VHSR_4_Webinar_SI_Panorama_tecno_emergentes.pdf",
+    "description": "GSI webinar presentation on regulation of emerging technologies addressing AI, IoT, 5G/6G, cloud, quantum computing and post-quantum cryptography."
+  },
+  {
+    "title": "Quantum computing requires strategic preparation to protect digital systems",
+    "url": "https://www.serpro.gov.br/menu/noticias/noticias-2026/computacao-quantica-exige-preparacao-estrategica-para-proteger-sistemas-digitais",
+    "description": "SERPRO (federal data-processing service) article stating it already performs evaluations and tests with post-quantum cryptography algorithms and calls for strategic PQC migration planning."
+  },
+  {
+    "title": "Anatel and IME advance dialogue on national quantum communication infrastructure",
+    "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/anatel-e-ime-avancam-no-dialogo-sobre-infraestrutura-nacional-de-comunicacao-quantica",
+    "description": "Anatel (national telecom regulator) note on the Rede Quandanga project with IME, an experimental quantum communication network covering quantum cryptography and post-quantum cryptography."
+  },
+  {
+    "title": "Central Bank, Brazil Quantum and Microsoft explore post-quantum cryptography for Pix (with Fenasbac support)",
+    "url": "https://news.microsoft.com/pt-br/com-apoio-da-fenasbac-banco-central-brazil-quantum-e-microsoft-exploram-o-uso-de-criptografia-pos-quantica-para-melhorar-seguranca-do-sistema-pix/",
+    "description": "Study by the Central Bank of Brazil with Brazil Quantum and Microsoft on feasibility of post-quantum cryptography algorithms in the Pix instant payment system. Published on a Microsoft (vendor) site."
+  },
+  {
+    "title": "BC studies regulation for AI and quantum cryptography",
+    "url": "https://finsidersbrasil.com.br/regulamentacao/bc-estuda-regulacao-para-ia-e-criptografia-quantica/",
+    "description": "Journalism (Finsiders) reporting that the Central Bank of Brazil is studying regulation for AI and quantum cryptography."
+  },
+  {
+    "title": "Quantum technologies can revolutionise computing, cryptography and sensors (MCTI)",
+    "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/04/tecnologias-quanticas-podem-revolucionar-computacao-criptografia-e-sensores",
+    "description": "Ministry of Science, Technology and Innovation (MCTI) note on quantum technologies for computing, communication and sensing; focused on quantum tech generally rather than PQC migration."
+  },
+  {
+    "title": "Cancelled debate on challenges and perspectives of quantum computing in Brazil (Chamber of Deputies)",
+    "url": "https://www.camara.leg.br/noticias/985162-cancelado-debate-sobre-desafios-e-perspectivas-da-computacao-quantica-no-brasil/",
+    "description": "Chamber of Deputies news on a cancelled debate about quantum computing; general quantum computing, no explicit PQC reference."
+  },
+  {
+    "title": "QuantumTec advances with its own language for quantum chips (CBPF)",
+    "url": "https://www.gov.br/cbpf/pt-br/assuntos/noticias/quantumtec-avanca-com-linguagem-propria-para-os-chips-quanticos",
+    "description": "Brazilian Centre for Physics Research (CBPF) note on quantum chips; quantum hardware research, not PQC."
+  },
+  {
+    "title": "Brasil Ciberseguro 2025 programme (GSI)",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/copy_of_BrasilCiberseguro2025Programaoatualizada.pdf",
+    "description": "GSI event programme for Brasil Ciberseguro 2025."
+  },
+  {
+    "title": "GSI-BID event programme (SSIC)",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/eventos/GSIBIDProgramaoEditvel_rev6SSIC.pdf",
+    "description": "GSI event programme document referencing post-quantum cryptography among topics."
+  },
+  {
+    "title": "Discover Post-Quantum Cryptography (Prodesp)",
+    "url": "https://solucoes.prodesp.sp.gov.br/criptografia-pos-quantica/",
+    "description": "Prodesp (Sao Paulo state IT company) explainer page on post-quantum cryptography. Sub-national state-owned enterprise, marketing/explainer in nature."
+  }
+]

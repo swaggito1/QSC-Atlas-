@@ -24,8 +24,8 @@
     "markdown": ""
   },
   {
-    "title": "Modular Blockchains Is Quantum-Vulnerable — Your DeFi at Risk ...",
-    "url": "https://bmic.ai/bg/ecosystem/modular-blockchains/",
+    "title": "TOKEN2049 Dubai 2026: Quantum Blockchain Takes Center Stage ...",
+    "url": "https://bmic.ai/bg/news/token2049-dubai-quantum-blockchain-2026/",
     "description": "Присъединете се към предварителната продажба — Bulgaria. Квантово-сигурен блокчейн. Защитен с постквантова криптография. Бъдещето на финансите. Започнете ...",
     "markdown": ""
   },
@@ -78,21 +78,21 @@
     "markdown": ""
   },
   {
-    "title": "Preparing for “Q-Day”: What Organizations Need to Know Now",
-    "url": "https://blog.protiviti.com/2026/03/30/preparing-for-q-day-what-organizations-need-to-know-now/",
-    "description": "The federal government's approach makes clear that the move to post-quantum cryptography will need to happen in phases, with room for ...",
-    "markdown": ""
-  },
-  {
     "title": "Post-Quantum Cryptography (PQC): Application Security Migration ...",
     "url": "https://www.contrastsecurity.com/security-influencers/post-quantum-cryptography-pqc-application-security-migration-guide",
     "description": "After March 31, 2025, organizations must maintain an up-to-date, documented inventory of all cryptographic ciphers and protocols in use. They ...",
     "markdown": ""
   },
   {
-    "title": "[PDF] GUIDANCE FOR POST- QUANTUM CRYPTOGRAPHY",
-    "url": "https://fsscc.org/wp-content/uploads/2025/07/UK-CMORG-Guidance-for-Post-Quantum-Cryptography-Inc-FSSCC-Foreword-April-2025-TLP-CLEAR.pdf?utm_source=chatgpt.com",
-    "description": "CMORG-endorsed capabilities (including good practice guidance, response frameworks and contingency tools) have been developed collectively by industry to ...",
+    "title": "Preparing for “Q-Day”: What Organizations Need to Know Now",
+    "url": "https://blog.protiviti.com/2026/03/30/preparing-for-q-day-what-organizations-need-to-know-now/",
+    "description": "The federal government's approach makes clear that the move to post-quantum cryptography will need to happen in phases, with room for ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | Homeland Security",
+    "url": "https://www.dhs.gov/quantum",
+    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially ...",
     "markdown": ""
   },
   {
@@ -108,15 +108,15 @@
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
-    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
-    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
-    "markdown": ""
-  },
-  {
     "title": "Timelines for migration to post-quantum cryptography",
     "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
     "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
     "markdown": ""
   },
   {
@@ -156,6 +156,12 @@
     "markdown": ""
   },
   {
+    "title": "[2411.09995] Strategic Roadmap for Quantum- Resistant Security",
+    "url": "https://arxiv.org/abs/2411.09995",
+    "description": "This paper outlines a strategic roadmap for industries to anticipate and mitigate the risks posed by quantum attacks.",
+    "markdown": ""
+  },
+  {
     "title": "New PQC Migration Roadmap offers actionable guidance for ...",
     "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
     "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
@@ -165,12 +171,6 @@
     "title": "Key Steps to Prepare for Quantum Security - SISA",
     "url": "https://sisa.ai/resource/cyberpedia/key-steps-to-prepare-for-quantum-security-a-strategic-approach-to-transition",
     "description": "The roadmap should include a clear plan for selecting and implementing PQC algorithms, as well as considerations for regulatory compliance. This ensures that ...",
-    "markdown": ""
-  },
-  {
-    "title": "[2411.09995] Strategic Roadmap for Quantum- Resistant Security",
-    "url": "https://arxiv.org/abs/2411.09995",
-    "description": "This paper outlines a strategic roadmap for industries to anticipate and mitigate the risks posed by quantum attacks.",
     "markdown": ""
   }
 ]

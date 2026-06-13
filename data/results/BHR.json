@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Bahrain partners with SandboxAQ to build quantum-safe economy",
+    "country": "BHR",
+    "issuingOrg": "BNA / NCSC",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bna.bh/en/HMKingissuesdecree46/BahrainpartnerswithSandboxAQtobuildquantumsafeeconomy.aspx?cms=q8FmFJgiscL2fwIzON1+DlBCmWdQkcRmbnFznThbFWA%3D",
+    "summary": "Official Bahrain News Agency announcement that the National Cyber Security Center (NCSC) of the Kingdom of Bahrain has entered a strategic partnership with SandboxAQ to transition the national government toward a quantum-safe economy, deploying post-quantum / quantum-safe cybersecurity across roughly 60 ministry environments in anticipation of cryptographically relevant quantum computers and 'harvest-now, decrypt-later' risk.",
+    "included": true
+  }
+]

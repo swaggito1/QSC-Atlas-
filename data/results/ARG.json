@@ -1,0 +1,24 @@
+[
+  {
+    "title": "ARSAT developed CryptoComm, a post-quantum cryptographic security system",
+    "country": "ARG",
+    "issuingOrg": "ARSAT",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.arsat.com.ar/arsat-desarrollo-cryptocomm-un-sistema-de-seguridad-criptografica-post-cuantica/",
+    "summary": "Argentina's state telecommunications company ARSAT announces CryptoComm, a post-quantum cryptography (PQC) system for secure messaging and file exchange, featuring a high-speed symmetric cipher and post-quantum key and digital-certificate generation, with a hardware version planned jointly with INVAP.",
+    "included": false
+  },
+  {
+    "title": "Secure communications: Quantum and Post-Quantum Methods 2022",
+    "country": "ARG",
+    "issuingOrg": "ARSAT",
+    "year": 2022,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.arsat.com.ar/multimedia/comunicaciones-seguras/",
+    "summary": "ARSAT page documenting a 2022 secure-communications initiative and conference on the threat quantum computing poses to public-key and symmetric cryptography, and ARSAT's development of quantum-resistant (post-quantum) communications methods for protecting government and national assets.",
+    "included": false
+  }
+]

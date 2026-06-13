@@ -1,0 +1,42 @@
+[
+  {
+    "title": "National Cyber Security Strategy Workshop - Ministry of National Security",
+    "url": "https://www.bahamas.gov.bs/wps/portal/public/media/photo%20gallery/national%20cyber%20security%20strategy%20workshop/",
+    "description": "Official Bahamas government page on the National Cybersecurity Strategy workshop (Dec 2024). Domestic government source, but no explicit post-quantum/quantum-safe cryptography reference found."
+  },
+  {
+    "title": "Prime Minister's National Cybersecurity Strategy Puts Forward Five Areas of Focus - Government News",
+    "url": "https://www.bahamas.gov.bs/wps/portal/public/gov/government/!ut/p/b1?urile=wcm%3Apath%3A%2Fmof_content%2Finternet%2Fall+news+press+release%2Fprime+ministers+national+cybersecurity+strategy+puts+foward+five+areas+of+focus",
+    "description": "Bahamas government press release on the National Cybersecurity Strategy's five focus areas. Domestic government source; cyber strategy does not mention PQC/quantum-safe cryptography."
+  },
+  {
+    "title": "Public Consultation on the Draft Data Protection Bill, 2025",
+    "url": "https://www.bahamas.gov.bs/news-press-release/public-consultation-on-the-draft-data-protection-bill-2025",
+    "description": "Bahamas government consultation on the draft Data Protection Bill 2025 (also covering AI). Domestic government source; no explicit post-quantum cryptography reference."
+  },
+  {
+    "title": "The Digitalization of Money in The Bahamas (Central Bank of The Bahamas)",
+    "url": "https://www.centralbankbahamas.com/viewPDF/documents/2022-07-26-08-05-58-Carlissa-Colebrook.pdf",
+    "description": "Central Bank of The Bahamas presentation on digital money / Sand Dollar. Domestic central-bank source; no explicit post-quantum/quantum-safe cryptography reference."
+  },
+  {
+    "title": "About SandDollar - Central Bank of The Bahamas",
+    "url": "https://www.sanddollar.bs/about",
+    "description": "Official Sand Dollar (Bahamian CBDC) page. WebFetch confirmed the page does not mention quantum computing, post-quantum, or quantum-resistant cryptography at all; security content is generic (MFA, fraud detection)."
+  },
+  {
+    "title": "DARE - Securities Commission of The Bahamas",
+    "url": "https://scb.gov.bs/dare/",
+    "description": "Securities Commission of The Bahamas page on the Digital Assets and Registered Exchanges Act 2024. Domestic regulator; DARE Act covers AML/CFT, capital and client-asset rules but no quantum-resistant cryptography requirement found."
+  },
+  {
+    "title": "The Bahamas Digital Asset and Fintech Advantage - Securities Commission of The Bahamas",
+    "url": "https://scb.gov.bs/the-bahamas-digital-asset-and-fintech-advantage/",
+    "description": "Securities Commission of The Bahamas overview of the digital-asset/fintech regime. Domestic regulator source; no explicit post-quantum cryptography reference."
+  },
+  {
+    "title": "Government advances legislation to strengthen Financial Services; soon to draft AI policy",
+    "url": "https://www.bahamas.gov.bs/news-press-release/government-advances-legislation-to-strengthen-financial-services-soon-to-draft-ai-policy",
+    "description": "Bahamas government press release on financial-services legislation and a planned AI policy. Domestic government source; no PQC/quantum-safe cryptography mention."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Ciberseguridad Poscuántica en América Latina",
+    "url": "https://revistas.ucalp.edu.ar/index.php/Perspectivas/article/download/425/382/1359",
+    "description": "Academic journal article (Universidad Católica de La Plata, Argentina) reviewing post-quantum cybersecurity readiness across Latin America including Colombia. Foreign academic source."
+  },
+  {
+    "title": "Ministerio TIC capacitará a empresas en protección de ataques informáticos",
+    "url": "https://www.mintic.gov.co/portal/inicio/Sala-de-prensa/175743:Ministerio-TIC-capacitara-a-empresas-en-proteccion-de-ataques-informaticos",
+    "description": "MinTIC press release on cybersecurity training for companies. No explicit PQC reference."
+  },
+  {
+    "title": "Ministry of Information Technologies and Communications (Colombia) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Ministry_of_Information_Technologies_and_Communications_(Colombia)",
+    "description": "Wikipedia entry on MinTIC. Not institutional issuer."
+  },
+  {
+    "title": "Live sobre Computación cuántica - MinTIC",
+    "url": "https://www.mintic.gov.co/portal/715/w3-article-179022.html",
+    "description": "MinTIC portal page announcing a livestream event on quantum computing. General quantum awareness event; no PQC cryptographic migration content."
+  },
+  {
+    "title": "Ciberseguridad (Glosario) - MinTIC",
+    "url": "https://www.mintic.gov.co/portal/inicio/Glosario/C/18723:Ciberseguridad",
+    "description": "MinTIC glossary definition of cybersecurity. No PQC reference."
+  },
+  {
+    "title": "Ministerio TIC inauguró el Centro de Operaciones de Seguridad Nacional (SOC)",
+    "url": "https://www.mintic.gov.co/portal/715/w3-article-399740.html",
+    "description": "MinTIC press release on launch of national SOC run by ColCERT. No explicit PQC reference."
+  },
+  {
+    "title": "Acerca de colCERT",
+    "url": "https://colcert.gov.co/800/w3-article-198657.html",
+    "description": "ColCERT 'About us' page (Ministry of National Defence cyber emergency response group). No PQC reference."
+  },
+  {
+    "title": "Documento Conpes 3701 (DNP)",
+    "url": "https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/3701.pdf",
+    "description": "CONPES 3701 cyberdefence policy document (Departamento Nacional de Planeacion). Predates and does not mention PQC."
+  },
+  {
+    "title": "ESTRATEGIA NACIONAL DE SEGURIDAD DIGITAL DE COLOMBIA 2025-2027 (CRC PDF)",
+    "url": "https://www.crcom.gov.co/sites/default/files/webcrc/micrositios/documents/Estrategia-Nacional-Seguridad-Digital-Colombia.pdf",
+    "description": "National Digital Security Strategy 2025-2027, launched June 2025. Verified via fetch: does NOT mention post-quantum/quantum cryptography."
+  },
+  {
+    "title": "estrategia nacional de seguridad digital de colombia 2025 (MinTIC PDF)",
+    "url": "https://www.mintic.gov.co/portal/715/articles-403023_recurso_2.pdf",
+    "description": "MinTIC-hosted copy of the National Digital Security Strategy 2025-2027. No PQC reference."
+  },
+  {
+    "title": "Estrategia Nacional de Seguridad Digital enfrentará amenazas cibernéticas (Presidencia)",
+    "url": "https://www.presidencia.gov.co/prensa/Paginas/Estrategia-Nacional-de-Seguridad-Digital-enfrentara-amenazas-ciberneticas-250624.aspx",
+    "description": "Presidency press release announcing the National Digital Security Strategy 2025-2027. No PQC reference."
+  },
+  {
+    "title": "Estrategia Nacional Digital de Colombia 2023-2026 (END) - MinTIC PDF",
+    "url": "https://www.mintic.gov.co/portal/715/articles-334120_recurso_1.pdf",
+    "description": "National Digital Strategy 2023-2026. General digital transformation; no PQC reference."
+  },
+  {
+    "title": "Politica de Seguridad Digital - MinTIC",
+    "url": "https://www.mintic.gov.co/portal/715/w3-article-15430.html",
+    "description": "MinTIC digital security policy landing page. No PQC reference."
+  },
+  {
+    "title": "Politica General de Seguridad Digital en Colombia (MinTIC PDF)",
+    "url": "https://mintic.gov.co/portal/715/articles-14481_recurso_1.pdf",
+    "description": "General digital security policy document. No PQC reference."
+  },
+  {
+    "title": "Comando Conjunto Cibernetico (CCOC)",
+    "url": "https://www.ccoc.mil.co/",
+    "description": "Joint Cyber Command (military) homepage. No PQC reference."
+  },
+  {
+    "title": "Comando Conjunto Cibernético - Comando General de las Fuerzas Militares",
+    "url": "https://www.cgfm.mil.co/es/comando-conjunto-cibernetico",
+    "description": "Military page describing the Joint Cyber Command. No PQC reference."
+  },
+  {
+    "title": "Eficiencia y seguridad de criptosistemas de clave pública multivariada (RedCol/MinCiencias)",
+    "url": "https://redcol.minciencias.gov.co/Record/RCENDOC_841cb3b2f30d93b371107c2a9dfb8737",
+    "description": "Academic record in MinCiencias research repository on multivariate public-key cryptosystems (a PQC family). Academic publication, not an institutional policy document."
+  },
+  {
+    "title": "Compilación Jurídica del MINTIC - Circular 14 de 2022 SF (Superfinanciera)",
+    "url": "https://normograma.mintic.gov.co/mintic/compilacion/docs/circular_superfinanciera_0014_2022.htm",
+    "description": "Superintendencia Financiera external circular 014/2022 on cyber/information security. No PQC reference."
+  },
+  {
+    "title": "Proyecto de Circular Externa 01-2026 (Superintendencia Financiera)",
+    "url": "https://www.superfinanciera.gov.co/publicaciones/10116002/proyecto-de-circular-externa-01-2026/",
+    "description": "Draft external circular on open-finance architecture/security transition. Verified via fetch: does NOT mention post-quantum cryptography."
+  },
+  {
+    "title": "SUPERINTENDENCIA FINANCIERA DE COLOMBIA CIRCULAR EXTERNA 007 DE 2018",
+    "url": "https://www.fundacionmicrofinanzasbbva.org/revistaprogreso/wp-content/uploads/2018/05/Col-CE-007-ciberseguridad.pdf",
+    "description": "Superfinanciera cybersecurity circular 007/2018 (copy hosted on a foundation site). Predates PQC; no reference."
+  },
+  {
+    "title": "Parte 3: Caso de estudio de una transición a criptografía poscuántica en un banco colombiano (cyte.co)",
+    "url": "https://www.cyte.co/post/transicion-criptografia-poscuantica-banca",
+    "description": "Private consultancy (cyte) blog case study on a PQC transition at a Colombian bank. Vendor/consultancy, not institutional."
+  },
+  {
+    "title": "Parte 1: Radiografía del riesgo cuántico en Colombia 2025 (cyte.co)",
+    "url": "https://www.cyte.co/post/radiografia-riesgo-cuantico",
+    "description": "Private consultancy blog on quantum risk in Colombia 2025. Vendor/consultancy, not institutional."
+  },
+  {
+    "title": "Impulsamos la investigación en criptografía poscuántica (FUP)",
+    "url": "https://fup.edu.co/impulsamos-la-investigacion-en-criptografia-poscuantica/",
+    "description": "Fundacion Universitaria de Popayan news item on PQC research. University, not institutional government issuer."
+  },
+  {
+    "title": "Ministry of Science, Technology and Innovation (Colombia) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Ministry_of_Science,_Technology_and_Innovation_(Colombia)",
+    "description": "Wikipedia entry on MinCiencias. Not institutional issuer."
+  }
+]

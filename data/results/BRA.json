@@ -1,0 +1,123 @@
+[
+  {
+    "title": "ITI publishes Normative Instruction incorporating post-quantum algorithms into ICP-Brasil",
+    "country": "BRA",
+    "issuingOrg": "ITI",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.br/iti/pt-br/assuntos/noticias/indice-de-noticias/iti-publica-instrucao-normativa-que-incorpora-algoritmos-pos-quanticos-a-icp-brasil",
+    "summary": "ITI announcement that Normative Instruction No. 35 (30 January 2026) adds post-quantum cryptography algorithms to ICP-Brasil services and to the advanced electronic signature on the GOV.BR platform.",
+    "included": false
+  },
+  {
+    "title": "Normative Instruction ITI No. 35/2026 - Standards and Cryptographic Algorithms of ICP-Brasil (PQC)",
+    "country": "BRA",
+    "issuingOrg": "ITI",
+    "year": 2026,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://repositorio.iti.gov.br/instrucoes-normativas/IN2026_35_DOC_ICP_01.01_PQC.htm",
+    "summary": "Full text of ITI Normative Instruction 35/2026 (DOC-ICP-01.01) establishing post-quantum cryptographic algorithms, key sizes and signature suites applicable to Brazil's Public Key Infrastructure (ICP-Brasil).",
+    "included": false
+  },
+  {
+    "title": "ITI announces advances in the GOV.BR electronic signature solution (post-quantum adaptation)",
+    "country": "BRA",
+    "issuingOrg": "ITI",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.br/iti/pt-br/centrais-de-conteudo/por-dentro-do-iti/iti-anuncia-avancos-na-solucao-de-assinaturas-eletronicas",
+    "summary": "ITI note (8 July 2025) reporting that adaptation of the digital certificate infrastructure to post-quantum cryptography algorithms is already under way alongside improvements to the GOV.BR advanced signature solution.",
+    "included": false
+  },
+  {
+    "title": "Secretary's visit to ITI aims at implementing quantum-resistant algorithms in the public key system",
+    "country": "BRA",
+    "issuingOrg": "ITI",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.br/iti/pt-br/assuntos/noticias/indice-de-noticias/visita-de-secretario-ao-iti-visa-implementacao-de-algoritmos-quanticos-em-sistema-de-chaves-publicas",
+    "summary": "ITI announcement (23 January 2024) describing a partnership with the Secretariat of Technological Development and Innovation to evaluate post-quantum algorithms and their impact on electronic signatures in ICP-Brasil.",
+    "included": false
+  },
+  {
+    "title": "ABIN launches cryptography with post-quantum algorithms for the elections",
+    "country": "BRA",
+    "issuingOrg": "ABIN",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.br/abin/pt-br/centrais-de-conteudo/noticias/abin-lanca-criptografia-com-algoritmos-pos-quanticos-para-as-eleicoes",
+    "summary": "Brazilian Intelligence Agency (ABIN) announcement that its libharpia cryptographic library, composed of post-quantum algorithms and developed by the Cepesc centre, will be used to protect the electronic voting system.",
+    "included": false
+  },
+  {
+    "title": "ABIN presents Intelligence Challenges for 2026 (transition to post-quantum cryptography)",
+    "country": "BRA",
+    "issuingOrg": "ABIN",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.gov.br/abin/pt-br/centrais-de-conteudo/noticias/abin-apresenta-desafios-de-inteligencia-para-2026",
+    "summary": "ABIN note (3 December 2025) listing the transition to post-quantum cryptography as one of five key intelligence challenges for 2026, citing the harvest-now-decrypt-later threat to current public-key cryptography.",
+    "included": false
+  },
+  {
+    "title": "OSIC 15/2024 - Information and Cybersecurity Guidance on emerging technologies",
+    "country": "BRA",
+    "issuingOrg": "GSI",
+    "year": 2024,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/osic/osic-15-24.pdf",
+    "summary": "GSI Information and Cybersecurity Guidance (OSIC 15/2024) addressing emerging technologies; includes a section on quantum computing and post-quantum cryptography recommending that organisations plan PQC migration of critical systems in advance.",
+    "included": false
+  },
+  {
+    "title": "Panorama of the regulation of emerging technologies (GSI webinar)",
+    "country": "BRA",
+    "issuingOrg": "GSI",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/eventos/Apresentacao_VHSR_4_Webinar_SI_Panorama_tecno_emergentes.pdf",
+    "summary": "GSI webinar presentation surveying regulation of emerging technologies (AI, IoT, 5G/6G, cloud) including quantum computing and post-quantum cryptography and their information-security implications.",
+    "included": false
+  },
+  {
+    "title": "Quantum computing requires strategic preparation to protect digital systems",
+    "country": "BRA",
+    "issuingOrg": "SERPRO",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.serpro.gov.br/menu/noticias/noticias-2026/computacao-quantica-exige-preparacao-estrategica-para-proteger-sistemas-digitais",
+    "summary": "Article by SERPRO, the Brazilian federal data-processing service, stating it already performs evaluations and tests with post-quantum cryptography algorithms and urging government bodies to plan PQC migration for long-lived sensitive data.",
+    "included": false
+  },
+  {
+    "title": "Anatel and IME advance dialogue on national quantum communication infrastructure (Rede Quandanga)",
+    "country": "BRA",
+    "issuingOrg": "Anatel",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/anatel-e-ime-avancam-no-dialogo-sobre-infraestrutura-nacional-de-comunicacao-quantica",
+    "summary": "Anatel (national telecommunications regulator) note on the Rede Quandanga project with the Military Institute of Engineering (IME), an experimental quantum-communication network covering quantum cryptography and post-quantum cryptography for critical infrastructure.",
+    "included": false
+  },
+  {
+    "title": "Central Bank of Brazil, Brazil Quantum and Microsoft explore post-quantum cryptography for the Pix system",
+    "country": "BRA",
+    "issuingOrg": "Banco Central do Brasil",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://news.microsoft.com/pt-br/com-apoio-da-fenasbac-banco-central-brazil-quantum-e-microsoft-exploram-o-uso-de-criptografia-pos-quantica-para-melhorar-seguranca-do-sistema-pix/",
+    "summary": "Study involving the Central Bank of Brazil with Brazil Quantum and Microsoft (and Fenasbac support) analysing the feasibility of post-quantum cryptography algorithms to strengthen the security of the Pix instant-payment system. Published on a vendor (Microsoft) site, not on an official BCB domain.",
+    "included": false
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Conselho de Ministros aprova Estratégia Nacional para a Cibersegurança",
+    "url": "https://www.governo.cv/conselho-de-ministros-aprova-estrategia-nacional-para-a-ciberseguranca/",
+    "description": "Government of Cape Verde announcement that the Council of Ministers approved the National Cybersecurity Strategy and created the Nucleo Nacional de Ciberseguranca. General cyber strategy; no mention of post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "Gestao da Seguranca - Banco de Cabo Verde",
+    "url": "https://www.bcv.cv/pt/O Banco/Sala de Imprensa/Arquivo/Paginas/GestaodaSeguranca.aspx",
+    "description": "Central bank (Banco de Cabo Verde) security-management press/archive page. General information security; no mention of post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "Certificados Digitais - PKI (NOSi)",
+    "url": "https://pki.nosi.cv/certificados-digitais",
+    "description": "NOSi (national digital agency) public-key infrastructure / digital certificates page. Classical PKI and digital signatures; no mention of post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "\"Nha Card\" - Cabo Verde's digital certificate officially launched (NOSi)",
+    "url": "https://nosi.cv/en/web/guest/w/-nha-card-cabo-verde-s-digital-certificate-officially-launched",
+    "description": "NOSi announcement of the launch of Cape Verde's national digital certificate. Classical digital certification; no mention of post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "Credenciacao NOSi-EPE como autoridade de certificacao digital",
+    "url": "https://www.nosi.cv/en/web/guest/w/nosi-epe-accreditation-as-a-digital-certification-authority",
+    "description": "NOSi accreditation as a digital certification authority issuing second-level digital certificates and electronic signatures. Classical cryptography; no mention of post-quantum / quantum-safe cryptography or PQC."
+  },
+  {
+    "title": "ECRCV - Entidade Certificadora Raiz de Cabo Verde (ANAC)",
+    "url": "http://www.anac.cv/",
+    "description": "ANAC (National Communications Agency) site, host of the Cape Verde Root Certification Authority. Telecom/ICT regulation and classical PKI; no mention of post-quantum / quantum-safe cryptography or PQC."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Рекомендации Оперативно-аналитического центра при Президенте Республики Беларусь (TZI/cybersecurity compliance recommendations)",
+    "url": "https://www.oac.gov.by/public/content/files/files/recom.pdf",
+    "description": "OAC (national cryptographic/cybersecurity authority) recommendations for state bodies and organisations on technical and cryptographic information protection and cybersecurity. General encryption/protocol guidance; surfaced under PQC queries but no confirmed explicit post-quantum reference (WebFetch failed twice; search context indicates general crypto, not PQC). EXCLUDED."
+  },
+  {
+    "title": "О проведении конкурса проектов государственной научно-технической программы «Кибербезопасность-2» (2026–2030)",
+    "url": "https://www.oac.gov.by/news/events/competition",
+    "description": "OAC + State Committee for Science and Technology funding competition for the 2026-2030 state scientific-technical programme on information protection / cybersecurity ('Cybersecurity-2'). Domestic government R&D funding call, but does NOT explicitly name post-quantum/quantum-safe cryptography. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "Конкурсный отбор проектов заданий государственной научно-технической программы «Кибербезопасность», 2021–2025 годы",
+    "url": "https://www.oac.gov.by/news/events/gntp",
+    "description": "OAC competition for the 2021-2025 'Cybersecurity' state scientific-technical programme. Domestic government cybersecurity R&D programme; no explicit post-quantum/quantum-resistant cryptography reference found. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "Техническая и криптографическая защита информации (OAC activity page)",
+    "url": "https://www.oac.gov.by/activity/technical-and-cryptographic-information-protection",
+    "description": "OAC overview of technical and cryptographic information-protection activity (licensing, certification, STB standards). National crypto authority but content concerns Belarus's own (STB 34.101 / Bel-T) cryptography, not post-quantum. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "СТБ 34.101.31-2020 — Информационные технологии и безопасность. Криптографические алгоритмы (Bel-T)",
+    "url": "https://www.oac.gov.by/public/content/files/files/stb/101-31.pdf",
+    "description": "Belarusian national cryptographic standard (block cipher / Bel-T family) hosted by OAC. Classical, pre-quantum symmetric crypto standard; not post-quantum. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "Рекомендации по обеспечению защиты общедоступной информации в информационных системах (OAC)",
+    "url": "https://www.oac.gov.by/recommendations-for-government-agencies",
+    "description": "OAC recommendations for government agencies on protecting publicly available information in information systems. General information-security guidance; no explicit post-quantum cryptography reference. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "Государственная программа «Цифровая Беларусь» на 2026–2030 годы",
+    "url": "https://www.mpt.gov.by/ru/gosudarstvennaya-programma-cifrovoe-razvitie-belarusi-na-2026-2030-gody",
+    "description": "Ministry of Communications and Informatization page on the 'Digital Belarus' 2026-2030 state programme (approved by Council of Ministers, Dec 2025). Broad national digital-development programme; no evidence it explicitly names post-quantum/quantum-safe cryptography. EXCLUDED (no explicit PQC)."
+  },
+  {
+    "title": "Информация о документе «Государственный стандарт Республики Беларусь СТБ 1962-2026»",
+    "url": "https://pravo.by/document/?guid=3961&p0=W02644635p",
+    "description": "Pravo.by registry entry for a recent Belarusian state standard (СТБ 1962-2026). No evidence the standard concerns post-quantum cryptography; surfaced via crypto-standard query. EXCLUDED (no explicit PQC; standard subject unconfirmed)."
+  },
+  {
+    "title": "Постквантовая криптография и угрозы устаревших систем (ostrovets.by)",
+    "url": "https://ostrovets.by/news/novosti/news48756.html",
+    "description": "Local Belarusian news article explaining post-quantum cryptography and the quantum threat. Explicitly names PQC but is journalism, not an institutional issuer. EXCLUDED (non-institutional)."
+  },
+  {
+    "title": "Белорусская криптография: от первых стандартов до межведомственного электронного документооборота (БелТА)",
+    "url": "https://belta.by/comments/view/belorusskaja-kriptografija-ot-pervyh-standartov-do-mezhvedomstvennogo-elektronnogo-dokumentooborota-3683",
+    "description": "BelTA (state news agency) feature on the history of Belarusian cryptography and standards. Journalism; concerns classical STB crypto, not post-quantum. EXCLUDED (non-institutional / no explicit PQC)."
+  },
+  {
+    "title": "Обзор законодательства Республики Беларусь — Криптография (digital.report)",
+    "url": "https://digital.report/obzor-zakonodatelstva-respubliki-belarus-kryptografia/",
+    "description": "Third-party overview of Belarusian cryptography legislation and OAC licensing/certification regime. Non-institutional secondary source; no explicit post-quantum cryptography. EXCLUDED (non-institutional / no explicit PQC)."
+  },
+  {
+    "title": "О криптографической стандартизации в Республике Беларусь (BSU APMI)",
+    "url": "http://apmi.bsu.by/blog/cryptology/crypto-std.html",
+    "description": "Belarusian State University Institute of Applied Mathematics and Informatics page on Belarusian crypto standardisation (STB 34.101 series). Academic source; classical crypto, not post-quantum. EXCLUDED (academic / no explicit PQC)."
+  }
+]

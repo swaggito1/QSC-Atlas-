@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Estratègia nacional de ciberseguretat del Principat d'Andorra 2024-2027",
+    "url": "https://www.anc.ad/estrategia-nacional-de-ciberseguretat-del-principat-dandorra-2024-2027-2/",
+    "description": "National Cybersecurity Strategy 2024-2027 published by Andorra's national cybersecurity agency (ANC-AD). References emerging technologies (AI, blockchain, cloud) but, per WebFetch of the page, does NOT explicitly mention post-quantum/quantum-safe cryptography or PQC. Domestic institutional issuer but fails the explicit-PQC threshold."
+  },
+  {
+    "title": "Sobre nosaltres / Què és l'ANC-AD? - Agència Nacional de Ciberseguretat d'Andorra",
+    "url": "https://www.anc.ad/que-es-anc-ad/",
+    "description": "About page of ANC-AD, Andorra's national cybersecurity authority and CSIRT (CSIRT-AD). Domestic institutional issuer but no PQC/post-quantum content."
+  },
+  {
+    "title": "Agència Nacional de Ciberseguretat - Govern d'Andorra",
+    "url": "https://www.govern.ad/ca/ministeris-i-secretaries-estat/ministeri-de-funcio-publica-i-transformacio-digital/agencia-nacional-de-ciberseguretat",
+    "description": "Government of Andorra page describing the National Cybersecurity Agency under the Ministry of Public Function and Digital Transformation. Domestic institutional, but no explicit PQC/post-quantum content."
+  },
+  {
+    "title": "Quatre perspectives que marcaran l'agenda de ciberseguretat industrial el 2023 - ANC-AD",
+    "url": "https://www.anc.ad/quatre-perspectives-que-marcaran-lagenda-de-ciberseguretat-industrial-el-2023/",
+    "description": "ANC-AD blog/news item on industrial cybersecurity trends for 2023. Domestic institutional issuer but no explicit post-quantum/quantum-safe cryptography reference."
+  },
+  {
+    "title": "La computació quàntica trencarà Internet... o no? - CaixaBank",
+    "url": "https://www.caixabank.com/ca/esfera/content/computacio-quantica-criptografia-seguretat-digital",
+    "description": "Catalan-language commentary on quantum computing and cryptography by CaixaBank (Spanish bank, not Andorran/domestic). Excluded as foreign vendor/bank corporate content."
+  },
+  {
+    "title": "Seguretat postquàntica: estem preparats per sobreviure a l'atac dels ordinadors del futur? - EbreDigital.cat",
+    "url": "https://ebredigital.cat/2025/06/14/seguretat-postquantica-estem-preparats-per-sobreviure-a-latac-dels-ordinadors-del-futur/",
+    "description": "Catalan-language journalism on post-quantum security. Not Andorran government; journalism. Excluded."
+  },
+  {
+    "title": "Andorra, el primer territori del país amb criptomoneda pròpia? - VilaWeb",
+    "url": "https://www.vilaweb.cat/noticies/moneda-virtual-andorra/",
+    "description": "Journalism about Andorra's proposed sovereign digital currency (AFA). No post-quantum cryptography reference; journalism, not domestic institutional. Excluded."
+  }
+]

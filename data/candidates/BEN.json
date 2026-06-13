@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Benin launches a new National Cybersecurity Strategy - ITU",
+    "url": "https://www.itu.int/hub/2020/07/benin-launches-a-new-national-cybersecurity-strategy/",
+    "description": "ITU news item on Benin's national cybersecurity strategy. No mention of post-quantum or quantum-safe cryptography. International body (ITU), not a domestic Benin issuer."
+  },
+  {
+    "title": "Information Systems and Digital Agency (Benin) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Information_Systems_and_Digital_Agency_(Benin)",
+    "description": "Encyclopedia entry describing ASIN, the agency formed in 2022 by merging ADN, ASSI, ANSSI-Benin and ABSUCEP. Reference source, not institutional or PQC-explicit."
+  },
+  {
+    "title": "Benin - National Cyber Security Index (NCSI) - e-Governance Academy",
+    "url": "https://ncsi.ega.ee/country/bj/",
+    "description": "NCSI country profile for Benin. Foreign NGO/index, not a domestic Benin issuer; no PQC content."
+  },
+  {
+    "title": "Agence des Systemes d'Information et du Numerique (ASIN) - official site",
+    "url": "https://asin.bj/",
+    "description": "Official homepage of Benin's national digital and information systems agency (ASIN). Domestic official body but no post-quantum / quantum-safe cryptography content surfaced."
+  },
+  {
+    "title": "Agence des systemes d'information et du numerique (Benin) - Wikipedia FR",
+    "url": "https://fr.wikipedia.org/wiki/Agence_des_syst%C3%A8mes_d'information_et_du_num%C3%A9rique_(B%C3%A9nin)",
+    "description": "French Wikipedia entry on ASIN. Reference source, not institutional or PQC-explicit."
+  },
+  {
+    "title": "Securite numerique : le Benin entame une actualisation de sa strategie nationale - Portail du Numerique Benin",
+    "url": "https://numerique.gouv.bj/publications/actualites/securite-numerique-le-benin-entame-une-actualisation-de-sa-strategie-nationale",
+    "description": "Official Benin government digital portal news on updating the national digital security strategy (SNSN). Domestic official source but does not mention post-quantum / quantum-safe cryptography."
+  },
+  {
+    "title": "Stratégie Nationale de Sécurité Numérique (SNSN) - signed by ANSSI-Benin (hosted on ITU)",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/National_Strategies_Repository/SNSN_FINAL_SIGNED_ANSSI.pdf",
+    "description": "Benin's National Digital Security Strategy signed by ANSSI-Benin (hosted in ITU's national strategies repository). General cybersecurity strategy; no explicit mention of post-quantum / quantum-safe cryptography surfaced in searches."
+  },
+  {
+    "title": "Le Benin actualise sa strategie nationale de securite numerique - Africa Cybersecurity Magazine",
+    "url": "https://cybersecuritymag.africa/benin-mets-jour-strategie-nationale-securite-numerique",
+    "description": "Journalism on the SNSN update. Media outlet, not a domestic institution; no PQC content."
+  },
+  {
+    "title": "Politique de Securite des Systemes d'Information de l'Etat - Portail du Numerique Benin",
+    "url": "https://numerique.gouv.bj/publications/actualites/politique-de-securite-des-systemes-d-information-de-l-etat-les-decideurs-et-hauts-responsables-des-structures-prioritaires-sensibilises",
+    "description": "Official Benin portal news on the State Information Systems Security Policy (decree N 2021-550). Domestic official source but no post-quantum / quantum-safe cryptography mention."
+  },
+  {
+    "title": "1 Un cyberespace securise et attrayant pour une economie numerique florissante - ASIN (download)",
+    "url": "https://asin.bj/doc/92/download",
+    "description": "ASIN-hosted strategy document on a secure cyberspace. Domestic official source but no explicit post-quantum / quantum-safe cryptography content surfaced."
+  },
+  {
+    "title": "Publications | Agence des Systemes d'Information et du Numerique - ASIN",
+    "url": "https://asin.bj/articles/",
+    "description": "ASIN publications page. Domestic official body; no post-quantum / quantum-safe cryptography publication surfaced."
+  },
+  {
+    "title": "Autorite de Regulation des Communications Electroniques et de la Poste (Benin) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Autorit%C3%A9_de_R%C3%A9gulation_des_Communications_%C3%89lectroniques_et_de_la_Poste_(Benin)",
+    "description": "Entry on Benin's telecom regulator (ARCEP Benin). Reference source; no PQC content and no domestic PQC regulatory action found."
+  }
+]

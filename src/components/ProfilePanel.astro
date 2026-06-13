@@ -15,6 +15,7 @@ interface CountryData {
   standardFamilies?: string | null;
   algorithms?: string | null;
   dominantProcess?: string | null;
+  secondaryProcess?: string | null;
   processParticipation?: string | null;
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
@@ -45,6 +46,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
   <header class="profile-head">
     <h1>{country.country}</h1>
     <ProcessChip value={country.dominantProcess} />
+    {country.secondaryProcess && <ProcessChip value={country.secondaryProcess} />}
   </header>
 
   {/* 1. Summary */}

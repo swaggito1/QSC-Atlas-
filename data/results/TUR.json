@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Cybersecurity and Post-Quantum Cryptology (BTK programme)",
+    "country": "TUR",
+    "issuingOrg": "BTK",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.btk.gov.tr/haberler/gelecegin-teknolojisi-kuantum-kriptolojisi",
+    "summary": "BTK (Information and Communication Technologies Authority) news item on a programme themed 'Cybersecurity and Post-Quantum Cryptology', opened by the Minister of Transport and Infrastructure and BTK officials, stressing the importance of spreading quantum-resistant cryptography algorithms and studies in Turkey.",
+    "included": true
+  },
+  {
+    "title": "Quantum Technologies (TÜBİTAK BİLGEM research area)",
+    "country": "TUR",
+    "issuingOrg": "TÜBİTAK BİLGEM",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://bilgem.tubitak.gov.tr/en/quantum-technologies/",
+    "summary": "TÜBİTAK BİLGEM page describing its quantum technologies and quantum cryptography research. Institutional and domestic, but the page redirects to the BILGEM homepage and an explicit post-quantum cryptography reference could not be confirmed; flagged for human review.",
+    "included": false
+  }
+]

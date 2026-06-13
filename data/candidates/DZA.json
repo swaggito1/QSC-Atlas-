@@ -1,0 +1,57 @@
+[
+  {
+    "title": "L'Agence de la Sécurité des Systèmes d'Information du Ministère de la Défense Nationale diffuse la stratégie nationale de sécurité des systèmes d'information 2025-2029",
+    "url": "https://www.mdn.dz/site_principal/sommaire/actualites/fr/2026/mars/nsiss03032026fr.php",
+    "description": "Official Algerian Ministry of National Defence (ASSI) announcement of the 2025-2029 National Information Systems Security Strategy. Domestic institutional source, but reporting indicates the strategy does NOT explicitly name post-quantum / quantum-safe cryptography; pillars are technical capability, inter-institutional coordination, and cyber-crisis management."
+  },
+  {
+    "title": "Le contenu de la Stratégie nationale de la sécurité des systèmes d'information 2025-2029 dévoilé",
+    "url": "https://www.aps.dz/fr/algerie/actualite-nationale/mmaq5rbf-le-contenu-de-la-strategie-nationale-de-la-securite-des-systemes-d-information-2025-2029",
+    "description": "Algérie Presse Service (state news agency) coverage of the 2025-2029 national cybersecurity strategy. Journalism source; no explicit post-quantum cryptography reference."
+  },
+  {
+    "title": "الجزائر انخرطت في مسار استراتيجية سيادية في مجال الأمن السيبراني",
+    "url": "https://www.aps.dz/ar/sante-science-technologie/182074-2025-06-18-14-26-42",
+    "description": "APS (state news agency) Arabic-language piece on Algeria's sovereign cybersecurity strategy. Journalism; general cybersecurity, no PQC mention."
+  },
+  {
+    "title": "Moyens de cryptographie - ARPCE",
+    "url": "https://www.arpce.dz/en/service/crypt",
+    "description": "ARPCE (Authority for Regulation of Post and Electronic Communications) page on authorisation of cryptographic means. Domestic regulator, but concerns classical cryptography licensing/key deposit; no post-quantum / quantum-safe reference."
+  },
+  {
+    "title": "Certification Electronique Sécurité de l'Information - ARPCE (Alger)",
+    "url": "https://www.arpce.dz/fr/file/m7e5z1",
+    "description": "ARPCE document on electronic certification and information security (dated 2009). Domestic regulator source; no post-quantum cryptography content."
+  },
+  {
+    "title": "Services du Premier Ministre | Renforcement de la Sécurité et de la Défense Nationale",
+    "url": "https://premier-ministre.gov.dz/fr/post/renforcement-de-la-securite-et-de-la-defense-nationale",
+    "description": "Algerian Prime Minister's services page on national security and defence reinforcement. Domestic government source; no explicit post-quantum cryptography reference."
+  },
+  {
+    "title": "Catalogue des normes algériennes au 31 décembre 2023 (CTN-04)",
+    "url": "https://www.ianor.dz/wp-content/uploads/2024/02/CTN-04-Protection-individuelle-et-collective.pdf",
+    "description": "IANOR (Algerian standardisation institute) standards catalogue extract. Domestic standards body, but the catalogue section concerns individual/collective protection; no post-quantum cryptography standard."
+  },
+  {
+    "title": "Cybersécurité : l'Algérie adopte sa stratégie nationale 2025 2029",
+    "url": "https://www.wearetech.africa/fr/fils/actualites/tech/cybersecurite-l-algerie-adopte-sa-strategie-nationale-2025-2029",
+    "description": "We Are Tech (Africa tech journalism) report on Algeria's 2025-2029 cybersecurity strategy. Journalism; no PQC reference."
+  },
+  {
+    "title": "Algérie : une stratégie nationale 2025-2029 pour sécuriser les systèmes d'information",
+    "url": "https://www.digitalbusiness.africa/algerie-une-strategie-nationale-2025-2029-pour-renforcer-la-cybersecurite-et-proteger-la-souverainete-numerique/",
+    "description": "Digital Business Africa coverage of the national strategy. Journalism; no PQC reference."
+  },
+  {
+    "title": "L'Algérie publie officiellement sa première Stratégie Nationale de Sécurité des Systèmes d'Information",
+    "url": "https://cybersecuritymag.africa/algerie-publie-officiellement-sa-premiere-strategie-nationale-de-securite-des-systemes-information/",
+    "description": "Africa Cybersecurity Mag report on the first Algerian national information-systems security strategy. Journalism; no PQC reference."
+  },
+  {
+    "title": "Post-Quantum Cryptography: 2026 Government Deadlines (Algeria-focused)",
+    "url": "https://algeriatech.news/post-quantum-cryptography-migration-mandates-2026/",
+    "description": "AlgeriaTech.news blog/journalism piece discussing PQC migration mandates and Algeria's posture (procurement-driven, crypto-agility). Explicitly mentions PQC but is journalism/blog, NOT an institutional source - excluded."
+  }
+]

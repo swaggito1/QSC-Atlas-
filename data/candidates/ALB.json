@@ -1,0 +1,32 @@
+[
+  {
+    "title": "National Cyber Security Strategy 2025-2030",
+    "url": "https://aksk.gov.al/wp-content/uploads/2026/01/National-Cyber-Security-Strategy-2025-2030.pdf",
+    "description": "Official strategy PDF from AKSK (National Cyber Security Authority of Albania). Mentions 'quantum computing' and 'quantum cryptography' only as emerging/advanced technologies in a general list (alongside AI, LLMs, blockchain). Does NOT mention post-quantum cryptography, quantum-safe/quantum-resistant algorithms, PQC, or migration. Fails explicit-PQC threshold."
+  },
+  {
+    "title": "The National Cyber Security Strategy 2025-2030 and Action Plan are approved - AKSK",
+    "url": "https://aksk.gov.al/en/the-national-cyber-security-strategy-2025-2030-and-action-plan-are-approved/",
+    "description": "AKSK news page announcing approval of the 2025-2030 strategy and Action Plan 2025-2027; aligns with NIS2, eIDAS2, EUCC. References cryptography under innovation/research but no explicit post-quantum/quantum-safe content."
+  },
+  {
+    "title": "National Cyber Security Strategy - AKSK",
+    "url": "https://aksk.gov.al/en/national-cyber-security-strategy/",
+    "description": "AKSK landing page for the national cyber security strategy. No explicit post-quantum/quantum-safe cryptography content."
+  },
+  {
+    "title": "Miratohet Strategjia Kombëtare për Sigurinë Kibernetike 2025-2030 dhe Plani i Veprimit",
+    "url": "https://businessmag.al/miratohet-strategjia-kombetare-per-sigurine-kibernetike-2025-2030-dhe-plani-i-veprimit/",
+    "description": "Albanian business-magazine article on approval of the 2025-2030 strategy. Journalism (non-institutional). Mentions cryptography/AI but no explicit PQC."
+  },
+  {
+    "title": "About Us - AKCESK / Autoriteti Kombetar Per Certifikimin Elektronik",
+    "url": "https://cesk.gov.al/en/about-us/",
+    "description": "National Authority for Electronic Certification and Cyber Security (AKCESK) institutional page on cesk.gov.al. Trust services / electronic certification remit; no explicit post-quantum/quantum-safe cryptography content found."
+  },
+  {
+    "title": "Higjiena kibernetike për institucionet publike dhe NVM-të (Cyber hygiene guidance)",
+    "url": "https://cesk.gov.al/wp-content/uploads/2023/07/Higjiena_kibernetike.pdf",
+    "description": "AKCESK cyber-hygiene guidance PDF for public institutions and SMEs. General cybersecurity hygiene; no explicit post-quantum/quantum-safe cryptography content."
+  }
+]

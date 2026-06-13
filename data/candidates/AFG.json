@@ -1,0 +1,37 @@
+[
+  {
+    "title": "National Cybersecurity Strategy of Afghanistan (NCSA), November 2014",
+    "url": "https://mcit.gov.af/sites/default/files/2018-12/National%20Cybersecurity%20Strategy%20of%20Afghanistan%20(November2014).pdf",
+    "description": "Afghan government (MCIT, Information Systems Security Directorate) national cybersecurity strategy from 2014. Domestic institutional issuer, but contains no mention of post-quantum / quantum-safe cryptography (predates the NIST PQC programme). Fails the explicit-PQC test."
+  },
+  {
+    "title": "National Cybersecurity Strategy of Afghanistan (ITU repository copy)",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/National_Strategies_Repository/Afghanistan_2014_National%20Cybersecurity%20Strategy%20of%20Afghanistan%20(November2014).pdf",
+    "description": "ITU-hosted copy of Afghanistan's 2014 national cybersecurity strategy. Issuer is the international body (ITU) hosting, original is MCIT; no PQC content. Fails domestic-via-trusted-domain and PQC tests."
+  },
+  {
+    "title": "ICT Policy for Afghanistan (Draft) - MCIT",
+    "url": "https://mcit.gov.af/sites/default/files/2019-06/Draft-ICT%20Policy%20Document(1).pdf",
+    "description": "Afghan Ministry of Communications and IT draft ICT policy. Domestic institutional issuer, but no mention of post-quantum / quantum-safe cryptography. Fails the explicit-PQC test."
+  },
+  {
+    "title": "About Afghanistan Root Certification Authority (ARCA) - MCIT",
+    "url": "https://mcit.gov.af/en/about-afghanistan-root-certification-authority-arca",
+    "description": "MCIT page about the national root certificate authority / PKI. Domestic institutional issuer and cryptography-adjacent, but no post-quantum / quantum-safe cryptography reference. Fails the explicit-PQC test."
+  },
+  {
+    "title": "Procurement of Afghanistan root certificate authority - MCIT",
+    "url": "https://mcit.gov.af/en/procurement-afghanistan-root-certificate-authority",
+    "description": "MCIT procurement notice for the Afghanistan root CA. Domestic institutional issuer, classical PKI only, no PQC reference. Fails the explicit-PQC test."
+  },
+  {
+    "title": "Achievements of Ministry of Communications and Information Technology - MCIT",
+    "url": "https://mcit.gov.af/en/node/6922",
+    "description": "MCIT achievements page mentioning AfCERT, traffic monitoring (Nixa), SSL/electronic certification, and a draft national cybersecurity strategy. Domestic institutional issuer, no PQC reference. Fails the explicit-PQC test."
+  },
+  {
+    "title": "Cyber laws of Afghanistan / Cybercrime in the Penal Code - MCIT (Dari)",
+    "url": "https://mcit.gov.af/dr/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D8%B3%D8%A7%DB%8C%D8%A8%D8%B1%DB%8C-%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86",
+    "description": "MCIT Dari-language page on Afghanistan's cyber laws / cybercrime provisions in the Penal Code. Domestic institutional issuer, no post-quantum / quantum-safe cryptography reference. Fails the explicit-PQC test."
+  }
+]

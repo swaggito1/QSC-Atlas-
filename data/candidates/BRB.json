@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Cybersecurity Strategy For Barbados | GIS",
+    "url": "https://gisbarbados.gov.bb/blog/cybersecurity-strategy-for-barbados/",
+    "description": "Government Information Service item on Barbados' effort to establish a National Cybersecurity Strategy. General cyber defence framing; no mention of post-quantum or quantum-safe cryptography."
+  },
+  {
+    "title": "Barbados National CIRT Establishment - Cybil Portal",
+    "url": "https://cybilportal.org/projects/barbados-national-cirt-establishment/",
+    "description": "Project record on ITU-supported establishment of a national Computer Incident Response Team for Barbados. No PQC content; hosted on an international donor-coordination portal (not a Barbados government domain)."
+  },
+  {
+    "title": "CYBERWELLNESS PROFILE BARBADOS (ITU)",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/Country_Profiles/Barbados.pdf",
+    "description": "ITU country cyberwellness profile for Barbados. International-body document about general cybersecurity posture; no post-quantum/quantum-safe cryptography reference."
+  },
+  {
+    "title": "NCSI :: Barbados - National Cyber Security Index",
+    "url": "https://ncsi.ega.ee/country/bb_2022/?allData=1",
+    "description": "e-Governance Academy (Estonia) index entry rating Barbados' national cyber security. Third-country/NGO index; no PQC reference."
+  },
+  {
+    "title": "Ministry of Industry, Innovation, Science and Technology",
+    "url": "https://www.gov.bb/Ministries/innovation-science-smart-technology",
+    "description": "Barbados government ministry page (MIST) covering innovation, science and smart technology / digital policy. No post-quantum or quantum-safe cryptography content."
+  },
+  {
+    "title": "Barbados Telecommunications Unit",
+    "url": "https://www.telecoms.gov.bb/",
+    "description": "Barbados Telecommunications Unit (within MIST) official site. Telecom policy and regulation; no PQC or quantum-safe cryptography reference."
+  },
+  {
+    "title": "Government sets course for sweeping digital overhaul - Barbados Today",
+    "url": "https://barbadostoday.bb/2025/12/30/government-sets-course-for-sweeping-digital-overhaul/",
+    "description": "Journalism (Barbados Today) reporting on MIST's planned digital overhaul, including cybersecurity investment. Press coverage, not an official issuer; no PQC mention."
+  },
+  {
+    "title": "Barbados' Digital Government Strategy | Digital Watch Observatory",
+    "url": "https://dig.watch/resource/barbados-digital-government-strategy",
+    "description": "Digital Watch Observatory resource page describing Barbados' Digital Government Strategy. Third-party aggregator; underlying strategy makes no post-quantum/quantum-safe cryptography reference."
+  },
+  {
+    "title": "ISO - BNSI - Barbados National Standards Institution",
+    "url": "https://www.iso.org/member/1549.html",
+    "description": "ISO member page for the Barbados National Standards Institution (national standards body). No PQC or quantum-safe cryptography standard or activity referenced."
+  }
+]

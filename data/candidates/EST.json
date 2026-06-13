@@ -24,7 +24,7 @@
     "markdown": ""
   },
   {
-    "title": "[PDF] Identifying Obstacles of PQC Migration in E-Estonia - CCDCOE",
+    "title": "[PDF] Identifying Obstacles of PQC Migration in E-Estonia",
     "url": "https://ccdcoe.org/uploads/2024/05/CyCon_2024_Vakarjuk_Snetkov_Laud-1.pdf",
     "description": "In this paper, we study Estonia's e-government ecosystem, outline systems and products that rely on potentially vulnerable cryptographic primitives, identify ...",
     "markdown": ""
@@ -48,9 +48,15 @@
     "markdown": ""
   },
   {
-    "title": "Product Categories for Technologies That Use Post-Quantum ... - CISA",
-    "url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
-    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely ...",
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products",
+    "markdown": ""
+  },
+  {
+    "title": "Cybernetica to lead Estonia's transition to quantum-safe e-governance",
+    "url": "https://cyber.ee/resources/news/estonia-pqc-transition/",
+    "description": "Cybernetica will develop Estonia's national roadmap for transitioning to post-quantum cryptography. This strategic framework will guide ...",
     "markdown": ""
   },
   {
@@ -60,21 +66,15 @@
     "markdown": ""
   },
   {
-    "title": "Cybernetica to lead Estonia's transition to quantum-safe e-governance",
-    "url": "https://cyber.ee/resources/news/estonia-pqc-transition/",
-    "description": "Cybernetica has been awarded three strategic procurements by the Estonian government to lead the nation's transition of e-governance systems ...",
-    "markdown": ""
-  },
-  {
     "title": "Bart Preneel's Post - LinkedIn",
     "url": "https://www.linkedin.com/posts/bart-preneel-4451412_a-coordinated-implementation-roadmap-for-activity-7343171973776072705-TY3B",
     "description": "The EU NIS Cooperation group has published its post-quantum migration roadmap. by the end of 2026",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
-    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
-    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "title": "EU Member States Warn of the Quantum Threat and Call for ... - NÚKIB",
+    "url": "https://nukib.gov.cz/en/infoservis-en/news/2209-eu-member-states-warn-of-the-quantum-threat-and-call-for-the-transition-to-post-quantum-cryptography/",
+    "description": "EU Member States Warn of the Quantum Threat and Call for the Transition to Post-Quantum Cryptography. 17 January 2025. The National Cyber and Information ...",
     "markdown": ""
   },
   {
@@ -110,7 +110,7 @@
   {
     "title": "Quantum Roadmap and Strategy - evolutionQ",
     "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
-    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029.",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
     "markdown": ""
   },
   {

@@ -1,0 +1,57 @@
+[
+  {
+    "title": "LOI N°1/10 DU 16 MARS 2022 PORTANT PREVENTION ET REPRESSION DE LA CYBERCRIMINALITE AU BURUNDI",
+    "url": "https://arct.gov.bi/2023/08/10/loi-n1-10-du-16-mars-2022-portant-prevention-et-repression-de-la-cybercriminalite-au-burundi/",
+    "description": "Burundi cybercrime prevention and repression law (Loi n°1/10, 16 March 2022) published on the ARCT (telecom regulator) site. General cybercrime legislation; no mention of post-quantum or quantum-safe cryptography."
+  },
+  {
+    "title": "ETUDE SUR L'USAGE DES TIC DANS LA GESTION DES CATASTROPHES AU BURUNDI",
+    "url": "https://arct.gov.bi/2022/12/13/etude-sur-lusage-des-tic-dans-la-gestion-des-catastrophes-au-burundi/",
+    "description": "ARCT study on the use of ICT in disaster management in Burundi. No reference to cryptography or post-quantum topics."
+  },
+  {
+    "title": "Mission - ARCT",
+    "url": "https://arct.gov.bi/mission/",
+    "description": "Mission page of Burundi's Agence de Régulation et de Contrôle des Télécommunications (telecom regulator). Describes interconnection, technical standards, and data confidentiality duties; no PQC reference."
+  },
+  {
+    "title": "ARCT (homepage)",
+    "url": "https://arct.gov.bi/",
+    "description": "Homepage of Burundi's telecommunications regulator ARCT. No post-quantum cryptography content identified."
+  },
+  {
+    "title": "Accueil - Ministère de la Communication, des Technologies de l'Information et des Médias (MINTIC)",
+    "url": "https://mintic.gov.bi/",
+    "description": "Burundi ICT/communication ministry website. No post-quantum or quantum-safe cryptography content identified."
+  },
+  {
+    "title": "Le SETIC - Actualités",
+    "url": "https://setic.gov.bi/actu/",
+    "description": "News page of the Executive Secretariat of ICT (SETIC), which coordinates national ICT policy and public-service digitization. No PQC reference."
+  },
+  {
+    "title": "RECRUTEMENT - Le SETIC",
+    "url": "https://setic.gov.bi/935-2/",
+    "description": "SETIC recruitment notice (international cybersecurity expert consultant under the PAFEN digital economy project). Mentions ICT infrastructure security; no post-quantum cryptography reference."
+  },
+  {
+    "title": "REGLEMENTATION ET SUPERVISION DES SERVICES FINANCIERS NUMERIQUE AU BURUNDI",
+    "url": "https://www.brb.bi/fr/content/reglementation-et-supervision-des-services-financiers-numerique-au-burundi",
+    "description": "Banque de la République du Burundi (central bank) page on regulation and supervision of digital financial services. No PQC reference."
+  },
+  {
+    "title": "Le système de la sécurité de l'information de la Banque certifié ISO",
+    "url": "https://www.brb.bi/fr/content/le-syst%C3%A8me-de-la-s%C3%A9curit%C3%A9-de-linformation-de-la-banque-certifi%C3%A9-iso",
+    "description": "BRB announcement that its information security management system received ISO 27001 certification. General infosec; no post-quantum cryptography reference."
+  },
+  {
+    "title": "Burundi validates its first National Data Governance strategy",
+    "url": "https://www.uneca.org/eca-events/burundi-validates-its-first-national-data-governance-strategy",
+    "description": "UNECA (UN body) event report on Burundi validating its first National Data Governance Strategy (Nov 2025). International-body publication; no PQC reference."
+  },
+  {
+    "title": "Secure government communications in an AI and post-Quantum era | ITU Academy",
+    "url": "https://academy.itu.int/training-courses/full-catalogue/secure-government-communications-ai-and-post-quantum-era",
+    "description": "ITU Academy training course (Burundi eligible) on secure government communications in a post-quantum era. International-body training catalogue, not a Burundian institutional document."
+  }
+]

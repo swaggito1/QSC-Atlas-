@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Estrategia Nacional de Tecnologías Cuánticas (National Quantum Technologies Strategy)",
+    "url": "https://minciencia.gob.cl/uploads/filer_public/a9/2b/a92b6e0d-40ae-48dc-9b48-2da0ba5c7585/tecnologiascuanticas.pdf",
+    "description": "Official strategy document from Chile's Ministry of Science, Technology, Knowledge and Innovation. Explicitly names 'criptografía post-cuántica (PQC)' / Post-Quantum Cryptography and Quantum-Safe communications; includes a directive to 'Impulsar la investigación en criptografía post-cuántica (PQC) y en distribución cuántica de claves (QKD)'. Defines PQC as algorithms designed to resist future quantum attacks."
+  },
+  {
+    "title": "Expert Commission on Quantum Technologies delivers report with recommendations to strengthen the ecosystem",
+    "url": "https://ciberseguridad.gob.cl/noticias/comisi%C3%B3n-experta-en-tecnolog%C3%ADas-cu%C3%A1nticas-entreg%C3%B3-informe-con-recomendaciones-para-fortalecer-el-ecosistema/",
+    "description": "Government page (Coordinación Nacional de Ciberseguridad, now redirecting to anci.gob.cl) on the report of the Expert Commission on Quantum Technologies (commissioned by the Ministries of Interior and Science). Recommends immediate implementation of Quantum-Safe communications technologies and fostering R&D in 'criptografía post-cuántica'. Dated 1 October 2024."
+  },
+  {
+    "title": "Expert Commission on Quantum Technologies delivers report (ANCI mirror)",
+    "url": "https://anci.gob.cl/noticias/comisi%C3%B3n-experta-en-tecnolog%C3%ADas-cu%C3%A1nticas-entreg%C3%B3-informe-con-recomendaciones-para-fortalecer-el-ecosistema/",
+    "description": "ANCI (National Cybersecurity Agency) version of the page on the Expert Commission on Quantum Technologies report. Recommends Quantum-Safe technologies and post-quantum cryptography R&D. The ciberseguridad.gob.cl URL 307-redirects to this ANCI URL."
+  },
+  {
+    "title": "Política Nacional de Ciberseguridad 2023-2028 (National Cybersecurity Policy)",
+    "url": "https://anci.gob.cl/documents/4430/Pol%C3%ADtica_Nacional_de_Ciberseguridad_2023-2028.pdf",
+    "description": "ANCI national cybersecurity policy 2023-2028. Five strategic objectives; no explicit post-quantum cryptography reference found in available descriptions (candidate checked but not confirmed PQC-explicit)."
+  },
+  {
+    "title": "Ley Marco de Ciberseguridad (Ley 21.663) - Framework Cybersecurity Law",
+    "url": "https://anci.gob.cl/normativa/ley-marco-ciberseguridad/",
+    "description": "Framework Cybersecurity Law 21.663 (2024) creating ANCI. General cybersecurity governance; no PQC mention found."
+  },
+  {
+    "title": "Construyendo ciber resiliencia en la industria financiera (Banco Central de Chile)",
+    "url": "https://www.bcentral.cl/es/web/banco-central/contenido/-/details/construyendo-ciber-resiliencia-en-la-industria-financiera",
+    "description": "Banco Central de Chile content on building cyber-resilience in the financial industry. No explicit quantum or post-quantum cryptography reference found."
+  },
+  {
+    "title": "CiberSucesos No. 10 | Nuestra vida en la nube (ANCI)",
+    "url": "https://anci.gob.cl/ciberconsejos/cibersucesos-no-10-nuestra-vida-en-la-nube/",
+    "description": "ANCI awareness bulletin on cloud computing security (May 2021). Verified: does NOT mention post-quantum cryptography or quantum computing threats."
+  },
+  {
+    "title": "Chile integra criptografía postcuántica en una estructura nacional crítica (Criptonoticias)",
+    "url": "https://www.criptonoticias.com/tecnologia/chile-criptografia-postcuantica-bitcoin/",
+    "description": "Journalism (Criptonoticias) on SeQure Quantum deploying a post-quantum communication link between Chile's National Electrical Coordinator (CEN) and a sector operator. Vendor/private deployment reported by media - not an institutional government document."
+  },
+  {
+    "title": "Coordinador Eléctrico publica guía para la verificación de nueva tecnología",
+    "url": "https://www.coordinador.cl/novedades/coordinador-electrico-publica-guia-para-la-verificacion-de-nueva-tecnologia-que-aportara-estabilidad-y-seguridad-a-la-red/",
+    "description": "Coordinador Eléctrico Nacional news on a verification guide for new grid technology. Not focused on post-quantum cryptography per available description."
+  }
+]

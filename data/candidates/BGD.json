@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Who We Are - BGD e-GOV CIRT",
+    "url": "https://www.cirt.gov.bd/who-we-are",
+    "description": "Bangladesh e-Government Computer Incident Response Team (BGD e-GOV CIRT), the designated National CERT operating under the Bangladesh Computer Council (BCC). No explicit post-quantum / quantum-safe cryptography content found on site."
+  },
+  {
+    "title": "BGD e-GOV CIRT Policies",
+    "url": "https://www.cirt.gov.bd/policies",
+    "description": "Policy/advisory listing page of the national CERT. No advisory or guidance explicitly naming post-quantum cryptography, PQC, or quantum-resistant migration was found."
+  },
+  {
+    "title": "Meeting on Bangladesh Cybersecurity Strategy 2021-2025 Responsibility Matrix - BGD e-GOV CIRT",
+    "url": "https://www.cirt.gov.bd/meeting-on-bangladesh-cybersecurity-strategy-2021-2025-responsibility-matrix/",
+    "description": "Bangladesh Cyber Security Strategy 2021-2025. National strategy aligned to Digital Bangladesh pillars; no explicit mention of post-quantum / quantum-safe cryptography in available descriptions."
+  },
+  {
+    "title": "Bangladesh Government adopts cyber security declaration - BGD e-GOV CIRT",
+    "url": "https://cirt.gov.bd/bangladesh-government-adopts-cyber-security-declaration",
+    "description": "Government cyber security declaration notice. No explicit post-quantum cryptography reference."
+  },
+  {
+    "title": "ICT Division Reform Roadmap / National Digital Transformation Strategy 2025-2030 (draft)",
+    "url": "https://ictd.portal.gov.bd/sites/default/files/files/ictd.portal.gov.bd/page/6c9773a2_7556_4395_bbec_f132b9d819f0/Post%20Covid-19%20National%20ICT%20Roadmap_compressed.pdf",
+    "description": "ICT Division (Ministry of Posts, Telecommunications and IT) national ICT roadmap. Lists 'quantum technologies' as a priority research area but does not explicitly address post-quantum / quantum-safe cryptography or PQC migration."
+  },
+  {
+    "title": "Made in Bangladesh - ICT Industry Strategy 2022",
+    "url": "https://dig.watch/resource/made-in-bangladesh-ict-industry-strategy-2022",
+    "description": "ICT Industry Strategy 2022 listing quantum technologies among priority research areas. Generic 'quantum' mention only; no explicit PQC / quantum-safe cryptography reference. Mirror host, not an official .gov.bd domain."
+  },
+  {
+    "title": "Quantum-Proofing the Future: Cipher Core Taps Bangladesh (newsletter)",
+    "url": "https://cipher-core.co.jp/wp-content/uploads/2025/04/Cipher-Core-Newsletter.pdf",
+    "description": "Vendor newsletter from Cipher Core (Japanese company) referencing a Bangladesh engagement on quantum-proofing. Explicit PQC framing but issuer is a foreign commercial vendor, not a Bangladeshi institution."
+  },
+  {
+    "title": "Quantum computing revolution: Is Bangladesh preparing to seize the future? - Prothom Alo",
+    "url": "https://en.prothomalo.com/opinion/op-ed/7cvoniv53e",
+    "description": "Op-ed in Bangladeshi newspaper Prothom Alo on quantum computing readiness. Journalism/opinion, not an institutional source; discusses quantum computing generally."
+  }
+]

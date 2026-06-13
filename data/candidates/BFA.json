@@ -1,0 +1,52 @@
+[
+  {
+    "title": "ANSSI - Agence Nationale de Sécurité des Systèmes d'Information du Burkina Faso (official site)",
+    "url": "https://www.anssi.bf/",
+    "description": "Official site of Burkina Faso's national information-systems security agency (ANSSI-BF), supervised by the Ministry of Digital Transition. Domestic institutional issuer, but no explicit post-quantum / quantum-safe cryptography content found."
+  },
+  {
+    "title": "Articles - ANSSI Burkina Faso (blog) — Renforcement de la coopération numérique: le Club des DSI reçu par l'ANSSI",
+    "url": "https://anssi.bf/blog-details/7/",
+    "description": "ANSSI-BF blog post dated 23 July 2025 on a digital-cooperation meeting with a club of IT directors. Verified via WebFetch: no mention of post-quantum, quantum-safe cryptography, PQC, or quantum-resistant migration."
+  },
+  {
+    "title": "IA: Quels enjeux pour la sécurité numérique? - ANSSI Burkina Faso (blog)",
+    "url": "https://anssi.bf/blog-details/5/",
+    "description": "ANSSI-BF blog article on AI and digital security challenges. Domestic institutional issuer; topic is artificial intelligence, no explicit PQC reference."
+  },
+  {
+    "title": "Burkina Faso procède à la validation de sa Stratégie nationale 2025-2029 de lutte contre la cybercriminalité",
+    "url": "https://cybersecuritymag.africa/burkina-faso-validation-strategie-nationale-2025-2029-de-lutte-contre-la-cybercriminalite",
+    "description": "Trade-press (Africa Cybersecurity Magazine) coverage of Burkina Faso's validation of its 2025-2029 national anti-cybercrime strategy (SNLCC), 26 Nov 2024. Journalism, not an institutional source; no PQC mention reported."
+  },
+  {
+    "title": "Le Burkina Faso dévoile ses 12 chantiers numériques pour 2030",
+    "url": "https://www.wearetech.africa/fr/fils/actualites/tech/le-burkina-faso-devoile-ses-12-chantiers-numeriques-pour-2030",
+    "description": "Journalism (We Are Tech Africa) on Burkina Faso's 12 digital priorities to 2030. Not institutional issuer; general cybersecurity/digital-sovereignty focus, no explicit post-quantum cryptography."
+  },
+  {
+    "title": "ABNORM - Agence Burkinabé de Normalisation, de la Métrologie et de la Qualité (official site)",
+    "url": "https://abnorm.bf/",
+    "description": "Burkina Faso's national standards body (ABNORM), ISO member. Domestic institutional issuer, but standardization priorities listed are food/electro-technical/environmental/construction; no PQC or quantum-safe cryptography standard found."
+  },
+  {
+    "title": "ABNORM - Agence Burkinabé de Normalisation, de Métrologie et de la Qualité — ISO member page",
+    "url": "https://www.iso.org/member/269997.html",
+    "description": "ISO member listing for Burkina Faso's standards body ABNORM. Confirms ABNORM is the national standards organisation; no Burkina-issued PQC standard referenced."
+  },
+  {
+    "title": "L'Agence Nationale de Sécurité des Systèmes d'Information (ANSSI) — UNIDIR Cyber Policy Portal entity",
+    "url": "https://database.cyberpolicyportal.org/en/entity/kaoj9mbm4pc",
+    "description": "UNIDIR Cyber Policy Portal entity record for ANSSI Burkina Faso. International-body database entry (not a domestic document); describes the agency's mandate, no PQC content."
+  },
+  {
+    "title": "CYBERWELLNESS PROFILE BURKINA FASO (ITU)",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/Country_Profiles/Burkina_Faso.pdf",
+    "description": "ITU country cyberwellness profile for Burkina Faso. International-body (ITU) document, not domestic; general cybersecurity posture, no post-quantum cryptography reference."
+  },
+  {
+    "title": "Burkina Faso National CIRT Establishment - ITU project",
+    "url": "https://www.itu.int/net4/ITU-D/CDS/projects/display.asp?ProjectNo=9BKF12008",
+    "description": "ITU project page on establishment of Burkina Faso's national CIRT. International-body project record, not a domestic document; no PQC mention."
+  }
+]

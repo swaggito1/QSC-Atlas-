@@ -152,6 +152,7 @@ export async function updateCountryProfile(countriesDsId, iso3, name, fields) {
     standardFamilies: 'Standard Families',
     algorithms: 'Algorithms',
     dominantProcess: 'Dominant Standards Process',
+    secondaryProcess: 'Secondary Process',
     processParticipation: 'Process Participation',
     hybridDeployment: 'Hybrid Deployment',
     migrationTimeline: 'Migration Timeline',

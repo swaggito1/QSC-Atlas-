@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Agetic lidera proceso de creación de la primera estrategia nacional de ciberseguridad en Bolivia",
+    "url": "https://www.abi.bo/index.php/sociedad2/58421-agetic-lidera-proceso-de-creacion-de-la-primera-estrategia-nacional-de-ciberseguridad-en-bolivia",
+    "description": "ABI news item: AGETIC leads creation of Bolivia's first national cybersecurity strategy. Domestic government activity but no explicit post-quantum/quantum-safe cryptography reference; also a state news-agency article, not the document itself."
+  },
+  {
+    "title": "Acerca del CGII | Centro de Gestión de Incidentes Informáticos",
+    "url": "https://cgii.gob.bo/es/acerca-del-cgii",
+    "description": "About page of Bolivia's national CSIRT (CGII), the computer incident management centre under AGETIC, created by Decree 2514. Domestic institutional but no PQC/quantum-safe content."
+  },
+  {
+    "title": "Documento de Seguridad SEG-001 - Estado Plurinacional de Bolivia (CGII)",
+    "url": "https://www.cgii.gob.bo/sites/default/files/2017-12/Documento_Seguridad_SEG-001.pdf",
+    "description": "CGII information-security policy/guideline document (2017). Domestic institutional cybersecurity guidance; covers cryptographic controls generally but does not mention post-quantum/quantum-safe cryptography."
+  },
+  {
+    "title": "Aprueban PL que declara prioridad nacional la elaboración e implementación de la Estrategia Nacional de Ciberseguridad de Estado",
+    "url": "https://web.senado.gob.bo/prensa/noticias/aprueban-pl-que-declara-prioridad-nacional-la-elaboraci%C3%B3n-e-implementaci%C3%B3n-de-la",
+    "description": "Bolivian Senate press notice on approval of a bill declaring the National Cybersecurity Strategy a national priority. Domestic institutional but no explicit PQC/quantum-resistant reference."
+  },
+  {
+    "title": "Plan de Implementación de Gobierno Electrónico - AGETIC (PIGE)",
+    "url": "https://www.ctic.gob.bo/wp-content/uploads/2023/09/AGETIC-PIGE.pdf",
+    "description": "AGETIC e-government implementation plan. Mentions cryptographic mechanisms for safeguarding public-sector information but contains no post-quantum/quantum-safe cryptography reference."
+  },
+  {
+    "title": "Plan de Gobierno Electrónico - AGETIC (PIGE, hosted on ctic.gob.bo)",
+    "url": "https://www.ctic.gob.bo/foro/tema/ciber-seguridad/",
+    "description": "CTIC cybersecurity forum thread referencing Bolivian government cybersecurity. Forum/community content; no explicit PQC reference."
+  },
+  {
+    "title": "Plan de Implementación de Gobierno Electrónico (OOPP)",
+    "url": "https://www.oopp.gob.bo/wp-content/uploads/2021/07/plan_gobierno_electronico_.pdf",
+    "description": "Ministry of Public Works (OOPP) e-government implementation plan. Domestic institutional; references cryptography generically, no post-quantum/quantum-safe content."
+  },
+  {
+    "title": "BOLIVIA INGRESA A LA ERA DE LA FIRMA DIGITAL | ATT",
+    "url": "https://www.att.gob.bo/node/476",
+    "description": "ATT (telecom/transport regulator) announcement on digital signature in Bolivia (ATT as Root Certifying Entity). Domestic institutional but concerns classical PKI/digital signature; no PQC/quantum-resistant reference."
+  },
+  {
+    "title": "Revista Ciencia y Tecnología Digital Vol.1, Núm.1 (2025) - USFX (cryptocurrency cybersecurity in Bolivia)",
+    "url": "https://revistas.usfx.bo/index.php/rctd/article/download/2065/1735/5769",
+    "description": "Academic journal article (Universidad San Francisco Xavier) on cryptocurrency security and the Bolivian financial sector. Academic/university source - excluded as non-institutional; PQC not the focus."
+  },
+  {
+    "title": "Cómo gestionar la Ciberseguridad Financiera en Bolivia según ASFI (Pirani)",
+    "url": "https://www.piranirisk.com/es/blog/ciberseguridad-financiera-bolivia-gestion-riesgos-asfi",
+    "description": "Vendor blog summarising ASFI financial-cybersecurity requirements. Non-institutional vendor content; no PQC reference. ASFI's own RNSF cyber rules do not mention post-quantum cryptography."
+  }
+]

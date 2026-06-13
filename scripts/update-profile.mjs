@@ -12,7 +12,7 @@ import { fireDeployHook } from './lib/deploy-hook.mjs';
 loadEnv();
 const COUNTRIES_DS = process.env.NOTION_DB_COUNTRIES;
 
-const PROCESSES = ['NIST', 'ETSI', 'ISO', 'Sovereign', 'Mixed'];
+const PROCESSES = ['NIST', 'EU', 'ETSI', 'ISO', 'Sovereign', 'Mixed'];
 const HYBRID = ['Required', 'Recommended', 'Under evaluation', 'Discouraged', 'None stated'];
 const TARGETS = ['2030', '2035', 'Phased (no fixed end)', 'None stated'];
 const STATUSES = ['Complete', 'Partial', 'Placeholder'];

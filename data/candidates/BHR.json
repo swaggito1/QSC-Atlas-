@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Bahrain partners with SandboxAQ to build quantum-safe economy",
+    "url": "https://www.bna.bh/en/HMKingissuesdecree46/BahrainpartnerswithSandboxAQtobuildquantumsafeeconomy.aspx?cms=q8FmFJgiscL2fwIzON1+DlBCmWdQkcRmbnFznThbFWA%3D",
+    "description": "Bahrain News Agency (official state news agency). Reports the National Cyber Security Center (NCSC) of the Kingdom of Bahrain partnership with SandboxAQ to transition the government toward a quantum-safe economy / post-quantum era across ~60 ministries. December 2025."
+  },
+  {
+    "title": "Bahrain on the verge of a cybersecurity quantum leap - NCSC Chief",
+    "url": "https://www.bna.bh/en/BahrainonthevergeofacybersecurityquantumleapNCSCChief.aspx?cms=q8FmFJgiscL2fwIzON1+DjWg9yxYFzK2VPQKueV1Ek0%3D",
+    "description": "Bahrain News Agency item quoting the NCSC Chief on a cybersecurity 'quantum leap'. 'Quantum leap' appears metaphorical (general cybersecurity progress); no confirmed explicit post-quantum-cryptography/quantum-safe-cryptography reference in available text. Borderline."
+  },
+  {
+    "title": "National Cyber Security Center strategic partnership with SandboxAQ (media center)",
+    "url": "https://www.ncsc.gov.bh/en/media-center/news-details.html",
+    "description": "NCSC Bahrain media center carrying the SandboxAQ quantum-safe partnership announcement. URL is a JS-driven template (not a clean per-article canonical URL); same event as the BNA item. Issuer is NCSC (domestic government agency)."
+  },
+  {
+    "title": "Bahrain National Cyber Security Strategy 2025-2028",
+    "url": "https://www.ncsc.gov.bh/en/national-strategy/bahrain-national-cyber-security-strategy-2025-2028.html",
+    "description": "NCSC Bahrain national cyber security strategy (five pillars). General cyber strategy; no explicit post-quantum/quantum-safe cryptography mention confirmed in available text."
+  },
+  {
+    "title": "National Cyber Security Strategy 2025-2028 (summary PDF)",
+    "url": "https://www.ncsc.gov.bh/assets/images/National_Cyber_Security_Strategy_Summary_2025_2028_1517a02fac.pdf",
+    "description": "NCSC Bahrain summary of the 2025-2028 national cyber security strategy. General strategy; no explicit PQC/quantum-safe cryptography reference confirmed."
+  },
+  {
+    "title": "CNI Cybersecurity Controls",
+    "url": "https://www.ncsc.gov.bh/en/policies-controls/CNI-cybersecurity-controls.html",
+    "description": "NCSC Bahrain critical national infrastructure cybersecurity controls. General cryptographic/security controls; no explicit post-quantum/quantum-safe cryptography reference confirmed."
+  },
+  {
+    "title": "Bahrain Government Partners with SandboxAQ to Build a Quantum-Safe Economy (vendor press release)",
+    "url": "https://www.sandboxaq.com/press/bahrain-government-takes-definitive-step-toward-building-a-quantum-safe-economy-through-strategic-partnership-with-sandboxaq",
+    "description": "SandboxAQ (vendor) press release on the Bahrain quantum-safe / post-quantum partnership. Explicit PQC but issuer is a foreign vendor, not a domestic institution. Excluded by issuer rule."
+  }
+]

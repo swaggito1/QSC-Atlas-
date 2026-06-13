@@ -1,0 +1,47 @@
+[
+  {
+    "title": "ANTIC! National Agency for Information and Communication Technologies",
+    "url": "https://www.antic.cm/index.php/en/",
+    "description": "Homepage of Cameroon's National Agency for Information and Communication Technologies (ANTIC), the state body regulating electronic security, electronic certification, security audits and security monitoring, and hosting the national CIRT. No mention of post-quantum or quantum-safe cryptography."
+  },
+  {
+    "title": "Strengthening Cameroon's Cyber Resilience Through Global Cooperation and Capacity Building",
+    "url": "https://www.antic.cm/index.php/en/item/443-strengthening-cameroon-s-cyber-resilience-through-global-cooperation-and-capacity-building.html",
+    "description": "ANTIC news item on building Cameroon's cyber resilience through international cooperation and capacity building. General cybersecurity; no post-quantum / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Certification electronique - ANTIC",
+    "url": "https://www.antic.cm/index.php/fr/missions/certification-electronique.html",
+    "description": "ANTIC page describing its electronic-certification mission (PKI / electronic signatures). Classical cryptography only; no post-quantum / quantum-safe cryptography mention."
+  },
+  {
+    "title": "Textes du secteur des TIC - ANTIC",
+    "url": "https://antic.cm/index.php/fr/info-tic/textes-du-secteur-des-tic/96-l-agence",
+    "description": "ANTIC repository of ICT-sector legal texts (cybersecurity, cybercrime, electronic communications laws). No post-quantum / quantum-safe cryptography content."
+  },
+  {
+    "title": "Cybersecurity - Ministry of Posts and Telecommunications of Cameroon (MINPOSTEL)",
+    "url": "https://www.minpostel.gov.cm/index.php/fr/actualites/423-cybersecurity",
+    "description": "MINPOSTEL news item on cybersecurity. The ministry supervises Cameroon's telecommunications and ICT policy; no post-quantum / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Ministry of Posts and Telecommunications of Cameroon (MINPOSTEL) homepage",
+    "url": "https://www.minpostel.gov.cm/index.php/en/",
+    "description": "Homepage of Cameroon's Ministry of Posts and Telecommunications, responsible for national posts, telecommunications and ICT policy. No post-quantum / quantum-safe cryptography content."
+  },
+  {
+    "title": "Telecommunications Regulatory Board Cameroon (ART)",
+    "url": "https://en.wikipedia.org/wiki/Telecommunications_Regulatory_Board_Cameroon",
+    "description": "Wikipedia overview of Cameroon's telecom regulator (ART / TRB). Third-party encyclopedia, not an official source; no post-quantum cryptography content."
+  },
+  {
+    "title": "Cameroon - Octopus Cybercrime Community (Council of Europe)",
+    "url": "https://www.coe.int/en/web/octopus/-/cameroon",
+    "description": "Council of Europe country profile of Cameroon's cybercrime / cybersecurity framework, noting ANTIC's CIRT (est. 2012) and National Cyber Expertise Centre. International body, not domestic; no PQC reference."
+  },
+  {
+    "title": "Assessing the Gaps in Cybersecurity Resilience in Cameroon: Challenges and Opportunities",
+    "url": "https://www.scirp.org/journal/paperinformation?paperid=140884",
+    "description": "Academic journal article (Scientific Research Publishing) assessing gaps in Cameroon's national cybersecurity frameworks. Academic source; no post-quantum cryptography content."
+  }
+]

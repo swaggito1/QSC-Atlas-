@@ -1,0 +1,57 @@
+[
+  {
+    "title": "National Cybersecurity Strategy 2024-2029",
+    "url": "https://tech.gov.bt/wp-content/uploads/2025/05/National-Cybersecurity-Strategy_Published.pdf",
+    "description": "Bhutan's national cybersecurity strategy (2024-2029) published by the GovTech Agency. Full text extracted (57k chars): contains zero mentions of post-quantum, quantum-safe, quantum-resistant cryptography, PQC, or quantum computing. Domestic and institutional, but fails the explicit-PQC test."
+  },
+  {
+    "title": "National Cybersecurity Strategy - Government Technology Agency",
+    "url": "https://tech.gov.bt/national-cybersecurity-strategy/",
+    "description": "GovTech Agency landing page for the National Cybersecurity Strategy 2024-2029. Domestic institutional source; no explicit post-quantum/quantum-safe cryptography reference found."
+  },
+  {
+    "title": "National Cybersecurity Strategy of Bhutan (2024-2029) | Digital Watch Observatory",
+    "url": "https://dig.watch/resource/national-cybersecurity-strategy-of-bhutan-2024-2029",
+    "description": "Third-party (Geneva Internet Platform / Digital Watch) summary of Bhutan's cyber strategy. Not a domestic Bhutanese institution; no explicit PQC content."
+  },
+  {
+    "title": "Bhutan Computer Incident Response Team (BtCIRT)",
+    "url": "https://btcirt.bt/",
+    "description": "Homepage of Bhutan's national CERT (part of GovTech Agency). Domestic national agency; no advisory or page explicitly referencing post-quantum/quantum-safe cryptography found via search."
+  },
+  {
+    "title": "National Cybersecurity Conference 2024 | BtCIRT",
+    "url": "https://btcirt.bt/cyberconf-2024/",
+    "description": "BtCIRT page for the National Cybersecurity Conference 2024 where the cyber strategy launched. Domestic; no explicit PQC reference found."
+  },
+  {
+    "title": "Emerging Technology Division - Government Technology Agency",
+    "url": "https://tech.gov.bt/emerging-technology-division/",
+    "description": "GovTech Agency division covering emerging tech. Domestic institutional; no explicit post-quantum cryptography reference found."
+  },
+  {
+    "title": "Bhutan National AI Strategy 2025",
+    "url": "https://tech.gov.bt/wp-content/uploads/2025/10/National-AI-Strategy-2025.pdf",
+    "description": "Bhutan National AI Strategy (2025), GovTech Agency. About AI, not cryptography; no explicit post-quantum/quantum-safe cryptography content. Out of scope."
+  },
+  {
+    "title": "Revised Bhutan ICT Roadmap",
+    "url": "https://tech.gov.bt/wp-content/uploads/2024/07/bhutan_ict_roadmap_2015_pdf_85407.pdf",
+    "description": "Bhutan ICT Roadmap (2015 base, revised) on GovTech domain. Predates PQC policy era; no explicit post-quantum/quantum-safe cryptography reference. Out of scope."
+  },
+  {
+    "title": "Beefing up the country's cybersecurity through investment, legislation, and coordination | Kuensel Online",
+    "url": "https://kuenselonline.com/beefing-up-the-countrys-cybersecurity-through-investment-legislation-and-coordination/",
+    "description": "Bhutanese national newspaper (Kuensel) article on cybersecurity. Journalism, not an institutional issuer; excluded by source type. No explicit PQC content."
+  },
+  {
+    "title": "Cybersecurity for Financial Services in Bhutan (Best Guide 2025) | factosecure.com",
+    "url": "https://factosecure.com/cybersecurity-for-financial-services-in-bhutan/",
+    "description": "Vendor/consultancy guide referencing Royal Monetary Authority cybersecurity requirements for Bhutan financial institutions. Vendor source, not domestic institution; no explicit PQC content."
+  },
+  {
+    "title": "Royal Monetary Authority of Bhutan (RMA) - organization profile",
+    "url": "https://coin-collector.live/organization-profile/royal-monetary-authority-of-bhutan",
+    "description": "Third-party profile of Bhutan's central bank (RMA), focused on its digital Ngultrum/CBDC work. Not an RMA-issued document; no post-quantum cryptography reference."
+  }
+]

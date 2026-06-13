@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Governo angolano aprova instrumentos jurídicos sobre Cibersegurança",
+    "url": "https://inacom.gov.ao/2025/12/03/governo-angolano-aprova-instrumentos-juridicos-sobre-ciberseguranca/",
+    "description": "INACOM (Angolan national communications regulator) notice on the Government's approval of cybersecurity legal instruments, including the National Cybersecurity Strategy (Presidential Decree 2256/25). No mention of post-quantum / quantum-safe cryptography; cryptography addressed only conventionally."
+  },
+  {
+    "title": "Proposta de Lei da Cibersegurança apreciada pelo Conselho de Ministros",
+    "url": "https://inacom.gov.ao/2025/10/27/proposta-de-lei-da-ciberseguranca-apreciada-pelo-conselho-de-ministros/",
+    "description": "INACOM notice on the Cybersecurity bill reviewed by the Council of Ministers. General cybersecurity legislation; no post-quantum / PQC reference."
+  },
+  {
+    "title": "Decreto Presidencial n.º 256/25 – Estratégia Nacional de Cibersegurança",
+    "url": "https://angolex.com/paginas/decreto-presidencial/estrategia-nacional-de-ciberseguranca-256a-25a.html",
+    "description": "Text of Angola's National Cybersecurity Strategy (Presidential Decree, published Diário da República 3 Dec 2025, period 2024-2028) on the Angolex legal portal. Confirmed via WebFetch to reference only conventional encryption ('uso da criptografia para proteger dados em trânsito e em repouso'); no quantum/post-quantum content. Hosted on a private legal-database site, not an official .gov.ao domain."
+  },
+  {
+    "title": "MINTTICS - Angola trabalha na legislação sobre cibersegurança",
+    "url": "https://minttics.gov.ao/ao/noticias/angola-trabalha-na-legislacao-sobre-ciberseguranca/",
+    "description": "Ministry of Telecommunications, IT and Social Media (MINTTICS) news item on Angola's cybersecurity legislation work. No post-quantum / quantum-safe cryptography reference."
+  },
+  {
+    "title": "MINTTICS - Cibersegurança em Angola: certificação e incentivo às boas práticas",
+    "url": "https://minttics.gov.ao/ao/noticias/ciberseguranca-em-angola-certificacao-e-incentivo-a-boas-praticas/",
+    "description": "MINTTICS news item on the SEGA enterprise-security platform and cybersecurity best-practice certification. No post-quantum / PQC content."
+  },
+  {
+    "title": "MINTTICS - Governo aposta na criação de uma agência cibernética",
+    "url": "https://minttics.gov.ao/ao/noticias/governo-aposta-na-criacao-de-uma-agencia-cibernetica/",
+    "description": "MINTTICS news item on the planned national cybersecurity agency. No post-quantum / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Novo modelo para a governação da cibersegurança em Angola",
+    "url": "https://pti.ao/novo-modelo-para-a-governacao-da-ciberseguranca-em-angola/",
+    "description": "Portal de TI (Angolan technology news outlet) article on Angola's new cybersecurity governance model. Journalism, not institutional; no PQC reference."
+  },
+  {
+    "title": "Angola aprova Estratégia Nacional de Cibersegurança com reforço da regulamentação do sector digital",
+    "url": "https://www.menosfios.com/angola-aprova-estrategia-nacional-de-ciberseguranca-com-reforco-da-regulamentacao-do-sector-digital/",
+    "description": "Menos Fios (technology news outlet) report on adoption of the National Cybersecurity Strategy. Journalism, not institutional; no post-quantum content."
+  },
+  {
+    "title": "Angola - Octopus Cybercrime Community",
+    "url": "https://www.coe.int/en/web/octopus/-/angola",
+    "description": "Council of Europe (international body) country wiki summarising Angola's cybercrime/cybersecurity legal framework. Not a domestic Angolan issuer; no PQC reference."
+  },
+  {
+    "title": "NCSI :: Angola - National Cyber Security Index",
+    "url": "https://ncsi.ega.ee/country/ao/",
+    "description": "e-Governance Academy (Estonia) index entry rating Angola's cybersecurity capacity. Foreign/NGO index, not a domestic issuer; no PQC content."
+  }
+]

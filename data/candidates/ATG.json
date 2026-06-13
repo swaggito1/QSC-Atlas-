@@ -1,0 +1,47 @@
+[
+  {
+    "title": "NCSI :: Antigua and Barbuda - National Cyber Security Index",
+    "url": "https://ncsi.ega.ee/country/ag/",
+    "description": "e-Governance Academy index profile of Antigua and Barbuda's cyber security posture. Third-party (Estonian NGO) index, not a domestic issuer; no PQC content."
+  },
+  {
+    "title": "Cyberwellness Profile Antigua and Barbuda",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/Country_Profiles/Antigua_Barbuda.pdf",
+    "description": "ITU country cyberwellness profile noting Antigua and Barbuda lacks an officially recognised national CIRT and national cybersecurity framework. International body (ITU), not domestic; no PQC content."
+  },
+  {
+    "title": "Antigua and Barbuda CIRT Assessment - Cybil Portal",
+    "url": "https://cybilportal.org/projects/antigua-and-barbuda-cirt-assessment/",
+    "description": "GFCE Cybil Portal listing of a CIRT assessment project. Third-party portal, not a domestic issuer; no PQC content."
+  },
+  {
+    "title": "Antigua and Barbuda Bureau of Standards (ABBS)",
+    "url": "https://abbs.gov.ag/",
+    "description": "National standards body (domestic, official gov.ag domain). Site covers national quality infrastructure; no post-quantum or quantum-safe cryptography content found."
+  },
+  {
+    "title": "Government of Antigua and Barbuda",
+    "url": "https://ab.gov.ag/",
+    "description": "Official government portal (domestic). No post-quantum / quantum-safe cryptography material found."
+  },
+  {
+    "title": "Guidelines | ONDCP Antigua and Barbuda",
+    "url": "https://ondcp.gov.ag/laws/guidelines/",
+    "description": "Office of National Drug and Money Laundering Control Policy guidelines (domestic gov.ag). No PQC / quantum-safe cryptography content."
+  },
+  {
+    "title": "Eastern Caribbean Central Bank - DCash blog/FAQ",
+    "url": "https://www.eccb-centralbank.org/frequently-asked-questions",
+    "description": "ECCB digital currency (DCash) material. ECCB is the shared regional central bank for the ECCU (not domestic to ATG alone); content covers blockchain/API security, no explicit PQC / quantum-safe cryptography reference."
+  },
+  {
+    "title": "Antigua and Barbuda Data Protection Act, 2013 No. 10 of 2013",
+    "url": "https://laws.gov.ag/wp-content/uploads/2019/02/a2013-10.pdf",
+    "description": "Domestic data protection legislation (laws.gov.ag). Predates PQC standardisation; no mention of post-quantum / quantum-safe cryptography."
+  },
+  {
+    "title": "Telecommunications Bill (Antigua and Barbuda)",
+    "url": "https://legalaffairs.gov.ag/pdf/bills/TELECOMMUNICATIONS-BILL-2016-DRAFT-9-7th-November-2016.pdf",
+    "description": "Domestic draft telecommunications legislation (legalaffairs.gov.ag). Sector liberalisation focus; no post-quantum / quantum-safe cryptography content."
+  }
+]

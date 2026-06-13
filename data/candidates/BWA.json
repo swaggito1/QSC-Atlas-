@@ -1,0 +1,42 @@
+[
+  {
+    "title": "National Cybersecurity Strategy Republic of Botswana",
+    "url": "https://www.itu.int/en/ITU-D/Cybersecurity/Documents/National_Strategies_Repository/approved%20botswana-national-cybersecurity-strategy.pdf",
+    "description": "Botswana's National Cybersecurity Strategy (approved October 2020), hosted in the ITU national-strategies repository. Sets a framework for secure cyberspace, awareness and capacity building. No explicit post-quantum / quantum-safe cryptography reference found. Domestic issuer (Government of Botswana) but not PQC-explicit."
+  },
+  {
+    "title": "National Cybersecurity Strategy | Botswana Communications Regulatory Authority",
+    "url": "https://www.bocra.org.bw/national-cybersecurity-strategy-0",
+    "description": "BOCRA (telecom/ICT regulator) page presenting Botswana's National Cybersecurity Strategy. Domestic official issuer. No explicit post-quantum / quantum-safe cryptography content found."
+  },
+  {
+    "title": "bw CIRT | Botswana Communications Regulatory Authority",
+    "url": "https://www.bocra.org.bw/bw-cirt",
+    "description": "BOCRA page on the Botswana national Computer Incident Response Team (bw-CIRT). Domestic official issuer. No explicit post-quantum / quantum-safe cryptography content found."
+  },
+  {
+    "title": "The approved National Cybersecurity Strategy is now available! | BWCirt",
+    "url": "https://www.cirt.org.bw/announcements/approved-national-cybersecurity-strategy-now-available",
+    "description": "BwCIRT (Botswana national CERT) announcement of the approved National Cybersecurity Strategy. Domestic official issuer. No explicit post-quantum / quantum-safe cryptography content found."
+  },
+  {
+    "title": "Botswana National CIRT Assessment - Cybil Portal",
+    "url": "https://cybilportal.org/projects/botswana-national-cirt-assessment/",
+    "description": "Third-party (GFCE Cybil Portal) project record on Botswana's national CIRT assessment. Not a domestic Botswana institutional source and no PQC reference."
+  },
+  {
+    "title": "ISO - BOBS - Botswana Bureau of Standards",
+    "url": "https://www.iso.org/member/1753.html",
+    "description": "ISO member page for the Botswana Bureau of Standards (BOBS), the national standards body. No BOBS post-quantum cryptography standard found; page is an ISO membership record."
+  },
+  {
+    "title": "Home - BOBS",
+    "url": "https://bobstandards.bw/",
+    "description": "Botswana Bureau of Standards (BOBS) official homepage, national standards body. No post-quantum / quantum-safe cryptography standard or content found."
+  },
+  {
+    "title": "Ministry of Communications, Knowledge and Technology (Botswana)",
+    "url": "https://en.wikipedia.org/wiki/Ministry_of_Communications,_Knowledge_and_Technology_(Botswana)",
+    "description": "Wikipedia overview of the ministry handling Botswana's digital/ICT policy (SmartBots 4IR strategy, National AI work). Not an official institutional source; no PQC reference."
+  }
+]
