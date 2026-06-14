@@ -17,5 +17,9 @@
   "classificationBasis": "Lead institution + posture: NZISM Section 2.4 (NCSC/GCSB, v3.9, November 2025, ingested)\nInventory + migration planning advice: same Section 2.4 row\nNIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)\nNo FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule\nOnly one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NCSC New Zealand / GCSB cryptographic guidance | national | guidance",
+  "legalStatus": "soft-only",
+  "obligation": "No binding post-quantum mandate; national guidance aligns to the NIST algorithms.",
+  "analyticalNote": "New Zealand adopts the NIST baseline via national guidance (Five Eyes)."
 }

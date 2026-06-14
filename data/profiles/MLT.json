@@ -17,5 +17,9 @@
   "classificationBasis": "No documents in data/results/MLT.json (empty array): nothing qualified for ingestion.\nCandidates are entirely foreign or vendor sources (CISA, NCCoE, NCSC, ETSI/IQC, EU roadmap, G7, commercial guidance) with no Maltese institutional document.\nProfile left empty deliberately. Note for a later re-scrape with --deep to seek a Maltese government source.\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on PQC | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2025) | EU | soft-law",
+  "legalStatus": "binding",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; migration follows the EU coordinated 2026/2030/2035 timeline. No distinct national post-quantum instrument is recorded in the Atlas sources.",
+  "analyticalNote": "Malta is bound by the EU regulatory spine (NIS2, DORA) and follows the coordinated roadmap; no national algorithm or dedicated post-quantum statute is recorded, so it adopts the NIST baseline under EU coordination. Watch point: national transposition and any country-specific guidance would refine this EU-floor entry."
 }

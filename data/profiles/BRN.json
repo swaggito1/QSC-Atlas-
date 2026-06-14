@@ -16,5 +16,9 @@
   "confidence": "Low",
   "classificationBasis": "CSB workshop + readiness assessment + PQC migration alignment: Cyber Security Brunei press release (ingested T1)\ndominantProcess omitted: readiness/awareness posture only, no standards camp (NIST/ISO/ETSI) named - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated\nCSB Facebook post excluded (non-institutional medium, duplicate of the press release)\ndominantProcess re-classified NIST by best-available signal (low): CSB's first PQC readiness workshop (with Malaysia's NACSA/PTPKM) is an awareness/readiness posture with no sovereign Bruneian scheme, so it defaults to the de facto international (NIST) camp. Thin readiness-stage signal - provisional, flagged for review",
   "verificationStatus": "Unverified",
-  "coordinationPosture": "engaged-unaligned"
+  "coordinationPosture": "engaged-unaligned",
+  "mainRegulation": "",
+  "legalStatus": "none",
+  "obligation": "No binding post-quantum obligation; no national instrument on record.",
+  "analyticalNote": "Brunei is active on the transition but has named no binding instrument, standard, or timeline; the NIST camp is a de-facto default rather than an attested choice (see verification memo)."
 }

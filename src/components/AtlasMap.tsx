@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { POSTURE_META, postureMeta, ROLE_META, roleMeta, confidenceOpacity } from '../lib/process';
-import { parseNameRole, parseTimeline, parseList } from '../lib/parse';
+import { legalStatusMeta, instrumentStatusMeta, deriveLegalStatus } from '../lib/regulation';
+import { parseNameRole, parseTimeline, parseList, parseRegulation } from '../lib/parse';
 
 // AtlasMap - the signature view, ported from the QSC Atlas design system.
 // A real d3-geo Natural Earth choropleth. Colour shows coordination posture (the
@@ -19,6 +20,9 @@ export interface ProfileData {
   coordinationPosture?: string | null;
   standardsRole?: string | null;
   confidence?: string | null;
+  mainRegulation?: string | null;
+  legalStatus?: string | null;
+  obligation?: string | null;
   processParticipation?: string | null;
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
@@ -43,6 +47,7 @@ const POSTURE_HEX: Record<string, string> = Object.fromEntries(Object.values(POS
 const ROLE_HEX: Record<string, string> = Object.fromEntries(Object.values(ROLE_META).map((m) => [m.key, m.color]));
 const NO_DATA = '#e7e5df';
 const NO_ROLE = '#cfcdc7';
+const REG_TAG: React.CSSProperties = { fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-2xs)', padding: '0.1em 0.5em', border: '1px solid var(--hairline)', borderRadius: 'var(--radius)', color: 'var(--ink-muted)', whiteSpace: 'nowrap' };
 const W = 980;
 const H = 500;
 const key = (id: unknown) => String(Number(id));
@@ -180,6 +185,8 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
   const algorithms = parseList(c.algorithms);
   const govActors = parseNameRole(c.govActors);
   const participation = parseNameRole(c.processParticipation);
+  const regulations = parseRegulation(c.mainRegulation).map((r) => ({ ...r, statusMeta: instrumentStatusMeta(r.status) }));
+  const legal = legalStatusMeta(c.legalStatus) ?? (regulations.length ? legalStatusMeta(deriveLegalStatus(regulations.map((r) => r.status))) : null);
   const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
 
   return (
@@ -197,6 +204,25 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
         {c.summary
           ? <p className="prose" style={{ margin: 'var(--space-6) 0 0', color: 'var(--ink)' }}>{c.summary}</p>
           : <p style={{ margin: 'var(--space-6) 0 0', color: 'var(--ink-muted)', fontStyle: 'italic' }}>No summary recorded yet.</p>}
+
+        <Block>
+          <SectionLabel>Regulatory basis</SectionLabel>
+          {regulations.length ? (
+            <ul style={{ listStyle: 'none', margin: '0 0 var(--space-3)', padding: 0, display: 'grid', gap: 'var(--space-3)' }}>
+              {regulations.map((r, i) => (
+                <li key={i} style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'space-between', gap: 'var(--space-2) var(--space-3)' }}>
+                  <span style={{ fontWeight: 600 }}>{r.instrument}</span>
+                  <span style={{ display: 'inline-flex', gap: 'var(--space-2)', flexShrink: 0 }}>
+                    {r.level && <span style={REG_TAG}>{r.level}</span>}
+                    {r.statusMeta && <span style={{ ...REG_TAG, ...(r.statusMeta.binding ? { color: 'var(--ink)', borderColor: 'var(--ink)' } : {}) }}>{r.statusMeta.label}</span>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : <p style={{ margin: 0, color: 'var(--ink-muted)', fontStyle: 'italic' }}>No governing instrument recorded yet.</p>}
+          {legal && <p style={{ margin: '0 0 var(--space-3)', fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>Legal status: <strong style={{ color: 'var(--ink)' }}>{legal.label}</strong></p>}
+          {c.obligation && <p className="prose" style={{ margin: 0 }}>{c.obligation}</p>}
+        </Block>
 
         <Block>
           <SectionLabel>Standards and algorithms</SectionLabel>

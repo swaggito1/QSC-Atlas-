@@ -200,8 +200,13 @@ export async function updateCountryProfile(countriesDsId, iso3, name, fields) {
     dataStatus: 'Data Status',
     coordinationPosture: 'Coordination Posture',
     standardsRole: 'Standards Role',
+    mainRegulation: 'Main Regulation',
+    legalStatus: 'Legal Status',
+    obligation: 'Obligation',
     confidence: 'Confidence',
   };
+  // analyticalNote is intentionally NOT mapped: it is an internal field, redacted
+  // from Notion and the public site (see docs/REGULATORY_LAYER_SPEC.md, section 2.4).
   for (const [key, propName] of Object.entries(map)) {
     if (fields[key] !== undefined && fields[key] !== null) values[propName] = fields[key];
   }

@@ -23,5 +23,9 @@
   "classificationBasis": "Phased approach: ANSSI position paper (ingested)\nStandalone not before 2030: backend brief reference line\nHybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW\ndominantProcess omitted: unattested in captured text (verifier)\ndominantProcess Sovereign restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
-  "standardsRole": "contextualiser"
+  "standardsRole": "contextualiser",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nANSSI PQC migration roadmap (2022; phases 2025/2030/2035) | national | guidance\nANSSI Common Criteria security visa, PQC requirements | national | binding-by-market-access",
+  "legalStatus": "binding",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; products seeking ANSSI certification must meet its PQC requirements, including mandatory hybridisation, by the visa deadlines (2027 sensitive products, 2030 all certified products).",
+  "analyticalNote": "France enforces migration through certification and market access rather than a dedicated post-quantum statute, and layers national requirements (mandatory hybridisation, larger key sizes) over the NIST baseline. Watch point: the binding deadlines bite on certified products first, so the wider economy moves on the softer NIS2 'state-of-the-art' trajectory."
 }

@@ -20,5 +20,9 @@
   "classificationBasis": "summary + govActors (CCCS, TBS): roadmap ITSM.40.001 and TBS policy implementation notice results rows\ndominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned\nISED, SSC, NRC roles: respective results rows\nmigrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "Treasury Board SPIN 2022-02 migration direction (federal) | national | binding-by-market-access\nCanadian Centre for Cyber Security (CSE) PQC guidance | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Federal departments must migrate to the NIST FIPS algorithms under the Treasury Board direction; CSE guidance sets the method. There is no economy-wide mandate.",
+  "analyticalNote": "Canada adopts the NIST baseline, binding for federal systems via Treasury Board direction. Watch point: the private sector runs on guidance."
 }

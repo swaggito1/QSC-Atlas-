@@ -54,3 +54,28 @@ export function parseList(raw: string | null | undefined): string[] {
   if (!raw) return [];
   return raw.split(',').map((s) => s.trim()).filter(Boolean);
 }
+
+/** A governing instrument: "instrument | level | status" per line. */
+export interface Regulation {
+  instrument: string;
+  level: string | null;
+  status: string | null;
+}
+
+/** Parse a multi-line "instrument | level | status" field. Empty input gives []. */
+export function parseRegulation(raw: string | null | undefined): Regulation[] {
+  if (!raw) return [];
+  return raw
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => {
+      const [instrument, level, status] = line.split('|').map((s) => s.trim());
+      return {
+        instrument: instrument ?? '',
+        level: level ? level : null,
+        status: status ? status : null,
+      };
+    })
+    .filter((r) => r.instrument !== '');
+}

@@ -22,5 +22,9 @@
   "classificationBasis": "CAVEAT: every BRA result is included:false; profile drawn from T1 official-domain candidates (gov.br) which strongly attest the facts - confirm inclusion before treating as settled - REVIEW\nsummary + govActors (ITI) + migrationTimeline 2026: ITI announcement and full-text candidates for Normative Instruction 35/2026 (DOC-ICP-01.01) incorporating PQC into ICP-Brasil and the GOV.BR advanced signature (gov.br/iti, repositorio.iti.gov.br, T1)\ndominantProcess NIST + standardFamilies (FIPS 204) + algorithms (ML-DSA): the IN 35/2026 full-text candidate description states it establishes ML-DSA per FIPS 204 - the only specific algorithm/standard named in an institutional candidate; other suites in the full text not captured, so families/algorithms likely incomplete - REVIEW\ngovActors (ABIN) + migrationTimeline 2026: ABIN libharpia/Cepesc election-cryptography candidate and the ABIN 2026 intelligence-challenges candidate (gov.br/abin, T1)\ngovActors (GSI): OSIC 15/2024 emerging-technologies guidance recommending PQC migration planning (gov.br/gsi, T1)\nhybridDeployment / targetCompletion OMITTED: no hybrid stance or national completion date stated in the institutional candidates\nExcluded per iron rule: SERPRO (T2) PQC testing; Anatel/IME Rede Quandanga (quantum communication, not PQC algorithms); Central Bank Pix study (published on a Microsoft vendor site, not a BCB domain); Prodesp (sub-national); MCTI/CBPF (quantum hardware, not PQC)",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "ITI Normative Instruction 35/2026, PQC in the ICP-Brasil PKI | national | binding-law",
+  "legalStatus": "binding",
+  "obligation": "The national public-key infrastructure (ICP-Brasil) is incorporating post-quantum algorithms via ITI Normative Instruction 35/2026; algorithms follow the NIST baseline.",
+  "analyticalNote": "Brazil is folding the NIST baseline into its national PKI. Caveat: the supporting sources are candidate-only in the Atlas and need inclusion confirmation (see verification memo)."
 }

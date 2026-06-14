@@ -22,5 +22,9 @@
   "classificationBasis": "summary + govActors (AIVD, NCSC-NL, BZK, Rijksoverheid): PQC Migration Handbook, NCSC-NL guidance rows, BZK letter to Parliament, and Rijksoverheid programme rows\ndominantProcess NIST: NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards (13 August 2024) row. No Dutch sovereign scheme stated, so NIST assigned\nTweede Kamer role: parliamentary questions and EU quantum strategy document rows\nstandardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms\nmigrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nNCSC-NL TLS guidelines | national | guidance\nPQC Migration Handbook (AIVD, CWI, TNO, 2024) | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; national guidance (NCSC TLS guidelines, the PQC Migration Handbook) sets the recommended approach and the government-wide QvC-Rijk programme coordinates public-sector migration.",
+  "analyticalNote": "The Netherlands adopts the NIST baseline with little national overlay and leads instead on migration method, including the 'no-regret moves' handbook and cryptographic inventories. Watch point: the Court of Audit found few government bodies had begun migrating, so the binding EU duty has yet to convert into action."
 }

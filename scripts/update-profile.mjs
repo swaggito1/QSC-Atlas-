@@ -16,6 +16,8 @@ const PROCESSES = ['NIST', 'EU', 'ETSI', 'ISO', 'Sovereign', 'Mixed'];
 const HYBRID = ['Required', 'Recommended', 'Under evaluation', 'Discouraged', 'None stated'];
 const TARGETS = ['2030', '2035', 'Phased (no fixed end)', 'None stated'];
 const STATUSES = ['Complete', 'Partial', 'Placeholder'];
+const LEGAL_STATUS = ['binding', 'soft-only', 'none'];
+const INSTRUMENT_STATUS = ['binding-law', 'binding-by-market-access', 'soft-law', 'guidance'];
 
 function validate(p) {
   const errs = [];
@@ -28,6 +30,17 @@ function validate(p) {
     errs.push(`targetCompletion must be one of ${TARGETS.join('/')}`);
   if (p.dataStatus && !STATUSES.includes(p.dataStatus))
     errs.push(`dataStatus must be one of ${STATUSES.join('/')}`);
+  if (p.legalStatus && !LEGAL_STATUS.includes(p.legalStatus))
+    errs.push(`legalStatus must be one of ${LEGAL_STATUS.join('/')}`);
+  if (p.mainRegulation) {
+    for (const line of String(p.mainRegulation).split('\n')) {
+      if (!line.trim()) continue;
+      const parts = line.split('|').map((s) => s.trim());
+      if (parts.length < 3) errs.push(`mainRegulation needs "instrument | level | status": "${line}"`);
+      else if (!INSTRUMENT_STATUS.includes(parts[2]))
+        errs.push(`mainRegulation status must be one of ${INSTRUMENT_STATUS.join('/')}: "${line}"`);
+    }
+  }
   for (const key of ['migrationTimeline', 'govActors', 'processParticipation']) {
     if (!p[key]) continue;
     for (const line of String(p[key]).split('\n')) {

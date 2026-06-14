@@ -18,5 +18,9 @@
   "classificationBasis": "ASD guidance with timelines: ingested cyber.gov.au pages\n2026/2028/2030: backend brief reference line\ndominantProcess omitted: NIST link unattested in captured text (verifier)\ndominantProcess NIST restored: well-established and design-endorsed, provisional for review",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "ASD/ACSC quantum-safe guidance (Information Security Manual) | national | guidance",
+  "legalStatus": "soft-only",
+  "obligation": "No dedicated binding post-quantum mandate; government entities follow ASD guidance aligned to the NIST algorithms.",
+  "analyticalNote": "Australia is a NIST adopter via ASD guidance (Five Eyes). Watch point: timelines are guidance-led."
 }

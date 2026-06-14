@@ -16,5 +16,9 @@
   "confidence": "Medium",
   "classificationBasis": "summary + govActors (ARSAT): the two ARSAT candidates (CryptoComm announcement and the 2022 secure-communications page, arsat.com.ar). Both are T2 and included:false, so confirm inclusion before treating as settled - REVIEW\ndominantProcess OMITTED: CryptoComm is a single state enterprise's product, not a national scheme or standards camp, and no FIPS suite or scheme is named; grey beats wrong\nstandardFamilies / algorithms / hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated in institutional sources\nSecond National Cybersecurity Strategy candidate was WebFetch-confirmed NOT to mention post-quantum cryptography; National Cybersecurity Directorate/Centre and BCRA IT-risk rules name no PQC; Cyber.Ar 2026 congress and opinion/academic pieces are non-institutional - all excluded. Recommend re-scrape with --deep for a national-authority PQC source\ndominantProcess re-classified NIST by best-available signal (low): ARSAT's CryptoComm is a single state-enterprise PQC product rather than a national algorithm scheme, and Argentina has no national PQC standard; the engagement defaults to the de facto international (NIST) camp. Caveat: CryptoComm's bespoke symmetric design is idiosyncratic, so the signal is weak - provisional, flagged for review",
   "verificationStatus": "Unverified",
-  "coordinationPosture": "engaged-unaligned"
+  "coordinationPosture": "engaged-unaligned",
+  "mainRegulation": "",
+  "legalStatus": "none",
+  "obligation": "No binding post-quantum obligation; no national instrument on record.",
+  "analyticalNote": "Argentina is active on the transition but has named no binding instrument, standard, or timeline; the NIST camp is a de-facto default rather than an attested choice (see verification memo)."
 }

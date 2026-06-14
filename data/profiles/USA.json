@@ -21,5 +21,9 @@
   "classificationBasis": "NIST standards + algorithms: csrc.nist.gov project page (results summary)\nCISA/NSA/DHS roles: respective ingested pages\n2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub\nVerifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "setter"
+  "standardsRole": "setter",
+  "mainRegulation": "NSM-10 (2022) | national | binding-law\nOMB M-23-02 cryptographic inventory (2022) | national | binding-law\nExecutive Order 14144 (2025; amended by EO 14306) | national | binding-law\nFIPS 203/204/205 via CMVP validation for federal procurement | national | binding-by-market-access\nCNSA 2.0 for national security systems | national | binding-law",
+  "legalStatus": "binding",
+  "obligation": "Federal agencies must inventory their cryptography, report annually, and migrate to the NIST FIPS algorithms on the mandated timelines; national security systems follow CNSA 2.0. There is no economy-wide private-sector mandate.",
+  "analyticalNote": "The United States both writes the algorithms and binds its own agencies to them, so its instruments are the most direct in the sample. Watch point: obligations are federal, so private-sector migration runs on procurement pull and market deployment rather than law, and the 2025 executive-order amendment shows the timeline is politically revisable."
 }

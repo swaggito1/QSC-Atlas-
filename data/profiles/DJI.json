@@ -16,5 +16,9 @@
   "confidence": "Low",
   "classificationBasis": "ANC creation + PQC in Article 3: Loi n 195/AN/25/9eme L, Journal Officiel de Djibouti, 2025 (ingested T1)\ngovActor named for the authority the law creates; issuingOrg row is the Republic of Djibouti (Assemblee Nationale / Journal Officiel)\ndominantProcess omitted: law names PQC as a mandate area but no standards camp (NIST/ISO/ETSI) - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated\ndominantProcess re-classified NIST by best-available signal (low): the law creating the ANC names post-quantum cryptography as a mandate area with no sovereign Djiboutian scheme, so the nascent engagement defaults to the de facto international (NIST) camp. Legislative-mandate signal only, pre-implementation - provisional, flagged for review",
   "verificationStatus": "Unverified",
-  "coordinationPosture": "engaged-unaligned"
+  "coordinationPosture": "engaged-unaligned",
+  "mainRegulation": "",
+  "legalStatus": "none",
+  "obligation": "No binding post-quantum obligation; no national instrument on record.",
+  "analyticalNote": "Djibouti is active on the transition but has named no binding instrument, standard, or timeline; the NIST camp is a de-facto default rather than an attested choice (see verification memo)."
 }

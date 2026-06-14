@@ -19,5 +19,9 @@
   "classificationBasis": "CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows\nFIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)\nCross-ministerial council: Cabinet Secretariat row\nDigital Agency priorities: FY2026 budget row\nMixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW\nNo timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "contextualiser"
+  "standardsRole": "contextualiser",
+  "mainRegulation": "CRYPTREC Cryptographic Technology Guideline (PQC, 2024 edition) | national | guidance\nML-KEM inclusion in the CRYPTREC Ciphers List | national | guidance\nNational Cyber Command Office transition target (2035) | national | guidance",
+  "legalStatus": "soft-only",
+  "obligation": "No binding post-quantum mandate; CRYPTREC evaluates and lists the NIST algorithms (ML-KEM and others) for government use, with a national roadmap targeted for 2027 and transition by 2035.",
+  "analyticalNote": "Japan's CRYPTREC evaluates and lists NIST algorithms rather than producing a national scheme, the same posture as France and Germany, so the Atlas 'Mixed' camp overstates Japanese independence (see verification memo). Watch point: the formal national roadmap (expected 2027) will firm up the binding picture."
 }

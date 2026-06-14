@@ -20,5 +20,9 @@
   "classificationBasis": "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)\nNIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite\nReference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record",
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NCSC post-quantum migration guidance and timeline (to 2035) | national | guidance",
+  "legalStatus": "soft-only",
+  "obligation": "No binding mandate; NCSC guidance directs migration to the NIST FIPS 203/204/205 algorithms on a phased national timeline to 2035.",
+  "analyticalNote": "The UK follows the NIST baseline through NCSC guidance with no binding statute, and is excluded from the thesis comparative sample. Watch point: guidance, not law."
 }

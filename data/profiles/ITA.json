@@ -22,5 +22,9 @@
   "classificationBasis": "summary + govActors (ACN): ACN post-quantum and quantum cryptography guidance row and the European joint-position announcement\ndominantProcess NIST: ACN guidance summary explicitly references the NIST PQC standardization process (alongside EU material). No Italian sovereign scheme stated, so NIST assigned, though the EU-coordination dimension is also present - REVIEW\nBanca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)\nSenato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows\nstandardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on PQC | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2025) | EU | soft-law",
+  "legalStatus": "binding",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; migration follows the EU coordinated 2026/2030/2035 timeline. No distinct national post-quantum instrument is recorded in the Atlas sources.",
+  "analyticalNote": "Italy is bound by the EU regulatory spine (NIS2, DORA) and follows the coordinated roadmap; no national algorithm or dedicated post-quantum statute is recorded, so it adopts the NIST baseline under EU coordination. Watch point: national transposition and any country-specific guidance would refine this EU-floor entry."
 }

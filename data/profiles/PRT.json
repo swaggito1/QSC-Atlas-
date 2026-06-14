@@ -21,5 +21,9 @@
   "classificationBasis": "Funded PQC primitive and implementation security work: CNCS NCC-PT National Coordination Centre page (ingested)\nPQC as a priority conference topic: CNCS C-DAYS 2026 call for presentations (ingested)\nEmerging technologies and R&D context: CNCS Observatory Emerging Technologies Report 2023 and ROSE R&D document (ingested, PQC reference not explicitly confirmed in snippets) - REVIEW\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
-  "standardsRole": "taker"
+  "standardsRole": "taker",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on PQC | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2025) | EU | soft-law",
+  "legalStatus": "binding",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; migration follows the EU coordinated 2026/2030/2035 timeline. No distinct national post-quantum instrument is recorded in the Atlas sources.",
+  "analyticalNote": "Portugal is bound by the EU regulatory spine (NIS2, DORA) and follows the coordinated roadmap; no national algorithm or dedicated post-quantum statute is recorded, so it adopts the NIST baseline under EU coordination. Watch point: national transposition and any country-specific guidance would refine this EU-floor entry."
 }
