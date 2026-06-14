@@ -14,5 +14,9 @@
     "CISA/NSA/DHS roles: respective ingested pages",
     "2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub",
     "Verifier: FIPS names + algorithm names not in captured text (weak) - REVIEW"
-  ]
+  ],
+  "country": "United States",
+  "confidence": "Medium",
+  "classificationBasis": "NIST standards + algorithms: csrc.nist.gov project page (results summary)\nCISA/NSA/DHS roles: respective ingested pages\n2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub\nVerifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
+  "verificationStatus": "Unverified"
 }

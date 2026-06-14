@@ -126,6 +126,46 @@ export async function createDocument(documentsDsId, doc) {
   return createPage(documentsDsId, buildProps(props, values));
 }
 
+/** Map of url -> pageId for every document, for dedup and idempotent re-ingest. */
+export async function getExistingDocMap(documentsDsId) {
+  const props = await getSchema(documentsDsId);
+  const urlName = findByType(props, 'url');
+  const map = new Map();
+  let cursor;
+  do {
+    const res = await notion.dataSources.query({
+      data_source_id: documentsDsId,
+      start_cursor: cursor,
+      page_size: 100,
+    });
+    for (const page of res.results) {
+      const u = urlName && page.properties?.[urlName]?.url;
+      if (u) map.set(u.trim(), page.id);
+    }
+    cursor = res.has_more ? res.next_cursor ?? undefined : undefined;
+  } while (cursor);
+  return map;
+}
+
+/** Update the mutable fields of an existing document (re-ingest). Null fields are
+ *  left untouched; Included always reflects the latest results file. URL and Country
+ *  are the identity and are not changed. */
+export async function updateDocument(documentsDsId, pageId, doc) {
+  const props = await getSchema(documentsDsId);
+  const titleName = findByType(props, 'title') ?? 'Title';
+  const values = {
+    [titleName]: doc.title,
+    'Issuing Organisation': doc.issuingOrg,
+    Year: doc.year,
+    'Document Type': doc.docType,
+    Tier: doc.tier,
+    Summary: doc.summary,
+    Included: doc.included ?? false,
+  };
+  await notion.pages.update({ page_id: pageId, properties: buildProps(props, values) });
+  return pageId;
+}
+
 // ---- Countries (ATLAS_COUNTRIES) ----
 
 export async function findCountryByIso3(countriesDsId, iso3) {

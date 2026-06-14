@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, loadEnv } from './lib/env.mjs';
 import { updateCountryProfile } from './lib/notion-write.mjs';
@@ -37,6 +37,16 @@ async function main() {
     };
     if (SECONDARY[iso]) fields.secondaryProcess = SECONDARY[iso];
     await updateCountryProfile(DS, iso, nameOf(iso), fields);
+    // Keep the canonical profile file in sync with Notion.
+    const fp = join(ROOT, 'data', 'profiles', `${iso}.json`);
+    const prof = existsSync(fp) ? JSON.parse(readFileSync(fp, 'utf8')) : { iso3: iso, country: nameOf(iso) };
+    Object.assign(prof, fields);
+    prof.provenance = [
+      ...(prof.provenance || []).filter((x) => !/EU-aligned by membership/.test(x)),
+      'EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.' +
+        (SECONDARY[iso] ? ` Secondary ${SECONDARY[iso]} reflects the national doctrine.` : ''),
+    ];
+    writeFileSync(fp, JSON.stringify(prof, null, 2) + '\n');
     console.log(`EU-aligned: ${iso}${SECONDARY[iso] ? ` (+${SECONDARY[iso]})` : ''}`);
   }
   console.log(`\nClassified ${EU.length} EU member states as EU-aligned.`);

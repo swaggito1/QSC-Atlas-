@@ -13,5 +13,9 @@
     "hybridDeployment None stated: no included document states a hybrid position",
     "algorithms / migrationTimeline / targetCompletion: OMITTED. The consultation adds post-quantum algorithms but the included summaries name none specifically, and no dated milestones or completion date are stated",
     "govActors (DGA): OMITTED. The Digital Government Authority quantum-computing page is included:false (explicit PQC reference unconfirmed, direct fetch blocked) - REVIEW"
-  ]
+  ],
+  "country": "Saudi Arabia",
+  "confidence": "Medium",
+  "classificationBasis": "summary + govActors (NCA) + standardFamilies: NCA National Cryptographic Standards NCS-1:2020 (English, Arabic and overview-page results rows), which define MODERATE/ADVANCED levels and a post-quantum cryptography appendix; plus the NCA public-consultation announcement adding post-quantum algorithms, random number generators and quantum key distribution (included results rows)\ndominantProcess Sovereign: the NCA runs its own national scheme list (NCS-1:2020) with its own accepted primitives and assurance levels, the hallmark of a sovereign posture. The CST ICT guidance advises monitoring NIST/ETSI/ENISA but that is tracking international work, not adopting a camp - REVIEW\nsummary + govActors (CST): CST Securing Data in the Quantum Computing Era guidance, advising organisations to define PQC needs, verify vendor readiness, integrate PQC into transformation plans, monitor NIST/ETSI/ENISA and run PQC pilots (included results row)\nhybridDeployment None stated: no included document states a hybrid position\nalgorithms / migrationTimeline / targetCompletion: OMITTED. The consultation adds post-quantum algorithms but the included summaries name none specifically, and no dated milestones or completion date are stated\ngovActors (DGA): OMITTED. The Digital Government Authority quantum-computing page is included:false (explicit PQC reference unconfirmed, direct fetch blocked) - REVIEW",
+  "verificationStatus": "Unverified"
 }

@@ -1,7 +1,7 @@
 {
   "iso3": "NLD",
   "summary": "The Netherlands runs the central-government programme Quantumveilige Cryptografie, with the intelligence service AIVD, together with CWI and TNO, publishing the PQC Migration Handbook, and NCSC-NL providing guidance for organisations starting their migration. Dutch guidance follows the three post-quantum standards published by NIST.",
-  "dominantProcess": "NIST",
+  "dominantProcess": "EU",
   "govActors": "AIVD | General Intelligence and Security Service, co-author with CWI and TNO of the PQC Migration Handbook and statements on the transition\nNCSC-NL | National Cyber Security Centre, explainers and guidance for organisations starting a quantum migration programme\nBZK | Ministry of the Interior and Kingdom Relations, letter to Parliament on the renewed quantum-safe cryptography handbook and the PQChoiceAssistant tool\nRijksoverheid | Dutch central government, the Quantumveilige Cryptografie Rijk programme and the PQC symposium\nTweede Kamer | House of Representatives, answers to parliamentary questions on quantum-proof encryption",
   "hybridDeployment": "None stated",
   "dataStatus": "Partial",
@@ -10,6 +10,14 @@
     "dominantProcess NIST: NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards (13 August 2024) row. No Dutch sovereign scheme stated, so NIST assigned",
     "Tweede Kamer role: parliamentary questions and EU quantum strategy document rows",
     "standardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms",
-    "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)"
-  ]
+    "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Netherlands",
+  "confidence": "High",
+  "classificationBasis": "summary + govActors (AIVD, NCSC-NL, BZK, Rijksoverheid): PQC Migration Handbook, NCSC-NL guidance rows, BZK letter to Parliament, and Rijksoverheid programme rows\ndominantProcess NIST: NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards (13 August 2024) row. No Dutch sovereign scheme stated, so NIST assigned\nTweede Kamer role: parliamentary questions and EU quantum strategy document rows\nstandardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms\nmigrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

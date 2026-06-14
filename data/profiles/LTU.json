@@ -9,6 +9,15 @@
     "Tracking standardisation of quantum-resistant algorithms and the NIST PQC project: NKSC CTAC 2024 Yearly Report (ingested)",
     "PQC deployment funding via Digital Europe Programme: NKSC info-day presentation 2024 (ingested)",
     "dominantProcess omitted: the NIST PQC project is discussed in the yearly report as the standardisation reference, but no document adopts the NIST FIPS suite as Lithuanian national guidance, so the camp is not clearly attested - REVIEW",
-    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
-  ]
+    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Lithuania",
+  "confidence": "High",
+  "classificationBasis": "NKSC lead and PQC as a key near-term decision: NKSC overview of cybersecurity status and NKSC news item on post-quantum cryptography (ingested)\nCryptographic inventory as the starting step: NKSC guidelines for cryptography use inventory and NKSC Cyberpusryciai PQC presentation (ingested)\nTracking standardisation of quantum-resistant algorithms and the NIST PQC project: NKSC CTAC 2024 Yearly Report (ingested)\nPQC deployment funding via Digital Europe Programme: NKSC info-day presentation 2024 (ingested)\ndominantProcess omitted: the NIST PQC project is discussed in the yearly report as the standardisation reference, but no document adopts the NIST FIPS suite as Lithuanian national guidance, so the camp is not clearly attested - REVIEW\nalgorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

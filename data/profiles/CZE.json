@@ -9,6 +9,15 @@
     "PQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)",
     "ČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW",
     "dominantProcess omitted: no standards camp attested in the documents",
-    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
-  ]
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Czechia",
+  "confidence": "High",
+  "classificationBasis": "Deployment expectations for sensitive information in higher-risk environments: NÚKIB portal announcement on quantum-resistant cryptography (ingested)\nQuantum threat and definition of post-quantum cryptography: NÚKIB minimum requirements appendix (ingested)\nPQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)\nČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

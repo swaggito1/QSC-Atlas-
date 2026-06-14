@@ -12,5 +12,9 @@
     "algorithms OMITTED: no GOST PQC algorithm is named in an institutional source; the Shipovnik code-based signature appears only in vendor (Kryptonite) and aggregator (TAdviser) candidates, excluded per the iron rule",
     "hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated; financial-sector pilots (Gazprombank, Moscow Exchange, NSPK) appear only in non-institutional TAdviser candidates",
     "National Technology Center for Digital Cryptography (Mintsifry) is reported to host a post-quantum laboratory but no explicit PQC document was found on its site; not relied on"
-  ]
+  ],
+  "country": "Russia",
+  "confidence": "Medium",
+  "classificationBasis": "CAVEAT: every RUS result is included:false, so under a strict reading this country would be a Placeholder. Profile drafted from T1 institutional candidate material (the official TC26 / Rosstandart site) because it clearly attests a sovereign GOST posture and the map needs a colour - confirm inclusion before treating as settled - REVIEW\ndominantProcess Sovereign + standardFamilies (GOST R 34 series) + govActors: TC26 structure page listing Working Group 2.5 Post-Quantum Cryptographic Mechanisms under Subcommittee No. 2, the TC26 about page, and the TC26 standardization-documents index (all tc26.ru, T1)\nno adopted PQC standard: the TC26 draft-documents page shows no post-quantum-specific draft published as of June 2026\nalgorithms OMITTED: no GOST PQC algorithm is named in an institutional source; the Shipovnik code-based signature appears only in vendor (Kryptonite) and aggregator (TAdviser) candidates, excluded per the iron rule\nhybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated; financial-sector pilots (Gazprombank, Moscow Exchange, NSPK) appear only in non-institutional TAdviser candidates\nNational Technology Center for Digital Cryptography (Mintsifry) is reported to host a post-quantum laboratory but no explicit PQC document was found on its site; not relied on",
+  "verificationStatus": "Unverified"
 }

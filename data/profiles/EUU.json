@@ -14,5 +14,9 @@
     "dominantProcess: assigned Mixed rather than omitted because both European (ETSI/ENISA) and NIST references are attested in included docs - REVIEW",
     "targetCompletion / migrationTimeline (the EU 2030 date): OMITTED. A 2030 critical-infrastructure target appears only in third-party write-ups (industrialcyber, LinkedIn, medium) in candidates, not in the included EUR-Lex/europa.eu institutional summaries. Not attested by an institutional document, so left out per the iron rule - REVIEW",
     "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names stated in the included EU document summaries"
-  ]
+  ],
+  "country": "European Union",
+  "confidence": "Medium",
+  "classificationBasis": "summary + govActors (Commission, NIS Cooperation Group): Coordinated Implementation Roadmap and Commission Recommendation (EU) 2024/1101 results rows\nmandatory migration policy: COM(2026) 13 final results row\nENISA role: ENISA current-state, integration-study and news results rows\nETSI role + dominantProcess Mixed: ETSI hybrid key exchange standard and TC ESI PQC working group rows, set alongside ENISA work and references to the NIST process (ECB speech notes NIST finalised the first standards). Camp is genuinely blended (European ENISA/ETSI work plus NIST references), so Mixed assigned conservatively - REVIEW\nECB Pontes crypto-agility: ECB Pontes user requirements row\ndominantProcess: assigned Mixed rather than omitted because both European (ETSI/ENISA) and NIST references are attested in included docs - REVIEW\ntargetCompletion / migrationTimeline (the EU 2030 date): OMITTED. A 2030 critical-infrastructure target appears only in third-party write-ups (industrialcyber, LinkedIn, medium) in candidates, not in the included EUR-Lex/europa.eu institutional summaries. Not attested by an institutional document, so left out per the iron rule - REVIEW\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names stated in the included EU document summaries",
+  "verificationStatus": "Unverified"
 }

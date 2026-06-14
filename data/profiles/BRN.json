@@ -10,5 +10,9 @@
     "No standardFamilies, algorithms, hybrid stance, timeline or target stated",
     "CSB Facebook post excluded (non-institutional medium, duplicate of the press release)",
     "dominantProcess re-classified NIST by best-available signal (low): CSB's first PQC readiness workshop (with Malaysia's NACSA/PTPKM) is an awareness/readiness posture with no sovereign Bruneian scheme, so it defaults to the de facto international (NIST) camp. Thin readiness-stage signal - provisional, flagged for review"
-  ]
+  ],
+  "country": "Brunei",
+  "confidence": "Low",
+  "classificationBasis": "CSB workshop + readiness assessment + PQC migration alignment: Cyber Security Brunei press release (ingested T1)\ndominantProcess omitted: readiness/awareness posture only, no standards camp (NIST/ISO/ETSI) named - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated\nCSB Facebook post excluded (non-institutional medium, duplicate of the press release)\ndominantProcess re-classified NIST by best-available signal (low): CSB's first PQC readiness workshop (with Malaysia's NACSA/PTPKM) is an awareness/readiness posture with no sovereign Bruneian scheme, so it defaults to the de facto international (NIST) camp. Thin readiness-stage signal - provisional, flagged for review",
+  "verificationStatus": "Unverified"
 }

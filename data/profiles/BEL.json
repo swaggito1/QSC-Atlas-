@@ -1,7 +1,7 @@
 {
   "iso3": "BEL",
   "summary": "Belgium's posture is led by the Centre for Cybersecurity Belgium, which urges organisations to prepare for the quantum era and frames its advice around the European Union's strategic roadmap milestones. The federal public service BOSA points organisations to the NIST 2024 standards, and the National Bank of Belgium tracks post-quantum cryptography as an emerging risk for financial market infrastructures. No Belgian national migration deadline or sovereign algorithm list has been published.",
-  "migrationTimeline": "2026 | National strategies for the post-quantum transition in place (EU roadmap milestone referenced by the CCB)\n2030 | Critical infrastructure protected (EU roadmap milestone referenced by the CCB)\n2035 | Broad adoption of post-quantum cryptography (EU roadmap milestone referenced by the CCB)",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "govActors": "CCB | Centre for Cybersecurity Belgium, national cyber security authority\nBOSA | Federal public service for policy and support, quantum cybersecurity guidance\nNBB | National Bank of Belgium, financial market infrastructure oversight",
   "dataStatus": "Partial",
   "provenance": [
@@ -11,6 +11,14 @@
     "NBB tracking PQC as emerging risk: NBB FMI and payment services report 2025, Swift oversight factsheet, NBB annual report 2025 (ingested)",
     "migrationTimeline reflects EU roadmap milestones referenced by the CCB, not Belgian-set deadlines - REVIEW",
     "dominantProcess omitted: BOSA references NIST standards but no single Belgian standards camp is stated across the documents",
-    "No standardFamilies, algorithms, hybridDeployment or targetCompletion: none stated in the documents"
-  ]
+    "No standardFamilies, algorithms, hybridDeployment or targetCompletion: none stated in the documents",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Belgium",
+  "confidence": "High",
+  "classificationBasis": "CCB lead posture and EU roadmap milestones (2026 national strategies, 2030 critical infrastructure, 2035 broad adoption): CCB news item 'Preparing for the Quantum Era' (ingested)\nCCB on maturity uncertainty: CCB 10-year anniversary publication, 2025 (ingested)\nBOSA reference to NIST 2024 standards: Quantum4Belgium page (ingested)\nNBB tracking PQC as emerging risk: NBB FMI and payment services report 2025, Swift oversight factsheet, NBB annual report 2025 (ingested)\nmigrationTimeline reflects EU roadmap milestones referenced by the CCB, not Belgian-set deadlines - REVIEW\ndominantProcess omitted: BOSA references NIST standards but no single Belgian standards camp is stated across the documents\nNo standardFamilies, algorithms, hybridDeployment or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

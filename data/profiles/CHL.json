@@ -10,5 +10,9 @@
     "dominantProcess omitted: documents promote PQC/QKD research but name no standards camp (NIST/ISO/ETSI) - grey beats wrong",
     "No standardFamilies, algorithms, hybrid stance, timeline or target stated in either document",
     "dominantProcess re-classified NIST by best-available signal (medium): the MinCiencia National Quantum Technologies Strategy and the ANCI Expert Commission direct PQC research and quantum-safe communications with no sovereign Chilean scheme or ISO lead, so engagement defaults to the de facto international (NIST) camp. Provisional, flagged for review"
-  ]
+  ],
+  "country": "Chile",
+  "confidence": "Medium",
+  "classificationBasis": "Strategy + PQC research directive: MinCiencia National Quantum Technologies Strategy (ingested T1)\nQuantum-safe recommendation: ANCI Expert Commission report, 1 October 2024 (ingested T1)\ndominantProcess omitted: documents promote PQC/QKD research but name no standards camp (NIST/ISO/ETSI) - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated in either document\ndominantProcess re-classified NIST by best-available signal (medium): the MinCiencia National Quantum Technologies Strategy and the ANCI Expert Commission direct PQC research and quantum-safe communications with no sovereign Chilean scheme or ISO lead, so engagement defaults to the de facto international (NIST) camp. Provisional, flagged for review",
+  "verificationStatus": "Unverified"
 }

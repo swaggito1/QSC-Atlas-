@@ -1,0 +1,21 @@
+{
+  "iso3": "GBR",
+  "country": "United Kingdom",
+  "summary": "Through the NCSC, the UK has set a phased national timeline to migrate to post-quantum cryptography by 2035, aligned with the NIST FIPS 203, 204 and 205 standards.",
+  "dominantProcess": "NIST",
+  "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
+  "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "2028 | Define goals and complete discovery\n2031 | Complete high-priority migration\n2035 | Complete migration",
+  "targetCompletion": "2035",
+  "govActors": "NCSC | UK national technical authority for cyber security",
+  "dataStatus": "Partial",
+  "provenance": [
+    "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)",
+    "NIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite",
+    "Reference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record"
+  ],
+  "confidence": "High",
+  "classificationBasis": "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)\nNIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite\nReference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record",
+  "verificationStatus": "Unverified"
+}

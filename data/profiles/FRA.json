@@ -2,8 +2,8 @@
   "iso3": "FRA",
   "summary": "France's transition is steered by ANSSI, which has set out a phased approach to the move to post-quantum cryptography, with standalone post-quantum deployments envisaged only after the initial hybrid phases.",
   "hybridDeployment": "Required",
-  "migrationTimeline": "2030 | Standalone post-quantum cryptography envisaged after the hybrid phases",
-  "targetCompletion": "Phased (no fixed end)",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
   "govActors": "ANSSI | French national cybersecurity authority",
   "dataStatus": "Partial",
   "provenance": [
@@ -11,7 +11,14 @@
     "Standalone not before 2030: backend brief reference line",
     "Hybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW",
     "dominantProcess omitted: unattested in captured text (verifier)",
-    "dominantProcess Sovereign restored: well-established and design-endorsed, provisional for review"
+    "dominantProcess Sovereign restored: well-established and design-endorsed, provisional for review",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine."
   ],
-  "dominantProcess": "Sovereign"
+  "dominantProcess": "EU",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "secondaryProcess": "Sovereign",
+  "country": "France",
+  "confidence": "High",
+  "classificationBasis": "Phased approach: ANSSI position paper (ingested)\nStandalone not before 2030: backend brief reference line\nHybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW\ndominantProcess omitted: unattested in captured text (verifier)\ndominantProcess Sovereign restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
+  "verificationStatus": "Unverified"
 }

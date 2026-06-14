@@ -7,6 +7,15 @@
     "Posture and transition need: NCSC-IE research and innovation priorities page (ingested)",
     "PQC named as a challenge: Director's opening statement to the Oireachtas Joint Committee on Foreign Affairs and Defence, 2023 (ingested)",
     "dominantProcess omitted: no standards camp attested in the documents",
-    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
-  ]
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Ireland",
+  "confidence": "High",
+  "classificationBasis": "Posture and transition need: NCSC-IE research and innovation priorities page (ingested)\nPQC named as a challenge: Director's opening statement to the Oireachtas Joint Committee on Foreign Affairs and Defence, 2023 (ingested)\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

@@ -1,9 +1,18 @@
 {
   "iso3": "EST",
-  "dataStatus": "Placeholder",
+  "dataStatus": "Partial",
   "provenance": [
     "No included institutional documents. The only scraped item is a Cybernetica announcement that it was awarded Estonian government procurements to lead the e-governance quantum-safe transition, flagged included: false because the issuer is a vendor-in-programme rather than a government body.",
     "Candidates contain academic and foreign-government sources (CCDCOE conference paper, GSMA, NCCoE, US/UK/Canada material) but no ingested Estonian institutional document.",
-    "Profile left empty deliberately. Note for a later re-scrape with --deep to seek an Estonian government or RIA source."
-  ]
+    "Profile left empty deliberately. Note for a later re-scrape with --deep to seek an Estonian government or RIA source.",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Estonia",
+  "confidence": "High",
+  "classificationBasis": "No included institutional documents. The only scraped item is a Cybernetica announcement that it was awarded Estonian government procurements to lead the e-governance quantum-safe transition, flagged included: false because the issuer is a vendor-in-programme rather than a government body.\nCandidates contain academic and foreign-government sources (CCDCOE conference paper, GSMA, NCCoE, US/UK/Canada material) but no ingested Estonian institutional document.\nProfile left empty deliberately. Note for a later re-scrape with --deep to seek an Estonian government or RIA source.\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

@@ -8,6 +8,15 @@
     "DSA described as an independent governmental agency under the Commissioner of Communications: DSA home page (candidate)",
     "Single included document, so the profile is minimal and provisional - REVIEW",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
-    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
-  ]
+    "algorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Cyprus",
+  "confidence": "High",
+  "classificationBasis": "DSA as national authority and its engagement with quantum computing and PQC: DSA news item on the ENISA Telecom and Digital Infrastructure Security Forum (ingested, T1)\nDSA described as an independent governmental agency under the Commissioner of Communications: DSA home page (candidate)\nSingle included document, so the profile is minimal and provisional - REVIEW\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

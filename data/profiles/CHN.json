@@ -9,5 +9,9 @@
     "Next-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)",
     "No PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule",
     "CAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture"
-  ]
+  ],
+  "country": "China",
+  "confidence": "Medium",
+  "classificationBasis": "Lead institution + Sovereign process: OSCCA Announcement No. 55 (ingested, 2026) names 'anti-quantum computing cryptography key theory and technology' as the first research direction of the National Cryptography Science Fund; OSCCA is China's national cryptography authority running its own scheme, hence Sovereign\nNext-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)\nNo PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule\nCAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture",
+  "verificationStatus": "Unverified"
 }

@@ -5,5 +5,16 @@
   "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
   "govActors": "CRYPTREC | National cryptographic technology evaluation body, publishes PQC guidelines\nCabinet Secretariat | Runs the cross-ministerial council on government PQC adoption\nDigital Agency | Carries PQC migration in its trust-policy priorities",
   "dataStatus": "Partial",
-  "provenance": ["CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows", "FIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)", "Cross-ministerial council: Cabinet Secretariat row", "Digital Agency priorities: FY2026 budget row", "Mixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW", "No timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule"]
+  "provenance": [
+    "CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows",
+    "FIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)",
+    "Cross-ministerial council: Cabinet Secretariat row",
+    "Digital Agency priorities: FY2026 budget row",
+    "Mixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW",
+    "No timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule"
+  ],
+  "country": "Japan",
+  "confidence": "Medium",
+  "classificationBasis": "CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows\nFIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)\nCross-ministerial council: Cabinet Secretariat row\nDigital Agency priorities: FY2026 budget row\nMixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW\nNo timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule",
+  "verificationStatus": "Unverified"
 }

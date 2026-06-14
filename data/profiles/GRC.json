@@ -8,6 +8,15 @@
     "European quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW",
     "HellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used",
     "dominantProcess omitted: no standards camp attested in the documents",
-    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents"
-  ]
+    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Greece",
+  "confidence": "High",
+  "classificationBasis": "PQ-REACT post-quantum cryptography framework project: Ministry of Digital Governance observatory registry listing (ingested)\nEuropean quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW\nHellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

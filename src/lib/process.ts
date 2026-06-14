@@ -29,7 +29,9 @@ export const PROCESS_META: Record<StandardsProcess, ProcessMeta> = {
 export const NO_DATA_COLOR = '#e7e5df';
 
 /** Order used for the map legend and any process listing. */
-export const PROCESS_ORDER: StandardsProcess[] = ['NIST', 'EU', 'ETSI', 'ISO', 'Sovereign', 'Mixed'];
+// ETSI and ISO are kept in PROCESS_META so a country can still be coloured if
+// classified that way, but they are dropped from the legend until any country uses them.
+export const PROCESS_ORDER: StandardsProcess[] = ['NIST', 'EU', 'Sovereign', 'Mixed'];
 
 /** Look up the metadata for a raw select value, or null if absent/unknown. */
 export function processMeta(value: string | null | undefined): ProcessMeta | null {

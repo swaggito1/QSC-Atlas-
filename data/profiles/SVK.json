@@ -1,9 +1,18 @@
 {
   "iso3": "SVK",
-  "dataStatus": "Placeholder",
+  "dataStatus": "Partial",
   "provenance": [
     "No included documents: data/results/SVK.json is empty",
     "Candidates reference the National Security Authority (NBU) on PQC but only via LinkedIn and Facebook posts, plus an ITAPA discussion of a 'Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia'; none qualified as an ingested institutional document",
-    "Recommend re-scrape with --deep to capture the NBU strategy as a formal published source"
-  ]
+    "Recommend re-scrape with --deep to capture the NBU strategy as a formal published source",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Slovakia",
+  "confidence": "High",
+  "classificationBasis": "No included documents: data/results/SVK.json is empty\nCandidates reference the National Security Authority (NBU) on PQC but only via LinkedIn and Facebook posts, plus an ITAPA discussion of a 'Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia'; none qualified as an ingested institutional document\nRecommend re-scrape with --deep to capture the NBU strategy as a formal published source\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

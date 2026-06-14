@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, loadEnv } from './lib/env.mjs';
-import { getExistingDocUrls, createDocument, upsertCountry } from './lib/notion-write.mjs';
+import { getExistingDocMap, updateDocument, createDocument, upsertCountry } from './lib/notion-write.mjs';
 import { fireDeployHook } from './lib/deploy-hook.mjs';
 
 loadEnv();
@@ -40,10 +40,10 @@ async function main() {
   const countryName = countries.find((c) => c.iso3 === iso3)?.name ?? iso3;
   const trusted = loadJson(join(ROOT, 'data', 'trusted-domains.json')).domains ?? [];
 
-  const existing = await getExistingDocUrls(DOCUMENTS_DS);
+  const existing = await getExistingDocMap(DOCUMENTS_DS);
 
   let added = 0;
-  let skipped = 0;
+  let updated = 0;
   let lowRisk = 0;
   for (const raw of docs) {
     const url = (raw.url ?? '').trim();
@@ -51,12 +51,8 @@ async function main() {
       console.log(`  skip (no url): ${raw.title ?? '?'}`);
       continue;
     }
-    if (existing.has(url)) {
-      skipped++;
-      continue;
-    }
     const included = raw.included ?? isTrusted(url, trusted);
-    await createDocument(DOCUMENTS_DS, {
+    const doc = {
       title: raw.title ?? '(untitled)',
       country: iso3,
       issuingOrg: raw.issuingOrg ?? null,
@@ -66,26 +62,33 @@ async function main() {
       url,
       summary: raw.summary ?? null,
       included,
-    });
-    existing.add(url);
-    added++;
+    };
+    if (existing.has(url)) {
+      await updateDocument(DOCUMENTS_DS, existing.get(url), doc);
+      updated++;
+      console.log(`  ~ ${raw.tier ?? '?'} ${raw.issuingOrg ?? ''}: ${raw.title}${included ? '' : ' [draft]'} (updated)`);
+    } else {
+      const page = await createDocument(DOCUMENTS_DS, doc);
+      existing.set(url, page.id);
+      added++;
+      console.log(`  + ${raw.tier ?? '?'} ${raw.issuingOrg ?? ''}: ${raw.title}${included ? '' : ' [draft]'}`);
+    }
     if (included) lowRisk++;
-    console.log(`  + ${raw.tier ?? '?'} ${raw.issuingOrg ?? ''}: ${raw.title}${included ? '' : ' [draft]'}`);
   }
 
-  const dataStatus = added > 0 ? 'Partial' : 'Placeholder';
+  const dataStatus = added + updated > 0 ? 'Partial' : 'Placeholder';
   await upsertCountry(COUNTRIES_DS, { iso3, name: countryName, dataStatus });
 
   const covPath = join(ROOT, 'data', 'coverage.json');
   const coverage = loadJson(covPath);
   coverage[iso3] = {
     lastScraped: new Date().toISOString(),
-    docCount: (coverage[iso3]?.docCount ?? 0) + added,
+    docCount: added + updated,
     status: dataStatus,
   };
   writeFileSync(covPath, JSON.stringify(coverage, null, 2) + '\n');
 
-  console.log(`\n${iso3}: added ${added}, skipped(dup) ${skipped}, included ${lowRisk}.`);
+  console.log(`\n${iso3}: added ${added}, updated ${updated}, included ${lowRisk}.`);
   if (lowRisk > 0) await fireDeployHook();
 }
 

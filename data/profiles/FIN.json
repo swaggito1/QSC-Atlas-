@@ -9,6 +9,15 @@
     "InstituteQ roadmap excluded (included: false), not used",
     "migrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
-    "algorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries"
-  ]
+    "algorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Finland",
+  "confidence": "High",
+  "classificationBasis": "Quantum Technology Strategy 2025-2035, prominent role in quantum technology: Finnish Government strategy (ingested) - explicit PQC reference not confirmed from metadata, REVIEW\nQuantum-safe cryptography and near-term need for digital trust: VTT story page (ingested) - T4 news/story page, REVIEW\nInstituteQ roadmap excluded (included: false), not used\nmigrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

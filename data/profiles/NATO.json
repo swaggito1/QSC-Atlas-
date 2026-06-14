@@ -14,5 +14,9 @@
     "dominantProcess: OMITTED for NATO per instruction (supranational entity); it will not appear on the country map",
     "standardFamilies / algorithms / targetCompletion: OMITTED. The included documents reference post-quantum cryptography and quantum key distribution but name no FIPS family, algorithm or completion date",
     "Several NATO STO meeting papers and an ETSI-hosted NATO CSC presentation are included:false (external authorship or third-party hosting) and not relied on"
-  ]
+  ],
+  "country": "NATO",
+  "confidence": "Medium",
+  "classificationBasis": "summary + govActors (NATO) + migrationTimeline 2024: Summary of NATO's Quantum Technologies Strategy and the first-quantum-strategy news article, setting the quantum-safe end-state (included results rows)\nhybridDeployment Under evaluation + govActors (NCI Agency / NATO CSC): NCI Agency / NATO Cyber Security Centre press release on testing a hybrid post-quantum VPN combining post-quantum and traditional algorithms, proposed to the IETF (included results row). Set to Under evaluation as an experiment rather than a mandated stance\ngovActors (SPS): SPS project with Malta and the SPS quantum-technologies report (included results rows)\ngovActors (ACT): NATO Allied Command Transformation article on quantum-resistant cryptography for defence (included results row)\ngovActors (DIANA): DIANA Advanced Communication Technologies challenge featuring integrated post-quantum cryptography (included results row)\ndominantProcess: OMITTED for NATO per instruction (supranational entity); it will not appear on the country map\nstandardFamilies / algorithms / targetCompletion: OMITTED. The included documents reference post-quantum cryptography and quantum key distribution but name no FIPS family, algorithm or completion date\nSeveral NATO STO meeting papers and an ETSI-hosted NATO CSC presentation are included:false (external authorship or third-party hosting) and not relied on",
+  "verificationStatus": "Unverified"
 }

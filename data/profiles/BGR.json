@@ -1,9 +1,18 @@
 {
   "iso3": "BGR",
-  "dataStatus": "Placeholder",
+  "dataStatus": "Partial",
   "provenance": [
     "No included documents: data/results/BGR.json is empty",
     "Candidates are all non-institutional or foreign (Mastercard, ssl.com, EU reporter, CISA, NIST, NCSC, ENISA); no Bulgarian government or national authority document qualified",
-    "Recommend re-scrape with --deep for a national source (e.g. national cyber security authority)"
-  ]
+    "Recommend re-scrape with --deep for a national source (e.g. national cyber security authority)",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Bulgaria",
+  "confidence": "High",
+  "classificationBasis": "No included documents: data/results/BGR.json is empty\nCandidates are all non-institutional or foreign (Mastercard, ssl.com, EU reporter, CISA, NIST, NCSC, ENISA); no Bulgarian government or national authority document qualified\nRecommend re-scrape with --deep for a national source (e.g. national cyber security authority)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

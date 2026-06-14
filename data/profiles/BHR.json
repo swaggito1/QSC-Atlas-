@@ -10,5 +10,9 @@
     "No standardFamilies, algorithms, hybrid stance, timeline or target stated",
     "SandboxAQ vendor press release excluded by issuer rule (foreign vendor, not domestic institution)",
     "dominantProcess re-classified NIST by best-available signal (medium): the NCSC's adoption-led transition deploys post-quantum cybersecurity across ~60 ministries via SandboxAQ with no sovereign Bahraini scheme; such commercial PQC deployments implement the NIST FIPS suite, the de facto international default. Provisional, flagged for review"
-  ]
+  ],
+  "country": "Bahrain",
+  "confidence": "Medium",
+  "classificationBasis": "NCSC partnership + ~60 ministries + quantum-safe transition: Bahrain News Agency announcement, December 2025 (ingested T1)\ndominantProcess omitted: deployment posture stated but no standards camp (NIST/ISO/ETSI) named - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated\nSandboxAQ vendor press release excluded by issuer rule (foreign vendor, not domestic institution)\ndominantProcess re-classified NIST by best-available signal (medium): the NCSC's adoption-led transition deploys post-quantum cybersecurity across ~60 ministries via SandboxAQ with no sovereign Bahraini scheme; such commercial PQC deployments implement the NIST FIPS suite, the de facto international default. Provisional, flagged for review",
+  "verificationStatus": "Unverified"
 }

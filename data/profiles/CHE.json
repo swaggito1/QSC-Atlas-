@@ -12,5 +12,9 @@
     "SNB infrastructure adaptation: SNB annual reports 2023, 2025 (ingested)",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries - REVIEW",
     "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries"
-  ]
+  ],
+  "country": "Switzerland",
+  "confidence": "Medium",
+  "classificationBasis": "NCSC (BACS) lead, long process needing planning with standardisation: NCSC (BACS) technology consideration and assessment (ingested)\nFederal focus on PQC over QKD: Curia Vista affair 24.4398 (ingested)\nFederal PQC selection process expected to conclude 2024: Curia Vista affair 23.3689 - not used as a dated milestone, too uncertain, REVIEW\nEarly switch for long-lived data: BIT (FOITT) guidance (ingested)\nFinancial-sector action plan: SIF (ingested)\nSNB infrastructure adaptation: SNB annual reports 2023, 2025 (ingested)\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries - REVIEW\nalgorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries",
+  "verificationStatus": "Unverified"
 }

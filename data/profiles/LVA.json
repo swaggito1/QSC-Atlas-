@@ -8,6 +8,15 @@
     "Survey of PQC methods (lattice-based NTRU/LWE, code-based McEliece, multivariate): presentation hosted on CERT.LV events area, authored by an academic researcher rather than CERT.LV, flagged for review (ingested, T4)",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries",
     "algorithms families named only inside an academic survey, not adopted as Latvian guidance, so standardFamilies/algorithms omitted - REVIEW",
-    "hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries"
-  ]
+    "hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries",
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+  ],
+  "dominantProcess": "EU",
+  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
+  "targetCompletion": "2035",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "country": "Latvia",
+  "confidence": "High",
+  "classificationBasis": "CERT.LV lead, PQC and QKD, EuroQCI framing: Q-Ready 25 conference announcement (ingested)\nSurvey of PQC methods (lattice-based NTRU/LWE, code-based McEliece, multivariate): presentation hosted on CERT.LV events area, authored by an academic researcher rather than CERT.LV, flagged for review (ingested, T4)\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries\nalgorithms families named only inside an academic survey, not adopted as Latvian guidance, so standardFamilies/algorithms omitted - REVIEW\nhybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "verificationStatus": "Unverified"
 }

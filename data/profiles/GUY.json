@@ -1,4 +1,7 @@
 {
   "iso3": "GUY",
-  "dataStatus": "Placeholder"
+  "dataStatus": "Placeholder",
+  "country": "Guyana",
+  "confidence": "Medium",
+  "verificationStatus": "Unverified"
 }
