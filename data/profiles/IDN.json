@@ -18,7 +18,6 @@
   "classificationBasis": "Lead institutions + posture: BSN news on BSN-BSSN synergy to prepare migration to post-quantum cryptography algorithms (ingested, the only included document)\nStandardisation support + conformity assessment role: same BSN row\ndominantProcess OMITTED: BSSN runs its own 'Indonesian Cryptographic Algorithms' scheme and the activity also references SNI ISO standards (candidates), so the camp is genuinely mixed/unclear and is left out\nOther BSSN items (technical guidance, FGD, JakTek, Pengenalan PQC v1.0) were flagged included:false (non-government or local-government republishers) and are not relied on\nNo algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule\ndominantProcess re-classified Mixed by best-available signal (medium): BSSN runs a sovereign 'Indonesian Cryptographic Algorithms' scheme (Peraturan BSSN No. 11/2024) while the PQC migration work simultaneously references SNI ISO standards and NIST-lineage algorithms (ML-KEM/ML-DSA), so the posture genuinely blends a national cryptographic doctrine with international PQC. Provisional, flagged for review",
   "verificationStatus": "Unverified",
   "coordinationPosture": "engaged-unaligned",
-  "mainRegulation": "",
   "legalStatus": "none",
-  "obligation": "No binding or published post-quantum instrument; BSSN and BSN are cooperating to prepare for migration, with a stated ambition of national cryptographic independence."
+  "obligation": "No binding post-quantum obligation is on record. National agencies have stated an ambition for cryptographic self-reliance and are preparing for migration, but no instrument or adopted standard is yet in place."
 }

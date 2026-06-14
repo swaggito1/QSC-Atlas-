@@ -23,7 +23,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "ITI Normative Instruction 35/2026, PQC in the ICP-Brasil PKI | national | binding-law",
+  "mainRegulation": "ITI Normative Instruction No. 35/2026 (DOC-ICP-01.01), post-quantum algorithms in ICP-Brasil | national | binding-law\nGSI OSIC 15/2024 emerging-technologies cybersecurity guidance | national | guidance",
   "legalStatus": "binding",
-  "obligation": "The national public-key infrastructure (ICP-Brasil) is incorporating post-quantum algorithms via ITI Normative Instruction 35/2026; algorithms follow the NIST baseline."
+  "obligation": "Entities operating within the national public-key infrastructure (ICP-Brasil) and the GOV.BR advanced electronic signature must follow the cryptographic standards in ITI Normative Instruction No. 35/2026, which introduces the NIST post-quantum algorithms ML-DSA (FIPS 204) and ML-KEM into the accepted suites. The obligation is scoped to participants in the official PKI rather than the whole economy. Institutional Security Office guidance recommending wider post-quantum migration planning is advisory."
 }

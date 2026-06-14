@@ -16,7 +16,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "CyberSecurity Malaysia / NACSA PQC Migration Framework | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding mandate; the national PQC Migration Framework and NACSA guidance direct migration to the NIST baseline. MyKriptografi/MySEAL are national programmes, not a sovereign algorithm."
+  "mainRegulation": "Cyber Security Act 2024 (Act 854) | national | binding-law\nCyberSecurity Malaysia / NACSA Post-Quantum Cryptography Migration Framework | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "The Cyber Security Act 2024, in force since 26 August 2024, places binding cyber security duties on designated national critical information infrastructure entities, including risk assessment, audit and incident reporting, but it does not mandate post-quantum cryptography specifically. Migration to the NIST post-quantum baseline is set out in the CyberSecurity Malaysia and NACSA Migration Framework, which is technical guidance and is not in itself legally binding."
 }

@@ -23,7 +23,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "contextualiser",
-  "mainRegulation": "SEBI CSCRF cybersecurity framework (securities market) | national | binding-law\nCERT-In / MeitY post-quantum migration roadmap | national | guidance\nNIST CAVP algorithm validation anchor | transnational | binding-by-market-access",
+  "mainRegulation": "SEBI Cybersecurity and Cyber Resilience Framework (CSCRF) for Regulated Entities | national | binding-law\nCERT-In Directions of 28 April 2022 under section 70B(6) of the IT Act 2000 | national | binding-law\nCERT-In / MeitY / TEC post-quantum migration roadmap and technical reports | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Regulated securities-market entities must meet the SEBI cybersecurity framework; the CERT-In/MeitY roadmap anchors algorithm validation on the NIST CAVP. India is building a national certification overlay, not a national algorithm."
+  "obligation": "Entities regulated by SEBI (stock exchanges, depositories, brokers, asset managers and other market intermediaries) must comply with the CSCRF, which is mandatory and includes maintaining a cryptographic-asset inventory and conducting post-quantum risk assessment. Separately, CERT-In's 2022 Directions impose legally binding general cyber security and incident-reporting duties across the economy. The wider move to the NIST post-quantum baseline is set out in the CERT-In, MeitY and TEC roadmap and technical reports, which are guidance rather than binding rules."
 }

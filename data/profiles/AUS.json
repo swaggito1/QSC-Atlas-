@@ -19,7 +19,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "ASD/ACSC quantum-safe guidance (Information Security Manual) | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No dedicated binding post-quantum mandate; government entities follow ASD guidance aligned to the NIST algorithms."
+  "mainRegulation": "PSPF Policy 11 (Robust ICT systems) applying the Information Security Manual | national | binding-by-market-access\nSecurity of Critical Infrastructure Act 2018 (risk management programme) | national | binding-law\nASD/ACSC post-quantum cryptography guidance | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. Neither instrument compels post-quantum migration: PQC is addressed through ASD/ACSC guidance aligned to the NIST algorithms, on an indicative timeline to 2030, with no binding obligation."
 }

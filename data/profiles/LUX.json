@@ -25,7 +25,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "EU",
   "standardsRole": "taker",
-  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on PQC | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2025) | EU | soft-law",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; migration follows the EU coordinated 2026/2030/2035 timeline. No distinct national post-quantum instrument is recorded in the Atlas sources."
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
 }

@@ -19,7 +19,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "sovereign-bloc",
   "standardsRole": "sovereign-developer",
-  "mainRegulation": "Government Cipher Committee national cryptographic research programme | national | guidance\nVN-PQSign indigenous post-quantum signature (research/announcement) | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding national post-quantum mandate yet; the Government Cipher Committee is developing indigenous schemes (VN-PQSign) and national capacity rather than mandating an adopted standard."
+  "mainRegulation": "Law on Cipher 2011 (Law No. 05/2011/QH13) | national | binding-law\nLaw on Cybersecurity 2025 (Law No. 116/2025/QH15), in force 1 July 2026 | national | binding-law\nGovernment Cipher Committee post-quantum research programme and VN-PQSign indigenous signature work | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Binding law governs Vietnam's cryptographic posture: the Law on Cipher 2011 establishes the Government Cipher Committee as the national cryptographic agency, and the Law on Cybersecurity 2025 sets cryptographic protection duties for critical information infrastructure operators from 1 July 2026. Neither instrument mandates post-quantum cryptography specifically. Vietnam's PQC work is indigenous research led by the Government Cipher Committee, including the domestic VN-PQSign signature scheme and proposed national quantum-resistant standards, which remains developmental and advisory rather than a mandated national suite."
 }

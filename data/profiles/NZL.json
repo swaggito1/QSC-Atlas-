@@ -18,7 +18,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "NCSC New Zealand / GCSB cryptographic guidance | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding post-quantum mandate; national guidance aligns to the NIST algorithms."
+  "mainRegulation": "Protective Security Requirements (PSR) mandatory requirements | national | binding-by-market-access\nNew Zealand Information Security Manual (NZISM) post-quantum preparation guidance (Section 2.4) | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Government agencies covered by the Protective Security Requirements (a Cabinet direction binding on public service departments and other mandated agencies, not a statute) must manage information security in line with the PSR's mandatory requirements and report annually on compliance. The post-quantum element is advisory only: NZISM Section 2.4 directs agencies to inventory cryptographically protected assets and plan migration to post-quantum standards referencing the NIST work, and compliance with the NZISM is not required as a matter of law. No obligation falls on the wider economy."
 }

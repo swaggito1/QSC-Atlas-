@@ -21,7 +21,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "NCSC post-quantum migration guidance and timeline (to 2035) | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding mandate; NCSC guidance directs migration to the NIST FIPS 203/204/205 algorithms on a phased national timeline to 2035."
+  "mainRegulation": "Network and Information Systems Regulations 2018 | national | binding-law\nCyber Assessment Framework (CAF) | national | binding-by-market-access\nNCSC post-quantum cryptography migration timelines and guidance (to 2035) | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "There is no economy-wide post-quantum statute and no binding PQC mandate. The NIS Regulations 2018 place binding cyber security and resilience duties on designated operators of essential services and relevant digital service providers, assessed by sector regulators against the NCSC Cyber Assessment Framework, but these are technology-neutral and do not require post-quantum migration. PQC itself is addressed only through NCSC guidance, which directs migration to the NIST FIPS 203/204/205 algorithms on a phased national timeline to 2035 and carries no legal obligation."
 }

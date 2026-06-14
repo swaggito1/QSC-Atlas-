@@ -21,7 +21,6 @@
   "classificationBasis": "summary + govActors (NCSA QUANTA): QUANTA platform, migration roadmap and standards pages on pqc-learn.ncsa.or.th (results rows, all marked included:false because direct fetch of the NCSA pages/PDF was blocked; corroborated by the candidates raw descriptions)\ndominantProcess NIST + standardFamilies + algorithms: QUANTA standards page recommends FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) - REVIEW (sourced from candidates description, not captured page text)\nmigrationTimeline 2035 + targetCompletion: QUANTA migration roadmap targets completion of the national transition by 2035 (results + candidates)\nhybridDeployment: OMITTED. A 2030 hybrid-for-new-sensitive-projects step appears only in Nation Thailand journalism in the candidates, not in an NCSA-issued document\nAll THA results are included:false, so this profile is a provisional draft on official NCSA-domain sources pending researcher confirmation - REVIEW",
   "verificationStatus": "Unverified",
   "coordinationPosture": "engaged-unaligned",
-  "mainRegulation": "",
   "legalStatus": "none",
-  "obligation": "No binding post-quantum obligation; no national instrument on record."
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted."
 }

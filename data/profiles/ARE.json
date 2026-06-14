@@ -21,7 +21,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "National Encryption Policy and executive regulation (PQC transition) | national | binding-law\nNational Post-Quantum Migration Programme and Crypto Discovery Tool | national | guidance",
+  "mainRegulation": "National Encryption Policy and its executive regulation | national | binding-law\nNational Post-Quantum Migration Programme and national Crypto Discovery Tool | national | guidance\nDESC Post-Quantum Cryptography Guideline (Dubai) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Government entities must hold officially approved plans to transition from traditional encryption to post-quantum cryptography under the National Encryption Policy; the national programme provides discovery and migration tooling. The policy mandates migration, not a national algorithm."
+  "obligation": "Government entities must hold formally approved plans to migrate from traditional encryption (RSA, ECC and similar) to post-quantum cryptography under the National Encryption Policy and its executive regulation, approved in November 2025, and are expected to maintain an inventory of cryptographic assets and build crypto-agility into new systems. The mandate is a migration obligation overseen by the Cyber Security Council, not the adoption of a national algorithm. The Dubai Electronic Security Center guideline applies within the emirate of Dubai and is advisory."
 }

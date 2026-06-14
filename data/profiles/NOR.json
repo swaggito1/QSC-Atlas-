@@ -21,7 +21,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "NSM national quantum migration programme and cryptographic recommendations | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding post-quantum mandate; NSM recommendations direct organisations to plan migration. As an EEA state, Norway also tracks EU regulation."
+  "mainRegulation": "Cryptographic Security Regulation (Forskrift om kryptosikkerhet, 2018, no. 2055) under the National Security Act (sikkerhetsloven) | national | binding-law\nDigital Security Act (Digitalsikkerhetsloven), implementing the NIS Directive (EU) 2016/1148, in force 1 October 2025 | national | binding-law\nNSM quantum migration programme and Cryptographic Recommendations | national | guidance",
+  "legalStatus": "binding",
+  "obligation": "Binding law governs Norway's cryptographic and cyber posture: under the Security Act and its Cryptographic Security Regulation, NSM approves the cryptographic systems that protect classified information, and the Digital Security Act imposes cyber-risk duties on essential and digital service providers. Neither instrument mandates post-quantum cryptography specifically; the PQC content sits in NSM's quantum migration programme and Cryptographic Recommendations, which advise organisations to plan and carry out migration to quantum-resistant cryptography but attach no legal obligation. As an EEA state, Norway has adopted the NIS1 framework as national law and tracks NIS2 for future incorporation."
 }

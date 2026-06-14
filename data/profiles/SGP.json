@@ -20,7 +20,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "contextualiser",
-  "mainRegulation": "CSA Quantum-Safe Handbook and readiness guidance | national | guidance\nMAS advisory on quantum security (financial sector) | national | guidance",
+  "mainRegulation": "CSA Quantum-Safe Handbook and Quantum Readiness Index | national | guidance\nMAS Advisory on Addressing the Cybersecurity Risks Associated with Quantum (MAS/TCRS/2024/01) | national | guidance\nIMDA reference specifications for quantum-safe and QKD networks (draft) | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No binding mandate; CSA guidance and the MAS advisory direct migration to the NIST baseline, with finance leading."
+  "obligation": "No organisation in Singapore is legally required to adopt post-quantum cryptography. The CSA Quantum-Safe Handbook advises critical information infrastructure owners and government agencies to inventory cryptographic assets and plan migration to the NIST post-quantum baseline, and the MAS advisory makes the same recommendations to financial institutions, but both are advisory only and carry no enforceable obligation."
 }

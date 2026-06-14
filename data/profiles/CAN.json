@@ -21,7 +21,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "Treasury Board SPIN 2022-02 migration direction (federal) | national | binding-by-market-access\nCanadian Centre for Cyber Security (CSE) PQC guidance | national | guidance",
+  "mainRegulation": "Treasury Board Security Policy Implementation Notice: Migrating the Government of Canada to Post-Quantum Cryptography (2025) | national | binding-by-market-access\nCanadian Centre for Cyber Security roadmap ITSM.40.001 and guidance ITSAP.00.017 | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Federal departments must migrate to the NIST FIPS algorithms under the Treasury Board direction; CSE guidance sets the method. There is no economy-wide mandate."
+  "obligation": "Federal departments only: the Treasury Board Security Policy Implementation Notice, effective 9 October 2025 under the Policy on Government Security and the Policy on Service and Digital, requires Government of Canada systems that use cryptography to migrate to post-quantum cryptography, with a high-level migration plan due by April 2026, high-priority systems migrated by the end of 2031 and all remaining systems by 2035. The Cyber Centre roadmap (ITSM.40.001) and quantum-threat guidance (ITSAP.00.017) set the recommended method and align to the NIST standards. There is no economy-wide mandate on private organisations."
 }

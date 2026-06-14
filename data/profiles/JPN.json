@@ -20,7 +20,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "contextualiser",
-  "mainRegulation": "CRYPTREC Cryptographic Technology Guideline (PQC, 2024 edition) | national | guidance\nML-KEM inclusion in the CRYPTREC Ciphers List | national | guidance\nNational Cyber Command Office transition target (2035) | national | guidance",
-  "legalStatus": "soft-only",
-  "obligation": "No binding post-quantum mandate; CRYPTREC evaluates and lists the NIST algorithms (ML-KEM and others) for government use, with a national roadmap targeted for 2027 and transition by 2035."
+  "mainRegulation": "CRYPTREC Ciphers List for e-Government procurement (LS-0001-2022R2) | national | binding-by-market-access\nCommon Standards for Cybersecurity Measures for Government Agencies | national | binding-by-market-access\nCRYPTREC Cryptographic Technology Guideline on Post-Quantum Cryptography (FY2024 edition) | national | guidance\nLiaison Council on the Use of Post-Quantum Cryptography in Government Agencies | national | soft-law",
+  "legalStatus": "binding",
+  "obligation": "Government agencies procuring information systems must, under the Common Standards set by the Cybersecurity Strategic Headquarters, specify ciphers from the CRYPTREC Ciphers List in their procurement requirements, which makes the list binding by market access for government suppliers. This currently governs cryptography generally rather than mandating post-quantum algorithms; CRYPTREC has evaluated and is adding the NIST post-quantum algorithms (ML-KEM and others), and its post-quantum guideline remains advisory. There is no general post-quantum obligation on the private sector."
 }

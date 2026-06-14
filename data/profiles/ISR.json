@@ -20,7 +20,7 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
-  "mainRegulation": "Bank of Israel banking-supervision PQC directive | national | binding-law\nINCD post-quantum readiness guidance | national | guidance",
+  "mainRegulation": "Bank of Israel Banking Supervision letter on quantum-era preparedness (7 January 2025) | national | binding-by-market-access\nINCD Organizational Cyber Readiness to the Post-Quantum Age (best practices) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Supervised banks must assess their cryptographic inventory and submit a post-quantum preparedness plan under the Bank of Israel directive; INCD guidance applies more broadly. Algorithms follow the NIST baseline."
+  "obligation": "Supervised banking corporations must assess the suitability of their infrastructure for post-quantum encryption, map their cryptographic inventory and submit an initial preparedness plan with board-level approval to the Banking Supervision Department, within a year of the January 2025 letter. This obligation is confined to the banking sector. Israel National Cyber Directorate material applies economy-wide but is advisory, and no specific post-quantum algorithm is mandated nationally."
 }
