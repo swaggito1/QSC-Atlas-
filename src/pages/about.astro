@@ -1,70 +1,83 @@
 ---
 import Base from '../layouts/Base.astro';
+import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
+
+const postureDef: Record<string, string> = {
+  'NIST-bloc': 'Works to the standards and cadence the United States sets through NIST. The largest group by far.',
+  EU: 'Migrates in step with the EU coordinated roadmap, on its 2030 and 2035 milestones, over the NIST algorithms underneath.',
+  'sovereign-bloc': 'Builds and mandates its own national algorithms, independent of NIST. The only real fork in the baseline.',
+  'engaged-unaligned': 'Active on the transition, but committed to no bloc, standard, or timeline.',
+};
+const roleDef: Record<string, string> = {
+  setter: 'Writes the standards others adopt. Today there is one: the United States.',
+  contextualiser: 'Adopts the baseline but adds national requirements, such as mandatory hybrid deployment or certification.',
+  taker: 'Adopts the baseline broadly as published, without a substantial national overlay.',
+  'sovereign-developer': 'Designs and standardises its own post-quantum algorithms.',
+};
 ---
 
 <Base title="About">
-  <div class="container prose about">
+  <div class="container about">
     <h1>About the QSC Atlas</h1>
-    <p>
+    <p class="prose lead">
       The QSC Atlas shows, country by country, how governments are migrating to quantum-safe
-      cryptography: which post-quantum standards dominate, which international standards processes
-      a country takes part in, and where one exists, its migration timeline.
-    </p>
-    <p>
-      It draws on institutional sources only: government bodies, national agencies, and standards
-      organisations. Each country profile links to the primary documents it is built from, so you
-      can read the source for yourself. The Atlas is rebuilt as new institutional documents appear,
-      so it reflects the current public record rather than a one-off snapshot.
+      cryptography: the instruments that govern the move, which post-quantum standards a country
+      adopts, the bloc it coordinates with, and where one exists, its timeline. It is built only
+      from institutional sources, government bodies, national agencies and standards organisations,
+      and every profile links to the documents it rests on. It is rebuilt as new documents appear.
     </p>
 
     <h2 id="classification">How the Atlas classifies countries</h2>
-    <p>
+    <p class="prose">
       Every country is described on two dimensions, because two different things are easy to
-      confuse. An EU member coordinates through the European roadmap, yet the algorithms it
-      deploys are the American NIST standards, because there is no European alternative. One label
-      would drop half the truth, so the Atlas keeps both: the colour is the club, the badge is the
-      technology.
+      confuse. An EU member coordinates through the European roadmap, yet the algorithms it deploys
+      are the American NIST standards, because there is no European alternative. A single label would
+      conflate the two, so the Atlas records both: the map colour shows which collective transition a
+      country coordinates with; a badge on its profile shows whose algorithms it actually runs.
     </p>
 
-    <h3>Coordination posture (the map colour)</h3>
-    <p>Which collective transition a country belongs to.</p>
-    <ul>
-      <li><strong>NIST-led ecosystem</strong>: works to the standards and cadence set by the United States' NIST (FIPS 203, 204, 205). The largest group by far.</li>
-      <li><strong>EU coordinated roadmap</strong>: follows the European Union's synchronised transition under the NIS Cooperation Group, with its 2026, 2030 and 2035 milestones. A coordination commitment, not a separate set of algorithms.</li>
-      <li><strong>Sovereign bloc</strong>: builds and mandates its own national algorithms and runs its transition independently of NIST. This is where the global baseline actually fractures.</li>
-      <li><strong>Engaged but unaligned</strong>: visibly working on the transition, but not yet committed to a bloc, a standard, or a timeline.</li>
-    </ul>
+    <h3>Coordination posture, the map colour</h3>
+    <dl class="ref">
+      {
+        POSTURE_ORDER.map((k) => (
+          <div class="ref-row" style={`--c:${POSTURE_META[k].color}`}>
+            <span class="ref-sw" aria-hidden="true" />
+            <dt>{POSTURE_META[k].label}</dt>
+            <dd class="prose">{postureDef[k]}</dd>
+          </div>
+        ))
+      }
+    </dl>
 
-    <h3>Standards role (the badge)</h3>
-    <p>The country's relationship to the algorithms themselves.</p>
-    <ul>
-      <li><strong>Standard-setter</strong>: writes the standards others adopt. Today there is effectively one, the United States through NIST.</li>
-      <li><strong>Standard-contextualiser</strong>: accepts the baseline but adds national requirements such as mandatory hybrid deployment, larger keys, or independent certification.</li>
-      <li><strong>Standard-taker</strong>: adopts the baseline broadly as published, without a substantial national overlay.</li>
-      <li><strong>Sovereign developer</strong>: designs and standardises its own post-quantum algorithms.</li>
-    </ul>
+    <h3>Standards role, the profile badge</h3>
+    <dl class="ref">
+      {
+        ROLE_ORDER.map((k) => (
+          <div class="ref-row" style={`--c:${ROLE_META[k].color}`}>
+            <span class="ref-sw" aria-hidden="true" />
+            <dt>{ROLE_META[k].label}</dt>
+            <dd class="prose">{roleDef[k]}</dd>
+          </div>
+        ))
+      }
+    </dl>
 
-    <h3>How to read the map</h3>
-    <p>
-      Colour shows coordination posture. The role badge on each profile shows the standards role,
-      and the map can be recoloured by role. Confidence is shown alongside every classification and
-      drives how strongly a country is coloured, so a low-confidence call looks tentative. Faint grey
-      is no data, meaning no institutional source has been found yet, which is different from engaged
-      but unaligned, an active but undecided country. Every profile links to the documents it is built
-      from.
+    <p class="prose ref-note">
+      Confidence is shown with every classification and sets how strongly a country is coloured, so a
+      low-confidence call reads softer. Faint grey is no data, which is not the same as engaged but
+      unaligned: one has nothing on record, the other is active but undecided.
     </p>
 
     <h2 id="briefing">Request a briefing</h2>
-    <p>
-      The Atlas is maintained alongside a consulting practice on the quantum-safe transition. If you
-      would like a briefing tailored to your organisation or sector, get in touch.
+    <p class="prose">
+      The Atlas is maintained alongside advisory work on the quantum-safe transition. For a briefing
+      tailored to your organisation or sector, get in touch.
     </p>
     <p>
       <a class="briefing-link" href="mailto:hello@example.com?subject=QSC%20Atlas%20briefing">
         Request a briefing
       </a>
     </p>
-    <p class="note">Replace the contact address above with your real one before launch.</p>
   </div>
 </Base>
 
@@ -74,15 +87,56 @@ import Base from '../layouts/Base.astro';
   }
   .about h2 {
     font-family: var(--font-reading);
-    margin-top: var(--space-12);
+    margin-top: var(--space-16);
   }
   .about h3 {
-    font-family: var(--font-reading);
-    margin-top: var(--space-8);
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: var(--space-10) 0 var(--space-4);
   }
-  .about ul {
+  .lead {
+    font-size: var(--text-lg);
+  }
+  .ref {
+    margin: 0;
     display: grid;
-    gap: var(--space-2);
+    gap: 0;
+  }
+  .ref-row {
+    display: grid;
+    grid-template-columns: 1em minmax(9em, 14em) 1fr;
+    gap: var(--space-3) var(--space-5);
+    align-items: baseline;
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .ref-row:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+  .ref-sw {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background: var(--c);
+    align-self: center;
+  }
+  .ref dt {
+    font-family: var(--font-instrument);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .ref dd {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--ink-muted);
+  }
+  .ref-note {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    margin-top: var(--space-6);
   }
   .briefing-link {
     display: inline-block;
@@ -92,9 +146,16 @@ import Base from '../layouts/Base.astro';
     text-decoration: none;
     font-family: var(--font-instrument);
   }
-  .note {
-    color: var(--ink-muted);
-    font-style: italic;
-    font-size: 0.85rem;
+  .briefing-link:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  @media (max-width: 560px) {
+    .ref-row {
+      grid-template-columns: 1em 1fr;
+    }
+    .ref dd {
+      grid-column: 2;
+    }
   }
 </style>

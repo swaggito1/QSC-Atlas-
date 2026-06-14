@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QSC Atlas — hero concept (Standards in Orbit)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>body{margin:0;background:#e9e6df;}</style>
+</head>
+<body>
+<!--FRAG-->
+<h2 class="sr-only">Concept hero for the QSC Atlas: a slowly rotating globe of countries coloured by cryptographic coordination bloc, with great-circle arcs showing standards propagating from the United States as standard-setter, and sovereign blocs ringed apart.</h2>
+<div class="qsc-hero" id="qscHero">
+  <canvas id="globe"></canvas>
+  <div class="ui">
+    <div class="bar">
+      <span class="wm">QSC&nbsp;ATLAS</span>
+      <nav class="nav"><span>Map</span><span>Countries</span><span>Analysis</span><span>Documents</span><span>About</span></nav>
+    </div>
+    <div class="tag">
+      <p class="tagline">The world is splitting into cryptographic blocs with different deadlines.</p>
+      <ul class="legend" id="legend">
+        <li><i style="background:#2b4c7e"></i>NIST-led ecosystem</li>
+        <li><i style="background:#5b54a8"></i>EU coordinated roadmap</li>
+        <li><i style="background:#7a3b5e"></i>Sovereign bloc</li>
+        <li><i style="background:#6b7280"></i>Engaged but unaligned</li>
+      </ul>
+    </div>
+    <div class="ctrls">
+      <span class="cby">Colour by</span>
+      <button id="bP" class="tg on" type="button">coordination</button>
+      <button id="bR" class="tg" type="button">standards role</button>
+    </div>
+    <div class="meta">
+      <span id="count">54 countries with data</span>
+      <span class="dot">·</span>
+      <span>deadline horizon 2025&#8594;2035</span>
+    </div>
+  </div>
+</div>
+<style>
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .qsc-hero{position:relative;width:100%;height:540px;background:#f7f5f0;border:1px solid #d8d6d0;border-radius:3px;overflow:hidden;
+    font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#1a1a1a}
+  .qsc-hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .qsc-hero .ui{position:absolute;inset:0;pointer-events:none}
+  .qsc-hero .ui *{pointer-events:auto}
+  .bar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;
+    padding:18px 22px;border-bottom:1px solid rgba(26,26,26,.08)}
+  .wm{font-weight:600;letter-spacing:.2em;font-size:15px}
+  .nav{display:flex;gap:20px;font-size:12.5px;color:#5c5c5c}
+  .tag{position:absolute;left:22px;bottom:20px;max-width:24rem}
+  .tagline{font-family:'Newsreader',Georgia,serif;font-size:21px;line-height:1.3;margin:0 0 16px;color:#1a1a1a}
+  .legend{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:12px;color:#5c5c5c}
+  .legend li{display:flex;align-items:center;gap:8px}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+  .ctrls{position:absolute;right:22px;top:64px;display:flex;align-items:center;gap:8px;font-size:11.5px;color:#5c5c5c}
+  .tg{font-family:inherit;font-size:11.5px;padding:3px 10px;border:1px solid #d8d6d0;border-radius:2px;background:transparent;color:#5c5c5c;cursor:pointer}
+  .tg.on{background:#1a1a1a;color:#f7f5f0;border-color:#1a1a1a}
+  .meta{position:absolute;right:22px;bottom:20px;display:flex;align-items:center;gap:8px;
+    font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;color:#8a8a86}
+  .meta .dot{opacity:.6}
+</style>
+<script>
+const NODES=[[-70,13,0,0],[65,33,0,0],[19,-12,0,0],[-63,18,0,0],[20,60,0,0],[20,41,0,0],[2,43,0,0],[54,24,1,3],[-64,-34,4,0],[45,40,0,0],[-170,-14,0,0],[0,-90,0,0],[69,-49,0,0],[-62,17,0,0],[133,-27,1,3],[13,47,2,3],[48,41,0,0],[30,-3,0,0],[4,51,2,3],[2,10,0,0],[-2,13,0,0],[90,24,0,0],[25,43,2,3],[51,26,4,0],[-76,24,0,0],[18,44,0,0],[-63,19,0,0],[-6,-16,0,0],[28,53,0,0],[-89,17,0,0],[-65,32,0,0],[-65,-17,0,0],[-68,12,0,0],[-55,-10,1,3],[-60,13,0,0],[115,5,4,0],[91,28,0,0],[3,-54,0,0],[24,-22,0,0],[21,7,0,0],[-95,60,1,3],[97,-12,0,0],[8,47,0,0],[-71,-30,4,0],[105,35,3,4],[-5,8,0,0],[12,6,0,0],[25,0,0,0],[15,-1,0,0],[-160,-21,0,0],[-72,4,0,0],[44,-12,0,0],[-24,16,0,0],[-84,10,0,0],[-80,22,0,0],[-69,12,0,0],[106,-10,0,0],[-80,20,0,0],[33,35,2,3],[16,50,2,3],[9,51,2,2],[43,12,4,0],[-61,15,0,0],[10,56,2,3],[-71,19,0,0],[3,28,0,0],[-77,-2,0,0],[30,27,0,0],[39,15,0,0],[-13,25,0,0],[-4,40,2,3],[26,59,2,3],[38,8,0,0],[26,64,2,3],[175,-18,0,0],[-59,-52,0,0],[2,46,2,2],[-7,62,0,0],[158,7,0,0],[12,-1,0,0],[-2,54,1,3],[44,42,0,0],[-3,49,0,0],[-2,8,0,0],[-5,36,0,0],[-10,11,0,0],[-62,16,0,0],[-17,13,0,0],[-15,12,0,0],[10,2,0,0],[22,39,2,3],[-62,12,0,0],[-40,72,0,0],[-90,16,0,0],[-53,4,0,0],[145,13,0,0],[-59,5,0,0],[114,22,0,0],[73,-53,0,0],[-86,15,0,0],[16,45,2,3],[-72,19,0,0],[20,47,2,3],[120,-5,4,0],[-4,54,0,0],[77,20,1,2],[72,-6,0,0],[-8,53,2,3],[53,32,0,0],[44,33,0,0],[-18,65,0,0],[35,31,1,3],[13,43,2,3],[-77,18,0,0],[-2,49,0,0],[36,31,0,0],[138,36,1,2],[68,48,0,0],[38,1,0,0],[75,41,0,0],[105,13,0,0],[173,1,0,0],[-63,17,0,0],[128,37,1,2],[21,43,0,0],[46,30,0,0],[105,18,0,0],[36,34,0,0],[-9,7,0,0],[17,25,0,0],[-61,14,0,0],[10,47,0,0],[81,7,0,0],[29,-29,0,0],[24,56,2,3],[6,50,2,3],[25,57,2,3],[114,22,0,0],[-64,18,0,0],[-5,32,0,0],[7,44,0,0],[29,47,0,0],[47,-20,0,0],[73,3,0,0],[-102,23,0,0],[168,9,0,0],[22,42,0,0],[-4,17,0,0],[15,36,2,3],[98,22,0,0],[19,43,0,0],[105,46,0,0],[146,15,0,0],[35,-18,0,0],[-12,20,0,0],[-62,17,0,0],[-61,15,0,0],[58,-20,0,0],[34,-13,0,0],[113,3,1,3],[45,-13,0,0],[17,-22,0,0],[166,-21,0,0],[8,16,0,0],[168,-29,0,0],[8,10,0,0],[-85,13,0,0],[-170,-19,0,0],[6,53,2,3],[10,62,1,3],[84,28,0,0],[167,-1,0,0],[174,-41,1,3],[57,21,0,0],[70,30,0,0],[-80,9,0,0],[-130,-25,0,0],[-76,-10,0,0],[122,13,0,0],[135,8,0,0],[147,-6,0,0],[20,52,2,3],[-66,18,0,0],[127,40,0,0],[-8,40,2,3],[-58,-23,0,0],[35,32,0,0],[-140,-15,0,0],[51,26,0,0],[56,-21,0,0],[25,46,2,3],[100,60,3,4],[30,-2,0,0],[45,25,1,3],[30,15,0,0],[-14,14,0,0],[104,1,1,2],[-37,-54,0,0],[20,78,0,0],[159,-8,0,0],[-11,9,0,0],[-89,14,0,0],[12,44,0,0],[49,10,0,0],[-56,47,0,0],[21,44,0,0],[30,7,0,0],[7,1,0,0],[-56,4,0,0],[20,49,2,3],[15,46,2,3],[15,62,2,3],[32,-26,0,0],[-63,18,0,0],[56,-5,0,0],[38,35,0,0],[-72,22,0,0],[19,15,0,0],[1,8,0,0],[100,15,4,0],[71,39,0,0],[-172,-9,0,0],[60,40,0,0],[126,-9,0,0],[-175,-20,0,0],[-61,11,0,0],[9,34,0,0],[35,39,4,0],[178,-8,0,0],[121,24,0,0],[35,-6,0,0],[32,1,0,0],[32,49,4,0],[167,19,0,0],[-56,-33,0,0],[-97,38,1,1],[64,41,0,0],[12,42,0,0],[-61,13,0,0],[-66,8,0,0],[-65,18,0,0],[-65,18,0,0],[108,16,3,4],[167,-16,0,0],[-176,-13,0,0],[-172,-14,0,0],[48,15,0,0],[24,-29,0,0],[30,-15,0,0],[30,-20,0,0]];
+const POST={1:'#2b4c7e',2:'#5b54a8',3:'#7a3b5e',4:'#6b7280'};
+const ROLE={1:'#a8322a',2:'#b9762e',3:'#4a6fa5',4:'#7a3b5e'};
+const INK='#1a1a1a', D=Math.PI/180;
+const cvs=document.getElementById('globe'), ctx=cvs.getContext('2d'), hero=document.getElementById('qscHero');
+let W=0,H=0,CX=0,CY=0,R=0,dpr=1;
+let lon0=-32, lat0=24, mode='posture', t0=performance.now();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function vec(lon,lat){const l=lon*D,p=lat*D;return [Math.cos(p)*Math.cos(l),Math.cos(p)*Math.sin(l),Math.sin(p)];}
+function slerp(a,b,t){let d=a[0]*b[0]+a[1]*b[1]+a[2]*b[2];d=Math.max(-1,Math.min(1,d));const o=Math.acos(d);if(o<1e-6)return a;const s=Math.sin(o),c1=Math.sin((1-t)*o)/s,c2=Math.sin(t*o)/s;return [a[0]*c1+b[0]*c2,a[1]*c1+b[1]*c2,a[2]*c1+b[2]*c2];}
+function toLL(v){return [Math.atan2(v[1],v[0])/D, Math.asin(Math.max(-1,Math.min(1,v[2])))/D];}
+function proj(lon,lat){const dl=(lon-lon0)*D,la=lat*D,l0=lat0*D;
+  const cosc=Math.sin(l0)*Math.sin(la)+Math.cos(l0)*Math.cos(la)*Math.cos(dl);
+  const x=Math.cos(la)*Math.sin(dl), y=Math.cos(l0)*Math.sin(la)-Math.sin(l0)*Math.cos(la)*Math.cos(dl);
+  return [CX+R*x, CY-R*y, cosc];}
+
+const setter=NODES.find(n=>n[3]===1);
+const sv=vec(setter[0],setter[1]);
+const ARCS=[];
+for(const n of NODES){ if(n[2]===1||n[2]===2){ const tv=vec(n[0],n[1]); const pts=[]; for(let i=0;i<=56;i++){pts.push(toLL(slerp(sv,tv,i/56)));} ARCS.push(pts);} }
+const SOV=NODES.filter(n=>n[2]===3);
+
+function resize(){dpr=Math.min(2,window.devicePixelRatio||1);W=hero.clientWidth;H=hero.clientHeight;
+  cvs.width=W*dpr;cvs.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  CX=W*0.5;CY=H*0.53;R=Math.min(W,H)*0.36;}
+
+function graticule(intro){ctx.lineWidth=0.6;ctx.strokeStyle='rgba(26,26,26,'+(0.06*intro)+')';
+  for(let ln=-150;ln<=180;ln+=30){ctx.beginPath();let on=false;for(let la=-80;la<=80;la+=4){const p=proj(ln,la);if(p[2]>0){if(!on){ctx.moveTo(p[0],p[1]);on=true;}else ctx.lineTo(p[0],p[1]);}else on=false;}ctx.stroke();}
+  for(let la=-60;la<=60;la+=30){ctx.beginPath();let on=false;for(let ln=-180;ln<=180;ln+=4){const p=proj(ln,la);if(p[2]>0){if(!on){ctx.moveTo(p[0],p[1]);on=true;}else ctx.lineTo(p[0],p[1]);}else on=false;}ctx.stroke();}}
+
+function draw(now){const el=now-t0;const intro=Math.min(1,el/1700);const eo=intro<1?(1-Math.pow(1-intro,3)):1;
+  if(!reduce)lon0=-32-el*0.004;
+  ctx.clearRect(0,0,W,H);
+  ctx.beginPath();ctx.arc(CX,CY,R,0,7);ctx.fillStyle='rgba(255,255,255,0.45)';ctx.fill();
+  ctx.lineWidth=1;ctx.strokeStyle='rgba(26,26,26,0.10)';ctx.stroke();
+  graticule(eo);
+  // faint country field
+  for(const n of NODES){if(n[2]!==0)continue;const p=proj(n[0],n[1]);if(p[2]<=0)continue;const a=0.20*eo*Math.min(1,p[2]*1.6);ctx.beginPath();ctx.arc(p[0],p[1],1.1,0,7);ctx.fillStyle='rgba(26,26,26,'+a+')';ctx.fill();}
+  // arcs (NIST orbit: setter -> NIST-bloc + EU)
+  const lim=reduce?56:Math.floor(56*eo);
+  for(let ai=0;ai<ARCS.length;ai++){const pts=ARCS[ai];ctx.beginPath();let on=false;for(let i=0;i<=lim;i++){const p=proj(pts[i][0],pts[i][1]);if(p[2]>0){if(!on){ctx.moveTo(p[0],p[1]);on=true;}else ctx.lineTo(p[0],p[1]);}else on=false;}
+    ctx.lineWidth=0.8;ctx.strokeStyle='rgba(43,76,126,0.17)';ctx.stroke();
+    if(!reduce&&intro>=1){const u=((now/2600)+ai*0.11)%1;const k=Math.floor(u*56);const pp=pts[k]&&proj(pts[k][0],pts[k][1]);if(pp&&pp[2]>0){ctx.beginPath();ctx.arc(pp[0],pp[1],1.7,0,7);ctx.fillStyle='rgba(43,76,126,'+(0.55*Math.min(1,pp[2]*2))+')';ctx.fill();}}}
+  // sovereign rings (parallel ecosystems, no arcs)
+  for(const n of SOV){const p=proj(n[0],n[1]);if(p[2]<=0)continue;const a=Math.min(1,p[2]*2)*eo;ctx.lineWidth=1;ctx.strokeStyle='rgba(122,59,94,'+(0.5*a)+')';ctx.beginPath();ctx.arc(p[0],p[1],7,0,7);ctx.stroke();ctx.beginPath();ctx.arc(p[0],p[1],11,0,7);ctx.strokeStyle='rgba(122,59,94,'+(0.22*a)+')';ctx.stroke();}
+  // coloured nodes
+  for(const n of NODES){if(n[2]===0)continue;const p=proj(n[0],n[1]);if(p[2]<=0)continue;const col=mode==='role'?(ROLE[n[3]]||'rgba(26,26,26,0.3)'):(POST[n[2]]||'#6b7280');const a=Math.min(1,p[2]*2)*eo;const isSetter=n[3]===1&&mode==='role';ctx.beginPath();ctx.arc(p[0],p[1],isSetter?4.2:2.7,0,7);ctx.globalAlpha=a;ctx.fillStyle=col;ctx.fill();ctx.globalAlpha=1;}
+  // setter label
+  const sp=proj(setter[0],setter[1]);if(sp[2]>0.15){ctx.font="11px 'Spline Sans Mono',monospace";ctx.fillStyle='rgba(26,26,26,'+(0.7*eo)+')';ctx.textAlign='left';ctx.fillText('standard-setter',sp[0]+8,sp[1]-7);ctx.beginPath();ctx.moveTo(sp[0]+2,sp[1]-2);ctx.lineTo(sp[0]+6,sp[1]-6);ctx.strokeStyle='rgba(26,26,26,'+(0.4*eo)+')';ctx.lineWidth=0.7;ctx.stroke();}
+  if(!reduce)requestAnimationFrame(draw);
+}
+function start(){resize();if(reduce){t0=performance.now()-2000;draw(performance.now());}else{t0=performance.now();requestAnimationFrame(draw);}}
+window.addEventListener('resize',()=>{resize();if(reduce)draw(performance.now());});
+const bP=document.getElementById('bP'),bR=document.getElementById('bR');
+function setMode(m){mode=m;bP.classList.toggle('on',m==='posture');bR.classList.toggle('on',m==='role');
+  document.getElementById('legend').style.opacity=m==='role'?0.35:1;if(reduce)draw(performance.now());}
+bP.onclick=()=>setMode('posture');bR.onclick=()=>setMode('role');
+start();
+</script>
+<!--/FRAG-->
+</body>
+</html>

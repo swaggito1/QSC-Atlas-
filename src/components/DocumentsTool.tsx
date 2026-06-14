@@ -98,9 +98,7 @@ export default function DocumentsTool({ documents }: Props) {
       </div>
 
       {noData ? (
-        <p className="docs-empty">
-          No documents loaded yet. Add your NOTION_TOKEN to .env and restart to pull live data.
-        </p>
+        <p className="docs-empty">The document index is being rebuilt. Check back shortly.</p>
       ) : results.length === 0 ? (
         <p className="docs-empty">
           Nothing matches those filters. Try clearing a filter or broadening your search.

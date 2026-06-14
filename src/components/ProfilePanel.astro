@@ -69,7 +69,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
     country.summary ? (
       <p class="prose summary">{country.summary}</p>
     ) : (
-      <p class="empty">No summary recorded yet.</p>
+      <p class="empty">No summary in the public record.</p>
     )
   }
 
@@ -96,7 +96,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
           ))}
         </ul>
       ) : (
-        <p class="empty">No governing instrument recorded yet.</p>
+        <p class="empty">No governing instrument identified.</p>
       )
     }
     {legal && (
@@ -127,7 +127,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
           )}
         </dl>
       ) : (
-        <p class="empty">No standards or algorithms recorded yet.</p>
+        <p class="empty">No standards or algorithms specified.</p>
       )
     }
   </section>
@@ -182,7 +182,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
           ))}
         </ul>
       ) : (
-        <p class="empty">No institutional actors recorded yet.</p>
+        <p class="empty">No institutional actors identified.</p>
       )
     }
   </section>
@@ -205,7 +205,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
           ))}
         </ul>
       ) : (
-        <p class="empty">No institutional documents recorded yet.</p>
+        <p class="empty">No documents indexed for this country.</p>
       )
     }
   </section>
@@ -282,19 +282,20 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
     gap: var(--space-2);
     flex-shrink: 0;
   }
+  .reg-tags {
+    align-items: baseline;
+    gap: var(--space-3);
+  }
   .reg-level,
   .reg-status {
-    font-family: var(--font-instrument);
+    font-family: var(--font-mono);
     font-size: 0.72rem;
-    padding: 0.1em 0.5em;
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius);
-    color: var(--ink-muted);
+    color: var(--ink-faint);
     white-space: nowrap;
   }
   .reg-status.is-binding {
     color: var(--ink);
-    border-color: var(--ink);
+    font-weight: 600;
   }
   .legal-status {
     margin: 0 0 var(--space-3);
@@ -317,6 +318,14 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
   }
   .actor-name {
     font-weight: 600;
+  }
+  .profile a {
+    color: var(--ink);
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 2px;
+  }
+  .profile a:hover {
+    text-decoration-color: var(--ink);
   }
   .actor-role {
     display: block;

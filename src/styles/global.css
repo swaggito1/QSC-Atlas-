@@ -21,6 +21,7 @@
   --process-sovereign: #7a3b5e;
   --process-mixed: #6b7280;
   --process-none: #e7e5df;
+  --process-no-role: #cfcdc7; /* a role is not recorded (distinct from no map data) */
 
   /* ---- Semantic aliases ----------------------------------------------- */
   --text-strong: var(--ink);

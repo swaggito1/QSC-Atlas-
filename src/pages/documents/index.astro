@@ -12,8 +12,8 @@ const documents = (await getCollection('documents')).map((d) => d.data);
   <div class="container">
     <h1>Documents</h1>
     <p class="prose intro">
-      The institutional sources behind the Atlas. Search by title or summary, and filter by
-      country, type, year, and tier.
+      Every institutional source the Atlas is built from. Search the full text, or filter by
+      country, type, year and tier.
     </p>
     <DocumentsTool client:load documents={documents} />
   </div>

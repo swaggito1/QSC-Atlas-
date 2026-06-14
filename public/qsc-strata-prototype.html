@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QSC Atlas — Bloc-strata hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz@0,6..72;1,6..72&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1a1a1a; --ink-muted:#5c5c5c; --ink-faint:#8a8a86; --hairline:#d8d6d0;
+    --paper:#f7f5f0; --surface:#ffffff;
+    --nist:#2b4c7e; --eu:#5b54a8; --sov:#7a3b5e; --eng:#6b7280; --nodata:#e7e5df;
+    --setter:#a8322a;
+    --font-ui:'Schibsted Grotesk',system-ui,sans-serif;
+    --font-read:'Newsreader',Georgia,serif;
+    --font-mono:'Spline Sans Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-ui);}
+  .frame{max-width:1180px;margin:0 auto;padding:22px 30px 40px;}
+  header.bar{display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;}
+  .wordmark{font-weight:600;letter-spacing:.18em;font-size:14px;}
+  nav{font-size:13px;color:var(--ink-muted);display:flex;gap:22px;}
+  .tagline{font-family:var(--font-read);font-size:26px;line-height:1.25;max-width:30ch;margin:18px 0 4px;font-weight:420;}
+  .sub{font-size:13px;color:var(--ink-muted);max-width:62ch;margin:0 0 6px;}
+  .stage{position:relative;width:100%;}
+  svg{width:100%;height:auto;display:block;}
+  .meta{display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:14px;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink-muted);}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .dot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .readout{font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);}
+  .toggle{display:inline-flex;gap:6px;align-items:center;font-size:12px;color:var(--ink-muted);}
+  .toggle button{font-family:var(--font-ui);font-size:11px;padding:3px 9px;border-radius:2px;border:1px solid var(--hairline);background:transparent;color:var(--ink-muted);cursor:pointer;}
+  .toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--paper);font-size:11px;padding:5px 9px;border-radius:2px;white-space:nowrap;transform:translate(-50%,-135%);opacity:0;transition:opacity .12s;display:flex;gap:7px;align-items:center;z-index:5;}
+  .stratum-label{font-family:var(--font-ui);font-size:11.5px;font-weight:600;letter-spacing:.04em;}
+  .stratum-count{font-family:var(--font-mono);font-size:11px;}
+  .stratum-note{font-family:var(--font-ui);font-size:10.5px;}
+  text{user-select:none;}
+</style>
+</head>
+<body>
+<div class="frame">
+  <header class="bar">
+    <span class="wordmark">QSC ATLAS</span>
+    <nav><span>Map</span><span>Countries</span><span>Analysis</span><span>Documents</span><span>About</span></nav>
+  </header>
+
+  <p class="tagline">One country writes the standard. The world arranges itself around it.</p>
+  <p class="sub">Fifty-four states and the European Union, sorted into the four blocs of the post-quantum transition. Height is not geography. It is allegiance.</p>
+
+  <div class="stage">
+    <svg id="strata" viewBox="0 0 1140 560" role="img" aria-label="Country nodes arranged in four horizontal blocs: a NIST-led ecosystem set by the United States, an EU coordinated roadmap resting on the same baseline, a sovereign bloc broken away below, and a loose unaligned field."></svg>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="meta">
+    <div class="legend">
+      <span><span class="dot" style="background:var(--nist)"></span>NIST-led ecosystem</span>
+      <span><span class="dot" style="background:var(--eu)"></span>EU coordinated roadmap</span>
+      <span><span class="dot" style="background:var(--sov)"></span>Sovereign bloc</span>
+      <span><span class="dot" style="background:var(--eng)"></span>Engaged but unaligned</span>
+    </div>
+    <div class="toggle">
+      <span>Colour by</span>
+      <button id="t-coord" aria-pressed="true">coordination</button>
+      <button id="t-role" aria-pressed="false">standards role</button>
+    </div>
+  </div>
+  <div class="readout" style="margin-top:8px">deadline horizon · EU 2030 / 2035 · NIST bloc ~2035 · sovereign own track · unaligned none</div>
+</div>
+
+<script>
+const C = {nist:'#2b4c7e',eu:'#5b54a8',sov:'#7a3b5e',eng:'#6b7280',nodata:'#e7e5df',setter:'#a8322a',ink:'#1a1a1a',muted:'#5c5c5c',faint:'#8a8a86',hair:'#d8d6d0'};
+const ROLE = {setter:'#a8322a',contextualiser:'#b9762e',taker:'#4a6fa5','sovereign-developer':'#7a3b5e'};
+const confAlpha = c => c==='High'?1 : c==='Medium'?0.66 : c==='Low'?0.4 : 0.66;
+
+// Real bloc membership and per-country attributes from data/profiles. lng used only to
+// preserve a faint left-to-right world order (Americas -> Europe/Africa -> Asia/Pacific).
+const DATA = {
+ nist:[
+  ['United States',-98,'setter','High'],['Canada',-106,'taker','High'],['Brazil',-52,'taker','Medium'],
+  ['United Kingdom',-2,'taker','High'],['Norway',9,'taker','Low'],['Israel',35,'taker','Medium'],
+  ['Saudi Arabia',45,'taker','Medium'],['United Arab Emirates',54,'taker','Medium'],['India',79,'contextualiser','Medium'],
+  ['Singapore',104,'contextualiser','Medium'],['Malaysia',102,'taker','High'],['South Korea',128,'contextualiser','Medium'],
+  ['Japan',138,'contextualiser','Medium'],['Australia',134,'taker','Medium'],['New Zealand',174,'taker','Medium'],
+ ],
+ eu:[
+  ['Portugal',-8,'taker','High'],['Ireland',-8,'taker','High'],['Spain',-4,'taker','High'],['France',2,'contextualiser','High'],
+  ['Belgium',4,'taker','High'],['Netherlands',5,'taker','High'],['Luxembourg',6,'taker','High'],['Germany',10,'contextualiser','High'],
+  ['Denmark',10,'taker','High'],['Italy',12,'taker','High'],['Sweden',15,'taker','High'],['Austria',14,'taker','High'],
+  ['Czechia',15,'taker','High'],['Croatia',15,'taker','High'],['Slovenia',15,'taker','High'],['Malta',14,'taker','High'],
+  ['Poland',19,'taker','High'],['Hungary',19,'taker','High'],['Slovakia',19,'taker','High'],['Finland',26,'taker','High'],
+  ['Greece',22,'taker','High'],['Estonia',26,'taker','High'],['Latvia',25,'taker','High'],['Lithuania',24,'taker','High'],
+  ['Romania',25,'taker','High'],['Bulgaria',25,'taker','High'],['Cyprus',33,'taker','High'],
+ ],
+ euEntity:['European Union',12,'contextualiser','Medium'],
+ sov:[
+  ['Russia',60,'sovereign-developer','High'],['China',104,'sovereign-developer','High'],['Vietnam',108,'sovereign-developer','Low'],
+ ],
+ eng:[
+  ['Argentina',-64,null,'Medium'],['Chile',-71,null,'Medium'],['Ukraine',32,null,'Low'],['Türkiye',35,null,'Low'],
+  ['Bahrain',50,null,'Medium'],['Djibouti',42,null,'Low'],['Thailand',101,null,'Medium'],['Indonesia',118,null,'Low'],
+  ['Brunei',114,null,'Low'],
+ ],
+};
+
+const POSTURE_LABEL = {nist:'NIST bloc',eu:'EU roadmap',sov:'Sovereign',eng:'Engaged'};
+const ROLE_LABEL = {setter:'Standard-setter',contextualiser:'Standard-contextualiser',taker:'Standard-taker','sovereign-developer':'Sovereign developer'};
+
+const SVG='http://www.w3.org/2000/svg';
+const svg=document.getElementById('strata');
+const tip=document.getElementById('tip');
+const stage=document.querySelector('.stage');
+let colorBy='coord';
+
+const W=1140,H=560;
+const padL=150, padR=40;
+const lngToX = lng => padL + ((lng+170)/350)*(W-padL-padR);
+
+// Band vertical centres. NIST and EU share the SAME baseline (a continuous global line);
+// the sovereign band is detached BELOW a visible break; engaged floats loose at the bottom.
+const bands = {
+  nist:{cy:150, half:34, label:'NIST-LED ECOSYSTEM', count:15, note:'the setter and its adopters', color:C.nist},
+  eu:{cy:262, half:30, label:'EU COORDINATED ROADMAP', count:'27 + EU', note:'same algorithms, an EU wrapper', color:C.eu},
+  sov:{cy:400, half:26, label:'SOVEREIGN BLOC', count:3, note:'forks the global baseline', color:C.sov},
+  eng:{cy:498, half:30, label:'ENGAGED BUT UNALIGNED', count:9, note:'no bloc, no timeline', color:C.eng},
+};
+
+function el(n,a){const e=document.createElementNS(SVG,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+
+function render(){
+  svg.innerHTML='';
+
+  // --- The shared baseline that NIST + EU rest on (the global standard) ---
+  // One hairline runs full width under NIST and a second under EU, joined by a faint
+  // riser at the US origin, reading as a single continuous surface.
+  const baseTop = bands.nist.cy+bands.nist.half+10;
+  const baseEU  = bands.eu.cy+bands.eu.half+10;
+  svg.appendChild(el('line',{x1:padL-40,y1:baseTop,x2:W-padR,y2:baseTop,stroke:C.hair,'stroke-width':1}));
+  svg.appendChild(el('line',{x1:padL-40,y1:baseEU,x2:W-padR,y2:baseEU,stroke:C.hair,'stroke-width':1}));
+  // the riser connecting the two shelves at the origin: same baseline, two storeys
+  svg.appendChild(el('line',{x1:padL-40,y1:baseTop,x2:padL-40,y2:baseEU,stroke:C.hair,'stroke-width':1}));
+
+  // --- The fracture: sovereign band sits below a broken line, offset, detached ---
+  const fractureY = (baseEU + (bands.sov.cy-bands.sov.half-10))/2;
+  // a torn / dashed rule with a gap = the fork
+  svg.appendChild(el('line',{x1:padL-40,y1:bands.sov.cy-bands.sov.half-10,x2:W*0.5-26,y2:bands.sov.cy-bands.sov.half-10,stroke:C.sov,'stroke-width':1,'stroke-dasharray':'1 5','opacity':0.55}));
+  svg.appendChild(el('line',{x1:W*0.5+26,y1:bands.sov.cy-bands.sov.half-10,x2:W-padR,y2:bands.sov.cy-bands.sov.half-10,stroke:C.sov,'stroke-width':1,'stroke-dasharray':'1 5','opacity':0.55}));
+  // two short diagonal "tear" ticks marking where it broke away from the baseline above
+  svg.appendChild(el('line',{x1:padL-40,y1:baseEU,x2:padL-40,y2:fractureY-8,stroke:C.hair,'stroke-width':1,'stroke-dasharray':'2 4'}));
+
+  // --- Stratum labels (left gutter) ---
+  for(const k in bands){
+    const b=bands[k];
+    const g=el('g',{});
+    const t1=el('text',{x:padL-58,y:b.cy-4,'text-anchor':'end',fill:C.ink,class:'stratum-label'});t1.textContent=b.label;
+    const t2=el('text',{x:padL-58,y:b.cy+12,'text-anchor':'end',fill:b.color,class:'stratum-count'});t2.textContent=b.count+(typeof b.count==='number'?'':'');
+    const t3=el('text',{x:padL-58,y:b.cy+27,'text-anchor':'end',fill:C.faint,class:'stratum-note'});t3.textContent=b.note;
+    g.appendChild(t1);g.appendChild(t2);g.appendChild(t3);
+    svg.appendChild(g);
+  }
+
+  // deterministic vertical jitter so nodes read as a textured field, not a single line
+  const jitter = (seed,half)=>{const s=Math.sin(seed*999.7)*43758.5453;return ((s-Math.floor(s))*2-1)*half;};
+
+  function node(name,lng,role,conf,band,i,opts={}){
+    const b=bands[band];
+    let x=lngToX(lng);
+    let y=b.cy + jitter(i+lng+name.length, b.half) + (opts.dy||0);
+    let fill = colorBy==='role' ? (role?ROLE[role]:'#cfcdc7') : b.color;
+    const r = opts.r || (opts.setter?6.4:3.1);
+    const g=el('g',{style:'cursor:pointer'});
+    if(opts.setter){
+      // origin marker: a small open square + filled core, plus a short vertical stem to the baseline
+      svg.appendChild(el('line',{x1:x,y1:y,x2:x,y2:baseTop,stroke:C.setter,'stroke-width':1,opacity:0.5}));
+      const ring=el('rect',{x:x-r,y:y-r,width:r*2,height:r*2,fill:'none',stroke:colorBy==='role'?C.setter:b.color,'stroke-width':1.4});
+      g.appendChild(ring);
+    }
+    const c=el('circle',{cx:x,cy:y,r:r,fill:fill,opacity:confAlpha(conf)});
+    g.appendChild(c);
+    g.addEventListener('mousemove',ev=>{
+      const rect=stage.getBoundingClientRect();
+      tip.style.left=((ev.clientX-rect.left))+'px';
+      tip.style.top=((ev.clientY-rect.top))+'px';
+      tip.style.opacity=1;
+      const lab = colorBy==='role' ? (role?ROLE_LABEL[role]:'No standards role yet') : POSTURE_LABEL[band];
+      tip.innerHTML='<span style="width:8px;height:8px;border-radius:50%;background:'+fill+'"></span>'+name+' <span style="opacity:.7">'+lab+'</span>';
+    });
+    g.addEventListener('mouseleave',()=>tip.style.opacity=0);
+    svg.appendChild(g);
+  }
+
+  DATA.nist.forEach((d,i)=>node(d[0],d[1],d[2],d[3],'nist',i,{setter:d[2]==='setter'}));
+  DATA.eu.forEach((d,i)=>node(d[0],d[1],d[2],d[3],'eu',i));
+  // EU entity: a single larger hollow node anchoring the EU band (supranational, not plotted as a member)
+  (function(){const d=DATA.euEntity;const b=bands.eu;const x=padL-92;const y=b.cy;const fill=colorBy==='role'?ROLE['contextualiser']:b.color;
+    const g=el('g',{style:'cursor:pointer'});
+    g.appendChild(el('circle',{cx:x,cy:y,r:7,fill:'none',stroke:fill,'stroke-width':1.6}));
+    g.appendChild(el('circle',{cx:x,cy:y,r:2.4,fill:fill}));
+    g.addEventListener('mousemove',ev=>{const rect=stage.getBoundingClientRect();tip.style.left=(ev.clientX-rect.left)+'px';tip.style.top=(ev.clientY-rect.top)+'px';tip.style.opacity=1;tip.innerHTML='<span style="width:8px;height:8px;border-radius:50%;background:'+fill+'"></span>European Union <span style="opacity:.7">supranational entity</span>';});
+    g.addEventListener('mouseleave',()=>tip.style.opacity=0);
+    svg.appendChild(g);
+  })();
+  DATA.sov.forEach((d,i)=>node(d[0],d[1],d[2],d[3],'sov',i));
+  DATA.eng.forEach((d,i)=>node(d[0],d[1],d[2],d[3],'eng',i,{r:3.1}));
+
+  // caption pinning the setter
+  const usx=lngToX(-98);
+  const cap=el('text',{x:usx+14,y:bands.nist.cy-22,fill:C.setter,'font-family':'var(--font-mono)','font-size':11});
+  cap.textContent='United States · writes the FIPS suite';
+  svg.appendChild(cap);
+}
+
+render();
+document.getElementById('t-coord').onclick=()=>{colorBy='coord';document.getElementById('t-coord').setAttribute('aria-pressed','true');document.getElementById('t-role').setAttribute('aria-pressed','false');render();};
+document.getElementById('t-role').onclick=()=>{colorBy='role';document.getElementById('t-role').setAttribute('aria-pressed','true');document.getElementById('t-coord').setAttribute('aria-pressed','false');render();};
+</script>
+</body>
+</html>

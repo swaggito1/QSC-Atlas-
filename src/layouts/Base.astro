@@ -20,6 +20,8 @@ const nav = [
   { href: '/documents', label: 'Documents' },
   { href: '/about', label: 'About' },
 ];
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---
 
 <!doctype html>
@@ -40,7 +42,7 @@ const nav = [
     <header class="site-header">
       <a class="wordmark" href="/">QSC Atlas</a>
       <nav class="site-nav" aria-label="Primary">
-        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+        {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
       </nav>
     </header>
 
@@ -49,12 +51,9 @@ const nav = [
     </main>
 
     <footer class="site-footer">
-      <p>
-        The QSC Atlas presents, country by country, how governments are migrating to
-        quantum-safe cryptography. Institutional sources only.
-      </p>
       <p class="mono footer-meta">
-        A research instrument. <a href="/about">Methodology</a> &middot;
+        Built only from institutional sources, rebuilt as new documents appear.
+        <a href="/about">Methodology</a> &middot;
         <a href="/about#briefing">Request a briefing</a>
       </p>
     </footer>
@@ -86,6 +85,12 @@ const nav = [
       }
       .site-nav a:hover {
         color: var(--ink);
+      }
+      .site-nav a[aria-current='page'] {
+        color: var(--ink);
+        text-decoration: underline;
+        text-decoration-color: var(--hairline);
+        text-underline-offset: 5px;
       }
       main {
         min-height: 60vh;

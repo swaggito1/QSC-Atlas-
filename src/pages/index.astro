@@ -2,7 +2,6 @@
 import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
 import AtlasMap from '../components/AtlasMap';
-import ProcessLegend from '../components/ProcessLegend.astro';
 import { getCollection } from 'astro:content';
 
 // The map is the hero. It is keyed by ISO numeric code (ccn3), which matches the
@@ -68,57 +67,37 @@ for (const iso of Object.keys(documents)) {
   documents[iso] = documents[iso].slice(0, 12);
 }
 
-const withData = Object.keys(mapProcess).length;
 ---
 
 <Base title="QSC Atlas">
-  <section class="map-wrap">
-    <AtlasMap client:load mapProcess={mapProcess} profiles={profiles} documents={documents} />
-
-    <p class="caption prose">
-      The world is splitting into cryptographic blocs with different deadlines. Colour
-      shows the coordination bloc a country migrates with; its standards role, whose
-      algorithms it runs, is shown on each country profile.
+  <section class="hero">
+    <p class="hero-lede">
+      One country writes the post-quantum standard. Almost everyone adopts it. Three
+      states fork the baseline; nine have not chosen.
     </p>
-
-    <div class="legend-row">
-      <div>
-        <p class="legend-title">Legend</p>
-        <ProcessLegend />
-      </div>
-      <p class="count mono">{withData} countries with data</p>
-    </div>
+    <AtlasMap client:load mapProcess={mapProcess} profiles={profiles} documents={documents} />
   </section>
 </Base>
 
 <style>
-  .map-wrap {
+  .hero {
     max-width: var(--content-wide);
     margin: 0 auto;
-    padding: var(--space-6) var(--space-6) var(--space-8);
+    padding: var(--space-8) var(--space-6) var(--space-12);
   }
-  .caption {
-    margin: var(--space-5) 0 0;
-    color: var(--ink-muted);
+  .hero-lede {
+    font-family: var(--font-reading);
+    font-size: clamp(1.4rem, 1rem + 1.6vw, 2.1rem);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+    max-width: 32ch;
+    margin: 0 0 var(--space-6);
+    text-wrap: balance;
   }
-  .legend-row {
-    margin-top: var(--space-6);
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-6);
-    flex-wrap: wrap;
-  }
-  .legend-title {
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
-    font-weight: 600;
-    margin: 0 0 var(--space-3);
-  }
-  .count {
-    font-size: var(--text-xs);
-    color: var(--ink-faint);
+  @media (max-width: 640px) {
+    .hero-lede {
+      font-size: 1.4rem;
+      max-width: none;
+    }
   }
 </style>

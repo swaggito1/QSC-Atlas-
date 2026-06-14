@@ -16,7 +16,7 @@ const { post } = Astro.props;
     <h1>{post.title}</h1>
     <p class="meta mono">{[post.published, post.author].filter(Boolean).join(' · ')}</p>
     {post.excerpt && <p class="prose lede">{post.excerpt}</p>}
-    <p class="note">Full article body rendering from the Notion page is added in the blog build step.</p>
+    <p class="note">The full text follows shortly.</p>
   </article>
 </Base>
 
