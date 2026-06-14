@@ -298,5 +298,530 @@
     "lastScraped": "2026-06-12T21:38:40.964Z",
     "docCount": 0,
     "status": "Placeholder"
+  },
+  "AFG": {
+    "lastScraped": "2026-06-13T08:45:01.350Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ALB": {
+    "lastScraped": "2026-06-13T08:45:08.416Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "DZA": {
+    "lastScraped": "2026-06-13T08:45:14.866Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "AND": {
+    "lastScraped": "2026-06-13T08:45:21.663Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "AGO": {
+    "lastScraped": "2026-06-13T08:45:27.503Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ATG": {
+    "lastScraped": "2026-06-13T08:45:35.146Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ARM": {
+    "lastScraped": "2026-06-13T08:45:40.678Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "AZE": {
+    "lastScraped": "2026-06-13T08:45:47.736Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BHS": {
+    "lastScraped": "2026-06-13T08:45:54.190Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BGD": {
+    "lastScraped": "2026-06-13T08:46:00.489Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BRB": {
+    "lastScraped": "2026-06-13T08:46:06.173Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BLR": {
+    "lastScraped": "2026-06-13T08:46:13.220Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BLZ": {
+    "lastScraped": "2026-06-13T08:46:19.378Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BEN": {
+    "lastScraped": "2026-06-13T08:46:25.127Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BTN": {
+    "lastScraped": "2026-06-13T08:46:31.521Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BOL": {
+    "lastScraped": "2026-06-13T08:46:38.698Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BIH": {
+    "lastScraped": "2026-06-13T08:46:44.569Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BWA": {
+    "lastScraped": "2026-06-13T08:46:51.945Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BFA": {
+    "lastScraped": "2026-06-13T08:46:57.617Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BDI": {
+    "lastScraped": "2026-06-13T08:47:04.846Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KHM": {
+    "lastScraped": "2026-06-13T08:47:10.130Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "CMR": {
+    "lastScraped": "2026-06-13T08:47:16.519Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "CPV": {
+    "lastScraped": "2026-06-13T08:47:20.979Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "BHR": {
+    "lastScraped": "2026-06-13T08:49:43.902Z",
+    "docCount": 1,
+    "status": "Partial"
+  },
+  "BRN": {
+    "lastScraped": "2026-06-13T08:49:53.383Z",
+    "docCount": 1,
+    "status": "Partial"
+  },
+  "CAF": {
+    "lastScraped": "2026-06-13T09:16:37.213Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "TCD": {
+    "lastScraped": "2026-06-13T09:16:42.065Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "COM": {
+    "lastScraped": "2026-06-13T09:16:46.910Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "CRI": {
+    "lastScraped": "2026-06-13T09:16:51.651Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "CUB": {
+    "lastScraped": "2026-06-13T09:16:56.157Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "DJI": {
+    "lastScraped": "2026-06-13T09:17:01.144Z",
+    "docCount": 1,
+    "status": "Partial"
+  },
+  "DMA": {
+    "lastScraped": "2026-06-13T09:17:10.164Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "DOM": {
+    "lastScraped": "2026-06-13T09:17:15.149Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "COD": {
+    "lastScraped": "2026-06-13T09:17:19.902Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ECU": {
+    "lastScraped": "2026-06-13T09:17:24.896Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "EGY": {
+    "lastScraped": "2026-06-13T09:17:31.331Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "SLV": {
+    "lastScraped": "2026-06-13T09:17:38.013Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GNQ": {
+    "lastScraped": "2026-06-13T09:17:42.984Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ERI": {
+    "lastScraped": "2026-06-13T09:17:48.167Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "SWZ": {
+    "lastScraped": "2026-06-13T09:17:53.194Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "ETH": {
+    "lastScraped": "2026-06-13T09:17:57.820Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "FJI": {
+    "lastScraped": "2026-06-13T09:18:02.483Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GAB": {
+    "lastScraped": "2026-06-13T09:18:07.149Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GMB": {
+    "lastScraped": "2026-06-13T09:18:14.147Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GEO": {
+    "lastScraped": "2026-06-13T09:18:19.091Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GHA": {
+    "lastScraped": "2026-06-13T09:18:25.910Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GRD": {
+    "lastScraped": "2026-06-13T09:18:30.450Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GTM": {
+    "lastScraped": "2026-06-13T09:18:35.241Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GIN": {
+    "lastScraped": "2026-06-13T09:18:41.046Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GNB": {
+    "lastScraped": "2026-06-13T09:18:46.922Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "GUY": {
+    "lastScraped": "2026-06-13T09:26:08.981Z",
+    "docCount": 1,
+    "status": "Partial"
+  },
+  "HTI": {
+    "lastScraped": "2026-06-13T09:26:18.721Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "HND": {
+    "lastScraped": "2026-06-13T09:26:24.559Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "IRN": {
+    "lastScraped": "2026-06-13T09:26:30.708Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "IRQ": {
+    "lastScraped": "2026-06-13T09:26:38.700Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "CIV": {
+    "lastScraped": "2026-06-13T09:26:45.758Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "JAM": {
+    "lastScraped": "2026-06-13T09:26:51.472Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "JOR": {
+    "lastScraped": "2026-06-13T09:26:57.432Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KAZ": {
+    "lastScraped": "2026-06-13T09:27:02.945Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KEN": {
+    "lastScraped": "2026-06-13T09:27:08.799Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KIR": {
+    "lastScraped": "2026-06-13T09:27:16.785Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "UNK": {
+    "lastScraped": "2026-06-13T09:27:23.232Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KWT": {
+    "lastScraped": "2026-06-13T09:27:28.149Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KGZ": {
+    "lastScraped": "2026-06-13T09:27:36.763Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LAO": {
+    "lastScraped": "2026-06-13T09:27:44.433Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LBN": {
+    "lastScraped": "2026-06-13T09:27:50.907Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LSO": {
+    "lastScraped": "2026-06-13T09:27:58.874Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LBR": {
+    "lastScraped": "2026-06-13T09:28:04.520Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LBY": {
+    "lastScraped": "2026-06-13T09:28:10.550Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LIE": {
+    "lastScraped": "2026-06-13T09:28:15.122Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MDG": {
+    "lastScraped": "2026-06-13T09:28:20.806Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MWI": {
+    "lastScraped": "2026-06-13T09:28:25.254Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MDV": {
+    "lastScraped": "2026-06-13T09:28:30.777Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MLI": {
+    "lastScraped": "2026-06-13T09:28:36.190Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MHL": {
+    "lastScraped": "2026-06-13T09:28:42.357Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MRT": {
+    "lastScraped": "2026-06-13T14:55:43.841Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MUS": {
+    "lastScraped": "2026-06-13T14:55:51.229Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "FSM": {
+    "lastScraped": "2026-06-13T14:55:57.251Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MDA": {
+    "lastScraped": "2026-06-13T14:56:04.135Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MCO": {
+    "lastScraped": "2026-06-13T14:56:10.589Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MNG": {
+    "lastScraped": "2026-06-13T14:56:16.520Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MNE": {
+    "lastScraped": "2026-06-13T14:56:22.876Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MAR": {
+    "lastScraped": "2026-06-13T14:56:33.546Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MOZ": {
+    "lastScraped": "2026-06-13T14:56:40.511Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MMR": {
+    "lastScraped": "2026-06-13T14:56:45.736Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NAM": {
+    "lastScraped": "2026-06-13T14:56:53.009Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NRU": {
+    "lastScraped": "2026-06-13T14:56:58.302Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NPL": {
+    "lastScraped": "2026-06-13T14:57:04.607Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NIC": {
+    "lastScraped": "2026-06-13T14:57:10.803Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NER": {
+    "lastScraped": "2026-06-13T14:57:16.641Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "NGA": {
+    "lastScraped": "2026-06-13T14:57:23.097Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PRK": {
+    "lastScraped": "2026-06-13T14:57:29.849Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "MKD": {
+    "lastScraped": "2026-06-13T14:57:36.158Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "OMN": {
+    "lastScraped": "2026-06-13T14:57:41.530Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PAK": {
+    "lastScraped": "2026-06-13T14:57:48.171Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PLW": {
+    "lastScraped": "2026-06-13T14:57:53.195Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PAN": {
+    "lastScraped": "2026-06-13T14:57:58.726Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PNG": {
+    "lastScraped": "2026-06-13T14:58:08.856Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PRY": {
+    "lastScraped": "2026-06-13T14:58:16.328Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "PER": {
+    "lastScraped": "2026-06-13T14:58:22.605Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "COG": {
+    "lastScraped": "2026-06-13T14:58:28.631Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "RWA": {
+    "lastScraped": "2026-06-13T14:58:35.895Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "KNA": {
+    "lastScraped": "2026-06-13T14:58:42.345Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "LCA": {
+    "lastScraped": "2026-06-13T14:58:47.264Z",
+    "docCount": 0,
+    "status": "Placeholder"
+  },
+  "VCT": {
+    "lastScraped": "2026-06-13T14:58:53.099Z",
+    "docCount": 0,
+    "status": "Placeholder"
   }
 }

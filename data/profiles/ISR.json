@@ -1,0 +1,14 @@
+{
+  "iso3": "ISR",
+  "summary": "Israel's posture is set by the Israel National Cyber Directorate, whose best-practices guidance directs organisations on achieving cyber readiness for the post-quantum age and migrating to quantum-resistant cryptography. In the financial sector the Bank of Israel has gone further, with a Banking Supervision letter directing banking corporations to map their cryptographic inventory and submit an initial preparedness plan.",
+  "migrationTimeline": "2026 | Banking corporations submit an initial post-quantum preparedness plan, within a year of the January 2025 Banking Supervision letter",
+  "govActors": "INCD | Israel National Cyber Directorate, best-practices guidance on organizational readiness for the post-quantum age\nBank of Israel | Banking Supervision Department, supervisory letter directing banking corporations to prepare for the quantum computing era",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (INCD): INCD Best Practices - Organizational Cyber Readiness to the Post-Quantum Age (included results row)",
+    "summary + govActors (Bank of Israel) + migrationTimeline: Bank of Israel Banking Supervision letter of 7 January 2025 directing banks to assess infrastructure, map cryptographic inventory and submit an initial preparedness plan within a year (included results row); the 2026 entry is that within-a-year deadline, a sectoral directive rather than a national completion date",
+    "dominantProcess: OMITTED. Neither included document names a FIPS family, algorithm or standards camp in its captured summary, so left grey per the iron rule",
+    "standardFamilies / algorithms / targetCompletion / hybridDeployment: OMITTED, none stated in the included documents",
+    "A National Digital Agency directive requiring post-quantum encryption in vendor contracts and a quantum threat assessment by end of 2025 appears only in Ynet journalism in the candidates (no official source located), so excluded - REVIEW"
+  ]
+}

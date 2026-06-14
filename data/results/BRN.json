@@ -3,11 +3,11 @@
     "title": "CSB Organises Programme on Quantum Technologies and Post-Quantum Security",
     "country": "BRN",
     "issuingOrg": "CSB",
-    "year": 2025,
+    "year": null,
     "docType": "Announcement",
     "tier": "T1",
     "url": "https://www.csb.gov.bn/csb-organises-programme-quantum-technologies-and-post-quantum-security",
-    "summary": "Cyber Security Brunei (the national cyber security agency) press release announcing the first Post-Quantum Cryptography (PQC) Workshop, co-hosted with Malaysia's NACSA and PTPKM, to assess Brunei Darussalam's readiness on post-quantum cryptography and align national effort towards PQC migration.",
+    "summary": "Cyber Security Brunei (the national cyber security agency) press release announcing the first Quantum Technology and Post-Quantum Cryptography (PQC) Workshop, co-hosted with Malaysia's NACSA and PTPKM, attended by national agencies, regulators and banks to assess Brunei Darussalam's readiness on post-quantum cryptography and align national effort towards PQC migration.",
     "included": true
   }
 ]

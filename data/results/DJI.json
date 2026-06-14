@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Loi n° 195/AN/25/9ème L portant création de l'Autorité Nationale de Cybersécurité",
+    "country": "DJI",
+    "issuingOrg": "République de Djibouti (Assemblée Nationale / Journal Officiel)",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.journalofficiel.dj/texte-juridique/loi-n195-an-25-9eme-l-portant-creation-de-lautorite-nationale-de-cybersecurite/",
+    "summary": "National law establishing Djibouti's National Cybersecurity Authority (ANC). Its Article 3 explicitly lists 'la cryptographie post quantique' (post-quantum cryptography) among the strategic emerging technologies the authority is mandated to address for digital sovereignty and national security.",
+    "included": true
+  }
+]

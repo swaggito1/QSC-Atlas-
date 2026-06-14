@@ -1,0 +1,12 @@
+{
+  "iso3": "DJI",
+  "summary": "Djibouti's posture is set in legislation. The law establishing the National Cybersecurity Authority lists post-quantum cryptography in its Article 3 among the strategic emerging technologies the authority is mandated to address for digital sovereignty and national security.",
+  "govActors": "Autorité Nationale de Cybersécurité (ANC) | National Cybersecurity Authority mandated by law to address post-quantum cryptography among strategic emerging technologies",
+  "dataStatus": "Partial",
+  "provenance": [
+    "ANC creation + PQC in Article 3: Loi n 195/AN/25/9eme L, Journal Officiel de Djibouti, 2025 (ingested T1)",
+    "govActor named for the authority the law creates; issuingOrg row is the Republic of Djibouti (Assemblee Nationale / Journal Officiel)",
+    "dominantProcess omitted: law names PQC as a mandate area but no standards camp (NIST/ISO/ETSI) - grey beats wrong",
+    "No standardFamilies, algorithms, hybrid stance, timeline or target stated"
+  ]
+}

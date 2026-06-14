@@ -1,0 +1,12 @@
+{
+  "iso3": "CHL",
+  "summary": "Chile's posture is set in its National Quantum Technologies Strategy, issued by the Ministry of Science, which directs the state to promote research in post-quantum cryptography and to develop quantum-safe communications for critical infrastructure. An Expert Commission on Quantum Technologies, reporting through the national cybersecurity coordination, recommended the immediate implementation of quantum-safe communications technologies and further research in post-quantum cryptography.",
+  "govActors": "Ministry of Science (MinCiencia) | Issues the National Quantum Technologies Strategy directing post-quantum cryptography research\nANCI / National Cybersecurity Coordination | Convened the Expert Commission on Quantum Technologies and published its recommendations",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Strategy + PQC research directive: MinCiencia National Quantum Technologies Strategy (ingested T1)",
+    "Quantum-safe recommendation: ANCI Expert Commission report, 1 October 2024 (ingested T1)",
+    "dominantProcess omitted: documents promote PQC/QKD research but name no standards camp (NIST/ISO/ETSI) - grey beats wrong",
+    "No standardFamilies, algorithms, hybrid stance, timeline or target stated in either document"
+  ]
+}

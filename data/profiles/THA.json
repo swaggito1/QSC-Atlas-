@@ -1,0 +1,18 @@
+{
+  "iso3": "THA",
+  "summary": "Thailand's transition is led by the National Cyber Security Agency through its QUANTA national readiness platform, which educates public and private organisations and provides tools and labs to support migration. The agency recommends the NIST post-quantum standards and sets out a phased migration roadmap aiming to complete the national transition to quantum-resistant cryptography by 2035.",
+  "dominantProcess": "NIST",
+  "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
+  "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
+  "migrationTimeline": "2035 | National transition to quantum-resistant cryptography complete",
+  "targetCompletion": "2035",
+  "govActors": "NCSA | National Cyber Security Agency, runs the QUANTA national post-quantum readiness platform and the migration roadmap",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (NCSA QUANTA): QUANTA platform, migration roadmap and standards pages on pqc-learn.ncsa.or.th (results rows, all marked included:false because direct fetch of the NCSA pages/PDF was blocked; corroborated by the candidates raw descriptions)",
+    "dominantProcess NIST + standardFamilies + algorithms: QUANTA standards page recommends FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) - REVIEW (sourced from candidates description, not captured page text)",
+    "migrationTimeline 2035 + targetCompletion: QUANTA migration roadmap targets completion of the national transition by 2035 (results + candidates)",
+    "hybridDeployment: OMITTED. A 2030 hybrid-for-new-sensitive-projects step appears only in Nation Thailand journalism in the candidates, not in an NCSA-issued document",
+    "All THA results are included:false, so this profile is a provisional draft on official NCSA-domain sources pending researcher confirmation - REVIEW"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "iso3": "BRN",
+  "summary": "Brunei's posture is at the readiness-assessment stage. Cyber Security Brunei, the national cyber security agency, co-hosted the country's first Quantum Technology and Post-Quantum Cryptography workshop with Malaysian counterparts, bringing together national agencies, regulators and banks to assess Brunei Darussalam's readiness and align national effort towards post-quantum cryptography migration.",
+  "govActors": "CSB | Cyber Security Brunei, national cyber security agency convening national post-quantum cryptography readiness work",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CSB workshop + readiness assessment + PQC migration alignment: Cyber Security Brunei press release (ingested T1)",
+    "dominantProcess omitted: readiness/awareness posture only, no standards camp (NIST/ISO/ETSI) named - grey beats wrong",
+    "No standardFamilies, algorithms, hybrid stance, timeline or target stated",
+    "CSB Facebook post excluded (non-institutional medium, duplicate of the press release)"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "iso3": "ARG",
+  "summary": "Argentina's post-quantum activity centres on ARSAT, the state telecommunications company, which has developed CryptoComm, a post-quantum cryptographic system for secure messaging and file exchange, with a hardware version planned with INVAP. There is no national post-quantum standard, and the Second National Cybersecurity Strategy does not address post-quantum cryptography.",
+  "govActors": "ARSAT | State telecommunications company, developed the CryptoComm post-quantum secure-communications system",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (ARSAT): the two ARSAT candidates (CryptoComm announcement and the 2022 secure-communications page, arsat.com.ar). Both are T2 and included:false, so confirm inclusion before treating as settled - REVIEW",
+    "dominantProcess OMITTED: CryptoComm is a single state enterprise's product, not a national scheme or standards camp, and no FIPS suite or scheme is named; grey beats wrong",
+    "standardFamilies / algorithms / hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated in institutional sources",
+    "Second National Cybersecurity Strategy candidate was WebFetch-confirmed NOT to mention post-quantum cryptography; National Cybersecurity Directorate/Centre and BCRA IT-risk rules name no PQC; Cyber.Ar 2026 congress and opinion/academic pieces are non-institutional - all excluded. Recommend re-scrape with --deep for a national-authority PQC source"
+  ]
+}

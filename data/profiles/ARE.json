@@ -1,0 +1,17 @@
+{
+  "iso3": "ARE",
+  "summary": "The United Arab Emirates runs a National Post-Quantum Migration Programme under its Cyber Security Council, anchored by a National Encryption Policy that requires entities to hold officially approved plans to move from traditional encryption to post-quantum cryptography. The Council has deployed a national Crypto Discovery Tool with the Advanced Technology Research Council, and the Dubai Electronic Security Center has issued its own post-quantum cryptography guideline.",
+  "dominantProcess": "Sovereign",
+  "hybridDeployment": "None stated",
+  "govActors": "UAE Cyber Security Council | Issues the National Encryption Policy and runs the National Post-Quantum Migration Programme and the national Crypto Discovery Tool\nATRC | Advanced Technology Research Council, partners on the national post-quantum security transition and the Crypto Discovery Tool deployment across critical infrastructure\nDESC | Dubai Electronic Security Center, issued a Post-Quantum Cryptography Guideline",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (Cyber Security Council): National Encryption Policy mandating approved transition plans from traditional to post-quantum cryptography, backed by an executive regulation, and the National Post-Quantum Migration Programme and Crypto Discovery Tool announcements (included results rows, including WAM)",
+    "dominantProcess Sovereign: the UAE runs its own national programme - a National Encryption Policy, a National Cryptography Center setting requirements for the Crypto Discovery Tool, and a National Post-Quantum Migration Programme. No NIST FIPS suite is adopted as the named national standard in the included summaries; TII's submissions to NIST are research participation, not national adoption - REVIEW",
+    "govActors (ATRC): ATRC partnership announcements on the national post-quantum security transition and QuantumGate Crypto Discovery Tool deployment across critical national infrastructure (included results rows)",
+    "govActors (DESC): DESC Post-Quantum Cryptography Guideline launched at GISEC Global 2025 (included results row)",
+    "hybridDeployment None stated: no included document states a hybrid position",
+    "standardFamilies / algorithms: OMITTED. TII contributed MiRitH, PERK and RYDE to the NIST additional-signatures call and released the first UAE PQC library, but these are research-capacity items, not a national adopted standard or algorithm set",
+    "migrationTimeline / targetCompletion: OMITTED, no dated milestones or completion date stated in the included documents"
+  ]
+}

@@ -8,7 +8,7 @@ const ROOT = '/Users/swannashworth/qsc-atlas'
 
 const SCHEMA = {
   type: 'object',
-  required: ['iso3', 'candidates', 'kept', 'included', 'flagged', 'notes'],
+  required: ['iso3', 'candidates', 'kept', 'included', 'flagged', 'notes', 'documents'],
   properties: {
     iso3: { type: 'string' },
     candidates: { type: 'number' },
@@ -16,6 +16,25 @@ const SCHEMA = {
     included: { type: 'number' },
     flagged: { type: 'number' },
     notes: { type: 'string', description: 'standout find, search-locale gap, or empty (1-2 sentences)' },
+    documents: {
+      type: 'array',
+      description: 'the classified kept documents (empty array if none qualify); THIS is the deliverable',
+      items: {
+        type: 'object',
+        required: ['title', 'country', 'issuingOrg', 'year', 'docType', 'tier', 'url', 'summary', 'included'],
+        properties: {
+          title: { type: 'string' },
+          country: { type: 'string' },
+          issuingOrg: { type: ['string', 'null'] },
+          year: { type: ['number', 'null'] },
+          docType: { type: 'string' },
+          tier: { type: 'string' },
+          url: { type: 'string' },
+          summary: { type: 'string' },
+          included: { type: 'boolean' },
+        },
+      },
+    },
   },
 }
 
@@ -29,10 +48,10 @@ Do NOT use Firecrawl. Use WebSearch (free) for discovery; WebFetch only to disam
 Read (binding): ${ROOT}/scraper/SCRAPER_BRIEF.md and ${ROOT}/data/trusted-domains.json
 
 1. Identify ${c.name}'s national cyber security agency / CERT, national standards body, the ministry handling digital or cryptographic policy, central bank, and the native-language phrase for "post-quantum cryptography" / "quantum-safe cryptography" (if the country is not English-speaking).
-2. Run ~6-10 WebSearch queries: generic English + native-language + institution/official-domain-scoped (pass official domains via allowed_domains). Write the unique candidates as a JSON array [{title,url,description}] to ${ROOT}/data/candidates/${c.iso3}.json
-3. Classify per SCRAPER_BRIEF.md. Keep ONLY documents passing BOTH: (a) issuer is an institution DOMESTIC to ${c.name} (government / ministry / national agency / regulator / central bank / parliament / national standards body) - EXCLUDE vendors, consultancies, journalism, academia/universities, blogs, social media, NGOs, and any other country's / international-body documents; (b) the source EXPLICITLY names post-quantum / quantum-safe cryptography, PQC, or migration to quantum-resistant algorithms - a general "quantum computing" mention or QKD/quantum-key-distribution does NOT count. Fields: country="${c.iso3}"; tier T1-T4 by function; docType EXACTLY one of [Strategy, Regulation, Guidance, Standard, Roadmap, Report, Advisory, Evaluation, Announcement, Bibliometric]; year only if visibly stated in title/description/URL else null; url copied VERBATIM; dedupe by URL; included=true only for clearly official government/standards domains (trusted-domains incl. subdomains, or an unambiguous official national government domain), else included=false. Self-audit every kept entry (verbatim url? year visible else null? issuer institutional AND domestic? explicit PQC? docType/tier valid?). Write the kept array to ${ROOT}/data/results/${c.iso3}.json (write [] if none qualify - the usual case for these countries; do NOT pad).
+2. Run ~6-10 WebSearch queries: generic English + native-language + institution/official-domain-scoped (pass official domains via allowed_domains). Collect the unique candidates.
+3. Classify per SCRAPER_BRIEF.md. Keep ONLY documents passing BOTH: (a) issuer is an institution DOMESTIC to ${c.name} (government / ministry / national agency / regulator / central bank / parliament / national standards body) - EXCLUDE vendors, consultancies, journalism, academia/universities, blogs, social media, NGOs, and any other country's / international-body documents; (b) the source EXPLICITLY names post-quantum / quantum-safe cryptography, PQC, or migration to quantum-resistant algorithms - a general "quantum computing" mention or QKD/quantum-key-distribution does NOT count. Fields per kept doc: country="${c.iso3}"; tier T1-T4 by function; docType EXACTLY one of [Strategy, Regulation, Guidance, Standard, Roadmap, Report, Advisory, Evaluation, Announcement, Bibliometric]; year only if visibly stated in title/description/URL else null; url copied VERBATIM; dedupe by URL; included=true only for clearly official government/standards domains (trusted-domains incl. subdomains, or an unambiguous official national government domain), else included=false. Self-audit every kept entry (verbatim url? year visible else null? issuer institutional AND domestic? explicit PQC? docType/tier valid?).
 
-Return stats (candidates / kept / included / flagged), any standout domestic find, and note if a likely search-locale gap (non-English / Arabic / Cyrillic / Asian-script) may have hidden official content.`
+CRITICAL DELIVERABLE: do NOT write any files. Return the kept documents in the "documents" field of your structured output (an empty array [] if none qualify - the usual case for these countries; do NOT pad to find something). Each document object must have exactly: title, country, issuingOrg, year, docType, tier, url, summary, included. Also return the counts and a one-line note. The "documents" array IS the deliverable - the orchestrator persists it; if you skip it the country is lost.`
 
 const batchNum = (() => {
   let a = args
@@ -44,14 +63,18 @@ const batchNum = (() => {
   return Number.isInteger(n) && n >= 1 && n <= BATCHES.length ? n : 1
 })()
 
-const list = BATCHES[batchNum - 1]
-phase('Scan batch ' + batchNum + ' / ' + BATCHES.length + ' (' + list.length + ' countries)')
-log('Batch ' + batchNum + ': ' + list.map((c) => c.iso3).join(' '))
+// CUSTOM run-list: when non-empty it overrides batch selection (used to run an exact set, e.g. a 30-country cap).
+const CUSTOM = [{"iso3":"MRT","name":"Mauritania"},{"iso3":"MUS","name":"Mauritius"},{"iso3":"FSM","name":"Micronesia"},{"iso3":"MDA","name":"Moldova"},{"iso3":"MCO","name":"Monaco"},{"iso3":"MNG","name":"Mongolia"},{"iso3":"MNE","name":"Montenegro"},{"iso3":"MAR","name":"Morocco"},{"iso3":"MOZ","name":"Mozambique"},{"iso3":"MMR","name":"Myanmar"},{"iso3":"NAM","name":"Namibia"},{"iso3":"NRU","name":"Nauru"},{"iso3":"NPL","name":"Nepal"},{"iso3":"NIC","name":"Nicaragua"},{"iso3":"NER","name":"Niger"},{"iso3":"NGA","name":"Nigeria"},{"iso3":"PRK","name":"North Korea"},{"iso3":"MKD","name":"North Macedonia"},{"iso3":"OMN","name":"Oman"},{"iso3":"PAK","name":"Pakistan"},{"iso3":"PLW","name":"Palau"},{"iso3":"PAN","name":"Panama"},{"iso3":"PNG","name":"Papua New Guinea"},{"iso3":"PRY","name":"Paraguay"},{"iso3":"PER","name":"Peru"},{"iso3":"COG","name":"Republic of the Congo"},{"iso3":"RWA","name":"Rwanda"},{"iso3":"KNA","name":"Saint Kitts and Nevis"},{"iso3":"LCA","name":"Saint Lucia"},{"iso3":"VCT","name":"Saint Vincent and the Grenadines"}]
+
+const list = CUSTOM.length ? CUSTOM : BATCHES[batchNum - 1]
+const phaseTitle = CUSTOM.length ? ('Custom run (' + list.length + ' countries)') : ('Scan batch ' + batchNum + ' / ' + BATCHES.length + ' (' + list.length + ' countries)')
+phase(phaseTitle)
+log((CUSTOM.length ? 'Custom run: ' : ('Batch ' + batchNum + ': ')) + list.map((c) => c.iso3).join(' '))
 
 const res = await parallel(
   list.map((c) => () =>
-    agent(prompt(c), { label: `scan:${c.iso3}`, phase: 'Scan batch ' + batchNum + ' / ' + BATCHES.length + ' (' + list.length + ' countries)', schema: SCHEMA, agentType: 'general-purpose' })
-      .then((r) => r ?? { iso3: c.iso3, candidates: 0, kept: 0, included: 0, flagged: 0, notes: 'agent returned null (killed or terminal error) - re-run' }),
+    agent(prompt(c), { label: `scan:${c.iso3}`, phase: phaseTitle, schema: SCHEMA, agentType: 'general-purpose' })
+      .then((r) => r ?? { iso3: c.iso3, candidates: 0, kept: 0, included: 0, flagged: 0, notes: 'agent returned null (killed or terminal error) - re-run', documents: null }),
   ),
 )
 const withDocs = res.filter((r) => r && r.kept > 0).length

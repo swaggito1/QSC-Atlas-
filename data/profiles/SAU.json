@@ -1,0 +1,17 @@
+{
+  "iso3": "SAU",
+  "summary": "Saudi Arabia works to its own National Cryptographic Standards, issued by the National Cybersecurity Authority, which set minimum cryptographic requirements for national systems across MODERATE and ADVANCED levels and include a dedicated post-quantum cryptography appendix. The Authority has consulted on adding post-quantum algorithms to the standard, while the Communications, Space and Technology Commission guides the ICT sector to run pilots and build crypto-agility.",
+  "dominantProcess": "Sovereign",
+  "standardFamilies": "National Cryptographic Standards (NCS-1:2020)",
+  "hybridDeployment": "None stated",
+  "govActors": "NCA | National Cybersecurity Authority, issues the National Cryptographic Standards with a post-quantum cryptography appendix and consulted on adding post-quantum algorithms\nCST | Communications, Space and Technology Commission, guidance for the ICT sector on the quantum threat and post-quantum cryptography",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (NCA) + standardFamilies: NCA National Cryptographic Standards NCS-1:2020 (English, Arabic and overview-page results rows), which define MODERATE/ADVANCED levels and a post-quantum cryptography appendix; plus the NCA public-consultation announcement adding post-quantum algorithms, random number generators and quantum key distribution (included results rows)",
+    "dominantProcess Sovereign: the NCA runs its own national scheme list (NCS-1:2020) with its own accepted primitives and assurance levels, the hallmark of a sovereign posture. The CST ICT guidance advises monitoring NIST/ETSI/ENISA but that is tracking international work, not adopting a camp - REVIEW",
+    "summary + govActors (CST): CST Securing Data in the Quantum Computing Era guidance, advising organisations to define PQC needs, verify vendor readiness, integrate PQC into transformation plans, monitor NIST/ETSI/ENISA and run PQC pilots (included results row)",
+    "hybridDeployment None stated: no included document states a hybrid position",
+    "algorithms / migrationTimeline / targetCompletion: OMITTED. The consultation adds post-quantum algorithms but the included summaries name none specifically, and no dated milestones or completion date are stated",
+    "govActors (DGA): OMITTED. The Digital Government Authority quantum-computing page is included:false (explicit PQC reference unconfirmed, direct fetch blocked) - REVIEW"
+  ]
+}

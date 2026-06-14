@@ -1,0 +1,13 @@
+{
+  "iso3": "CHN",
+  "summary": "China pursues a sovereign path through the State Cryptography Administration (OSCCA), which funds anti-quantum cryptography as a priority research direction of its National Cryptography Science Fund. The associated standards institute is running a national solicitation for next-generation commercial cryptographic algorithms expressly to address the quantum computing threat and to set China's own standards.",
+  "dominantProcess": "Sovereign",
+  "govActors": "OSCCA | State Cryptography Administration, funds anti-quantum cryptography research through the National Cryptography Science Fund\nICCS (Commercial Cryptography Standards Research Institute) | Runs the solicitation for China's next-generation commercial cryptographic algorithms against the quantum threat",
+  "dataStatus": "Partial",
+  "provenance": [
+    "Lead institution + Sovereign process: OSCCA Announcement No. 55 (ingested, 2026) names 'anti-quantum computing cryptography key theory and technology' as the first research direction of the National Cryptography Science Fund; OSCCA is China's national cryptography authority running its own scheme, hence Sovereign",
+    "Next-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)",
+    "No PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule",
+    "CAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture"
+  ]
+}

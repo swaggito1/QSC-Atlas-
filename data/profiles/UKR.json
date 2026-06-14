@@ -1,0 +1,12 @@
+{
+  "iso3": "UKR",
+  "summary": "Ukraine's post-quantum activity surfaces through the State Scientific and Research Institute of Cybersecurity Technologies and Information Protection, a body under the State Service of Special Communications, which organises the UkrCrypto cryptographic research conference whose thematic sections include post-quantum and quantum cryptography. No national post-quantum standard, algorithm choice or migration timeline has been published.",
+  "govActors": "SSSCIP / DerzhNDI (State Scientific and Research Institute of Cybersecurity Technologies and Information Protection) | Research institute under the State Service of Special Communications, organiser of the UkrCrypto2026 conference with a post-quantum and quantum cryptography section",
+  "dataStatus": "Partial",
+  "provenance": [
+    "summary + govActors (SSSCIP / DerzhNDI): the one included T1 result, the UkrCrypto2026 conference announcement (csi.cip.gov.ua), whose section list explicitly includes post-quantum and quantum cryptography",
+    "dominantProcess OMITTED: the included document is a conference call and names no standards camp, FIPS suite or national scheme; grey beats wrong",
+    "standardFamilies / algorithms / hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated in the included document",
+    "A Verkhovna Rada Research Service PDF is included:false (binary, content unparsed); RNBO cybersecurity strategy and national-system review candidates mention quantum computing but no confirmed explicit PQC reference, so they are not relied on - REVIEW, recommend re-scrape with --deep for an SSSCIP or RNBO PQC-migration source"
+  ]
+}

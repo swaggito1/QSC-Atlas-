@@ -1,0 +1,19 @@
+{
+  "iso3": "BRA",
+  "summary": "Brazil's transition is led by ITI, the National Institute of Information Technology, which through Normative Instruction 35 of 2026 has incorporated post-quantum cryptographic algorithms into the national public key infrastructure ICP-Brasil and the GOV.BR electronic signature. The intelligence agency ABIN has developed its own post-quantum library and lists the transition among its priorities, while the cabinet security office GSI advises organisations to plan post-quantum migration of critical systems. Brazilian guidance adopts the NIST post-quantum standards.",
+  "dominantProcess": "NIST",
+  "standardFamilies": "NIST FIPS 204",
+  "algorithms": "ML-DSA",
+  "govActors": "ITI | National Institute of Information Technology, incorporated post-quantum algorithms into ICP-Brasil and the GOV.BR advanced signature through Normative Instruction 35/2026\nABIN | Brazilian Intelligence Agency, developed the libharpia post-quantum cryptographic library and lists the post-quantum transition among its 2026 intelligence challenges\nGSI | Institutional Security Office of the Presidency, issued cybersecurity guidance recommending planned post-quantum migration of critical systems",
+  "migrationTimeline": "2026 | ITI Normative Instruction 35 adds post-quantum algorithms to ICP-Brasil and the GOV.BR advanced signature\n2026 | ABIN lists the transition to post-quantum cryptography among its intelligence challenges",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CAVEAT: every BRA result is included:false; profile drawn from T1 official-domain candidates (gov.br) which strongly attest the facts - confirm inclusion before treating as settled - REVIEW",
+    "summary + govActors (ITI) + migrationTimeline 2026: ITI announcement and full-text candidates for Normative Instruction 35/2026 (DOC-ICP-01.01) incorporating PQC into ICP-Brasil and the GOV.BR advanced signature (gov.br/iti, repositorio.iti.gov.br, T1)",
+    "dominantProcess NIST + standardFamilies (FIPS 204) + algorithms (ML-DSA): the IN 35/2026 full-text candidate description states it establishes ML-DSA per FIPS 204 - the only specific algorithm/standard named in an institutional candidate; other suites in the full text not captured, so families/algorithms likely incomplete - REVIEW",
+    "govActors (ABIN) + migrationTimeline 2026: ABIN libharpia/Cepesc election-cryptography candidate and the ABIN 2026 intelligence-challenges candidate (gov.br/abin, T1)",
+    "govActors (GSI): OSIC 15/2024 emerging-technologies guidance recommending PQC migration planning (gov.br/gsi, T1)",
+    "hybridDeployment / targetCompletion OMITTED: no hybrid stance or national completion date stated in the institutional candidates",
+    "Excluded per iron rule: SERPRO (T2) PQC testing; Anatel/IME Rede Quandanga (quantum communication, not PQC algorithms); Central Bank Pix study (published on a Microsoft vendor site, not a BCB domain); Prodesp (sub-national); MCTI/CBPF (quantum hardware, not PQC)"
+  ]
+}
