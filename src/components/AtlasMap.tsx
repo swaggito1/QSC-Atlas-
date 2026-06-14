@@ -273,7 +273,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
 export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
   const [paths, setPaths] = useState<{ id: string; d: string }[]>([]);
   const [error, setError] = useState(false);
-  const [hover, setHover] = useState<{ iso3: string; name: string; posture: string; x: number; y: number } | null>(null);
+  const [hover, setHover] = useState<{ iso3: string; name: string; posture: string; role: string | null; x: number; y: number } | null>(null);
   const [selectedIso, setSelectedIso] = useState<string | null>(null);
   const [colorBy, setColorBy] = useState<'posture' | 'role'>('posture');
 
@@ -346,7 +346,7 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
                 onMouseMove={(e) => {
                   if (!m) return;
                   const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
-                  setHover({ iso3: m.iso3, name: m.name, posture: m.posture, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
+                  setHover({ iso3: m.iso3, name: m.name, posture: m.posture, role: m.role, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
                 }}
                 onClick={() => m && open(m.iso3)} />
             );
@@ -355,9 +355,9 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
       )}
       {hover && (
         <div style={{ position: 'absolute', left: `${hover.x}%`, top: `${hover.y}%`, transform: 'translate(-50%, -130%)', pointerEvents: 'none', background: 'var(--ink)', color: 'var(--paper)', padding: '6px 10px', borderRadius: 'var(--radius)', fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 8, zIndex: 5 }}>
-          <span style={{ width: 8, height: 8, borderRadius: '50%', background: POSTURE_HEX[hover.posture] ?? NO_DATA }} />
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: colorBy === 'role' ? (hover.role ? ROLE_HEX[hover.role] ?? NO_ROLE : NO_ROLE) : POSTURE_HEX[hover.posture] ?? NO_DATA }} />
           {hover.name}
-          <span style={{ opacity: 0.7 }}>{postureMeta(hover.posture)?.short ?? ''}</span>
+          <span style={{ opacity: 0.7 }}>{colorBy === 'role' ? (hover.role ? roleMeta(hover.role)?.label ?? '' : 'No standards role yet') : postureMeta(hover.posture)?.short ?? ''}</span>
         </div>
       )}
 
