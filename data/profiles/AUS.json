@@ -9,11 +9,14 @@
     "ASD guidance with timelines: ingested cyber.gov.au pages",
     "2026/2028/2030: backend brief reference line",
     "dominantProcess omitted: NIST link unattested in captured text (verifier)",
-    "dominantProcess NIST restored: well-established and design-endorsed, provisional for review"
+    "dominantProcess NIST restored: well-established and design-endorsed, provisional for review",
+    "Model 2026-06-14 (NIST-bloc / taker, Medium): ASD guidance aligned to the NIST suite; Five Eyes posture."
   ],
   "dominantProcess": "NIST",
   "country": "Australia",
   "confidence": "Medium",
   "classificationBasis": "ASD guidance with timelines: ingested cyber.gov.au pages\n2026/2028/2030: backend brief reference line\ndominantProcess omitted: NIST link unattested in captured text (verifier)\ndominantProcess NIST restored: well-established and design-endorsed, provisional for review",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

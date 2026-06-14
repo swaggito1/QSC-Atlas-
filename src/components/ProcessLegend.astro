@@ -1,15 +1,16 @@
 ---
-// The map legend: colour-to-plain-label key. Always labelled in words, so colour
-// is never the only carrier of meaning.
-import { PROCESS_ORDER, PROCESS_META } from '../lib/process';
+// The map legend. Colour shows coordination posture (the bloc a country migrates
+// with); a second key lists standards role, shown as a badge on profiles and used
+// when the map is recoloured by role. Colour is never the only carrier of meaning.
+import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
 ---
 
-<ul class="legend" aria-label="Map legend: standards process">
+<ul class="legend" aria-label="Map legend: coordination posture">
   {
-    PROCESS_ORDER.map((key) => (
+    POSTURE_ORDER.map((key) => (
       <li>
-        <span class="swatch" style={`background:${PROCESS_META[key].color}`} aria-hidden="true" />
-        {PROCESS_META[key].label}
+        <span class="swatch" style={`background:${POSTURE_META[key].color}`} aria-hidden="true" />
+        {POSTURE_META[key].label}
       </li>
     ))
   }
@@ -17,6 +18,18 @@ import { PROCESS_ORDER, PROCESS_META } from '../lib/process';
     <span class="swatch swatch--none" aria-hidden="true" />
     No data
   </li>
+</ul>
+
+<p class="role-title">Standards role</p>
+<ul class="legend" aria-label="Map legend: standards role">
+  {
+    ROLE_ORDER.map((key) => (
+      <li>
+        <span class="swatch" style={`background:${ROLE_META[key].color}`} aria-hidden="true" />
+        {ROLE_META[key].label}
+      </li>
+    ))
+  }
 </ul>
 
 <style>
@@ -43,5 +56,13 @@ import { PROCESS_ORDER, PROCESS_META } from '../lib/process';
   }
   .swatch--none {
     background: var(--process-none);
+  }
+  .role-title {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin: var(--space-4) 0 var(--space-2);
   }
 </style>

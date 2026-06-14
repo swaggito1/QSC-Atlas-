@@ -17,6 +17,43 @@ import Base from '../layouts/Base.astro';
       so it reflects the current public record rather than a one-off snapshot.
     </p>
 
+    <h2 id="classification">How the Atlas classifies countries</h2>
+    <p>
+      Every country is described on two dimensions, because two different things are easy to
+      confuse. An EU member coordinates through the European roadmap, yet the algorithms it
+      deploys are the American NIST standards, because there is no European alternative. One label
+      would drop half the truth, so the Atlas keeps both: the colour is the club, the badge is the
+      technology.
+    </p>
+
+    <h3>Coordination posture (the map colour)</h3>
+    <p>Which collective transition a country belongs to.</p>
+    <ul>
+      <li><strong>NIST-led ecosystem</strong>: works to the standards and cadence set by the United States' NIST (FIPS 203, 204, 205). The largest group by far.</li>
+      <li><strong>EU coordinated roadmap</strong>: follows the European Union's synchronised transition under the NIS Cooperation Group, with its 2026, 2030 and 2035 milestones. A coordination commitment, not a separate set of algorithms.</li>
+      <li><strong>Sovereign bloc</strong>: builds and mandates its own national algorithms and runs its transition independently of NIST. This is where the global baseline actually fractures.</li>
+      <li><strong>Engaged but unaligned</strong>: visibly working on the transition, but not yet committed to a bloc, a standard, or a timeline.</li>
+    </ul>
+
+    <h3>Standards role (the badge)</h3>
+    <p>The country's relationship to the algorithms themselves.</p>
+    <ul>
+      <li><strong>Standard-setter</strong>: writes the standards others adopt. Today there is effectively one, the United States through NIST.</li>
+      <li><strong>Standard-contextualiser</strong>: accepts the baseline but adds national requirements such as mandatory hybrid deployment, larger keys, or independent certification.</li>
+      <li><strong>Standard-taker</strong>: adopts the baseline broadly as published, without a substantial national overlay.</li>
+      <li><strong>Sovereign developer</strong>: designs and standardises its own post-quantum algorithms.</li>
+    </ul>
+
+    <h3>How to read the map</h3>
+    <p>
+      Colour shows coordination posture. The role badge on each profile shows the standards role,
+      and the map can be recoloured by role. Confidence is shown alongside every classification and
+      drives how strongly a country is coloured, so a low-confidence call looks tentative. Faint grey
+      is no data, meaning no institutional source has been found yet, which is different from engaged
+      but unaligned, an active but undecided country. Every profile links to the documents it is built
+      from.
+    </p>
+
     <h2 id="briefing">Request a briefing</h2>
     <p>
       The Atlas is maintained alongside a consulting practice on the quantum-safe transition. If you
@@ -38,6 +75,14 @@ import Base from '../layouts/Base.astro';
   .about h2 {
     font-family: var(--font-reading);
     margin-top: var(--space-12);
+  }
+  .about h3 {
+    font-family: var(--font-reading);
+    margin-top: var(--space-8);
+  }
+  .about ul {
+    display: grid;
+    gap: var(--space-2);
   }
   .briefing-link {
     display: inline-block;

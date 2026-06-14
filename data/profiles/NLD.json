@@ -11,7 +11,8 @@
     "Tweede Kamer role: parliamentary questions and EU quantum strategy document rows",
     "standardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms",
     "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
@@ -19,5 +20,7 @@
   "country": "Netherlands",
   "confidence": "High",
   "classificationBasis": "summary + govActors (AIVD, NCSC-NL, BZK, Rijksoverheid): PQC Migration Handbook, NCSC-NL guidance rows, BZK letter to Parliament, and Rijksoverheid programme rows\ndominantProcess NIST: NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards (13 August 2024) row. No Dutch sovereign scheme stated, so NIST assigned\nTweede Kamer role: parliamentary questions and EU quantum strategy document rows\nstandardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms\nmigrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

@@ -12,7 +12,8 @@
     "Hybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW",
     "dominantProcess omitted: unattested in captured text (verifier)",
     "dominantProcess Sovereign restored: well-established and design-endorsed, provisional for review",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
+    "Model 2026-06-14 (EU / contextualiser, High): ANSSI mandates hybridisation and national certification over NIST algorithms; no national algorithm. Sovereign secondary dropped."
   ],
   "dominantProcess": "EU",
   "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
@@ -20,5 +21,7 @@
   "country": "France",
   "confidence": "High",
   "classificationBasis": "Phased approach: ANSSI position paper (ingested)\nStandalone not before 2030: backend brief reference line\nHybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW\ndominantProcess omitted: unattested in captured text (verifier)\ndominantProcess Sovereign restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "contextualiser"
 }

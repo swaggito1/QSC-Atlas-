@@ -38,3 +38,66 @@ export function processMeta(value: string | null | undefined): ProcessMeta | nul
   if (!value) return null;
   return PROCESS_META[value as StandardsProcess] ?? null;
 }
+
+// ---------------------------------------------------------------------------
+// The two-field classification model (docs/CLASSIFICATION_MODEL.md).
+//
+// Coordination posture answers "whose club / timeline" and is the MAP COLOUR.
+// Standards role answers "whose algorithms" and is shown as a BADGE. The two are
+// deliberately separate: an EU member coordinates through the EU roadmap yet runs
+// the NIST algorithms underneath, and one colour cannot say both.
+// ---------------------------------------------------------------------------
+
+export type CoordinationPosture = 'EU' | 'NIST-bloc' | 'sovereign-bloc' | 'engaged-unaligned';
+
+export interface PostureMeta {
+  key: CoordinationPosture;
+  label: string; // full reader-facing label
+  short: string; // compact label for chips and tooltips
+  color: string;
+}
+
+export const POSTURE_META: Record<CoordinationPosture, PostureMeta> = {
+  'NIST-bloc': { key: 'NIST-bloc', label: 'NIST-led ecosystem', short: 'NIST bloc', color: '#2b4c7e' },
+  EU: { key: 'EU', label: 'EU coordinated roadmap', short: 'EU roadmap', color: '#5b54a8' },
+  'sovereign-bloc': { key: 'sovereign-bloc', label: 'Sovereign bloc', short: 'Sovereign', color: '#7a3b5e' },
+  'engaged-unaligned': { key: 'engaged-unaligned', label: 'Engaged but unaligned', short: 'Engaged', color: '#6b7280' },
+};
+
+/** Order for the legend and any posture listing. */
+export const POSTURE_ORDER: CoordinationPosture[] = ['NIST-bloc', 'EU', 'sovereign-bloc', 'engaged-unaligned'];
+
+export function postureMeta(value: string | null | undefined): PostureMeta | null {
+  if (!value) return null;
+  return POSTURE_META[value as CoordinationPosture] ?? null;
+}
+
+export type StandardsRole = 'setter' | 'contextualiser' | 'taker' | 'sovereign-developer';
+
+export interface RoleMeta {
+  key: StandardsRole;
+  label: string;
+  color: string; // used only when the map is recoloured by role
+}
+
+export const ROLE_META: Record<StandardsRole, RoleMeta> = {
+  setter: { key: 'setter', label: 'Standard-setter', color: '#a8322a' },
+  contextualiser: { key: 'contextualiser', label: 'Standard-contextualiser', color: '#b9762e' },
+  taker: { key: 'taker', label: 'Standard-taker', color: '#4a6fa5' },
+  'sovereign-developer': { key: 'sovereign-developer', label: 'Sovereign developer', color: '#7a3b5e' },
+};
+
+export const ROLE_ORDER: StandardsRole[] = ['setter', 'contextualiser', 'taker', 'sovereign-developer'];
+
+export function roleMeta(value: string | null | undefined): RoleMeta | null {
+  if (!value) return null;
+  return ROLE_META[value as StandardsRole] ?? null;
+}
+
+/** Confidence drives map opacity so soft calls look soft. */
+export function confidenceOpacity(value: string | null | undefined): number {
+  if (value === 'High') return 1;
+  if (value === 'Medium') return 0.74;
+  if (value === 'Low') return 0.5;
+  return 0.74;
+}

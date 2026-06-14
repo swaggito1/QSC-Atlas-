@@ -1,12 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ProcessChip from '../../components/ProcessChip.astro';
+import RoleBadge from '../../components/RoleBadge.astro';
 import { getCollection } from 'astro:content';
 
-// Rank countries-with-data first: coloured (has a process) before engaged-but-grey,
-// before empty placeholders. Alphabetical within each rank.
+// Rank countries-with-data first: coloured (has a coordination posture) before
+// placeholders. Alphabetical within each rank.
 const rank = (c) =>
-  c.data.dominantProcess ? 0 : c.data.dataStatus === 'Placeholder' ? 2 : 1;
+  c.data.coordinationPosture ? 0 : c.data.dataStatus === 'Placeholder' ? 2 : 1;
 const countries = (await getCollection('countries')).sort(
   (a, b) => rank(a) - rank(b) || a.data.country.localeCompare(b.data.country),
 );
@@ -28,7 +29,10 @@ const countries = (await getCollection('countries')).sort(
               <a href={`/countries/${c.data.iso3.toLowerCase()}`} class="card-title">
                 {c.data.country}
               </a>
-              <ProcessChip value={c.data.dominantProcess} />
+              <span class="chips">
+                <ProcessChip value={c.data.coordinationPosture} />
+                {c.data.standardsRole && <RoleBadge value={c.data.standardsRole} />}
+              </span>
               {c.data.targetCompletion && (
                 <span class="target mono">Target: {c.data.targetCompletion}</span>
               )}

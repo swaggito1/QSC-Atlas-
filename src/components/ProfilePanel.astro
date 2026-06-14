@@ -4,6 +4,7 @@
 // by Claude Design) and as the body of the country profile page. Institution names
 // link through to the Documents tool pre-filtered to that issuing organisation.
 import ProcessChip from './ProcessChip.astro';
+import RoleBadge from './RoleBadge.astro';
 import MigrationTimeline from './MigrationTimeline.astro';
 import { parseNameRole, parseList } from '../lib/parse';
 
@@ -16,6 +17,9 @@ interface CountryData {
   algorithms?: string | null;
   dominantProcess?: string | null;
   secondaryProcess?: string | null;
+  coordinationPosture?: string | null;
+  standardsRole?: string | null;
+  confidence?: string | null;
   processParticipation?: string | null;
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
@@ -45,8 +49,8 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
 <article class="profile">
   <header class="profile-head">
     <h1>{country.country}</h1>
-    <ProcessChip value={country.dominantProcess} />
-    {country.secondaryProcess && <ProcessChip value={country.secondaryProcess} />}
+    <ProcessChip value={country.coordinationPosture} />
+    {country.standardsRole && <RoleBadge value={country.standardsRole} />}
   </header>
 
   {/* 1. Summary */}
@@ -94,7 +98,7 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
     <h2>Migration timeline</h2>
     <MigrationTimeline
       raw={country.migrationTimeline}
-      process={country.dominantProcess}
+      process={country.coordinationPosture}
       target={country.targetCompletion}
     />
     {country.targetCompletion && <p class="target mono">Target completion: {country.targetCompletion}</p>}

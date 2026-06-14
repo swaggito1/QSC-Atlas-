@@ -14,12 +14,15 @@
     "targetCompletion Phased: roadmap describes phases without a terminal date for the cryptographic transition",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries",
     "algorithms/standardFamilies omitted: not stated in captured summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "dominantProcess": "EU",
   "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
   "country": "Luxembourg",
   "confidence": "High",
   "classificationBasis": "Ministry of State lead, strategy and roadmap, PQC as integrable quantum-resistant solution: Luxembourg's Quantum Technologies Strategy 2024 (ingested, T1)\nILNAS digital-trust portal consultation on the EU PQC roadmap, end-2030 recommendation for critical use cases: portail-qualite announcement 2025 (ingested, T1)\nPhased roadmap (Phase 1 2025-2027, Phase 2 2027-2030, Phase 3): Quantum Communication in Luxembourg factsheet (ingested, T1); PQC reference not explicit in the snippet, flagged for review\nmigrationTimeline 2030 milestone is an EU roadmap recommendation that Luxembourg notes, not a Luxembourg national deadline - REVIEW\ntargetCompletion Phased: roadmap describes phases without a terminal date for the cryptographic transition\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named as national guidance in captured summaries\nalgorithms/standardFamilies omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

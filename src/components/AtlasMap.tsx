@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { PROCESS_META, processMeta, type StandardsProcess } from '../lib/process';
+import { POSTURE_META, postureMeta, ROLE_META, roleMeta, confidenceOpacity } from '../lib/process';
 import { parseNameRole, parseTimeline, parseList } from '../lib/parse';
 
 // AtlasMap - the signature view, ported from the QSC Atlas design system.
-// A real d3-geo Natural Earth choropleth coloured by standards process; clicking
-// a country slides its profile in from the right over a backdrop. Adapted to the
-// product's data (fed from Notion) and parse helpers.
+// A real d3-geo Natural Earth choropleth. Colour shows coordination posture (the
+// bloc a country migrates with); confidence drives opacity; a toggle recolours by
+// standards role. Clicking a country slides its profile in from the right.
 
 export interface ProfileData {
   iso3: string;
@@ -16,8 +16,9 @@ export interface ProfileData {
   govActors?: string | null;
   standardFamilies?: string | null;
   algorithms?: string | null;
-  dominantProcess?: string | null;
-  secondaryProcess?: string | null;
+  coordinationPosture?: string | null;
+  standardsRole?: string | null;
+  confidence?: string | null;
   processParticipation?: string | null;
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
@@ -31,29 +32,25 @@ export interface DocData {
   tier?: string | null;
   url?: string | null;
 }
+type MapEntry = { iso3: string; name: string; posture: string; role: string | null; confidence: string | null };
 interface Props {
-  mapProcess: Record<string, { iso3: string; name: string; process: string }>;
+  mapProcess: Record<string, MapEntry>;
   profiles: Record<string, ProfileData>;
   documents: Record<string, DocData[]>;
 }
 
-const PROCESS_HEX: Record<string, string> = {
-  NIST: '#2b4c7e',
-  EU: '#5b54a8',
-  ETSI: '#2e7d6f',
-  ISO: '#b07a2b',
-  Sovereign: '#7a3b5e',
-  Mixed: '#6b7280',
-};
+const POSTURE_HEX: Record<string, string> = Object.fromEntries(Object.values(POSTURE_META).map((m) => [m.key, m.color]));
+const ROLE_HEX: Record<string, string> = Object.fromEntries(Object.values(ROLE_META).map((m) => [m.key, m.color]));
 const NO_DATA = '#e7e5df';
+const NO_ROLE = '#cfcdc7';
 const W = 980;
 const H = 500;
 const key = (id: unknown) => String(Number(id));
 
 // ---- small design-system primitives ----
 
-function ProcessChip({ value }: { value?: string | null }) {
-  const meta = processMeta(value);
+function PostureChip({ value }: { value?: string | null }) {
+  const meta = postureMeta(value);
   const base: React.CSSProperties = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -69,6 +66,16 @@ function ProcessChip({ value }: { value?: string | null }) {
   return (
     <span style={{ ...base, color: 'var(--ink)' }}>
       <span aria-hidden style={{ width: '0.7em', height: '0.7em', borderRadius: '50%', background: meta.color, flex: 'none' }} />
+      {meta.short}
+    </span>
+  );
+}
+
+function RoleBadge({ value }: { value?: string | null }) {
+  const meta = roleMeta(value);
+  if (!meta) return null;
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-sm)', padding: '0.2em 0.6em', border: '1px solid var(--hairline)', borderRadius: 'var(--radius)', color: 'var(--ink-muted)', whiteSpace: 'nowrap' }}>
       {meta.label}
     </span>
   );
@@ -107,10 +114,10 @@ const AXIS_START = 2025;
 const AXIS_END = 2036;
 const pctFor = (y: number) => Math.max(0, Math.min(100, ((y - AXIS_START) / (AXIS_END - AXIS_START)) * 100));
 
-function MigrationTimeline({ raw, process, target }: { raw?: string | null; process?: string | null; target?: string | null }) {
+function MigrationTimeline({ raw, posture, target }: { raw?: string | null; posture?: string | null; target?: string | null }) {
   const items = parseTimeline(raw);
   const numeric = items.filter((m) => typeof m.year === 'number') as { year: number; label: string }[];
-  const accent = processMeta(process)?.color ?? 'var(--ink)';
+  const accent = postureMeta(posture)?.color ?? 'var(--ink)';
   const today = new Date().getFullYear();
   const phased = target === 'Phased (no fixed end)' || items.some((m) => typeof m.year === 'string');
 
@@ -180,8 +187,8 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
       <header style={{ position: 'sticky', top: 0, background: 'var(--surface)', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-4)', padding: 'var(--space-6) var(--space-8)', borderBottom: '1px solid var(--hairline)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
           <h1 style={{ fontFamily: 'var(--font-reading)', fontSize: 'var(--text-2xl)', margin: 0, fontWeight: 600 }}>{c.country}</h1>
-          <ProcessChip value={c.dominantProcess} />
-          {c.secondaryProcess ? <ProcessChip value={c.secondaryProcess} /> : null}
+          <PostureChip value={c.coordinationPosture} />
+          <RoleBadge value={c.standardsRole} />
         </div>
         <button type="button" onClick={onClose} aria-label="Close profile" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.5rem', lineHeight: 1, color: 'var(--ink-muted)', padding: 4 }}>&times;</button>
       </header>
@@ -208,7 +215,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
 
         <Block>
           <SectionLabel>Migration timeline</SectionLabel>
-          <MigrationTimeline raw={c.migrationTimeline} process={c.dominantProcess} target={c.targetCompletion} />
+          <MigrationTimeline raw={c.migrationTimeline} posture={c.coordinationPosture} target={c.targetCompletion} />
           {c.targetCompletion && <p className="mono" style={{ fontSize: 'var(--text-xs)', color: 'var(--ink-muted)', marginTop: 'var(--space-2)' }}>Target completion: {c.targetCompletion}</p>}
         </Block>
 
@@ -266,8 +273,9 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
 export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
   const [paths, setPaths] = useState<{ id: string; d: string }[]>([]);
   const [error, setError] = useState(false);
-  const [hover, setHover] = useState<{ iso3: string; name: string; process: string; x: number; y: number } | null>(null);
+  const [hover, setHover] = useState<{ iso3: string; name: string; posture: string; x: number; y: number } | null>(null);
   const [selectedIso, setSelectedIso] = useState<string | null>(null);
+  const [colorBy, setColorBy] = useState<'posture' | 'role'>('posture');
 
   useEffect(() => {
     let alive = true;
@@ -296,34 +304,49 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
   }, []);
 
   const metaFor = (id: string) => mapProcess[id] ?? null;
-  const fillFor = (id: string) => {
-    const m = metaFor(id);
-    return m ? PROCESS_HEX[m.process] ?? NO_DATA : NO_DATA;
+  const colorOf = (m: MapEntry | null) => {
+    if (!m) return NO_DATA;
+    if (colorBy === 'role') return m.role ? ROLE_HEX[m.role] ?? NO_ROLE : NO_ROLE;
+    return POSTURE_HEX[m.posture] ?? NO_DATA;
+  };
+  const opacityOf = (m: MapEntry | null, dim: boolean) => {
+    const base = m ? confidenceOpacity(m.confidence) : 1;
+    return dim ? base * 0.7 : base;
   };
   const open = (iso: string) => { if (profiles[iso]) setSelectedIso(iso); };
   const profile = selectedIso ? profiles[selectedIso] : null;
 
+  const toggleBtn = (active: boolean): React.CSSProperties => ({
+    fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', padding: '0.25em 0.7em', borderRadius: 'var(--radius)', cursor: 'pointer',
+    border: '1px solid var(--hairline)', background: active ? 'var(--ink)' : 'transparent', color: active ? 'var(--paper)' : 'var(--ink-muted)',
+  });
+
   return (
     <div style={{ position: 'relative' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 'var(--space-2)', marginBottom: 'var(--space-2)' }}>
+        <span style={{ fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', color: 'var(--ink-muted)' }}>Colour by</span>
+        <button type="button" onClick={() => setColorBy('posture')} aria-pressed={colorBy === 'posture'} style={toggleBtn(colorBy === 'posture')}>coordination</button>
+        <button type="button" onClick={() => setColorBy('role')} aria-pressed={colorBy === 'role'} style={toggleBtn(colorBy === 'role')}>standards role</button>
+      </div>
       {error && <p style={{ color: 'var(--ink-muted)', fontStyle: 'italic', padding: 'var(--space-8)', textAlign: 'center' }}>The map could not be loaded. Check your connection and try again.</p>}
       {!error && !paths.length && <div style={{ height: 360, display: 'grid', placeItems: 'center', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)' }}>drawing the world&hellip;</div>}
       {!!paths.length && (
-        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="World map coloured by standards process" style={{ width: '100%', height: 'auto', display: 'block' }} onMouseLeave={() => setHover(null)}>
+        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="World map coloured by coordination posture" style={{ width: '100%', height: 'auto', display: 'block' }} onMouseLeave={() => setHover(null)}>
           <rect x="0" y="0" width={W} height={H} fill="transparent" />
           {paths.map((p, idx) => {
             const m = metaFor(p.id);
             const isSel = m && m.iso3 === selectedIso;
-            const dim = hover && m && hover.iso3 !== m.iso3;
+            const dim = !!(hover && m && hover.iso3 !== m.iso3);
             return (
-              <path key={`${p.id}-${idx}`} d={p.d} fill={fillFor(p.id)}
+              <path key={`${p.id}-${idx}`} d={p.d} fill={colorOf(m)}
                 stroke={isSel || (hover && m && hover.iso3 === m.iso3) ? '#1a1a1a' : '#f7f5f0'}
                 strokeWidth={isSel ? 1.6 : hover && m && hover.iso3 === m.iso3 ? 1.4 : 0.5}
                 style={{ cursor: m ? 'pointer' : 'default', transition: 'opacity 120ms' }}
-                opacity={dim ? 0.82 : 1}
+                opacity={opacityOf(m, dim)}
                 onMouseMove={(e) => {
                   if (!m) return;
                   const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
-                  setHover({ ...m, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
+                  setHover({ iso3: m.iso3, name: m.name, posture: m.posture, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
                 }}
                 onClick={() => m && open(m.iso3)} />
             );
@@ -332,9 +355,9 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
       )}
       {hover && (
         <div style={{ position: 'absolute', left: `${hover.x}%`, top: `${hover.y}%`, transform: 'translate(-50%, -130%)', pointerEvents: 'none', background: 'var(--ink)', color: 'var(--paper)', padding: '6px 10px', borderRadius: 'var(--radius)', fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 8, zIndex: 5 }}>
-          <span style={{ width: 8, height: 8, borderRadius: '50%', background: PROCESS_HEX[hover.process] ?? NO_DATA }} />
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: POSTURE_HEX[hover.posture] ?? NO_DATA }} />
           {hover.name}
-          <span style={{ opacity: 0.7 }}>{hover.process}-aligned</span>
+          <span style={{ opacity: 0.7 }}>{postureMeta(hover.posture)?.short ?? ''}</span>
         </div>
       )}
 

@@ -9,10 +9,12 @@
     "govActor named for the authority the law creates; issuingOrg row is the Republic of Djibouti (Assemblee Nationale / Journal Officiel)",
     "dominantProcess omitted: law names PQC as a mandate area but no standards camp (NIST/ISO/ETSI) - grey beats wrong",
     "No standardFamilies, algorithms, hybrid stance, timeline or target stated",
-    "dominantProcess re-classified NIST by best-available signal (low): the law creating the ANC names post-quantum cryptography as a mandate area with no sovereign Djiboutian scheme, so the nascent engagement defaults to the de facto international (NIST) camp. Legislative-mandate signal only, pre-implementation - provisional, flagged for review"
+    "dominantProcess re-classified NIST by best-available signal (low): the law creating the ANC names post-quantum cryptography as a mandate area with no sovereign Djiboutian scheme, so the nascent engagement defaults to the de facto international (NIST) camp. Legislative-mandate signal only, pre-implementation - provisional, flagged for review",
+    "Model 2026-06-14 (engaged-unaligned, Low): Minimal evidence; no national adoption found. Engaged but uncommitted."
   ],
   "country": "Djibouti",
   "confidence": "Low",
   "classificationBasis": "ANC creation + PQC in Article 3: Loi n 195/AN/25/9eme L, Journal Officiel de Djibouti, 2025 (ingested T1)\ngovActor named for the authority the law creates; issuingOrg row is the Republic of Djibouti (Assemblee Nationale / Journal Officiel)\ndominantProcess omitted: law names PQC as a mandate area but no standards camp (NIST/ISO/ETSI) - grey beats wrong\nNo standardFamilies, algorithms, hybrid stance, timeline or target stated\ndominantProcess re-classified NIST by best-available signal (low): the law creating the ANC names post-quantum cryptography as a mandate area with no sovereign Djiboutian scheme, so the nascent engagement defaults to the de facto international (NIST) camp. Legislative-mandate signal only, pre-implementation - provisional, flagged for review",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "engaged-unaligned"
 }

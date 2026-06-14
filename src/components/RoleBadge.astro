@@ -1,0 +1,28 @@
+---
+// The standards-role badge: a country's relationship to the algorithms themselves
+// (setter / contextualiser / taker / sovereign developer). Shown next to the
+// coordination-posture chip. Renders nothing when no role is recorded.
+import { roleMeta } from '../lib/process';
+
+interface Props {
+  value: string | null | undefined;
+}
+const { value } = Astro.props;
+const meta = roleMeta(value);
+---
+
+{meta && <span class="role-badge">{meta.label}</span>}
+
+<style>
+  .role-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-instrument);
+    font-size: 0.78rem;
+    padding: 0.15em 0.55em;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+</style>

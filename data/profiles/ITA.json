@@ -11,7 +11,8 @@
     "Banca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)",
     "Senato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows",
     "standardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
@@ -19,5 +20,7 @@
   "country": "Italy",
   "confidence": "High",
   "classificationBasis": "summary + govActors (ACN): ACN post-quantum and quantum cryptography guidance row and the European joint-position announcement\ndominantProcess NIST: ACN guidance summary explicitly references the NIST PQC standardization process (alongside EU material). No Italian sovereign scheme stated, so NIST assigned, though the EU-coordination dimension is also present - REVIEW\nBanca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)\nSenato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows\nstandardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

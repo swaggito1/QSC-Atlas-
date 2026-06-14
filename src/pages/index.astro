@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 
 // The map is the hero. It is keyed by ISO numeric code (ccn3), which matches the
 // world-atlas topojson country ids. Build that lookup from countries that have a
-// dominant standards process. Clicking a country slides its profile in.
+// coordination posture. Clicking a country slides its profile in.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
@@ -18,7 +18,7 @@ const CCN3: Record<string, string> = Object.fromEntries(
 const countries = await getCollection('countries');
 const allDocs = await getCollection('documents');
 
-const mapProcess: Record<string, { iso3: string; name: string; process: string }> = {};
+const mapProcess: Record<string, { iso3: string; name: string; posture: string; role: string | null; confidence: string | null }> = {};
 const profiles: Record<string, any> = {};
 for (const c of countries) {
   const d = c.data;
@@ -29,6 +29,9 @@ for (const c of countries) {
     govActors: d.govActors,
     standardFamilies: d.standardFamilies,
     algorithms: d.algorithms,
+    coordinationPosture: d.coordinationPosture,
+    standardsRole: d.standardsRole,
+    confidence: d.confidence,
     dominantProcess: d.dominantProcess,
     secondaryProcess: d.secondaryProcess,
     processParticipation: d.processParticipation,
@@ -37,9 +40,9 @@ for (const c of countries) {
     targetCompletion: d.targetCompletion,
     lastUpdated: d.lastUpdated,
   };
-  if (d.dominantProcess) {
+  if (d.coordinationPosture) {
     const ccn3 = CCN3[d.iso3];
-    if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, process: d.dominantProcess };
+    if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole, confidence: d.confidence };
   }
 }
 
@@ -70,8 +73,9 @@ const withData = Object.keys(mapProcess).length;
     <AtlasMap client:load mapProcess={mapProcess} profiles={profiles} documents={documents} />
 
     <p class="caption prose">
-      The world is splitting into cryptographic standards camps with different deadlines.
-      Each country is coloured by the standards process it aligns with.
+      The world is splitting into cryptographic blocs with different deadlines. Colour
+      shows the coordination bloc a country migrates with; its standards role, whose
+      algorithms it runs, is shown on each country profile.
     </p>
 
     <div class="legend-row">

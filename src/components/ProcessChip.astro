@@ -1,20 +1,20 @@
 ---
-// A small chip showing a country's standards process in its functional colour,
+// A small chip showing a country's coordination posture in its functional colour,
 // with the plain-language label. One of the only places colour echoes off the map.
-import { processMeta } from '../lib/process';
+import { postureMeta } from '../lib/process';
 
 interface Props {
   value: string | null | undefined;
 }
 const { value } = Astro.props;
-const meta = processMeta(value);
+const meta = postureMeta(value);
 ---
 
 {
   meta ? (
     <span class="process-chip" style={`--chip:${meta.color}`}>
       <span class="dot" aria-hidden="true" />
-      {meta.label}
+      {meta.short}
     </span>
   ) : (
     <span class="process-chip process-chip--none">No data recorded</span>

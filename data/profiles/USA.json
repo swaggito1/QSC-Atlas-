@@ -13,10 +13,13 @@
     "NIST standards + algorithms: csrc.nist.gov project page (results summary)",
     "CISA/NSA/DHS roles: respective ingested pages",
     "2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub",
-    "Verifier: FIPS names + algorithm names not in captured text (weak) - REVIEW"
+    "Verifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
+    "Model 2026-06-14 (NIST-bloc / setter, High): The standard-setter: writes the FIPS suite the world adopts; CNSA 2.0."
   ],
   "country": "United States",
-  "confidence": "Medium",
+  "confidence": "High",
   "classificationBasis": "NIST standards + algorithms: csrc.nist.gov project page (results summary)\nCISA/NSA/DHS roles: respective ingested pages\n2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub\nVerifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "setter"
 }

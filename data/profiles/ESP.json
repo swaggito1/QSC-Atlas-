@@ -10,7 +10,8 @@
     "Store-now-decrypt-later study: Banco de Espana occasional paper and FSR box (ingested) - bde.es flagged, REVIEW",
     "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
     "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "dominantProcess": "EU",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
@@ -19,5 +20,7 @@
   "country": "Spain",
   "confidence": "High",
   "classificationBasis": "INCIBE / INCIBE-CERT lead and quantum-threat framing: INCIBE-CERT guidance and advisory (ingested)\nEU public-administration transition roadmap presented via NCC-ES: INCIBE (NCC-ES) dossier (ingested)\nTransition must start from a complete cryptographic inventory: BOCG bulletin no. 223, Congreso de los Diputados (ingested) - source is a portal redirect link, REVIEW\nStore-now-decrypt-later study: Banco de Espana occasional paper and FSR box (ingested) - bde.es flagged, REVIEW\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

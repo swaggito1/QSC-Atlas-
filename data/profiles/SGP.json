@@ -11,10 +11,13 @@
     "MAS role: MAS advisory, Banque de France joint experiment, sandbox reports, FSTI Quantum track and S$100 million commitment rows",
     "IMDA role: National Quantum-Safe Network, QKD reference specifications (combining PQC and QKD), and Quantum-Safe Singapore fact sheet rows",
     "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
-    "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries"
+    "migrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries",
+    "Model 2026-06-14 (NIST-bloc / contextualiser, Medium): CSA Quantum-Safe Handbook and MAS guidance reference the NIST process; contextualiser-leaning."
   ],
   "country": "Singapore",
   "confidence": "Medium",
   "classificationBasis": "summary + govActors (CSA): Quantum-Safe Handbook and Quantum Readiness Index row, Committee of Supply 2026 speech (PQC the mainstream solution) row, and draft Quantum-Safe Migration Handbook row\ndominantProcess NIST: MAS advisory references NIST's global standardisation process for PQC; CSA draft handbook references PQC roadmap categories from the Post-Quantum Cryptography Coalition. No Singaporean sovereign algorithm scheme stated, so NIST assigned. Note strong parallel QKD emphasis (IMDA), but the algorithm camp is NIST - REVIEW\nMAS role: MAS advisory, Banque de France joint experiment, sandbox reports, FSTI Quantum track and S$100 million commitment rows\nIMDA role: National Quantum-Safe Network, QKD reference specifications (combining PQC and QKD), and Quantum-Safe Singapore fact sheet rows\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries\nmigrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "contextualiser"
 }

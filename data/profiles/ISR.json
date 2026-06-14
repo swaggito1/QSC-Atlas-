@@ -11,10 +11,13 @@
     "dominantProcess: OMITTED. Neither included document names a FIPS family, algorithm or standards camp in its captured summary, so left grey per the iron rule",
     "standardFamilies / algorithms / targetCompletion / hybridDeployment: OMITTED, none stated in the included documents",
     "A National Digital Agency directive requiring post-quantum encryption in vendor contracts and a quantum threat assessment by end of 2025 appears only in Ynet journalism in the candidates (no official source located), so excluded - REVIEW",
-    "dominantProcess re-classified NIST by best-available signal (medium): INCD best-practices guidance and the Bank of Israel supervisory letter direct migration to quantum-resistant cryptography with no sovereign Israeli PQC scheme published, so engagement follows the de facto international (NIST) default. Provisional, flagged for review"
+    "dominantProcess re-classified NIST by best-available signal (medium): INCD best-practices guidance and the Bank of Israel supervisory letter direct migration to quantum-resistant cryptography with no sovereign Israeli PQC scheme published, so engagement follows the de facto international (NIST) default. Provisional, flagged for review",
+    "Model 2026-06-14 (NIST-bloc / taker, Medium): INCD readiness guidance and Bank of Israel letter point to the standardised NIST algorithms."
   ],
   "country": "Israel",
   "confidence": "Medium",
   "classificationBasis": "summary + govActors (INCD): INCD Best Practices - Organizational Cyber Readiness to the Post-Quantum Age (included results row)\nsummary + govActors (Bank of Israel) + migrationTimeline: Bank of Israel Banking Supervision letter of 7 January 2025 directing banks to assess infrastructure, map cryptographic inventory and submit an initial preparedness plan within a year (included results row); the 2026 entry is that within-a-year deadline, a sectoral directive rather than a national completion date\ndominantProcess: OMITTED. Neither included document names a FIPS family, algorithm or standards camp in its captured summary, so left grey per the iron rule\nstandardFamilies / algorithms / targetCompletion / hybridDeployment: OMITTED, none stated in the included documents\nA National Digital Agency directive requiring post-quantum encryption in vendor contracts and a quantum threat assessment by end of 2025 appears only in Ynet journalism in the candidates (no official source located), so excluded - REVIEW\ndominantProcess re-classified NIST by best-available signal (medium): INCD best-practices guidance and the Bank of Israel supervisory letter direct migration to quantum-resistant cryptography with no sovereign Israeli PQC scheme published, so engagement follows the de facto international (NIST) default. Provisional, flagged for review",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

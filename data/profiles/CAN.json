@@ -12,10 +12,13 @@
     "dominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned",
     "ISED, SSC, NRC roles: respective results rows",
     "migrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035",
-    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries"
+    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
+    "Model 2026-06-14 (NIST-bloc / taker, High): Long-standing adopter; CSE guidance and Treasury Board SPIN migration mandate."
   ],
   "country": "Canada",
   "confidence": "High",
   "classificationBasis": "summary + govActors (CCCS, TBS): roadmap ITSM.40.001 and TBS policy implementation notice results rows\ndominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned\nISED, SSC, NRC roles: respective results rows\nmigrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

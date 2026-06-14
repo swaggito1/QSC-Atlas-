@@ -8,9 +8,12 @@
   "provenance": [
     "CyberSecurity Malaysia PQC Migration Framework + initiatives + adoption recommendations (cybersecurity.my / mykripto.cybersecurity.my, included)",
     "NIST (medium confidence): the migration framework and adoption guidance follow international NIST PQC standards; MyKriptografi/MySEAL are national programmes, not a distinct sovereign PQC algorithm - REVIEW",
-    "NACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text"
+    "NACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text",
+    "Model 2026-06-14 (NIST-bloc / taker, High): Migration framework follows NIST; MyKriptografi/MySEAL are national programmes, not a sovereign algorithm."
   ],
   "confidence": "High",
   "classificationBasis": "CyberSecurity Malaysia PQC Migration Framework + initiatives + adoption recommendations (cybersecurity.my / mykripto.cybersecurity.my, included)\nNIST (medium confidence): the migration framework and adoption guidance follow international NIST PQC standards; MyKriptografi/MySEAL are national programmes, not a distinct sovereign PQC algorithm - REVIEW\nNACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

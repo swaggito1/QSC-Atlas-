@@ -11,10 +11,13 @@
     "Cross-ministerial council: Cabinet Secretariat row",
     "Digital Agency priorities: FY2026 budget row",
     "Mixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW",
-    "No timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule"
+    "No timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule",
+    "Model 2026-06-14 (NIST-bloc / contextualiser, Medium): CRYPTREC evaluates and lists the NIST algorithms; no national algorithm. Reclassified from Mixed."
   ],
   "country": "Japan",
   "confidence": "Medium",
   "classificationBasis": "CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows\nFIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)\nCross-ministerial council: Cabinet Secretariat row\nDigital Agency priorities: FY2026 budget row\nMixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW\nNo timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "contextualiser"
 }

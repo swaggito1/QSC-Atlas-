@@ -10,7 +10,8 @@
     "NIS2 link: URSIV WB3C training news item, 2023 (ingested)",
     "dominantProcess omitted: documents explain the EU roadmap rather than adopting a specific standards camp; conservative omission",
     "No specific algorithms, hybrid stance, dated national milestones or target stated in the ingested documents",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "dominantProcess": "EU",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
@@ -19,5 +20,7 @@
   "country": "Slovenia",
   "confidence": "High",
   "classificationBasis": "URSIV as lead: URSIV guidance, EU roadmap FAQ and training news item (all ingested)\nPQC becoming necessary: URSIV 'Secure Digital Future in the Age of Quantum Computers' summary\nEU roadmap explained: URSIV FAQ recommendation, May 2026 (ingested)\nNIS2 link: URSIV WB3C training news item, 2023 (ingested)\ndominantProcess omitted: documents explain the EU roadmap rather than adopting a specific standards camp; conservative omission\nNo specific algorithms, hybrid stance, dated national milestones or target stated in the ingested documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

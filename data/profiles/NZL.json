@@ -9,10 +9,13 @@
     "Inventory + migration planning advice: same Section 2.4 row",
     "NIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)",
     "No FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule",
-    "Only one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)"
+    "Only one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
+    "Model 2026-06-14 (NIST-bloc / taker, Medium): NZ guidance aligned to the NIST suite; Five Eyes posture."
   ],
   "country": "New Zealand",
   "confidence": "Medium",
   "classificationBasis": "Lead institution + posture: NZISM Section 2.4 (NCSC/GCSB, v3.9, November 2025, ingested)\nInventory + migration planning advice: same Section 2.4 row\nNIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)\nNo FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule\nOnly one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

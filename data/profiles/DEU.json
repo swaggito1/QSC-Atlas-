@@ -11,7 +11,8 @@
     "Mixed process: BSI TR recommendations alongside NIST standards - REVIEW",
     "dominantProcess omitted: Mixed unattested in captured text (verifier)",
     "dominantProcess Mixed restored: well-established and design-endorsed, provisional for review",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Mixed reflects the national doctrine."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Mixed reflects the national doctrine.",
+    "Model 2026-06-14 (EU / contextualiser, High): BSI TR-02102 over NIST algorithms; FrodoKEM is a non-national design, not a German scheme. Mixed secondary dropped."
   ],
   "dominantProcess": "EU",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
@@ -20,5 +21,7 @@
   "country": "Germany",
   "confidence": "High",
   "classificationBasis": "BSI guideline: ingested BSI topic page\nHybrid recommended + conservative choices: BSI guideline doctrine - REVIEW\nMixed process: BSI TR recommendations alongside NIST standards - REVIEW\ndominantProcess omitted: Mixed unattested in captured text (verifier)\ndominantProcess Mixed restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Mixed reflects the national doctrine.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "contextualiser"
 }

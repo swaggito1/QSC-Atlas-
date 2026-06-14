@@ -115,31 +115,62 @@ independence is labelled more weakly than the country without it.
 
 ---
 
-## 4. Recommended fix
+## 4. The fix: Option A (adopted)
 
-Two options, in preference order.
+**Decision (14 June 2026): adopt the two-field model.** Record the two axes separately
+and stop forcing them onto one colour. The single-camp alternative (Option B, retained
+at the end of this section for the record) is not adopted.
 
-**Option A, two fields (recommended).** Record the two axes separately and stop forcing
-them onto one colour.
+Two fields replace the one "Dominant Standards Process" camp:
 
-- *Coordination posture*: EU / NIST-bloc / sovereign-bloc / unaligned-or-engaged.
-- *Standards role*: setter / contextualiser / taker / sovereign-developer.
+- *Coordination posture*: which collective transition a country belongs to.
+  Values: `EU` / `NIST-bloc` / `sovereign-bloc` / `engaged-unaligned`.
+- *Standards role*: a country's relationship to the algorithms themselves.
+  Values: `setter` / `contextualiser` / `taker` / `sovereign-developer`.
 
-The map can colour by either, and the EU "bloc" finally says what it means: a
-coordination bloc, not a standards bloc. France becomes EU coordination, contextualiser
-role. The United States becomes NIST-bloc, setter role, which the present data cannot
-express. China becomes sovereign-bloc, sovereign-developer.
+The map can colour by either. Coloured by coordination posture, the EU "bloc" finally
+says what it means: a coordination bloc, not a standards bloc. France becomes EU
+coordination, contextualiser role. The United States becomes NIST-bloc, setter role,
+which the present data cannot express. China becomes sovereign-bloc, sovereign-developer.
 
-**Option B, one camp with a disciplined rubric.** If a single camp must stay, apply the
-`METHODOLOGY_ISSUE.md` rubric strictly and in order (Sovereign tested first on the
-algorithm test above; then EU by membership; then NIST by attestation; Mixed only where
-a real national scheme coexists with NIST; a genuine grey state for engaged-but-
-uncommitted), and add a structured `standardsRole` field alongside so the
-setter / contextualiser / taker information is not lost. Promote `confidence` and
-`verificationStatus` to drive the map's opacity so soft calls look soft.
+### Implementation specification
 
-Either way, the engaged-but-uncommitted state has to exist. Defaulting those countries
-to NIST is what inflates NIST's apparent reach (section 5.4).
+Public-facing copy explaining each value is in `docs/CLASSIFICATION_MODEL.md`.
+
+Data (`data/profiles/*.json`), two new fields, with the legacy `dominantProcess` and
+`secondaryProcess` retained during migration so nothing breaks:
+
+- `coordinationPosture`: one of `EU`, `NIST-bloc`, `sovereign-bloc`, `engaged-unaligned`.
+- `standardsRole`: one of `setter`, `contextualiser`, `taker`, `sovereign-developer`.
+
+Code:
+
+- `src/lib/process.ts`: add the two enums and their plain-language labels and colours.
+  Suggested posture colours reuse the current palette: EU `#5b54a8`, NIST-bloc `#2b4c7e`,
+  sovereign-bloc `#7a3b5e`, engaged-unaligned `#6b7280`; no-data stays `#e7e5df`.
+  Standards role is shown as a labelled badge, not a colour.
+- `src/components/ProcessLegend.astro`: legend keys by coordination posture; add a role
+  badge legend.
+- `src/components/ProfilePanel.astro` / `ProcessChip.astro`: show both fields, posture
+  first, role as a badge.
+- Map default colours by coordination posture; offer a toggle to recolour by standards
+  role.
+
+Migration mechanics: a one-pass script over `data/profiles/*.json` derives the two new
+fields from the verdicts in sections 5 and 6, writes provenance, then
+`node scripts/update-profile.mjs data/profiles/*.json --deploy`. `confidence` and
+`verificationStatus` should drive map opacity so soft calls look soft. The
+`engaged-unaligned` posture must exist: defaulting those countries to NIST is what
+inflates NIST's apparent reach (section 5.4).
+
+### Option B (not adopted, retained for the record)
+
+One camp with a disciplined rubric: apply the `METHODOLOGY_ISSUE.md` rubric strictly and
+in order (Sovereign tested first on the algorithm test above; then EU by membership; then
+NIST by attestation; Mixed only where a real national scheme coexists with NIST; a
+genuine grey state for engaged-but-uncommitted), and add a structured `standardsRole`
+field alongside so the setter / contextualiser / taker information is not lost. Rejected
+because it keeps the axis collapse in the headline colour, which is the root problem.
 
 ---
 

@@ -11,7 +11,8 @@
     "National quantum strategy: SGG Annex 41, 2024 (ingested)",
     "EU funding call for PQC integration: Oportunitati UE portal (ingested)",
     "No specific algorithms, hybrid stance, timeline or target stated in the ingested documents",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one."
+    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
   ],
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
@@ -19,5 +20,7 @@
   "country": "Romania",
   "confidence": "High",
   "classificationBasis": "DNSC as lead: DNSC transition guide and cryptography analysis (ingested)\ndominantProcess NIST: DNSC guide points to NIST-standardised PQC algorithms as the validated reference set - REVIEW\nCrypto-agility emphasis: DNSC transition guide summary\nNational quantum strategy: SGG Annex 41, 2024 (ingested)\nEU funding call for PQC integration: Oportunitati UE portal (ingested)\nNo specific algorithms, hybrid stance, timeline or target stated in the ingested documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker"
 }

@@ -198,6 +198,9 @@ export async function updateCountryProfile(countriesDsId, iso3, name, fields) {
     migrationTimeline: 'Migration Timeline',
     targetCompletion: 'Target Completion',
     dataStatus: 'Data Status',
+    coordinationPosture: 'Coordination Posture',
+    standardsRole: 'Standards Role',
+    confidence: 'Confidence',
   };
   for (const [key, propName] of Object.entries(map)) {
     if (fields[key] !== undefined && fields[key] !== null) values[propName] = fields[key];

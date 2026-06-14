@@ -12,10 +12,13 @@
     "govActors (DESC): DESC Post-Quantum Cryptography Guideline launched at GISEC Global 2025 (included results row)",
     "hybridDeployment None stated: no included document states a hybrid position",
     "standardFamilies / algorithms: OMITTED. TII contributed MiRitH, PERK and RYDE to the NIST additional-signatures call and released the first UAE PQC library, but these are research-capacity items, not a national adopted standard or algorithm set",
-    "migrationTimeline / targetCompletion: OMITTED, no dated milestones or completion date stated in the included documents"
+    "migrationTimeline / targetCompletion: OMITTED, no dated milestones or completion date stated in the included documents",
+    "Model 2026-06-14 (NIST-bloc / taker, Medium): National Encryption Policy is a migration mandate over standardised algorithms, not an algorithm of its own. Reclassified from Sovereign."
   ],
   "country": "United Arab Emirates",
   "confidence": "Medium",
   "classificationBasis": "summary + govActors (Cyber Security Council): National Encryption Policy mandating approved transition plans from traditional to post-quantum cryptography, backed by an executive regulation, and the National Post-Quantum Migration Programme and Crypto Discovery Tool announcements (included results rows, including WAM)\ndominantProcess Sovereign: the UAE runs its own national programme - a National Encryption Policy, a National Cryptography Center setting requirements for the Crypto Discovery Tool, and a National Post-Quantum Migration Programme. No NIST FIPS suite is adopted as the named national standard in the included summaries; TII's submissions to NIST are research participation, not national adoption - REVIEW\ngovActors (ATRC): ATRC partnership announcements on the national post-quantum security transition and QuantumGate Crypto Discovery Tool deployment across critical national infrastructure (included results rows)\ngovActors (DESC): DESC Post-Quantum Cryptography Guideline launched at GISEC Global 2025 (included results row)\nhybridDeployment None stated: no included document states a hybrid position\nstandardFamilies / algorithms: OMITTED. TII contributed MiRitH, PERK and RYDE to the NIST additional-signatures call and released the first UAE PQC library, but these are research-capacity items, not a national adopted standard or algorithm set\nmigrationTimeline / targetCompletion: OMITTED, no dated milestones or completion date stated in the included documents",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

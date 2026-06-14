@@ -13,9 +13,12 @@
   "provenance": [
     "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)",
     "NIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite",
-    "Reference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record"
+    "Reference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record",
+    "Model 2026-06-14 (NIST-bloc / taker, High): NCSC migration to 2035 aligned to FIPS 203/204/205."
   ],
   "confidence": "High",
   "classificationBasis": "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)\nNIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite\nReference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }

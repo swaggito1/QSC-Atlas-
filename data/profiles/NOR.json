@@ -12,10 +12,13 @@
     "Research Council of Norway: QCNorway project-bank entry (flagged included:false, listed as a minor actor only)",
     "dominantProcess OMITTED: NSM summaries describe migration to quantum-resistant / post-quantum cryptography in general terms but do not name the NIST FIPS suite nor a Norwegian national scheme, so the camp is not clearly attested - grey rather than wrong",
     "No standard families, hybrid stance, dated milestones or target completion stated in the ingested documents - all omitted",
-    "dominantProcess re-classified NIST by best-available signal (medium): NSM's quantum-migration programme and cryptographic recommendations advise migration to quantum-resistant/post-quantum cryptography following international standards with no sovereign Norwegian scheme; NIST is the de facto global default for such states. Provisional, flagged for review"
+    "dominantProcess re-classified NIST by best-available signal (medium): NSM's quantum-migration programme and cryptographic recommendations advise migration to quantum-resistant/post-quantum cryptography following international standards with no sovereign Norwegian scheme; NIST is the de facto global default for such states. Provisional, flagged for review",
+    "Model 2026-06-14 (NIST-bloc / taker, Low): NSM runs a migration programme; explicit NIST PQC adoption is inferred, not attested. Thin."
   ],
   "country": "Norway",
-  "confidence": "Medium",
+  "confidence": "Low",
   "classificationBasis": "Lead institution + posture: NSM quantum migration section and cryptographic recommendations (multiple ingested NSM rows, incl. English-language version)\nVulnerable algorithms RSA/ECDH/ECDSA/Diffie-Hellman: NSM 'Vulnerable algorithms' row (these are the classical algorithms NSM names as quantum-vulnerable, not adopted PQC algorithms)\nCentre for Applied Cryptology: NSM announcement row\nResearch Council of Norway: QCNorway project-bank entry (flagged included:false, listed as a minor actor only)\ndominantProcess OMITTED: NSM summaries describe migration to quantum-resistant / post-quantum cryptography in general terms but do not name the NIST FIPS suite nor a Norwegian national scheme, so the camp is not clearly attested - grey rather than wrong\nNo standard families, hybrid stance, dated milestones or target completion stated in the ingested documents - all omitted\ndominantProcess re-classified NIST by best-available signal (medium): NSM's quantum-migration programme and cryptographic recommendations advise migration to quantum-resistant/post-quantum cryptography following international standards with no sovereign Norwegian scheme; NIST is the de facto global default for such states. Provisional, flagged for review",
-  "verificationStatus": "Unverified"
+  "verificationStatus": "Unverified",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker"
 }
