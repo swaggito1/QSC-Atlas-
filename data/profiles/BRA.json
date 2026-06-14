@@ -25,6 +25,5 @@
   "standardsRole": "taker",
   "mainRegulation": "ITI Normative Instruction 35/2026, PQC in the ICP-Brasil PKI | national | binding-law",
   "legalStatus": "binding",
-  "obligation": "The national public-key infrastructure (ICP-Brasil) is incorporating post-quantum algorithms via ITI Normative Instruction 35/2026; algorithms follow the NIST baseline.",
-  "analyticalNote": "Brazil is folding the NIST baseline into its national PKI. Caveat: the supporting sources are candidate-only in the Atlas and need inclusion confirmation (see verification memo)."
+  "obligation": "The national public-key infrastructure (ICP-Brasil) is incorporating post-quantum algorithms via ITI Normative Instruction 35/2026; algorithms follow the NIST baseline."
 }

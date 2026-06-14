@@ -25,6 +25,5 @@
   "standardsRole": "taker",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nNCSC-NL TLS guidelines | national | guidance\nPQC Migration Handbook (AIVD, CWI, TNO, 2024) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; national guidance (NCSC TLS guidelines, the PQC Migration Handbook) sets the recommended approach and the government-wide QvC-Rijk programme coordinates public-sector migration.",
-  "analyticalNote": "The Netherlands adopts the NIST baseline with little national overlay and leads instead on migration method, including the 'no-regret moves' handbook and cryptographic inventories. Watch point: the Court of Audit found few government bodies had begun migrating, so the binding EU duty has yet to convert into action."
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; national guidance (NCSC TLS guidelines, the PQC Migration Handbook) sets the recommended approach and the government-wide QvC-Rijk programme coordinates public-sector migration."
 }

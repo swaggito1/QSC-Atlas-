@@ -21,6 +21,5 @@
   "standardsRole": "sovereign-developer",
   "mainRegulation": "Government Cipher Committee national cryptographic research programme | national | guidance\nVN-PQSign indigenous post-quantum signature (research/announcement) | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No binding national post-quantum mandate yet; the Government Cipher Committee is developing indigenous schemes (VN-PQSign) and national capacity rather than mandating an adopted standard.",
-  "analyticalNote": "Vietnam is pursuing an indigenous, self-reliant path but at research and announcement stage, so the Atlas 'Sovereign' camp is overstated rather than wrong (see verification memo): one scheme, not a mandated national suite. Watch point: a mandated VN-PQSign standard would convert the sovereign lean into a sovereign fact."
+  "obligation": "No binding national post-quantum mandate yet; the Government Cipher Committee is developing indigenous schemes (VN-PQSign) and national capacity rather than mandating an adopted standard."
 }

@@ -23,6 +23,5 @@
   "standardsRole": "taker",
   "mainRegulation": "Treasury Board SPIN 2022-02 migration direction (federal) | national | binding-by-market-access\nCanadian Centre for Cyber Security (CSE) PQC guidance | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Federal departments must migrate to the NIST FIPS algorithms under the Treasury Board direction; CSE guidance sets the method. There is no economy-wide mandate.",
-  "analyticalNote": "Canada adopts the NIST baseline, binding for federal systems via Treasury Board direction. Watch point: the private sector runs on guidance."
+  "obligation": "Federal departments must migrate to the NIST FIPS algorithms under the Treasury Board direction; CSE guidance sets the method. There is no economy-wide mandate."
 }

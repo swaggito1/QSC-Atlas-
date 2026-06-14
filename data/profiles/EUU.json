@@ -24,6 +24,5 @@
   "standardsRole": "contextualiser",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on PQC | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2025) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "No binding PQC-specific requirement at EU level; member states are encouraged to publish national roadmaps and migrate on the coordinated 2026/2030/2035 timeline, while the NIS2 'state-of-the-art' duty is expected to absorb post-quantum requirements over time.",
-  "analyticalNote": "The binding force is general (NIS2, DORA) and the post-quantum steer is soft, so the EU sets timeline and direction rather than a hard mandate. Watch point: the 'state-of-the-art' clause is the lever through which soft coordination is expected to harden into obligation without new legislation."
+  "obligation": "No binding PQC-specific requirement at EU level; member states are encouraged to publish national roadmaps and migrate on the coordinated 2026/2030/2035 timeline, while the NIS2 'state-of-the-art' duty is expected to absorb post-quantum requirements over time."
 }

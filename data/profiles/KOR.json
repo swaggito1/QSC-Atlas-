@@ -23,6 +23,5 @@
   "standardsRole": "contextualiser",
   "mainRegulation": "KCMVP cryptographic module validation (government) | national | binding-by-market-access\nKpqC national algorithm selections (2025: NTRU+, SMAUG-T, AIMer, HAETAE) | national | guidance\nMSIT national PQC transition programme (2025-2035) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate.",
-  "analyticalNote": "South Korea runs its own national algorithm competition while keeping the results interoperable with the NIST baseline, and has gone as far as producing national selections. Watch point: KCMVP's exclusion of some foreign primitives for government use signals a partial sovereignty that could widen."
+  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate."
 }

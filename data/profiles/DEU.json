@@ -26,6 +26,5 @@
   "standardsRole": "contextualiser",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nBSI TR-02102 technical guidelines | national | guidance\nBSI migration roadmap and recommendations | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; the BSI technical guidelines (TR-02102) set the recommended algorithms and hybrid deployment that public-sector procurement and certification follow, though the guidelines are not themselves statute.",
-  "analyticalNote": "Germany spreads authority across the BSI (technical guidance), BaFin (financial supervision) and parliamentary oversight, with binding force coming from EU law and procurement rather than a dedicated post-quantum statute. Watch point: secunet's use of FrodoKEM for classified systems is a non-NIST choice inside a NIST-compatible architecture, not a national algorithm."
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; the BSI technical guidelines (TR-02102) set the recommended algorithms and hybrid deployment that public-sector procurement and certification follow, though the guidelines are not themselves statute."
 }

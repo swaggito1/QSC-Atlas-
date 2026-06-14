@@ -21,6 +21,5 @@
   "standardsRole": "taker",
   "mainRegulation": "ASD/ACSC quantum-safe guidance (Information Security Manual) | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No dedicated binding post-quantum mandate; government entities follow ASD guidance aligned to the NIST algorithms.",
-  "analyticalNote": "Australia is a NIST adopter via ASD guidance (Five Eyes). Watch point: timelines are guidance-led."
+  "obligation": "No dedicated binding post-quantum mandate; government entities follow ASD guidance aligned to the NIST algorithms."
 }

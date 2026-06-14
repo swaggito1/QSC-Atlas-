@@ -22,6 +22,5 @@
   "standardsRole": "sovereign-developer",
   "mainRegulation": "GOST R 34.10-2012 / 34.12-2015 national cryptographic standards | national | binding-law\nFSB / TC26 cryptographic regulation | national | binding-law\nIndigenous PQC candidates (Shipovnik, Hypericum, Codiaeum) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "State and regulated systems must use the national GOST cryptographic suite certified under FSB oversight; post-quantum GOST standardisation is in progress and not yet mandated.",
-  "analyticalNote": "Russia maintains complete algorithmic independence, monitoring NIST but refusing foreign primitives as national standards. Watch point: formal GOST post-quantum standardisation is expected within a few years, which would extend the sovereign suite into the post-quantum era."
+  "obligation": "State and regulated systems must use the national GOST cryptographic suite certified under FSB oversight; post-quantum GOST standardisation is in progress and not yet mandated."
 }

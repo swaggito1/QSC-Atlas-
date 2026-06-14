@@ -18,6 +18,5 @@
   "standardsRole": "taker",
   "mainRegulation": "CyberSecurity Malaysia / NACSA PQC Migration Framework | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No binding mandate; the national PQC Migration Framework and NACSA guidance direct migration to the NIST baseline. MyKriptografi/MySEAL are national programmes, not a sovereign algorithm.",
-  "analyticalNote": "Malaysia adopts the NIST baseline via the national framework; no sovereign algorithm."
+  "obligation": "No binding mandate; the national PQC Migration Framework and NACSA guidance direct migration to the NIST baseline. MyKriptografi/MySEAL are national programmes, not a sovereign algorithm."
 }

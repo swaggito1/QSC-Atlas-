@@ -22,6 +22,5 @@
   "standardsRole": "contextualiser",
   "mainRegulation": "CSA Quantum-Safe Handbook and readiness guidance | national | guidance\nMAS advisory on quantum security (financial sector) | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No binding mandate; CSA guidance and the MAS advisory direct migration to the NIST baseline, with finance leading.",
-  "analyticalNote": "Singapore adopts the NIST baseline; the MAS advisory leads in the financial sector."
+  "obligation": "No binding mandate; CSA guidance and the MAS advisory direct migration to the NIST baseline, with finance leading."
 }

@@ -19,6 +19,5 @@
   "standardsRole": "sovereign-developer",
   "mainRegulation": "Cryptography Law of the PRC (2020) | national | binding-law\nSM-series (SM2/SM3/SM4/SM9) commercial cryptography standards | national | binding-law\nMulti-Level Protection Scheme, level 3+ domestic algorithms | national | binding-law\nNGCC programme for sovereign PQC standards (2025) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Critical information infrastructure operators must use domestic (SM-series) algorithms under the Cryptography Law and the Multi-Level Protection Scheme; sovereign post-quantum standards are in development through the NGCC programme and not yet mandated.",
-  "analyticalNote": "China mandates its own algorithms by law and is building a parallel post-quantum suite rather than adopting the NIST baseline, backed by market scale large enough to sustain it. Watch point: a mandated sovereign post-quantum standard would be the clearest break in the global cryptographic baseline."
+  "obligation": "Critical information infrastructure operators must use domestic (SM-series) algorithms under the Cryptography Law and the Multi-Level Protection Scheme; sovereign post-quantum standards are in development through the NGCC programme and not yet mandated."
 }

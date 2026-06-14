@@ -22,6 +22,5 @@
   "standardsRole": "taker",
   "mainRegulation": "Bank of Israel banking-supervision PQC directive | national | binding-law\nINCD post-quantum readiness guidance | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Supervised banks must assess their cryptographic inventory and submit a post-quantum preparedness plan under the Bank of Israel directive; INCD guidance applies more broadly. Algorithms follow the NIST baseline.",
-  "analyticalNote": "Israel adopts the NIST baseline, binding for banks via the Bank of Israel directive."
+  "obligation": "Supervised banks must assess their cryptographic inventory and submit a post-quantum preparedness plan under the Bank of Israel directive; INCD guidance applies more broadly. Algorithms follow the NIST baseline."
 }

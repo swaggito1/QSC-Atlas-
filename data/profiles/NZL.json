@@ -20,6 +20,5 @@
   "standardsRole": "taker",
   "mainRegulation": "NCSC New Zealand / GCSB cryptographic guidance | national | guidance",
   "legalStatus": "soft-only",
-  "obligation": "No binding post-quantum mandate; national guidance aligns to the NIST algorithms.",
-  "analyticalNote": "New Zealand adopts the NIST baseline via national guidance (Five Eyes)."
+  "obligation": "No binding post-quantum mandate; national guidance aligns to the NIST algorithms."
 }

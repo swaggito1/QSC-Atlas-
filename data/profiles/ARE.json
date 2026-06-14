@@ -23,6 +23,5 @@
   "standardsRole": "taker",
   "mainRegulation": "National Encryption Policy and executive regulation (PQC transition) | national | binding-law\nNational Post-Quantum Migration Programme and Crypto Discovery Tool | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Government entities must hold officially approved plans to transition from traditional encryption to post-quantum cryptography under the National Encryption Policy; the national programme provides discovery and migration tooling. The policy mandates migration, not a national algorithm.",
-  "analyticalNote": "The UAE has a binding migration mandate (grouped internationally with the US NSM-10 and Canada's SPIN), not a sovereign algorithm, so the Atlas 'Sovereign' camp is a misattribution (see verification memo): a NIST-adopting contextualiser with a strong national mandate. Watch point: no UAE-origin post-quantum algorithm is on record."
+  "obligation": "Government entities must hold officially approved plans to transition from traditional encryption to post-quantum cryptography under the National Encryption Policy; the national programme provides discovery and migration tooling. The policy mandates migration, not a national algorithm."
 }
