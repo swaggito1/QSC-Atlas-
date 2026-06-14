@@ -3,8 +3,12 @@ import Base from '../../layouts/Base.astro';
 import ProcessChip from '../../components/ProcessChip.astro';
 import { getCollection } from 'astro:content';
 
-const countries = (await getCollection('countries')).sort((a, b) =>
-  a.data.country.localeCompare(b.data.country),
+// Rank countries-with-data first: coloured (has a process) before engaged-but-grey,
+// before empty placeholders. Alphabetical within each rank.
+const rank = (c) =>
+  c.data.dominantProcess ? 0 : c.data.dataStatus === 'Placeholder' ? 2 : 1;
+const countries = (await getCollection('countries')).sort(
+  (a, b) => rank(a) - rank(b) || a.data.country.localeCompare(b.data.country),
 );
 ---
 

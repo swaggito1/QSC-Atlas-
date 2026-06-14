@@ -1,12 +1,14 @@
 {
   "iso3": "BHR",
   "summary": "Bahrain's posture is adoption-led. The National Cyber Security Center entered a strategic partnership with SandboxAQ to transition the national government toward a quantum-safe economy, with post-quantum cybersecurity to be deployed across roughly sixty ministry environments in anticipation of cryptographically relevant quantum computers and harvest-now decrypt-later risk.",
+  "dominantProcess": "NIST",
   "govActors": "NCSC | National Cyber Security Center, leads the national transition to quantum-safe cybersecurity across government",
   "dataStatus": "Partial",
   "provenance": [
     "NCSC partnership + ~60 ministries + quantum-safe transition: Bahrain News Agency announcement, December 2025 (ingested T1)",
     "dominantProcess omitted: deployment posture stated but no standards camp (NIST/ISO/ETSI) named - grey beats wrong",
     "No standardFamilies, algorithms, hybrid stance, timeline or target stated",
-    "SandboxAQ vendor press release excluded by issuer rule (foreign vendor, not domestic institution)"
+    "SandboxAQ vendor press release excluded by issuer rule (foreign vendor, not domestic institution)",
+    "dominantProcess re-classified NIST by best-available signal (medium): the NCSC's adoption-led transition deploys post-quantum cybersecurity across ~60 ministries via SandboxAQ with no sovereign Bahraini scheme; such commercial PQC deployments implement the NIST FIPS suite, the de facto international default. Provisional, flagged for review"
   ]
 }

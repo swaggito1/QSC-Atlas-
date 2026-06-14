@@ -1,67 +1,110 @@
 [
   {
-    "title": "Post-Quantum Cryptography Initiatives",
+    "title": "Post-Quantum Cryptography Initiatives - CyberSecurity Malaysia",
     "url": "https://www.cybersecurity.my/portal-main/services/post-quantum-overview",
-    "description": "CyberSecurity Malaysia's overview page describing its PQC strategy, PQC Migration Framework, algorithm research, encryption standards (MySEAL), and quantum-safe migration services."
+    "description": "To support this initiative, CyberSecurity Malaysia offers expert guidance and services to organisations seeking adoption of Post-Quantum Cryptography (PQC).",
+    "markdown": ""
   },
   {
-    "title": "Post-quantum Cryptography Migration Framework (PDF)",
-    "url": "https://mykripto.cybersecurity.my/index.php/files/109/Post-Quantum/18/Post-quantum-Cryptography-Migration-Framework.pdf",
-    "description": "CyberSecurity Malaysia (MyKripto) PQC Migration Framework document providing a structured pathway to transition organisations from classical cryptography to quantum-safe alternatives."
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography Initiatives - Documents (MyKripto)",
-    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/documents",
-    "description": "MyKripto documents listing for PQC, including the PQC Migration Framework and the technical guide 'Recommendations for the Adoption and Implementation of Post-Quantum Cryptographic Solutions'."
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "This guidance aims to aid in post-quantum cryptography adoption and includes hardware and software categories with example types of widely available products ...",
+    "markdown": ""
   },
   {
-    "title": "PQC Services (MyKripto - CyberSecurity Malaysia)",
-    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/pqc-services",
-    "description": "CyberSecurity Malaysia PQC service offerings: migration consultations, awareness sessions and technical workshops for transition to quantum-safe cryptography."
-  },
-  {
-    "title": "PQC Activities (MyKripto - CyberSecurity Malaysia)",
-    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/activities",
-    "description": "MyKripto page describing CyberSecurity Malaysia's PQC-related activities, research and awareness work."
-  },
-  {
-    "title": "post-quantum cryptography initiatives - FAQ (MyKripto)",
-    "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/faq",
-    "description": "MyKripto FAQ on CyberSecurity Malaysia's post-quantum cryptography initiatives."
-  },
-  {
-    "title": "MyKriptografi - National Cryptography Policy",
-    "url": "https://www.nacsa.gov.my/kriptografi-view.php",
-    "description": "NACSA page on MyKriptografi, the National Cryptography Policy approved by Cabinet 28 Nov 2025; references threats of the 'quantum computing era' but does not explicitly name PQC/post-quantum cryptography."
-  },
-  {
-    "title": "MYNIC's Preparing For Tomorrow's Threat: The Impact Of Quantum Computing On Internet Security",
-    "url": "https://www.digital.gov.my/en-GB/siaran/MYNIC'S-Preparing-For-Tomorrow's-Threat:-The-Impact-Of-Quantum-Computing-On-Internet-Security",
-    "description": "Ministry of Digital announcement on MYNIC and quantum computing's impact on internet security (DNSSEC). Could not verify explicit PQC reference (page fetch failed on certificate)."
-  },
-  {
-    "title": "Malaysia launches national plan and sandbox for post-quantum cryptography",
-    "url": "https://thesun.my/news/malaysia-news/malaysia-national-plan-post-quantum-cryptography/",
-    "description": "News (The Sun) on the November 2025 launch of the National PQC Migration Plan 2025-2030 and PQC Sandbox PoC Programme by NACSA/Ministry of Digital. Non-institutional (journalism)."
-  },
-  {
-    "title": "Navigating National Cyber Resilience in the Quantum Era (NACSA conference slides)",
-    "url": "https://pkic.org/events/2025/pqc-conference-kuala-lumpur-my/WED_P_1000_megat-zuhairy-bin-megat-tajuddin_navigating-national-cyber-resilience-in-the-quantum-era_merged.pdf",
-    "description": "Conference presentation by NACSA chief executive Megat Zuhairy on Malaysia's national PQC readiness, hosted on the PKI Consortium (non-domestic) site."
-  },
-  {
-    "title": "Quantum-Safe Cryptography and the Future of Malaysia's Cybersecurity Strategy",
+    "title": "(PDF) Quantum-Safe Cryptography and the Future of Malaysia's ...",
     "url": "https://www.researchgate.net/publication/397705888_Quantum-Safe_Cryptography_and_the_Future_of_Malaysia's_Cybersecurity_Strategy",
-    "description": "Academic paper on ResearchGate analysing Malaysia's quantum-safe strategy. Academic, not institutional."
+    "description": "This article examines Malaysia's preparedness for quantum-enabled cyber threats and the transition to post-quantum cryptography (PQC). Drawing ...",
+    "markdown": ""
   },
   {
-    "title": "Quantum-safe encryption emerges as new standard",
-    "url": "https://www.thestar.com.my/business/business-news/2026/06/03/quantum-safe-encryption-emerges-as-new-standard",
-    "description": "The Star news article on quantum-safe encryption in Malaysia. Journalism, not institutional."
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
   },
   {
-    "title": "ICE-PQC 2025 - Universiti Putra Malaysia",
-    "url": "https://ice-pqc.upm.edu.my/",
-    "description": "International Conference and Exhibition on Post-Quantum Cryptography 2025, hosted by Universiti Putra Malaysia. University, not a government/standards institution."
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Conference - October 28 - 30, 2025",
+    "url": "https://pkic.org/events/2025/pqc-conference-kuala-lumpur-my/",
+    "description": "Dr. Megat will outline Malaysia's roadmap for quantum resilience. His address will highlight: National strategies for PQC adoption across critical ...",
+    "markdown": ""
+  },
+  {
+    "title": "Roadmap for the migration to post-quantum cryptography for the ...",
+    "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+    "description": "This publication is the Cyber Centre's recommended roadmap for the migration of non-classified IT systems within the GC to use PQC.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cybersecurity Resources - National Security Agency",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "description": "Post-Quantum Cybersecurity Resources · Post-Quantum Cryptography Algorithms · Quantum key distribution and quantum key cryptography · Collapse All Expand All.",
+    "markdown": ""
+  },
+  {
+    "title": "Malaysia Issues Executive Order for Cybersecurity Sovereignty",
+    "url": "https://www.linkedin.com/posts/dr-muhammad-sufyan-basri-23667525_cybersecurity-nacsa-pqc-activity-7376171269781819394-DG-o",
+    "description": "Malaysia is taking a significant step forward in its cybersecurity journey with the release of the National Cyber Security Agency (NACSA) Chief ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] Navigating National Cyber Resilience in the Quantum Era",
+    "url": "https://pkic.org/events/2025/pqc-conference-kuala-lumpur-my/WED_P_1000_megat-zuhairy-bin-megat-tajuddin_navigating-national-cyber-resilience-in-the-quantum-era_merged.pdf",
+    "description": "Malaysia's roadmap: • Advance MyKriptografi as national foundation. • Implement CSCDC to ensure seamless evolution of cyber security ecosystem.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "QKAZ Kuantera — Post-Quantum Cryptography Solutions",
+    "url": "https://www.qkaz-kuantera.com/",
+    "description": "NACSA Updates PQC Migration Timeline. National Cyber Security Agency releases updated roadmap for Malaysia's transition to quantum-safe infrastructure. Read ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] ASEAN's Post-Quantum Future: Securing Communications in an Era ...",
+    "url": "https://pkic.org/events/2025/pqc-conference-kuala-lumpur-my/WED_P_1430_jonathan-jackson_asean-s-post-quantum-future-securing-communications-in-an-era-of-disruptive-change_merged.pdf",
+    "description": "Now to 2030: Begin phasing out quantum-vulnerable encryption like RSA and ECC, and start piloting post-quantum cryptography in parallel with ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] POST-QUANTUM CRYPTOGRAPHY MIGRATION FRAMEWORK",
+    "url": "https://mykripto.cybersecurity.my/index.php/files/109/Post-Quantum/18/Post-quantum-Cryptography-Migration-Framework.pdf",
+    "description": "This framework serves as a roadmap for government agencies, critical infrastructure operators, and private organisations in Malaysia: a. Government Agencies: To ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The question is no longer if you need to transition to quantum-safe cryptography, but how and when. This resource is designed to show a central view of how ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Malaysia tackles PQC migration threat with strategic initiative",
+    "url": "https://www.linkedin.com/posts/rasdan-jama-in-21a3a3116_attended-the-post-quantum-cryptography-pqc-activity-7369792828895322113-9OAS",
+    "description": "By 2030, all high-risk systems and critical infrastructure must have transitioned to quantum-safe upgrades, with quantum-safe software and ...",
+    "markdown": ""
   }
 ]

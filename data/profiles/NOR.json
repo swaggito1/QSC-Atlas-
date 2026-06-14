@@ -1,6 +1,7 @@
 {
   "iso3": "NOR",
   "summary": "Norway's posture is led by the National Security Authority (NSM), which runs a dedicated quantum migration programme and issues cryptographic recommendations advising organisations to plan and carry out migration to quantum-resistant cryptography. NSM identifies the algorithms in use today that quantum computers would break and has opened a Centre for Applied Cryptology to strengthen national quantum-safe preparedness.",
+  "dominantProcess": "NIST",
   "algorithms": "RSA, ECDH, ECDSA, Diffie-Hellman (named as quantum-vulnerable)",
   "govActors": "NSM | Norwegian National Security Authority, runs the quantum migration programme and issues cryptographic recommendations\nResearch Council of Norway | Funds quantum computing strategy work referencing post-quantum cryptography",
   "dataStatus": "Partial",
@@ -10,6 +11,7 @@
     "Centre for Applied Cryptology: NSM announcement row",
     "Research Council of Norway: QCNorway project-bank entry (flagged included:false, listed as a minor actor only)",
     "dominantProcess OMITTED: NSM summaries describe migration to quantum-resistant / post-quantum cryptography in general terms but do not name the NIST FIPS suite nor a Norwegian national scheme, so the camp is not clearly attested - grey rather than wrong",
-    "No standard families, hybrid stance, dated milestones or target completion stated in the ingested documents - all omitted"
+    "No standard families, hybrid stance, dated milestones or target completion stated in the ingested documents - all omitted",
+    "dominantProcess re-classified NIST by best-available signal (medium): NSM's quantum-migration programme and cryptographic recommendations advise migration to quantum-resistant/post-quantum cryptography following international standards with no sovereign Norwegian scheme; NIST is the de facto global default for such states. Provisional, flagged for review"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "iso3": "IDN",
   "summary": "Indonesia is preparing for post-quantum migration through joint work between the National Standardisation Agency (BSN) and the National Cyber and Crypto Agency (BSSN). BSN reports that the two bodies are strengthening cooperation to ready the country for migration to post-quantum cryptographic algorithms, with BSN providing standardisation support and conformity assessment for the transition.",
+  "dominantProcess": "Mixed",
   "govActors": "BSN | National Standardisation Agency, provides standardisation support and conformity assessment for the post-quantum transition\nBSSN | National Cyber and Crypto Agency, the national cryptographic authority working with BSN on post-quantum migration",
   "dataStatus": "Partial",
   "provenance": [
@@ -8,6 +9,7 @@
     "Standardisation support + conformity assessment role: same BSN row",
     "dominantProcess OMITTED: BSSN runs its own 'Indonesian Cryptographic Algorithms' scheme and the activity also references SNI ISO standards (candidates), so the camp is genuinely mixed/unclear and is left out",
     "Other BSSN items (technical guidance, FGD, JakTek, Pengenalan PQC v1.0) were flagged included:false (non-government or local-government republishers) and are not relied on",
-    "No algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule"
+    "No algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule",
+    "dominantProcess re-classified Mixed by best-available signal (medium): BSSN runs a sovereign 'Indonesian Cryptographic Algorithms' scheme (Peraturan BSSN No. 11/2024) while the PQC migration work simultaneously references SNI ISO standards and NIST-lineage algorithms (ML-KEM/ML-DSA), so the posture genuinely blends a national cryptographic doctrine with international PQC. Provisional, flagged for review"
   ]
 }

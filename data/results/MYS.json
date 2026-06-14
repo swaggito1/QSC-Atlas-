@@ -4,11 +4,11 @@
     "country": "MYS",
     "issuingOrg": "CyberSecurity Malaysia",
     "year": null,
-    "docType": "Guidance",
-    "tier": "T2",
+    "docType": "Roadmap",
+    "tier": "T1",
     "url": "https://mykripto.cybersecurity.my/index.php/files/109/Post-Quantum/18/Post-quantum-Cryptography-Migration-Framework.pdf",
     "summary": "CyberSecurity Malaysia's PQC Migration Framework provides a structured, strategic pathway to help organisations transition from traditional cryptographic systems to quantum-safe alternatives and safeguard Malaysia's digital infrastructure against quantum threats.",
-    "included": false
+    "included": true
   },
   {
     "title": "Post-Quantum Cryptography Initiatives",
@@ -19,7 +19,7 @@
     "tier": "T1",
     "url": "https://www.cybersecurity.my/portal-main/services/post-quantum-overview",
     "summary": "CyberSecurity Malaysia's overview of its post-quantum cryptography programme, covering the PQC Migration Framework, post-quantum algorithm research, encryption-standard work (MySEAL), industry partnerships and quantum-safe migration services.",
-    "included": false
+    "included": true
   },
   {
     "title": "Post-Quantum Cryptography Initiatives - Documents",
@@ -30,7 +30,7 @@
     "tier": "T2",
     "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/documents",
     "summary": "MyKripto documents page hosting CyberSecurity Malaysia's PQC publications, including the PQC Migration Framework and the technical guide 'Recommendations for the Adoption and Implementation of Post-Quantum Cryptographic Solutions'.",
-    "included": false
+    "included": true
   },
   {
     "title": "Post-Quantum Cryptography Services",
@@ -41,6 +41,6 @@
     "tier": "T2",
     "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/pqc-services",
     "summary": "CyberSecurity Malaysia's PQC service offering: expert consultations to plan and execute migration from classical to quantum-safe cryptography, plus awareness sessions and technical workshops to build organisational quantum-readiness.",
-    "included": false
+    "included": true
   }
 ]

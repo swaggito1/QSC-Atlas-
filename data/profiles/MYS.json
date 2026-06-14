@@ -1,4 +1,13 @@
 {
   "iso3": "MYS",
-  "dataStatus": "Placeholder"
+  "country": "Malaysia",
+  "summary": "Malaysia's transition is led by CyberSecurity Malaysia, working with the National Cyber Security Agency (NACSA), which has published a Post-Quantum Cryptography Migration Framework and adoption guidance for government agencies and critical infrastructure, alongside the national MyKriptografi and MySEAL cryptography programmes.",
+  "dominantProcess": "NIST",
+  "govActors": "CyberSecurity Malaysia | national cyber security specialist agency, publishes the PQC Migration Framework and adoption guidance\nNACSA | National Cyber Security Agency, sets national cyber security policy",
+  "dataStatus": "Partial",
+  "provenance": [
+    "CyberSecurity Malaysia PQC Migration Framework + initiatives + adoption recommendations (cybersecurity.my / mykripto.cybersecurity.my, included)",
+    "NIST (medium confidence): the migration framework and adoption guidance follow international NIST PQC standards; MyKriptografi/MySEAL are national programmes, not a distinct sovereign PQC algorithm - REVIEW",
+    "NACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text"
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "iso3": "IND",
   "summary": "India is building a national quantum-safe ecosystem coordinated through the Department of Science and Technology under the National Quantum Mission, whose task force has set out a strategy for migration to post-quantum cryptography. CERT-In and MeitY have issued a transition roadmap for public and private organisations, the Telecommunication Engineering Centre has published a technical report for the telecom sector, and SEBI requires its regulated entities to run post-quantum risk assessments and maintain cryptographic-asset inventories.",
+  "dominantProcess": "NIST",
   "hybridDeployment": "Recommended",
   "govActors": "DST (National Quantum Mission) | Department of Science and Technology, sets national quantum-safe migration strategy through its task force\nCERT-In | Indian Computer Emergency Response Team, issued the quantum cyber readiness transition roadmap\nMeitY | Ministry of Electronics and Information Technology, co-author of the quantum-safe cybersecurity whitepaper\nTEC | Telecommunication Engineering Centre, published the technical report on migration to post-quantum cryptography\nSEBI | Securities and Exchange Board of India, requires post-quantum risk assessment and cryptographic-asset inventories of regulated entities",
   "dataStatus": "Partial",
@@ -12,6 +13,7 @@
     "hybridDeployment Recommended: Quantum-Safe Ecosystem report summary describes hybrid deployment frameworks; recorded as Recommended - REVIEW (the documents describe hybrid frameworks but the explicit mandatory/recommended stance is not quoted in summaries)",
     "dominantProcess OMITTED: documents describe migration to post-quantum / quantum-safe cryptography and a national testing-and-certification framework but do not name the NIST FIPS suite nor an indigenous algorithm scheme, so the camp is not clearly attested",
     "migrationTimeline OMITTED: task force describes phased timelines for critical information infrastructure but no specific years are stated in the summaries; targetCompletion likewise not stated",
-    "RBIH banking whitepaper excluded (included:false, non-government S3 host, RBI subsidiary)"
+    "RBIH banking whitepaper excluded (included:false, non-government S3 host, RBI subsidiary)",
+    "dominantProcess re-classified NIST by best-available signal (medium): DST/CERT-In/MeitY/TEC/SEBI documents drive migration to post-quantum cryptography following international PQC standards, with no indigenous national algorithm scheme; the Atmanirbhar framing and national testing/certification framework concern deployment self-reliance rather than a sovereign algorithm, so NIST is the de facto default. Provisional, flagged for review"
   ]
 }
