@@ -36,11 +36,12 @@
 
   /* ---- Type families: a distinctive grotesque operates, a serif reads, a
      characterful mono carries data and small text --------------------------- */
-  --font-instrument: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-reading: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --font-label: 'Antic', var(--font-instrument); /* small uppercase labels and the footer */
-  --font-label: 'Antic', 'Space Grotesk', system-ui, sans-serif;
+  /* The whole site runs on two families: Cabin (the workhorse - body, UI, headings,
+     reading) and Antic (small labels and the technical / numeric slots). */
+  --font-instrument: 'Cabin', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-reading: 'Cabin', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Antic', system-ui, sans-serif; /* years, tier codes, hints - was a monospace */
+  --font-label: 'Antic', 'Cabin', system-ui, sans-serif; /* small uppercase labels and the footer */
 
   /* ---- Type scale (restrained) ---------------------------------------- */
   --text-2xs: 0.72rem;

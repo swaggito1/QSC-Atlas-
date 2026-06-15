@@ -50,7 +50,7 @@ const ROLE_HEX: Record<string, string> = Object.fromEntries(Object.values(ROLE_M
 const AUBERGINE = POSTURE_META['sovereign-bloc'].color;
 const SETTER_RED = ROLE_META.setter.color;
 const NO_ROLE_HEX = '#cfcdc7';
-const MONO = "'Space Mono', ui-monospace, monospace";
+const MONO = "'Antic', system-ui, sans-serif";
 const NO_DATA = 'var(--process-none)';
 const NO_ROLE = 'var(--process-no-role)';
 
