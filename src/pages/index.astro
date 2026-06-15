@@ -1,86 +1,91 @@
 ---
 import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
-import AtlasMap from '../components/AtlasMap';
+import HeroGlobe from '../components/HeroGlobe';
 import { getCollection } from 'astro:content';
+import { POSTURE_ORDER, POSTURE_META } from '../lib/process';
 
-// The hero is a globe of country points. Each point sits at its real position
-// (world-countries latlng) and carries its real coordination posture from the data,
-// so the picture cannot drift from the classification. Clicking a point opens its profile.
+// One-page Atlas: a globe hero, then bands for countries, analysis, documents and
+// about, each linking to its full page. The globe is keyed by ccn3 (topojson ids).
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
+const CCN3: Record<string, string> = Object.fromEntries(worldCountries.map((c: any) => [c.cca3, c.ccn3]));
 
 const countries = await getCollection('countries');
-const allDocs = await getCollection('documents');
+const docs = await getCollection('documents');
+const posts = (await getCollection('blog')).sort((a, b) => (b.data.published ?? '').localeCompare(a.data.published ?? ''));
 
-const profiles: Record<string, any> = {};
-const profileByIso: Record<string, any> = {};
+const mapProcess: Record<string, any> = {};
 for (const c of countries) {
   const d = c.data;
-  profileByIso[d.iso3] = d;
-  profiles[d.iso3] = {
-    iso3: d.iso3,
-    country: d.country,
-    summary: d.summary,
-    govActors: d.govActors,
-    standardFamilies: d.standardFamilies,
-    algorithms: d.algorithms,
-    coordinationPosture: d.coordinationPosture,
-    standardsRole: d.standardsRole,
-    confidence: d.confidence,
-    mainRegulation: d.mainRegulation,
-    legalStatus: d.legalStatus,
-    obligation: d.obligation,
-    processParticipation: d.processParticipation,
-    hybridDeployment: d.hybridDeployment,
-    migrationTimeline: d.migrationTimeline,
-    targetCompletion: d.targetCompletion,
-    lastUpdated: d.lastUpdated,
-  };
+  if (!d.coordinationPosture) continue;
+  const ccn3 = CCN3[d.iso3];
+  if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole ?? null, confidence: d.confidence ?? null };
 }
 
-const nodes = worldCountries
-  .filter((c: any) => Array.isArray(c.latlng) && c.latlng.length === 2)
-  .map((c: any) => {
-    const p = profileByIso[c.cca3];
-    return {
-      iso3: c.cca3,
-      name: c.name?.common ?? c.cca3,
-      lat: c.latlng[0],
-      lng: c.latlng[1],
-      posture: p?.coordinationPosture ?? null,
-      role: p?.standardsRole ?? null,
-      confidence: p?.confidence ?? null,
-    };
-  });
-
-const TIER_RANK: Record<string, number> = { T1: 0, T2: 1, T3: 2, T4: 3 };
-const documents: Record<string, any[]> = {};
-for (const doc of allDocs) {
-  const iso = (doc.data.country ?? '').toUpperCase();
-  if (!iso) continue;
-  (documents[iso] ??= []).push({
-    title: doc.data.title,
-    issuingOrg: doc.data.issuingOrg,
-    year: doc.data.year,
-    tier: doc.data.tier,
-    url: doc.data.url,
-  });
-}
-for (const iso of Object.keys(documents)) {
-  documents[iso].sort((a, b) => (TIER_RANK[a.tier] ?? 9) - (TIER_RANK[b.tier] ?? 9));
-  documents[iso] = documents[iso].slice(0, 12);
-}
+const blocGroups = POSTURE_ORDER.map((p) => ({ meta: POSTURE_META[p], count: countries.filter((c) => c.data.coordinationPosture === p).length })).filter((g) => g.count);
+const classified = countries.filter((c) => c.data.coordinationPosture).length;
+const docCount = docs.length;
+const latest = posts[0]?.data ?? null;
 ---
 
 <Base title="QSC Atlas">
   <section class="hero">
-    <p class="hero-lede">
-      One country writes the post-quantum standard. Almost everyone adopts it. Three
-      states fork the baseline; nine have not chosen.
+    <div class="hero-text">
+      <p class="hero-lede">
+        One country writes the post-quantum standard. Almost everyone adopts it. Three states
+        fork the baseline; nine have not chosen.
+      </p>
+      <p class="hero-hint mono">
+        Click a country to open it. <a href="/map">Open the flat map &rarr;</a>
+      </p>
+    </div>
+    <div class="hero-globe">
+      <HeroGlobe client:load mapProcess={mapProcess} />
+    </div>
+  </section>
+
+  <section class="band" id="countries">
+    <div class="band-head"><h2>Countries</h2><a href="/countries">All countries &rarr;</a></div>
+    <p class="band-lede">{countries.length} profiles, {classified} placed in a coordination bloc.</p>
+    <ul class="bloc-counts">
+      {blocGroups.map((g) => (
+        <li style={`--c:${g.meta.color}`}><span class="sw" aria-hidden="true" />{g.meta.label}<span class="n mono">{g.count}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="band" id="analysis">
+    <div class="band-head"><h2>Analysis</h2><a href="/analysis">All analysis &rarr;</a></div>
+    {
+      latest ? (
+        <a class="latest" href={`/analysis/${latest.slug}`}>
+          <span class="latest-title">{latest.title}</span>
+          {latest.published && <span class="latest-date mono">{latest.published}</span>}
+        </a>
+      ) : (
+        <p class="band-lede">Commentary and change notes on the quantum-safe transition.</p>
+      )
+    }
+  </section>
+
+  <section class="band" id="documents">
+    <div class="band-head"><h2>Documents</h2><a href="/documents">Search the documents &rarr;</a></div>
+    <p class="band-lede">
+      {docCount} institutional sources behind the Atlas, searchable by title and filterable by
+      country, type, year and tier.
     </p>
-    <AtlasMap client:load nodes={nodes} profiles={profiles} documents={documents} />
+  </section>
+
+  <section class="band" id="about">
+    <div class="band-head"><h2>About</h2><a href="/about">About and methodology &rarr;</a></div>
+    <p class="band-lede">
+      How the Atlas classifies countries on two dimensions, the coordination bloc and the
+      standards role, and how the data is gathered. Built only from institutional sources,
+      rebuilt as new documents appear.
+    </p>
+    <p><a class="briefing" href="/about#briefing">Request a briefing &rarr;</a></p>
   </section>
 </Base>
 
@@ -89,20 +94,140 @@ for (const iso of Object.keys(documents)) {
     max-width: var(--content-wide);
     margin: 0 auto;
     padding: var(--space-8) var(--space-6) var(--space-12);
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: var(--space-10);
+    align-items: center;
+    min-height: 74vh;
+  }
+  .hero-text {
+    max-width: 30ch;
+    justify-self: end;
   }
   .hero-lede {
     font-family: var(--font-reading);
-    font-size: clamp(1.5rem, 1rem + 1.7vw, 2.3rem);
+    font-size: clamp(1.6rem, 1rem + 1.9vw, 2.6rem);
     line-height: var(--leading-snug);
     color: var(--ink);
-    max-width: 30ch;
-    margin: 0 0 var(--space-8);
+    margin: 0 0 var(--space-6);
     text-wrap: balance;
   }
-  @media (max-width: 640px) {
-    .hero-lede {
-      font-size: 1.45rem;
-      max-width: none;
+  .hero-hint {
+    font-size: var(--text-xs);
+    color: var(--ink-faint);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .hero-hint a {
+    color: var(--ink-muted);
+  }
+  .hero-hint a:hover {
+    color: var(--ink);
+  }
+  @media (max-width: 860px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: 0;
+      gap: var(--space-6);
     }
+    .hero-text {
+      max-width: none;
+      justify-self: start;
+    }
+  }
+
+  .band {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+    border-top: 1px solid var(--hairline);
+  }
+  .band-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  .band-head h2 {
+    font-family: var(--font-reading);
+    font-size: var(--text-2xl);
+    margin: 0;
+  }
+  .band-head a {
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .band-head a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 3px;
+  }
+  .band-lede {
+    margin: 0;
+    color: var(--ink-muted);
+    max-width: var(--measure);
+  }
+  .bloc-counts {
+    list-style: none;
+    margin: var(--space-5) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-8);
+  }
+  .bloc-counts li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-family: var(--font-instrument);
+    color: var(--ink);
+  }
+  .bloc-counts .sw {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: var(--c);
+    align-self: center;
+  }
+  .bloc-counts .n {
+    color: var(--ink-faint);
+    font-size: var(--text-sm);
+  }
+  .latest {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: var(--space-3);
+  }
+  .latest:hover .latest-title {
+    text-decoration: underline;
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 3px;
+  }
+  .latest-title {
+    font-family: var(--font-reading);
+    font-size: var(--text-lg);
+  }
+  .latest-date {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+  }
+  .briefing {
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+  .briefing:hover {
+    color: var(--ink);
   }
 </style>
