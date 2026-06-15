@@ -26,9 +26,22 @@ const { country, documents } = Astro.props;
 
 <Base title={country.country} description={country.summary ?? undefined}>
   <div class="container">
-    <p class="back"><a href="/countries">&larr; All countries</a></p>
+    <p class="back"><a id="back-link" href="/countries">&larr; All countries</a></p>
     <ProfilePanel country={country} documents={documents} />
   </div>
+  <script is:inline>
+    (() => {
+      const a = document.getElementById('back-link');
+      if (!a) return;
+      try {
+        if (document.referrer && new URL(document.referrer).origin === location.origin) {
+          a.textContent = '← Back';
+          a.setAttribute('href', '#');
+          a.addEventListener('click', (e) => { e.preventDefault(); history.back(); });
+        }
+      } catch (e) {}
+    })();
+  </script>
 </Base>
 
 <style>

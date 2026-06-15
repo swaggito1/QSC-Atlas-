@@ -39,6 +39,8 @@
   --font-instrument: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-reading: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-label: 'Antic', var(--font-instrument); /* small uppercase labels and the footer */
+  --font-label: 'Antic', 'Space Grotesk', system-ui, sans-serif;
 
   /* ---- Type scale (restrained) ---------------------------------------- */
   --text-2xs: 0.72rem;
@@ -142,9 +144,8 @@ h1, h2, h3, h4 {
 
 /* The small uppercase section label used throughout the profile and pages. */
 .section-label {
-  font-family: var(--font-instrument);
+  font-family: var(--font-label);
   font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
   color: var(--text-muted);

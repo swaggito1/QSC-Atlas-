@@ -14,7 +14,7 @@ const {
 const pageTitle = title === 'QSC Atlas' ? title : `${title} - QSC Atlas`;
 
 const nav = [
-  { href: '/', label: 'Map' },
+  { href: '/map', label: 'Map' },
   { href: '/countries', label: 'Countries' },
   { href: '/analysis', label: 'Analysis' },
   { href: '/documents', label: 'Documents' },
@@ -34,7 +34,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Antic&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -51,7 +51,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     </main>
 
     <footer class="site-footer">
-      <p class="mono footer-meta">
+      <p class="footer-meta">
         Built only from institutional sources, rebuilt as new documents appear.
         <a href="/about">Methodology</a> &middot;
         <a href="/about#briefing">Request a briefing</a>
@@ -105,6 +105,10 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       .site-footer p {
         max-width: var(--measure);
         margin: 0 0 var(--space-2);
+      }
+      .footer-meta {
+        font-family: var(--font-label);
+        letter-spacing: 0.01em;
       }
       .footer-meta a {
         color: var(--ink-muted);
