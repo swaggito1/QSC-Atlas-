@@ -61,10 +61,11 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     <style>
       .site-header {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
         gap: var(--space-6);
-        padding: var(--space-4) var(--space-6);
+        height: var(--header-h);
+        padding: 0 var(--space-6);
         border-bottom: 1px solid var(--hairline);
       }
       .wordmark {
