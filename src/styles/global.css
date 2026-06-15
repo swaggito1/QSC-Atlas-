@@ -34,10 +34,11 @@
   --border-strong: var(--ink);
   --focus-ring: var(--ink);
 
-  /* ---- Type families: grotesque operates, serif reads, mono is data --- */
-  --font-instrument: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-reading: 'Newsreader', Georgia, 'Times New Roman', serif;
-  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* ---- Type families: a distinctive grotesque operates, a serif reads, a
+     characterful mono carries data and small text --------------------------- */
+  --font-instrument: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-reading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   /* ---- Type scale (restrained) ---------------------------------------- */
   --text-2xs: 0.72rem;

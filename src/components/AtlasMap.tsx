@@ -1,17 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
-import { geoNaturalEarth1, geoPath } from 'd3-geo';
-import { feature } from 'topojson-client';
+import { geoOrthographic, geoPath, geoGraticule, geoDistance } from 'd3-geo';
 import { POSTURE_META, postureMeta, POSTURE_ORDER, ROLE_META, roleMeta, ROLE_ORDER, confidenceOpacity } from '../lib/process';
 import { legalStatusMeta, instrumentStatusMeta, deriveLegalStatus } from '../lib/regulation';
 import { parseNameRole, parseTimeline, parseList, parseRegulation } from '../lib/parse';
 
-// The QSC Atlas hero and instrument in one object: "The Single Baseline".
-// The real geoNaturalEarth1 choropleth rests on one hairline baseline, read as the
-// post-quantum standard the United States writes and almost everyone adopts. The only
-// fork is China, Russia and Vietnam, lifted onto a short detached rail beneath a torn
-// segment of the line. Nine engaged-but-unaligned states sit on the map as unfilled
-// outlines. Colour only ever encodes a coordination bloc or a standards role. Clicking
-// a country slides its profile in. No arcs, nothing moves for atmosphere.
+// The QSC Atlas hero and instrument: a slow ink-on-paper globe. Every country is a
+// point at its true position, coloured by the cryptographic bloc it coordinates with.
+// The United States is marked as the one standard-setter; China, Russia and Vietnam
+// stand apart inside small orbit rings, the only fork in the shared baseline; engaged
+// states are faint. No arcs, no lines drawn around the world. Colour only ever encodes
+// a bloc or a role. Hovering a country names it; clicking opens its profile.
 
 export interface ProfileData {
   iso3: string;
@@ -39,43 +37,28 @@ export interface DocData {
   tier?: string | null;
   url?: string | null;
 }
-type MapEntry = { iso3: string; name: string; posture: string; role: string | null; confidence: string | null };
+type NodeDatum = { iso3: string; name: string; lat: number; lng: number; posture: string | null; role: string | null; confidence: string | null };
 interface Props {
-  mapProcess: Record<string, MapEntry>;
+  nodes: NodeDatum[];
   profiles: Record<string, ProfileData>;
   documents: Record<string, DocData[]>;
 }
 
+const INK = '#1a1a1a';
 const POSTURE_HEX: Record<string, string> = Object.fromEntries(Object.values(POSTURE_META).map((m) => [m.key, m.color]));
 const ROLE_HEX: Record<string, string> = Object.fromEntries(Object.values(ROLE_META).map((m) => [m.key, m.color]));
+const AUBERGINE = POSTURE_META['sovereign-bloc'].color;
+const SETTER_RED = ROLE_META.setter.color;
+const NO_ROLE_HEX = '#cfcdc7';
+const MONO = "'Space Mono', ui-monospace, monospace";
 const NO_DATA = 'var(--process-none)';
 const NO_ROLE = 'var(--process-no-role)';
-const AUBERGINE = POSTURE_META['sovereign-bloc'].color; // #7a3b5e
-const SETTER_RED = ROLE_META.setter.color; // #a8322a
-const W = 980;
-const H = 500;
-const BASELINE_Y = Math.round(0.62 * H);
-const RAIL_GAP = 46;
-const RAIL_Y = BASELINE_Y + RAIL_GAP;
-const key = (id: unknown) => String(Number(id));
-
-// The sovereign trio and the setter, by approximate centroid lon/lat. Projected at
-// runtime so the marks land on the live projection exactly.
-const SOVEREIGN = [
-  { iso3: 'CHN', name: 'China', lonlat: [105, 35] as [number, number], conf: 'High' },
-  { iso3: 'RUS', name: 'Russia', lonlat: [100, 60] as [number, number], conf: 'High' },
-  { iso3: 'VNM', name: 'Vietnam', lonlat: [108, 16] as [number, number], conf: 'Low' },
-];
-const SETTER = { iso3: 'USA', lonlat: [-97, 38] as [number, number] };
 
 // ---- small design-system primitives (used by the slide-in profile) ----
 
 function PostureChip({ value }: { value?: string | null }) {
   const meta = postureMeta(value);
-  const base: React.CSSProperties = {
-    display: 'inline-flex', alignItems: 'center', gap: 'var(--space-2)',
-    fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-sm)', whiteSpace: 'nowrap',
-  };
+  const base: React.CSSProperties = { display: 'inline-flex', alignItems: 'center', gap: 'var(--space-2)', fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-sm)', whiteSpace: 'nowrap' };
   if (!meta) return <span style={{ ...base, color: 'var(--ink-muted)' }}>Not classified</span>;
   return (
     <span style={{ ...base, color: 'var(--ink)' }}>
@@ -87,18 +70,10 @@ function PostureChip({ value }: { value?: string | null }) {
 function RoleBadge({ value }: { value?: string | null }) {
   const meta = roleMeta(value);
   if (!meta) return null;
-  return (
-    <span style={{ fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-muted)', whiteSpace: 'nowrap' }}>
-      {meta.label}
-    </span>
-  );
+  return <span style={{ fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-muted)', whiteSpace: 'nowrap' }}>{meta.label}</span>;
 }
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 style={{ fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-sm)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--ink-muted)', margin: '0 0 var(--space-3)' }}>
-      {children}
-    </h2>
-  );
+  return <h2 style={{ fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-sm)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--ink-muted)', margin: '0 0 var(--space-3)' }}>{children}</h2>;
 }
 function DataPair({ label, value, mono = false }: { label: string; value: string; mono?: boolean }) {
   return (
@@ -120,9 +95,7 @@ function MigrationTimeline({ raw, posture, target }: { raw?: string | null; post
   const accent = postureMeta(posture)?.color ?? 'var(--ink)';
   const today = new Date().getFullYear();
   const phased = target === 'Phased (no fixed end)' || items.some((m) => typeof m.year === 'string');
-  if (!items.length) {
-    return <p style={{ color: 'var(--ink-muted)', fontStyle: 'italic', borderTop: '2px solid var(--hairline)', paddingTop: 'var(--space-2)', margin: 'var(--space-4) 0' }}>No published migration timeline.</p>;
-  }
+  if (!items.length) return <p style={{ color: 'var(--ink-muted)', fontStyle: 'italic', borderTop: '2px solid var(--hairline)', paddingTop: 'var(--space-2)', margin: 'var(--space-4) 0' }}>No published migration timeline.</p>;
   return (
     <figure style={{ margin: 'var(--space-5) 0 0' }}>
       <div style={{ position: 'relative', height: 40, marginTop: '1.1em' }}>
@@ -237,9 +210,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
           <Block>
             <SectionLabel>International standards processes</SectionLabel>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 'var(--space-3)' }}>
-              {participation.map((p, i) => (
-                <li key={i}><span style={{ fontWeight: 600 }}>{p.name}</span>{p.role && <span style={{ display: 'block', fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>{p.role}</span>}</li>
-              ))}
+              {participation.map((p, i) => (<li key={i}><span style={{ fontWeight: 600 }}>{p.name}</span>{p.role && <span style={{ display: 'block', fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>{p.role}</span>}</li>))}
             </ul>
           </Block>
         )}
@@ -248,9 +219,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
           <SectionLabel>Governmental and standards bodies</SectionLabel>
           {govActors.length ? (
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 'var(--space-3)' }}>
-              {govActors.map((a, i) => (
-                <li key={i}><a className="hb-link" href={orgLink(a.name)} style={{ fontWeight: 600, color: 'var(--ink)' }}>{a.name}</a>{a.role && <span style={{ display: 'block', fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>{a.role}</span>}</li>
-              ))}
+              {govActors.map((a, i) => (<li key={i}><a className="hb-link" href={orgLink(a.name)} style={{ fontWeight: 600, color: 'var(--ink)' }}>{a.name}</a>{a.role && <span style={{ display: 'block', fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>{a.role}</span>}</li>))}
             </ul>
           ) : <p style={{ margin: 0, color: 'var(--ink-muted)', fontStyle: 'italic' }}>No institutional actors identified.</p>}
         </Block>
@@ -267,9 +236,7 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
               ))}
             </ul>
           ) : <p style={{ margin: 0, color: 'var(--ink-muted)', fontStyle: 'italic' }}>No documents indexed for this country.</p>}
-          <p style={{ margin: 'var(--space-4) 0 0' }}>
-            <a className="hb-link" href={`/countries/${c.iso3.toLowerCase()}`} style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>Open the full profile page &rarr;</a>
-          </p>
+          <p style={{ margin: 'var(--space-4) 0 0' }}><a className="hb-link" href={`/countries/${c.iso3.toLowerCase()}`} style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-muted)' }}>Open the full profile page &rarr;</a></p>
         </Block>
 
         {c.lastUpdated && <p className="mono" style={{ marginTop: 'var(--space-8)', fontSize: 'var(--text-2xs)', color: 'var(--ink-faint)' }}>Last updated {c.lastUpdated}</p>}
@@ -278,39 +245,108 @@ function ProfilePanel({ profile, documents, onClose }: { profile: ProfileData; d
   );
 }
 
-export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
-  const [paths, setPaths] = useState<{ id: string; d: string }[]>([]);
-  const [marks, setMarks] = useState<{ setter: [number, number] | null; sov: { iso3: string; name: string; x: number; y: number; conf: string }[] }>({ setter: null, sov: [] });
-  const [error, setError] = useState(false);
-  const [hover, setHover] = useState<{ iso3: string; name: string; posture: string; role: string | null; x: number; y: number } | null>(null);
-  const [selectedIso, setSelectedIso] = useState<string | null>(null);
+export default function AtlasMap({ nodes, profiles, documents }: Props) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const hitsRef = useRef<{ x: number; y: number; n: NodeDatum }[]>([]);
+  const colorByRef = useRef<'posture' | 'role'>('posture');
   const [colorBy, setColorBy] = useState<'posture' | 'role'>('posture');
-  const [composed, setComposed] = useState(false);
-  const reduce = useRef(false);
+  const [hover, setHover] = useState<{ iso3: string; name: string; posture: string | null; role: string | null; x: number; y: number } | null>(null);
+  const [selectedIso, setSelectedIso] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
+  colorByRef.current = colorBy;
+
+  const counts: Record<string, number> = { 'NIST-bloc': 0, EU: 0, 'sovereign-bloc': 0, 'engaged-unaligned': 0 };
+  for (const n of nodes) if (n.posture && n.posture in counts) counts[n.posture]++;
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
 
   useEffect(() => {
-    reduce.current = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let alive = true;
-    (async () => {
-      try {
-        const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        const world = await res.json();
-        if (!alive) return;
-        const fc: any = feature(world, world.objects.countries);
-        const feats = fc.features.filter((f: any) => String(f.id) !== '010');
-        const projection = geoNaturalEarth1().fitSize([W, H], { type: 'FeatureCollection', features: feats } as any);
-        const gp = geoPath(projection as any);
-        setPaths(feats.map((f: any) => ({ id: key(f.id), d: gp(f) || '' })));
-        const setter = projection(SETTER.lonlat) as [number, number] | null;
-        const sov = SOVEREIGN.map((s) => { const p = projection(s.lonlat) as [number, number]; return { iso3: s.iso3, name: s.name, x: p[0], y: p[1], conf: s.conf }; });
-        setMarks({ setter, sov });
-        requestAnimationFrame(() => requestAnimationFrame(() => alive && setComposed(true)));
-      } catch {
-        if (alive) setError(true);
+    const wrap = wrapRef.current, canvas = canvasRef.current;
+    if (!wrap || !canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const reduce = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let W = 0, H = 0, CX = 0, CY = 0, R = 0, dpr = 1, raf = 0;
+    let lambda = 82;
+    const phi = -16;
+    const projection = geoOrthographic().clipAngle(90).precision(0.4);
+    const grat = geoGraticule().step([30, 30])();
+    let t0 = performance.now();
+    setReady(true);
+
+    function resize() {
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = wrap.clientWidth; H = wrap.clientHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      CX = W / 2; CY = H / 2; R = Math.min(W, H) * 0.45;
+      projection.scale(R).translate([CX, CY]);
+    }
+
+    function draw(now: number) {
+      const el = now - t0;
+      const intro = Math.min(1, el / 1600);
+      const eo = intro < 1 ? 1 - Math.pow(1 - intro, 3) : 1;
+      if (!reduce) lambda = 82 - el * 0.004;
+      projection.rotate([lambda, phi]);
+      const center: [number, number] = [-lambda, -phi];
+      const path = geoPath(projection as any, ctx as any);
+      ctx.clearRect(0, 0, W, H);
+      // sphere
+      ctx.beginPath(); path({ type: 'Sphere' } as any); ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.fill();
+      ctx.lineWidth = 1; ctx.strokeStyle = 'rgba(26,26,26,0.16)'; ctx.stroke();
+      // graticule
+      ctx.beginPath(); path(grat as any); ctx.lineWidth = 0.5; ctx.strokeStyle = `rgba(26,26,26,${0.07 * eo})`; ctx.stroke();
+      // nodes
+      const hits: { x: number; y: number; n: NodeDatum }[] = [];
+      let setterPt: [number, number] | null = null;
+      for (const n of nodes) {
+        const d = geoDistance([n.lng, n.lat], center);
+        if (d > Math.PI / 2 - 0.02) continue;
+        const p = projection([n.lng, n.lat]);
+        if (!p) continue;
+        const front = Math.cos(d);
+        const data = !!n.posture;
+        let col: string;
+        if (!data) col = INK;
+        else if (colorByRef.current === 'role') col = n.role ? ROLE_HEX[n.role] || NO_ROLE_HEX : NO_ROLE_HEX;
+        else col = POSTURE_HEX[n.posture as string] || INK;
+        const baseA = data ? confidenceOpacity(n.confidence) : 0.24;
+        const a = Math.max(0, baseA * eo * (0.5 + 0.5 * front));
+        const r = data ? 3.1 : 1.3;
+        ctx.globalAlpha = a; ctx.fillStyle = col;
+        ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 7); ctx.fill();
+        ctx.globalAlpha = 1;
+        if (data) hits.push({ x: p[0], y: p[1], n });
+        if (n.posture === 'sovereign-bloc') {
+          const sa = Math.min(1, front * 1.5) * eo;
+          ctx.strokeStyle = AUBERGINE;
+          ctx.globalAlpha = 0.6 * sa; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p[0], p[1], 7, 0, 7); ctx.stroke();
+          ctx.globalAlpha = 0.26 * sa; ctx.beginPath(); ctx.arc(p[0], p[1], 11, 0, 7); ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+        if (n.role === 'setter') setterPt = [p[0], p[1]];
       }
-    })();
-    return () => { alive = false; };
-  }, []);
+      hitsRef.current = hits;
+      if (setterPt) {
+        ctx.globalAlpha = eo;
+        ctx.strokeStyle = SETTER_RED; ctx.lineWidth = 1.6;
+        ctx.beginPath(); ctx.arc(setterPt[0], setterPt[1], 6.5, 0, 7); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(setterPt[0] + 6, setterPt[1] - 4); ctx.lineTo(setterPt[0] + 11, setterPt[1] - 8); ctx.lineWidth = 0.7; ctx.strokeStyle = 'rgba(26,26,26,0.42)'; ctx.stroke();
+        ctx.fillStyle = INK; ctx.font = `11px ${MONO}`; ctx.textAlign = 'left';
+        ctx.fillText('writes the standard', setterPt[0] + 14, setterPt[1] - 7);
+        ctx.globalAlpha = 1;
+      }
+      if (!reduce) raf = requestAnimationFrame(draw);
+    }
+
+    resize();
+    if (reduce) { t0 = performance.now() - 2000; draw(performance.now()); }
+    else { t0 = performance.now(); raf = requestAnimationFrame(draw); }
+    const onResize = () => { resize(); if (reduce) draw(performance.now()); };
+    window.addEventListener('resize', onResize);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', onResize); };
+  }, [nodes]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setSelectedIso(null); };
@@ -318,151 +354,69 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const metaFor = (id: string) => mapProcess[id] ?? null;
-  const isSovereign = (m: MapEntry | null) => !!m && m.posture === 'sovereign-bloc';
-  const isEngaged = (m: MapEntry | null) => !!m && m.posture === 'engaged-unaligned';
-
-  const fillFor = (m: MapEntry | null) => {
-    if (!m) return NO_DATA;
-    if (isEngaged(m)) return 'none'; // engaged states are outline-only: present but uncommitted
-    if (colorBy === 'role') return m.role ? ROLE_HEX[m.role] ?? NO_ROLE : NO_ROLE;
-    return POSTURE_HEX[m.posture] ?? NO_DATA;
+  const onMove = (e: React.MouseEvent) => {
+    const wrap = wrapRef.current; if (!wrap) return;
+    const rect = wrap.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    let best: { x: number; y: number; n: NodeDatum } | null = null, bd = 90;
+    for (const h of hitsRef.current) { const dx = h.x - mx, dy = h.y - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; best = h; } }
+    if (best) setHover({ iso3: best.n.iso3, name: best.n.name, posture: best.n.posture, role: best.n.role, x: best.x, y: best.y });
+    else if (hover) setHover(null);
   };
-  const fillOpacity = (m: MapEntry | null) => {
-    if (!m) return 1;
-    const base = confidenceOpacity(m.confidence);
-    return isSovereign(m) ? base * 0.32 : base; // the sovereign trio recede; the rail carries them
-  };
+  const onClick = () => { if (hover && profiles[hover.iso3]) setSelectedIso(hover.iso3); };
 
-  const open = (iso: string) => { if (profiles[iso]) setSelectedIso(iso); };
   const profile = selectedIso ? profiles[selectedIso] : null;
-
-  // Live counts, derived (never hardcoded).
-  const counts = { 'NIST-bloc': 0, EU: 0, 'sovereign-bloc': 0, 'engaged-unaligned': 0 } as Record<string, number>;
-  for (const m of Object.values(mapProcess)) if (m.posture in counts) counts[m.posture]++;
-  const total = Object.values(counts).reduce((a, b) => a + b, 0);
-
-  // The three sovereign countries share almost the same longitude, so space their
-  // tokens evenly on the rail (geographic order kept) rather than at colliding x.
-  const sovSorted = [...marks.sov].sort((a, b) => a.x - b.x);
-  const SOV_GAP = 84;
-  const sovCenter = sovSorted.length ? sovSorted.reduce((s, m) => s + m.x, 0) / sovSorted.length : 0;
-  const tokenX = sovSorted.map((_, i) => sovCenter + (i - (sovSorted.length - 1) / 2) * SOV_GAP);
-  const railMin = tokenX.length ? Math.min(...tokenX) - 24 : 0;
-  const railMax = tokenX.length ? Math.max(...tokenX) + 24 : 0;
-
-  const c1 = composed || reduce.current;
-  const t = (delayMs: number, dur = 'var(--dur)') => ({ transition: `opacity ${dur} var(--ease) ${delayMs}ms` });
-
   const legendItems = colorBy === 'role'
     ? ROLE_ORDER.map((k) => ({ color: ROLE_META[k].color, label: ROLE_META[k].label, outline: false }))
     : POSTURE_ORDER.map((k) => ({ color: POSTURE_META[k].color, label: POSTURE_META[k].label, outline: k === 'engaged-unaligned' }));
 
   return (
-    <div className="hb" style={{ position: 'relative' }}>
-      {error && <p style={{ color: 'var(--ink-muted)', fontStyle: 'italic', padding: 'var(--space-8)', textAlign: 'center' }}>The map could not be loaded. Check your connection and try again.</p>}
-      {!error && !paths.length && <div style={{ height: 360, display: 'grid', placeItems: 'center', color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)' }}>composing the world&hellip;</div>}
-      {!!paths.length && (
-        <div style={{ position: 'relative' }}>
-          <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="World map. Countries coloured by the cryptographic bloc they coordinate with. The United States writes the standard; China, Russia and Vietnam are the only fork; nine engaged states sit undecided as unfilled outlines." style={{ width: '100%', height: 'auto', display: 'block' }} onMouseLeave={() => setHover(null)}>
-            {/* the field */}
-            <g style={{ opacity: c1 ? 1 : 0, ...t(420, '700ms') }}>
-              {paths.map((p, idx) => {
-                const m = metaFor(p.id);
-                const isSel = m && m.iso3 === selectedIso;
-                const hovered = hover && m && hover.iso3 === m.iso3;
-                const eng = isEngaged(m);
-                return (
-                  <path key={`${p.id}-${idx}`} d={p.d}
-                    fill={fillFor(m)} fillOpacity={fillOpacity(m)}
-                    stroke={isSel || hovered ? 'var(--ink)' : eng ? 'var(--ink)' : 'var(--paper)'}
-                    strokeWidth={isSel ? 1.6 : hovered ? 1.4 : eng ? 0.6 : 0.5}
-                    strokeOpacity={eng ? 0.55 : 1}
-                    style={{ cursor: m ? 'pointer' : 'default' }}
-                    onMouseMove={(e) => { if (!m) return; const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect(); setHover({ iso3: m.iso3, name: m.name, posture: m.posture, role: m.role, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 }); }}
-                    onClick={() => m && open(m.iso3)} />
-                );
-              })}
-            </g>
-
-            {/* the baseline: the shared standard */}
-            <line x1={0} y1={BASELINE_Y} x2={W} y2={BASELINE_Y} stroke="var(--ink)" strokeWidth={1.4}
-              strokeDasharray={W} strokeDashoffset={c1 ? 0 : W} style={{ transition: 'stroke-dashoffset 620ms var(--ease)' }} />
-
-            {/* the fork: a torn segment, a detached rail, three tokens, ghost leaders */}
-            <g style={{ opacity: c1 ? 1 : 0, ...t(1180) }}>
-              {sovSorted.length > 0 && (
-                <>
-                  {/* the tear: the baseline broken into an aubergine dash over the sovereign span */}
-                  <line x1={railMin} y1={BASELINE_Y} x2={railMax} y2={BASELINE_Y} stroke={AUBERGINE} strokeWidth={1.8} strokeDasharray="2 4" />
-                  {/* the detached rail */}
-                  <line x1={railMin} y1={RAIL_Y} x2={railMax} y2={RAIL_Y} stroke={AUBERGINE} strokeWidth={1} strokeOpacity={0.7} />
-                  {sovSorted.map((s, i) => {
-                    const soft = s.conf === 'Low' ? 0.5 : 1;
-                    const tx = tokenX[i];
-                    return (
-                      <g key={s.iso3} style={{ cursor: 'pointer' }} onClick={() => open(s.iso3)}
-                        onMouseMove={(e) => { const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect(); setHover({ iso3: s.iso3, name: s.name, posture: 'sovereign-bloc', role: 'sovereign-developer', x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 }); }}>
-                        {/* ghost leader from the receded country down to its token */}
-                        <line x1={s.x} y1={s.y} x2={tx} y2={RAIL_Y - 6} stroke={AUBERGINE} strokeWidth={0.6} strokeOpacity={0.3 * soft} strokeDasharray="1 3" />
-                        <rect x={tx - 4.5} y={RAIL_Y - 4.5} width={9} height={9} fill={AUBERGINE} fillOpacity={soft} />
-                        <text x={tx} y={RAIL_Y + 18} textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10.5" fill="var(--ink)" fillOpacity={0.85 * soft}>{s.name}</text>
-                      </g>
-                    );
-                  })}
-                </>
-              )}
-            </g>
-
-            {/* the setter: one open ring on the United States, the only annotation */}
-            {marks.setter && (
-              <g style={{ opacity: c1 ? 1 : 0, ...t(1320) }}>
-                <circle cx={marks.setter[0]} cy={marks.setter[1]} r={7} fill="none" stroke={SETTER_RED} strokeWidth={1.5} />
-                <line x1={marks.setter[0] - 6} y1={marks.setter[1] - 2} x2={marks.setter[0] - 48} y2={marks.setter[1] - 30} stroke="var(--ink)" strokeWidth={0.7} strokeOpacity={0.45} />
-                <text x={marks.setter[0] - 52} y={marks.setter[1] - 31} textAnchor="end" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink)" fillOpacity={0.82}>writes the standard</text>
-              </g>
-            )}
-          </svg>
-
-          {/* hover tooltip */}
-          {hover && (
-            <div style={{ position: 'absolute', left: `${hover.x}%`, top: `${hover.y}%`, transform: 'translate(-50%, -130%)', pointerEvents: 'none', background: 'var(--ink)', color: 'var(--paper)', padding: '6px 10px', borderRadius: 'var(--radius)', fontFamily: 'var(--font-instrument)', fontSize: 'var(--text-xs)', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 8, zIndex: 5 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: colorBy === 'role' ? (hover.role ? ROLE_HEX[hover.role] ?? NO_ROLE : NO_ROLE) : POSTURE_HEX[hover.posture] ?? NO_DATA }} />
-              {hover.name}
-              <span style={{ opacity: 0.7 }}>{colorBy === 'role' ? (hover.role ? roleMeta(hover.role)?.label ?? '' : 'No standards role') : postureMeta(hover.posture)?.short ?? ''}</span>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* ---- instrument chrome: legend + toggle + readout, all over the map ---- */}
-      {!!paths.length && (
-        <div className="hb-chrome">
-          <div className="hb-key">
-            <div className="hb-coloredby">
-              <span className="hb-coloredby-lbl">Coloured by</span>
-              <button type="button" className={colorBy === 'posture' ? 'on' : ''} onClick={() => setColorBy('posture')} aria-pressed={colorBy === 'posture'}>coordination</button>
-              <button type="button" className={colorBy === 'role' ? 'on' : ''} onClick={() => setColorBy('role')} aria-pressed={colorBy === 'role'}>standards role</button>
-            </div>
-            <ul className="hb-legend" aria-label={`Legend: ${colorBy === 'role' ? 'standards role' : 'coordination bloc'}`}>
-              {legendItems.map((it) => (
-                <li key={it.label}>
-                  <span className="sw" style={it.outline ? { background: 'transparent', border: '1px solid var(--ink)' } : { background: it.color }} aria-hidden="true" />
-                  {it.label}
-                </li>
-              ))}
-              {colorBy === 'posture' && <li><span className="sw sw-none" aria-hidden="true" />No data</li>}
-            </ul>
+    <div className="hb">
+      <div className="hb-chrome">
+        <div className="hb-key">
+          <div className="hb-coloredby">
+            <span className="hb-coloredby-lbl">Coloured by</span>
+            <button type="button" className={colorBy === 'posture' ? 'on' : ''} onClick={() => setColorBy('posture')} aria-pressed={colorBy === 'posture'}>coordination</button>
+            <button type="button" className={colorBy === 'role' ? 'on' : ''} onClick={() => setColorBy('role')} aria-pressed={colorBy === 'role'}>standards role</button>
           </div>
-          <p className="hb-readout mono">
-            {total} countries classified &nbsp;·&nbsp; NIST bloc {counts['NIST-bloc']} &nbsp;·&nbsp; EU {counts.EU} (members) &nbsp;·&nbsp; sovereign {counts['sovereign-bloc']} &nbsp;·&nbsp; engaged {counts['engaged-unaligned']}
-            <br />
-            EU roadmap 2030 and 2035 &nbsp;·&nbsp; NIST bloc to 2035 &nbsp;·&nbsp; sovereign blocs run their own clock &nbsp;·&nbsp; engaged keep none
-          </p>
+          <ul className="hb-legend" aria-label={`Legend: ${colorBy === 'role' ? 'standards role' : 'coordination bloc'}`}>
+            {legendItems.map((it) => (
+              <li key={it.label}>
+                <span className="sw" style={it.outline ? { background: 'transparent', border: '1px solid var(--ink)' } : { background: it.color }} aria-hidden="true" />
+                {it.label}
+              </li>
+            ))}
+            {colorBy === 'posture' && <li><span className="sw sw-none" aria-hidden="true" />No data</li>}
+          </ul>
         </div>
-      )}
+        <p className="hb-readout mono">
+          {total} countries classified &nbsp;·&nbsp; NIST bloc {counts['NIST-bloc']} &nbsp;·&nbsp; EU {counts.EU} &nbsp;·&nbsp; sovereign {counts['sovereign-bloc']} &nbsp;·&nbsp; engaged {counts['engaged-unaligned']}
+          <br />
+          EU roadmap 2030 and 2035 &nbsp;·&nbsp; NIST bloc to 2035 &nbsp;·&nbsp; sovereign blocs run their own clock &nbsp;·&nbsp; engaged keep none
+        </p>
+      </div>
 
-      {/* slide-in profile */}
+      <div
+        className="hb-stage"
+        ref={wrapRef}
+        onMouseMove={onMove}
+        onMouseLeave={() => setHover(null)}
+        onClick={onClick}
+        role="img"
+        aria-label="A slowly rotating globe of countries coloured by the cryptographic bloc they coordinate with. The United States writes the standard; China, Russia and Vietnam stand apart inside orbit rings as the only fork; engaged-but-unaligned states are faint."
+        style={{ cursor: hover ? 'pointer' : 'default' }}
+      >
+        <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
+        {!ready && <div className="hb-loading mono">composing the world&hellip;</div>}
+        {hover && (
+          <div className="hb-tip" style={{ left: hover.x, top: hover.y }}>
+            <span className="d" style={{ background: colorBy === 'role' ? (hover.role ? ROLE_HEX[hover.role] || NO_ROLE_HEX : NO_ROLE_HEX) : POSTURE_HEX[hover.posture as string] || 'var(--ink-faint)' }} />
+            {hover.name}
+            <span className="m">{colorBy === 'role' ? (hover.role ? roleMeta(hover.role)?.label ?? '' : 'No standards role') : postureMeta(hover.posture)?.short ?? 'No data'}</span>
+          </div>
+        )}
+      </div>
+
       <div onClick={() => setSelectedIso(null)} aria-hidden={!profile} style={{ position: 'fixed', inset: 0, background: 'rgba(26,26,26,0.18)', zIndex: 30, opacity: profile ? 1 : 0, pointerEvents: profile ? 'auto' : 'none', transition: 'opacity var(--dur) var(--ease)' }} />
       <aside aria-hidden={!profile} aria-label="Country profile" style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 'min(var(--panel-width), 92vw)', background: 'var(--surface)', boxShadow: 'var(--shadow-panel)', zIndex: 31, overflowY: 'auto', transform: profile ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-panel) var(--ease)' }}>
         {profile && <ProfilePanel profile={profile} documents={documents[profile.iso3] ?? []} onClose={() => setSelectedIso(null)} />}
@@ -470,7 +424,7 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
 
       <style>{`
         .hb { display: flex; flex-direction: column; }
-        .hb-chrome { order: -1; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin: 0 0 var(--space-5); }
+        .hb-chrome { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin: 0 0 var(--space-4); }
         .hb-key { display: grid; gap: var(--space-3); }
         .hb-coloredby { display: flex; align-items: baseline; gap: var(--space-3); font-family: var(--font-mono); font-size: var(--text-xs); }
         .hb-coloredby-lbl { color: var(--ink-faint); text-transform: lowercase; }
@@ -481,7 +435,12 @@ export default function AtlasMap({ mapProcess, profiles, documents }: Props) {
         .hb-legend li { display: flex; align-items: center; gap: var(--space-2); }
         .hb-legend .sw { width: 0.85em; height: 0.85em; border-radius: var(--radius-sm); display: inline-block; flex: none; }
         .hb-legend .sw-none { background: var(--process-none); }
-        .hb-readout { text-align: right; font-size: var(--text-2xs); color: var(--ink-faint); line-height: 1.7; margin: 0; }
+        .hb-readout { text-align: right; font-size: var(--text-2xs); color: var(--ink-faint); line-height: 1.8; margin: 0; }
+        .hb-stage { position: relative; width: 100%; height: clamp(440px, 66vh, 680px); }
+        .hb-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-faint); font-size: var(--text-sm); }
+        .hb-tip { position: absolute; transform: translate(-50%, -150%); pointer-events: none; background: var(--ink); color: var(--paper); padding: 5px 9px; border-radius: var(--radius); font-family: var(--font-instrument); font-size: var(--text-xs); white-space: nowrap; display: flex; align-items: center; gap: 7px; z-index: 5; }
+        .hb-tip .d { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+        .hb-tip .m { opacity: 0.7; }
         .hb-link { color: var(--ink); text-decoration-color: var(--hairline); text-underline-offset: 2px; }
         .hb-link:hover { text-decoration-color: var(--ink); }
         .hb-close:hover { color: var(--ink); }

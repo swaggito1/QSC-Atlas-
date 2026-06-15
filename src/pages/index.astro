@@ -4,23 +4,21 @@ import Base from '../layouts/Base.astro';
 import AtlasMap from '../components/AtlasMap';
 import { getCollection } from 'astro:content';
 
-// The map is the hero. It is keyed by ISO numeric code (ccn3), which matches the
-// world-atlas topojson country ids. Build that lookup from countries that have a
-// coordination posture. Clicking a country slides its profile in.
+// The hero is a globe of country points. Each point sits at its real position
+// (world-countries latlng) and carries its real coordination posture from the data,
+// so the picture cannot drift from the classification. Clicking a point opens its profile.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
-const CCN3: Record<string, string> = Object.fromEntries(
-  worldCountries.map((c: any) => [c.cca3, c.ccn3]),
-);
 
 const countries = await getCollection('countries');
 const allDocs = await getCollection('documents');
 
-const mapProcess: Record<string, { iso3: string; name: string; posture: string; role: string | null; confidence: string | null }> = {};
 const profiles: Record<string, any> = {};
+const profileByIso: Record<string, any> = {};
 for (const c of countries) {
   const d = c.data;
+  profileByIso[d.iso3] = d;
   profiles[d.iso3] = {
     iso3: d.iso3,
     country: d.country,
@@ -34,21 +32,29 @@ for (const c of countries) {
     mainRegulation: d.mainRegulation,
     legalStatus: d.legalStatus,
     obligation: d.obligation,
-    dominantProcess: d.dominantProcess,
-    secondaryProcess: d.secondaryProcess,
     processParticipation: d.processParticipation,
     hybridDeployment: d.hybridDeployment,
     migrationTimeline: d.migrationTimeline,
     targetCompletion: d.targetCompletion,
     lastUpdated: d.lastUpdated,
   };
-  if (d.coordinationPosture) {
-    const ccn3 = CCN3[d.iso3];
-    if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole, confidence: d.confidence };
-  }
 }
 
-// Key documents per country (ISO3), most important tier first, capped for the panel.
+const nodes = worldCountries
+  .filter((c: any) => Array.isArray(c.latlng) && c.latlng.length === 2)
+  .map((c: any) => {
+    const p = profileByIso[c.cca3];
+    return {
+      iso3: c.cca3,
+      name: c.name?.common ?? c.cca3,
+      lat: c.latlng[0],
+      lng: c.latlng[1],
+      posture: p?.coordinationPosture ?? null,
+      role: p?.standardsRole ?? null,
+      confidence: p?.confidence ?? null,
+    };
+  });
+
 const TIER_RANK: Record<string, number> = { T1: 0, T2: 1, T3: 2, T4: 3 };
 const documents: Record<string, any[]> = {};
 for (const doc of allDocs) {
@@ -66,7 +72,6 @@ for (const iso of Object.keys(documents)) {
   documents[iso].sort((a, b) => (TIER_RANK[a.tier] ?? 9) - (TIER_RANK[b.tier] ?? 9));
   documents[iso] = documents[iso].slice(0, 12);
 }
-
 ---
 
 <Base title="QSC Atlas">
@@ -75,7 +80,7 @@ for (const iso of Object.keys(documents)) {
       One country writes the post-quantum standard. Almost everyone adopts it. Three
       states fork the baseline; nine have not chosen.
     </p>
-    <AtlasMap client:load mapProcess={mapProcess} profiles={profiles} documents={documents} />
+    <AtlasMap client:load nodes={nodes} profiles={profiles} documents={documents} />
   </section>
 </Base>
 
@@ -87,16 +92,16 @@ for (const iso of Object.keys(documents)) {
   }
   .hero-lede {
     font-family: var(--font-reading);
-    font-size: clamp(1.4rem, 1rem + 1.6vw, 2.1rem);
+    font-size: clamp(1.5rem, 1rem + 1.7vw, 2.3rem);
     line-height: var(--leading-snug);
     color: var(--ink);
-    max-width: 32ch;
-    margin: 0 0 var(--space-6);
+    max-width: 30ch;
+    margin: 0 0 var(--space-8);
     text-wrap: balance;
   }
   @media (max-width: 640px) {
     .hero-lede {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       max-width: none;
     }
   }
