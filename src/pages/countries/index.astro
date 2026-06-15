@@ -24,6 +24,15 @@ const unclassified = all.length - classified;
     <p class="status mono">
       {all.length} profiles · {classified} placed in a coordination bloc · the map shows the same set
     </p>
+    <input
+      type="search"
+      id="country-search"
+      class="country-search"
+      placeholder="Find a country"
+      aria-label="Find a country"
+      autocomplete="off"
+    />
+    <p class="no-match mono" id="no-match" hidden>No country matches that name.</p>
 
     {
       groups.map((g) => (
@@ -58,13 +67,61 @@ const unclassified = all.length - classified;
       )
     }
   </div>
+  <script is:inline>
+    (() => {
+      const input = document.getElementById('country-search');
+      if (!input) return;
+      const rows = Array.from(document.querySelectorAll('.row'));
+      const groups = Array.from(document.querySelectorAll('.bloc'));
+      const tail = document.querySelector('.tail');
+      const noMatch = document.getElementById('no-match');
+      const norm = (s) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+      input.addEventListener('input', () => {
+        const q = norm(input.value.trim());
+        let shown = 0;
+        for (const r of rows) {
+          const name = norm(r.querySelector('.row-name')?.textContent || '');
+          const match = !q || name.includes(q);
+          r.style.display = match ? '' : 'none';
+          if (match) shown++;
+        }
+        for (const g of groups) {
+          const visible = Array.from(g.querySelectorAll('.row')).some((r) => r.style.display !== 'none');
+          g.style.display = visible ? '' : 'none';
+        }
+        if (tail) tail.style.display = q ? 'none' : '';
+        if (noMatch) noMatch.hidden = !(q && shown === 0);
+      });
+    })();
+  </script>
 </Base>
 
 <style>
   .status {
     color: var(--ink-faint);
     font-size: var(--text-xs);
-    margin: 0 0 var(--space-12);
+    margin: 0 0 var(--space-4);
+  }
+  .country-search {
+    display: block;
+    width: 100%;
+    max-width: 22rem;
+    font-family: var(--font-instrument);
+    font-size: var(--text-base);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    margin: 0 0 var(--space-10);
+  }
+  .country-search::placeholder {
+    color: var(--ink-faint);
+  }
+  .no-match {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    margin: 0 0 var(--space-8);
   }
   .bloc {
     margin-bottom: var(--space-12);

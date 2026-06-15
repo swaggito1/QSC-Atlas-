@@ -1,0 +1,122 @@
+[
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum ...",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cybersecurity Resources",
+    "url": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/",
+    "description": "NSA does not recommend the usage of quantum key distribution and quantum cryptography for securing the transmission of data in National Security Systems (NSS) ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "GUIDANCE FOR POST- QUANTUM CRYPTOGRAPHY",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The Roadmap on Post Quantum Cryptography sets out recommendations based around three milestones: 31 Dec 2026: Initial national transition roadmaps and first ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum ...",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "In this post, we will explore the magnitude and complexity of the transition to PQC confronting organizations and the guidance federal agencies ...",
+    "markdown": ""
+  },
+  {
+    "title": "Next steps in preparing for post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
+    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "markdown": ""
+  },
+  {
+    "title": "Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+    "description": "The key milestones are: By 2028, By 2031, By 2035, Complete migration to PQC of all your systems, services and products.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography (PQC)",
+    "url": "https://www.iisf.ie/Post-Quantum-Cryptography",
+    "description": "Accelerating developments in quantum computing pose new challenges to cybersecurity. The rise of quantum computers has the potential to ...",
+    "markdown": ""
+  },
+  {
+    "title": "The Quantum Computing Threat to Cryptocurrency in Sierra Leone",
+    "url": "https://bmic.ai/sl/news/quantum-computing-threat-2026/",
+    "description": "How to Migrate Your Crypto to Quantum-Safe Platforms — A Step-by-Step Guide for Sierra Leone. Complete step-by-step guide for Sierra Leone ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
+    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
+    "description": "Post-quantum cryptography safeguards long-lived data against emerging quantum-enabled risks that threaten today's encryption.",
+    "markdown": ""
+  },
+  {
+    "title": "India Reveals National Plan for Quantum-Safe Security",
+    "url": "https://thequantuminsider.com/2026/02/09/india-reveals-national-plan-for-quantum-safe-security/",
+    "description": "India's proactive approach to quantum safety is reflected in its strategic roadmap, which aims to make India a leader in both quantum technology ...",
+    "markdown": ""
+  },
+  {
+    "title": "Andrzej Bugowski's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/andrzej-bugowski_a-coordinated-implementation-roadmap-for-activity-7397540890157776898-TY-p",
+    "description": "To ensure a seamless transition to post-quantum #cryptography before 2030, your organization should follow a coordinated approach.",
+    "markdown": ""
+  },
+  {
+    "title": "Key Steps to Prepare for Quantum Security - SISA",
+    "url": "https://sisa.ai/resource/cyberpedia/key-steps-to-prepare-for-quantum-security-a-strategic-approach-to-transition",
+    "description": "The roadmap should include a clear plan for selecting and implementing PQC algorithms, as well as considerations for regulatory compliance. This ensures that ...",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
+    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "markdown": ""
+  }
+]

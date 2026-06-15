@@ -36,31 +36,41 @@ const roleDef: Record<string, string> = {
       country coordinates with; a badge on its profile shows whose algorithms it actually runs.
     </p>
 
-    <h3>Coordination posture, the map colour</h3>
-    <dl class="ref">
-      {
-        POSTURE_ORDER.map((k) => (
-          <div class="ref-row" style={`--c:${POSTURE_META[k].color}`}>
-            <span class="ref-sw" aria-hidden="true" />
-            <dt>{POSTURE_META[k].label}</dt>
-            <dd class="prose">{postureDef[k]}</dd>
-          </div>
-        ))
-      }
-    </dl>
+    <details class="disc">
+      <summary>
+        <span class="disc-title">Coordination posture, the map colour</span>
+        <span class="disc-mark" aria-hidden="true" />
+      </summary>
+      <dl class="ref">
+        {
+          POSTURE_ORDER.map((k) => (
+            <div class="ref-row" style={`--c:${POSTURE_META[k].color}`}>
+              <span class="ref-sw" aria-hidden="true" />
+              <dt>{POSTURE_META[k].label}</dt>
+              <dd class="prose">{postureDef[k]}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </details>
 
-    <h3>Standards role, the profile badge</h3>
-    <dl class="ref">
-      {
-        ROLE_ORDER.map((k) => (
-          <div class="ref-row" style={`--c:${ROLE_META[k].color}`}>
-            <span class="ref-sw" aria-hidden="true" />
-            <dt>{ROLE_META[k].label}</dt>
-            <dd class="prose">{roleDef[k]}</dd>
-          </div>
-        ))
-      }
-    </dl>
+    <details class="disc">
+      <summary>
+        <span class="disc-title">Standards role, the profile badge</span>
+        <span class="disc-mark" aria-hidden="true" />
+      </summary>
+      <dl class="ref">
+        {
+          ROLE_ORDER.map((k) => (
+            <div class="ref-row" style={`--c:${ROLE_META[k].color}`}>
+              <span class="ref-sw" aria-hidden="true" />
+              <dt>{ROLE_META[k].label}</dt>
+              <dd class="prose">{roleDef[k]}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </details>
 
     <p class="prose ref-note">
       Confidence is shown with every classification and sets how strongly a country is coloured, so a
@@ -74,7 +84,7 @@ const roleDef: Record<string, string> = {
       tailored to your organisation or sector, get in touch.
     </p>
     <p>
-      <a class="briefing-link" href="mailto:hello@example.com?subject=QSC%20Atlas%20briefing">
+      <a class="briefing-link" href="mailto:swann.ashworth@ceps.eu?subject=QSC%20Atlas%20briefing">
         Request a briefing
       </a>
     </p>
@@ -96,6 +106,65 @@ const roleDef: Record<string, string> = {
     letter-spacing: var(--tracking-label);
     color: var(--ink-muted);
     margin: var(--space-10) 0 var(--space-4);
+  }
+  .disc {
+    margin-top: var(--space-4);
+  }
+  .disc summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .disc summary::-webkit-details-marker {
+    display: none;
+  }
+  .disc-title {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+  }
+  .disc summary:hover .disc-title {
+    color: var(--ink);
+  }
+  .disc-mark {
+    position: relative;
+    width: 0.85em;
+    height: 0.85em;
+    flex: none;
+  }
+  .disc-mark::before,
+  .disc-mark::after {
+    content: '';
+    position: absolute;
+    background: var(--ink-muted);
+  }
+  .disc-mark::before {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1.5px;
+    margin-top: -0.75px;
+  }
+  .disc-mark::after {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1.5px;
+    margin-left: -0.75px;
+    transition: opacity var(--dur) var(--ease);
+  }
+  .disc[open] .disc-mark::after {
+    opacity: 0;
+  }
+  .disc .ref {
+    margin: 0 0 var(--space-6);
   }
   .lead {
     font-size: var(--text-lg);

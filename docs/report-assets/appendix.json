@@ -1,0 +1,542 @@
+[
+ {
+  "country": "Argentina",
+  "iso3": "ARG",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Australia",
+  "iso3": "AUS",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "PSPF Policy 11 (Robust ICT systems) applying the Information Security Manual; Security of Critical Infrastructure Act 2018 (risk management programme); ASD/ACSC post-quantum cryptography guidance",
+  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. Neither instrument compels post-quantum migration: PQC is addressed through ASD/ACSC guidance aligned to the NIST algorithms, on an indicative timeline to 2030, with no binding obligation.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Austria",
+  "iso3": "AUT",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Bahrain",
+  "iso3": "BHR",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Belgium",
+  "iso3": "BEL",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Brazil",
+  "iso3": "BRA",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "ITI Normative Instruction No. 35/2026 (DOC-ICP-01.01), post-quantum algorithms in ICP-Brasil; GSI OSIC 15/2024 emerging-technologies cybersecurity guidance",
+  "obligation": "Entities operating within the national public-key infrastructure (ICP-Brasil) and the GOV.BR advanced electronic signature must follow the cryptographic standards in ITI Normative Instruction No. 35/2026, which introduces the NIST post-quantum algorithms ML-DSA (FIPS 204) and ML-KEM into the accepted suites. The obligation is scoped to participants in the official PKI rather than the whole economy. Institutional Security Office guidance recommending wider post-quantum migration planning is advisory.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Brunei",
+  "iso3": "BRN",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Low"
+ },
+ {
+  "country": "Bulgaria",
+  "iso3": "BGR",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Canada",
+  "iso3": "CAN",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Treasury Board Security Policy Implementation Notice: Migrating the Government of Canada to Post-Quantum Cryptography (2025); Canadian Centre for Cyber Security roadmap ITSM.40.001 and guidance ITSAP.00.017",
+  "obligation": "Federal departments only: the Treasury Board Security Policy Implementation Notice, effective 9 October 2025 under the Policy on Government Security and the Policy on Service and Digital, requires Government of Canada systems that use cryptography to migrate to post-quantum cryptography, with a high-level migration plan due by April 2026, high-priority systems migrated by the end of 2031 and all remaining systems by 2035. The Cyber Centre roadmap (ITSM.40.001) and quantum-threat guidance (ITSAP.00.017) set the recommended method and align to the NIST standards. There is no economy-wide mandate on private organisations.",
+  "conf": "High"
+ },
+ {
+  "country": "Chile",
+  "iso3": "CHL",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Medium"
+ },
+ {
+  "country": "China",
+  "iso3": "CHN",
+  "posture": "Sovereign bloc",
+  "role": "Sovereign developer",
+  "legal": "Binding",
+  "reg": "Cryptography Law of the PRC (2020); SM-series (SM2/SM3/SM4/SM9) commercial cryptography standards; Multi-Level Protection Scheme, level 3+ domestic algorithms; NGCC programme for sovereign PQC standards (2025)",
+  "obligation": "Critical information infrastructure operators must use domestic (SM-series) algorithms under the Cryptography Law and the Multi-Level Protection Scheme; sovereign post-quantum standards are in development through the NGCC programme and not yet mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Croatia",
+  "iso3": "HRV",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Cyprus",
+  "iso3": "CYP",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Czechia",
+  "iso3": "CZE",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Denmark",
+  "iso3": "DNK",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Djibouti",
+  "iso3": "DJI",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Low"
+ },
+ {
+  "country": "Estonia",
+  "iso3": "EST",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Finland",
+  "iso3": "FIN",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "France",
+  "iso3": "FRA",
+  "posture": "EU roadmap",
+  "role": "Standard-contextualiser",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); ANSSI PQC migration roadmap (2022; phases 2025/2030/2035); ANSSI Common Criteria security visa, PQC requirements",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; products seeking ANSSI certification must meet its PQC requirements, including mandatory hybridisation, by the visa deadlines (2027 sensitive products, 2030 all certified products).",
+  "conf": "High"
+ },
+ {
+  "country": "Germany",
+  "iso3": "DEU",
+  "posture": "EU roadmap",
+  "role": "Standard-contextualiser",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); BSI TR-02102 technical guidelines; BSI migration roadmap and recommendations",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; the BSI technical guidelines (TR-02102) set the recommended algorithms and hybrid deployment that public-sector procurement and certification follow, though the guidelines are not themselves statute.",
+  "conf": "High"
+ },
+ {
+  "country": "Greece",
+  "iso3": "GRC",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Hungary",
+  "iso3": "HUN",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "India",
+  "iso3": "IND",
+  "posture": "NIST bloc",
+  "role": "Standard-contextualiser",
+  "legal": "Binding",
+  "reg": "SEBI Cybersecurity and Cyber Resilience Framework (CSCRF) for Regulated Entities; CERT-In Directions of 28 April 2022 under section 70B(6) of the IT Act 2000; CERT-In / MeitY / TEC post-quantum migration roadmap and technical reports",
+  "obligation": "Entities regulated by SEBI (stock exchanges, depositories, brokers, asset managers and other market intermediaries) must comply with the CSCRF, which is mandatory and includes maintaining a cryptographic-asset inventory and conducting post-quantum risk assessment. Separately, CERT-In's 2022 Directions impose legally binding general cyber security and incident-reporting duties across the economy. The wider move to the NIST post-quantum baseline is set out in the CERT-In, MeitY and TEC roadmap and technical reports, which are guidance rather than binding rules.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Indonesia",
+  "iso3": "IDN",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. National agencies have stated an ambition for cryptographic self-reliance and are preparing for migration, but no instrument or adopted standard is yet in place.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Ireland",
+  "iso3": "IRL",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Israel",
+  "iso3": "ISR",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Bank of Israel Banking Supervision letter on quantum-era preparedness (7 January 2025); INCD Organizational Cyber Readiness to the Post-Quantum Age (best practices)",
+  "obligation": "Supervised banking corporations must assess the suitability of their infrastructure for post-quantum encryption, map their cryptographic inventory and submit an initial preparedness plan with board-level approval to the Banking Supervision Department, within a year of the January 2025 letter. This obligation is confined to the banking sector. Israel National Cyber Directorate material applies economy-wide but is advisory, and no specific post-quantum algorithm is mandated nationally.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Italy",
+  "iso3": "ITA",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Japan",
+  "iso3": "JPN",
+  "posture": "NIST bloc",
+  "role": "Standard-contextualiser",
+  "legal": "Binding",
+  "reg": "CRYPTREC Ciphers List for e-Government procurement (LS-0001-2022R2); Common Standards for Cybersecurity Measures for Government Agencies; CRYPTREC Cryptographic Technology Guideline on Post-Quantum Cryptography (FY2024 edition); Liaison Council on the Use of Post-Quantum Cryptography in Government Agencies",
+  "obligation": "Government agencies procuring information systems must, under the Common Standards set by the Cybersecurity Strategic Headquarters, specify ciphers from the CRYPTREC Ciphers List in their procurement requirements, which makes the list binding by market access for government suppliers. This currently governs cryptography generally rather than mandating post-quantum algorithms; CRYPTREC has evaluated and is adding the NIST post-quantum algorithms (ML-KEM and others), and its post-quantum guideline remains advisory. There is no general post-quantum obligation on the private sector.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Latvia",
+  "iso3": "LVA",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Lithuania",
+  "iso3": "LTU",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Luxembourg",
+  "iso3": "LUX",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Malaysia",
+  "iso3": "MYS",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Cyber Security Act 2024 (Act 854); CyberSecurity Malaysia / NACSA Post-Quantum Cryptography Migration Framework",
+  "obligation": "The Cyber Security Act 2024, in force since 26 August 2024, places binding cyber security duties on designated national critical information infrastructure entities, including risk assessment, audit and incident reporting, but it does not mandate post-quantum cryptography specifically. Migration to the NIST post-quantum baseline is set out in the CyberSecurity Malaysia and NACSA Migration Framework, which is technical guidance and is not in itself legally binding.",
+  "conf": "High"
+ },
+ {
+  "country": "Malta",
+  "iso3": "MLT",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Netherlands",
+  "iso3": "NLD",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); NCSC-NL TLS guidelines; PQC Migration Handbook (AIVD, CWI, TNO, 2024)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; national guidance (NCSC TLS guidelines, the PQC Migration Handbook) sets the recommended approach and the government-wide QvC-Rijk programme coordinates public-sector migration.",
+  "conf": "High"
+ },
+ {
+  "country": "New Zealand",
+  "iso3": "NZL",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Protective Security Requirements (PSR) mandatory requirements; New Zealand Information Security Manual (NZISM) post-quantum preparation guidance (Section 2.4)",
+  "obligation": "Government agencies covered by the Protective Security Requirements (a Cabinet direction binding on public service departments and other mandated agencies, not a statute) must manage information security in line with the PSR's mandatory requirements and report annually on compliance. The post-quantum element is advisory only: NZISM Section 2.4 directs agencies to inventory cryptographically protected assets and plan migration to post-quantum standards referencing the NIST work, and compliance with the NZISM is not required as a matter of law. No obligation falls on the wider economy.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Norway",
+  "iso3": "NOR",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Cryptographic Security Regulation (Forskrift om kryptosikkerhet, 2018, no. 2055) under the National Security Act (sikkerhetsloven); Digital Security Act (Digitalsikkerhetsloven), implementing the NIS Directive (EU) 2016/1148, in force 1 October 2025; NSM quantum migration programme and Cryptographic Recommendations",
+  "obligation": "Binding law governs Norway's cryptographic and cyber posture: under the Security Act and its Cryptographic Security Regulation, NSM approves the cryptographic systems that protect classified information, and the Digital Security Act imposes cyber-risk duties on essential and digital service providers. Neither instrument mandates post-quantum cryptography specifically; the PQC content sits in NSM's quantum migration programme and Cryptographic Recommendations, which advise organisations to plan and carry out migration to quantum-resistant cryptography but attach no legal obligation. As an EEA state, Norway has adopted the NIS1 framework as national law and tracks NIS2 for future incorporation.",
+  "conf": "Low"
+ },
+ {
+  "country": "Poland",
+  "iso3": "POL",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Portugal",
+  "iso3": "PRT",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Romania",
+  "iso3": "ROU",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Russia",
+  "iso3": "RUS",
+  "posture": "Sovereign bloc",
+  "role": "Sovereign developer",
+  "legal": "Binding",
+  "reg": "GOST R 34.10-2012 / 34.12-2015 national cryptographic standards; FSB / TC26 cryptographic regulation; Indigenous PQC candidates (Shipovnik, Hypericum, Codiaeum)",
+  "obligation": "State and regulated systems must use the national GOST cryptographic suite certified under FSB oversight; post-quantum GOST standardisation is in progress and not yet mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Saudi Arabia",
+  "iso3": "SAU",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NCA National Cryptographic Standards (NCS-1:2020); NCA consultation adding post-quantum algorithms, RNGs and QKD to the NCS; CST Securing Data in the Quantum Computing Era (ICT sector)",
+  "obligation": "Government entities and critical national infrastructure must meet the National Cybersecurity Authority's minimum cryptographic requirements set in the National Cryptographic Standards (NCS-1:2020), which the NCA is mandated to enforce. The standard already carries a post-quantum cryptography appendix, and the NCA has run a public consultation to add post-quantum algorithms; until that update is finalised, no specific post-quantum algorithm is yet mandated. Communications, Space and Technology Commission material for the ICT sector is advisory only.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Singapore",
+  "iso3": "SGP",
+  "posture": "NIST bloc",
+  "role": "Standard-contextualiser",
+  "legal": "Soft law only",
+  "reg": "CSA Quantum-Safe Handbook and Quantum Readiness Index; MAS Advisory on Addressing the Cybersecurity Risks Associated with Quantum (MAS/TCRS/2024/01); IMDA reference specifications for quantum-safe and QKD networks (draft)",
+  "obligation": "No organisation in Singapore is legally required to adopt post-quantum cryptography. The CSA Quantum-Safe Handbook advises critical information infrastructure owners and government agencies to inventory cryptographic assets and plan migration to the NIST post-quantum baseline, and the MAS advisory makes the same recommendations to financial institutions, but both are advisory only and carry no enforceable obligation.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Slovakia",
+  "iso3": "SVK",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Slovenia",
+  "iso3": "SVN",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "South Korea",
+  "iso3": "KOR",
+  "posture": "NIST bloc",
+  "role": "Standard-contextualiser",
+  "legal": "Binding",
+  "reg": "KCMVP cryptographic module validation (government); KpqC national algorithm selections (2025: NTRU+, SMAUG-T, AIMer, HAETAE); MSIT national PQC transition programme (2025-2035)",
+  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Spain",
+  "iso3": "ESP",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Sweden",
+  "iso3": "SWE",
+  "posture": "EU roadmap",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h); DORA, Regulation (EU) 2022/2554 (financial sector); Commission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap; NIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035)",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "conf": "High"
+ },
+ {
+  "country": "Thailand",
+  "iso3": "THA",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Medium"
+ },
+ {
+  "country": "Türkiye",
+  "iso3": "TUR",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding PQC obligation; activity is a national authority awareness programme only.",
+  "conf": "Low"
+ },
+ {
+  "country": "Ukraine",
+  "iso3": "UKR",
+  "posture": "Engaged, unaligned",
+  "role": "",
+  "legal": "None",
+  "reg": "",
+  "obligation": "No binding post-quantum obligation is on record. Engagement to date is academic and convening activity, with no national standard, instrument, or migration timeline adopted.",
+  "conf": "Low"
+ },
+ {
+  "country": "United Arab Emirates",
+  "iso3": "ARE",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "National Encryption Policy and its executive regulation; National Post-Quantum Migration Programme and national Crypto Discovery Tool; DESC Post-Quantum Cryptography Guideline (Dubai)",
+  "obligation": "Government entities must hold formally approved plans to migrate from traditional encryption (RSA, ECC and similar) to post-quantum cryptography under the National Encryption Policy and its executive regulation, approved in November 2025, and are expected to maintain an inventory of cryptographic assets and build crypto-agility into new systems. The mandate is a migration obligation overseen by the Cyber Security Council, not the adoption of a national algorithm. The Dubai Electronic Security Center guideline applies within the emirate of Dubai and is advisory.",
+  "conf": "Medium"
+ },
+ {
+  "country": "United Kingdom",
+  "iso3": "GBR",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Binding",
+  "reg": "Network and Information Systems Regulations 2018; Cyber Assessment Framework (CAF); NCSC post-quantum cryptography migration timelines and guidance (to 2035)",
+  "obligation": "There is no economy-wide post-quantum statute and no binding PQC mandate. The NIS Regulations 2018 place binding cyber security and resilience duties on designated operators of essential services and relevant digital service providers, assessed by sector regulators against the NCSC Cyber Assessment Framework, but these are technology-neutral and do not require post-quantum migration. PQC itself is addressed only through NCSC guidance, which directs migration to the NIST FIPS 203/204/205 algorithms on a phased national timeline to 2035 and carries no legal obligation.",
+  "conf": "High"
+ },
+ {
+  "country": "United States",
+  "iso3": "USA",
+  "posture": "NIST bloc",
+  "role": "Standard-setter",
+  "legal": "Binding",
+  "reg": "NSM-10 (2022); OMB M-23-02 cryptographic inventory (2022); Executive Order 14144 (2025; amended by EO 14306); FIPS 203/204/205 via CMVP validation for federal procurement; CNSA 2.0 for national security systems",
+  "obligation": "Federal agencies must inventory their cryptography, report annually, and migrate to the NIST FIPS algorithms on the mandated timelines; national security systems follow CNSA 2.0. There is no economy-wide private-sector mandate.",
+  "conf": "High"
+ },
+ {
+  "country": "Vietnam",
+  "iso3": "VNM",
+  "posture": "Sovereign bloc",
+  "role": "Sovereign developer",
+  "legal": "Binding",
+  "reg": "Law on Cipher 2011 (Law No. 05/2011/QH13); Law on Cybersecurity 2025 (Law No. 116/2025/QH15), in force 1 July 2026; Government Cipher Committee post-quantum research programme and VN-PQSign indigenous signature work",
+  "obligation": "Binding law governs Vietnam's cryptographic posture: the Law on Cipher 2011 establishes the Government Cipher Committee as the national cryptographic agency, and the Law on Cybersecurity 2025 sets cryptographic protection duties for critical information infrastructure operators from 1 July 2026. Neither instrument mandates post-quantum cryptography specifically. Vietnam's PQC work is indigenous research led by the Government Cipher Committee, including the domestic VN-PQSign signature scheme and proposed national quantum-resistant standards, which remains developmental and advisory rather than a mandated national suite.",
+  "conf": "Low"
+ }
+]

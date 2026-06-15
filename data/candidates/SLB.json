@@ -1,0 +1,128 @@
+[
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
+    "description": "Demonstrating practices to ease migration from quantum-vulnerable public-key cryptographic algorithms to NIST standardized post-quantum cryptographic algorithms ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative | CISA",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
+    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
+    "markdown": ""
+  },
+  {
+    "title": "[PDF] CMORG - Guidance for Post-Quantum Cryptography",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "markdown": ""
+  },
+  {
+    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
+    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
+    "description": "In this post, we will explore the magnitude and complexity of the transition to PQC confronting organizations and the guidance federal agencies ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "The Roadmap on Post Quantum Cryptography sets out recommendations based around three milestones: 31 Dec 2026: Initial national transition roadmaps and first ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Threat Readiness for Financial Institutions: A Guide to Post ...",
+    "url": "https://www.netbankaudit.com/resources/quantum-threat-readiness-for-financial-institutions",
+    "description": "Quantum Threat Readiness for Financial Institutions: A Guide to Post-Quantum Cryptography ... Government guidance emphasizes mitigating HNDL risk now and ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
+    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
+    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
+    "markdown": ""
+  },
+  {
+    "title": "UK's plan for post-quantum cryptography by 2035 - LinkedIn",
+    "url": "https://www.linkedin.com/posts/zygmuntlozinski_timelines-for-migration-to-post-quantum-cryptography-activity-7308425014054178818-T48Q",
+    "description": "UK timeline for Post-Quantum Cryptography published today by National Cyber Security Centre. 2025-2028 Cryptographic discovery and create a ...",
+    "markdown": ""
+  },
+  {
+    "title": "New guidance paves the way for organizations' migration to post ...",
+    "url": "https://www.aha.org/news/headline/2023-08-23-new-guidance-paves-way-organizations-migration-post-quantum-cryptography",
+    "description": "New guidance paves the way for organizations' migration to post-quantum cryptography. Aug 23, 2023 - 04:01 PM. Cybersecurity Lock on Gold Wall.",
+    "markdown": ""
+  },
+  {
+    "title": "[Project Description] Migration to Post-Quantum Cryptography - CSRC",
+    "url": "https://csrc.nist.rip/publications/detail/white-paper/2021/08/04/migration-to-post-quantum-cryptography/final",
+    "description": "The NIST National Cybersecurity Center of Excellence (NCCoE) is initiating the development of practices to ease the migration from the current ...",
+    "markdown": ""
+  },
+  {
+    "title": "Post Quantum Crypto for Government Systems - PQShield",
+    "url": "https://pqshield.com/post-quantum-crypto-for-government-systems/",
+    "description": "The BIS has introduced a structured roadmap for quantum readiness; Governments must prioritise quantum-safe security for critical systems ...",
+    "markdown": ""
+  },
+  {
+    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
+    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
+    "description": "Quantum-safe readiness relies on how cryptography is embedded across network infrastructure, identity systems, encrypted traffic flows, and long-lived data ...",
+    "markdown": ""
+  },
+  {
+    "title": "Roadmap for the migration to post-quantum cryptography for the ...",
+    "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+    "description": "This publication is the Cyber Centre's recommended roadmap for the migration of non-classified IT systems within the GC to use PQC.",
+    "markdown": ""
+  },
+  {
+    "title": "India Reveals National Plan for Quantum-Safe Security",
+    "url": "https://thequantuminsider.com/2026/02/09/india-reveals-national-plan-for-quantum-safe-security/",
+    "description": "India's proactive approach to quantum safety is reflected in its strategic roadmap, which aims to make India a leader in both quantum technology ...",
+    "markdown": ""
+  },
+  {
+    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "markdown": ""
+  },
+  {
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
+    "markdown": ""
+  },
+  {
+    "title": "Andrzej Bugowski's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/andrzej-bugowski_a-coordinated-implementation-roadmap-for-activity-7397540890157776898-TY-p",
+    "description": "To ensure a seamless transition to post-quantum #cryptography before 2030, your organization should follow a coordinated approach.",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Migration Roadmap - Post-Quantum Cryptography Coalition |",
+    "url": "https://pqcc.org/post-quantum-cryptography-migration-roadmap/",
+    "description": "A comprehensive and tailorable guide designed to assist organizations of any size in navigating the complexities of PQC migration.",
+    "markdown": ""
+  }
+]
