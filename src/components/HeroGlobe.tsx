@@ -131,14 +131,23 @@ export default function HeroGlobe({ mapProcess }: Props) {
     // Load the country shapes robustly: the bundled same-origin copy first (always
     // available in production), then the CDN as a fallback, with one retry each.
     // No single network hop can leave the globe stuck on the loading state.
+    async function fetchJson(url: string, ms: number) {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), ms);
+      try {
+        const res = await fetch(url, { signal: ctrl.signal });
+        if (res.ok) return await res.json();
+      } catch { /* aborted, offline, or bad response */ } finally {
+        clearTimeout(timer);
+      }
+      return null;
+    }
     async function loadWorld() {
       const sources = ['/world-110m.json', 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'];
       for (let attempt = 0; attempt < 2; attempt++) {
         for (const url of sources) {
-          try {
-            const res = await fetch(url);
-            if (res.ok) return await res.json();
-          } catch { /* try the next source */ }
+          const json = await fetchJson(url, 6000); // a stalled source can never hang the globe
+          if (json) return json;
         }
       }
       return null;
