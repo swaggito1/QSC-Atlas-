@@ -47,6 +47,8 @@ export default function HeroGlobe({ mapProcess }: Props) {
   const [hover, setHover] = useState<{ name: string; posture: string; role: string | null; x: number; y: number } | null>(null);
   const [dragging, setDragging] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
   colorByRef.current = colorBy;
 
   useEffect(() => {
@@ -126,25 +128,38 @@ export default function HeroGlobe({ mapProcess }: Props) {
       raf = requestAnimationFrame(frame);
     }
 
-    (async () => {
-      try {
-        const res = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        const world = await res.json();
-        if (!alive) return;
-        const fc: any = feature(world, world.objects.countries);
-        featsRef.current = fc.features.filter((f: any) => String(f.id) !== '010');
-        setLoaded(true);
-        resize();
-        if (reduce) { t0 = performance.now() - 2000; render(performance.now()); }
-        else { t0 = performance.now(); raf = requestAnimationFrame(frame); }
-      } catch {
-        /* leave the loading state */
+    // Load the country shapes robustly: the bundled same-origin copy first (always
+    // available in production), then the CDN as a fallback, with one retry each.
+    // No single network hop can leave the globe stuck on the loading state.
+    async function loadWorld() {
+      const sources = ['/world-110m.json', 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'];
+      for (let attempt = 0; attempt < 2; attempt++) {
+        for (const url of sources) {
+          try {
+            const res = await fetch(url);
+            if (res.ok) return await res.json();
+          } catch { /* try the next source */ }
+        }
       }
+      return null;
+    }
+
+    (async () => {
+      const world = await loadWorld();
+      if (!alive) return;
+      if (!world?.objects?.countries) { setFailed(true); return; }
+      const fc: any = feature(world, world.objects.countries);
+      featsRef.current = fc.features.filter((f: any) => String(f.id) !== '010');
+      setFailed(false);
+      setLoaded(true);
+      resize();
+      if (reduce) { t0 = performance.now() - 2000; render(performance.now()); }
+      else { t0 = performance.now(); raf = requestAnimationFrame(frame); }
     })();
     const onResize = () => { if (!featsRef.current.length) return; resize(); render(performance.now()); };
     window.addEventListener('resize', onResize);
     return () => { alive = false; cancelAnimationFrame(raf); window.removeEventListener('resize', onResize); };
-  }, [mapProcess]);
+  }, [mapProcess, reloadKey]);
 
   // Map a pointer position to the country (if any) under it, using the live rotation.
   const locate = (clientX: number, clientY: number) => {
@@ -229,7 +244,19 @@ export default function HeroGlobe({ mapProcess }: Props) {
         style={{ cursor: dragging ? 'grabbing' : hover ? 'pointer' : 'grab' }}
       >
         <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
-        {!loaded && <div className="hg-loading mono">composing the world&hellip;</div>}
+        {!loaded && !failed && <div className="hg-loading mono">composing the world&hellip;</div>}
+        {failed && (
+          <div className="hg-loading mono">
+            couldn&rsquo;t load the map.{' '}
+            <button
+              type="button"
+              className="hg-retry"
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); setFailed(false); setLoaded(false); setReloadKey((k) => k + 1); }}
+            >retry</button>
+          </div>
+        )}
         {hover && (
           <div className="hg-tip" style={{ left: hover.x, top: hover.y }}>
             <span className="d" style={{ background: colorBy === 'role' ? (hover.role ? ROLE_HEX[hover.role] || NO_ROLE_HEX : NO_ROLE_HEX) : POSTURE_HEX[hover.posture] || 'var(--ink-faint)' }} />
@@ -256,6 +283,8 @@ export default function HeroGlobe({ mapProcess }: Props) {
         .hg { display: flex; flex-direction: column; gap: var(--space-4); width: 100%; height: 100%; }
         .hg-stage { position: relative; width: 100%; flex: 1 1 auto; min-height: 0; touch-action: none; }
         .hg-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-faint); font-size: var(--text-sm); }
+        .hg-retry { font: inherit; color: var(--ink); background: none; border: none; padding: 0 0 2px; margin-left: 2px; cursor: pointer; border-bottom: 1px solid var(--ink-faint); }
+        .hg-retry:hover { border-bottom-color: var(--ink); }
         .hg-tip { position: absolute; transform: translate(-50%, -150%); pointer-events: none; background: var(--ink); color: var(--paper); padding: 5px 9px; border-radius: var(--radius); font-family: var(--font-instrument); font-size: var(--text-xs); white-space: nowrap; display: flex; align-items: center; gap: 7px; z-index: 5; }
         .hg-tip .d { width: 8px; height: 8px; border-radius: 50%; flex: none; }
         .hg-tip .m { opacity: 0.7; }
