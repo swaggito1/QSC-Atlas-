@@ -7,16 +7,16 @@
   "legal": "None",
   "reg": "",
   "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
-  "conf": "Medium"
+  "conf": "Low"
  },
  {
   "country": "Australia",
   "iso3": "AUS",
   "posture": "NIST bloc",
-  "role": "Standard-taker",
+  "role": "Standard-contextualiser",
   "legal": "Binding",
   "reg": "PSPF Policy 11 (Robust ICT systems) applying the Information Security Manual; Security of Critical Infrastructure Act 2018 (risk management programme); ASD/ACSC post-quantum cryptography guidance",
-  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. Neither instrument compels post-quantum migration: PQC is addressed through ASD/ACSC guidance aligned to the NIST algorithms, on an indicative timeline to 2030, with no binding obligation.",
+  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. The Information Security Manual, mandatory for these entities, embeds an end-of-2030 retirement of the classical asymmetric algorithms (RSA, Diffie-Hellman, ECDH, ECDSA) and approves the NIST post-quantum algorithms; for Commonwealth systems this makes migration to post-quantum cryptography effectively binding on a 2030 deadline, ahead of the global 2035 horizon, while the wider economy follows ASD guidance.",
   "conf": "Medium"
  },
  {
@@ -357,7 +357,7 @@
   "legal": "Binding",
   "reg": "Cryptographic Security Regulation (Forskrift om kryptosikkerhet, 2018, no. 2055) under the National Security Act (sikkerhetsloven); Digital Security Act (Digitalsikkerhetsloven), implementing the NIS Directive (EU) 2016/1148, in force 1 October 2025; NSM quantum migration programme and Cryptographic Recommendations",
   "obligation": "Binding law governs Norway's cryptographic and cyber posture: under the Security Act and its Cryptographic Security Regulation, NSM approves the cryptographic systems that protect classified information, and the Digital Security Act imposes cyber-risk duties on essential and digital service providers. Neither instrument mandates post-quantum cryptography specifically; the PQC content sits in NSM's quantum migration programme and Cryptographic Recommendations, which advise organisations to plan and carry out migration to quantum-resistant cryptography but attach no legal obligation. As an EEA state, Norway has adopted the NIS1 framework as national law and tracks NIS2 for future incorporation.",
-  "conf": "Low"
+  "conf": "Medium"
  },
  {
   "country": "Poland",
@@ -472,11 +472,11 @@
  {
   "country": "Thailand",
   "iso3": "THA",
-  "posture": "Engaged, unaligned",
-  "role": "",
-  "legal": "None",
+  "posture": "NIST bloc",
+  "role": "Standard-taker",
+  "legal": "Soft law only",
   "reg": "",
-  "obligation": "No binding post-quantum obligation is on record. Engagement to date is limited to awareness or research activity, with no national standard, instrument, or migration timeline adopted.",
+  "obligation": "There is no binding post-quantum mandate. Thailand's National Cyber Security Agency (NCSA), through its QUANTA platform, issues guidance recommending migration to the NIST post-quantum standards (ML-KEM, ML-DSA, SLH-DSA) on a phased national roadmap to 2035. This is guidance rather than a legal obligation.",
   "conf": "Medium"
  },
  {
@@ -523,7 +523,7 @@
   "country": "United States",
   "iso3": "USA",
   "posture": "NIST bloc",
-  "role": "Standard-setter",
+  "role": "Standard-maker",
   "legal": "Binding",
   "reg": "NSM-10 (2022); OMB M-23-02 cryptographic inventory (2022); Executive Order 14144 (2025; amended by EO 14306); FIPS 203/204/205 via CMVP validation for federal procurement; CNSA 2.0 for national security systems",
   "obligation": "Federal agencies must inventory their cryptography, report annually, and migrate to the NIST FIPS algorithms on the mandated timelines; national security systems follow CNSA 2.0. There is no economy-wide private-sector mandate.",

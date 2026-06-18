@@ -29,7 +29,7 @@ Two rules follow from this and govern everything below.
 2. **The prose is written in a policy register, not the thesis register.** The obligation
    and analytical note describe instruments, requirements, and gaps. They do not use the
    thesis's theoretical vocabulary (see the banned-terms list in section 5). The
-   setter / contextualiser / taker language stays in the tag, never in the note.
+   maker / contextualiser / taker language stays in the tag, never in the note.
 
 ---
 
@@ -180,7 +180,7 @@ stays internal.
 
 **Policy register, not thesis register.** The `obligation` and `analyticalNote` are policy
 prose. Do not use, in that prose: "governance of expectations", "tentative governance",
-"network of expectations", "scattered governance", "standard-setter / contextualiser /
+"network of expectations", "scattered governance", "standard-maker / contextualiser /
 taker", or "expectation" as a term of art. Those belong to the typology tag and to the
 thesis, not to the regulatory layer. Say what the instrument requires and where it falls
 short.

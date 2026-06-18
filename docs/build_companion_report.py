@@ -195,10 +195,10 @@ body("The Atlas is a static site with a real geographic map. Country data is hel
 # ---- 5 ----
 h1("5. What the map shows")
 body("Read by coordination bloc, the 54 recorded countries fall into four groups of very different size "
-  "(Figure 2). The EU coordinated roadmap is the largest at 27 members, the NIST-led bloc follows at 15, "
-  "nine countries are engaged but unaligned, and three form the sovereign bloc. Read by standards role "
-  "(Figure 3), the asymmetry is sharper still: one country makes the baseline, six contextualise it, 35 "
-  "take it, three build their own, and nine have not yet declared a role.")
+  "(Figure 2). The EU coordinated roadmap is the largest at 27 members, the NIST-led bloc follows at 16, "
+  "eight countries are engaged but unaligned, and three form the sovereign bloc. Read by standards role "
+  "(Figure 3), the asymmetry is sharper still: one country makes the baseline, seven contextualise it, 35 "
+  "take it, three build their own, and eight have not yet declared a role.")
 figure("fig2_blocs.png", "Figure 2. Countries by coordination bloc.", 14.5)
 figure("fig3_roles.png", "Figure 3. Countries by standards role: one maker, many takers.", 14.5)
 body("The United States is the sole standard-maker. To have transitioned as a maker is to write the "
@@ -210,13 +210,13 @@ body("The United States is the sole standard-maker. To have transitioned as a ma
   "NIS2 and DORA, to migrate on the shared 2030 and 2035 timeline, and to run the NIST algorithms with "
   "little national overlay.")
 body("The NIST-led bloc gathers the adopters outside the European coordination, including the United "
-  "Kingdom and Canada. Four of its members contextualise rather than simply take: India, Japan and "
-  "Singapore add national certification and sectoral guidance, and South Korea runs its own national "
+  "Kingdom and Canada. Five of its members contextualise rather than simply take: Australia, India, Japan "
+  "and Singapore add national certification and sectoral guidance, and South Korea runs its own national "
   "competition that selects algorithms cognate with the NIST suite while keeping interoperability with "
   "it. The sovereign bloc is the small group that genuinely forks the baseline. China, Russia and Vietnam "
   "develop and mandate their own algorithms, and to have transitioned this way is to accept the "
   "interoperability and market-access costs of a parallel standards track in exchange for cryptographic "
-  "independence. The nine engaged-but-unaligned states are active on the transition but have named no "
+  "independence. The eight engaged-but-unaligned states are active on the transition but have named no "
   "standard or timeline; recording them as undecided keeps the size of each committed bloc honest rather "
   "than inflating the NIST orbit with countries that have not chosen.")
 

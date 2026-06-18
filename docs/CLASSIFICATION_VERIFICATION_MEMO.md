@@ -17,7 +17,7 @@ Sources for the factual claims are listed at the end.
 
 Each coloured country was tested against the fixed rubric proposed in
 `METHODOLOGY_ISSUE.md`, in its decision order, and cross-read against the thesis
-standards typology (standard-setter, standard-contextualiser, standard-taker) carried
+standards typology (standard-maker, standard-contextualiser, standard-taker) carried
 in the Fable 5 handover and Chapter 6. The evidence base was: the country profiles
 (`data/profiles/*.json`) and their recorded classification basis; the Fable 5 country
 briefs; the non-Western standards note; and targeted verification of present-day facts
@@ -62,7 +62,7 @@ indigenous PQC candidates (Shipovnik, Hypericum, Codiaeum). South Korea selected
 own KpqC algorithms on 16 January 2025 (KEMs NTRU+ and SMAUG-T; signatures AIMer and
 HAETAE), although these are technically cognate with the NIST selections.
 
-**The thesis already has the right vocabulary.** The standard-setter (the United States,
+**The thesis already has the right vocabulary.** The standard-maker (the United States,
 through NIST) produces the baseline; standard-contextualisers (France, Germany, and in
 the handover's own words South Korea) adopt that baseline and add national requirements
 such as mandatory hybridisation, larger keys, or independent certification;
@@ -126,11 +126,11 @@ Two fields replace the one "Dominant Standards Process" camp:
 - *Coordination posture*: which collective transition a country belongs to.
   Values: `EU` / `NIST-bloc` / `sovereign-bloc` / `engaged-unaligned`.
 - *Standards role*: a country's relationship to the algorithms themselves.
-  Values: `setter` / `contextualiser` / `taker` / `sovereign-developer`.
+  Values: `setter` / `contextualiser` / `taker` / `sovereign-developer` (the `setter` key carries the display label Standard-maker).
 
 The map can colour by either. Coloured by coordination posture, the EU "bloc" finally
 says what it means: a coordination bloc, not a standards bloc. France becomes EU
-coordination, contextualiser role. The United States becomes NIST-bloc, setter role,
+coordination, contextualiser role. The United States becomes NIST-bloc, maker role,
 which the present data cannot express. China becomes sovereign-bloc, sovereign-developer.
 
 ### Implementation specification
@@ -141,7 +141,7 @@ Data (`data/profiles/*.json`), two new fields, with the legacy `dominantProcess`
 `secondaryProcess` retained during migration so nothing breaks:
 
 - `coordinationPosture`: one of `EU`, `NIST-bloc`, `sovereign-bloc`, `engaged-unaligned`.
-- `standardsRole`: one of `setter`, `contextualiser`, `taker`, `sovereign-developer`.
+- `standardsRole`: one of `setter`, `contextualiser`, `taker`, `sovereign-developer` (the `setter` value displays as Standard-maker).
 
 Code:
 
@@ -169,7 +169,7 @@ One camp with a disciplined rubric: apply the `METHODOLOGY_ISSUE.md` rubric stri
 in order (Sovereign tested first on the algorithm test above; then EU by membership; then
 NIST by attestation; Mixed only where a real national scheme coexists with NIST; a
 genuine grey state for engaged-but-uncommitted), and add a structured `standardsRole`
-field alongside so the setter / contextualiser / taker information is not lost. Rejected
+field alongside so the maker / contextualiser / taker information is not lost. Rejected
 because it keeps the axis collapse in the headline colour, which is the root problem.
 
 ---
@@ -220,13 +220,13 @@ algorithm test.
 
 ### 5.4 The NIST group (19 states)
 
-Three sub-groups: the setter, the clean takers, and the soft de-facto defaults.
+Three sub-groups: the maker, the clean takers, and the soft de-facto defaults.
 
-**The setter, mislabelled as a follower.**
+**The maker, mislabelled as a follower.**
 
 | Country | Atlas label | Verdict | Recommendation (provisional) |
 |---|---|---|---|
-| United States | NIST | **Structural** | Correct that it is in the NIST orbit, but it *is* NIST: the setter, through the FIPS process and CNSA 2.0. Colouring it the same as adopters erases the setter/taker distinction that the thesis turns on. Add role: setter. Raise confidence to High. |
+| United States | NIST | **Structural** | Correct that it is in the NIST orbit, but it *is* NIST: the maker, through the FIPS process and CNSA 2.0. Colouring it the same as adopters erases the maker/taker distinction that the thesis turns on. Add role: maker. Raise confidence to High. |
 
 **Clean takers and adopters (label holds).**
 
@@ -279,7 +279,7 @@ non-EU cases first as requested.
 
 **Relabel without changing the bloc (structural):**
 
-12. **United States**: mark as the setter, not an adopter.
+12. **United States**: mark as the maker, not an adopter.
 13. **The 25 plain EU states**: keep EU coordination, add the hidden algorithm axis (NIST, taker/contextualiser role).
 
 On the counts: of the five Sovereign countries, two are solid (China, Russia), one is
@@ -296,7 +296,7 @@ and is overstated for roughly eight to ten soft de-facto defaults.
 - **Backwards Sovereign**: France (no national algorithm) carries Sovereign; South Korea (four national algorithms) carries only Mixed.
 - **Same posture, three labels**: France (EU + Sovereign), Germany (EU + Mixed), Japan (Mixed) are all contextualisers.
 - **Self-contradicting basis**: Turkey and Ukraine profiles argue "grey beats wrong" in the basis text, then set the colour to NIST.
-- **Setter as follower**: the United States, which writes the standard, shares a colour with countries that merely adopt it.
+- **Maker as follower**: the United States, which writes the standard, shares a colour with countries that merely adopt it.
 - **Confidence not load-bearing**: China and Russia (clearest cases) sit at Medium, while several thin de-facto NIST calls also sit at Medium; the grade does not yet track evidential strength.
 - **Count drift**: `METHODOLOGY_ISSUE.md` cites 54 coloured countries; the profiles currently yield 55 with a `dominantProcess` (the supranational EU entity is colour-bearing). Reconcile whether supranational entities are counted as countries.
 
