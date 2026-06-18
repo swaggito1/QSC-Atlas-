@@ -1,6 +1,6 @@
 {
   "iso3": "AUS",
-  "summary": "Australia's transition is led by the Australian Signals Directorate, whose guidance sets transition timelines and milestones for organisations. Australia runs one of the most compressed official timelines, with migration to be complete by 2030.",
+  "summary": "Australia's transition is led by the Australian Signals Directorate (ASD). Its Information Security Manual, mandatory for Commonwealth entities, embeds an end-of-2030 retirement of the classical asymmetric algorithms (RSA, Diffie-Hellman, ECDH, ECDSA) and approves the NIST post-quantum algorithms (ML-KEM, ML-DSA), one of the most compressed official timelines and a step beyond the global 2035 horizon.",
   "migrationTimeline": "2026 | Transition plan in place\n2028 | Migration underway\n2030 | Migration complete",
   "targetCompletion": "2030",
   "govActors": "ASD | Australian Signals Directorate, national cyber security agency (ACSC)",
@@ -16,10 +16,10 @@
   "country": "Australia",
   "confidence": "Medium",
   "classificationBasis": "ASD guidance with timelines: ingested cyber.gov.au pages\n2026/2028/2030: backend brief reference line\ndominantProcess omitted: NIST link unattested in captured text (verifier)\ndominantProcess NIST restored: well-established and design-endorsed, provisional for review",
-  "verificationStatus": "Unverified",
+  "verificationStatus": "Corrected",
   "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker",
+  "standardsRole": "contextualiser",
   "mainRegulation": "PSPF Policy 11 (Robust ICT systems) applying the Information Security Manual | national | binding-by-market-access\nSecurity of Critical Infrastructure Act 2018 (risk management programme) | national | binding-law\nASD/ACSC post-quantum cryptography guidance | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. Neither instrument compels post-quantum migration: PQC is addressed through ASD/ACSC guidance aligned to the NIST algorithms, on an indicative timeline to 2030, with no binding obligation."
+  "obligation": "Non-corporate Commonwealth entities must, under PSPF Policy 11, secure their ICT systems by applying the cyber security principles and risk-based approach of the Australian Government Information Security Manual, which the PSPF makes mandatory under the Public Governance, Performance and Accountability Act 2013; responsible entities for critical infrastructure assets must also maintain a risk management programme addressing cyber and information security hazards under the Security of Critical Infrastructure Act 2018. The Information Security Manual, mandatory for these entities, embeds an end-of-2030 retirement of the classical asymmetric algorithms (RSA, Diffie-Hellman, ECDH, ECDSA) and approves the NIST post-quantum algorithms; for Commonwealth systems this makes migration to post-quantum cryptography effectively binding on a 2030 deadline, ahead of the global 2035 horizon, while the wider economy follows ASD guidance."
 }

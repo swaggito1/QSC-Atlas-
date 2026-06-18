@@ -23,5 +23,6 @@
   "standardsRole": "contextualiser",
   "mainRegulation": "KCMVP cryptographic module validation (government) | national | binding-by-market-access\nKpqC national algorithm selections (2025: NTRU+, SMAUG-T, AIMer, HAETAE) | national | guidance\nMSIT national PQC transition programme (2025-2035) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate."
+  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate.",
+  "secondaryProcess": "Sovereign"
 }

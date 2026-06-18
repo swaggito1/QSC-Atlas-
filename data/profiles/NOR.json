@@ -1,8 +1,8 @@
 {
   "iso3": "NOR",
-  "summary": "Norway's posture is led by the National Security Authority (NSM), which runs a dedicated quantum migration programme and issues cryptographic recommendations advising organisations to plan and carry out migration to quantum-resistant cryptography. NSM identifies the algorithms in use today that quantum computers would break and has opened a Centre for Applied Cryptology to strengthen national quantum-safe preparedness.",
+  "summary": "Norway's posture is led by the National Security Authority (NSM). Its Cryptographic Recommendations 2025 adopt the NIST post-quantum algorithms, ML-KEM-768 and 1024, ML-DSA-65 and 87, and SLH-DSA, with hybrid (combined classical and post-quantum) options, and NSM runs a national quantum-migration programme and a Centre for Applied Cryptology. It names today's RSA, ECDH, ECDSA and Diffie-Hellman as quantum-vulnerable.",
   "dominantProcess": "NIST",
-  "algorithms": "RSA, ECDH, ECDSA, Diffie-Hellman (named as quantum-vulnerable)",
+  "algorithms": "ML-KEM-768, ML-KEM-1024, ML-DSA-65, ML-DSA-87, SLH-DSA (NSM-recommended); RSA, ECDH, ECDSA, Diffie-Hellman named as quantum-vulnerable",
   "govActors": "NSM | Norwegian National Security Authority, runs the quantum migration programme and issues cryptographic recommendations\nResearch Council of Norway | Funds quantum computing strategy work referencing post-quantum cryptography",
   "dataStatus": "Partial",
   "provenance": [
@@ -16,12 +16,14 @@
     "Model 2026-06-14 (NIST-bloc / taker, Low): NSM runs a migration programme; explicit NIST PQC adoption is inferred, not attested. Thin."
   ],
   "country": "Norway",
-  "confidence": "Low",
+  "confidence": "Medium",
   "classificationBasis": "Lead institution + posture: NSM quantum migration section and cryptographic recommendations (multiple ingested NSM rows, incl. English-language version)\nVulnerable algorithms RSA/ECDH/ECDSA/Diffie-Hellman: NSM 'Vulnerable algorithms' row (these are the classical algorithms NSM names as quantum-vulnerable, not adopted PQC algorithms)\nCentre for Applied Cryptology: NSM announcement row\nResearch Council of Norway: QCNorway project-bank entry (flagged included:false, listed as a minor actor only)\ndominantProcess OMITTED: NSM summaries describe migration to quantum-resistant / post-quantum cryptography in general terms but do not name the NIST FIPS suite nor a Norwegian national scheme, so the camp is not clearly attested - grey rather than wrong\nNo standard families, hybrid stance, dated milestones or target completion stated in the ingested documents - all omitted\ndominantProcess re-classified NIST by best-available signal (medium): NSM's quantum-migration programme and cryptographic recommendations advise migration to quantum-resistant/post-quantum cryptography following international standards with no sovereign Norwegian scheme; NIST is the de facto global default for such states. Provisional, flagged for review",
-  "verificationStatus": "Unverified",
+  "verificationStatus": "Corrected",
   "coordinationPosture": "NIST-bloc",
   "standardsRole": "taker",
   "mainRegulation": "Cryptographic Security Regulation (Forskrift om kryptosikkerhet, 2018, no. 2055) under the National Security Act (sikkerhetsloven) | national | binding-law\nDigital Security Act (Digitalsikkerhetsloven), implementing the NIS Directive (EU) 2016/1148, in force 1 October 2025 | national | binding-law\nNSM quantum migration programme and Cryptographic Recommendations | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Binding law governs Norway's cryptographic and cyber posture: under the Security Act and its Cryptographic Security Regulation, NSM approves the cryptographic systems that protect classified information, and the Digital Security Act imposes cyber-risk duties on essential and digital service providers. Neither instrument mandates post-quantum cryptography specifically; the PQC content sits in NSM's quantum migration programme and Cryptographic Recommendations, which advise organisations to plan and carry out migration to quantum-resistant cryptography but attach no legal obligation. As an EEA state, Norway has adopted the NIS1 framework as national law and tracks NIS2 for future incorporation."
+  "obligation": "Binding law governs Norway's cryptographic and cyber posture: under the Security Act and its Cryptographic Security Regulation, NSM approves the cryptographic systems that protect classified information, and the Digital Security Act imposes cyber-risk duties on essential and digital service providers. Neither instrument mandates post-quantum cryptography specifically; the PQC content sits in NSM's quantum migration programme and Cryptographic Recommendations, which advise organisations to plan and carry out migration to quantum-resistant cryptography but attach no legal obligation. As an EEA state, Norway has adopted the NIS1 framework as national law and tracks NIS2 for future incorporation.",
+  "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
+  "hybridDeployment": "Recommended"
 }
