@@ -23,3 +23,7 @@ npm-debug.log*
 .vercel
 logs/
 data/analytical-notes.private.json
+
+# editor scratch / lock files
+.~lock.*#
+*.tmp

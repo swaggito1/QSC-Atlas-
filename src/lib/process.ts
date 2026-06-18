@@ -81,7 +81,7 @@ export interface RoleMeta {
 }
 
 export const ROLE_META: Record<StandardsRole, RoleMeta> = {
-  setter: { key: 'setter', label: 'Standard-setter', color: '#a8322a' },
+  setter: { key: 'setter', label: 'Standard-maker', color: '#a8322a' }, // key kept as 'setter' for data stability; display term is "Standard-maker"
   contextualiser: { key: 'contextualiser', label: 'Standard-contextualiser', color: '#b9762e' },
   taker: { key: 'taker', label: 'Standard-taker', color: '#4a6fa5' },
   'sovereign-developer': { key: 'sovereign-developer', label: 'Sovereign developer', color: '#7a3b5e' },

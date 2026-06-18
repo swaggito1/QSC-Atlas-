@@ -69,7 +69,7 @@ ab.add_run("The QSC Atlas maps, country by country, how governments are rebuildi
   "what the Atlas is, the standards-governance principles it rests on, and how to read its categories. "
   "It sets out a two-axis classification: a coordination posture, the collective transition a state "
   "belongs to, and a standards role, the state's relationship to the algorithms themselves. It explains "
-  "what it means for a state to have transitioned as a setter, a contextualiser, a taker, or a sovereign "
+  "what it means for a state to have transitioned as a maker, a contextualiser, a taker, or a sovereign "
   "developer, and why the coordination method and standards choice of each country carry theoretical, "
   "methodological, and geopolitical weight. The report documents the method behind the Atlas, including "
   "its use of AI assistance and its design for continuous updating, and classifies the 54 countries "
@@ -102,7 +102,7 @@ body("The Atlas rests on the standards-governance literature, which treats techn
   "instruments of power with distributional consequences rather than neutral specifications. Buthe and "
   "Mattli (2011) show how first-mover advantage, institutional access and technical capacity determine "
   "whose preferences become embedded in global rules: a body that issues a technically mature proposal "
-  "before competitors can mount an alternative sets the text around which others negotiate. Yates and "
+  "before competitors can mount an alternative writes the first draft around which others negotiate. Yates and "
   "Murphy (2019) trace the same pattern across a century of voluntary consensus standard-setting, in "
   "which widely adopted committee standards became de facto global norms without formal imposition.")
 body("The post-quantum case reproduces that pattern. When the United States National Institute of "
@@ -111,14 +111,17 @@ body("The post-quantum case reproduces that pattern. When the United States Nati
   "other jurisdictions either adopt or must interoperate with. Standards perform distinct economic "
   "functions, compatibility, quality, variety reduction, and information (Blind, 2013), and the "
   "post-quantum standards act chiefly as compatibility and quality standards. The comparative vocabulary "
-  "the Atlas uses, standard-setter, standard-contextualiser, and standard-taker, follows from the power "
-  "asymmetry that Buthe and Mattli (2011) describe rather than from a single published typology: a state "
-  "can set the baseline, adopt it as given, or occupy an intermediate position of contextualisation. "
+  "the Atlas uses, standard-maker, standard-contextualiser, and standard-taker, names three positions in "
+  "the power asymmetry that Buthe and Mattli (2011) analyse when they ask who wins and who loses as "
+  "standards are made: a state can make the baseline, adopt it as given, or occupy an intermediate "
+  "position of contextualisation. The term standard-maker is the Atlas's own. It follows Yates and Murphy "
+  "(2019), for whom standards are made through a consensus process by standardisers rather than decreed, "
+  "and it locates the power, with Buthe and Mattli (2011), in who makes the baseline that others adopt. "
   "Bradford's (2020) account of the "
   "Brussels Effect, in which European regulation diffuses globally through market access, is the "
   "instructive contrast: in cryptography the direction reverses, because the standards originate in "
   "Washington and travel through the global deployment of United States technology firms, while European "
-  "institutions contextualise rather than set.")
+  "institutions contextualise rather than make.")
 body("Sitting beneath the standards reading is the governance-of-expectations literature (Borup et al., "
   "2006). It explains how shared expectations about an uncertain future coordinate action when settled "
   "knowledge is unavailable (Konrad, 2006), and how that coordination can harden into binding commitment "
@@ -134,7 +137,7 @@ h1("3. The two-axis classification")
 body("Every recorded country is described on two dimensions. The coordination posture answers which "
   "collective transition the country belongs to, and takes one of four values: the EU coordinated "
   "roadmap, the NIST-led bloc, a sovereign bloc, or engaged but unaligned. The standards role answers the "
-  "country's relationship to the algorithms, and takes one of four values: standard-setter, "
+  "country's relationship to the algorithms, and takes one of four values: standard-maker, "
   "standard-contextualiser, standard-taker, or sovereign developer. The posture is the map colour; the "
   "role is a profile badge.")
 body("The two are kept separate because one label cannot carry both without losing information. An EU "
@@ -142,11 +145,11 @@ body("The two are kept separate because one label cannot carry both without losi
   "since no European alternative exists. Describing it with a single camp forces a choice between the club "
   "it belongs to and the technology it runs. Figure 1 shows the pattern across the 54 countries. The "
   "sovereign bloc and the engaged group each sit on a single role, but the NIST and EU blocs split across "
-  "roles: the United States is the lone setter inside the NIST bloc, France and Germany contextualise "
+  "roles: the United States is the lone maker inside the NIST bloc, France and Germany contextualise "
   "within the EU roadmap, and the majority of EU members are takers. That split is precisely what a "
   "one-colour scheme would hide.")
 figure("fig1_matrix.png", "Figure 1. The two-axis classification: coordination bloc by standards role (54 countries).", 16.0)
-body("Each value carries a plain meaning. A setter writes the baseline others adopt. A contextualiser "
+body("Each value carries a plain meaning. A maker writes the baseline others adopt. A contextualiser "
   "accepts that baseline but adds national requirements, such as mandatory hybridisation, larger key "
   "sizes, or independent certification. A taker adopts the baseline broadly as published. A sovereign "
   "developer designs and mandates its own algorithms. On the coordination side, the EU roadmap is a "
@@ -194,11 +197,11 @@ h1("5. What the map shows")
 body("Read by coordination bloc, the 54 recorded countries fall into four groups of very different size "
   "(Figure 2). The EU coordinated roadmap is the largest at 27 members, the NIST-led bloc follows at 15, "
   "nine countries are engaged but unaligned, and three form the sovereign bloc. Read by standards role "
-  "(Figure 3), the asymmetry is sharper still: one country sets the baseline, six contextualise it, 35 "
+  "(Figure 3), the asymmetry is sharper still: one country makes the baseline, six contextualise it, 35 "
   "take it, three build their own, and nine have not yet declared a role.")
 figure("fig2_blocs.png", "Figure 2. Countries by coordination bloc.", 14.5)
-figure("fig3_roles.png", "Figure 3. Countries by standards role: one setter, many takers.", 14.5)
-body("The United States is the sole standard-setter. To have transitioned as a setter is to write the "
+figure("fig3_roles.png", "Figure 3. Countries by standards role: one maker, many takers.", 14.5)
+body("The United States is the sole standard-maker. To have transitioned as a maker is to write the "
   "algorithms the rest of the world references and to bind one's own agencies to them, while the private "
   "sector follows through procurement and global product deployment rather than a single mandate. The EU "
   "coordinated roadmap is a coordination bloc, not a standards bloc: France and Germany contextualise the "
@@ -231,9 +234,9 @@ body("The methodological interest is that separating coordination from role avoi
   "baseline as the NIST bloc under a regulatory wrapper. The sources-only rule and the confidence grade "
   "keep the claims defensible, and the regulatory layer prevents a soft recommendation from being read as "
   "a binding rule. These choices are what allow the map to say only what the evidence supports.")
-body("The geopolitical interest is the most direct. Whoever sets the baseline holds structural power over "
+body("The geopolitical interest is the most direct. Whoever makes the baseline holds structural power over "
   "the terms on which everyone else secures their systems (Buthe and Mattli, 2011), which is why the "
-  "single-setter finding is the central fact of the field rather than a detail. The sovereign fork raises "
+  "single-maker finding is the central fact of the field rather than a detail. The sovereign fork raises "
   "the prospect of competing spheres of cryptographic interoperability, where divergence in the "
   "underlying standards becomes a barrier to market access. Trade agreements have themselves extended "
   "into regulatory territory in ways that distribute advantage to the already established (Rodrik, 2018). "
