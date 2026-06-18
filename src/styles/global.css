@@ -40,7 +40,7 @@
      reading) and Antic (small labels and the technical / numeric slots). */
   --font-instrument: 'Cabin', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-reading: 'Cabin', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono: 'Antic', system-ui, sans-serif; /* years, tier codes, hints - was a monospace */
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace; /* numeric and code-like data; tabular and aligned */
   --font-label: 'Antic', 'Cabin', system-ui, sans-serif; /* small uppercase labels and the footer */
 
   /* ---- Type scale (restrained) ---------------------------------------- */

@@ -1,12 +1,11 @@
 import { defineCollection, z } from 'astro:content';
-import { notionLoader, txt, num, sel, multi, date, bool, url } from './loaders/notion';
+import { notionLoader, txt, num, sel, date, bool, url } from './loaders/notion';
 
 // Notion DATA SOURCE (collection) IDs come from the environment (.env), falling
 // back to the known fixed IDs for this project. These are passed to dataSources.query.
 const DB = {
   countries: process.env.NOTION_DB_COUNTRIES ?? '562cfd22-fff9-422e-9683-83c14642b49f',
   documents: process.env.NOTION_DB_DOCUMENTS ?? 'a93c0811-fce2-4c11-b2ab-1c58998317b1',
-  blog: process.env.NOTION_DB_BLOG ?? '63e55bb6-8faa-4963-88ab-a5d2c2f1fe99',
 };
 
 // ATLAS_COUNTRIES -> one entry per country, keyed by ISO3.
@@ -42,6 +41,7 @@ const countries = defineCollection({
         mapY: num(p, 'Map Y'),
         lastUpdated: date(p, 'Last Updated'),
         dataStatus: sel(p, 'Data Status'),
+        verificationStatus: sel(p, 'Verification Status'),
       };
     },
   }),
@@ -68,6 +68,7 @@ const countries = defineCollection({
     mapY: z.number().nullable(),
     lastUpdated: z.string().nullable(),
     dataStatus: z.enum(['Complete', 'Partial', 'Placeholder']).nullable(),
+    verificationStatus: z.enum(['Unverified', 'Verified', 'Corrected']).nullable(),
   }),
 });
 
@@ -109,38 +110,4 @@ const documents = defineCollection({
   }),
 });
 
-// ATLAS_BLOG -> one entry per article. Only Published rows are loaded.
-// (Rendering the Notion page BODY is added in the blog build step.)
-const blog = defineCollection({
-  loader: notionLoader({
-    dataSourceId: DB.blog,
-    filter: { property: 'Status', select: { equals: 'Published' } },
-    map: (page) => {
-      const p = page.properties;
-      const title = txt(p, 'Title');
-      const slug = txt(p, 'Slug');
-      if (!title || !slug) return null;
-      return {
-        id: slug,
-        title,
-        slug,
-        published: date(p, 'Published'),
-        excerpt: txt(p, 'Excerpt'),
-        author: txt(p, 'Author'),
-        tags: multi(p, 'Tags'),
-        countriesReferenced: txt(p, 'Countries Referenced'),
-      };
-    },
-  }),
-  schema: z.object({
-    title: z.string(),
-    slug: z.string(),
-    published: z.string().nullable(),
-    excerpt: z.string().nullable(),
-    author: z.string().nullable(),
-    tags: z.array(z.string()),
-    countriesReferenced: z.string().nullable(),
-  }),
-});
-
-export const collections = { countries, documents, blog };
+export const collections = { countries, documents };

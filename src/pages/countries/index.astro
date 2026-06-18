@@ -49,7 +49,7 @@ const unclassified = all.length - classified;
                   {c.data.country}
                 </a>
                 <span class="row-role">
-                  {c.data.standardsRole && <RoleBadge value={c.data.standardsRole} />}
+                  {c.data.standardsRole && <RoleBadge value={c.data.standardsRole} short />}
                 </span>
                 <span class="row-year mono">{c.data.targetCompletion ?? ''}</span>
               </li>

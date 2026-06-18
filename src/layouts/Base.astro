@@ -16,12 +16,12 @@ const pageTitle = title === 'QSC Atlas' ? title : `${title} - QSC Atlas`;
 const nav = [
   { href: '/map', label: 'Map' },
   { href: '/countries', label: 'Countries' },
-  { href: '/analysis', label: 'Analysis' },
   { href: '/documents', label: 'Documents' },
   { href: '/about', label: 'About' },
 ];
 const path = Astro.url.pathname;
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
 <!doctype html>
@@ -56,6 +56,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
         <a href="/about">Methodology</a> &middot;
         <a href="/about#briefing">Request a briefing</a>
       </p>
+      <p class="footer-asof mono">As of {buildDate}</p>
     </footer>
 
     <style>
@@ -113,6 +114,11 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       }
       .footer-meta a {
         color: var(--ink-muted);
+      }
+      .footer-asof {
+        font-size: 0.78rem;
+        color: var(--ink-faint);
+        margin-top: var(--space-1);
       }
     </style>
   </body>

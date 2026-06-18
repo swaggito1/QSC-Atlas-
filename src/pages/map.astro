@@ -2,6 +2,7 @@
 import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap';
+import ReadKey from '../components/ReadKey.astro';
 import { getCollection } from 'astro:content';
 
 // The flat map (planisphere), reached from the globe. Same data, keyed by ccn3.
@@ -23,6 +24,7 @@ for (const c of countries) {
 <Base title="World map">
   <div class="map-page">
     <p class="back"><a href="/">&larr; Back to the globe</a></p>
+    <div class="map-key"><ReadKey /></div>
     <WorldMap client:load mapProcess={mapProcess} />
     <p class="map-note">Click a country to open its profile.</p>
   </div>
@@ -44,6 +46,9 @@ for (const c of countries) {
   }
   .back a:hover {
     color: var(--ink);
+  }
+  .map-key {
+    margin: 0 0 var(--space-6);
   }
   .map-note {
     margin: var(--space-4) 0 0;

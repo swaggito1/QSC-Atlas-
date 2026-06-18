@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
 import { getCollection } from 'astro:content';
 import { POSTURE_ORDER, POSTURE_META } from '../lib/process';
+import ReadKey from '../components/ReadKey.astro';
 
 // One-page Atlas: a globe hero, then bands for countries, analysis, documents and
 // about, each linking to its full page. The globe is keyed by ccn3 (topojson ids).
@@ -14,7 +15,6 @@ const CCN3: Record<string, string> = Object.fromEntries(worldCountries.map((c: a
 
 const countries = await getCollection('countries');
 const docs = await getCollection('documents');
-const posts = (await getCollection('blog')).sort((a, b) => (b.data.published ?? '').localeCompare(a.data.published ?? ''));
 
 const mapProcess: Record<string, any> = {};
 for (const c of countries) {
@@ -27,7 +27,6 @@ for (const c of countries) {
 const blocGroups = POSTURE_ORDER.map((p) => ({ meta: POSTURE_META[p], count: countries.filter((c) => c.data.coordinationPosture === p).length })).filter((g) => g.count);
 const classified = countries.filter((c) => c.data.coordinationPosture).length;
 const docCount = docs.length;
-const latest = posts[0]?.data ?? null;
 ---
 
 <Base title="QSC Atlas" description="Quantum-safe cryptography: the quiet migration reshaping digital sovereignty">
@@ -36,12 +35,17 @@ const latest = posts[0]?.data ?? null;
       <p class="hero-lede">
         Quantum-safe cryptography:<br class="lede-break" /> the quiet migration reshaping digital sovereignty
       </p>
+      <p class="hero-dek">
+        An evidence-based map of how {classified} governments are migrating to quantum-safe
+        cryptography, built only from official sources.
+      </p>
       <p class="hero-hint mono">
         Click a country to open it. <a href="/map">Open the flat map &rarr;</a>
       </p>
+      <div class="hero-key"><ReadKey /></div>
     </div>
     <div class="hero-globe">
-      <HeroGlobe client:load mapProcess={mapProcess} />
+      <HeroGlobe client:idle mapProcess={mapProcess} />
     </div>
   </section>
 
@@ -53,20 +57,6 @@ const latest = posts[0]?.data ?? null;
         <li style={`--c:${g.meta.color}`}><span class="sw" aria-hidden="true" />{g.meta.label}<span class="n mono">{g.count}</span></li>
       ))}
     </ul>
-  </section>
-
-  <section class="band" id="analysis">
-    <div class="band-head"><h2>Analysis</h2><a href="/analysis">All analysis &rarr;</a></div>
-    {
-      latest ? (
-        <a class="latest" href={`/analysis/${latest.slug}`}>
-          <span class="latest-title">{latest.title}</span>
-          {latest.published && <span class="latest-date mono">{latest.published}</span>}
-        </a>
-      ) : (
-        <p class="band-lede">Commentary and change notes on the quantum-safe transition.</p>
-      )
-    }
   </section>
 
   <section class="band" id="documents">
@@ -85,6 +75,15 @@ const latest = posts[0]?.data ?? null;
       rebuilt as new documents appear.
     </p>
     <p><a class="briefing" href="/about#briefing">Request a briefing &rarr;</a></p>
+  </section>
+
+  <section class="band advisory" id="advisory">
+    <div class="band-head"><h2>Advisory</h2></div>
+    <p class="band-lede">
+      The Atlas is maintained alongside advisory work on the quantum-safe transition. For a
+      briefing tailored to your organisation or sector, get in touch.
+    </p>
+    <p><a class="cta" href="/about#briefing">Request a briefing &rarr;</a></p>
   </section>
 </Base>
 
@@ -114,6 +113,17 @@ const latest = posts[0]?.data ?? null;
     color: var(--ink);
     margin: 0 0 var(--space-6);
     text-wrap: normal;
+  }
+  .hero-dek {
+    font-family: var(--font-instrument);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+    max-width: 34rem;
+    margin: 0 0 var(--space-5);
+  }
+  .hero-key {
+    margin-top: var(--space-6);
   }
   @media (max-width: 860px) {
     .hero-lede {
@@ -247,5 +257,19 @@ const latest = posts[0]?.data ?? null;
   }
   .briefing:hover {
     color: var(--ink);
+  }
+  .cta {
+    display: inline-block;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .cta:hover {
+    background: var(--ink);
+    color: var(--paper);
   }
 </style>

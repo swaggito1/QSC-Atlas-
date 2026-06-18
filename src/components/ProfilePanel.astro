@@ -1,8 +1,8 @@
 ---
 // The country profile: the heart of the site. Renders the sections in the brief's
-// order with calm empty states. Used both as the slide-in panel on the map (later,
-// by Claude Design) and as the body of the country profile page. Institution names
-// link through to the Documents tool pre-filtered to that issuing organisation.
+// order with calm empty states, alongside a sticky "at a glance" rail that surfaces
+// the load-bearing facts (legal status, target, document count, verification, date).
+// Institution names link through to the Documents tool pre-filtered to that issuer.
 import ProcessChip from './ProcessChip.astro';
 import RoleBadge from './RoleBadge.astro';
 import MigrationTimeline from './MigrationTimeline.astro';
@@ -28,6 +28,7 @@ interface CountryData {
   hybridDeployment?: string | null;
   migrationTimeline?: string | null;
   targetCompletion?: string | null;
+  verificationStatus?: string | null;
   lastUpdated?: string | null;
 }
 interface DocData {
@@ -55,6 +56,12 @@ const legal =
   legalStatusMeta(country.legalStatus) ??
   (regulations.length ? legalStatusMeta(deriveLegalStatus(regulations.map((r) => r.status))) : null);
 const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
+const verifiedLabel =
+  country.verificationStatus === 'Verified'
+    ? 'Verified against sources'
+    : country.verificationStatus === 'Corrected'
+      ? 'Corrected from sources'
+      : null;
 ---
 
 <article class="profile">
@@ -64,173 +71,272 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
     {country.standardsRole && <RoleBadge value={country.standardsRole} />}
   </header>
 
-  {/* 1. Summary */}
-  {
-    country.summary ? (
-      <p class="prose summary">{country.summary}</p>
-    ) : (
-      <p class="empty">No summary in the public record.</p>
-    )
-  }
+  <div class="profile-body">
+    <aside class="ataglance">
+      <p class="ag-head">At a glance</p>
+      <dl class="ag-list">
+        {legal && (
+          <div>
+            <dt>Legal status</dt>
+            <dd>{legal.label}</dd>
+          </div>
+        )}
+        {country.targetCompletion && (
+          <div>
+            <dt>Target</dt>
+            <dd class="mono">{country.targetCompletion}</dd>
+          </div>
+        )}
+        <div>
+          <dt>Documents</dt>
+          <dd class="mono">{documents.length}</dd>
+        </div>
+        {verifiedLabel && (
+          <div>
+            <dt>Sources</dt>
+            <dd class="verified">{verifiedLabel}</dd>
+          </div>
+        )}
+        {country.lastUpdated && (
+          <div>
+            <dt>Updated</dt>
+            <dd class="mono">{country.lastUpdated}</dd>
+          </div>
+        )}
+      </dl>
+    </aside>
 
-  {/* Regulatory basis (lead): instruments, bindingness, and the plain obligation.
-      The analytical note is intentionally not rendered: it is an internal field,
-      redacted from the public build (see docs/REGULATORY_LAYER_SPEC.md). */}
-  <section class="block reg">
-    <h2>Regulatory basis</h2>
-    {
-      regulations.length ? (
-        <ul class="reg-list">
-          {regulations.map((r) => (
-            <li>
-              <span class="reg-name">{r.instrument}</span>
-              <span class="reg-tags">
-                {r.level && <span class="reg-level">{r.level}</span>}
-                {r.statusMeta && (
-                  <span class={`reg-status${r.statusMeta.binding ? ' is-binding' : ''}`}>
-                    {r.statusMeta.label}
+    <div class="profile-main">
+      {/* 1. Summary */}
+      {
+        country.summary ? (
+          <p class="prose summary">{country.summary}</p>
+        ) : (
+          <p class="empty">No summary in the public record.</p>
+        )
+      }
+
+      {/* Regulatory basis (lead): instruments, bindingness, and the plain obligation.
+          The analytical note is intentionally not rendered: it is an internal field,
+          redacted from the public build (see docs/REGULATORY_LAYER_SPEC.md). */}
+      <section class="block reg">
+        <h2>Regulatory basis</h2>
+        {
+          regulations.length ? (
+            <ul class="reg-list">
+              {regulations.map((r) => (
+                <li>
+                  <span class="reg-name">{r.instrument}</span>
+                  <span class="reg-tags">
+                    {r.level && <span class="reg-level">{r.level}</span>}
+                    {r.statusMeta && (
+                      <span class={`reg-status${r.statusMeta.binding ? ' is-binding' : ''}`}>
+                        {r.statusMeta.label}
+                      </span>
+                    )}
                   </span>
-                )}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p class="empty">No governing instrument identified.</p>
-      )
-    }
-    {legal && (
-      <p class="legal-status">
-        Legal status: <strong>{legal.label}</strong>
-      </p>
-    )}
-    {country.obligation && <p class="obligation prose">{country.obligation}</p>}
-  </section>
-
-  {/* 2. Standards and algorithms */}
-  <section class="block">
-    <h2>Standards and algorithms</h2>
-    {
-      families.length || algorithms.length ? (
-        <dl class="data">
-          {families.length > 0 && (
-            <div>
-              <dt>Standard families</dt>
-              <dd>{families.join(', ')}</dd>
-            </div>
-          )}
-          {algorithms.length > 0 && (
-            <div>
-              <dt>Algorithms</dt>
-              <dd class="mono">{algorithms.join(', ')}</dd>
-            </div>
-          )}
-        </dl>
-      ) : (
-        <p class="empty">No standards or algorithms specified.</p>
-      )
-    }
-  </section>
-
-  {/* 3. Hybrid stance */}
-  <section class="block">
-    <h2>Hybrid stance</h2>
-    <p class="hybrid">{country.hybridDeployment?.trim() || 'None stated'}</p>
-  </section>
-
-  {/* 4. Migration timeline */}
-  <section class="block">
-    <h2>Migration timeline</h2>
-    <MigrationTimeline
-      raw={country.migrationTimeline}
-      process={country.coordinationPosture}
-      target={country.targetCompletion}
-    />
-    {country.targetCompletion && <p class="target mono">Target completion: {country.targetCompletion}</p>}
-  </section>
-
-  {/* 5. International standards processes */}
-  {
-    participation.length > 0 && (
-      <section class="block">
-        <h2>International standards processes</h2>
-        <ul class="actors">
-          {participation.map((p) => (
-            <li>
-              <span class="actor-name">{p.name}</span>
-              {p.role && <span class="actor-role">{p.role}</span>}
-            </li>
-          ))}
-        </ul>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="empty">No governing instrument identified.</p>
+          )
+        }
+        {legal && (
+          <p class="legal-status">
+            Legal status: <strong>{legal.label}</strong>
+          </p>
+        )}
+        {country.obligation && <p class="obligation prose">{country.obligation}</p>}
       </section>
-    )
-  }
 
-  {/* 6. Standards-body actors */}
-  <section class="block">
-    <h2>Governmental and standards bodies</h2>
-    {
-      govActors.length ? (
-        <ul class="actors">
-          {govActors.map((a) => (
-            <li>
-              <a class="actor-name" href={orgLink(a.name)}>
-                {a.name}
-              </a>
-              {a.role && <span class="actor-role">{a.role}</span>}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p class="empty">No institutional actors identified.</p>
-      )
-    }
-  </section>
+      {/* 2. Standards and algorithms */}
+      <section class="block">
+        <h2>Standards and algorithms</h2>
+        {
+          families.length || algorithms.length ? (
+            <dl class="data">
+              {families.length > 0 && (
+                <div>
+                  <dt>Standard families</dt>
+                  <dd>{families.join(', ')}</dd>
+                </div>
+              )}
+              {algorithms.length > 0 && (
+                <div>
+                  <dt>Algorithms</dt>
+                  <dd class="mono">{algorithms.join(', ')}</dd>
+                </div>
+              )}
+            </dl>
+          ) : (
+            <p class="empty">No standards or algorithms specified.</p>
+          )
+        }
+      </section>
 
-  {/* 7. Key documents */}
-  <section class="block">
-    <h2>Key institutional documents</h2>
-    {
-      documents.length ? (
-        <ul class="docs">
-          {documents.map((d) => (
-            <li>
-              <a href={d.url ?? '#'} target={d.url ? '_blank' : undefined} rel={d.url ? 'noopener' : undefined}>
-                {d.title}
-              </a>
-              <span class="doc-meta mono">
-                {[d.issuingOrg, d.year, d.tier].filter(Boolean).join(' · ')}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p class="empty">No documents indexed for this country.</p>
-      )
-    }
-  </section>
+      {/* 3. Hybrid stance */}
+      <section class="block">
+        <h2>Hybrid stance</h2>
+        <p class="hybrid">{country.hybridDeployment?.trim() || 'None stated'}</p>
+      </section>
 
-  {country.lastUpdated && <p class="updated mono">Last updated {country.lastUpdated}</p>}
+      {/* 4. Migration timeline */}
+      <section class="block">
+        <h2>Migration timeline</h2>
+        <MigrationTimeline
+          raw={country.migrationTimeline}
+          process={country.coordinationPosture}
+          target={country.targetCompletion}
+        />
+        {country.targetCompletion && <p class="target mono">Target completion: {country.targetCompletion}</p>}
+      </section>
+
+      {/* 5. International standards processes */}
+      {
+        participation.length > 0 && (
+          <section class="block">
+            <h2>International standards processes</h2>
+            <ul class="actors">
+              {participation.map((p) => (
+                <li>
+                  <span class="actor-name">{p.name}</span>
+                  {p.role && <span class="actor-role">{p.role}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {/* 6. Standards-body actors */}
+      <section class="block">
+        <h2>Governmental and standards bodies</h2>
+        {
+          govActors.length ? (
+            <ul class="actors">
+              {govActors.map((a) => (
+                <li>
+                  <a class="actor-name" href={orgLink(a.name)}>
+                    {a.name}
+                  </a>
+                  {a.role && <span class="actor-role">{a.role}</span>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="empty">No institutional actors identified.</p>
+          )
+        }
+      </section>
+
+      {/* 7. Key documents */}
+      <section class="block">
+        <h2>Key institutional documents</h2>
+        {
+          documents.length ? (
+            <ul class="docs">
+              {documents.map((d) => (
+                <li>
+                  <a href={d.url ?? '#'} target={d.url ? '_blank' : undefined} rel={d.url ? 'noopener' : undefined}>
+                    {d.title}
+                  </a>
+                  <span class="doc-meta mono">
+                    {[d.issuingOrg, d.year, d.tier].filter(Boolean).join(' · ')}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="empty">No documents indexed for this country.</p>
+          )
+        }
+      </section>
+
+      <p class="profile-cta">
+        Advising on this transition, or your own sector's? <a href="/about#briefing">Request a briefing &rarr;</a>
+      </p>
+    </div>
+  </div>
 </article>
 
 <style>
   .profile {
-    max-width: 40rem;
+    max-width: none;
   }
   .profile-head {
     display: flex;
     align-items: center;
     gap: var(--space-4);
     flex-wrap: wrap;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
   }
   .profile-head h1 {
     font-family: var(--font-reading);
     font-size: 2rem;
     margin: 0;
   }
+  .profile-body {
+    display: grid;
+    gap: var(--space-8);
+  }
+  .profile-main {
+    min-width: 0;
+  }
+  @media (min-width: 980px) {
+    .profile-body {
+      grid-template-columns: minmax(0, 40rem) 14rem;
+      align-items: start;
+      gap: var(--space-12);
+    }
+    .profile-main {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .ataglance {
+      grid-column: 2;
+      grid-row: 1;
+      position: sticky;
+      top: var(--space-8);
+    }
+  }
+  .ataglance {
+    border-top: 2px solid var(--ink);
+    padding-top: var(--space-3);
+  }
+  .ag-head {
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: 0 0 var(--space-3);
+  }
+  .ag-list {
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .ag-list div {
+    display: grid;
+    gap: 2px;
+  }
+  .ag-list dt {
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+  }
+  .ag-list dd {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--ink);
+  }
+  .verified {
+    font-weight: 600;
+  }
   .summary {
-    margin-bottom: var(--space-6);
+    margin: 0 0 var(--space-6);
   }
   .block {
     padding: var(--space-6) 0;
@@ -280,12 +386,9 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
   }
   .reg-tags {
     display: inline-flex;
-    gap: var(--space-2);
-    flex-shrink: 0;
-  }
-  .reg-tags {
     align-items: baseline;
     gap: var(--space-3);
+    flex-shrink: 0;
   }
   .reg-level,
   .reg-status {
@@ -351,9 +454,15 @@ const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
     font-style: italic;
     margin: 0;
   }
-  .updated {
+  .profile-cta {
     margin-top: var(--space-8);
-    font-size: 0.75rem;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--hairline);
+    font-size: var(--text-sm);
     color: var(--ink-muted);
+  }
+  .profile-cta a {
+    color: var(--ink);
+    white-space: nowrap;
   }
 </style>

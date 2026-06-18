@@ -28,8 +28,9 @@ export function parseNameRole(raw: string | null | undefined): NameRole[] {
 
 /** A migration milestone. `year` is a number when parseable, else the raw marker (e.g. "Phased"). */
 export interface Milestone {
-  year: number | string;
+  year: number | string; // numeric when plottable (a range uses its end year); else the raw marker
   label: string;
+  display: string; // the year text to show (preserves ranges like "2024-2026")
 }
 
 /** Parse a multi-line "year | milestone" field. Empty input gives [] (caller shows the empty state). */
@@ -42,9 +43,17 @@ export function parseTimeline(raw: string | null | undefined): Milestone[] {
     .map((line) => {
       const [yearPart, ...rest] = line.split('|');
       const yearStr = yearPart.trim();
+      const label = rest.join('|').trim();
       const yearNum = Number(yearStr);
-      const isNumber = yearStr !== '' && Number.isFinite(yearNum);
-      return { year: isNumber ? yearNum : yearStr, label: rest.join('|').trim() };
+      let year: number | string = yearStr;
+      if (yearStr !== '' && Number.isFinite(yearNum)) {
+        year = yearNum;
+      } else {
+        // a range like "2024-2026" plots at its end year but still displays the full range
+        const range = yearStr.match(/^(\d{4})\s*-\s*(\d{4})$/);
+        if (range) year = Number(range[2]);
+      }
+      return { year, label, display: yearStr };
     })
     .filter((m) => m.label !== '' || typeof m.year === 'number');
 }

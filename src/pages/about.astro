@@ -19,6 +19,11 @@ const roleDef: Record<string, string> = {
 <Base title="About">
   <div class="container about">
     <h1>About the QSC Atlas</h1>
+    <p class="prose credibility">
+      An independent, evidence-based reference on how governments are migrating to quantum-safe
+      cryptography, built only from official institutional sources and maintained alongside
+      advisory work on the transition.
+    </p>
     <p class="prose lead">
       The QSC Atlas shows, country by country, how governments are migrating to quantum-safe
       cryptography: the instruments that govern the move, which post-quantum standards a country
@@ -168,6 +173,11 @@ const roleDef: Record<string, string> = {
   }
   .lead {
     font-size: var(--text-lg);
+  }
+  .credibility {
+    color: var(--ink-muted);
+    font-size: var(--text-base);
+    margin-top: 0;
   }
   .ref {
     margin: 0;

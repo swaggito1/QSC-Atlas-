@@ -6,12 +6,13 @@ import { roleMeta } from '../lib/process';
 
 interface Props {
   value: string | null | undefined;
+  short?: boolean;
 }
-const { value } = Astro.props;
+const { value, short = false } = Astro.props;
 const meta = roleMeta(value);
 ---
 
-{meta && <span class="role-badge">{meta.label}</span>}
+{meta && <span class="role-badge">{short ? meta.short : meta.label}</span>}
 
 <style>
   .role-badge {

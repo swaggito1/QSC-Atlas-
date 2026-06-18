@@ -37,7 +37,7 @@ const anchorFor = (p: number) => (p > 88 ? 'translateX(-100%)' : p < 12 ? 'trans
         )}
         {numeric.map((m, i) => (
           <div class="mark" style={`left:${pct(m.year)}%`}>
-            <span class="year mono" style={`transform:${anchorFor(pct(m.year))}`}>{m.year}</span>
+            <span class="year mono" style={`transform:${anchorFor(pct(m.year))}`}>{m.display}</span>
             <span class:list={['dot', { final: i === numeric.length - 1 }]} />
           </div>
         ))}
@@ -52,7 +52,7 @@ const anchorFor = (p: number) => (p > 88 ? 'translateX(-100%)' : p < 12 ? 'trans
           <li>
             <span class="row-year">
               <span class:list={['rdot', { final: i === numeric.length - 1 }]} />
-              <span class="mono">{m.year}</span>
+              <span class="mono">{m.display}</span>
             </span>
             <span class="row-label">{m.label}</span>
           </li>

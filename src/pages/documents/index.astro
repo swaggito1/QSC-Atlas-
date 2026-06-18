@@ -6,6 +6,9 @@ import { getCollection } from 'astro:content';
 // The documents research tool is a client island so it can search and filter
 // instantly. We pass it every document as a prebuilt list to index with Fuse.js.
 const documents = (await getCollection('documents')).map((d) => d.data);
+const countryNames = Object.fromEntries(
+  (await getCollection('countries')).map((c) => [c.data.iso3, c.data.country]),
+);
 ---
 
 <Base title="Documents">
@@ -15,7 +18,7 @@ const documents = (await getCollection('documents')).map((d) => d.data);
       Every institutional source the Atlas is built from. Search the full text, or filter by
       country, type, year and tier.
     </p>
-    <DocumentsTool client:load documents={documents} />
+    <DocumentsTool client:load documents={documents} countryNames={countryNames} />
   </div>
 </Base>
 

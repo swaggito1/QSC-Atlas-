@@ -18,12 +18,13 @@ export interface Doc {
 }
 interface Props {
   documents: Doc[];
+  countryNames?: Record<string, string>;
 }
 
 const uniqueSorted = (values: (string | null | undefined)[]): string[] =>
   [...new Set(values.filter((v): v is string => !!v))].sort();
 
-export default function DocumentsTool({ documents }: Props) {
+export default function DocumentsTool({ documents, countryNames = {} }: Props) {
   const [q, setQ] = useState('');
   const [org, setOrg] = useState<string | null>(null);
   const [country, setCountry] = useState('');
@@ -72,7 +73,7 @@ export default function DocumentsTool({ documents }: Props) {
         <select value={country} onChange={(e) => setCountry(e.target.value)} aria-label="Filter by country">
           <option value="">All countries</option>
           {countries.map((c) => (
-            <option key={c} value={c}>{c}</option>
+            <option key={c} value={c}>{countryNames[c] ?? c}</option>
           ))}
         </select>
         <select value={type} onChange={(e) => setType(e.target.value)} aria-label="Filter by type">
@@ -96,6 +97,10 @@ export default function DocumentsTool({ documents }: Props) {
           </span>
         )}
       </div>
+      <p className="docs-tierkey">
+        Tier ranks source authority: T1 primary institutional, T2 secondary official, T3 reputable
+        third-party, T4 academic or press.
+      </p>
 
       {noData ? (
         <p className="docs-empty">The document index is being rebuilt. Check back shortly.</p>
@@ -127,7 +132,7 @@ export default function DocumentsTool({ documents }: Props) {
                   {d.summary && <span className="row-summary">{d.summary}</span>}
                 </td>
                 <td>{d.issuingOrg ?? ''}</td>
-                <td>{d.country ?? ''}</td>
+                <td>{(d.country && countryNames[d.country]) || d.country || ''}</td>
                 <td className="mono">{d.year ?? ''}</td>
                 <td>{d.docType ?? ''}</td>
                 <td className="mono">{d.tier ?? ''}</td>
@@ -154,6 +159,7 @@ export default function DocumentsTool({ documents }: Props) {
         .row-summary { display: block; font-size: 0.8rem; color: var(--ink-muted); margin-top: 2px; }
         .docs-empty { color: var(--ink-muted); font-style: italic; margin: var(--space-8) 0; }
         .docs-count { color: var(--ink-muted); font-size: 0.78rem; margin-top: var(--space-4); }
+        .docs-tierkey { color: var(--ink-faint); font-size: 0.75rem; margin: 0 0 var(--space-5); max-width: var(--measure); }
         @media (max-width: 640px) {
           .docs-table, .docs-table thead, .docs-table tbody, .docs-table tr, .docs-table td { display: block; }
           .docs-table thead { display: none; }

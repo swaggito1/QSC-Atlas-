@@ -1,0 +1,89 @@
+---
+// "How to read the Atlas": the one key that explains both encodings at once, so the
+// legend is never more than a glance away. Colour = coordination posture (the map and
+// globe colour); the badge = standards role. Reused on the home hero and the flat map.
+import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
+---
+
+<div class="readkey">
+  <div class="col">
+    <p class="col-head">Colour: the bloc it coordinates with</p>
+    <ul>
+      {
+        POSTURE_ORDER.map((k) => (
+          <li>
+            <span class="sw" style={`--c:${POSTURE_META[k].color}`} aria-hidden="true" />
+            {POSTURE_META[k].label}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="col">
+    <p class="col-head">Badge: the role it plays</p>
+    <ul>
+      {ROLE_ORDER.map((k) => <li><span class="role">{ROLE_META[k].short}</span></li>)}
+    </ul>
+  </div>
+  <p class="cap">Two questions: which bloc a country migrates with, and whose algorithms it runs.</p>
+</div>
+
+<style>
+  .readkey {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4) var(--space-8);
+    max-width: 34rem;
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .col-head {
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: 0 0 var(--space-2);
+  }
+  .readkey ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-1);
+  }
+  .readkey li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--ink);
+  }
+  .sw {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: var(--c);
+    flex: none;
+  }
+  .role {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+  }
+  .cap {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+  @media (max-width: 560px) {
+    .readkey {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
