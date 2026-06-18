@@ -83,17 +83,17 @@ the record, the other is active but uncommitted.
 The country's relationship to the algorithms themselves. On a country profile, this is a
 labelled badge; the map can also be recoloured by it.
 
-### Standard-setter
+### Standard-maker
 
 The country writes the standards the rest of the world adopts. **Stance:** define the
-baseline. **Why it matters:** there is effectively one setter for post-quantum
+baseline. **Why it matters:** there is effectively one maker for post-quantum
 cryptography today, the United States through NIST. Naming the role makes the central
 power asymmetry of the field visible: one country writes the rules, almost everyone else
 receives them. **Example:** the United States.
 
 ### Standard-contextualiser
 
-The country accepts the setter's algorithms as the baseline but adds national
+The country accepts the maker's algorithms as the baseline but adds national
 requirements on top: mandatory hybrid deployment, larger key sizes, independent
 certification, or a national evaluation process. **Stance:** adopt, but on our own terms.
 **Why it matters:** this is the most sophisticated common posture, and it is what most
@@ -104,7 +104,7 @@ competition producing its own NIST-compatible algorithms).
 
 ### Standard-taker
 
-The country adopts the setter's algorithms broadly as published, without a substantial
+The country adopts the maker's algorithms broadly as published, without a substantial
 national overlay. **Stance:** implement the baseline and get on with migrating. **Why it
 matters:** it distinguishes the majority that follow from the few that shape. Most of the
 world, including most EU members, sits here. **Examples:** many EU member states, Saudi
@@ -127,7 +127,7 @@ other. A few worked examples:
 
 | Country | Coordination posture | Standards role | What the pair tells you |
 |---|---|---|---|
-| United States | NIST-led ecosystem | Standard-setter | Writes the baseline the others use. |
+| United States | NIST-led ecosystem | Standard-maker | Writes the baseline the others use. |
 | France | EU coordinated roadmap | Standard-contextualiser | EU timeline and rules; NIST algorithms with national hybridisation on top. |
 | Netherlands | EU coordinated roadmap | Standard-taker | Same EU club as France, but adopts the baseline with less national overlay. |
 | South Korea | NIST-led ecosystem | Standard-contextualiser | Runs its own national competition, yet keeps its algorithms interoperable with NIST. |
@@ -151,7 +151,7 @@ a competing standards camp. It is not. The EU is a coordination bloc running the
 algorithms as everyone else in the NIST baseline. The two-part model lets the map show
 the European bloc without inventing a European cryptography that does not exist.
 
-**It makes the real power structure visible.** One country sets the standard; most of the
+**It makes the real power structure visible.** One country makes the standard; most of the
 world takes or adapts it. That asymmetry is the central fact of the post-quantum
 transition, and a single "NIST" colour hides it by painting the author and its adopters
 the same shade.
@@ -177,9 +177,9 @@ answer both. Two can.
 ## How to read the map
 
 - **Colour** shows coordination posture: the bloc a country is migrating with.
-- **The role badge** on each country profile shows its standards role: setter,
+- **The role badge** on each country profile shows its standards role: maker,
   contextualiser, taker, or sovereign developer. The map can be recoloured by role to see
-  the setter-and-takers picture directly.
+  the maker-and-takers picture directly.
 - **Faint grey** is no data: no institutional source found yet. It is not the same as
   engaged but unaligned, which is an active but uncommitted country.
 - **Confidence** is shown alongside every classification and drives how strongly a country
