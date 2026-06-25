@@ -42,5 +42,16 @@
     "url": "https://mykripto.cybersecurity.my/index.php/services/post-quantum-cryptography-initiatives/pqc-services",
     "summary": "CyberSecurity Malaysia's PQC service offering: expert consultations to plan and execute migration from classical to quantum-safe cryptography, plus awareness sessions and technical workshops to build organisational quantum-readiness.",
     "included": true
+  },
+  {
+    "title": "MYNIC'S Preparing For Tomorrow's Threat: The Impact Of Quantum Computing On Internet Security",
+    "country": "MYS",
+    "issuingOrg": "Ministry of Digital",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.digital.gov.my/en-GB/siaran/MYNIC'S-Preparing-For-Tomorrow's-Threat:-The-Impact-Of-Quantum-Computing-On-Internet-Security",
+    "summary": "Ministry of Digital speech/announcement (21 April 2026) for a MYNIC programme on quantum computing's impact on internet security, stating that quantum computing can break existing cryptographic codes and that the transition to post-quantum cryptography (PQC) has become an urgent necessity, including replacing at-risk DNSSEC protocols. Delivered with NACSA and MYNIC participation.",
+    "included": true
   }
 ]

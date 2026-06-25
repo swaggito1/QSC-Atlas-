@@ -86,5 +86,38 @@
     "url": "https://tillvaxtverket.se/download/18.1c06a14f19a7bcc07d367b24/1763564910015/Towards%20a%20Swedish%20quantum%20ecosystem.pdf",
     "summary": "Report by the Swedish Agency for Economic and Regional Growth on building a Swedish quantum ecosystem. Flagged for review: candidate text describes quantum technologies broadly and does not show an explicit post-quantum/quantum-safe cryptography reference.",
     "included": true
+  },
+  {
+    "title": "Rekommendationer för övergången till kvantsäker kryptografi (Tidpunkter)",
+    "country": "SWE",
+    "issuingOrg": "NCSC Sweden",
+    "year": 2026,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.ncsc.se/siteassets/publikationer/rekommendationer-for-overgangen-till-kvantsaker-kryptografi.pdf",
+    "summary": "NCSC Sweden publication setting out the recommended timepoints (Tidpunkter) for the transition to quantum-safe cryptography, with end-2035 as the general deadline and end-2030 for information needing protection for ten years or more, and naming NIST FIPS 203/204/205 as the standardised algorithms. Distinct file from the main national recommendations PDF already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "Kvantsäkra krypton – ett begrepp att lära sig",
+    "country": "SWE",
+    "issuingOrg": "FRA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.fra.se/nyheter/nyheter/nyhetsarkiv/news/kvantsakrakryptonettbegreppattlarasig.5.6b4b0ae819565f845bb2e2.html",
+    "summary": "FRA news article (29 April 2026) in which mathematician Alexander Engström explains why organisations must move to quantum-safe (post-quantum) cryptography, highlighting the harvest-now-decrypt-later threat and stating that Swedish authorities will lead the transition over the next five years.",
+    "included": true
+  },
+  {
+    "title": "Policy för utveckling och integrering av ny cybersäkerhetsteknologi",
+    "country": "SWE",
+    "issuingOrg": "MSB/MCF",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.msb.se/siteassets/dokument/amnesomraden/informationssakerhet-cybersakerhet-och-sakra-kommunikationer/72e-policy-for-utveckling-och-integrering-av-ny-cybersakerhetsteknologi-251019.pdf",
+    "summary": "MSB (from 1 Jan 2026 the Agency for Civil Defence, MCF) policy on developing and integrating new cybersecurity technology, naming quantum cryptography among a new generation of risk-management tools and referencing the transition to post-quantum cryptography. Flagged for review: the explicit PQC framing appears alongside broader emerging-technology and EU-call language, so QSC-specificity is borderline.",
+    "included": false
   }
 ]

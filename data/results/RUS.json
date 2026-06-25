@@ -20,5 +20,16 @@
     "url": "https://tc26.ru/standarts/",
     "summary": "Index maintained by TC26 of Russian cryptographic standardization documents (national GOST R 34 standards, recommendations, technical specifications) developed by the committee. The body whose Working Group 2.5 is developing post-quantum signature and key-encapsulation standards to extend the GOST R 34 family; no adopted national PQC standard is published as of June 2026.",
     "included": true
+  },
+  {
+    "title": "Научно-исследовательские работы (research-works registry, incl. НИР \"Кульминация\": методика выбора постквантовых механизмов на основе помехоустойчивого кодирования)",
+    "country": "RUS",
+    "issuingOrg": "АНО НТЦ ЦК (National Technology Center for Digital Cryptography)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://digitalcryptography.ru/nir/",
+    "summary": "Official research-works registry of the National Technology Center for Digital Cryptography (АНО НТЦ ЦК, established under Mintsifry/Minpromtorg/FSB oversight), listing НИР \"Кульминация\" (2024, registered 04.07.2025): \"Формирование методики и автоматизированных инструментов выбора постквантовых механизмов, основанных на помехоустойчивом кодировании\", providing parameter-selection recommendations for the Russian post-quantum schemes Кодиеум and Шиповник being standardised in TC26. Documents domestic institutional capacity-building on code-based post-quantum cryptography.",
+    "included": false
   }
 ]

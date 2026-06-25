@@ -42,5 +42,16 @@
     "url": "https://oportunitati-ue.gov.ro/apel/integrarea-algoritmilor-de-criptografie-post-cuantica-pqc-in-protocoale-de-nivel-inalt/",
     "summary": "Romanian government EU-funding opportunities portal listing a call for the integration of post-quantum cryptography (PQC) algorithms into high-level protocols.",
     "included": true
+  },
+  {
+    "title": "România intră în era securității cuantice (launch of RExQTCS center of excellence)",
+    "country": "ROU",
+    "issuingOrg": "Autoritatea Națională pentru Cercetare (MCID)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.research.gov.ro/romania-intra-in-era-securitatii-cuantice-29983/",
+    "summary": "Romanian National Authority for Research announcement (27 April 2026) of the launch of RExQTCS, the Romanian Centre of Excellence in Quantum Technologies for Enhancing Cybersecurity (coordinated by Politehnica University of Bucharest, ~86 million lei funding), explicitly linking frontier research in classical and post-quantum ('post-cuantică') cryptography to communications security.",
+    "included": true
   }
 ]

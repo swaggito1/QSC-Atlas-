@@ -1,23 +1,12 @@
 {
   "iso3": "CHN",
-  "summary": "China pursues a sovereign path through the State Cryptography Administration (OSCCA), which funds anti-quantum cryptography as a priority research direction of its National Cryptography Science Fund. The associated standards institute is running a national solicitation for next-generation commercial cryptographic algorithms expressly to address the quantum computing threat and to set China's own standards.",
+  "summary": "China pursues a sovereign path under the State Cryptography Administration (OSCCA), its national cryptography authority. OSCCA has made anti-quantum cryptography an explicit priority of its National Cryptography Science Fund: a 2025 notice inviting suggestions for the fund's second batch listed cryptographic algorithm design and analysis targeting quantum computing among the priority foundational research directions, and the published second-batch guidelines, issued as OSCCA Announcement No. 55 in January 2026, name anti-quantum computing cryptography key theory and technology as the first research direction. The ingested documents fund and prioritise research toward China's own quantum-resistant standards rather than adopting an external scheme, and they do not yet name algorithms, set a dated migration timeline or impose a binding mandate.",
   "dominantProcess": "Sovereign",
-  "govActors": "OSCCA | State Cryptography Administration, funds anti-quantum cryptography research through the National Cryptography Science Fund\nICCS (Commercial Cryptography Standards Research Institute) | Runs the solicitation for China's next-generation commercial cryptographic algorithms against the quantum threat",
-  "dataStatus": "Partial",
-  "provenance": [
-    "Lead institution + Sovereign process: OSCCA Announcement No. 55 (ingested, 2026) names 'anti-quantum computing cryptography key theory and technology' as the first research direction of the National Cryptography Science Fund; OSCCA is China's national cryptography authority running its own scheme, hence Sovereign",
-    "Next-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)",
-    "No PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule",
-    "CAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture",
-    "Model 2026-06-14 (sovereign-bloc / sovereign-developer, High): SM-series mandated under the 2020 Cryptography Law; NGCC programme (Feb 2025) building sovereign PQC independent of NIST."
-  ],
-  "country": "China",
-  "confidence": "High",
-  "classificationBasis": "Lead institution + Sovereign process: OSCCA Announcement No. 55 (ingested, 2026) names 'anti-quantum computing cryptography key theory and technology' as the first research direction of the National Cryptography Science Fund; OSCCA is China's national cryptography authority running its own scheme, hence Sovereign\nNext-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)\nNo PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule\nCAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "sovereign-bloc",
-  "standardsRole": "sovereign-developer",
-  "mainRegulation": "Cryptography Law of the PRC (2020) | national | binding-law\nSM-series (SM2/SM3/SM4/SM9) commercial cryptography standards | national | binding-law\nMulti-Level Protection Scheme, level 3+ domestic algorithms | national | binding-law\nNGCC programme for sovereign PQC standards (2025) | national | guidance",
-  "legalStatus": "binding",
-  "obligation": "Critical information infrastructure operators must use domestic (SM-series) algorithms under the Cryptography Law and the Multi-Level Protection Scheme; sovereign post-quantum standards are in development through the NGCC programme and not yet mandated."
+  "processParticipation": "",
+  "hybridDeployment": "None stated",
+  "targetCompletion": "None stated",
+  "govActors": "OSCCA | State Cryptography Administration, China's national cryptography authority; makes anti-quantum cryptography a priority research direction of the National Cryptography Science Fund",
+  "mainRegulation": "OSCCA Announcement No. 55, National Cryptography Science Fund second-batch application guidelines (2026) | national | guidance\nOSCCA notice soliciting suggestions for the second-batch National Cryptography Science Fund project guidelines (2025) | national | guidance",
+  "legalStatus": "soft-only",
+  "dataStatus": "Partial"
 }

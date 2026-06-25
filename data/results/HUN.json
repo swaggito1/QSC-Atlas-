@@ -42,5 +42,16 @@
     "url": "https://qcihungary.hu/wp-content/uploads/2024/04/QCIHungary_Uton_-a_kvantuminformatikaba_Mohacsi_Janos_KIFU.pdf",
     "summary": "Presentation on post-quantum cryptography and the QCI Hungary project, authored by Janos Mohacsi of KIFU (the Hungarian Governmental Agency for IT Development), the national node of the EU EuroQCI initiative. Domestic and government-linked but a project presentation rather than a formal published document, and not on the trusted-domains list; flagged for human review.",
     "included": true
+  },
+  {
+    "title": "2024. évi LXIX. törvény Magyarország kiberbiztonságáról (Act LXIX of 2024 on Hungary's Cybersecurity)",
+    "country": "HUN",
+    "issuingOrg": "Országgyűlés / Kormány (Hungarian Parliament / Government)",
+    "year": 2024,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://cdn.kormany.hu/uploads/document/6/62/62e/62e6e8494119ead144a75e72a5f1a6f68851b358.pdf",
+    "summary": "Hungary's national cybersecurity act (in force 1 January 2025, transposing NIS2) which contains a dedicated Chapter V on post-quantum encryption (A POSZT-KVANTUMTITKOSÍTÁS, sections 51-56) imposing binding obligations on designated organisations to deploy post-quantum cryptography against quantum-computer attacks, establishing certification of PQC providers, and assigning supervisory powers to the Regulated Activities Supervisory Authority (SZTFH). Verified directly from the official kormany.hu PDF text.",
+    "included": true
   }
 ]

@@ -218,5 +218,16 @@
     "url": "https://www.bankofengland.co.uk/-/media/boe/files/digital-pound/mit-report-enhancing-the-privacy-of-a-digital-pound.pdf",
     "summary": "Report on privacy-enhancing technologies for a digital pound, hosted by the Bank of England, stating that assessment of PETs for CBDCs should consider compatibility with post-quantum security. Authored by MIT researchers rather than the Bank itself, so flagged for review.",
     "included": true
+  },
+  {
+    "title": "Quantum key distribution research report",
+    "country": "GBR",
+    "issuingOrg": "DSIT",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.gov.uk/government/publications/quantum-key-distribution-research-report/quantum-key-distribution-research-report",
+    "summary": "Independent research commissioned by the Department for Science, Innovation and Technology (DSIT), published 10 June 2026, examining quantum key distribution (QKD) and its cyber security implications. It states that the UK NCSC advises post-quantum cryptography (PQC) as the preferred approach to the quantum threat and that QKD should be considered only as an additional layer alongside PQC, not a standalone solution.",
+    "included": true
   }
 ]

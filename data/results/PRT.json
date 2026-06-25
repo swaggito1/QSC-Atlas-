@@ -42,5 +42,16 @@
     "url": "https://www.cncs.gov.pt/docs/rose-cncs-id.pdf",
     "summary": "Research and development document published by the Portuguese National Cybersecurity Centre. The candidate snippet describes the general cybersecurity landscape and does not explicitly confirm a post-quantum cryptography reference, so this is flagged for human review.",
     "included": true
+  },
+  {
+    "title": "Convite a contribuições para a transição europeia para a criptografia pós-quântica (FCCN)",
+    "country": "PRT",
+    "issuingOrg": "FCCN (FCT)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.fccn.pt/en/atualidade/convite-contribuicoes-transicao-europeia-criptografia-pos-quantica/",
+    "summary": "Announcement (11 Sep 2025) by FCCN, the Portuguese national research and education network operator (part of FCT), inviting the Portuguese community to contribute to the European Commission's public consultation on the coordinated implementation roadmap for the transition to post-quantum cryptography. Flagged for review: FCCN is a domestic institutional body and the notice explicitly references PQC, but it merely relays an EU Commission consultation rather than issuing a domestic Portuguese instrument, and fccn.pt is not on the trusted auto-include domain list.",
+    "included": false
   }
 ]

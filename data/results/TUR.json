@@ -20,5 +20,16 @@
     "url": "https://bilgem.tubitak.gov.tr/en/quantum-technologies/",
     "summary": "TÜBİTAK BİLGEM page describing its quantum technologies and quantum cryptography research. Institutional and domestic, but the page redirects to the BILGEM homepage and an explicit post-quantum cryptography reference could not be confirmed; flagged for human review.",
     "included": false
+  },
+  {
+    "title": "Türkiye Kuantum Platformu (Turkey Quantum Platform)",
+    "country": "TUR",
+    "issuingOrg": "SSB (Cumhurbaşkanlığı Savunma Sanayii Başkanlığı)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://kuantum.ssb.gov.tr/",
+    "summary": "National quantum-technologies coordination platform run by the Turkish Presidency of Defence Industries (SSB), explicitly framing quantum communication as encompassing complementary layers 'QKD ve post-kuantum kriptografi' and referencing the updated Quantum Technology Roadmap and the 'Kuantum OTAĞ Sonuç Raporu' (2024-2025). Domestic government issuer with an explicit post-quantum cryptography reference.",
+    "included": true
   }
 ]

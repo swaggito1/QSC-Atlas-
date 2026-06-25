@@ -1,29 +1,15 @@
 {
   "iso3": "ROU",
-  "summary": "Romania's posture is led by the DNSC, whose guide on the transition to post-quantum cryptography points organisations to the NIST-standardised algorithms while noting that they are mathematically validated but still lack operational maturity, and stresses crypto-agility. The government has also adopted a national strategy on quantum technologies covering post-quantum cryptography, and an EU-funded call supports integrating post-quantum algorithms into high-level protocols. No fixed national migration deadline has been published.",
+  "summary": "Romania's posture is led by the DNSC, whose guide on the transition to post-quantum cryptography points organisations to the NIST-standardised algorithms while noting that they are mathematically validated but still lack operational maturity, and stresses crypto-agility. The government has adopted a national strategy on quantum technologies covering post-quantum cryptography, and an EU-funded call supports integrating post-quantum algorithms into high-level protocols. In 2026 the National Authority for Research announced the launch of RExQTCS, a centre of excellence coordinated by Politehnica University of Bucharest that links frontier research in classical and post-quantum cryptography to communications security. No fixed national migration deadline has been published.",
   "dominantProcess": "EU",
-  "govActors": "DNSC | Romania's National Cyber Security Directorate, issues transition guidance and cryptography analysis\nSGG | General Secretariat of the Government, adopted the national strategy on quantum technologies\nOportunitati UE (Government of Romania) | EU-funding opportunities portal listing the post-quantum integration call",
-  "dataStatus": "Partial",
-  "provenance": [
-    "DNSC as lead: DNSC transition guide and cryptography analysis (ingested)",
-    "dominantProcess NIST: DNSC guide points to NIST-standardised PQC algorithms as the validated reference set - REVIEW",
-    "Crypto-agility emphasis: DNSC transition guide summary",
-    "National quantum strategy: SGG Annex 41, 2024 (ingested)",
-    "EU funding call for PQC integration: Oportunitati UE portal (ingested)",
-    "No specific algorithms, hybrid stance, timeline or target stated in the ingested documents",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
+  "standardFamilies": "",
+  "algorithms": "",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "hybridDeployment": "None stated",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "country": "Romania",
-  "confidence": "High",
-  "classificationBasis": "DNSC as lead: DNSC transition guide and cryptography analysis (ingested)\ndominantProcess NIST: DNSC guide points to NIST-standardised PQC algorithms as the validated reference set - REVIEW\nCrypto-agility emphasis: DNSC transition guide summary\nNational quantum strategy: SGG Annex 41, 2024 (ingested)\nEU funding call for PQC integration: Oportunitati UE portal (ingested)\nNo specific algorithms, hybrid stance, timeline or target stated in the ingested documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Verified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
+  "govActors": "DNSC | Romania's National Cyber Security Directorate, issues transition guidance and cryptography analysis\nSGG | General Secretariat of the Government, adopted the national strategy on quantum technologies\nOportunitati UE (Government of Romania) | EU-funding opportunities portal listing the post-quantum integration call\nAutoritatea Nationala pentru Cercetare (MCID) | National Authority for Research, announced the launch of the RExQTCS quantum-cybersecurity centre of excellence",
+  "dataStatus": "Partial",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
-  "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "legalStatus": "binding"
 }

@@ -130,5 +130,38 @@
     "url": "https://www.kpqc.or.kr/competition.html",
     "summary": "Page describing Round 1 of the Korean PQC (KpqC) competition to standardise domestic post-quantum cryptographic algorithms. Run by a government-coupled research consortium not on the trusted-domains list; flagged for review.",
     "included": false
+  },
+  {
+    "title": "2026 Post-Quantum Cryptography Pilot Transition Project: Re-recruitment of Participating Companies",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/401/form?postSeq=3615",
+    "summary": "KISA/MSIT re-recruitment notice (10 March 2026) for the 2026 PQC pilot transition project, covering telecom, finance, transport, defence and space, to migrate industrial public-key cryptosystems to post-quantum cryptography. Distinct from the original call (postSeq=3592) already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "Preparing for the quantum threat: national core industries move to shift their cryptography",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://kisa.or.kr/402/form?lang_type=KO&postSeq=2569",
+    "summary": "KISA press release (15 January 2026) announcing the expansion of the post-quantum cryptography pilot transition to critical sectors (transport, defence, finance, aerospace, telecom) and a 28 January 2026 briefing session, framing PQC as a next-generation cryptosystem secure against future quantum computers.",
+    "included": true
+  },
+  {
+    "title": "(Re-announcement) Construction of joint-certificate PKI infrastructure for the post-quantum cryptography transition",
+    "country": "KOR",
+    "issuingOrg": "KISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kisa.or.kr/403/form?postSeq=10673",
+    "summary": "KISA procurement/tender notice (19 May 2026) for building joint-certificate PKI infrastructure to support the post-quantum cryptography transition, budget KRW 95 million, project running through 30 November 2026.",
+    "included": true
   }
 ]

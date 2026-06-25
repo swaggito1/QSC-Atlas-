@@ -42,5 +42,60 @@
     "url": "https://pqc-learn.ncsa.or.th/standards.html",
     "summary": "NCSA QUANTA page recommending NIST PQC standards for Thai organisations: FIPS 203 (ML-KEM) for key encapsulation, FIPS 204 (ML-DSA) for digital signatures, and FIPS 205 (SLH-DSA) for long-term archival.",
     "included": true
+  },
+  {
+    "title": "Quantum risk: a new digital threat that should not be overlooked",
+    "country": "THA",
+    "issuingOrg": "SEC Thailand",
+    "year": 2025,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.sec.or.th/EN/Template3/Articles/2025/051125.pdf",
+    "summary": "English-language article by the SEC Thailand IT Audit and Cyber Risk Supervision Department warning that quantum computing endangers the cryptography protecting capital-market data, and presenting Post-Quantum Cryptography (PQC) and Quantum Key Distribution as the principal mitigations. Frames quantum risk as a present concern for financial institutions and securities-market participants.",
+    "included": false
+  },
+  {
+    "title": "ความเสี่ยงควอนตัม: ภัยดิจิทัลรูปแบบใหม่ที่ไม่ควรมองข้าม (Quantum risk article, Thai)",
+    "country": "THA",
+    "issuingOrg": "SEC Thailand",
+    "year": 2025,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.sec.or.th/TH/Template3/Articles/2568/051168.pdf",
+    "summary": "Thai-language version (BE 2568 / 2025) of the SEC Thailand IT Audit and Cyber Risk Supervision Department article on quantum risk, explaining Post-Quantum Cryptography (PQC) and QKD and urging proactive preparation against the 'harvest now, decrypt later' threat to encrypted financial and customer data.",
+    "included": false
+  },
+  {
+    "title": "SEC Thailand quantum risk / post-quantum cryptography article (Feb 2026)",
+    "country": "THA",
+    "issuingOrg": "SEC Thailand",
+    "year": 2026,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.sec.or.th/TH/Template3/Articles/2569/200269.pdf",
+    "summary": "Thai-language article (dated 20 February BE 2569 / 2026) by the SEC Thailand IT Audit and Cyber Risk Supervision Department addressing quantum risk and post-quantum cryptography readiness for the Thai capital market, continuing the regulator's quantum-risk awareness series.",
+    "included": false
+  },
+  {
+    "title": "Cyber Resilience knowledge hub: Quantum Risk",
+    "country": "THA",
+    "issuingOrg": "SEC Thailand",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.sec.or.th/TH/Pages/CYBERRESILIENCE-QUANTUMRISK.aspx",
+    "summary": "SEC Thailand cyber-resilience knowledge page dedicated to quantum risk, explaining how quantum computing threatens current encryption and outlining Post-Quantum Cryptography (PQC) and Quantum Key Distribution as protective approaches for capital-market participants.",
+    "included": false
+  },
+  {
+    "title": "10 Technologies to Watch 2025: Post-Quantum Cryptography (PQC)",
+    "country": "THA",
+    "issuingOrg": "NSTDA",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.nstda.or.th/home/news_post/10-technologies-to-watch-2025-post-quantum-cryptography-pqc/",
+    "summary": "Awareness article (27 August 2025) by Thailand's National Science and Technology Development Agency (NSTDA, under the Ministry of Higher Education, Science, Research and Innovation) featuring Post-Quantum Cryptography in its '10 Technologies to Watch 2025' series, explaining the quantum threat to RSA/ECC, the 'harvest now, decrypt later' risk, NIST-standardised algorithms, and Thai government preparedness.",
+    "included": false
   }
 ]

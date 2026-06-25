@@ -1,29 +1,14 @@
 {
   "iso3": "ITA",
-  "summary": "Italy's posture is led by the National Cybersecurity Agency, whose guidance on post-quantum and quantum cryptography references the NIST standardisation process and the EU material on the transition. The Bank of Italy is active on the financial-sector side, having run post-quantum experiments in real payment systems through the BIS Project Leap.",
-  "dominantProcess": "EU",
-  "govActors": "ACN | Agenzia per la Cybersicurezza Nazionale, guidance on post-quantum and quantum cryptography referencing the NIST process and EU transition material\nBanca d'Italia | Bank of Italy, post-quantum experiments in real payment systems via BIS Project Leap and notices on the G7 financial-sector roadmap\nSenato | Italian Senate documents covering the defence multi-year acquisition programme including post-quantum cryptography and national PQC activities",
+  "summary": "Italy's posture is led by the National Cybersecurity Agency, the ACN. In 2026 the ACN updated its cryptographic functions guidelines to evaluate quantum-resistant solutions, adding post-quantum alternatives for digital signature schemes and post-quantum solutions in the TLS guidelines, with the update described as aligned to the NIST post-quantum standards published in August 2024. At the policy level Italy presented a national Strategy for Quantum Technologies in 2025, which sets migration to post-quantum cryptography as a strategic objective in line with EU recommendations and with ACN support. The Bank of Italy is active on the financial-sector side, having run post-quantum experiments in real payment systems through the BIS Project Leap and worked on a quantum-safe public key infrastructure. The Italian Parliament, the Ministry of Enterprises and Made in Italy, and the Department for Digital Transformation have all addressed post-quantum cryptography in defence, industrial and strategy documents.",
+  "dominantProcess": "Mixed",
+  "standardFamilies": "NIST PQC standards (published August 2024)",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
   "hybridDeployment": "None stated",
-  "dataStatus": "Partial",
-  "provenance": [
-    "summary + govActors (ACN): ACN post-quantum and quantum cryptography guidance row and the European joint-position announcement",
-    "dominantProcess NIST: ACN guidance summary explicitly references the NIST PQC standardization process (alongside EU material). No Italian sovereign scheme stated, so NIST assigned, though the EU-coordination dimension is also present - REVIEW",
-    "Banca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)",
-    "Senato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows",
-    "standardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "country": "Italy",
-  "confidence": "High",
-  "classificationBasis": "summary + govActors (ACN): ACN post-quantum and quantum cryptography guidance row and the European joint-position announcement\ndominantProcess NIST: ACN guidance summary explicitly references the NIST PQC standardization process (alongside EU material). No Italian sovereign scheme stated, so NIST assigned, though the EU-coordination dimension is also present - REVIEW\nBanca d'Italia role: Project Leap 2 results, BIS Project Leap phase 2, and G7 financial-sector roadmap rows (the BIS speech row is included:false and not relied on)\nSenato role: SMD 41/2025 multi-year programme and Doc. CCXVIII no. 3 rows\nstandardFamilies / algorithms / migrationTimeline / targetCompletion: OMITTED, no dated milestones, FIPS families or algorithm names stated in the included Italian summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
+  "govActors": "ACN | Agenzia per la Cybersicurezza Nazionale, guidance on post-quantum and quantum cryptography referencing the NIST process and EU transition material, and 2026 update of the cryptographic functions guidelines adding post-quantum alternatives for signatures and TLS aligned to the NIST PQC standards\nBanca d'Italia | Bank of Italy, post-quantum experiments in real payment systems via BIS Project Leap, a quantum-safe PKI implementation in a payment systems environment, and notices on the G7 financial-sector roadmap\nDipartimento per la Trasformazione Digitale | Department for Digital Transformation, presented the national Strategy for Quantum Technologies setting migration to post-quantum cryptography as a strategic objective in line with EU recommendations\nSenato | Italian Senate documents covering the defence multi-year acquisition programme SMD 41/2025 including post-quantum cryptography and national PQC activities\nCamera dei Deputati | Chamber of Deputies, Defence Committee inquiry on quantum technologies for defence and security discussing post-quantum cryptography\nMIMIT (MISE) | Ministry of Enterprises and Made in Italy, report mapping Italy's quantum industrial ecosystem and addressing post-quantum cryptography for enterprises and critical digital infrastructure",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "dataStatus": "Partial"
 }

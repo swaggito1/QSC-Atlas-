@@ -1,24 +1,16 @@
 {
   "iso3": "NZL",
-  "summary": "New Zealand's guidance comes through the New Zealand Information Security Manual, maintained by the National Cyber Security Centre within the GCSB. Section 2.4 of the manual advises government agencies to inventory their cryptographically protected assets and begin planning migration to post-quantum cryptographic standards, pointing to the NIST post-quantum work as the reference.",
-  "dominantProcess": "NIST",
-  "govActors": "NCSC / GCSB | National Cyber Security Centre within the Government Communications Security Bureau, maintains the NZISM and its post-quantum preparation guidance",
-  "dataStatus": "Partial",
-  "provenance": [
-    "Lead institution + posture: NZISM Section 2.4 (NCSC/GCSB, v3.9, November 2025, ingested)",
-    "Inventory + migration planning advice: same Section 2.4 row",
-    "NIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)",
-    "No FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule",
-    "Only one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
-    "Model 2026-06-14 (NIST-bloc / taker, Medium): NZ guidance aligned to the NIST suite; Five Eyes posture."
-  ],
   "country": "New Zealand",
-  "confidence": "Medium",
-  "classificationBasis": "Lead institution + posture: NZISM Section 2.4 (NCSC/GCSB, v3.9, November 2025, ingested)\nInventory + migration planning advice: same Section 2.4 row\nNIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)\nNo FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule\nOnly one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker",
-  "mainRegulation": "Protective Security Requirements (PSR) mandatory requirements | national | binding-by-market-access\nNew Zealand Information Security Manual (NZISM) post-quantum preparation guidance (Section 2.4) | national | guidance",
+  "summary": "New Zealand's technical guidance comes through the New Zealand Information Security Manual, maintained by the National Cyber Security Centre within the GCSB. Section 2.4 of the manual advises government agencies to inventory their cryptographically protected assets and begin planning migration to post-quantum cryptographic standards, pointing to the NIST post-quantum work as the reference. In February 2026 this was reinforced at strategy level for the first time: New Zealand's Cyber Security Strategy 2026-2030, published by the Department of the Prime Minister and Cabinet, warns that quantum computing could render current encryption methods obsolete within the strategy's timeframe and commits the GCSB to refresh its Cryptographic Products Management Infrastructure so that government ICT is prepared for a post-quantum world. The posture remains preparatory and advisory rather than a binding migration mandate, and no completion date or specific algorithm set has been published.",
+  "dominantProcess": "NIST",
+  "processParticipation": "",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "2026 | National Cyber Security Strategy commits GCSB to refresh its Cryptographic Products Management Infrastructure for a post-quantum world, within the 2026-2030 strategy period",
+  "targetCompletion": "None stated",
+  "govActors": "NCSC / GCSB | National Cyber Security Centre within the Government Communications Security Bureau, maintains the NZISM and its post-quantum preparation guidance; the GCSB is tasked by the 2026-2030 strategy with refreshing its Cryptographic Products Management Infrastructure\nDPMC | Department of the Prime Minister and Cabinet, author of New Zealand's Cyber Security Strategy 2026-2030, the first national-strategy-level acknowledgement of the post-quantum transition",
+  "dataStatus": "Partial",
+  "mainRegulation": "Protective Security Requirements (PSR) mandatory requirements | national | binding-by-market-access\nNew Zealand Information Security Manual (NZISM) post-quantum preparation guidance (Section 2.4) | national | guidance\nNew Zealand's Cyber Security Strategy 2026-2030 (post-quantum commitment) | national | soft-law",
   "legalStatus": "binding",
-  "obligation": "Government agencies covered by the Protective Security Requirements (a Cabinet direction binding on public service departments and other mandated agencies, not a statute) must manage information security in line with the PSR's mandatory requirements and report annually on compliance. The post-quantum element is advisory only: NZISM Section 2.4 directs agencies to inventory cryptographically protected assets and plan migration to post-quantum standards referencing the NIST work, and compliance with the NZISM is not required as a matter of law. No obligation falls on the wider economy."
+  "standardFamilies": "",
+  "algorithms": ""
 }

@@ -31,5 +31,49 @@
     "url": "https://instituteq.fi/finnish-quantum-technology-roadmap/",
     "summary": "Evolving Finnish quantum technology roadmap from InstituteQ (the Finnish national quantum institute) covering quantum computing, communication and sensing. An explicit post-quantum/quantum-safe cryptography focus is not confirmed from the candidate metadata, so flagged for human review.",
     "included": false
+  },
+  {
+    "title": "Suomen kansallisen kryptotyöryhmän linjaukset kansallisiin PQC-salaustuotearviointeihin 1.1.2026 alkaen",
+    "country": "FIN",
+    "issuingOrg": "Traficom / Kyberturvallisuuskeskus (NCSC-FI), Suomen kansallinen kryptotyöryhmä",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/uutiset/suomen-kansallisen-kryptotyoryhman-linjaukset-kansallisiin-pqc-salaustuotearviointeihin-112026-alkaen",
+    "summary": "Finland's national cryptography working group sets binding requirements that, from 1 January 2026, cryptographic products entering national evaluation must use quantum-safe key-establishment (PQC KEM) and quantum-safe signature algorithms (or document how quantum risk is addressed), with hybrid PQC-plus-classical strongly recommended. Published 3 October 2025.",
+    "included": true
+  },
+  {
+    "title": "Kvanttiturvallinen salaus ja PQC-siirtymä (organisaatioiden ohjesivusto)",
+    "country": "FIN",
+    "issuingOrg": "Traficom / Kyberturvallisuuskeskus (NCSC-FI)",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/ohjeet-ja-oppaat/ohjeet-ja-oppaat-organisaatioille-ja-yrityksille/kvanttiturvallinen-salaus-ja-pqc-siirtyma",
+    "summary": "Official Traficom/NCSC-FI guidance hub for organisations on the quantum threat to current encryption and on planning the migration to quantum-safe cryptography (PQC), covering crypto-inventory, risk assessment, crypto-agility and a step-by-step transition plan. Launched alongside the March 2026 guidance release.",
+    "included": true
+  },
+  {
+    "title": "Ohje kvanttiturvalliseen salaukseen siirtymisestä julkaistu, infotilaisuus asiantuntijoille",
+    "country": "FIN",
+    "issuingOrg": "Traficom / Kyberturvallisuuskeskus (NCSC-FI)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/uutiset/ohje-kvanttiturvalliseen-salaukseen-siirtymisesta-julkaistu-infotilaisuus-asiantuntijoille-1152026",
+    "summary": "NCSC-FI news item (4 March 2026) announcing publication of its guidance on migrating to quantum-safe encryption and an expert info session, urging organisations to protect long-confidentiality data such as personal, health and classified information against the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "Kvanttiteknologian tulevaisuus ja kvanttiturvallinen internet (Tulevaisuusvaliokunnan julkaisu 2/2025)",
+    "country": "FIN",
+    "issuingOrg": "Eduskunnan tulevaisuusvaliokunta (Finnish Parliament, Committee for the Future)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www2.eduskunta.fi/FI/naineduskuntatoimii/julkaisut/Documents/TuV-2-2025.pdf",
+    "summary": "Finnish Parliament Committee for the Future publication (2/2025) with a dedicated chapter on quantum-safe cryptography (PQC), the 2025-2030 cryptographic transition, and a 'PQC-siirtymän prosessi' (PQC migration process) section setting out concrete migration steps. Parliamentary issuer with explicit PQC content; flagged for review only because eduskunta.fi is not on the auto-include trusted-domain list.",
+    "included": false
   }
 ]

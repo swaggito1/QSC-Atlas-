@@ -64,5 +64,71 @@
     "url": "https://www.nksc.lt/doc/en/2024_key-trends-and-statistics-of-cyber-security.pdf",
     "summary": "NKSC overview of cybersecurity trends and statistics in Lithuania, identifying the transition to post-quantum cryptography as one of the most important decisions for the near future.",
     "included": true
+  },
+  {
+    "title": "Ilgalaikiam saugumui – postkvantinė kriptografija: Vyriausybė patvirtino kryptį (For long-term security – post-quantum cryptography: Government approves the direction)",
+    "country": "LTU",
+    "issuingOrg": "KAM (Ministry of National Defence)",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://kam.lt/ilgalaikiam-saugumui-postkvantine-kriptografija-vyriausybe-patvirtino-krypti/",
+    "summary": "Ministry of National Defence announcement that the Lithuanian Government approved a national plan/direction for transitioning to post-quantum cryptography, setting staged deadlines (cryptography inventory by 1 May 2027, post-quantum/hybrid in high-risk systems by 1 January 2031, PQC-only from 2036).",
+    "included": true
+  },
+  {
+    "title": "Postkvantinė kriptografija (Post-quantum cryptography)",
+    "country": "LTU",
+    "issuingOrg": "KAM (Ministry of National Defence)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://kam.lt/postkvantine-kriptografija/",
+    "summary": "Official Ministry of National Defence post-quantum cryptography hub page describing PQC, the national transition plan and timeline, and pointing to the transition guidelines and cryptography inventory methodology prepared for organisations.",
+    "included": true
+  },
+  {
+    "title": "Ilgalaikiam saugumui – postkvantinė kriptografija: Vyriausybė patvirtino kryptį",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nksc.lrv.lt/lt/naujienos/ilgalaikiam-saugumui-postkvantine-kriptografija-vyriausybe-patvirtino-krypti-O8A/",
+    "summary": "NKSC (lrv.lt government portal) news item announcing the Government-approved national post-quantum cryptography transition direction and the staged migration milestones for cybersecurity entities.",
+    "included": true
+  },
+  {
+    "title": "Nacionalinė kibernetinio saugumo būklės ataskaita 2025 (National Cybersecurity Status Report 2025)",
+    "country": "LTU",
+    "issuingOrg": "NKSC / KAM",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/Nacionaline-kibernetinio-saugumo-ataskaita-2025.pdf",
+    "summary": "Annual national cybersecurity status report that explicitly addresses the quantum threat to public-key cryptography and the coordinated transition to post-quantum cryptography, including the NIS Cooperation Group PQC working group roadmap and Lithuania's national PQC coordination effort.",
+    "included": true
+  },
+  {
+    "title": "Artėja kvantinių kompiuterių era: kaip verslas turi apsaugoti savo duomenis nuo naujos kartos kibernetinių grėsmių (The quantum computing era is approaching: how business must protect its data)",
+    "country": "LTU",
+    "issuingOrg": "KAM (Ministry of National Defence)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://kam.lt/arteja-kvantiniu-kompiuteriu-era-kaip-verslas-turi-apsaugoti-savo-duomenis-nuo-naujos-kartos-kibernetiniu-gresmiu/",
+    "summary": "Ministry of National Defence article explaining post-quantum cryptography for organisations, describing the national PQC transition plan coordinated by the Ministry and the National PQC Coordination Working Group, with milestone dates (2027 inventory, 2031, 2036) and hybrid-cryptography recommendations.",
+    "included": true
+  },
+  {
+    "title": "NKSC Cyberpusryčiai: 2025 m. kibernetinių grėsmių apžvalga ir ko galime tikėtis (2025-11-25)",
+    "country": "LTU",
+    "issuingOrg": "NKSC",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nksc.lt/doc/cyberpusryciai/NKSC_Cyberpusryciai+2025-11-25.pdf",
+    "summary": "NKSC Cyber Breakfast presentation reviewing 2025 cyber threats and 2026 priorities; flagged as a draft because an explicit post-quantum cryptography reference within this specific presentation file is not confirmed from search snippets.",
+    "included": false
   }
 ]

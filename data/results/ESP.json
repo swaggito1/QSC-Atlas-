@@ -108,5 +108,71 @@
     "url": "https://www.congreso.es/entradap/l14p/e25/e_0255546_n_000.pdf",
     "summary": "Spanish Congress written reply referencing recent work including post-quantum biometric authentication research. Institutional parliamentary record; PQC reference is a citation of research rather than a policy document, flagged for review.",
     "included": true
+  },
+  {
+    "title": "CCN-STIC 221 - Guía de mecanismos criptográficos autorizados por el CCN (noviembre 2025)",
+    "country": "ESP",
+    "issuingOrg": "CCN (Centro Criptológico Nacional)",
+    "year": 2025,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.ccn-cert.cni.es/es/series-ccn-stic/guias-de-acceso-publico-ccn-stic/6954-ccn-stic-221-guia-de-mecanismos-criptograficos-autorizados-por-el-ccn-1/file.html",
+    "summary": "Centro Criptológico Nacional security guide (November 2025 edition) enumerating the cryptographic mechanisms authorised by the CCN, including a dedicated post-quantum cryptography chapter covering lattice-based schemes such as ML-KEM and FrodoKEM. National cryptologic authority on the trusted-domains list.",
+    "included": true
+  },
+  {
+    "title": "Nueva guía CCN-STIC 221 sobre mecanismos criptográficos autorizados por el CCN (noticia/novedades)",
+    "country": "ESP",
+    "issuingOrg": "CCN-CERT (Centro Criptológico Nacional)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ccn-cert.cni.es/en/updated-security/portal-news/12396-nueva-guia-ccn-stic-221-sobre-mecanismos-criptograficos-autorizados-por-el-ccn.html",
+    "summary": "CCN-CERT news item announcing the new CCN-STIC 221 guide on authorised cryptographic mechanisms, explicitly noting its post-quantum cryptography (criptografía postcuántica) content. Official national cryptologic authority announcement.",
+    "included": true
+  },
+  {
+    "title": "CCN-TEC 009 - Recomendaciones para una transición postcuántica segura",
+    "country": "ESP",
+    "issuingOrg": "CCN / CCN-PYTEC (Centro Criptológico Nacional)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ccn.cni.es/index.php/es/docman/documentos-publicos/boletines-pytec/495-ccn-tec-009-recomendaciones-transicion-postcuantica-segura/file",
+    "summary": "Centro Criptológico Nacional (CCN-PYTEC) technical bulletin setting out recommendations for a safe transition to post-quantum cryptography, advising early adoption of hybrid solutions (e.g. for TLS and IKEv2) and covering hybridisation modes, KEMs and hash-based signatures. National cryptologic authority on the trusted-domains list.",
+    "included": true
+  },
+  {
+    "title": "Recomendaciones para una transición postcuántica segura de CCN-PYTEC (noticia/novedades)",
+    "country": "ESP",
+    "issuingOrg": "CCN-CERT (Centro Criptológico Nacional)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/novedades-ccn-cert/12234-recomendaciones-para-una-transicion-postcuantica-segura-de-ccn-pytec.html",
+    "summary": "CCN-CERT novedades page announcing the CCN-PYTEC recommendations for a secure post-quantum transition (CCN-TEC 009), explaining the need to migrate towards quantum-resistant cryptographic systems. Official national cryptologic authority announcement.",
+    "included": true
+  },
+  {
+    "title": "Boletín Oficial de las Cortes Generales BOCG-15-CG-A-223 (texto íntegro PDF)",
+    "country": "ESP",
+    "issuingOrg": "Cortes Generales (Congreso de los Diputados)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.congreso.es/public_oficiales/L15/CORT/BOCG/A/BOCG-15-CG-A-223.PDF",
+    "summary": "Canonical PDF of the Cortes Generales parliamentary bulletin (BOCG, serie A, no. 223) addressing the transition to post-quantum cryptography, including the need for a complete inventory of cryptographic systems, protocols and algorithms. This is the direct document for the bulletin the corpus currently references only via a portal language-redirect link.",
+    "included": true
+  },
+  {
+    "title": "El Gobierno lanza la primera Estrategia de Tecnologías Cuánticas de España, con una inversión de 800 millones de euros",
+    "country": "ESP",
+    "issuingOrg": "Gobierno de España (La Moncloa / Min. Transformación Digital)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/paginas/2025/240425-lopez-estrategia-cuantica.aspx",
+    "summary": "Government press release (24 April 2025) launching Spain's first National Quantum Technologies Strategy, with a priority on privacy and confidentiality in the post-quantum world (privacidad postcuántica). Flagged for review: the post-quantum reference is framed as privacy rather than an explicit migration-to-quantum-resistant-cryptography mandate, and lamoncloa.gob.es is not on the trusted-domains list.",
+    "included": false
   }
 ]

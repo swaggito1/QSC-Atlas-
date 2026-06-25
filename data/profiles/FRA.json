@@ -1,30 +1,13 @@
 {
   "iso3": "FRA",
-  "summary": "France's transition is steered by ANSSI, which has set out a phased approach to the move to post-quantum cryptography, with standalone post-quantum deployments envisaged only after the initial hybrid phases.",
-  "hybridDeployment": "Required",
-  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
-  "targetCompletion": "2035",
-  "govActors": "ANSSI | French national cybersecurity authority",
-  "dataStatus": "Partial",
-  "provenance": [
-    "Phased approach: ANSSI position paper (ingested)",
-    "Standalone not before 2030: backend brief reference line",
-    "Hybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW",
-    "dominantProcess omitted: unattested in captured text (verifier)",
-    "dominantProcess Sovereign restored: well-established and design-endorsed, provisional for review",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
-    "Model 2026-06-14 (EU / contextualiser, High): ANSSI mandates hybridisation and national certification over NIST algorithms; no national algorithm. Sovereign secondary dropped."
-  ],
+  "summary": "France's transition is led by ANSSI, the national cybersecurity authority, which treats post-quantum cryptography as the most promising defence against the quantum threat and now urges organisations across all sectors to migrate without delay. ANSSI sets out a phased approach in which standalone post-quantum deployments follow earlier hybrid phases, and in early 2026 it published concrete transition guidance for TLS 1.3, SSHv2 and IPsec alongside an updated cryptographic mechanisms guide that adds post-quantum signature and key-establishment rules. The posture is reinforced by binding national instruments, including the 2024 to 2030 military programming law, which names the move to post-quantum cryptography as a defence priority, and the France 2030 call for projects that funds a domestic post-quantum offer. The first security visas covering products with post-quantum cryptography have now been issued. In the financial sector the ACPR and the Banque de France are raising awareness and advancing a coordinated roadmap, and France aligns its timetable with the EU coordinated implementation roadmap.",
   "dominantProcess": "EU",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "secondaryProcess": "Sovereign",
-  "country": "France",
-  "confidence": "High",
-  "classificationBasis": "Phased approach: ANSSI position paper (ingested)\nStandalone not before 2030: backend brief reference line\nHybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW\ndominantProcess omitted: unattested in captured text (verifier)\ndominantProcess Sovereign restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "contextualiser",
-  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nANSSI PQC migration roadmap (2022; phases 2025/2030/2035) | national | guidance\nANSSI Common Criteria security visa, PQC requirements | national | binding-by-market-access",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap\nEU PQC Work Stream | contributed to the coordinated implementation roadmap, republished by ANSSI",
+  "hybridDeployment": "Required",
+  "migrationTimeline": "2022 | France 2030 'Cryptographie Post-Quantique' call for projects launched\n2030 | High-risk and sensitive use cases migrated (EU coordinated roadmap)\n2035 | Migration of all systems complete (EU coordinated roadmap)",
+  "targetCompletion": "2035",
+  "govActors": "ANSSI | French national cybersecurity authority\nACPR | French banking and insurance supervisor raising PQC awareness in the financial ecosystem\nBanque de France | central bank advancing a coordinated PQC roadmap for the financial sector and running PQC experiments\nOPECST | parliamentary office for the evaluation of scientific and technological choices",
+  "mainRegulation": "Law No. 2023-703 of 1 August 2023, military programming 2024-2030 (PQC transition named a defence technology priority) | national | binding-law\nOrder of 17 March 2022 approving the France 2030 'Cryptographie Post-Quantique' call for projects specifications | national | binding-law\nANSSI PQC migration position and roadmap (phased approach; alignment with the EU coordinated roadmap) | national | guidance\nANSSI Common Criteria security visa with PQC requirements (first PQC security visas issued) | national | binding-by-market-access",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; products seeking ANSSI certification must meet its PQC requirements, including mandatory hybridisation, by the visa deadlines (2027 sensitive products, 2030 all certified products)."
+  "dataStatus": "Partial"
 }

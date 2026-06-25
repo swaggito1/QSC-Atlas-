@@ -97,5 +97,16 @@
     "url": "https://www.agoria.be/nl/diensten/expertise/digitalisering/cybersecurity/nieuwe-werkgroep-zal-europese-cyberveiligheidsnormen-voor-cryptografie-ontwikkelen",
     "summary": "Belgian technology industry federation Agoria reports on a working group and a post-quantum cryptography feasibility study to address unmet standardisation needs. Industry federation, EU-standards focused, flagged for review.",
     "included": false
+  },
+  {
+    "title": "New EU cybersecurity funding opportunities: Digital Europe Programme and Horizon Europe calls now open",
+    "country": "BEL",
+    "issuingOrg": "CCB",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://ccb.belgium.be/new-eu-cybersecurity-funding-opportunities-digital-europe-programme-and-horizon-europe-calls-now",
+    "summary": "Centre for Cybersecurity Belgium (acting as the national coordination centre NCC-BE) notice on open EU cybersecurity funding calls, explicitly listing post-quantum cryptography topics including the transition to post-quantum Public Key Infrastructures and three PQC focus areas (security implementations, protocol integration, security evaluations). Published 13.06.2025 (updated 28.08.2025).",
+    "included": true
   }
 ]

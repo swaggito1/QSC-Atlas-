@@ -207,5 +207,27 @@
     "url": "https://isomer-user-content.by.gov.sg/36/11227d39-4350-4ded-9046-d62f99f561ab/Draft%20for%20Public%20Consultation%20-%20Quantum-Safe%20Handbook%20(Oct%202025).pdf",
     "summary": "Draft Quantum-Safe Migration Handbook released by CSA for public consultation, offering practical migration guidance and referencing PQC roadmap categories recommended by the Post-Quantum Cryptography Coalition.",
     "included": true
+  },
+  {
+    "title": "Welcome Speech by SMS Tan Kiat How at CyberSG Innovation Day on 14 Nov 2025",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/speeches/welcome-speech-by-sms-tan-kiat-how-at-cybersg-innovation-day-on-14-nov-2025/",
+    "summary": "Ministerial speech by the Senior Minister of State at CyberSG Innovation Day, explicitly referencing the transition to quantum-safe cryptography and highlighting PQStation, an NTU-spinoff tool advancing quantum-safe cryptography in field trials with ten industry partners.",
+    "included": true
+  },
+  {
+    "title": "Public Consultation - Quantum-Safe Handbook and Quantum Readiness Index",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/resources/publications/quantum-safe-handbook-and-quantum-readiness-index/",
+    "summary": "CSA public consultation resource page (open 23 Oct to 31 Dec 2025) inviting feedback on the Quantum-Safe Handbook and Quantum Readiness Index, which guide Critical Information Infrastructure owners and agencies in transitioning cryptographic assets to quantum-safe solutions.",
+    "included": true
   }
 ]

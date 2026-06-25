@@ -152,5 +152,60 @@
     "url": "https://prosjektbanken.forskningsradet.no/en/project/FORISS/341168",
     "summary": "Research Council of Norway project-bank entry for QCNorway, a project towards a Norwegian quantum computing strategy that references post-quantum cryptography as a security challenge. Borderline: a funded-research listing rather than a dedicated PQC document.",
     "included": false
+  },
+  {
+    "title": "NSM Cryptographic Recommendations 2025 (guidance document, PDF)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nsm.no/getfile.php/1314334-1742808614/NSM/Filer/Dokumenter/Veiledere/NSM%20Cryptographic%20Recommendations%202025.pdf",
+    "summary": "The 2025 edition (published March 2025) of NSM's English-language cryptographic recommendations, advising organisations to obtain a cryptographic inventory, adopt cryptographic agility, and create a plan to migrate to quantum-resistant cryptography as soon as possible. This is the dated 2025 PDF, distinct from the undated HTML landing page already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "NSM Temarapport: Kvanteresistent kryptografi (thematic report on quantum-resistant cryptography)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2017,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nsm.no/getfile.php/1314791-1759326766/NSM/Filer/Dokumenter/Rapporter/NSM%20Temarapport%20Kvanteresistent%20kryptografi.pdf",
+    "summary": "NSM thematic report on quantum-resistant cryptography explaining how cryptanalytically relevant quantum computers threaten current public-key schemes and the need to prepare for quantum-resistant algorithms. Hosted on the official nsm.no domain; the document body carries an internal date of 2017-01-24.",
+    "included": true
+  },
+  {
+    "title": "Kryptografiske utfordringer (Security Conference 2025 session)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/sikkerhetskonferansen-2025/program/kryptografiske-utfordringer",
+    "summary": "NSM Security Conference 2025 programme session (8 April 2025) on current cryptographic challenges and the challenges that quantum computers will bring, featuring a Norges Bank senior adviser.",
+    "included": true
+  },
+  {
+    "title": "NSMs kryptografiske anbefalinger (Security Conference 2025 session)",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/sikkerhetskonferansen-2025/program/nsms-kryptografiske-anbefalinger",
+    "summary": "NSM Security Conference 2025 programme session presenting NSM's cryptographic recommendations, including concrete algorithm advice and preparing for migration to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "Risiko- og sårbarhetsanalyse (ROS) 2025",
+    "country": "NOR",
+    "issuingOrg": "Finanstilsynet",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.finanstilsynet.no/publikasjoner-og-analyser/risiko--og-sarbarhetsanalyse/risiko--og-sarbarhetsanalyse-2025/ros-2025/risiko--og-sarbarhetsanalyse-ros-2025/",
+    "summary": "The Norwegian Financial Supervisory Authority's 2025 risk and vulnerability analysis includes a quantum-technology threat assessment, warning of 'steal data today, decrypt later' and recommending that financial firms adopt new quantum-safe encryption algorithms, QRNG, QKD and quantum-safe hardware. First explicit QSC reference from a Norwegian financial regulator in the corpus.",
+    "included": true
   }
 ]

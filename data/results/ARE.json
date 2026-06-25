@@ -108,5 +108,38 @@
     "url": "https://www.tii.ae/news/abu-dhabis-tii-unveils-first-post-quantum-cryptography-library-uae",
     "summary": "TII (applied research pillar of the government's Advanced Technology Research Council) announcement that its Cryptography Research Centre launched the first post-quantum cryptography software library in the UAE.",
     "included": false
+  },
+  {
+    "title": "UAE Cyber Security Council Partners with ATRC to Advance National Post-Quantum Security Transition",
+    "country": "ARE",
+    "issuingOrg": "Abu Dhabi Media Office / UAE Cyber Security Council",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mediaoffice.abudhabi/en/security/uae-cyber-security-council-partners-with-atrc-to-advance-national-post-quantum-security-transition/",
+    "summary": "Official Abu Dhabi Media Office announcement (13 May 2026) that the UAE Cyber Security Council signed an agreement with the Advanced Technology Research Council (consolidated via VentureOne) to deploy and scale quantum-safe / post-quantum solutions supporting one of the world's first coordinated national post-quantum migration plans, drawing on TII cryptographic libraries, QuantumGate's Crypto Discovery Tool and entanglement-based QKD. This is the Abu Dhabi Media Office rendering of the partnership (distinct URL from the ATRC.gov.ae version already stored).",
+    "included": true
+  },
+  {
+    "title": "CyberQ: Cyber Security in the Quantum Era conference shapes dialogue on industry challenges from Abu Dhabi",
+    "country": "ARE",
+    "issuingOrg": "Abu Dhabi Media Office / UAE Cyber Security Council",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mediaoffice.abudhabi/en/technology/cyberq-cyber-security-in-the-quantum-era-conference-shapes-dialogue-on-industry-challenges-from-abu-dhabi/",
+    "summary": "Official Abu Dhabi Media Office report (15 November 2024) on the CyberQ conference organised by the UAE Cyber Security Council and Technology Innovation Institute, stating that post-quantum cryptography is the optimal solution for countering future quantum-computer threats and announcing strategic PQC partnerships (CSC, TII, QuantumGate). Surfaced now as it is not yet in the corpus.",
+    "included": true
+  },
+  {
+    "title": "TII Researchers Contribute to NIST Post-Quantum Cryptography Standardization",
+    "country": "ARE",
+    "issuingOrg": "TII",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.tii.ae/news/tii-researchers-contribute-nist-post-quantum-cryptography-standardization",
+    "summary": "Technology Innovation Institute news that its Cryptography Research Centre researchers advanced six digital signature schemes (including LESS, Mirath, PERK, RYDE, SDitH, SQISign) to Round 2 of NIST's Post-Quantum Cryptography standardisation of additional digital signatures, reflecting domestic research capacity. Distinct tii.ae URL not already in the corpus; flagged for review as tii.ae is not on the trusted-domains list.",
+    "included": false
   }
 ]

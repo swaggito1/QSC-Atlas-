@@ -53,5 +53,49 @@
     "url": "https://cyberpolicy.nask.pl/usa-krajowa-strategia-cyberbezpieczenstwa/",
     "summary": "NASK Cyberpolicy commentary on the US National Cybersecurity Strategy, noting post-quantum cryptography among priority technologies. Flagged for review: issuer is domestic (NASK) but the document analyses another country's strategy rather than a Polish PQC document.",
     "included": true
+  },
+  {
+    "title": "Polska w erze kwantowej, czyli założenia polityki rozwoju technologii kwantowych",
+    "country": "POL",
+    "issuingOrg": "Ministerstwo Cyfryzacji (Ministry of Digital Affairs)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.gov.pl/web/cyfryzacja/polska-w-erze-kwantowej-czyli-zalozenia-polityki-rozwoju-technologii-kwantowych",
+    "summary": "Poland's Ministry of Digital Affairs published the foundational assumptions for a national quantum-technology development policy on 29 August 2025 (public consultation to 30 September 2025), structured across five pillars and three phases to 2035 and explicitly naming post-quantum security (bezpieczeństwo postkwantowe) and post-quantum cryptography among its priorities. First comprehensive national-level policy framing of Poland's quantum-safe posture.",
+    "included": true
+  },
+  {
+    "title": "Perspektywy na lata 2026-2030 (Instytut Łączności)",
+    "country": "POL",
+    "issuingOrg": "Instytut Łączności – PIB (National Institute of Telecommunications)",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T4",
+    "url": "https://www.gov.pl/web/instytut-lacznosci/perspektywy-na-lata-2026-2030",
+    "summary": "Strategic research-direction outlook for 2026-2030 from Poland's National Institute of Telecommunications (IŁ-PIB), which explicitly plans 'ocena bezpieczeństwa rozwiązań z zakresu kryptografii postkwantowej' (security assessment of post-quantum cryptography solutions) alongside e-identity/EUDI Wallet conformance work. Confirms a forward research commitment to PQC evaluation at a state research institute.",
+    "included": true
+  },
+  {
+    "title": "Seminar with Prof. Kris Gaj: Post-Quantum Digital Signature Standards and Hardware Implementations",
+    "country": "POL",
+    "issuingOrg": "Instytut Łączności – PIB (National Institute of Telecommunications)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.gov.pl/web/national-institute-of-telecommunications/seminar-with-prof-kris-gaj-post-quantum-digital-signature-standards-and-hardware-implementations",
+    "summary": "English-language announcement by Poland's National Institute of Telecommunications (IŁ-PIB) of a 27 June 2025 seminar with Prof. Kris Gaj on post-quantum cryptographic digital-signature schemes (ML-DSA, SLH-DSA) and their hardware implementations. This is the English counterpart of the Polish seminar page already in the corpus, at a distinct URL.",
+    "included": true
+  },
+  {
+    "title": "Quantum technologies and data protection – conference",
+    "country": "POL",
+    "issuingOrg": "UODO (Urząd Ochrony Danych Osobowych / Personal Data Protection Office)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://uodo.gov.pl/en/553/1953",
+    "summary": "Report by Poland's Personal Data Protection Office (UODO) on its conference on quantum technologies and data protection, explicitly discussing the use of post-quantum cryptography in digital-identity wallets and blockchain and the need to develop post-quantum software against the quantum threat. Flagged for human review: issuer is a domestic regulator but uodo.gov.pl is not on the trusted-domains list, the publication date could not be verified, and the item is a conference report rather than a substantive PQC policy or guidance document.",
+    "included": false
   }
 ]

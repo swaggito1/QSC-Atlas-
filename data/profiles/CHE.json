@@ -1,20 +1,10 @@
 {
   "iso3": "CHE",
-  "summary": "Switzerland's posture is led by the National Cyber Security Centre, operating as the Federal Office for Cybersecurity (BACS), whose technology consideration and assessment frame the move to post-quantum cryptography as a long process needing planning in line with current standardisation. Federal work focuses on post-quantum cryptography rather than quantum key distribution, with a sector action plan for finance and parliamentary attention to the Confederation's own transition.",
-  "govActors": "NCSC (BACS) | Swiss National Cyber Security Centre, Federal Office for Cybersecurity, sets national post-quantum guidance\nBIT (FOITT) | Federal Office of Information Technology, Systems and Telecommunication, urges an early switch for long-lived confidential data\nSIF | State Secretariat for International Financial Matters, hosts the action plan for a quantum-safe financial sector\nSwiss Parliament | parliamentary affairs on the Confederation's transition and on positioning Switzerland internationally\nSNB | Swiss National Bank, reports adapting infrastructure to post-quantum requirements",
-  "dataStatus": "Partial",
-  "provenance": [
-    "NCSC (BACS) lead, long process needing planning with standardisation: NCSC (BACS) technology consideration and assessment (ingested)",
-    "Federal focus on PQC over QKD: Curia Vista affair 24.4398 (ingested)",
-    "Federal PQC selection process expected to conclude 2024: Curia Vista affair 23.3689 - not used as a dated milestone, too uncertain, REVIEW",
-    "Early switch for long-lived data: BIT (FOITT) guidance (ingested)",
-    "Financial-sector action plan: SIF (ingested)",
-    "SNB infrastructure adaptation: SNB annual reports 2023, 2025 (ingested)",
-    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries - REVIEW",
-    "algorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries"
-  ],
   "country": "Switzerland",
-  "confidence": "Medium",
-  "classificationBasis": "NCSC (BACS) lead, long process needing planning with standardisation: NCSC (BACS) technology consideration and assessment (ingested)\nFederal focus on PQC over QKD: Curia Vista affair 24.4398 (ingested)\nFederal PQC selection process expected to conclude 2024: Curia Vista affair 23.3689 - not used as a dated milestone, too uncertain, REVIEW\nEarly switch for long-lived data: BIT (FOITT) guidance (ingested)\nFinancial-sector action plan: SIF (ingested)\nSNB infrastructure adaptation: SNB annual reports 2023, 2025 (ingested)\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries - REVIEW\nalgorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries",
-  "verificationStatus": "Unverified"
+  "summary": "Switzerland's posture is led by the National Cyber Security Centre, operating as the Federal Office for Cybersecurity (BACS), whose technology brief and assessment frame the move to post-quantum cryptography as a long process that needs planning in line with current standardisation. Federal work focuses on post-quantum cryptography rather than quantum key distribution. The transition is now moving from assessment to action: the Federal Office of Information Technology, Systems and Telecommunication has begun migrating the federal administration's public key infrastructure away from vulnerable RSA-based certificates, and armasuisse, with the Federal Office of Justice and HEIG-VD, has opened a research programme to build a quantum-secure electronic identity. A sector action plan addresses finance, the Swiss National Bank reports adapting its infrastructure, and Parliament is following both the Confederation's own transition and how Switzerland positions itself internationally.",
+  "govActors": "NCSC (BACS) | Swiss National Cyber Security Centre, Federal Office for Cybersecurity, sets national post-quantum guidance\nBIT (FOITT) | Federal Office of Information Technology, Systems and Telecommunication, urges an early switch for long-lived confidential data and runs the federal administration PKI migration\nSIF | State Secretariat for International Financial Matters, hosts the action plan for a quantum-safe financial sector\narmasuisse | Federal armaments procurement and science agency, leads research on a quantum-secure electronic identity\nSwiss Parliament | parliamentary affairs on the Confederation's transition and on positioning Switzerland internationally\nSNB | Swiss National Bank, reports adapting infrastructure to post-quantum requirements",
+  "migrationTimeline": "2026 | Federal administration public key infrastructure migration under way, moving certificates off RSA with changes to certificate algorithms and key lengths (BIT/FOITT)\n2026 | armasuisse research programme begins analysing the e-ID technology stack and developing a demonstrator for a quantum-secure e-ID architecture\n2029 | Post-quantum cryptography research funds for the quantum-secure e-ID work allocated through to 2029 (armasuisse)",
+  "targetCompletion": "None stated",
+  "legalStatus": "none",
+  "dataStatus": "Partial"
 }

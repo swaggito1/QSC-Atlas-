@@ -174,5 +174,38 @@
     "url": "https://www.nldigitalgovernment.nl/news/new-tools-available-to-help-mitigate-the-threat-of-quantum-computers/",
     "summary": "News item on the Dutch digital government portal announcing the updated handbook on quantum-safe cryptography and the PQChoiceAssistant tool, which support governments in future-proofing their security.",
     "included": true
+  },
+  {
+    "title": "Security guidelines for Transport Layer Security (TLS) version 2025-05",
+    "country": "NLD",
+    "issuingOrg": "NCSC-NL",
+    "year": 2025,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://english.ncsc.nl/binaries/ncsc-en/documenten/publications/2025/06/26/security-guidelines-for-transport-layer-security-2025-05/Publication_TLS-Security+guidelines-2025-05_ENG.pdf",
+    "summary": "NCSC-NL TLS security guidelines (version 2025-05, published 26 June 2025) that explicitly address hybrid quantum-safe key-exchange algorithms (X25519MLKEM768, SecP256r1MLKEM768, SecP384r1MLKEM1024 combining ECDHE with ML-KEM) and advise organisations, by quantum-risk profile, on when to implement quantum-safe cryptography in TLS.",
+    "included": true
+  },
+  {
+    "title": "Quantum computers are coming, and the Netherlands is ready",
+    "country": "NLD",
+    "issuingOrg": "Rijksoverheid",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.government.nl/latest/news/2025/07/17/quantum-computers",
+    "summary": "English-language Government.nl news item (17 July 2025) announcing that the Dutch central government has an operational quantum network and is deploying post-quantum cryptography alongside quantum key distribution to protect sensitive data, as demonstrated at a pre-NATO Summit event. (English mirror of the Dutch rijksoverheid.nl item at a distinct URL.)",
+    "included": true
+  },
+  {
+    "title": "Fiche: Simplificatie NIS2-richtlijn (parliamentary letter, new EU Commission proposals)",
+    "country": "NLD",
+    "issuingOrg": "Tweede Kamer / Ministerie van Buitenlandse Zaken",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2026Z04601&did=2026D10402",
+    "summary": "Dutch government assessment (BNC-fiche, 6 March 2026) of the European Commission proposal to simplify the NIS2 Directive, which explicitly notes the Commission's proposal that member states make post-quantum cryptography a mandatory part of the national cybersecurity strategy; the PQC reference is incidental to a NIS2-focused fiche, hence flagged for review.",
+    "included": false
   }
 ]

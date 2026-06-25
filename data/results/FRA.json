@@ -339,5 +339,82 @@
     "url": "https://www.banque-france.fr/fr/communiques-de-presse/declaration-relative-lavancement-dune-feuille-de-route-coordonnee-pour-la-transition-vers-la",
     "summary": "Banque de France communiqué relaying a statement on advancing a coordinated roadmap for the transition to post-quantum cryptography in the financial sector, likely linked to the G7 Cyber Expert Group; flagged for routing review.",
     "included": true
+  },
+  {
+    "title": "Transition post-quantique d'IPsec (ANSSI-FT-117)",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/documents-guides/transition_post_quantique_ipsec.pdf",
+    "summary": "ANSSI technical sheet ANSSI-FT-117 dated 02/02/2026 setting out how to transition IPsec to post-quantum cryptography, replacing current asymmetric mechanisms with post-quantum mechanisms resistant to attacks by classical and quantum computers.",
+    "included": true
+  },
+  {
+    "title": "Transition post-quantique de SSHv2 (fiche technique ANSSI)",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/documents-guides/transition_post_quantique_ssh_v2.pdf",
+    "summary": "ANSSI technical sheet on the post-quantum transition of SSHv2, describing how to replace current asymmetric cryptographic mechanisms with post-quantum mechanisms. Part of the February 2026 series of ANSSI transition fact sheets.",
+    "included": true
+  },
+  {
+    "title": "Transition post-quantique de TLS 1.3 (fiche technique ANSSI)",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/documents-guides/transition_post_quantique_tls_1_3.pdf",
+    "summary": "ANSSI technical sheet on the post-quantum transition of TLS 1.3, explaining the replacement of pre-quantum asymmetric mechanisms with post-quantum cryptography. Part of the February 2026 series of ANSSI transition fact sheets.",
+    "included": true
+  },
+  {
+    "title": "Règles et recommandations concernant le choix et le dimensionnement des mécanismes cryptographiques (ANSSI-PG-083, v3.00)",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/documents-guides/anssi-guide-mecanismes-crypto-3.00.pdf",
+    "summary": "Version 3.00 of ANSSI's cryptographic mechanisms guide dated 2026-03-20, now adding post-quantum rules and recommendations that complement the classical rules when resistance to quantum-computer-assisted attacks is required, including post-quantum signatures and KEMs.",
+    "included": true
+  },
+  {
+    "title": "Analyse de risque chiffrement et cryptographie",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/nous-connaitre/publications/analyse-de-risque-sectorielle-et-technique/analyse-de-risque-chiffrement-et-cryptographie/",
+    "summary": "ANSSI sectoral and technical risk analysis published 27 May 2026 stating that the arrival of a quantum computer is a considerable threat and urging organisations across all sectors to migrate urgently to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Avis de l'ANSSI sur la migration vers la cryptographie post-quantique",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/guides/avis-de-lanssi-sur-la-migration-vers-la-cryptographie-post-quantique-0",
+    "summary": "French-language version of ANSSI's opinion/position on migration to post-quantum cryptography, published on ANSSI's official guides portal (counterpart to the English 'ANSSI views on the Post-Quantum Cryptography transition').",
+    "included": true
+  },
+  {
+    "title": "Sécurité des paiements par carte bancaire face au développement de l'informatique quantique (question écrite n°03672)",
+    "country": "FRA",
+    "issuingOrg": "Sénat",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.senat.fr/questions/base/2025/qSEQ250303672.html",
+    "summary": "Senate written question (17th legislature, March 2025, answered June 2025) on quantum-computing threats to bank-card payments; the government answer sets out the transition to post-quantum cryptography, ANSSI's PQC roadmap and France's participation in the EU-coordinated PQC implementation.",
+    "included": true
   }
 ]

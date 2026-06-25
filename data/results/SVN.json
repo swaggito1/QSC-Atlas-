@@ -31,5 +31,16 @@
     "url": "https://www.gov.si/novice/2023-11-24-wb3c-usposabljanje-za-vodje-informacijske-varnosti-v-kriticni-infrastrukturi-in-drzavni-upravi/",
     "summary": "Slovenian government news item on a WB3C training for information security leaders in critical infrastructure and public administration, covering post-quantum cryptography and NIS2 directive obligations.",
     "included": true
+  },
+  {
+    "title": "Strategija razvoja kvantnih tehnologij v Sloveniji do leta 2035 (Strategy for the Development of Quantum Technologies in Slovenia until 2035)",
+    "country": "SVN",
+    "issuingOrg": "MVZI",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.gov.si/assets/ministrstva/MVZI/Znanost/Strategije-predpisi-in-drugi-dokumenti/Strategija-razvoja-kvantnih-tehnologij-v-SI-do-2035_V1.0.pdf",
+    "summary": "National quantum-technologies strategy published by Slovenia's Ministry of Higher Education, Science and Innovation (MVZI), addressing quantum communication, QKD/QRNG and research into the quantum security of elliptic-curve cryptography. An explicit post-quantum/quantum-safe cryptography (PQC) migration reference could not be verified because the PDF text was not machine-extractable; flagged as a draft for human review.",
+    "included": false
   }
 ]

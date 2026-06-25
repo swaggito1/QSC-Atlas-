@@ -1,23 +1,9 @@
 {
   "iso3": "TUR",
-  "summary": "Turkey's public engagement with post-quantum cryptography is led by BTK, the Information and Communication Technologies Authority, which has run a programme themed Cybersecurity and Post-Quantum Cryptology promoting the spread of quantum-resistant cryptography in the country. No national post-quantum standard, algorithm choice or migration timeline has been published.",
+  "summary": "Turkey's public engagement with post-quantum cryptography runs through two government bodies, neither of which has yet published a national standard, algorithm choice or migration timeline. BTK, the Information and Communication Technologies Authority, has run a programme themed Cybersecurity and Post-Quantum Cryptology promoting the spread of quantum-resistant cryptography in the country. Separately, the Presidency of Defence Industries (SSB) runs the Turkiye Kuantum Platformu, a national quantum-technologies coordination platform that frames quantum communication as complementary layers of QKD and post-quantum cryptography and points to an updated Quantum Technology Roadmap and a 2024 to 2025 results report. Activity to date is coordination and awareness work rather than binding regulation, and no dated post-quantum migration milestone has been set.",
   "dominantProcess": "NIST",
-  "govActors": "BTK | Information and Communication Technologies Authority, ran the Cybersecurity and Post-Quantum Cryptology programme promoting quantum-resistant cryptography",
-  "dataStatus": "Partial",
-  "provenance": [
-    "summary + govActors (BTK): the one included T1 result, the BTK news item on the Cybersecurity and Post-Quantum Cryptology programme (btk.gov.tr)",
-    "dominantProcess OMITTED: the included document promotes quantum-resistant cryptography generically and names no standards camp, FIPS suite or national scheme; grey beats wrong",
-    "standardFamilies / algorithms / hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated in the included document",
-    "TUBITAK BILGEM quantum-technologies page is included:false (URL redirected, PQC text unconfirmed) and is not relied on; candidates also include a TUBA book chapter, a BILGEM magazine page and the national Cyber Security Strategy landing page, none confirmed for explicit PQC - REVIEW, recommend re-scrape with --deep for a TUBITAK BILGEM or national-strategy PQC source",
-    "dominantProcess re-classified NIST by best-available signal (low): the only included document is BTK's 'Cybersecurity and Post-Quantum Cryptology' programme, which promotes quantum-resistant cryptography generically with no sovereign Turkish scheme or ISO lead attested, so it defaults to NIST. Thin single-source signal - provisional, flagged for review",
-    "Model 2026-06-14 (engaged-unaligned, Low): Source names no standards camp, FIPS suite or national scheme. Engaged but uncommitted."
-  ],
-  "country": "Türkiye",
-  "confidence": "Low",
-  "classificationBasis": "summary + govActors (BTK): the one included T1 result, the BTK news item on the Cybersecurity and Post-Quantum Cryptology programme (btk.gov.tr)\ndominantProcess OMITTED: the included document promotes quantum-resistant cryptography generically and names no standards camp, FIPS suite or national scheme; grey beats wrong\nstandardFamilies / algorithms / hybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated in the included document\nTUBITAK BILGEM quantum-technologies page is included:false (URL redirected, PQC text unconfirmed) and is not relied on; candidates also include a TUBA book chapter, a BILGEM magazine page and the national Cyber Security Strategy landing page, none confirmed for explicit PQC - REVIEW, recommend re-scrape with --deep for a TUBITAK BILGEM or national-strategy PQC source\ndominantProcess re-classified NIST by best-available signal (low): the only included document is BTK's 'Cybersecurity and Post-Quantum Cryptology' programme, which promotes quantum-resistant cryptography generically with no sovereign Turkish scheme or ISO lead attested, so it defaults to NIST. Thin single-source signal - provisional, flagged for review",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "engaged-unaligned",
+  "govActors": "BTK | Information and Communication Technologies Authority, ran the Cybersecurity and Post-Quantum Cryptology programme promoting quantum-resistant cryptography\nSSB (Cumhurbaskanligi Savunma Sanayii Baskanligi) | Presidency of Defence Industries, runs the Turkiye Kuantum Platformu national quantum-technologies coordination platform referencing post-quantum cryptography and the Quantum Technology Roadmap",
   "mainRegulation": "",
   "legalStatus": "none",
-  "obligation": "No binding PQC obligation; activity is a national authority awareness programme only."
+  "dataStatus": "Partial"
 }

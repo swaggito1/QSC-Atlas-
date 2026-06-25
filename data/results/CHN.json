@@ -42,5 +42,27 @@
     "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202312/P020240326616760506829.pdf",
     "summary": "Research report by CAICT, the state research institute under MIIT, surveying quantum information technology developments. It covers post-quantum cryptography (PQC) standardisation progress, including NIST PQC algorithm standardisation, alongside global strategy and investment context.",
     "included": false
+  },
+  {
+    "title": "Notice on soliciting suggestions for the Second Batch of National Cryptography Science Fund project guidelines",
+    "country": "CHN",
+    "issuingOrg": "OSCCA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.oscca.gov.cn/sca/xwdt/2025-06/06/content_1061257.shtml",
+    "summary": "OSCCA (State Cryptography Administration) notice inviting nationwide suggestions for the second batch of National Cryptography Science Fund project guidelines, explicitly listing 'cryptographic algorithm design and analysis targeting quantum computing' (面向量子计算的密码算法设计与分析) among the priority foundational research directions. This is the upstream solicitation that preceded the published 2nd-batch guidelines (Announcement No. 55).",
+    "included": true
+  },
+  {
+    "title": "Announcement on Launching the Next-generation Commercial Cryptographic Algorithms Program (NGCC) (English)",
+    "country": "CHN",
+    "issuingOrg": "ICCS (Institute of Commercial Cryptography Standards)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_1937428197396713472.html",
+    "summary": "English-language announcement by the Institute of Commercial Cryptography Standards (under OSCCA's standards system) launching the NGCC global call for next-generation public-key, hash and block-cipher algorithms, explicitly motivated by the threat of quantum computing and aimed at standardising quantum-resistant commercial cryptographic algorithms. This is the English counterpart to the Chinese NGCC notice already in the corpus, at a distinct URL.",
+    "included": false
   }
 ]

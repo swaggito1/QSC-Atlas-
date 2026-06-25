@@ -53,5 +53,71 @@
     "url": "https://www.cnb.cz/export/sites/cnb/cs/ekonomicky-vyzkum/.galleries/cnb_lab/digital-assets-pilot/analyza_moznosti_investic_do_dalsich_trid_aktiv_cast_i_digitalni_aktiva.pdf",
     "summary": "Czech National Bank (central bank) research analysis on investment in digital assets which notes the quantum threat and discusses quantum-resistant signature schemes (post-quantum cryptography). Flagged for review as the PQC mention is incidental to a financial-research paper rather than a dedicated QSC document.",
     "included": true
+  },
+  {
+    "title": "New European project QARC will ensure quantum-resistant data security",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://nukib.gov.cz/cs/infoservis/aktuality/2375-novy-evropsky-projekt-qarc-zajisti-kvantove-odolnou-bezpecnost-dat/",
+    "summary": "NÚKIB news item (20 February 2026) announcing the Horizon Europe / ECCC-funded QARC ('Quantum-Resistant Cryptography in Practice') project, coordinated by Brno University of Technology, in which NÚKIB is a partner responsible for cryptographic expertise and coordinating the national transition to post-quantum cryptography, including developing and validating PQC implementation methodologies for critical state systems.",
+    "included": true
+  },
+  {
+    "title": "Minimum Requirements for Cryptographic Algorithms (v4.1)",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://portal.nukib.gov.cz/storage/uploads/2026/03/04/doporuceni-kryptograficka-bezpecnost-v4-1_uid_69a8216e3deb1.pdf",
+    "summary": "Latest edition (v4.1, dated 4 March 2026) of NÚKIB's official 'Minimum Requirements for Cryptographic Algorithms', which updates recommended algorithms in line with NIST's finalised post-quantum cryptography standards and supports preparation for the transition to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "NÚKIB has updated the Minimum Requirements for Cryptographic Algorithms",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/cs/infoservis/doporuceni/2219-nukib-aktualizoval-minimalni-pozadavky-pro-kryptograficke-algoritmy/",
+    "summary": "NÚKIB recommendation notice (February 2025) announcing the updated Minimum Requirements for Cryptographic Algorithms, including the addition of post-quantum algorithm names and parameters based on the final NIST PQC standards issued in August 2024 and support for preparing the transition to quantum-resistant cryptography.",
+    "included": true
+  },
+  {
+    "title": "NÚKIB prepared support materials for protection against the threat posed by quantum computers",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/cs/infoservis/aktuality/1984-nukib-pripravil-podpurne-materialy-pro-ochranu-pred-hrozbou-v-podobe-kvantovych-pocitacu/",
+    "summary": "NÚKIB news item introducing three support materials explaining the quantum-computer threat to current cryptography and the steps required to defend against it, including the Minimum Requirements document that supports the transition to quantum-resistant (post-quantum) cryptography.",
+    "included": true
+  },
+  {
+    "title": "EU Member States warn of the quantum threat and call for the transition to post-quantum cryptography",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/cs/infoservis/aktuality/2208-clenske-staty-eu-varuji-pred-kvantovou-hrozbou-a-vyzyvaji-k-prechodu-k-postkvantove-kryptografii/",
+    "summary": "NÚKIB news item stating that it has joined the joint statement 'Securing Tomorrow, Today: Transitioning to Post-Quantum Cryptography' of 18 EU member states, agreeing with its conclusions and endorsing preparatory steps such as quantum-threat impact analysis and a risk-oriented PQC migration roadmap.",
+    "included": true
+  },
+  {
+    "title": "Kvantové technologie a komunikace (Quantum Technologies and Communications) – study for the Ministry of Industry and Trade",
+    "country": "CZE",
+    "issuingOrg": "MPO (Ministerstvo průmyslu a obchodu)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://mpo.gov.cz/assets/cz/e-komunikace-a-posta/studie-k-narodnimu-planu-obnovy/2025/6/Kvantove-technologie-a-komunikace.pdf",
+    "summary": "Study (June 2025) prepared for the Czech Ministry of Industry and Trade under the National Recovery Plan, surveying quantum technologies and communications and containing a dedicated section (3.2) on post-quantum cryptography (PQC) / quantum-safe cryptography (QSC), its advantages and the migration challenge.",
+    "included": true
   }
 ]

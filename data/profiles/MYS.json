@@ -1,22 +1,15 @@
 {
   "iso3": "MYS",
-  "country": "Malaysia",
-  "summary": "Malaysia's transition is led by CyberSecurity Malaysia, working with the National Cyber Security Agency (NACSA), which has published a Post-Quantum Cryptography Migration Framework and adoption guidance for government agencies and critical infrastructure, alongside the national MyKriptografi and MySEAL cryptography programmes.",
+  "summary": "Malaysia's post-quantum transition is led by CyberSecurity Malaysia, the national cyber security specialist agency, which has published a Post-Quantum Cryptography Migration Framework and a technical guide on adopting and implementing post-quantum cryptographic solutions, and offers migration consultancy, awareness and workshop services to government agencies, critical infrastructure operators and private organisations. This work sits alongside the national MyKriptografi and MySEAL cryptography programmes. The Ministry of Digital, working with the National Cyber Security Agency (NACSA) and the domain registry MYNIC, has publicly framed the move to post-quantum cryptography as an urgent necessity, including the need to replace at-risk protocols such as DNSSEC. The published material is guidance rather than binding law, and no dated national migration timeline is set out in the ingested documents.",
   "dominantProcess": "NIST",
-  "govActors": "CyberSecurity Malaysia | national cyber security specialist agency, publishes the PQC Migration Framework and adoption guidance\nNACSA | National Cyber Security Agency, sets national cyber security policy",
-  "dataStatus": "Partial",
-  "provenance": [
-    "CyberSecurity Malaysia PQC Migration Framework + initiatives + adoption recommendations (cybersecurity.my / mykripto.cybersecurity.my, included)",
-    "NIST (medium confidence): the migration framework and adoption guidance follow international NIST PQC standards; MyKriptografi/MySEAL are national programmes, not a distinct sovereign PQC algorithm - REVIEW",
-    "NACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text",
-    "Model 2026-06-14 (NIST-bloc / taker, High): Migration framework follows NIST; MyKriptografi/MySEAL are national programmes, not a sovereign algorithm."
-  ],
-  "confidence": "High",
-  "classificationBasis": "CyberSecurity Malaysia PQC Migration Framework + initiatives + adoption recommendations (cybersecurity.my / mykripto.cybersecurity.my, included)\nNIST (medium confidence): the migration framework and adoption guidance follow international NIST PQC standards; MyKriptografi/MySEAL are national programmes, not a distinct sovereign PQC algorithm - REVIEW\nNACSA roadmap (high-risk by 2030, full by 2035) seen in conference/secondary sources; not set as a timeline here pending the framework PDF text",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker",
-  "mainRegulation": "Cyber Security Act 2024 (Act 854) | national | binding-law\nCyberSecurity Malaysia / NACSA Post-Quantum Cryptography Migration Framework | national | guidance",
-  "legalStatus": "binding",
-  "obligation": "The Cyber Security Act 2024, in force since 26 August 2024, places binding cyber security duties on designated national critical information infrastructure entities, including risk assessment, audit and incident reporting, but it does not mandate post-quantum cryptography specifically. Migration to the NIST post-quantum baseline is set out in the CyberSecurity Malaysia and NACSA Migration Framework, which is technical guidance and is not in itself legally binding."
+  "standardFamilies": "",
+  "algorithms": "",
+  "processParticipation": "",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "",
+  "targetCompletion": "None stated",
+  "govActors": "CyberSecurity Malaysia | national cyber security specialist agency, publishes the PQC Migration Framework, adoption recommendations and PQC migration services\nNACSA | National Cyber Security Agency, sets national cyber security policy and participates in the post-quantum transition messaging\nMinistry of Digital | government ministry framing the move to post-quantum cryptography as an urgent national necessity, including replacing at-risk DNSSEC protocols\nMYNIC | national domain name registry, partner in the quantum-and-internet-security awareness programme",
+  "mainRegulation": "CyberSecurity Malaysia Post-Quantum Cryptography Migration Framework | national | guidance",
+  "legalStatus": "soft-only",
+  "dataStatus": "Partial"
 }

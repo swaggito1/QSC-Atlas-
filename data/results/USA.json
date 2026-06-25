@@ -416,5 +416,148 @@
     "url": "https://www.gao.gov/assets/gao-25-107703.pdf",
     "summary": "GAO report on quantum threat mitigation noting that OMB's Report on Post-Quantum Cryptography provided a migration cost estimate of $7.1 billion and reviewing how PQC standards documents were developed.",
     "included": true
+  },
+  {
+    "title": "Executive Order: Securing the Nation Against Advanced Cryptographic Attacks",
+    "country": "USA",
+    "issuingOrg": "White House",
+    "year": 2026,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/",
+    "summary": "Presidential executive order (June 22, 2026) directing an accelerated nationwide migration to post-quantum cryptography, mandating that federal High Value Assets and high-impact systems transition to NIST-approved PQC standards (key establishment by end-2030, digital signatures by 2031) and tasking OMB, the National Cyber Director, NIST, NSA and CISA with implementation guidance.",
+    "included": true
+  },
+  {
+    "title": "Fact Sheet: President Donald J. Trump Secures the Nation Against Advanced Cryptographic Attacks",
+    "country": "USA",
+    "issuingOrg": "White House",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-secures-the-nation-against-advanced-cryptographic-attacks/",
+    "summary": "White House fact sheet accompanying the June 2026 executive order, summarising directives to lead an accelerated, nationwide migration to post-quantum cryptography and to deliver practical agency guidance on PQC migration including a cryptographic bill of materials.",
+    "included": true
+  },
+  {
+    "title": "FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM)",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2024,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf",
+    "summary": "Finalised Federal Information Processing Standard (published August 13, 2024) specifying ML-KEM, a quantum-resistant key-encapsulation mechanism derived from CRYSTALS-KYBER and believed secure against adversaries possessing a quantum computer.",
+    "included": true
+  },
+  {
+    "title": "FIPS 204: Module-Lattice-Based Digital Signature Standard (ML-DSA)",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2024,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf",
+    "summary": "Finalised Federal Information Processing Standard (published August 13, 2024) specifying ML-DSA, a quantum-resistant digital signature algorithm derived from the CRYSTALS-Dilithium submission.",
+    "included": true
+  },
+  {
+    "title": "FIPS 205: Stateless Hash-Based Digital Signature Standard (SLH-DSA)",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2024,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf",
+    "summary": "Finalised Federal Information Processing Standard (published August 13, 2024) specifying SLH-DSA, a quantum-resistant stateless hash-based digital signature scheme derived from the SPHINCS+ submission.",
+    "included": true
+  },
+  {
+    "title": "NIST IR 8545: Status Report on the Fourth Round of the NIST Post-Quantum Cryptography Standardization Process",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf",
+    "summary": "Final NIST internal report describing the evaluation and selection of fourth-round PQC key-establishment candidates (BIKE, Classic McEliece, HQC, SIKE) and announcing HQC as the only algorithm selected for standardisation to augment NIST's key-establishment portfolio.",
+    "included": true
+  },
+  {
+    "title": "NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+    "summary": "NIST news announcement (March 11, 2025) that HQC has been selected as a fifth algorithm for post-quantum encryption, to be standardised as a backup key-establishment mechanism alongside ML-KEM.",
+    "included": true
+  },
+  {
+    "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+    "country": "USA",
+    "issuingOrg": "NIST",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+    "summary": "NIST news announcement (August 13, 2024) of the first three finalised post-quantum encryption standards (FIPS 203, 204 and 205), concluding an eight-year standardisation effort.",
+    "included": true
+  },
+  {
+    "title": "CISA Releases Product Categories List to Propel Post-Quantum Cryptography Adoption Pursuant to President Trump's Executive Order 14306",
+    "country": "USA",
+    "issuingOrg": "CISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cisa.gov/news-events/news/cisa-releases-product-categories-list-propel-post-quantum-cryptography-adoption-pursuant-president",
+    "summary": "CISA news announcement (January 23, 2026) of an initial list of product categories for technologies that use post-quantum cryptography standards, published with NSA pursuant to Executive Order 14306 to help organisations shape PQC migration strategies.",
+    "included": true
+  },
+  {
+    "title": "CISA Announces Post-Quantum Cryptography Initiative",
+    "country": "USA",
+    "issuingOrg": "CISA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cisa.gov/news-events/news/cisa-announces-post-quantum-cryptography-initiative",
+    "summary": "CISA news announcement launching the Post-Quantum Cryptography Initiative to unify and drive efforts with interagency and industry partners to address the quantum threat to cryptography.",
+    "included": true
+  },
+  {
+    "title": "CISA, NSA and NIST Publish New Resource for Migrating to Post-Quantum Cryptography",
+    "country": "USA",
+    "issuingOrg": "CISA",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cisa.gov/news-events/news/cisa-nsa-and-nist-publish-new-resource-migrating-post-quantum-cryptography",
+    "summary": "Joint CISA, NSA and NIST news announcement of the Quantum-Readiness: Migration to Post-Quantum Cryptography factsheet, urging organisations to develop quantum-readiness roadmaps and begin planning migration.",
+    "included": true
+  },
+  {
+    "title": "Frequently Asked Questions on Financial Sector Risks from Quantum Computing",
+    "country": "USA",
+    "issuingOrg": "U.S. Department of the Treasury",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://home.treasury.gov/system/files/136/FAQs-Financial-Sector-Risks-Quantum-Computing.pdf",
+    "summary": "U.S. Treasury FAQ document explaining quantum-computing cybersecurity risks to the financial sector, including 'harvest now, decrypt later', and pointing financial entities to the NIST post-quantum cryptography FIPS standards (FIPS 203/204/205) for migration.",
+    "included": true
+  },
+  {
+    "title": "Harvest Now, Decrypt Later: Examining Post-Quantum Cryptography and the Data Privacy Risks for Distributed Ledger Networks (FEDS)",
+    "country": "USA",
+    "issuingOrg": "Federal Reserve Board",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.federalreserve.gov/econres/feds/harvest-now-decrypt-later-examining-post-quantum-cryptography-and-the-data-privacy-risks-for-distributed-ledger-networks.htm",
+    "summary": "Federal Reserve Finance and Economics Discussion Series (FEDS) working paper examining post-quantum cryptography and 'harvest now, decrypt later' data-privacy risks for distributed ledger networks; flagged for review as a FEDS paper reflects author research rather than official Board policy.",
+    "included": false
   }
 ]

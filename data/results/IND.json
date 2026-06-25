@@ -86,5 +86,38 @@
     "url": "https://rbih-website-assets.s3.ap-south-1.amazonaws.com/resources/whitepaper-on-securing-indian-banks-in-the-age-of-quantum-computing.pdf",
     "summary": "Reserve Bank Innovation Hub (an RBI subsidiary) whitepaper recommending that Indian banks proactively transition to post-quantum cryptography algorithms designed to resist quantum attacks. Flagged for review: hosted on a non-government S3 domain and issued by an RBI subsidiary rather than the central bank directly.",
     "included": false
+  },
+  {
+    "title": "Roadmap for Transforming India into a Leading Quantum-Powered Economy",
+    "country": "IND",
+    "issuingOrg": "NITI Aayog",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://niti.gov.in/sites/default/files/2025-11/Roadmap_for_Transforming_India_into_a_Leading_Quantum_Powered_Economy.pdf",
+    "summary": "NITI Aayog national strategic roadmap (with IBM as knowledge partner) setting India's 2035/2047 quantum vision, which explicitly calls for a Post-Quantum Cryptography (PQC) transition plan, mandatory quantum-safe encryption planning in government systems, national PQC testbeds, and building domestic post-quantum cryptographic stacks. Published November 2025.",
+    "included": true
+  },
+  {
+    "title": "Technical Report on Quantum Secure 5G / beyond 5G Core using Post-Quantum Cryptography (TEC 910028:2025)",
+    "country": "IND",
+    "issuingOrg": "TEC",
+    "year": 2025,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.tec.gov.in/pdf/TR/final%20Technical%20Report%20on%20Q%20Secure%205G%20and%20beyond%205G%20core%2028-03-25.pdf",
+    "summary": "Telecommunication Engineering Centre technical report (TEC 910028:2025, dated 28 March 2025) on securing 5G and beyond-5G core network interfaces, recommending migration of classical cryptography in 5G core subsystems to NIST post-quantum cryptography algorithms (and/or quantum key distribution).",
+    "included": true
+  },
+  {
+    "title": "Technical Guidelines on SBOM, QBOM & CBOM, AIBOM and HBOM (Version 2.0)",
+    "country": "IND",
+    "issuingOrg": "CERT-In",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cert-in.org.in/PDF/TechnicalGuidelines-on-SBOM,QBOM&CBOM,AIBOM_and_HBOM_ver2.0.pdf",
+    "summary": "CERT-In technical guidelines (Version 2.0, dated 09.07.2025) covering Software, Quantum, Cryptographic, AI and Hardware Bills of Materials, including a Quantum Bill of Materials (QBOM) and Cryptographic BOM (CBOM) with a dedicated 'Quantum-Readiness and Migration Strategy' section to support organisational transition to post-quantum cryptography.",
+    "included": true
   }
 ]

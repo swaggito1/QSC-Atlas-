@@ -1,27 +1,15 @@
 {
   "iso3": "CAN",
-  "summary": "Canada's transition is led by the Canadian Centre for Cyber Security, which has published a roadmap for migrating Government of Canada non-classified IT systems to post-quantum cryptography, with the Treasury Board Secretariat issuing the matching policy implementation notice. The Cyber Centre aligns with the NIST standardisation process, having reviewed the NIST candidate algorithms.",
+  "summary": "Canada's transition is led by the Canadian Centre for Cyber Security, which has published a roadmap for migrating Government of Canada non-classified IT systems to post-quantum cryptography, with the Treasury Board Secretariat issuing the matching policy implementation notice. The Cyber Centre's cryptographic algorithms standard now names the NIST-standardised post-quantum algorithms ML-KEM for key establishment and ML-DSA and SLH-DSA for digital signatures as the baseline for the migration, and its recommended procurement contract clauses require cryptographic modules to support post-quantum cryptography by the end of 2026. High-priority government systems are to be migrated by 2031 and the remainder by 2035. The Cyber Centre aligns with the NIST standardisation process, having reviewed the NIST candidate algorithms.",
   "dominantProcess": "NIST",
-  "govActors": "CCCS | Canadian Centre for Cyber Security, publishes the migration roadmap (ITSM.40.001) and quantum-threat guidance, and reviewed the NIST PQC candidates\nTBS | Treasury Board Secretariat, issues the policy implementation notice requiring migration of government systems\nISED | Innovation, Science and Economic Development Canada, National Quantum Strategy roadmap and national quantum-readiness best practices\nSSC | Shared Services Canada, campaign material on quantum computing and cybersecurity\nNRC | National Research Council, Quantum Safe Technologies Initiative supporting testing and integration of post-quantum cryptography",
-  "migrationTimeline": "2031 | High-priority Government of Canada systems migrated to post-quantum cryptography\n2035 | Remaining Government of Canada systems migrated to post-quantum cryptography",
-  "targetCompletion": "2035",
+  "standardFamilies": "NIST-standardised post-quantum cryptography algorithms (per Cyber Centre ITSP.40.111)",
+  "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
+  "processParticipation": "",
   "hybridDeployment": "None stated",
-  "dataStatus": "Partial",
-  "provenance": [
-    "summary + govActors (CCCS, TBS): roadmap ITSM.40.001 and TBS policy implementation notice results rows",
-    "dominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned",
-    "ISED, SSC, NRC roles: respective results rows",
-    "migrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035",
-    "standardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
-    "Model 2026-06-14 (NIST-bloc / taker, High): Long-standing adopter; CSE guidance and Treasury Board SPIN migration mandate."
-  ],
-  "country": "Canada",
-  "confidence": "High",
-  "classificationBasis": "summary + govActors (CCCS, TBS): roadmap ITSM.40.001 and TBS policy implementation notice results rows\ndominantProcess NIST: CCCS summary review of NIST PQC final candidates row, plus ISED quantum-readiness referencing quantum-safe PQC. No domestic algorithm scheme stated, so NIST assigned\nISED, SSC, NRC roles: respective results rows\nmigrationTimeline 2031/2035: the CCCS roadmap (ITSM.40.001) is the attesting institutional document; the specific 2031 high-priority and 2035 full-migration dates are corroborated in candidates (quantuminsider, PQShield). The dated milestones are NOT quoted in the included results summary itself, only in third-party candidate descriptions - REVIEW the roadmap text to confirm exact wording and which systems map to 2031 vs 2035\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names in the included summaries",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "NIST-bloc",
-  "standardsRole": "taker",
-  "mainRegulation": "Treasury Board Security Policy Implementation Notice: Migrating the Government of Canada to Post-Quantum Cryptography (2025) | national | binding-by-market-access\nCanadian Centre for Cyber Security roadmap ITSM.40.001 and guidance ITSAP.00.017 | national | guidance",
+  "migrationTimeline": "2026 | Cryptographic modules in new procurements to support post-quantum cryptography for key establishment and digital signatures (Cyber Centre contract clauses ITSM.00.501)\n2031 | High-priority Government of Canada systems migrated to post-quantum cryptography\n2035 | Remaining Government of Canada systems migrated to post-quantum cryptography",
+  "targetCompletion": "2035",
+  "govActors": "CCCS | Canadian Centre for Cyber Security, publishes the migration roadmap (ITSM.40.001), the approved cryptographic algorithms standard (ITSP.40.111) naming ML-KEM, ML-DSA and SLH-DSA, the recommended cryptography contract clauses (ITSM.00.501) and quantum-threat guidance, and reviewed the NIST PQC candidates\nTBS | Treasury Board Secretariat, issues the policy implementation notice requiring migration of government systems\nISED | Innovation, Science and Economic Development Canada, National Quantum Strategy roadmap and national quantum-readiness best practices\nSSC | Shared Services Canada, campaign material on quantum computing and cybersecurity\nNRC | National Research Council, Quantum Safe Technologies Initiative supporting testing and integration of post-quantum cryptography",
+  "mainRegulation": "Treasury Board Security Policy Implementation Notice: Migrating the Government of Canada to Post-Quantum Cryptography (2025) | national | binding-by-market-access\nCanadian Centre for Cyber Security cryptographic algorithms standard ITSP.40.111 (Version 5, 2026) | national | guidance\nCanadian Centre for Cyber Security Recommended Contract Clauses for Cryptography ITSM.00.501 (2025) | national | guidance\nCanadian Centre for Cyber Security roadmap ITSM.40.001 and guidance ITSAP.00.017 | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Federal departments only: the Treasury Board Security Policy Implementation Notice, effective 9 October 2025 under the Policy on Government Security and the Policy on Service and Digital, requires Government of Canada systems that use cryptography to migrate to post-quantum cryptography, with a high-level migration plan due by April 2026, high-priority systems migrated by the end of 2031 and all remaining systems by 2035. The Cyber Centre roadmap (ITSM.40.001) and quantum-threat guidance (ITSAP.00.017) set the recommended method and align to the NIST standards. There is no economy-wide mandate on private organisations."
+  "dataStatus": "Partial"
 }

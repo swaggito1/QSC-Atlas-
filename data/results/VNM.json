@@ -75,5 +75,38 @@
     "url": "https://antoanthongtin.gov.vn/an-ninh-quoc-phong/tiep-tuc-nghien-cuu-chuyen-sau-ve-linh-vuc-mat-ma-luong-tu-109880",
     "summary": "Item in the Government Cipher Committee's official journal on continued in-depth quantum cryptography research within the cipher/defence-security sector, including post-quantum-resistant cryptographic work.",
     "included": true
+  },
+  {
+    "title": "Workshop introducing the Government Cipher Committee's VN-PQSign quantum-resistant digital signature algorithm and launch of the Advanced Cryptography Research Lab",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://bcy.gov.vn/tin-tuc-su-kien/hoi-thao-gioi-thieu-thuat-toan-chu-ky-so-khang-luong-tu-vn-pqsign-cua-ban-co-yeu-chinh-phu-va-le-929103",
+    "summary": "Official Government Cipher Committee announcement (9 Feb 2026) of a workshop introducing the domestically developed VN-PQSign hash-based post-quantum digital signature algorithm and the presentation of its draft TCVN national standard, alongside the launch of a joint Advanced Cryptography Research Lab with the Institute for Advanced Study in Mathematics.",
+    "included": true
+  },
+  {
+    "title": "New advance in post-quantum encryption",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://antoanthongtin.vn/tin/buoc-tien-moi-trong-ma-hoa-hau-luong-tu",
+    "summary": "Article in the Government Cipher Committee's information-security journal reporting the 9 Feb 2026 launch of the VN-PQSign post-quantum digital signature algorithm and the Advanced Cryptography Research Lab, and setting out the 2026 plan to standardise VN-PQSign as a Vietnamese national standard (TCVN) and develop lattice-based PQC signature and KEM algorithms toward standardisation.",
+    "included": true
+  },
+  {
+    "title": "Ensuring national cybersecurity in the era of AI and quantum: challenges and proposed solutions for Vietnam",
+    "country": "VNM",
+    "issuingOrg": "Ban Cơ yếu Chính phủ (Government Cipher Committee)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://antoanthongtin.vn/tin/bao-dam-an-ninh-mang-quoc-gia-trong-ky-nguyen-ai-va-luong-tu-thach-thuc-va-giai-phap-de-xuat-cho-viet-nam",
+    "summary": "Policy article in the Government Cipher Committee's journal analysing the quantum threat (including 'collect now, decrypt later') to Vietnamese critical infrastructure and proposing a rapid national migration to post-quantum cryptography, noting the Committee has been tasked with building Vietnam's quantum-resistant cryptography development plan for 2026-2030.",
+    "included": true
   }
 ]

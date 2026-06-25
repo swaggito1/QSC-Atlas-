@@ -1,28 +1,15 @@
 {
   "iso3": "POL",
-  "summary": "Poland's published material is so far explanatory rather than directive. NASK, the national research institute and CSIRT operator, names post-quantum cryptography and quantum key distribution as responses to the quantum threat, and the National Institute of Telecommunications has produced introductory material and a seminar. No national post-quantum migration policy or timeline is attested in the gathered documents.",
-  "govActors": "NASK | national research institute and CSIRT operator, presents post-quantum cryptography and quantum key distribution as responses to quantum threats\nInstytut Łączności (National Institute of Telecommunications) | state research institute, introductory material and a seminar on post-quantum cryptography",
-  "dataStatus": "Partial",
-  "provenance": [
-    "NASK names PQC and QKD as responses to quantum threats: NASK QKD presentation (ingested)",
-    "Introductory explainer and seminar: Instytut Lacznosci items (ingested) - T4 research-institute material",
-    "RAD-on project profile and NASK Cyberpolicy US-strategy analysis: ingested but flagged as a research-database record and as analysis of another country, not used for posture - REVIEW",
-    "dominantProcess omitted: no Polish standards camp or national policy attested in captured summaries",
-    "summary/standardFamilies/algorithms/hybridDeployment/timeline/targetCompletion omitted or minimal: no national migration policy stated in captured summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
+  "summary": "Poland has moved from explanatory material towards an initial national framing of its quantum-safe posture. In August 2025 the Ministry of Digital Affairs published the foundational assumptions for a national quantum-technology development policy, structured across five pillars and three phases to 2035 and explicitly naming post-quantum security and post-quantum cryptography among its priorities. NASK, the national research institute and CSIRT operator, presents post-quantum cryptography and quantum key distribution as responses to the quantum threat, and the National Institute of Telecommunications (Instytut Lacznosci, IL-PIB) has produced introductory material, run seminars on post-quantum digital-signature standards, and committed to a security assessment of post-quantum cryptography solutions over 2026 to 2030. No binding national post-quantum migration mandate with dated algorithm-specific deadlines is yet attested; migration obligations rest on the EU framework and its coordinated roadmap.",
   "dominantProcess": "EU",
-  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
-  "targetCompletion": "2035",
+  "standardFamilies": "NIST FIPS 204, FIPS 205",
+  "algorithms": "ML-DSA, SLH-DSA",
   "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "country": "Poland",
-  "confidence": "High",
-  "classificationBasis": "NASK names PQC and QKD as responses to quantum threats: NASK QKD presentation (ingested)\nIntroductory explainer and seminar: Instytut Lacznosci items (ingested) - T4 research-institute material\nRAD-on project profile and NASK Cyberpolicy US-strategy analysis: ingested but flagged as a research-database record and as analysis of another country, not used for posture - REVIEW\ndominantProcess omitted: no Polish standards camp or national policy attested in captured summaries\nsummary/standardFamilies/algorithms/hybridDeployment/timeline/targetCompletion omitted or minimal: no national migration policy stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "2026 | National Institute of Telecommunications (IL-PIB) begins a security assessment of post-quantum cryptography solutions (2026-2030 outlook)\n2030 | High-risk use cases migrated (EU coordinated roadmap)\n2035 | Full migration of all systems complete (EU coordinated roadmap); national quantum-technology policy phases run to 2035",
+  "targetCompletion": "2035",
+  "govActors": "Ministerstwo Cyfryzacji (Ministry of Digital Affairs) | published the foundational assumptions for a national quantum-technology development policy naming post-quantum security and post-quantum cryptography as priorities\nNASK | national research institute and CSIRT operator, presents post-quantum cryptography and quantum key distribution as responses to quantum threats\nInstytut Łączności (National Institute of Telecommunications) | state research institute; introductory material, seminars on post-quantum digital-signature standards, and a planned 2026-2030 security assessment of post-quantum cryptography solutions",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "dataStatus": "Partial"
 }

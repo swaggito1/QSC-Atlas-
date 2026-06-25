@@ -273,5 +273,27 @@
     "url": "https://www.bundestag.de/dip-api/api/v1/drucksache-text/280533?ref=bt&format=xml",
     "summary": "Machine-readable full text of a Bundestag printed paper discussing the presentation of a roadmap for post-quantum cryptography in Germany and the promotion of migration to quantum-safe cryptography. May duplicate one of the included Drucksachen, flagged for review.",
     "included": true
+  },
+  {
+    "title": "BSI empfiehlt Ende klassischer asymmetrischer Verschlüsselungsverfahren",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/260211_Ende_klassischer_Verschluesselungsverfahren.html",
+    "summary": "BSI press release (11 February 2026) announcing that, in its annual update of the cryptographic recommendations (TR-02102), the BSI for the first time sets end-of-life dates for classical asymmetric encryption (no sole use after end-2031, end-2030 for highly sensitive applications; classical signatures by end-2035), to be replaced by hybrid post-quantum cryptography. BSI President Plattner states the transition to post-quantum cryptography is 'alternativlos' (without alternative).",
+    "included": true
+  },
+  {
+    "title": "BSI erweitert kryptographische Empfehlungen mit Blick auf Quantencomputer",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
+    "summary": "BSI press release (10 March 2025) announcing an update to the TR-02102 technical guideline that extends the cryptographic recommendations to address the quantum-computer threat, recommending post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA, FrodoKEM, Classic McEliece, XMSS, LMS) and migration of high-security applications by 2030 in coordination with 17 European partners.",
+    "included": true
   }
 ]

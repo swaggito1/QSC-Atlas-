@@ -31,5 +31,27 @@
     "url": "https://innovative-initiatives.public.lu/initiatives/factsheet-quantum-communication-luxembourg",
     "summary": "Official Luxembourg government factsheet outlining the national quantum strategy roadmap (Phase 1 2025-2027, Phase 2 2027-2030, Phase 3) for quantum communication infrastructure. PQC reference is not explicit in the available snippet, so flagged for human review.",
     "included": true
+  },
+  {
+    "title": "L'ILNAS a participé à la 4ième conférence NISDUC à Luxembourg",
+    "country": "LUX",
+    "issuingOrg": "ILNAS / portail-qualite",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://portail-qualite.public.lu/fr/actualites/confiance-numerique/2025/ilnas-conference-nisduc.html",
+    "summary": "Luxembourg digital-trust portal (ILNAS) news item reporting Dr Michele Feltz's presentation at the 4th NISDUC conference (6-7 May 2025), which set out the quantum threat to public-key cryptography ('record now, decrypt later'), the NIST PQC standardisation process, and concrete recommendations for migrating to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "PQC Readiness Survey Report 2026",
+    "country": "LUX",
+    "issuingOrg": "NC3 (Luxembourg House of Cybersecurity)",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://observatory.nc3.lu/",
+    "summary": "National Cybersecurity Competence Center (NC3) survey report, produced with LuxQuantum, assessing post-quantum cryptography maturity across 25+ Luxembourg organisations; it finds high PQC awareness (92%) but weak action (only 16% have run pilots, 11% have identified vulnerable systems) ahead of the EU's 2030 PQC deadline, and sets out five action imperatives including cryptographic inventory and crypto-agility.",
+    "included": true
   }
 ]

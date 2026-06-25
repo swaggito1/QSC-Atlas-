@@ -1,29 +1,14 @@
 {
   "iso3": "FIN",
-  "summary": "Finland's gathered material centres on quantum technology broadly rather than a dedicated post-quantum migration policy. The Finnish Government's Quantum Technology Strategy 2025 to 2035 aims to give Finland a prominent role in developing and using quantum technology, and the state research centre VTT discusses quantum-safe cryptography and the need for near-term solutions to maintain digital trust. No national post-quantum migration timeline or lead cryptographic authority is attested in the gathered documents.",
-  "govActors": "Finnish Government (Valtioneuvosto) | publishes the national Quantum Technology Strategy 2025 to 2035\nVTT Technical Research Centre of Finland | state research centre, discusses quantum-safe cryptography and the need for near-term solutions",
-  "dataStatus": "Partial",
-  "provenance": [
-    "Quantum Technology Strategy 2025-2035, prominent role in quantum technology: Finnish Government strategy (ingested) - explicit PQC reference not confirmed from metadata, REVIEW",
-    "Quantum-safe cryptography and near-term need for digital trust: VTT story page (ingested) - T4 news/story page, REVIEW",
-    "InstituteQ roadmap excluded (included: false), not used",
-    "migrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline",
-    "dominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries",
-    "algorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
-  "dominantProcess": "EU",
-  "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
-  "targetCompletion": "2035",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
   "country": "Finland",
-  "confidence": "High",
-  "classificationBasis": "Quantum Technology Strategy 2025-2035, prominent role in quantum technology: Finnish Government strategy (ingested) - explicit PQC reference not confirmed from metadata, REVIEW\nQuantum-safe cryptography and near-term need for digital trust: VTT story page (ingested) - T4 news/story page, REVIEW\nInstituteQ roadmap excluded (included: false), not used\nmigrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
-  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
+  "summary": "Finland now has an active national post-quantum cryptography posture led by Traficom's National Cyber Security Centre (NCSC-FI) and its national cryptography working group. From 1 January 2026 cryptographic products entering national evaluation must use quantum-safe key establishment and quantum-safe signature algorithms, or document how the quantum risk is addressed, with hybrid post-quantum plus classical deployment strongly recommended. In March 2026 NCSC-FI published guidance for organisations on migrating to quantum-safe cryptography, covering crypto-inventory, risk assessment, crypto-agility and a step-by-step transition plan, and urged the protection of long-confidentiality data. Broader ambition is set by the Finnish Government Quantum Technology Strategy 2025 to 2035 and discussed by the state research centre VTT. Finland follows the EU coordinated roadmap for migration dates, and the gathered documents do not name specific algorithms or standard families.",
+  "dominantProcess": "EU",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
+  "hybridDeployment": "Recommended",
+  "migrationTimeline": "2026 | National cryptography working group requires quantum-safe KEM and signatures for products entering national evaluation; hybrid strongly recommended\n2030 | High-risk use cases migrated (EU coordinated roadmap)\n2035 | Full migration of all systems complete (EU coordinated roadmap)",
+  "targetCompletion": "2035",
+  "govActors": "Traficom / Kyberturvallisuuskeskus (NCSC-FI), Suomen kansallinen kryptotyöryhmä | national cryptography working group; sets binding quantum-safe requirements for products entering national evaluation from 1 January 2026\nTraficom / Kyberturvallisuuskeskus (NCSC-FI) | national cyber security authority; publishes PQC migration guidance for organisations\nFinnish Government (Valtioneuvosto) | publishes the national Quantum Technology Strategy 2025 to 2035\nVTT Technical Research Centre of Finland | state research centre, discusses quantum-safe cryptography and the need for near-term solutions",
+  "mainRegulation": "National cryptography working group requirements for national PQC product evaluations (from 1 January 2026) | National | binding-law\nNCSC-FI guidance on migrating to quantum-safe encryption (March 2026) | National | guidance\nNIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "dataStatus": "Partial"
 }

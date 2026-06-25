@@ -1,29 +1,13 @@
 {
   "iso3": "CZE",
-  "summary": "The Czech Republic's posture is set by the National Cyber and Information Security Agency, which explains the quantum threat and quantum-resistant cryptography in an appendix to its minimum requirements and sets out expectations for when post-quantum cryptography should be deployed for sensitive information of critical confidentiality in higher-risk environments. The agency's portal now supports quantum-resistant cryptography, and its National Cyber Security Strategy 2026-2030 names post-quantum cryptography among the technologies for strengthening cyber security. No specific algorithm list or dated national migration deadline has been published.",
-  "govActors": "NÚKIB | National Cyber and Information Security Agency, national authority for cyber security\nČNB | Czech National Bank, central bank research on quantum-resistant signature schemes",
-  "dataStatus": "Partial",
-  "provenance": [
-    "Deployment expectations for sensitive information in higher-risk environments: NÚKIB portal announcement on quantum-resistant cryptography (ingested)",
-    "Quantum threat and definition of post-quantum cryptography: NÚKIB minimum requirements appendix (ingested)",
-    "PQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)",
-    "ČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW",
-    "dominantProcess omitted: no standards camp attested in the documents",
-    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
-  "dominantProcess": "EU",
+  "summary": "The Czech Republic's posture is set by the National Cyber and Information Security Agency (NÚKIB), which explains the quantum threat and quantum-resistant cryptography in an appendix to its minimum requirements and sets out expectations for when post-quantum cryptography should be deployed for sensitive information of critical confidentiality in higher-risk environments. NÚKIB has updated its Minimum Requirements for Cryptographic Algorithms to add post-quantum algorithm names and parameters in line with the finalised NIST post-quantum cryptography standards, the latest edition being version 4.1 of March 2026. NÚKIB has joined the joint statement of eighteen EU member states calling for the transition to post-quantum cryptography, and now coordinates the national transition as a partner in the Horizon Europe QARC project, which develops and validates post-quantum implementation methodologies for critical state systems. The agency's portal supports quantum-resistant cryptography, its National Cyber Security Strategy 2026-2030 names post-quantum cryptography among the technologies for strengthening cyber security, and a study for the Ministry of Industry and Trade under the National Recovery Plan addresses the migration challenge. No dated national migration deadline has been published; the timeline shown is the EU coordinated roadmap.",
+  "dominantProcess": "NIST",
+  "standardFamilies": "NIST post-quantum cryptography standards (finalised August 2024)",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap\nJoint statement 'Securing Tomorrow, Today' (18 EU member states) | signatory endorsing a risk-oriented PQC migration roadmap\nQARC (Horizon Europe / ECCC) | partner coordinating the national transition to post-quantum cryptography",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "country": "Czechia",
-  "confidence": "High",
-  "classificationBasis": "Deployment expectations for sensitive information in higher-risk environments: NÚKIB portal announcement on quantum-resistant cryptography (ingested)\nQuantum threat and definition of post-quantum cryptography: NÚKIB minimum requirements appendix (ingested)\nPQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)\nČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
-  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
+  "govActors": "NÚKIB | National Cyber and Information Security Agency, national authority for cyber security\nMPO (Ministerstvo průmyslu a obchodu) | Ministry of Industry and Trade, commissioned a National Recovery Plan study on quantum technologies and post-quantum cryptography\nČNB | Czech National Bank, central bank research on quantum-resistant signature schemes",
+  "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law\nNÚKIB Minimum Requirements for Cryptographic Algorithms (v4.1, March 2026) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "dataStatus": "Partial"
 }

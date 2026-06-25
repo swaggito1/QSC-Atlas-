@@ -163,5 +163,60 @@
     "url": "https://www.snb.ch/public/asset/fr/www-snb-ch/publications/communication/annual-report/annrep_2023_komplett/publications0_fr/annrep_2023_komplett.fr.pdf",
     "summary": "Annual report of the Swiss National Bank noting that a post-quantum cryptography mode was used to protect central bank digital currency (CBDC) against attacks by quantum computers.",
     "included": true
+  },
+  {
+    "title": "Post Quantum Cryptography - migration of the federal administration's PKI (EN)",
+    "country": "CHE",
+    "issuingOrg": "BIT (FOITT)",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bit.admin.ch/en/sg-pki-pqc-en",
+    "summary": "New BIT/FOITT web resource on the federal administration's migration to post-quantum cryptography, explaining that RSA-based PKI processes will become vulnerable to quantum computers and setting out certificate key-length and algorithm changes across certificate Classes A, B, C and E, with Q&A event recordings dated February and April 2026.",
+    "included": true
+  },
+  {
+    "title": "Post Quantum Cryptography - Migration der PKI des Bundes (DE)",
+    "country": "CHE",
+    "issuingOrg": "BIT (FOITT)",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bit.admin.ch/de/sg-pki-pqc-de",
+    "summary": "German-language BIT/FOITT web resource on the federal administration's migration to post-quantum cryptography, covering the threat quantum computers pose to RSA-based procedures and the planned changes to certificate algorithms and key lengths, with documentation updated in 2026.",
+    "included": true
+  },
+  {
+    "title": "Increased research work on the electronic identity of the Swiss Confederation (quantum-secure e-ID)",
+    "country": "CHE",
+    "issuingOrg": "armasuisse",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ar.admin.ch/en/news-increased-research-work-on-the-electronic-identity-of-the-swiss-confederation",
+    "summary": "Announcement (6 March 2026) by armasuisse, in cooperation with the Federal Office of Justice and HEIG-VD, of a research programme that from 2026 will analyse the e-ID technology stack and develop a demonstrator for a quantum-secure e-ID architecture, with research funds for post-quantum cryptography allocated through to 2029.",
+    "included": true
+  },
+  {
+    "title": "Technology brief: Quantum computers and post-quantum cryptography (EN, 08.12.2025)",
+    "country": "CHE",
+    "issuingOrg": "NCSC (BACS)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.admin.ch/dam/ncsc/en/dokumente/dokumentation/technologiebetrachtungen/technologiebetrachtung-qcpqc-en.pdf.download.pdf/technologiebetrachtung-qcpqc-en.pdf",
+    "summary": "English-language NCSC (BACS) technology brief on quantum computers and post-quantum cryptography dated 8 December 2025, explaining the threat to current cryptographic methods, the state of PQC progress and where further action is needed; this is the current edition and a distinct URL from the French and German versions already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "Cyber-Defence Campus Semi-Annual Report 2025/1: Quantum Technologies - Trends and Implications for Cyberdefence",
+    "country": "CHE",
+    "issuingOrg": "Cyber-Defence Campus (armasuisse/DDPS)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.cydcampus.admin.ch/dam/en/sd-web/pWaa63DWOMpF/Quantum_Technologies_Trends_and_Implications_for_Cyberdefence_semi-annual_report_20251_PUBLIC.pdf",
+    "summary": "First-half 2025 semi-annual research report by the federal Cyber-Defence Campus (armasuisse Science and Technology, DDPS) surveying quantum-technology trends for cyber defence, including post-quantum cryptography and quantum-safe migration; flagged for review as agency research output rather than a policy or standards document.",
+    "included": false
   }
 ]

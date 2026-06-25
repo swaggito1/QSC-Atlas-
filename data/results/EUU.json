@@ -350,5 +350,49 @@
     "url": "https://pqc-conference.eu/",
     "summary": "Conference site for the 2nd European Conference on PQC Migration, addressing questions about the PQC transition with international cybersecurity experts and stakeholders. Organising institution not verifiable from the candidate data, flagged for review.",
     "included": false
+  },
+  {
+    "title": "Recommendation on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography (library page)",
+    "country": "EUU",
+    "issuingOrg": "European Commission",
+    "year": 2024,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "summary": "European Commission (DG CONNECT) library page for the 11 April 2024 Recommendation on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography, encouraging Member States to develop a comprehensive PQC adoption strategy; distinct URL from the existing EUR-Lex and 'Coordinated Implementation Roadmap' corpus entries, with download links in all 24 EU languages.",
+    "included": true
+  },
+  {
+    "title": "EUCC Guidelines on Cryptography: Agreed Cryptographic Mechanisms (Version 2)",
+    "country": "EUU",
+    "issuingOrg": "ENISA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://certification.enisa.europa.eu/document/download/a845662b-aee0-484e-9191-890c4cfa7aaa_en?filename=ECCG+Agreed+Cryptographic+Mechanisms+version+2.pdf",
+    "summary": "ECCG/ENISA 'Agreed Cryptographic Mechanisms' v2 (adopted mid-2025) recommending cryptographic mechanisms for ICT products submitted to EUCC certification; explicitly introduces several asymmetric post-quantum mechanisms as agreed and provides key-combiner mechanisms for hybrid key establishment combining a post-quantum KEM with a classical KEM.",
+    "included": true
+  },
+  {
+    "title": "Quantum Europe Strategy communication COM(2025) 363 final",
+    "country": "EUU",
+    "issuingOrg": "European Commission",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52025DC0363",
+    "summary": "European Commission communication COM(2025) 363 final (Quantum Europe Strategy) stating that the EU and Member States are implementing the post-quantum cryptography Recommendation and have published a roadmap responding to quantum risks to communication security, alongside quantum-safe network deployment objectives; EUR-Lex HTML text distinct from the qt.eu PDF already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "Participate in the public review of the new draft of 'Agreed Cryptographic Mechanisms'",
+    "country": "EUU",
+    "issuingOrg": "ENISA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://certification.enisa.europa.eu/news/participate-public-review-new-draft-agreed-cryptographic-mechanisms-2026-06-02_en",
+    "summary": "ENISA/EUCC news item (2 June 2026) opening public review until end of July 2026 of version 3 of the 'Agreed Cryptographic Mechanisms', the EUCC document whose v2 introduced post-quantum mechanisms; the news text itself does not spell out 'post-quantum', so flagged as a draft for review.",
+    "included": false
   }
 ]

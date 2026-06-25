@@ -31,5 +31,27 @@
     "url": "https://hellasqci.eu/hellasqci-pqc-survey-nis-cooperation-group/",
     "summary": "HellasQCI, the Greek national quantum communication infrastructure consortium (part of EuroQCI), invites participation in an EU public consultation, stating that the transition to quantum-resistant cryptography (PQC and QKD) is essential to protect Greece's and Europe's critical infrastructures. Domestic funded consortium with an explicit PQC reference; not on the trusted-domain list, so flagged for human review.",
     "included": false
+  },
+  {
+    "title": "Εθνική Στρατηγική Κυβερνοασφάλειας 2026–2030 (National Cybersecurity Strategy 2026-2030)",
+    "country": "GRC",
+    "issuingOrg": "Ministry of Digital Governance / National Cybersecurity Authority (EAK)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://cyber.gov.gr/wp-content/uploads/2025/12/%CE%95%CE%A3%CE%9A-2026-2030.pdf",
+    "summary": "Greece's new five-year National Cybersecurity Strategy (protocol 2563/16.12.2025), issued by the Ministry of Digital Governance / National Cybersecurity Authority, which explicitly frames the transition to post-quantum cryptography (μετα-κβαντική κρυπτογραφία) as a matter of strategic importance for EU member states including Greece. It is the successor to the National Cyber Security Strategy 2020-2025.",
+    "included": true
+  },
+  {
+    "title": "Q-PrEP 2026: Quantum Readiness in Practice — first cybersecurity workshop for the quantum era at Demokritos",
+    "country": "GRC",
+    "issuingOrg": "National Cybersecurity Authority (EAK)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://cyber.gov.gr/ston-dimokrito-to-proto-ergastirio-kyvernosfaleias-stin-kvantiki-epochi-me-titlo-q-prep-2026-quantum-readiness-in-practice/",
+    "summary": "Announcement by the Greek National Cybersecurity Authority (EAK), with the Demokritos quantum institute, of the first national quantum-era cybersecurity workshop (3-5 Feb 2026), explicitly centred on the transition to Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD) infrastructures.",
+    "included": true
   }
 ]

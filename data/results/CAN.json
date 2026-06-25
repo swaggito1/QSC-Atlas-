@@ -108,5 +108,38 @@
     "url": "https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/cryptography-quantum-computing",
     "summary": "NRC technical advisory services page on the design, development and implementation of cryptographic solutions and quantum computing; the candidate description does not explicitly name post-quantum cryptography.",
     "included": true
+  },
+  {
+    "title": "Recommended Contract Clauses for Cryptography (ITSM.00.501)",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/guidance/recommended-contract-clauses-cryptography-itsm00501",
+    "summary": "Canadian Centre for Cyber Security guidance (September 2025) providing recommended procurement contract clauses for cryptographic products, explicitly requiring that cryptographic modules support appropriate post-quantum cryptography (per ITSP.40.111) for key establishment and digital signatures by the end of 2026. Emphasises cryptographic agility to ease the PQC migration.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic algorithms for UNCLASSIFIED, PROTECTED A, and PROTECTED B information (ITSP.40.111)",
+    "country": "CAN",
+    "issuingOrg": "CCCS",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/guidance/cryptographic-algorithms-unclassified-protected-protected-b-information-itsp40111",
+    "summary": "Canadian Centre for Cyber Security standard (Version 5, effective 29 May 2026) listing approved cryptographic algorithms, now explicitly recommending the NIST-standardised post-quantum algorithms ML-KEM for key establishment and ML-DSA and SLH-DSA for digital signatures. It is the referenced algorithm baseline for the Government of Canada's PQC migration.",
+    "included": true
+  },
+  {
+    "title": "G7 Cybersecurity Working Group Statement on preparing for a post-quantum cryptography migration",
+    "country": "CAN",
+    "issuingOrg": "CSE / Cyber Centre",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/news-events/g7-cybersecurity-working-group-statement-preparing-post-quantum-cryptography-migration",
+    "summary": "Statement published on Canada's Cyber Centre site (last modified June 2026), co-issued by Canada's Communications Security Establishment with the cyber agencies of the other G7 nations and the EU, offering practical recommendations for medium-to-large organisations to prepare for the transition to post-quantum cryptography. Flagged for review because it is a multinational G7 collective statement rather than a purely domestic Canadian instrument.",
+    "included": false
   }
 ]

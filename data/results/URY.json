@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Disrupción de la computación cuántica en el sistema financiero y de pagos",
+    "country": "URY",
+    "issuingOrg": "BCU",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bcu.gub.uy/NOVA-BCU/SiteAssets/Disrupci%C3%B3n%20de%20la%20computaci%C3%B3n%20cu%C3%A1ntica%20en%20el%20sistema%20financiero%20y%20de%20pagos.pdf",
+    "summary": "Banco Central del Uruguay analytical/literature-review document for central banks and financial-system regulators on the disruption of quantum computing to the financial and payments system. It explicitly addresses post-quantum cryptography, referencing NIST's PQC standardisation and the transition to quantum-resistant algorithms (including hybrid post-quantum cryptographic protocols tested between central banks).",
+    "included": true
+  },
+  {
+    "title": "Estrategia Nacional de Ciberseguridad del Uruguay 2024 - 2030",
+    "country": "URY",
+    "issuingOrg": "AGESIC",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/comunicacion/publicaciones/estrategia-nacional-ciberseguridad-del-uruguay-2024-2030/estrategia",
+    "summary": "Uruguay's national cybersecurity strategy 2024-2030, led by AGESIC and approved by the CAHSI council, structured around eight pillars including critical information infrastructure. Post-quantum cryptography (PQC) was raised in the public-consultation proposals and reportedly suggested for line 5.2, but the explicit PQC reference could not be confirmed in the official strategy body text (the published Pillar 5 page contains no PQC mention), so this entry is flagged for human review rather than auto-included.",
+    "included": false
+  }
+]

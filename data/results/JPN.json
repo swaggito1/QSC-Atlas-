@@ -328,5 +328,126 @@
     "url": "https://www.nict.go.jp/en/data/report/NICTREPORT2022_ebook/book/pdf/67.pdf",
     "summary": "NICT R&D roadmap for quantum networks and QKD deployment in Japan. The visible content concerns quantum key distribution rather than an explicit post-quantum cryptography reference, so flagged for review.",
     "included": true
+  },
+  {
+    "title": "On the Migration to Post-Quantum Cryptography (PQC) in Government Agencies (Interim Summary)",
+    "country": "JPN",
+    "issuingOrg": "Cabinet Secretariat (National Cyber Unit / PQC Inter-ministerial Liaison Council)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.cas.go.jp/jp/seisaku/pqc/pdf/report_202511.pdf",
+    "summary": "November 2025 interim summary of the PQC inter-ministerial liaison council setting Japan's target of completing government migration to post-quantum cryptography by around 2035, with a roadmap to be drawn up in FY2026 and noting Harvest-Now-Decrypt-Later risk for sensitive long-life data.",
+    "included": true
+  },
+  {
+    "title": "Publication of the Interim Summary on Migration to Post-Quantum Cryptography (PQC) in Government Agencies",
+    "country": "JPN",
+    "issuingOrg": "NISC / Cabinet Secretariat National Cyber Unit",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.nisc.go.jp/pdf/press/20251120_PQC_chukantorimatome.pdf",
+    "summary": "Press release of 20 November 2025 by the Cabinet Secretariat's National Cyber Unit announcing publication of the interim summary on the migration of government agencies to post-quantum cryptography (PQC).",
+    "included": true
+  },
+  {
+    "title": "Rules on Cryptography Use in Government Agencies and Overview of Post-Quantum Cryptography (PQC)",
+    "country": "JPN",
+    "issuingOrg": "Cabinet Secretariat (National Cyber Unit)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cas.go.jp/jp/seisaku/pqc/kanjikai/dai1/shiryou1.pdf",
+    "summary": "Material 1 (31 July 2025) for the first meeting of the PQC inter-ministerial liaison council, explaining government cryptography-use rules and giving an overview of post-quantum cryptography (PQC).",
+    "included": true
+  },
+  {
+    "title": "Status of Migration to Post-Quantum Cryptography (PQC) in Other Countries",
+    "country": "JPN",
+    "issuingOrg": "Cabinet Secretariat (National Cyber Unit)",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cas.go.jp/jp/seisaku/pqc/kanjikai/dai1/shiryou2.pdf",
+    "summary": "Material 2 (31 July 2025) for the first PQC liaison council meeting surveying overseas PQC migration policies (US, EU, UK, Canada) and their roughly 2035 deadlines, as input to Japan's own posture.",
+    "included": true
+  },
+  {
+    "title": "Survey of PQC Implementation and Deployment Status (NICT submission)",
+    "country": "JPN",
+    "issuingOrg": "NICT (submitted to PQC Liaison Council)",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.cas.go.jp/jp/seisaku/pqc/kanjikai/dai5/siryou4.pdf",
+    "summary": "NICT material dated 30 March 2026, submitted to the 5th meeting of the PQC liaison council steering committee, reporting on the implementation and deployment status of post-quantum cryptography including PQC key-exchange uptake in NICT's own traffic.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic Technology Study Group FY2025 Report (CRYPTREC RP-1000-2025)",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cryptrec.go.jp/report/cryptrec-rp-1000-2025.pdf",
+    "summary": "CRYPTREC's FY2025 Cryptographic Technology Study Group report (March 2026) covering the addition of a post-quantum cryptography (PQC) list as Table 2 of the CRYPTREC cipher list and the PQC List Review Task Force.",
+    "included": true
+  },
+  {
+    "title": "FY2025 First Cryptographic Technology Study Group Meeting, Material 1 (CRYPTREC MT-1011-2025)",
+    "country": "JPN",
+    "issuingOrg": "CRYPTREC",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cryptrec.go.jp/report/cryptrec-mt-1011-2025.pdf",
+    "summary": "Agenda/secretariat material (25 March 2026) for the FY2025 first CRYPTREC study group meeting, covering establishment of the PQC List Review Task Force and FY2026 plans for a PQC guideline and research-trend survey.",
+    "included": true
+  },
+  {
+    "title": "Study Group on Post-Quantum Cryptography Response for Deposit-Taking Financial Institutions (index)",
+    "country": "JPN",
+    "issuingOrg": "FSA (Financial Services Agency)",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.fsa.go.jp/singi/pqc/index.html",
+    "summary": "Japan Financial Services Agency portal for its study group on the response of deposit-taking financial institutions to post-quantum cryptography (PQC), linking the report and three sessions of meeting materials held July-October 2024.",
+    "included": true
+  },
+  {
+    "title": "Report of the Study Group on PQC Response for Deposit-Taking Financial Institutions",
+    "country": "JPN",
+    "issuingOrg": "FSA (Financial Services Agency)",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.fsa.go.jp/singi/pqc/houkokusyo.pdf",
+    "summary": "FSA study-group report of 26 November 2024 setting out recommendations, the necessity, and considerations for deposit-taking financial institutions migrating to post-quantum cryptography, urging immediate crypto-inventory work and aiming to make PQC algorithms usable by around the mid-2030s.",
+    "included": true
+  },
+  {
+    "title": "Overview of the Cybersecurity Strategy (reported to the House of Representatives)",
+    "country": "JPN",
+    "issuingOrg": "Cabinet Secretariat / National Cyber Unit (via House of Representatives)",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/gian_hokoku/20251223cybergaiyo.pdf/$File/20251223cybergaiyo.pdf",
+    "summary": "Overview of Japan's Cybersecurity Strategy (23 December 2025) on the House of Representatives site, which lists migration of government agencies to post-quantum cryptography (PQC) among measures responding to advances in quantum technology.",
+    "included": true
+  },
+  {
+    "title": "Initiatives in the Financial Sector Toward Quantum-Resistant Systems (2026 IMES Symposium)",
+    "country": "JPN",
+    "issuingOrg": "BOJ IMES (presenter: Mizuho Financial Group)",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.imes.boj.or.jp/jp/conference/citecs/26sympo/files/26sympo_file5%EF%BC%9A%E5%AF%BA%E4%BA%95%E6%A7%98.pdf",
+    "summary": "February 2026 presentation at the Bank of Japan IMES symposium on financial-sector PQC migration (hybrid mode, priority-based timelines targeting the early-to-mid 2030s); delivered by a Mizuho Financial Group CISO, so the issuer is a private institution rather than a government body, flagged for review.",
+    "included": false
   }
 ]

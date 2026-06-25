@@ -20,5 +20,38 @@
     "url": "https://boi.org.il/media/sm4f1ssu/202501en.pdf",
     "summary": "Bank of Israel Banking Supervision Department supervisory letter (7 January 2025) directing banking corporations to prepare for the quantum computing era, including assessing infrastructure suitability for post-quantum encryption, mapping cryptographic inventory, and submitting an initial preparedness plan within a year.",
     "included": true
+  },
+  {
+    "title": "Preparedness for Dealing with Encryption in the Quantum Computing Era (National Digital Agency guidelines)",
+    "country": "ISR",
+    "issuingOrg": "National Digital Agency (Israel)",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.gov.il/BlobFolder/policy/preparedness_to_deal_with_encryption_in_the_quantum_computing/he/meshilut_preparedness_to_deal_with_encryption_in_the_quantum_computing.pdf",
+    "summary": "Israel National Digital Agency policy guidance directing government ministries and public bodies to prepare for the post-quantum era, explicitly naming Post Quantum Cryptography (PQC), warning that quantum computers will break encryption such as RSA, and requiring infrastructure mapping, data-exposure assessment, and a move toward quantum-resistant encryption.",
+    "included": true
+  },
+  {
+    "title": "Intelligence Report – Quantum Computers and Their Impact on Information Security",
+    "country": "ISR",
+    "issuingOrg": "Ministry of Communications (Israel), Sectoral Cyber Unit",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.gov.il/BlobFolder/reports/08072025_3/en/Intelligence%20Report%20%E2%80%93%20Quantum%20Computers%20and%20Their%20Impact%20on%20Information%20Security.pdf",
+    "summary": "Israel Ministry of Communications (Engineering Administration, Sectoral Cyber Unit) intelligence report dated 1 July 2025 analysing how quantum computers can break common encryption algorithms and the resulting risk to information security, framing the need for quantum-resistant cryptographic measures.",
+    "included": true
+  },
+  {
+    "title": "Israel National Cyber Security Strategy 2025",
+    "country": "ISR",
+    "issuingOrg": "INCD",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.gov.il/BlobFolder/news/cyber_strategy_2025/he/Israel%20National%20Cyber%20Security%20Strategy%202025.pdf",
+    "summary": "Israel National Cyber Directorate national cyber security strategy (February 2025) setting Israel's cyber-resilience vision and objectives; multiple official sources state it places 'readiness for the quantum era' as a strategic axis, but an explicit post-quantum-cryptography reference inside the document text could not be verified during this pass, so it is flagged for human review.",
+    "included": false
   }
 ]

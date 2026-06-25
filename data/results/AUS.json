@@ -196,5 +196,82 @@
     "url": "https://research.csiro.au/iphd-opportunities/enabling-post-quantum-cryptography-pqc-migration/",
     "summary": "CSIRO industry PhD project listing on developing techniques for the migration to post-quantum cryptography to secure critical infrastructure from quantum attacks.",
     "included": true
+  },
+  {
+    "title": "Quantum technology primer: Overview",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/quantum/quantum-technology-primer-overview",
+    "summary": "Overview entry in ASD/ACSC's Quantum Technology Primer series, stating that adopting post-quantum cryptography (PQC) is a key example of preparation for quantum technologies because cryptographically relevant quantum computers will break current asymmetric cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum technology primer: Communications",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/quantum/quantum-technology-primer-communications",
+    "summary": "Communications entry in ASD/ACSC's Quantum Technology Primer series, advising organisations to prioritise strengthening their security posture and planning for post-quantum cryptography (PQC) and discussing harvest-now-decrypt-later risks.",
+    "included": true
+  },
+  {
+    "title": "Quantum technology primer: Communications (PDF)",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/sites/default/files/2026-03/Quantum%20technology%20primer%20-%20Communications.pdf",
+    "summary": "Downloadable PDF of the ASD/ACSC Quantum Technology Primer on quantum communications, noting the need to plan for post-quantum cryptography and the limits of quantum communications as a practical security solution.",
+    "included": true
+  },
+  {
+    "title": "Third release in our Quantum Technology Primer series: Communications",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/third-release-in-our-quantum-technology-primer-series-communications",
+    "summary": "ASD/ACSC news item announcing the third release in the Quantum Technology Primer series on quantum communications, reiterating the importance of planning for post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "New publication released – Quantum technology primer: Overview",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/new-publication-released-quantum-technology-primer-overview",
+    "summary": "ASD/ACSC news item announcing release of the Quantum Technology Primer: Overview, highlighting adoption of post-quantum cryptography as a key preparation for quantum technologies.",
+    "included": true
+  },
+  {
+    "title": "Read the latest publication in our Quantum technology primer series – Quantum Computing",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/quantum-technology-primer-series-quantum-computing",
+    "summary": "ASD/ACSC news item announcing the Quantum Computing publication in the Quantum Technology Primer series, noting that organisations will need to rely on post-quantum cryptography as cryptographically relevant quantum computers emerge.",
+    "included": true
+  },
+  {
+    "title": "Information Security Manual: March 2026 changes",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
+    "summary": "ASD change log for the March 2026 release of the Information Security Manual, documenting updates to cryptography guidance including the transition to ASD-approved post-quantum algorithms (ML-DSA, ML-KEM) and timelines for ceasing traditional asymmetric cryptography.",
+    "included": true
   }
 ]

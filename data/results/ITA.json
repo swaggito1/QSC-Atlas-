@@ -108,5 +108,93 @@
     "url": "https://www.senato.it/service/PDF/PDFServer/DF/437223.pdf",
     "summary": "Report transmitted to the Italian Senate (Doc. CCXVIII no. 3) describing national activities also in the field of post-quantum cryptography and outlining training pathways in applied cryptography.",
     "included": true
+  },
+  {
+    "title": "Updated Guidelines on Cryptographic Functions (Post-Quantum Alternatives Included)",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/w/aggiornate-le-linee-guida-sulle-funzioni-crittografiche",
+    "summary": "ACN announcement (11 June 2026) on the update of its cryptographic functions guidelines, adding new documents on stream ciphers and digital signatures and noting that post-quantum alternatives have already been included for quantum-vulnerable signature schemes, alongside the post-quantum solutions added to the TLS guidelines.",
+    "included": true
+  },
+  {
+    "title": "Cryptography: ACN Updates the Guidelines (English)",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/en/w/crittografia-acn-aggiorna-le-linee-guida",
+    "summary": "English-language ACN announcement that its cryptographic functions guidelines have been updated to evaluate quantum-resistant solutions, with post-quantum alternatives included for digital signature schemes and aligned to the NIST PQC standards published in August 2024.",
+    "included": true
+  },
+  {
+    "title": "Transitioning to Post-Quantum Cryptography (Joint Statement, Italian version)",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/documents/20119/85999/PQC-joint-statement-ita.pdf/1178ed5a-85ce-90a6-1a48-8682cc74a27e?t=1738165324555",
+    "summary": "Italian-language version of the joint statement on transitioning to post-quantum cryptography, signed by ACN together with partner cyber agencies, hosted as a PDF on the ACN portal.",
+    "included": true
+  },
+  {
+    "title": "Italian Strategy for Quantum Technologies Presented to the Council of Ministers",
+    "country": "ITA",
+    "issuingOrg": "Dipartimento per la Trasformazione Digitale",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://innovazione.gov.it/notizie/articoli/presentata-in-consiglio-dei-ministri-la-strategia-italiana-per-le-tecnologie-quantistiche/",
+    "summary": "Announcement (31 July 2025) by the Italian Department for Digital Transformation presenting the national Strategy for Quantum Technologies, whose objectives explicitly include safeguarding national security through migration to post-quantum cryptography, in line with EU recommendations and with ACN support.",
+    "included": true
+  },
+  {
+    "title": "Strategia Italiana per le Tecnologie Quantistiche (Strategy Document)",
+    "country": "ITA",
+    "issuingOrg": "Dipartimento per la Trasformazione Digitale",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://assets.innovazione.gov.it/1757605137-qis_final_it.pdf",
+    "summary": "The official PDF of Italy's national Strategy for Quantum Technologies, which sets the protection of national security through migration to post-quantum cryptography as a strategic objective and frames quantum-resistant data protection as a priority.",
+    "included": true
+  },
+  {
+    "title": "Parliamentary Inquiry on Quantum Technologies in Defence and Security: Stenographic Record (3 December 2025)",
+    "country": "ITA",
+    "issuingOrg": "Camera dei Deputati",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://documenti.camera.it/leg19/resoconti/commissioni/stenografici/html/04/indag/c04_quantistiche/2025/12/03/indice_stenografico.0002.html",
+    "summary": "Stenographic record of a Chamber of Deputies Defence Committee inquiry hearing on quantum technologies for defence and security (3 December 2025) that explicitly discusses post-quantum cryptography, noting that only five of the original 48 candidate PQC algorithms have survived.",
+    "included": true
+  },
+  {
+    "title": "A Practical Implementation of a Quantum-Safe PKI in a Payment Systems Environment",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.bancaditalia.it/media/notizia/a-practical-implementation-of-a-quantum-safe-pki-in-a-payment-systems-environment/",
+    "summary": "Bank of Italy notice presenting a practical implementation of a quantum-safe public key infrastructure (PKI) in a payment systems environment, applying post-quantum cryptography to payment infrastructure security.",
+    "included": true
+  },
+  {
+    "title": "The Italian Industrial Ecosystem of Quantum Technologies",
+    "country": "ITA",
+    "issuingOrg": "MIMIT (MISE)",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.mimit.gov.it/images/stories/digitale/Ecosistema_industriale_italiano_delle_tecnologie_quantistiche.pdf",
+    "summary": "Official report by the Italian Ministry of Enterprises and Made in Italy (MIMIT/MISE) mapping Italy's industrial ecosystem for quantum technologies, which explicitly addresses post-quantum cryptography among quantum-security matters for enterprises and critical digital infrastructure.",
+    "included": true
   }
 ]

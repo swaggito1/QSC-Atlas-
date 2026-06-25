@@ -1,28 +1,15 @@
 {
   "iso3": "USA",
-  "summary": "The United States sets the pace through NIST, which has released the first three final post-quantum standards, while CISA, the NSA and DHS direct federal agencies and critical infrastructure to plan and execute migration. National Security Systems follow the NSA CNSA 2.0 suite, with full migration targeted by 2035.",
+  "summary": "The United States sets the global pace through NIST, which has published the first three final post-quantum standards (FIPS 203, 204 and 205) and selected HQC as a fifth algorithm to follow. A June 2026 executive order now directs an accelerated nationwide migration, requiring federal High Value Assets and high-impact systems to move key establishment to the NIST standards by the end of 2030 and digital signatures by 2031, with the Office of Management and Budget, the National Cyber Director, NIST, NSA and CISA tasked to deliver implementation guidance. CISA, the NSA, DHS and the Treasury direct agencies, critical infrastructure and the financial sector to inventory and migrate their cryptography, while National Security Systems follow the NSA CNSA 2.0 suite with full migration targeted by 2035. There is no economy-wide private-sector mandate.",
   "dominantProcess": "NIST",
   "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
-  "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
+  "algorithms": "ML-KEM, ML-DSA, SLH-DSA, HQC",
   "processParticipation": "NIST PQC Standardization | runs the process",
-  "migrationTimeline": "2035 | National Security Systems complete migration to CNSA 2.0",
+  "hybridDeployment": "None stated",
+  "migrationTimeline": "2025 | Federal agencies take preparatory post-quantum transition actions (Executive Order 14144)\n2030 | Federal High Value Assets and high-impact systems migrate key establishment to the NIST post-quantum standards\n2031 | Federal High Value Assets and high-impact systems migrate digital signatures to the NIST post-quantum standards\n2035 | National Security Systems complete migration to CNSA 2.0",
   "targetCompletion": "2035",
-  "govActors": "NIST | National Institute of Standards and Technology, runs the post-quantum standardisation process\nCISA | Cybersecurity and Infrastructure Security Agency, leads migration guidance for critical infrastructure\nNSA | National Security Agency, sets CNSA 2.0 requirements for National Security Systems\nDHS | Department of Homeland Security, transition preparation guidance",
+  "govActors": "NIST | National Institute of Standards and Technology, runs the post-quantum standardisation process\nCISA | Cybersecurity and Infrastructure Security Agency, leads migration guidance for critical infrastructure\nNSA | National Security Agency, sets CNSA 2.0 requirements for National Security Systems\nDHS | Department of Homeland Security, transition preparation guidance\nOMB | Office of Management and Budget, issues the binding federal migration memoranda\nONCD | Office of the National Cyber Director, coordinates federal implementation of the post-quantum migration\nU.S. Department of the Treasury | financial-sector quantum risk guidance directing institutions to the NIST standards\nGAO | Government Accountability Office, oversight of the federal quantum threat mitigation strategy and migration cost",
   "dataStatus": "Partial",
-  "provenance": [
-    "NIST standards + algorithms: csrc.nist.gov project page (results summary)",
-    "CISA/NSA/DHS roles: respective ingested pages",
-    "2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub",
-    "Verifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
-    "Model 2026-06-14 (NIST-bloc / setter, High): The standard-setter: writes the FIPS suite the world adopts; CNSA 2.0."
-  ],
-  "country": "United States",
-  "confidence": "High",
-  "classificationBasis": "NIST standards + algorithms: csrc.nist.gov project page (results summary)\nCISA/NSA/DHS roles: respective ingested pages\n2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub\nVerifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "NIST-bloc",
-  "standardsRole": "setter",
-  "mainRegulation": "NSM-10 (2022) | national | binding-law\nOMB M-23-02 cryptographic inventory (2022) | national | binding-law\nExecutive Order 14144 (2025; amended by EO 14306) | national | binding-law\nFIPS 203/204/205 via CMVP validation for federal procurement | national | binding-by-market-access\nCNSA 2.0 for national security systems | national | binding-law",
-  "legalStatus": "binding",
-  "obligation": "Federal agencies must inventory their cryptography, report annually, and migrate to the NIST FIPS algorithms on the mandated timelines; national security systems follow CNSA 2.0. There is no economy-wide private-sector mandate."
+  "mainRegulation": "NSM-10 (2022) | national | binding-law\nOMB M-23-02 cryptographic inventory (2022) | national | binding-law\nExecutive Order 14144 (2025; amended by EO 14306) | national | binding-law\nExecutive Order Securing the Nation Against Advanced Cryptographic Attacks (2026) | national | binding-law\nFIPS 203/204/205 via CMVP validation for federal procurement | national | binding-by-market-access\nCNSA 2.0 for national security systems | national | binding-law",
+  "legalStatus": "binding"
 }

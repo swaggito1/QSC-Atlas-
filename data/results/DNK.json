@@ -64,5 +64,27 @@
     "url": "https://www.eng.em.dk/Media/638315714019915522/National%20Strategy%20for%20Quantum%20Technology.pdf",
     "summary": "Danish national strategy for quantum technology development. Flagged for review because the candidate text describes quantum technology broadly and does not clearly contain an explicit post-quantum/QSC cryptography migration reference.",
     "included": true
+  },
+  {
+    "title": "Nyt sekretariat i CFCS skal hjælpe organisationer med at overgå til kvantesikker kryptografi",
+    "country": "DNK",
+    "issuingOrg": "CFCS",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cfcs.dk/da/nyheder/2024/nyt-sekretariat-i-cfcs/",
+    "summary": "Centre for Cyber Security (CFCS) news announcing a new secretariat (under the national quantum technology strategy) to help authorities and companies in Denmark's critical digital infrastructure transition to quantum-safe cryptography. Distinct from the CFCS theme page already in the corpus.",
+    "included": true
+  },
+  {
+    "title": "Ny temaartikel: Overgangen til kvantesikker kryptografi",
+    "country": "DNK",
+    "issuingOrg": "CFCS",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cfcs.dk/da/nyheder/2023/overgangen-til-kvantesikker-kryptografi/",
+    "summary": "Centre for Cyber Security (CFCS) news item launching its theme article on the transition to quantum-safe cryptography, explaining the quantum threat and proposed steps to migrate to post-quantum cryptography. Separate news URL from the theme page already stored.",
+    "included": true
   }
 ]

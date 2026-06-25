@@ -1,28 +1,12 @@
 {
   "iso3": "GRC",
-  "summary": "Greece's activity is led through the Ministry of Digital Governance, whose observatory registry lists the EU-funded PQ-REACT project on a post-quantum cryptography framework and which has promoted Greece's standing in European quantum communications. The posture is one of research and infrastructure participation, with no published national migration guidance, algorithm list or timeline.",
-  "govActors": "Ministry of Digital Governance | Greek ministry responsible for digital policy and cyber security",
-  "dataStatus": "Partial",
-  "provenance": [
-    "PQ-REACT post-quantum cryptography framework project: Ministry of Digital Governance observatory registry listing (ingested)",
-    "European quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW",
-    "HellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used",
-    "dominantProcess omitted: no standards camp attested in the documents",
-    "No standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents",
-    "EU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-    "Model 2026-06-14 (EU / taker, High): EU coordinated roadmap (NIS Cooperation Group); adopts the NIST baseline as a taker. No national algorithm."
-  ],
+  "summary": "Greece's quantum-safe activity is led through the Ministry of Digital Governance and the National Cybersecurity Authority (EAK). The new National Cybersecurity Strategy 2026 to 2030, issued under protocol 2563 of December 2025, explicitly frames the move to post-quantum cryptography as a matter of strategic importance for Greece as an EU member state, and the National Cybersecurity Authority together with the Demokritos research institute has convened the country's first national quantum-era cybersecurity workshop, Q-PrEP 2026, centred on the transition to post-quantum cryptography and quantum key distribution. Alongside this, the Ministry's observatory registry lists the EU-funded PQ-REACT post-quantum cryptography project and the Ministry has promoted Greece's standing in European quantum communications. The posture is therefore one of an emerging national strategic commitment supported by research and infrastructure participation, but with no published national algorithm list, no stated hybrid deployment position and no dated national migration milestones of its own.",
   "dominantProcess": "EU",
+  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
   "migrationTimeline": "2030 | High-risk use cases migrated\n2035 | Full migration of all systems complete",
   "targetCompletion": "2035",
-  "processParticipation": "NIS Cooperation Group | co-authored the EU coordinated PQC roadmap",
-  "country": "Greece",
-  "confidence": "High",
-  "classificationBasis": "PQ-REACT post-quantum cryptography framework project: Ministry of Digital Governance observatory registry listing (ingested)\nEuropean quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW\nHellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
-  "verificationStatus": "Unverified",
-  "coordinationPosture": "EU",
-  "standardsRole": "taker",
+  "govActors": "Ministry of Digital Governance | Greek ministry responsible for digital policy and cyber security\nNational Cybersecurity Authority (EAK) | Greek national cyber security authority; issued the National Cybersecurity Strategy 2026-2030 and convened the Q-PrEP 2026 quantum-readiness workshop",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated."
+  "dataStatus": "Partial"
 }

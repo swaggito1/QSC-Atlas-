@@ -141,5 +141,16 @@
     "url": "https://docbox.etsi.org/Workshop/2023/02_QUANTUMSAFECRYPTOGRAPHY/TECHNICALTRACK/MIGRATION_APPROACHES/NATO_SLIWA.pdf",
     "summary": "Presentation by NATO Cyber Security Centre scientists (Sliwa, Wrona) on NATO post-quantum cryptography migration approaches, delivered at the ETSI/IQC Quantum Safe Cryptography event. Authored by NATO CSC but hosted on the ETSI docbox, so flagged for review.",
     "included": false
+  },
+  {
+    "title": "On the Implementation of X509-Compliant Quantum-Safe Hybrid Certificates",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.sto.nato.int/document/on-the-implementation-of-x509-compliant-quantum-safe-hybrid-certificates/",
+    "summary": "NATO Science and Technology Organization meeting-proceedings paper (STO-MP-IST-SET-198) presenting a proof-of-concept implementation of hybrid X.509 certificates combining a classical signature (ECDSA) with the post-quantum algorithm CRYSTALS-Dilithium via a forked OpenSSL and the Open Quantum Safe library, to build a quantum-safe hybrid PKI for military operations. Authored by external researchers presented at a NATO STO symposium, so flagged for review rather than auto-included.",
+    "included": false
   }
 ]
