@@ -1,5 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
+
+// Divergent-clocks infographic data. x() maps a year onto the drawing width, so the lanes
+// share one axis and the divergence is read off their milestone positions.
+const YMIN = 2024;
+const YMAX = 2035;
+const X0 = 118;
+const X1 = 690;
+const x = (y: number) => X0 + ((y - YMIN) / (YMAX - YMIN)) * (X1 - X0);
+const ticks = [2024, 2026, 2028, 2030, 2032, 2034, 2035];
+const lanes = [
+  { label: 'European Union', color: '#5b54a8', y: 66, from: 2025, to: 2035,
+    marks: [{ yr: 2030, tag: 'milestone' }, { yr: 2035, tag: 'target' }] },
+  { label: 'France', color: '#5b54a8', y: 108, from: 2024, to: 2032, hollow: true,
+    marks: [{ yr: 2025, tag: 'hybridise' }, { yr: 2030, tag: 'standalone, not before' }] },
+  { label: 'United States', color: '#2b4c7e', y: 150, from: 2025, to: 2035,
+    marks: [{ yr: 2027, tag: 'procurement gate' }, { yr: 2030, tag: '' }, { yr: 2035, tag: 'complete' }] },
+  { label: 'China, SM-series', color: '#7a3b5e', y: 192, from: 2024, to: 2035, arrow: true,
+    marks: [] },
+];
 ---
 
 <Base
@@ -44,6 +63,59 @@ import Base from '../layouts/Base.astro';
       forecasts. They are coordination devices.
     </p>
 
+    <figure class="tl">
+      <svg viewBox="0 0 720 236" role="img" aria-labelledby="tl-title tl-desc" class="tl-svg">
+        <title id="tl-title">Divergent clocks: post-quantum milestones by bloc</title>
+        <desc id="tl-desc">
+          A shared 2024 to 2035 timeline with separate lanes for the European Union, France, the
+          United States and China, showing how their milestones fall in different years.
+        </desc>
+        {
+          ticks.map((t) => (
+            <g>
+              <line x1={x(t)} y1="44" x2={x(t)} y2="208" class="tl-grid" />
+              <text x={x(t)} y="226" class="tl-year" text-anchor="middle">{t}</text>
+            </g>
+          ))
+        }
+        {
+          lanes.map((ln) => (
+            <g>
+              <text x="8" y={ln.y + 4} class="tl-lane">{ln.label}</text>
+              <line x1={x(ln.from)} y1={ln.y} x2={x(ln.to)} y2={ln.y} class="tl-base" style={`stroke:${ln.color}`} />
+              {ln.arrow && (
+                <polygon
+                  points={`${x(ln.to)},${ln.y - 4} ${x(ln.to) + 9},${ln.y} ${x(ln.to)},${ln.y + 4}`}
+                  style={`fill:${ln.color}`}
+                />
+              )}
+              {ln.arrow && <text x={x(2033)} y={ln.y - 11} class="tl-tag" text-anchor="middle">ongoing, no fixed end</text>}
+              {
+                ln.marks.map((m) => (
+                  <g>
+                    <circle
+                      cx={x(m.yr)}
+                      cy={ln.y}
+                      r="5"
+                      class={ln.hollow ? 'tl-dot is-hollow' : 'tl-dot'}
+                      style={ln.hollow ? `stroke:${ln.color}` : `fill:${ln.color}`}
+                    />
+                    {m.tag && <text x={x(m.yr)} y={ln.y - 11} class="tl-tag" text-anchor="middle">{m.tag}</text>}
+                  </g>
+                ))
+              }
+            </g>
+          ))
+        }
+      </svg>
+      <figcaption>
+        The same core, different clocks. The European Union coordinates to 2030 and 2035; France runs
+        a phased, not-earlier-than schedule; the United States gates procurement in 2027 and aims to
+        finish by 2035; China runs a separate SM-series track. One executive order removed a United
+        States procurement requirement in June 2025.
+      </figcaption>
+    </figure>
+
     <h2>Governing by expectation</h2>
     <p class="prose">
       This is where the transition is most unusual. Its governance runs on expectations rather than on
@@ -64,8 +136,7 @@ import Base from '../layouts/Base.astro';
       sectoral roadmaps at once, and the result is deferral: ENISA finds only a small share of European
       stakeholders have begun to migrate. The answer is not necessarily a central authority. It is to
       make the state of the transition common knowledge, who stands where, on which instrument, to what
-      clock, which is the case the CEPS Task Force made for a public-private migration observatory under
-      ENISA. It is also, in a smaller way, what this Atlas is for.
+      clock.
     </p>
 
     <p class="prose close">
@@ -73,6 +144,21 @@ import Base from '../layouts/Base.astro';
       maps the wrappers, country by country, so the fragmentation can at least be read.
     </p>
 
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>NIST, FIPS 203, 204 and 205: post-quantum cryptography standards (August 2024).</li>
+      <li>European Union: Directive (EU) 2022/2555 (NIS2); Regulation (EU) 2022/2554 (DORA); Regulation (EU) 2024/2847 (Cyber Resilience Act), applicable from December 2027.</li>
+      <li>ENISA, European Union Agency for Cybersecurity: cryptographic certification (EUCC) and post-quantum readiness surveys (with ISACA).</li>
+      <li>NIS Cooperation Group: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (2026), setting the 2030 and 2035 milestones.</li>
+      <li>ANSSI (France): position on the transition to post-quantum cryptography, a phased not-earlier-than roadmap.</li>
+      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), gating procurement from 2027 with completion by 2035; and Executive Order 14306 (6 June 2025), which amended Executive Order 14144 and removed the mandatory post-quantum procurement requirement.</li>
+      <li>China: OSCCA SM-series national cryptographic algorithms.</li>
+      <li>ANSSI, BSI, the Netherlands NLNCSA and the Swedish National Communications Security Authority: joint position paper on quantum key distribution (January 2024), prioritising post-quantum migration.</li>
+      <li>G7 Cyber Expert Group: statement on quantum computing risks to the financial sector (2024).</li>
+      <li>Bradford, A. (2020). The Brussels Effect. Oxford University Press.</li>
+      <li>Budde, B., and Konrad, K. (2019). Tentative governing in a dynamic network of expectations. Research Policy (the governance of expectations).</li>
+      <li>CEPS: Pupillo, L., et al. (2025). Strengthening the EU Transition to a Quantum-Safe World, Task Force report.</li>
+    </ul>
     <p class="attribution">
       A QSC Atlas commentary, drawing on the CEPS Task Force on Strengthening the EU Transition to a
       Quantum-Safe World (2025). <a href="/methodology">How the Atlas classifies countries &rarr;</a>
@@ -128,5 +214,60 @@ import Base from '../layouts/Base.astro';
   .attribution a {
     color: var(--ink);
     white-space: nowrap;
+  }
+
+  /* Divergent-clocks timeline */
+  .tl {
+    margin: var(--space-6) 0 var(--space-8);
+  }
+  .tl-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .tl-grid {
+    stroke: var(--hairline);
+    stroke-width: 1;
+  }
+  .tl-base {
+    stroke-width: 2;
+    opacity: 0.5;
+  }
+  .tl-dot.is-hollow {
+    fill: var(--paper);
+    stroke-width: 2;
+  }
+  .tl-lane {
+    font-family: var(--font-instrument);
+    font-size: 12px;
+    fill: var(--ink);
+  }
+  .tl-year {
+    font-family: var(--font-instrument);
+    font-size: 11px;
+    fill: var(--ink-muted);
+  }
+  .tl-tag {
+    font-family: var(--font-instrument);
+    font-size: 10.5px;
+    fill: var(--ink-muted);
+  }
+  .tl figcaption {
+    margin-top: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+
+  /* Sources */
+  .sources {
+    margin: var(--space-4) 0 0;
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .sources li {
+    line-height: 1.45;
   }
 </style>

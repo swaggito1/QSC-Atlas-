@@ -10,6 +10,8 @@ const countries = await getCollection('countries');
 const classified = countries.filter((c) => c.data.coordinationPosture).length;
 const cell = (p: string, r: string) =>
   countries.filter((c) => c.data.coordinationPosture === p && c.data.standardsRole === r).length;
+const noRole = (p: string) =>
+  countries.filter((c) => c.data.coordinationPosture === p && !c.data.standardsRole).length;
 ---
 
 <figure class="matrix-fig">
@@ -37,10 +39,15 @@ const cell = (p: string, r: string) =>
           </tr>
         ))
       }
+      <tr class="none-row">
+        <th scope="row">None yet</th>
+        {POSTURE_ORDER.map((p) => <td class="mono">{noRole(p) || ''}</td>)}
+      </tr>
     </tbody>
   </table>
   <figcaption>
     Live counts across {classified} classified countries. Colour shows the bloc; every cell is labelled.
+    The last row counts countries with a bloc but no standards role yet, including the engaged but unaligned.
   </figcaption>
 </figure>
 
@@ -60,12 +67,12 @@ const cell = (p: string, r: string) =>
     vertical-align: bottom;
   }
   .matrix thead th {
-    font-family: var(--font-label);
+    font-family: var(--font-instrument);
     font-size: var(--text-2xs);
     line-height: 1.2;
   }
   .matrix tbody th {
-    font-family: var(--font-label);
+    font-family: var(--font-instrument);
     font-size: var(--text-2xs);
     text-transform: uppercase;
     letter-spacing: var(--tracking-label);
