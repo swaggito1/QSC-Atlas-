@@ -52,11 +52,10 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
     </main>
 
     <footer class="site-footer">
-      <p class="footer-meta">
-        Built only from institutional sources, rebuilt as new documents appear.
-        <a href="/methodology">Methodology</a> &middot;
-        <a href="/about#briefing">Request a briefing</a>
-      </p>
+      <div class="footer-brand">
+        <img class="ceps-logo" src="/ceps-logo.png" alt="CEPS" width="240" height="262" loading="lazy" />
+        <span class="footer-year mono">&copy; 2026</span>
+      </div>
       <p class="footer-asof mono">As of {buildDate}</p>
     </footer>
 
@@ -100,26 +99,32 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
       }
       .site-footer {
         margin-top: var(--space-16);
-        padding: var(--space-8) var(--space-6);
+        padding: var(--space-10) var(--space-6);
         border-top: 1px solid var(--hairline);
         color: var(--ink-muted);
         font-size: 0.9rem;
+        text-align: center;
       }
-      .site-footer p {
-        max-width: var(--measure);
-        margin: 0 0 var(--space-2);
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2);
       }
-      .footer-meta {
-        font-family: var(--font-label);
-        letter-spacing: 0.01em;
+      .ceps-logo {
+        height: 56px;
+        width: auto;
+        display: block;
       }
-      .footer-meta a {
-        color: var(--ink-muted);
+      .footer-year {
+        font-size: 0.8rem;
+        color: var(--ink-faint);
+        letter-spacing: 0.04em;
       }
       .footer-asof {
+        margin: var(--space-4) 0 0;
         font-size: 0.78rem;
         color: var(--ink-faint);
-        margin-top: var(--space-1);
       }
     </style>
   </body>

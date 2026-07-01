@@ -27,3 +27,6 @@ data/analytical-notes.private.json
 # editor scratch / lock files
 .~lock.*#
 *.tmp
+
+# Claude Code local settings (personal, machine-specific permissions)
+.claude/settings.local.json

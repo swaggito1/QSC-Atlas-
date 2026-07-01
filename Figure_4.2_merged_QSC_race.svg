@@ -1,0 +1,153 @@
+<svg viewBox="0 0 1180 706" xmlns="http://www.w3.org/2000/svg" font-family="Aptos, Calibri, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1180" height="706" fill="#ffffff"/>
+
+  <!-- ===== convergence band (behind both panels, no text label) ===== -->
+  <rect x="513.75" y="92" width="303.125" height="546" fill="#e0a800" opacity="0.13"/>
+
+  <!-- ===== vertical year gridlines ===== -->
+  <g stroke="#dde2e7" stroke-width="1">
+    <line x1="150" y1="92" x2="150" y2="638"/>
+    <line x1="271.25" y1="92" x2="271.25" y2="638"/>
+    <line x1="392.5" y1="92" x2="392.5" y2="638"/>
+    <line x1="513.75" y1="92" x2="513.75" y2="638"/>
+    <line x1="635" y1="92" x2="635" y2="638"/>
+    <line x1="756.25" y1="92" x2="756.25" y2="638"/>
+    <line x1="877.5" y1="92" x2="877.5" y2="638"/>
+    <line x1="998.75" y1="92" x2="998.75" y2="638"/>
+    <line x1="1120" y1="92" x2="1120" y2="638"/>
+  </g>
+
+  <!-- ===== titles ===== -->
+  <text x="60" y="30" font-size="22" font-weight="700" fill="#222222">The quantum-safe race</text>
+  <text x="60" y="52" font-size="13.5" fill="#5a6470">Industry qubit expectations set against national and EU migration deadlines, on a single timeline</text>
+
+  <!-- ===== TOP PANEL: the quantum clock ===== -->
+  <text x="60" y="80" font-size="13.5" font-weight="700" fill="#c0392b">THE QUANTUM CLOCK</text>
+  <text x="240" y="80" font-size="12.5" fill="#5a6470">where industry expects qubit counts to go</text>
+
+  <!-- log y-axis labels (1 to 10M) -->
+  <g font-size="9.5" fill="#7a828c" text-anchor="end">
+    <text x="142" y="96">10 M</text>
+    <text x="142" y="131.7">1 M</text>
+    <text x="142" y="167.4">100 k</text>
+    <text x="142" y="203.1">10 k</text>
+    <text x="142" y="238.8">1 k</text>
+    <text x="142" y="274.6">100</text>
+    <text x="142" y="310.3">10</text>
+  </g>
+  <text x="34" y="217" font-size="10.5" fill="#7a828c" transform="rotate(-90 34 217)" text-anchor="middle">physical qubits (log scale)</text>
+
+  <!-- CRQC threshold band (colour + legend only) -->
+  <rect x="150" y="127.7" width="970" height="35.7" fill="#c0392b" opacity="0.16"/>
+  <line x1="150" y1="127.7" x2="1120" y2="127.7" stroke="#c0392b" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
+  <line x1="150" y1="163.4" x2="1120" y2="163.4" stroke="#c0392b" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
+
+  <!-- ===== company expectation trajectories (from Figure 4.3) ===== -->
+  <!-- Google: Willow 105 (2024) -> ~1M by 2029 -->
+  <polyline points="150,269.9 453.125,127.7" fill="none" stroke="#4e7a3a" stroke-width="2" stroke-dasharray="7 5"/>
+  <circle cx="150" cy="269.9" r="6.5" fill="#4e7a3a" stroke="#ffffff" stroke-width="1.3"/>
+  <circle cx="453.125" cy="127.7" r="6.5" fill="#ffffff" stroke="#4e7a3a" stroke-width="2.5"/>
+  <text x="462" y="124" font-size="11.5" font-weight="700" fill="#3f6730">Google</text>
+
+  <!-- IBM: Condor 1,121 (2023) -> ~100k by 2033 -->
+  <polyline points="150,233.1 695.625,163.4" fill="none" stroke="#2f6d8f" stroke-width="2" stroke-dasharray="7 5"/>
+  <rect x="144" y="227.1" width="12" height="12" fill="#2f6d8f"/>
+  <rect x="689.625" y="157.4" width="12" height="12" fill="#ffffff" stroke="#2f6d8f" stroke-width="2.5"/>
+  <text x="708" y="160" font-size="11.5" font-weight="700" fill="#255677">IBM</text>
+
+  <!-- Microsoft: Majorana 8 (2025) -> ~1M ambition, no date -->
+  <polyline points="245,307.9 398,210" fill="none" stroke="#9a7a4a" stroke-width="2" stroke-dasharray="7 5"/>
+  <polygon points="398,210 388,213 393,221" fill="#9a7a4a"/>
+  <polygon points="245,301.4 238.5,311.9 251.5,311.9" fill="#9a7a4a"/>
+  <text x="260" y="311.5" font-size="11.5" font-weight="700" fill="#7d6238">Microsoft</text>
+
+  <!-- ===== grey separation line between the two panels ===== -->
+  <line x1="60" y1="388" x2="1120" y2="388" stroke="#9aa2ab" stroke-width="2"/>
+
+  <!-- top-panel mini legend -->
+  <g font-size="10.5" fill="#5a6470">
+    <circle cx="158" cy="365" r="6" fill="#555f6a" stroke="#ffffff" stroke-width="1.2"/>
+    <text x="169" y="369">demonstrated chip</text>
+    <circle cx="320" cy="365" r="6" fill="#ffffff" stroke="#555f6a" stroke-width="2.3"/>
+    <text x="331" y="369">stated target</text>
+    <line x1="445" y1="365" x2="481" y2="365" stroke="#555f6a" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="487" y="369">stated trajectory</text>
+    <rect x="620" y="359.5" width="22" height="11" fill="#c0392b" opacity="0.16"/>
+    <text x="648" y="369">CRQC threshold</text>
+  </g>
+
+  <!-- ===== BOTTOM PANEL: the migration race ===== -->
+  <text x="60" y="432" font-size="13.5" font-weight="700" fill="#1f5fa8">THE MIGRATION RACE</text>
+  <text x="252" y="432" font-size="12.5" fill="#5a6470">when must each actor have crossed the finish line?</text>
+
+  <!-- lanes -->
+  <g>
+    <!-- US -->
+    <text x="142" y="446" font-size="11.5" font-weight="700" fill="#2b2b2b" text-anchor="end">United States</text>
+    <text x="142" y="459" font-size="9.5" fill="#7a828c" text-anchor="end">CNSA 2.0</text>
+    <rect x="150" y="441" width="666.875" height="14" rx="7" fill="#1f5fa8" opacity="0.30"/>
+    <circle cx="513.75" cy="448" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="695.625" cy="448" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="816.875" cy="448" r="6.5" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.5"/>
+    <text x="828" y="452" font-size="10.5" fill="#5a6470">2035</text>
+
+    <!-- France -->
+    <text x="142" y="484" font-size="11.5" font-weight="700" fill="#2b2b2b" text-anchor="end">France</text>
+    <text x="142" y="497" font-size="9.5" fill="#7a828c" text-anchor="end">ANSSI</text>
+    <rect x="150" y="479" width="363.75" height="14" rx="7" fill="#1f5fa8" opacity="0.30"/>
+    <circle cx="271.25" cy="486" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="331.875" cy="486" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="513.75" cy="486" r="6.5" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.5"/>
+    <text x="525" y="490" font-size="10.5" fill="#5a6470">after 2030</text>
+
+    <!-- Germany -->
+    <text x="142" y="522" font-size="11.5" font-weight="700" fill="#2b2b2b" text-anchor="end">Germany</text>
+    <text x="142" y="535" font-size="9.5" fill="#7a828c" text-anchor="end">BSI</text>
+    <rect x="150" y="517" width="485" height="14" rx="7" fill="#1f5fa8" opacity="0.30"/>
+    <circle cx="513.75" cy="524" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="635" cy="524" r="6.5" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.5"/>
+    <text x="646" y="528" font-size="10.5" fill="#5a6470">2032</text>
+
+    <!-- Netherlands -->
+    <text x="142" y="560" font-size="11.5" font-weight="700" fill="#2b2b2b" text-anchor="end">Netherlands</text>
+    <text x="142" y="573" font-size="9.5" fill="#7a828c" text-anchor="end">AIVD</text>
+    <rect x="150" y="555" width="363.75" height="14" rx="7" fill="none" stroke="#1f5fa8" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.8"/>
+    <circle cx="513.75" cy="562" r="6.5" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.5"/>
+    <text x="525" y="566" font-size="10.5" fill="#5a6470">about 2030, risk-based</text>
+
+    <!-- EU -->
+    <text x="142" y="598" font-size="11.5" font-weight="700" fill="#2b2b2b" text-anchor="end">European Union</text>
+    <text x="142" y="611" font-size="9.5" fill="#7a828c" text-anchor="end">NIS CG roadmap</text>
+    <rect x="271.25" y="593" width="545.625" height="14" rx="7" fill="#1f5fa8" opacity="0.30"/>
+    <circle cx="271.25" cy="600" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="513.75" cy="600" r="6.5" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="816.875" cy="600" r="6.5" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.5"/>
+    <text x="828" y="604" font-size="10.5" fill="#5a6470">2035</text>
+  </g>
+
+  <!-- shared time axis -->
+  <line x1="150" y1="638" x2="1120" y2="638" stroke="#9aa2ab" stroke-width="1.3"/>
+  <g font-size="11" fill="#5a6470" text-anchor="middle">
+    <text x="150" y="656">2024</text>
+    <text x="271.25" y="656">2026</text>
+    <text x="392.5" y="656">2028</text>
+    <text x="513.75" y="656">2030</text>
+    <text x="635" y="656">2032</text>
+    <text x="756.25" y="656">2034</text>
+    <text x="877.5" y="656">2036</text>
+    <text x="998.75" y="656">2038</text>
+    <text x="1120" y="656">2040</text>
+  </g>
+
+  <!-- bottom-panel mini legend -->
+  <g font-size="10.5" fill="#3a4048">
+    <circle cx="158" cy="684" r="6" fill="#1f5fa8" stroke="#ffffff" stroke-width="1.3"/>
+    <text x="169" y="688">dated obligation</text>
+    <circle cx="300" cy="684" r="6" fill="#ffffff" stroke="#1f5fa8" stroke-width="2.3"/>
+    <text x="311" y="688">aspirational horizon</text>
+    <rect x="455" y="678.5" width="24" height="11" rx="5.5" fill="none" stroke="#1f5fa8" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="485" y="688">risk-based, no hard deadline</text>
+    <rect x="690" y="678" width="22" height="12" fill="#e0a800" opacity="0.18"/>
+    <text x="718" y="688">2030 to 2035 convergence</text>
+  </g>
+</svg>

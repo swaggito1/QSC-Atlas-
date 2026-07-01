@@ -1,74 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// Organisations that took part in the two CEPS Task Forces (2023 and 2025), combined and
-// de-duplicated. Logos load from Clearbit with a favicon fallback, so a mark always renders.
+// A curated set of the most recognisable participants from the two CEPS Task Forces (2023 and
+// 2025), spread across EU institutions, US and national agencies, big tech and academia. Marks
+// load from Clearbit with a Google-favicon fallback, so something always renders. One looping row.
 const partners = [
-  { n: 'Deloitte', d: 'deloitte.com' },
-  { n: 'EY', d: 'ey.com' },
-  { n: 'KPMG', d: 'kpmg.com' },
+  // EU institutions
+  { n: 'European Commission', d: 'commission.europa.eu' },
+  { n: 'European Central Bank', d: 'ecb.europa.eu' },
+  { n: 'ENISA', d: 'enisa.europa.eu' },
+  { n: 'European Parliament', d: 'europarl.europa.eu' },
+  { n: 'ETSI', d: 'etsi.org' },
+  // US and international institutions
+  { n: 'NIST', d: 'nist.gov' },
+  { n: 'NATO', d: 'nato.int' },
+  // National institutions
+  { n: 'BSI', d: 'bsi.bund.de' },
+  { n: 'ANSSI', d: 'cyber.gouv.fr' },
+  { n: 'TNO', d: 'tno.nl' },
+  // Industry and big tech
   { n: 'Microsoft', d: 'microsoft.com' },
   { n: 'IBM', d: 'ibm.com' },
   { n: 'Intel', d: 'intel.com' },
-  { n: 'Ericsson', d: 'ericsson.com' },
-  { n: 'Qualcomm', d: 'qualcomm.com' },
-  { n: 'Quantinuum', d: 'quantinuum.com' },
+  { n: 'Deloitte', d: 'deloitte.com' },
   { n: 'Thales', d: 'thalesgroup.com' },
-  { n: 'Leonardo', d: 'leonardo.com' },
-  { n: 'Unisys', d: 'unisys.com' },
-  { n: 'Brave', d: 'brave.com' },
-  { n: 'Santander', d: 'santander.com' },
-  { n: 'Sparkle', d: 'tisparkle.com' },
-  { n: 'Algorithmiq', d: 'algorithmiq.fi' },
-  { n: 'Inveriant', d: 'inveriant.com' },
-  { n: 'Intellera Consulting', d: 'intelleraconsulting.com' },
-  { n: 'Raiffeisen Bank International', d: 'rbinternational.com' },
-  { n: 'Zurich Insurance', d: 'zurich.com' },
-  { n: 'Cassa Depositi e Prestiti', d: 'cdp.it' },
-  { n: 'Quantum Business Network', d: 'qbn.world' },
-  { n: 'FS-ISAC', d: 'fsisac.com' },
-  { n: 'Bank for International Settlements', d: 'bis.org' },
-  { n: 'European Central Bank', d: 'ecb.europa.eu' },
-  { n: "Banca d'Italia", d: 'bancaditalia.it' },
-  { n: 'Inter-American Development Bank', d: 'iadb.org' },
-  { n: 'Financial Conduct Authority', d: 'fca.org.uk' },
-  { n: 'European Parliament', d: 'europarl.europa.eu' },
-  { n: 'European Commission', d: 'commission.europa.eu' },
-  { n: 'ENISA', d: 'enisa.europa.eu' },
-  { n: 'European Defence Agency', d: 'eda.europa.eu' },
-  { n: 'European Space Agency', d: 'esa.int' },
-  { n: 'ETSI', d: 'etsi.org' },
-  { n: 'European Investment Bank', d: 'eib.org' },
-  { n: 'EU Quantum Flagship', d: 'qt.eu' },
-  { n: 'BSI', d: 'bsi.bund.de' },
-  { n: 'ANSSI', d: 'cyber.gouv.fr' },
-  { n: 'NIST', d: 'nist.gov' },
-  { n: 'NATO', d: 'nato.int' },
-  { n: 'TNO', d: 'tno.nl' },
-  { n: 'ICANN', d: 'icann.org' },
-  { n: 'Internet Society', d: 'internetsociety.org' },
-  { n: 'Hybrid CoE', d: 'hybridcoe.fi' },
+  // Academic institutions
+  { n: 'Stanford University', d: 'stanford.edu' },
   { n: 'KU Leuven', d: 'kuleuven.be' },
   { n: 'Alan Turing Institute', d: 'turing.ac.uk' },
-  { n: 'University of Helsinki', d: 'helsinki.fi' },
-  { n: 'Istituto Italiano di Tecnologia', d: 'iit.it' },
-  { n: 'University of Amsterdam', d: 'uva.nl' },
-  { n: 'Utrecht University', d: 'uu.nl' },
-  { n: 'Stanford University', d: 'stanford.edu' },
   { n: 'TU Delft', d: 'tudelft.nl' },
-  { n: 'University of Waterloo', d: 'uwaterloo.ca' },
-  { n: 'Loughborough University', d: 'lboro.ac.uk' },
   { n: 'École Polytechnique', d: 'polytechnique.edu' },
-  { n: 'University of Málaga', d: 'uma.es' },
-  { n: 'University of Primorska', d: 'upr.si' },
-  { n: 'University of Salento', d: 'unisalento.it' },
-  { n: 'German Marshall Fund', d: 'gmfus.org' },
-  { n: 'I-Com', d: 'i-com.it' },
-  { n: 'GESDA', d: 'gesda.global' },
 ];
-const ROWS = 5;
-const rows: { n: string; d: string }[][] = Array.from({ length: ROWS }, () => []);
-partners.forEach((p, i) => rows[i % ROWS].push(p));
 ---
 
 <Base title="About">
@@ -151,34 +113,30 @@ partners.forEach((p, i) => rows[i % ROWS].push(p));
       <h3 class="partners-head">Task force participants</h3>
       <p class="prose credibility">The organisations that took part in our two Task Forces, combined.</p>
       <div class="marquees">
-        {
-          rows.map((row, ri) => (
-            <div class={`marquee ${ri % 2 ? 'is-rev' : ''}`}>
-              <div class="track" style={`--dur:${38 + ri * 5}s`}>
-                {row.map((p) => (
-                  <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-label={p.n} title={p.n}>
-                    <img
-                      src={`https://logo.clearbit.com/${p.d}`}
-                      alt=""
-                      loading="lazy"
-                      onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${p.d}&sz=128'`}
-                    />
-                  </a>
-                ))}
-                {row.map((p) => (
-                  <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-                    <img
-                      src={`https://logo.clearbit.com/${p.d}`}
-                      alt=""
-                      loading="lazy"
-                      onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${p.d}&sz=128'`}
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))
-        }
+        <div class="marquee">
+          <div class="track" style="--dur:52s">
+            {partners.map((p) => (
+              <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-label={p.n} title={p.n}>
+                <img
+                  src={`https://logo.clearbit.com/${p.d}`}
+                  alt=""
+                  loading="lazy"
+                  onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${p.d}&sz=128'`}
+                />
+              </a>
+            ))}
+            {partners.map((p) => (
+              <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                <img
+                  src={`https://logo.clearbit.com/${p.d}`}
+                  alt=""
+                  loading="lazy"
+                  onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${p.d}&sz=128'`}
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -188,9 +146,14 @@ partners.forEach((p, i) => rows[i % ROWS].push(p));
       tailored to your organisation or sector, get in touch.
     </p>
     <p>
-      <a class="briefing-link" href="mailto:swann.ashworth@ceps.eu?subject=QSC%20Atlas%20briefing">
+      <a class="briefing-link" href="mailto:lorenzo.pupillo@ceps.eu,swann.ashworth@ceps.eu?subject=QSC%20Atlas%20briefing">
         Request a briefing
       </a>
+    </p>
+    <p class="briefing-emails">
+      <a href="mailto:lorenzo.pupillo@ceps.eu">lorenzo.pupillo@ceps.eu</a>
+      &middot;
+      <a href="mailto:swann.ashworth@ceps.eu">swann.ashworth@ceps.eu</a>
     </p>
   </div>
 </Base>
@@ -297,8 +260,23 @@ partners.forEach((p, i) => rows[i % ROWS].push(p));
     background: var(--ink);
     color: var(--paper);
   }
+  .briefing-emails {
+    margin-top: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .briefing-emails a {
+    color: var(--ink-muted);
+    text-underline-offset: 2px;
+    text-decoration-color: var(--hairline);
+  }
+  .briefing-emails a:hover {
+    color: var(--ink);
+    text-decoration-color: var(--ink);
+  }
 
-  /* Participant logo banners: five rows, alternating scroll direction. */
+  /* Participant logos: one looping row. */
   .partners {
     margin-top: var(--space-16);
   }
@@ -323,9 +301,9 @@ partners.forEach((p, i) => rows[i % ROWS].push(p));
   .track {
     display: flex;
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-10);
     width: max-content;
-    animation: marq var(--dur, 40s) linear infinite;
+    animation: marq var(--dur, 52s) linear infinite;
   }
   .marquee.is-rev .track {
     animation-direction: reverse;
@@ -347,9 +325,9 @@ partners.forEach((p, i) => rows[i % ROWS].push(p));
     align-items: center;
   }
   .logo img {
-    height: 26px;
+    height: 78px;
     width: auto;
-    max-width: 120px;
+    max-width: 260px;
     object-fit: contain;
     filter: grayscale(1);
     opacity: 0.6;

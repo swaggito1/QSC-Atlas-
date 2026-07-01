@@ -147,7 +147,7 @@ for (const c of countries) {
     display: grid;
     place-items: center;
     z-index: 0;
-    transform: scale(0.58); /* hero pose by default, so the globe is centred even before JS runs */
+    transform: translateY(-7%) scale(0.58); /* hero pose by default, matches the JS hero pose */
     transition: transform var(--dur-slow) var(--ease-out), opacity var(--dur-mid) var(--ease-standard);
     will-change: transform, opacity;
   }
@@ -167,18 +167,19 @@ for (const c of countries) {
   /* Centred and smaller at the hero; zoomed in and pushed to a side for the content scenes, so
      the globe sits up close on one half with roughly 40% of it on screen and the rest beyond the
      edge. translateX is a share of the full stage width, so its magnitude sets how much of the
-     globe stays visible: raise it to hide more, lower it to show more. The sweep from +54% to
-     -54% carries the globe back through the centre between the two content scenes. */
+     globe stays visible: raise it to hide more, lower it to show more. The sweep from +50% to
+     -50% carries the globe back through the centre between the two content scenes. 50% is the most
+     centred the enlarged globe can sit before the left scene's globe would overlap its text. */
   body[data-scene='hero'] .globe-stage {
-    transform: scale(0.58);
+    transform: translateY(-7%) scale(0.58);
     opacity: 1;
   }
   body[data-scene='thesis'] .globe-stage {
-    transform: translateX(57%) scale(1);
+    transform: translateX(50%) scale(1);
     opacity: 1;
   }
   body[data-scene='model'] .globe-stage {
-    transform: translateX(-57%) scale(1);
+    transform: translateX(-50%) scale(1);
     opacity: 1;
   }
 
@@ -201,7 +202,7 @@ for (const c of countries) {
     justify-items: center;
     align-content: start;
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 3vh;
   }
   .scene--hero .text {
     max-width: 46rem;

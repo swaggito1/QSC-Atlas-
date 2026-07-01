@@ -88,8 +88,8 @@ const toc = [
         <dl class="ref">
           {
             ROLE_ORDER.map((k) => (
-              <div class="ref-row">
-                <span class="ref-sw is-role" aria-hidden="true" />
+              <div class="ref-row" style={`--c:${ROLE_META[k].color}`}>
+                <span class="ref-sw" aria-hidden="true" />
                 <dt>{ROLE_META[k].label}</dt>
                 <dd class="prose">{roleDef[k]}</dd>
               </div>
@@ -278,9 +278,6 @@ const toc = [
     border-radius: 50%;
     background: var(--c);
     align-self: center;
-  }
-  .ref-sw.is-role {
-    background: var(--ink);
   }
   .ref dt {
     font-weight: 600;

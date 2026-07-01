@@ -1,23 +1,43 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// Divergent-clocks infographic data. x() maps a year onto the drawing width, so the lanes
-// share one axis and the divergence is read off their milestone positions.
+// The quantum-safe race: industry qubit trajectories toward the threshold at which a machine could
+// break RSA-2048 (top), set against national migration deadlines (bottom), on one 2024-2040 axis.
+// Qubit figures and targets are industry-stated; migration dates are the national instruments.
 const YMIN = 2024;
-const YMAX = 2035;
-const X0 = 118;
+const YMAX = 2040;
+const X0 = 110;
 const X1 = 690;
-const x = (y: number) => X0 + ((y - YMIN) / (YMAX - YMIN)) * (X1 - X0);
-const ticks = [2024, 2026, 2028, 2030, 2032, 2034, 2035];
-const lanes = [
-  { label: 'European Union', color: '#5b54a8', y: 66, from: 2025, to: 2035,
-    marks: [{ yr: 2030, tag: 'milestone' }, { yr: 2035, tag: 'target' }] },
-  { label: 'France', color: '#5b54a8', y: 108, from: 2024, to: 2032, hollow: true,
-    marks: [{ yr: 2025, tag: 'hybridise' }, { yr: 2030, tag: 'standalone, not before' }] },
-  { label: 'United States', color: '#2b4c7e', y: 150, from: 2025, to: 2035,
-    marks: [{ yr: 2027, tag: 'procurement gate' }, { yr: 2030, tag: '' }, { yr: 2035, tag: 'complete' }] },
-  { label: 'China, SM-series', color: '#7a3b5e', y: 192, from: 2024, to: 2035, arrow: true,
-    marks: [] },
+const x = (yr: number) => X0 + ((yr - YMIN) / (YMAX - YMIN)) * (X1 - X0);
+const ticks = [2024, 2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040];
+
+// Top panel: physical qubits on a log scale.
+const QT = 52; // y at 10^7
+const QB = 248; // y at 10^0
+const qy = (q: number) => QB - (Math.log10(q) / 7) * (QB - QT);
+const decades = [
+  { q: 10000000, t: '10M' }, { q: 1000000, t: '1M' }, { q: 100000, t: '100k' },
+  { q: 10000, t: '10k' }, { q: 1000, t: '1k' }, { q: 100, t: '100' }, { q: 10, t: '10' },
+];
+const firms = [
+  { demo: { yr: 2024, q: 105 }, dLab: 'Google Willow, 105 (2024)',
+    target: { yr: 2029, q: 1000000 }, tLab: '1M by 2029' },
+  { demo: { yr: 2024, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)',
+    target: { yr: 2033, q: 100000 }, tLab: '100k by 2033' },
+  { demo: { yr: 2025, q: 8 }, dLab: 'Microsoft Majorana 1, 8 (2025), 1M ambition, no date' },
+  { demo: { yr: 2025, q: 9 }, dLab: 'Amazon Ocelot, about 9 (2025)', mx: 14, ly: 16 },
+];
+
+// Bottom panel: national migration deadlines.
+const R0 = 308;
+const RH = 20;
+const actors = [
+  { name: 'France', body: 'ANSSI', yr: 2031, text: 'after 2030', kind: 'soft', color: '#5b54a8' },
+  { name: 'Germany', body: 'BSI', yr: 2032, text: '2032', kind: 'hard', color: '#5b54a8' },
+  { name: 'European Union', body: 'NIS CG', yr: 2035, text: '2035', kind: 'hard', color: '#5b54a8' },
+  { name: 'United Kingdom', body: 'NCSC', yr: 2035, text: '2035', kind: 'hard', color: '#2b4c7e' },
+  { name: 'United States', body: 'CNSA 2.0', yr: 2035, text: '2035', kind: 'hard', color: '#2b4c7e' },
+  { name: 'China', body: 'SM-series', yr: 2038, text: 'no fixed date', kind: 'none', color: '#7a3b5e' },
 ];
 ---
 
@@ -53,81 +73,110 @@ const lanes = [
       with the operative rule written in the interpretive layer rather than the statute.
     </p>
 
-    <h2>The clocks diverge</h2>
+    <h2>The clocks diverge, against an uncertain threat</h2>
     <p class="prose">
-      The timetables fragment as sharply as the instruments. The European Union coordinates to 2030 and
-      2035; France works to a phased, not-earlier-than schedule; the United States gates procurement
-      through executive deadlines, one of which moved backwards in June 2025 when an order removed a
-      post-quantum procurement requirement; China runs a separate SM-series track. The same migration
-      therefore runs to different clocks in different places, and the deadlines are not simply
-      forecasts. They are coordination devices.
+      The timetables fragment as sharply as the instruments, and every one of them is set against a
+      threat that cannot be dated. The European Union coordinates to 2035; France runs a phased,
+      not-earlier-than schedule; Germany works to 2032; the United Kingdom and the United States to
+      2035; China keeps a separate SM-series track with no published end. What each clock races is not
+      an observed danger but an expectation. Climate governance can point to rising temperatures;
+      quantum-safe governance has no such observable, only the qubit counts the industry says it will
+      reach and an uncertain threshold at which they break today's encryption. The gap between the two
+      is the whole risk: on its own roadmap one firm expects to cross that threshold around 2029, while
+      the national deadlines cluster between 2030 and 2035 and China sets none. The deadlines do their
+      work anyway, because expectations are performative: they cascade vertically, a revised hardware
+      estimate registering at once in Washington's gates and Brussels' milestones, and they align
+      horizontally, as when four national agencies co-signed a single position in January 2024 that
+      confined quantum key distribution to niche uses and named post-quantum migration the priority.
+      Each national clock is, in the end, a wager that migration will finish before the machine arrives.
     </p>
 
-    <figure class="tl">
-      <svg viewBox="0 0 720 236" role="img" aria-labelledby="tl-title tl-desc" class="tl-svg">
-        <title id="tl-title">Divergent clocks: post-quantum milestones by bloc</title>
-        <desc id="tl-desc">
-          A shared 2024 to 2035 timeline with separate lanes for the European Union, France, the
-          United States and China, showing how their milestones fall in different years.
+    <figure class="race">
+      <svg viewBox="0 0 720 452" role="img" aria-labelledby="r-t r-d" class="race-svg">
+        <title id="r-t">The quantum-safe race: qubit trajectories against migration deadlines</title>
+        <desc id="r-d">
+          A single 2024 to 2040 timeline. Above, industry qubit targets rise toward the threshold at
+          which a quantum computer could break RSA-2048, with one stated target reaching it around 2029.
+          Below, national migration deadlines cluster between 2030 and 2035, while China sets none.
         </desc>
+
+        {/* shared vertical gridlines + year labels */}
         {
           ticks.map((t) => (
             <g>
-              <line x1={x(t)} y1="44" x2={x(t)} y2="208" class="tl-grid" />
-              <text x={x(t)} y="226" class="tl-year" text-anchor="middle">{t}</text>
+              <line x1={x(t)} y1="48" x2={x(t)} y2="418" class="race-grid" />
+              <text x={x(t)} y="440" class="race-year" text-anchor="middle">{t}</text>
+            </g>
+          ))
+        }
+        {/* the 2030 marker, emphasised across both panels */}
+        <line x1={x(2030)} y1="48" x2={x(2030)} y2="418" class="race-2030" />
+
+        {/* ---- top panel: the quantum clock ---- */}
+        <text x="8" y="24" class="race-panel">The quantum clock: where industry expects qubit counts to go</text>
+        <rect x={X0} y={qy(10000000)} width={X1 - X0} height={qy(100000) - qy(10000000)} class="race-band" />
+        <line x1={X0} y1={qy(1000000)} x2={X1} y2={qy(1000000)} class="race-crqc" />
+        <text x={X1} y={qy(1000000) - 5} class="race-note" text-anchor="end">CRQC threshold (RSA-2048)</text>
+        {
+          decades.map((d) => (
+            <g>
+              <line x1={X0} y1={qy(d.q)} x2={X1} y2={qy(d.q)} class="race-grid faint" />
+              <text x={X0 - 8} y={qy(d.q) + 3} class="race-axis" text-anchor="end">{d.t}</text>
             </g>
           ))
         }
         {
-          lanes.map((ln) => (
+          firms.map((f) => (
             <g>
-              <text x="8" y={ln.y + 4} class="tl-lane">{ln.label}</text>
-              <line x1={x(ln.from)} y1={ln.y} x2={x(ln.to)} y2={ln.y} class="tl-base" style={`stroke:${ln.color}`} />
-              {ln.arrow && (
-                <polygon
-                  points={`${x(ln.to)},${ln.y - 4} ${x(ln.to) + 9},${ln.y} ${x(ln.to)},${ln.y + 4}`}
-                  style={`fill:${ln.color}`}
+              {f.target && (
+                <line x1={x(f.demo.yr)} y1={qy(f.demo.q)} x2={x(f.target.yr)} y2={qy(f.target.q)} class="race-traj" />
+              )}
+              <circle cx={x(f.demo.yr) + (f.mx || 0)} cy={qy(f.demo.q)} r="4.5" class="race-demo" />
+              <text x={x(f.demo.yr) + (f.mx || 0) + 8} y={qy(f.demo.q) + 3 + (f.ly || 0)} class="race-label">{f.dLab}</text>
+              {f.target && <circle cx={x(f.target.yr)} cy={qy(f.target.q)} r="5" class="race-target" />}
+              {f.target && <text x={x(f.target.yr) + 9} y={qy(f.target.q) + 3} class="race-label">{f.tLab}</text>}
+            </g>
+          ))
+        }
+
+        {/* ---- bottom panel: the migration race ---- */}
+        <text x="8" y="286" class="race-panel">The migration race: when each actor must have crossed the line</text>
+        <rect x={x(2030)} y="300" width={x(2035) - x(2030)} height={R0 + actors.length * RH - 302} class="race-conv" />
+        <text x={(x(2030) + x(2035)) / 2} y="304" class="race-note" text-anchor="middle">2030 to 2035 convergence</text>
+        {
+          actors.map((a, i) => (
+            <g>
+              <text x="8" y={R0 + i * RH + 4} class="race-name">{a.name} &middot; {a.body}</text>
+              {a.kind === 'none' ? (
+                <g>
+                  <polygon
+                    points={`${x(a.yr)},${R0 + i * RH - 4} ${x(a.yr) + 9},${R0 + i * RH} ${x(a.yr)},${R0 + i * RH + 4}`}
+                    style={`fill:${a.color}`}
+                  />
+                  <line x1={x(2036)} y1={R0 + i * RH} x2={x(a.yr)} y2={R0 + i * RH} class="race-open" style={`stroke:${a.color}`} />
+                </g>
+              ) : (
+                <circle
+                  cx={x(a.yr)}
+                  cy={R0 + i * RH}
+                  r="5"
+                  class={a.kind === 'soft' ? 'race-dot is-soft' : 'race-dot'}
+                  style={a.kind === 'soft' ? `stroke:${a.color}` : `fill:${a.color}`}
                 />
               )}
-              {ln.arrow && <text x={x(2033)} y={ln.y - 11} class="tl-tag" text-anchor="middle">ongoing, no fixed end</text>}
-              {
-                ln.marks.map((m) => (
-                  <g>
-                    <circle
-                      cx={x(m.yr)}
-                      cy={ln.y}
-                      r="5"
-                      class={ln.hollow ? 'tl-dot is-hollow' : 'tl-dot'}
-                      style={ln.hollow ? `stroke:${ln.color}` : `fill:${ln.color}`}
-                    />
-                    {m.tag && <text x={x(m.yr)} y={ln.y - 11} class="tl-tag" text-anchor="middle">{m.tag}</text>}
-                  </g>
-                ))
-              }
+              <text x={x(a.yr) + 12} y={R0 + i * RH + 3} class="race-year2">{a.text}</text>
             </g>
           ))
         }
       </svg>
       <figcaption>
-        The same core, different clocks. The European Union coordinates to 2030 and 2035; France runs
-        a phased, not-earlier-than schedule; the United States gates procurement in 2027 and aims to
-        finish by 2035; China runs a separate SM-series track. One executive order removed a United
-        States procurement requirement in June 2025.
+        The quantum-safe race. Above, where industry says its qubit counts are heading, against the
+        threshold at which a machine could break RSA-2048; one stated target reaches it around 2029.
+        Below, when each actor must have migrated: a 2030-to-2035 convergence, France aspirational,
+        China with no fixed date. Qubit figures and targets are industry-stated; deadlines are the
+        national instruments. Sources below.
       </figcaption>
     </figure>
-
-    <h2>Governing by expectation</h2>
-    <p class="prose">
-      This is where the transition is most unusual. Its governance runs on expectations rather than on
-      an observed threat. Climate governance also coordinates through shared projections, but there the
-      danger is visible: temperatures rise, ice retreats. Quantum-safe governance has no such
-      observable; the cryptographically relevant quantum computer has not arrived, and may not for
-      years. The deadlines do their work anyway, because expectations are performative. They cascade
-      vertically, a revised hardware estimate registering at once in Washington's gates and Brussels'
-      milestones, and they align horizontally, as when four national agencies co-signed a single
-      position in January 2024 that confined quantum key distribution to niche uses and named
-      post-quantum migration the priority. Coordination happens without a coordinator.
-    </p>
 
     <h2>The failure mode is congestion, not absence</h2>
     <p class="prose">
@@ -151,9 +200,14 @@ const lanes = [
       <li>ENISA, European Union Agency for Cybersecurity: cryptographic certification (EUCC) and post-quantum readiness surveys (with ISACA).</li>
       <li>NIS Cooperation Group: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (2026), setting the 2030 and 2035 milestones.</li>
       <li>ANSSI (France): position on the transition to post-quantum cryptography, a phased not-earlier-than roadmap.</li>
-      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), gating procurement from 2027 with completion by 2035; and Executive Order 14306 (6 June 2025), which amended Executive Order 14144 and removed the mandatory post-quantum procurement requirement.</li>
+      <li>BSI (Germany): guidance on the migration to post-quantum cryptography.</li>
+      <li>NCSC (United Kingdom): Timelines for migration to post-quantum cryptography (2025), with milestones in 2028, 2031 and 2035.</li>
+      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), completion by 2035; and Executive Order 14306 (6 June 2025), which amended Executive Order 14144 and removed the mandatory post-quantum procurement requirement.</li>
       <li>China: OSCCA SM-series national cryptographic algorithms.</li>
+      <li>Industry qubit figures and targets: IBM Quantum roadmap (Condor, 2023; about 100,000 qubits by 2033); Google Quantum AI roadmap (Willow, 2024; about 1,000,000 qubits); Microsoft (Majorana 1, 2025); Amazon (Ocelot, 2025).</li>
+      <li>CRQC qubit-threshold estimate for RSA-2048: Gidney and Ekerå (2019); Gidney (2025).</li>
       <li>ANSSI, BSI, the Netherlands NLNCSA and the Swedish National Communications Security Authority: joint position paper on quantum key distribution (January 2024), prioritising post-quantum migration.</li>
+      <li>Global Risk Institute and evolutionQ: Quantum Threat Timeline Report (2024), and Mosca's risk inequality (x + y &gt; z).</li>
       <li>G7 Cyber Expert Group: statement on quantum computing risks to the financial sector (2024).</li>
       <li>Bradford, A. (2020). The Brussels Effect. Oxford University Press.</li>
       <li>Budde, B., and Konrad, K. (2019). Tentative governing in a dynamic network of expectations. Research Policy (the governance of expectations).</li>
@@ -216,43 +270,89 @@ const lanes = [
     white-space: nowrap;
   }
 
-  /* Divergent-clocks timeline */
-  .tl {
+  /* The quantum-safe race figure */
+  .race {
     margin: var(--space-6) 0 var(--space-8);
   }
-  .tl-svg {
+  .race-svg {
     width: 100%;
     height: auto;
     display: block;
   }
-  .tl-grid {
+  .race-grid {
     stroke: var(--hairline);
     stroke-width: 1;
   }
-  .tl-base {
-    stroke-width: 2;
+  .race-grid.faint {
     opacity: 0.5;
   }
-  .tl-dot.is-hollow {
+  .race-2030 {
+    stroke: var(--ink);
+    stroke-width: 1;
+    stroke-dasharray: 4 3;
+    opacity: 0.55;
+  }
+  .race-band {
+    fill: var(--ink);
+    opacity: 0.05;
+  }
+  .race-conv {
+    fill: var(--ink);
+    opacity: 0.05;
+  }
+  .race-crqc {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    stroke-dasharray: 2 2;
+  }
+  .race-traj {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    stroke-dasharray: 5 3;
+    opacity: 0.7;
+  }
+  .race-demo {
+    fill: var(--ink);
+  }
+  .race-target {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 2;
+  }
+  .race-dot.is-soft {
     fill: var(--paper);
     stroke-width: 2;
   }
-  .tl-lane {
+  .race-open {
+    stroke-width: 1.5;
+    stroke-dasharray: 4 3;
+    opacity: 0.7;
+  }
+  .race-panel {
     font-family: var(--font-instrument);
-    font-size: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
     fill: var(--ink);
   }
-  .tl-year {
+  .race-axis,
+  .race-year,
+  .race-year2 {
     font-family: var(--font-instrument);
     font-size: 11px;
     fill: var(--ink-muted);
   }
-  .tl-tag {
+  .race-label,
+  .race-note {
     font-family: var(--font-instrument);
     font-size: 10.5px;
     fill: var(--ink-muted);
   }
-  .tl figcaption {
+  .race-name {
+    font-family: var(--font-instrument);
+    font-size: 11px;
+    fill: var(--ink);
+  }
+  .race figcaption {
     margin-top: var(--space-3);
     font-size: var(--text-sm);
     color: var(--ink-muted);
