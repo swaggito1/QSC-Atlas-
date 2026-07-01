@@ -35,12 +35,12 @@ const firms = [
 const R0 = 308;
 const RH = 20;
 const actors = [
-  { name: 'France', body: 'ANSSI', yr: 2031, text: 'after 2030', kind: 'soft', color: '#5b54a8' },
-  { name: 'Germany', body: 'BSI', yr: 2032, text: '2032', kind: 'hard', color: '#5b54a8' },
-  { name: 'European Union', body: 'NIS CG', yr: 2035, text: '2035', kind: 'hard', color: '#5b54a8' },
-  { name: 'United Kingdom', body: 'NCSC', yr: 2035, text: '2035', kind: 'hard', color: '#2b4c7e' },
-  { name: 'United States', body: 'CNSA 2.0', yr: 2035, text: '2035', kind: 'hard', color: '#2b4c7e' },
-  { name: 'China', body: 'SM-series', yr: 2038, text: 'no fixed date', kind: 'none', color: '#7a3b5e' },
+  { name: 'Germany', body: 'BSI', marks: [2032], text: '2032', kind: 'hard', color: '#5b54a8' },
+  { name: 'European Union', body: 'NIS CG', marks: [2035], text: '2035', kind: 'hard', color: '#5b54a8' },
+  { name: 'United States', body: 'federal', marks: [2030, 2033], text: '2030, 2033 (federal)', kind: 'hard', color: '#2b4c7e' },
+  { name: 'India', body: 'DST task force', marks: [2029, 2033], text: '2029 critical, 2033', kind: 'hard', color: '#6b7280' },
+  { name: 'Thailand', body: 'ETDA', marks: [], yr: 2038, text: 'no fixed date', kind: 'none', color: '#6b7280' },
+  { name: 'China', body: 'SM-series', marks: [], yr: 2038, text: 'no fixed date', kind: 'none', color: '#7a3b5e' },
 ];
 ---
 
@@ -80,19 +80,20 @@ const actors = [
     <h2>The clocks diverge, against an uncertain threat</h2>
     <p class="prose">
       The timetables fragment as sharply as the instruments, and every one of them is set against a
-      threat that cannot be dated. The European Union coordinates to 2035; France runs a phased,
-      not-earlier-than schedule; Germany works to 2032; the United Kingdom and the United States to
-      2035; China keeps a separate SM-series track with no published end. What each clock races is not
-      an observed danger but an expectation. Climate governance can point to rising temperatures;
+      threat that cannot be dated. Germany works to 2032; the European Union coordinates to 2035; the
+      United States now sets 2030 and 2033 deadlines for its federal systems; India, more aggressive
+      than any, wants its critical infrastructure quantum-safe by 2029 and the rest by 2033; while
+      Thailand and China publish no fixed national date at all. What each clock races is not an
+      observed danger but an expectation. Climate governance can point to rising temperatures;
       quantum-safe governance has no such observable, only the qubit counts the industry says it will
       reach and an uncertain threshold at which they break today's encryption. The gap between the two
-      is the whole risk: on its own roadmap one firm expects to cross that threshold around 2029, while
-      the national deadlines cluster between 2030 and 2035 and China sets none. The deadlines do their
-      work anyway, because expectations are performative: they cascade vertically, a revised hardware
-      estimate registering at once in Washington's gates and Brussels' milestones, and they align
-      horizontally, as when four national agencies co-signed a single position in January 2024 that
-      confined quantum key distribution to niche uses and named post-quantum migration the priority.
-      Each national clock is, in the end, a wager that migration will finish before the machine arrives.
+      is the whole risk: on its own roadmap one firm expects to cross that threshold around 2029, as
+      early as the most aggressive migration deadline. The deadlines do their work anyway, because
+      expectations are performative: they cascade vertically, a revised hardware estimate registering
+      at once in Washington's gates and Brussels' milestones, and they align horizontally, as when
+      four national agencies co-signed a single position in January 2024 that confined quantum key
+      distribution to niche uses and named post-quantum migration the priority. Each national clock
+      is, in the end, a wager that migration will finish before the machine arrives.
     </p>
 
     <figure class="race">
@@ -101,7 +102,8 @@ const actors = [
         <desc id="r-d">
           A single 2024 to 2040 timeline. Above, industry qubit targets rise toward the threshold at
           which a quantum computer could break RSA-2048, with one stated target reaching it around 2029.
-          Below, national migration deadlines cluster between 2030 and 2035, while China sets none.
+          Below, national migration deadlines range from India's 2029 to the EU's 2035, while Thailand
+          and China set none.
         </desc>
 
         {/* shared vertical gridlines + year labels */}
@@ -145,30 +147,29 @@ const actors = [
 
         {/* ---- bottom panel: the migration race ---- */}
         <text x="8" y="286" class="race-panel">The migration race: when each actor must have crossed the line</text>
-        <rect x={x(2030)} y="300" width={x(2035) - x(2030)} height={R0 + actors.length * RH - 302} class="race-conv" />
-        <text x={(x(2030) + x(2035)) / 2} y="304" class="race-note" text-anchor="middle">2030 to 2035 convergence</text>
         {
           actors.map((a, i) => (
             <g>
               <text x="8" y={R0 + i * RH + 4} class="race-name">{a.name} &middot; {a.body}</text>
               {a.kind === 'none' ? (
                 <g>
+                  <line x1={x(2036)} y1={R0 + i * RH} x2={x(a.yr)} y2={R0 + i * RH} class="race-open" style={`stroke:${a.color}`} />
                   <polygon
                     points={`${x(a.yr)},${R0 + i * RH - 4} ${x(a.yr) + 9},${R0 + i * RH} ${x(a.yr)},${R0 + i * RH + 4}`}
                     style={`fill:${a.color}`}
                   />
-                  <line x1={x(2036)} y1={R0 + i * RH} x2={x(a.yr)} y2={R0 + i * RH} class="race-open" style={`stroke:${a.color}`} />
                 </g>
               ) : (
-                <circle
-                  cx={x(a.yr)}
-                  cy={R0 + i * RH}
-                  r="5"
-                  class={a.kind === 'soft' ? 'race-dot is-soft' : 'race-dot'}
-                  style={a.kind === 'soft' ? `stroke:${a.color}` : `fill:${a.color}`}
-                />
+                <g>
+                  {a.marks.length > 1 && (
+                    <line x1={x(a.marks[0])} y1={R0 + i * RH} x2={x(a.marks[a.marks.length - 1])} y2={R0 + i * RH} class="race-span" style={`stroke:${a.color}`} />
+                  )}
+                  {a.marks.map((m) => (
+                    <circle cx={x(m)} cy={R0 + i * RH} r="5" class="race-dot" style={`fill:${a.color}`} />
+                  ))}
+                </g>
               )}
-              <text x={x(a.yr) + 12} y={R0 + i * RH + 3} class="race-year2">{a.text}</text>
+              <text x={(a.kind === 'none' ? x(a.yr) : x(a.marks[a.marks.length - 1])) + 12} y={R0 + i * RH + 3} class="race-year2">{a.text}</text>
             </g>
           ))
         }
@@ -176,8 +177,9 @@ const actors = [
       <figcaption>
         The quantum-safe race. Above, where industry says its qubit counts are heading, against the
         threshold at which a machine could break RSA-2048; one stated target reaches it around 2029.
-        Below, when each actor must have migrated: a 2030-to-2035 convergence, France aspirational,
-        China with no fixed date. Qubit figures and targets are industry-stated; deadlines are the
+        Below, when each actor must have migrated: from India's 2029 for critical infrastructure to
+        the EU's 2035, with the United States at 2030 and 2033 for federal systems, while Thailand and
+        China set no fixed date. Qubit figures and targets are industry-stated; deadlines are the
         national instruments. Sources below.
       </figcaption>
     </figure>
@@ -203,10 +205,10 @@ const actors = [
       <li>European Union: Directive (EU) 2022/2555 (NIS2); Regulation (EU) 2022/2554 (DORA); Regulation (EU) 2024/2847 (Cyber Resilience Act), applicable from December 2027.</li>
       <li>ENISA, European Union Agency for Cybersecurity: cryptographic certification (EUCC) and post-quantum readiness surveys (with ISACA).</li>
       <li>NIS Cooperation Group: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (2026), setting the 2030 and 2035 milestones.</li>
-      <li>ANSSI (France): position on the transition to post-quantum cryptography, a phased not-earlier-than roadmap.</li>
       <li>BSI (Germany): guidance on the migration to post-quantum cryptography.</li>
-      <li>NCSC (United Kingdom): Timelines for migration to post-quantum cryptography (2025), with milestones in 2028, 2031 and 2035.</li>
-      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), completion by 2035; and Executive Order 14306 (6 June 2025), which amended Executive Order 14144 and removed the mandatory post-quantum procurement requirement.</li>
+      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), with 2030 and 2033 milestones for national security systems; Executive Order 14412 (2026) setting federal deadlines; and Executive Order 14306 (2025), which removed the earlier mandatory procurement requirement.</li>
+      <li>India: Department of Science and Technology task force, Implementation of a Quantum-Safe Ecosystem in India (2026), targeting critical infrastructure by 2029 and full migration by 2033.</li>
+      <li>Thailand: ETDA and the Quantum Technology Foundation, quantum-safe readiness aligned to NIST guidance, with no fixed national deadline.</li>
       <li>China: OSCCA SM-series national cryptographic algorithms.</li>
       <li>Industry qubit figures and targets: IBM Quantum roadmap (Condor, 2023; about 100,000 qubits by 2033); Google Quantum AI roadmap (Willow, 2024; about 1,000,000 qubits); Microsoft (Majorana 1, 2025); Amazon (Ocelot, 2025).</li>
       <li>CRQC qubit-threshold estimate for RSA-2048: Gidney and Ekerå (2019); Gidney (2025).</li>
@@ -317,6 +319,10 @@ const actors = [
   }
   .race-demo {
     fill: var(--ink);
+  }
+  .race-span {
+    stroke-width: 2;
+    opacity: 0.45;
   }
   .race-target {
     fill: var(--paper);
