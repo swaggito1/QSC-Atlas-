@@ -19,5 +19,6 @@
   "verificationStatus": "Unverified",
   "coordinationPosture": "engaged-unaligned",
   "legalStatus": "none",
-  "obligation": "No binding post-quantum obligation is on record. National agencies have stated an ambition for cryptographic self-reliance and are preparing for migration, but no instrument or adopted standard is yet in place."
+  "obligation": "No binding post-quantum obligation is on record. National agencies have stated an ambition for cryptographic self-reliance and are preparing for migration, but no instrument or adopted standard is yet in place.",
+  "lastUpdated": "2026-06-14"
 }

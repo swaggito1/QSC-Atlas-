@@ -8,5 +8,13 @@
   "govActors": "Ministry of Digital Governance | Greek ministry responsible for digital policy and cyber security\nNational Cybersecurity Authority (EAK) | Greek national cyber security authority; issued the National Cybersecurity Strategy 2026-2030 and convened the Q-PrEP 2026 quantum-readiness workshop",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "PQ-REACT post-quantum cryptography framework project: Ministry of Digital Governance observatory registry listing (ingested)\nEuropean quantum communications standing: Ministry of Digital Governance news item (ingested, references quantum communications/QKD rather than explicit PQC migration) - REVIEW\nHellasQCI consultation item flagged not included (consortium, off trusted-domain list) - noted but not used\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25",
+  "country": "Greece"
 }

@@ -1,0 +1,1698 @@
+{
+  "AUS": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "AUT": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 0.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "BHR": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "BEL": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "BRA": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "BRN": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    }
+  },
+  "BGR": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "CAN": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "CHL": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "CHN": {
+    "relevance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "HRV": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "CYP": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "CZE": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "DNK": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "DJI": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    }
+  },
+  "EST": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 0.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "FIN": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "FRA": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "DEU": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "GRC": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "HUN": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "IND": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "IDN": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "IRL": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "ISR": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "ITA": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "JPN": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "LVA": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "LTU": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "LUX": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "MYS": {
+    "relevance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "MLT": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 0.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "NLD": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "NZL": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "NOR": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "POL": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "PRT": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "ROU": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "RUS": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "SAU": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "SGP": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "SVK": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 0.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "SVN": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "KOR": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "ESP": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "SWE": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "THA": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "TUR": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    }
+  },
+  "UKR": {
+    "relevance": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 0.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "governance": {
+      "score": 1.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "impact": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    }
+  },
+  "ARE": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Medium",
+      "subScores": []
+    }
+  },
+  "GBR": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 1.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "USA": {
+    "relevance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "High",
+      "subScores": []
+    }
+  },
+  "VNM": {
+    "relevance": {
+      "score": 1.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "coherence": {
+      "score": 1.5,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "effectiveness": {
+      "score": 1.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "efficiency": {
+      "score": 0.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "governance": {
+      "score": 2.0,
+      "confidence": "Low",
+      "subScores": []
+    },
+    "impact": {
+      "score": 2.0,
+      "confidence": "Low",
+      "subScores": []
+    }
+  }
+}

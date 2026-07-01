@@ -11,5 +11,11 @@
   "mainRegulation": "Government-approved national post-quantum cryptography transition plan (2026) | national | binding-law\nNIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
   "obligation": "Lithuania's Government has approved a national post-quantum cryptography transition plan that sets staged deadlines for cybersecurity entities: a cryptographic inventory by 2027, post-quantum or hybrid cryptography in high-risk systems by 2031, and post-quantum-only cryptography from 2036. The Ministry of National Defence recommends hybrid deployment during the transition. These national obligations sit alongside the EU framework, under which essential and important entities must use state-of-the-art cryptography under NIS2 as transposed into national law and financial entities face equivalent duties under DORA; neither EU instrument yet names post-quantum algorithms specifically.",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "confidence": "High",
+  "verificationStatus": "Verified",
+  "classificationBasis": "NKSC lead and PQC as a key near-term decision: NKSC overview of cybersecurity status and NKSC news item on post-quantum cryptography (ingested)\nCryptographic inventory as the starting step: NKSC guidelines for cryptography use inventory and NKSC Cyberpusryciai PQC presentation (ingested)\nTracking standardisation of quantum-resistant algorithms and the NIST PQC project: NKSC CTAC 2024 Yearly Report (ingested)\nPQC deployment funding via Digital Europe Programme: NKSC info-day presentation 2024 (ingested)\ndominantProcess omitted: the NIST PQC project is discussed in the yearly report as the standardisation reference, but no document adopts the NIST FIPS suite as Lithuanian national guidance, so the camp is not clearly attested - REVIEW\nalgorithms/standardFamilies/hybridDeployment/migrationTimeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25"
 }

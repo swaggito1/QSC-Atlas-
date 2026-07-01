@@ -15,7 +15,7 @@
   "confidence": "High",
   "verificationStatus": "Unverified",
   "dataStatus": "Partial",
-  "classificationBasis": "CFCS lead, transition and migration to quantum-resistant algorithms: CFCS theme page (ingested)\nSame content on newer domain: SAMSIK theme page (ingested) - samsik.dk flagged, REVIEW\nSupport for a coordinated EU effort: Folketinget background and subsidiarity note (ingested)\nDedicated CFCS secretariat established under the national quantum technology strategy: CFCS 2024 announcement (ingested)\nStrengthen financial-sector preparations: Nationalbanken risk report (ingested)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "classificationBasis": "CFCS lead, transition and migration to quantum-resistant algorithms: CFCS theme page (ingested)\nSame content on newer domain: SAMSIK theme page (ingested) - samsik.dk flagged, REVIEW\nSupport for a coordinated EU effort: Folketinget background and subsidiarity note (ingested)\nStrengthen financial-sector preparations: Nationalbanken risk report (ingested)\nNational Strategy for Quantum Technology ingested but flagged for no clear explicit QSC migration reference, not used for posture - REVIEW\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
   "provenance": [
     "CFCS lead, transition and migration to quantum-resistant algorithms: CFCS theme page (ingested)",
     "Same content on newer domain: SAMSIK theme page (ingested) - samsik.dk flagged, REVIEW",
@@ -29,5 +29,6 @@
     "algorithms/standardFamilies/hybridDeployment omitted: not stated in any captured summary, including the new ones",
     "migrationTimeline/targetCompletion carried forward as the EU coordinated roadmap (NIS Cooperation Group), not a Danish national one; no new document sets a national deadline",
     "mainRegulation/legalStatus carried forward: all instruments are EU-level (NIS2, DORA, Commission Recommendation (EU) 2024/1101, NIS Cooperation Group roadmap); no new binding national instrument captured"
-  ]
+  ],
+  "lastUpdated": "2026-06-25"
 }

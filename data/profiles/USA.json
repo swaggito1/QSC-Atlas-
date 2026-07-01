@@ -11,5 +11,13 @@
   "govActors": "NIST | National Institute of Standards and Technology, runs the post-quantum standardisation process\nCISA | Cybersecurity and Infrastructure Security Agency, leads migration guidance for critical infrastructure\nNSA | National Security Agency, sets CNSA 2.0 requirements for National Security Systems\nDHS | Department of Homeland Security, transition preparation guidance\nOMB | Office of Management and Budget, issues the binding federal migration memoranda\nONCD | Office of the National Cyber Director, coordinates federal implementation of the post-quantum migration\nU.S. Department of the Treasury | financial-sector quantum risk guidance directing institutions to the NIST standards\nGAO | Government Accountability Office, oversight of the federal quantum threat mitigation strategy and migration cost",
   "dataStatus": "Partial",
   "mainRegulation": "NSM-10 (2022) | national | binding-law\nOMB M-23-02 cryptographic inventory (2022) | national | binding-law\nExecutive Order 14144 (2025; amended by EO 14306) | national | binding-law\nExecutive Order Securing the Nation Against Advanced Cryptographic Attacks (2026) | national | binding-law\nFIPS 203/204/205 via CMVP validation for federal procurement | national | binding-by-market-access\nCNSA 2.0 for national security systems | national | binding-law",
-  "legalStatus": "binding"
+  "legalStatus": "binding",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "setter",
+  "obligation": "Federal agencies must inventory their cryptography, report annually, and migrate to the NIST FIPS algorithms on the mandated timelines; national security systems follow CNSA 2.0. There is no economy-wide private-sector mandate.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "NIST standards + algorithms: csrc.nist.gov project page (results summary)\nCISA/NSA/DHS roles: respective ingested pages\n2035 CNSA 2.0 target: backend brief reference list + NSA PQC resources hub\nVerifier: FIPS names + algorithm names not in captured text (weak) - REVIEW",
+  "lastUpdated": "2026-06-25",
+  "country": "United States"
 }

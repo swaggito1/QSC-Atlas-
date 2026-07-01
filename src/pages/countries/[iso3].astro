@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import ProfilePanel from '../../components/ProfilePanel.astro';
 import { getCollection } from 'astro:content';
+import { POSTURE_META } from '../../lib/process';
+import evaluations from '../../../data/evaluations.json';
 
 // One static page per country. Each page also gathers the documents whose
 // Country matches this country's ISO3 or name, for the Key documents section.
@@ -17,17 +19,20 @@ export async function getStaticPaths() {
         return dc === iso3 || dc === name;
       })
       .map((d) => d.data);
-    return { params: { iso3: iso3.toLowerCase() }, props: { country: c.data, documents: docs } };
+    const evaluation = (evaluations as Record<string, any>)[iso3] ?? null;
+    const posture = c.data.coordinationPosture;
+    const blocColor = posture && (POSTURE_META as any)[posture] ? (POSTURE_META as any)[posture].color : null;
+    return { params: { iso3: iso3.toLowerCase() }, props: { country: c.data, documents: docs, evaluation, blocColor } };
   });
 }
 
-const { country, documents } = Astro.props;
+const { country, documents, evaluation, blocColor } = Astro.props;
 ---
 
 <Base title={country.country} description={country.summary ?? undefined}>
   <div class="container">
     <p class="back"><a id="back-link" href="/countries">&larr; All countries</a></p>
-    <ProfilePanel country={country} documents={documents} />
+    <ProfilePanel country={country} documents={documents} evaluation={evaluation} blocColor={blocColor} />
   </div>
   <script is:inline>
     (() => {

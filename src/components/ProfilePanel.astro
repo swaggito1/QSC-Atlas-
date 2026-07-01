@@ -8,6 +8,8 @@ import RoleBadge from './RoleBadge.astro';
 import MigrationTimeline from './MigrationTimeline.astro';
 import { parseNameRole, parseList, parseRegulation } from '../lib/parse';
 import { legalStatusMeta, instrumentStatusMeta, deriveLegalStatus } from '../lib/regulation';
+import CredibilityGauge from './CredibilityGauge';
+import type { Evaluation } from '../lib/evaluation';
 
 interface CountryData {
   country: string;
@@ -41,8 +43,10 @@ interface DocData {
 interface Props {
   country: CountryData;
   documents?: DocData[];
+  evaluation?: Evaluation | null;
+  blocColor?: string | null;
 }
-const { country, documents = [] } = Astro.props;
+const { country, documents = [], evaluation = null, blocColor = null } = Astro.props;
 
 const families = parseList(country.standardFamilies);
 const algorithms = parseList(country.algorithms);
@@ -116,38 +120,48 @@ const verifiedLabel =
         )
       }
 
-      {/* Regulatory basis (lead): instruments, bindingness, and the plain obligation.
+      {/* Lead row: governance credibility (left) beside the regulatory basis (right).
           The analytical note is intentionally not rendered: it is an internal field,
           redacted from the public build (see docs/REGULATORY_LAYER_SPEC.md). */}
-      <section class="block reg">
-        <h2>Regulatory basis</h2>
+      <section class={`lead-row${evaluation ? ' has-gauge' : ''}`}>
         {
-          regulations.length ? (
-            <ul class="reg-list">
-              {regulations.map((r) => (
-                <li>
-                  <span class="reg-name">{r.instrument}</span>
-                  <span class="reg-tags">
-                    {r.level && <span class="reg-level">{r.level}</span>}
-                    {r.statusMeta && (
-                      <span class={`reg-status${r.statusMeta.binding ? ' is-binding' : ''}`}>
-                        {r.statusMeta.label}
-                      </span>
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p class="empty">No governing instrument identified.</p>
+          evaluation && (
+            <div class="lead-col gauge-col">
+              <h2>Governance credibility</h2>
+              <CredibilityGauge client:visible evaluation={evaluation} countryName={country.country} blocColor={blocColor ?? '#6b7280'} />
+            </div>
           )
         }
-        {legal && (
-          <p class="legal-status">
-            Legal status: <strong>{legal.label}</strong>
-          </p>
-        )}
-        {country.obligation && <p class="obligation prose">{country.obligation}</p>}
+        <div class="lead-col reg">
+          <h2>Regulatory basis</h2>
+          {
+            regulations.length ? (
+              <ul class="reg-list">
+                {regulations.map((r) => (
+                  <li>
+                    <span class="reg-name">{r.instrument}</span>
+                    <span class="reg-tags">
+                      {r.level && <span class="reg-level">{r.level}</span>}
+                      {r.statusMeta && (
+                        <span class={`reg-status${r.statusMeta.binding ? ' is-binding' : ''}`}>
+                          {r.statusMeta.label}
+                        </span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="empty">No governing instrument identified.</p>
+            )
+          }
+          {legal && (
+            <p class="legal-status">
+              Legal status: <strong>{legal.label}</strong>
+            </p>
+          )}
+          {country.obligation && <p class="obligation prose">{country.obligation}</p>}
+        </div>
       </section>
 
       {/* 2. Standards and algorithms */}
@@ -338,11 +352,29 @@ const verifiedLabel =
   .summary {
     margin: 0 0 var(--space-6);
   }
+  .lead-row {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .lead-row.has-gauge {
+    display: grid;
+    gap: var(--space-6) var(--space-8);
+  }
+  @media (min-width: 720px) {
+    .lead-row.has-gauge {
+      grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+  .lead-col {
+    min-width: 0;
+  }
   .block {
     padding: var(--space-6) 0;
     border-top: 1px solid var(--hairline);
   }
-  .block h2 {
+  .block h2,
+  .lead-row h2 {
     font-family: var(--font-label);
     font-size: 0.82rem;
     text-transform: uppercase;

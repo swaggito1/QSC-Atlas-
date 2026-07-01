@@ -11,5 +11,13 @@
   "govActors": "NCSC Sweden | National Cyber Security Centre, issues national recommendations and recommended timepoints for the transition to quantum-safe cryptography and names the NIST FIPS algorithms\nFRA | National Defence Radio Establishment, hosts the NCSC and presents on the transition, framing the harvest-now-decrypt-later threat\nRiksdagen | Swedish Parliament, fact memos welcoming the EU quantum strategy and digital-infrastructure approach\nGovernment of Sweden | identifies the transition to quantum-safe cryptography as part of strengthening Europe's cybersecurity",
   "mainRegulation": "NCSC Sweden national recommendations and recommended timepoints (Tidpunkter) for the transition to quantum-safe cryptography | National | guidance\nNIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "NCSC Sweden national recommendations, framed against NIS2 and the Swedish cybersecurity act: NCSC Sweden guidance 2026 (ingested)\nNCSC hosted by FRA: FRA news page (ingested)\nParliament welcomes EU approach: Riksdagen fact memos (ingested)\nGovernment identifies the transition as part of European cybersecurity: Government Communication 2025/26:115 (ingested)\nTillvaxtverket quantum-ecosystem report ingested but flagged for no explicit PQC reference, not used for posture - REVIEW\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/timeline/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25",
+  "country": "Sweden"
 }

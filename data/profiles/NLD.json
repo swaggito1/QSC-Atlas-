@@ -21,5 +21,12 @@
     "mainRegulation: only the attested national guidance instruments retained (NCSC-NL TLS guidelines v2025-05 row, PQC Migration Handbook 2nd ed row). NIS2 and DORA removed: no included Netherlands document in this corpus attests them as binding instruments; the only NIS2/PQC fiche is included:false",
     "legalStatus soft-only: no binding instrument attested by an included Netherlands document; guidance and the QvC-Rijk programme set the recommended approach",
     "migrationTimeline / targetCompletion: EU coordinated roadmap (NIS Cooperation Group, high-risk by 2030, full by 2035) carried forward; no national dated milestone or national end date is attested (AIVD statements warn migration may not finish in time but give no fixed date)"
-  ]
+  ],
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; national guidance (NCSC TLS guidelines, the PQC Migration Handbook) sets the recommended approach and the government-wide QvC-Rijk programme coordinates public-sector migration.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "summary + govActors (AIVD, NCSC-NL, BZK, Rijksoverheid): PQC Migration Handbook, NCSC-NL guidance rows, BZK letter to Parliament, and Rijksoverheid programme rows\ndominantProcess NIST: NCSC-NL expert blog on NIST's publication of three post-quantum cryptography standards (13 August 2024) row. No Dutch sovereign scheme stated, so NIST assigned\nTweede Kamer role: parliamentary questions and EU quantum strategy document rows\nstandardFamilies / algorithms: OMITTED. The NCSC-NL row attests that NIST released three standards but the included summaries do not name FIPS 203/204/205 or ML-KEM/ML-DSA/SLH-DSA explicitly - REVIEW handbook for named algorithms\nmigrationTimeline / targetCompletion: OMITTED, no dated migration milestones or end date stated in the included summaries (AIVD statements warn migration may not finish in time but give no fixed date)\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25"
 }

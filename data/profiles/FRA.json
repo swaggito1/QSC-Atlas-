@@ -9,5 +9,14 @@
   "govActors": "ANSSI | French national cybersecurity authority\nACPR | French banking and insurance supervisor raising PQC awareness in the financial ecosystem\nBanque de France | central bank advancing a coordinated PQC roadmap for the financial sector and running PQC experiments\nOPECST | parliamentary office for the evaluation of scientific and technological choices",
   "mainRegulation": "Law No. 2023-703 of 1 August 2023, military programming 2024-2030 (PQC transition named a defence technology priority) | national | binding-law\nOrder of 17 March 2022 approving the France 2030 'Cryptographie Post-Quantique' call for projects specifications | national | binding-law\nANSSI PQC migration position and roadmap (phased approach; alignment with the EU coordinated roadmap) | national | guidance\nANSSI Common Criteria security visa with PQC requirements (first PQC security visas issued) | national | binding-by-market-access",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "secondaryProcess": "Sovereign",
+  "coordinationPosture": "EU",
+  "standardsRole": "contextualiser",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; products seeking ANSSI certification must meet its PQC requirements, including mandatory hybridisation, by the visa deadlines (2027 sensitive products, 2030 all certified products).",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Phased approach: ANSSI position paper (ingested)\nStandalone not before 2030: backend brief reference line\nHybrid Required: ANSSI doctrine for products handling long-lived secrets - REVIEW\ndominantProcess omitted: unattested in captured text (verifier)\ndominantProcess Sovereign restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Sovereign reflects the national doctrine.",
+  "lastUpdated": "2026-06-25",
+  "country": "France"
 }

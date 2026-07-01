@@ -12,5 +12,13 @@
   "govActors": "BSI | Federal Office for Information Security, sets national cryptographic recommendations\nBundesregierung | Federal Government, set the action plan for quantum technologies and the goal to initiate migration in security-critical areas\nBundestag | Federal parliament, reported the planned national PQC roadmap and project plan\nBundesrat | Federal Council, addressed obligations to adopt PQC migration concepts in national cybersecurity strategies\nBundesbank | German central bank, set out the quantum threat to banking and the 2026 migration goal\nBMBF | Federal research ministry, funds bringing post-quantum cryptography into application",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nBSI TR-02102 technical guidelines (now setting dated end-of-life deadlines for classical asymmetric cryptography) | national | guidance\nBSI migration roadmap and recommendations | national | guidance",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "secondaryProcess": "Mixed",
+  "coordinationPosture": "EU",
+  "standardsRole": "contextualiser",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2; the BSI technical guidelines (TR-02102) set the recommended algorithms and hybrid deployment that public-sector procurement and certification follow, though the guidelines are not themselves statute.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "BSI guideline: ingested BSI topic page\nHybrid recommended + conservative choices: BSI guideline doctrine - REVIEW\nMixed process: BSI TR recommendations alongside NIST standards - REVIEW\ndominantProcess omitted: Mixed unattested in captured text (verifier)\ndominantProcess Mixed restored: well-established and design-endorsed, provisional for review\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one. Secondary Mixed reflects the national doctrine.",
+  "lastUpdated": "2026-06-25"
 }

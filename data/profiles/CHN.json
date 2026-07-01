@@ -8,5 +8,13 @@
   "govActors": "OSCCA | State Cryptography Administration, China's national cryptography authority; makes anti-quantum cryptography a priority research direction of the National Cryptography Science Fund",
   "mainRegulation": "OSCCA Announcement No. 55, National Cryptography Science Fund second-batch application guidelines (2026) | national | guidance\nOSCCA notice soliciting suggestions for the second-batch National Cryptography Science Fund project guidelines (2025) | national | guidance",
   "legalStatus": "soft-only",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "sovereign-bloc",
+  "standardsRole": "sovereign-developer",
+  "obligation": "Critical information infrastructure operators must use domestic (SM-series) algorithms under the Cryptography Law and the Multi-Level Protection Scheme; sovereign post-quantum standards are in development through the NGCC programme and not yet mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Lead institution + Sovereign process: OSCCA Announcement No. 55 (ingested, 2026) names 'anti-quantum computing cryptography key theory and technology' as the first research direction of the National Cryptography Science Fund; OSCCA is China's national cryptography authority running its own scheme, hence Sovereign\nNext-generation algorithm solicitation: ICCS announcements and proposal-solicitation notices (candidates), framed as a response to quantum computing threats and aimed at China's own standardisation - REVIEW (these ICCS rows are included:false, used here only as raw description context)\nNo PQC algorithm names, standard families, hybrid stance, dated milestones or target completion stated in the ingested document - all omitted per iron rule\nCAICT 2023 report references NIST PQC progress but is a survey (included:false) and does not make NIST China's posture",
+  "lastUpdated": "2026-06-25",
+  "country": "China"
 }

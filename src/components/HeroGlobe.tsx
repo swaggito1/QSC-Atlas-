@@ -175,7 +175,11 @@ export default function HeroGlobe({ mapProcess }: Props) {
     const wrap = wrapRef.current, proj = projRef.current;
     if (!wrap || !proj) return null;
     const rect = wrap.getBoundingClientRect();
-    const ll = proj.invert([clientX - rect.left, clientY - rect.top]);
+    // The stage is CSS-scaled by the scroll choreography, so the visual rect differs from the
+    // layout size the projection draws at. Divide back to layout pixels before inverting.
+    const sx = rect.width / (wrap.clientWidth || rect.width);
+    const sy = rect.height / (wrap.clientHeight || rect.height);
+    const ll = proj.invert([(clientX - rect.left) / sx, (clientY - rect.top) / sy]);
     if (!ll) return { f: null, m: null }; // outside the sphere = ocean / space
     for (const f of featsRef.current) if (geoContains(f, ll)) return { f, m: mapProcess[key(f.id)] };
     return { f: null, m: null };

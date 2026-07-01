@@ -23,5 +23,6 @@
   "standardsRole": "taker",
   "mainRegulation": "NCA National Cryptographic Standards (NCS-1:2020) | national | binding-law\nNCA consultation adding post-quantum algorithms, RNGs and QKD to the NCS | national | soft-law\nCST Securing Data in the Quantum Computing Era (ICT sector) | national | guidance",
   "legalStatus": "binding",
-  "obligation": "Government entities and critical national infrastructure must meet the National Cybersecurity Authority's minimum cryptographic requirements set in the National Cryptographic Standards (NCS-1:2020), which the NCA is mandated to enforce. The standard already carries a post-quantum cryptography appendix, and the NCA has run a public consultation to add post-quantum algorithms; until that update is finalised, no specific post-quantum algorithm is yet mandated. Communications, Space and Technology Commission material for the ICT sector is advisory only."
+  "obligation": "Government entities and critical national infrastructure must meet the National Cybersecurity Authority's minimum cryptographic requirements set in the National Cryptographic Standards (NCS-1:2020), which the NCA is mandated to enforce. The standard already carries a post-quantum cryptography appendix, and the NCA has run a public consultation to add post-quantum algorithms; until that update is finalised, no specific post-quantum algorithm is yet mandated. Communications, Space and Technology Commission material for the ICT sector is advisory only.",
+  "lastUpdated": "2026-06-14"
 }

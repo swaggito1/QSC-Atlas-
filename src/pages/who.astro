@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+
+// The orientation page (brief 4.1 and 9.2): who the Atlas is for, what they get, and how to
+// read it. Monochrome, no globe. Linked from the hero scene; ends with a link into the map.
+---
+
+<Base title="Who the Atlas is for" description="Who the QSC Atlas is for, what it gives you, and how to read it: the two axes, the colour rule, the confidence grade.">
+  <div class="container who">
+    <h1>Who the Atlas is for, and how to read it</h1>
+
+    <section class="block">
+      <h2>Who it is for</h2>
+      <p class="prose">
+        Policymakers comparing national positions; CISOs and advisers scoping a transition across
+        jurisdictions; researchers who need sourced, comparable data.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>What you get</h2>
+      <p class="prose">
+        For any country: the binding instrument and its legal status, the obligation it places on
+        organisations, the deadline it works to, and a reading of how credible the plan is. Every
+        claim links to the official source behind it.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>How to read it</h2>
+      <p class="prose">
+        Colour shows only the standards process a country coordinates with. Every country is placed
+        on two axes, coordination posture and standards role. Each profile carries a confidence
+        grade and a last-verified date. Click a country to open it.
+      </p>
+    </section>
+
+    <p class="cta-wrap">
+      <a class="cta" href="/map">Open the map &rarr;</a>
+    </p>
+  </div>
+</Base>
+
+<style>
+  .who h1 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--type-scene);
+    line-height: 1.1;
+    margin-bottom: var(--space-8);
+  }
+  .who .block {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .who .block h2 {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    font-weight: 400;
+    margin-bottom: var(--space-3);
+  }
+  .cta-wrap {
+    margin-top: var(--space-10);
+  }
+  .cta {
+    display: inline-block;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-instrument);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .cta:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+</style>

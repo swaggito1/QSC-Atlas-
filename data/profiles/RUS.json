@@ -6,5 +6,13 @@
   "govActors": "TC26 (Rosstandart) | Technical Committee for Standardization Cryptographic Information Protection, whose Working Group 2.5 develops post-quantum cryptographic mechanisms to extend the GOST R 34 series",
   "mainRegulation": "GOST R 34.10-2012 / 34.12-2015 national cryptographic standards | national | binding-law\nFSB / TC26 cryptographic regulation | national | binding-law\nIndigenous PQC candidates (Shipovnik, Hypericum, Codiaeum) | national | guidance",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "sovereign-bloc",
+  "standardsRole": "sovereign-developer",
+  "obligation": "State and regulated systems must use the national GOST cryptographic suite certified under FSB oversight; post-quantum GOST standardisation is in progress and not yet mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "CAVEAT: every RUS result is included:false, so under a strict reading this country would be a Placeholder. Profile drafted from T1 institutional candidate material (the official TC26 / Rosstandart site) because it clearly attests a sovereign GOST posture and the map needs a colour - confirm inclusion before treating as settled - REVIEW\ndominantProcess Sovereign + standardFamilies (GOST R 34 series) + govActors: TC26 structure page listing Working Group 2.5 Post-Quantum Cryptographic Mechanisms under Subcommittee No. 2, the TC26 about page, and the TC26 standardization-documents index (all tc26.ru, T1)\nno adopted PQC standard: the TC26 draft-documents page shows no post-quantum-specific draft published as of June 2026\nalgorithms OMITTED: no GOST PQC algorithm is named in an institutional source; the Shipovnik code-based signature appears only in vendor (Kryptonite) and aggregator (TAdviser) candidates, excluded per the iron rule\nhybridDeployment / migrationTimeline / targetCompletion OMITTED: none stated; financial-sector pilots (Gazprombank, Moscow Exchange, NSPK) appear only in non-institutional TAdviser candidates\nNational Technology Center for Digital Cryptography (Mintsifry) is reported to host a post-quantum laboratory but no explicit PQC document was found on its site; not relied on",
+  "lastUpdated": "2026-06-25",
+  "country": "Russia"
 }

@@ -10,5 +10,12 @@
   "govActors": "Traficom / Kyberturvallisuuskeskus (NCSC-FI), Suomen kansallinen kryptotyöryhmä | national cryptography working group; sets binding quantum-safe requirements for products entering national evaluation from 1 January 2026\nTraficom / Kyberturvallisuuskeskus (NCSC-FI) | national cyber security authority; publishes PQC migration guidance for organisations\nFinnish Government (Valtioneuvosto) | publishes the national Quantum Technology Strategy 2025 to 2035\nVTT Technical Research Centre of Finland | state research centre, discusses quantum-safe cryptography and the need for near-term solutions",
   "mainRegulation": "National cryptography working group requirements for national PQC product evaluations (from 1 January 2026) | National | binding-law\nNCSC-FI guidance on migrating to quantum-safe encryption (March 2026) | National | guidance\nNIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Quantum Technology Strategy 2025-2035, prominent role in quantum technology: Finnish Government strategy (ingested) - explicit PQC reference not confirmed from metadata, REVIEW\nQuantum-safe cryptography and near-term need for digital trust: VTT story page (ingested) - T4 news/story page, REVIEW\nInstituteQ roadmap excluded (included: false), not used\nmigrationTimeline omitted: the 2025-2035 strategy dates concern quantum technology generally, not a PQC migration timeline\ndominantProcess omitted: no standards camp (NIST/ETSI/ISO) named in captured summaries\nalgorithms/standardFamilies/hybridDeployment/targetCompletion omitted: not stated in captured summaries\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25"
 }

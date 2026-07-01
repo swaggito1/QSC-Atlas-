@@ -9,5 +9,12 @@
   "govActors": "CCB | Centre for Cybersecurity Belgium, national cyber security authority and national coordination centre (NCC-BE) channelling EU PQC funding\nBOSA | Federal public service for policy and support, quantum cybersecurity guidance\nNBB | National Bank of Belgium, financial market infrastructure oversight",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "CCB lead posture and EU roadmap milestones (2026 national strategies, 2030 critical infrastructure, 2035 broad adoption): CCB news item 'Preparing for the Quantum Era' (ingested)\nCCB on maturity uncertainty: CCB 10-year anniversary publication, 2025 (ingested)\nBOSA reference to NIST 2024 standards: Quantum4Belgium page (ingested)\nNBB tracking PQC as emerging risk: NBB FMI and payment services report 2025, Swift oversight factsheet, NBB annual report 2025 (ingested)\nmigrationTimeline reflects EU roadmap milestones referenced by the CCB, not Belgian-set deadlines - REVIEW\ndominantProcess omitted: BOSA references NIST standards but no single Belgian standards camp is stated across the documents\nNo standardFamilies, algorithms, hybridDeployment or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25"
 }

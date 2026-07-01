@@ -9,5 +9,13 @@
   "govActors": "NÚKIB | National Cyber and Information Security Agency, national authority for cyber security\nMPO (Ministerstvo průmyslu a obchodu) | Ministry of Industry and Trade, commissioned a National Recovery Plan study on quantum technologies and post-quantum cryptography\nČNB | Czech National Bank, central bank research on quantum-resistant signature schemes",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-law\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-law\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law\nNÚKIB Minimum Requirements for Cryptographic Algorithms (v4.1, March 2026) | national | guidance",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Deployment expectations for sensitive information in higher-risk environments: NÚKIB portal announcement on quantum-resistant cryptography (ingested)\nQuantum threat and definition of post-quantum cryptography: NÚKIB minimum requirements appendix (ingested)\nPQC named in national strategy: NÚKIB National Cyber Security Strategy 2026-2030 (ingested)\nČNB incidental PQC reference: Czech National Bank digital assets research paper (ingested, flagged as incidental) - REVIEW\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25",
+  "country": "Czechia"
 }

@@ -8,5 +8,13 @@
   "govActors": "CNCS | National Cybersecurity Centre, national authority for cyber security",
   "mainRegulation": "NIS2 Directive (EU) 2022/2555, Art. 21(2)(h) | EU | binding-by-market-access\nDORA, Regulation (EU) 2022/2554 (financial sector) | EU | binding-by-market-access\nCommission Recommendation (EU) 2024/1101 on a coordinated PQC roadmap | EU | soft-law\nNIS Cooperation Group Coordinated Implementation Roadmap (2026/2030/2035) | EU | soft-law",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "EU",
+  "standardsRole": "taker",
+  "obligation": "Essential and important entities must use state-of-the-art cryptography under NIS2, transposed into national law, and financial entities face equivalent duties under DORA; neither yet names post-quantum algorithms specifically. Migration follows the EU coordinated roadmap, with high-risk use cases targeted for 2030 and full migration by 2035, which is encouraged rather than mandated.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Funded PQC primitive and implementation security work: CNCS NCC-PT National Coordination Centre page (ingested)\nPQC as a priority conference topic: CNCS C-DAYS 2026 call for presentations (ingested)\nEmerging technologies and R&D context: CNCS Observatory Emerging Technologies Report 2023 and ROSE R&D document (ingested, PQC reference not explicitly confirmed in snippets) - REVIEW\ndominantProcess omitted: no standards camp attested in the documents\nNo standardFamilies, algorithms, hybridDeployment, migrationTimeline or targetCompletion: none stated in the documents\nEU-aligned by membership: participates in the NIS Cooperation Group coordinated PQC roadmap (high-risk by 2030, full by 2035); the timeline shown is the EU coordinated roadmap, not a national one.",
+  "lastUpdated": "2026-06-25",
+  "country": "Portugal"
 }

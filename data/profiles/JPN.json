@@ -11,5 +11,13 @@
   "govActors": "CRYPTREC | National cryptographic technology evaluation body, publishes PQC guidelines and maintains the PQC cipher list\nCabinet Secretariat | Runs the cross-ministerial PQC liaison council through its National Cyber Unit and set the around-2035 government migration target\nDigital Agency | Carries PQC migration in its trust-policy priorities and commissioned a study on migration\nMETI | Industrial cybersecurity lead, set the around-2035 PQC migration deadline for industry\nFSA | Financial Services Agency, issued recommendations for deposit-taking financial institutions migrating to PQC\nBOJ | Bank of Japan, explains PQC and how financial institutions should respond\nMIC | Ministry of Internal Affairs and Communications, evaluates and funds cryptographic R&D toward PQC\nNICT | National research institute supporting PQC R&D and reporting implementation and deployment status",
   "dataStatus": "Partial",
   "mainRegulation": "Common Standards for Cybersecurity Measures for Government Agencies (government cryptography-use rules) | national | binding-by-market-access\nCRYPTREC Post-Quantum Cryptography list (Table 2 of the CRYPTREC cipher list) | national | guidance\nCRYPTREC Cryptographic Technology Guideline on Post-Quantum Cryptography (FY2024 edition) | national | guidance\nCybersecurity Strategy (government PQC migration measures, December 2025) | national | soft-law\nLiaison Council on the Use of Post-Quantum Cryptography in Government Agencies (interim summary, around-2035 target) | national | soft-law\nFSA Study Group report on PQC response for deposit-taking financial institutions | national | guidance",
-  "legalStatus": "binding"
+  "legalStatus": "binding",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "contextualiser",
+  "obligation": "Government agencies procuring information systems must, under the Common Standards set by the Cybersecurity Strategic Headquarters, specify ciphers from the CRYPTREC Ciphers List in their procurement requirements, which makes the list binding by market access for government suppliers. This currently governs cryptography generally rather than mandating post-quantum algorithms; CRYPTREC has evaluated and is adding the NIST post-quantum algorithms (ML-KEM and others), and its post-quantum guideline remains advisory. There is no general post-quantum obligation on the private sector.",
+  "confidence": "Medium",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "CRYPTREC guidelines + FY2024 survey: ingested CRYPTREC rows\nFIPS 203/204/205: CRYPTREC evaluation-committee report (ingested)\nCross-ministerial council: Cabinet Secretariat row\nDigital Agency priorities: FY2026 budget row\nMixed process: CRYPTREC national evaluation framework processing NIST standards - REVIEW\nNo timeline/target set: 2035 figure appears only in vendor sources, excluded per iron rule",
+  "lastUpdated": "2026-06-25",
+  "country": "Japan"
 }

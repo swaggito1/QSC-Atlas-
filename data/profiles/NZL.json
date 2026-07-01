@@ -12,5 +12,12 @@
   "mainRegulation": "Protective Security Requirements (PSR) mandatory requirements | national | binding-by-market-access\nNew Zealand Information Security Manual (NZISM) post-quantum preparation guidance (Section 2.4) | national | guidance\nNew Zealand's Cyber Security Strategy 2026-2030 (post-quantum commitment) | national | soft-law",
   "legalStatus": "binding",
   "standardFamilies": "",
-  "algorithms": ""
+  "algorithms": "",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker",
+  "obligation": "Government agencies covered by the Protective Security Requirements (a Cabinet direction binding on public service departments and other mandated agencies, not a statute) must manage information security in line with the PSR's mandatory requirements and report annually on compliance. The post-quantum element is advisory only: NZISM Section 2.4 directs agencies to inventory cryptographically protected assets and plan migration to post-quantum standards referencing the NIST work, and compliance with the NZISM is not required as a matter of law. No obligation falls on the wider economy.",
+  "confidence": "Medium",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "Lead institution + posture: NZISM Section 2.4 (NCSC/GCSB, v3.9, November 2025, ingested)\nInventory + migration planning advice: same Section 2.4 row\nNIST process: Section 2.4 summary states it references NIST PQC work; treated as the standards reference, hence dominantProcess NIST - REVIEW (single guidance section, no formal FIPS adoption named)\nNo FIPS family / algorithm names, no hybrid stance, no timeline or target stated in the ingested document - all omitted per iron rule\nOnly one included document; the 2022 v3.5 announcement was flagged (404 on verification, included:false)",
+  "lastUpdated": "2026-06-25"
 }

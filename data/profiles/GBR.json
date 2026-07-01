@@ -11,5 +11,13 @@
   "govActors": "NCSC | UK national technical authority for cyber security; sets the PQC migration timeline and guidance\nBank of England | Financial-sector authority; urges firms to plan and prepare PQC migration and assesses quantum risk to financial stability\nDSIT | Department for Science, Innovation and Technology; commissions research on quantum key distribution and the PQC transition\nPOST (UK Parliament) | Parliamentary Office of Science and Technology; briefs Parliament on quantum and PQC\nUK Parliament | Scrutinises the PQC transition through written questions, committee evidence and debate\nUK Government | Publishes research on the plan for the PQC transition",
   "mainRegulation": "NCSC post-quantum cryptography migration timelines and guidance (to 2035) | national | guidance",
   "legalStatus": "soft-only",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "taker",
+  "obligation": "There is no economy-wide post-quantum statute and no binding PQC mandate. The NIS Regulations 2018 place binding cyber security and resilience duties on designated operators of essential services and relevant digital service providers, assessed by sector regulators against the NCSC Cyber Assessment Framework, but these are technology-neutral and do not require post-quantum migration. PQC itself is addressed only through NCSC guidance, which directs migration to the NIST FIPS 203/204/205 algorithms on a phased national timeline to 2035 and carries no legal obligation.",
+  "confidence": "High",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "NCSC migration-timelines guidance + Next steps paper (ncsc.gov.uk, included)\nNIST (high): NCSC aligns to the NIST FIPS 203/204/205 suite\nReference country, set directly in Notion before the profile pipeline existed; this file backfills the canonical record",
+  "lastUpdated": "2026-06-25",
+  "country": "United Kingdom"
 }

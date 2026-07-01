@@ -11,5 +11,14 @@
   "govActors": "MSIT | Ministry of Science and ICT, establishing the national post-quantum cryptography transition infrastructure and a national PQC body, with budget allocated for the transition, and co-issuing the 2026 pilot transition re-recruitment\nKISA | Korea Internet & Security Agency, reference guidance on post-quantum cryptography, the annual sector-by-sector PQC pilot transition support programmes, and the construction of joint-certificate PKI infrastructure for the transition",
   "mainRegulation": "KCMVP cryptographic module validation (government) | national | binding-by-market-access\nKpqC national algorithm selections (2025: NTRU+, SMAUG-T, AIMer, HAETAE) | national | guidance\nMSIT national PQC transition programme (2025-2035) | national | guidance",
   "legalStatus": "binding",
-  "dataStatus": "Partial"
+  "dataStatus": "Partial",
+  "secondaryProcess": "Sovereign",
+  "coordinationPosture": "NIST-bloc",
+  "standardsRole": "contextualiser",
+  "obligation": "Government cryptographic modules must pass KCMVP validation, which selects the national KpqC algorithms; the MSIT programme runs phased sector pilots to 2035. There is no economy-wide statutory mandate.",
+  "confidence": "Medium",
+  "verificationStatus": "Unverified",
+  "classificationBasis": "summary + govActors (MSIT): MSIT national PQC transition infrastructure row and the 2026 KRW 8.12 trillion budget row\ngovActors (KISA): KISA PQC reference page and the 2025 and 2026 pilot transition call rows\nmigrationTimeline 2025/2026: the 2025 (energy, medical, public administration) and 2026 (telecom, finance, transport, defence, space) pilot transition rows. These are programme phases rather than a national completion timeline\ndominantProcess Mixed: a KISA included candidate description applies post-quantum cryptography labelled NIST PQC/KPQC, and a separate KISA briefing references the NIST PQC effort, while MSIT pursues national/sovereign PQC infrastructure. Korea also runs its own KpqC national algorithm competition, but the dedicated KpqC Research Group documents are included:false and not relied on. Mixed assigned because both the NIST camp and a domestic Korean scheme are attested in included material; a Sovereign reading is plausible if the KpqC scheme is confirmed - REVIEW\ntargetCompletion: OMITTED, no national completion date stated in the included summaries (a national master plan is referenced only in an included:false KpqC notice)\nstandardFamilies / algorithms: OMITTED, no specific FIPS or algorithm names stated in the included results summaries",
+  "lastUpdated": "2026-06-25",
+  "country": "South Korea"
 }

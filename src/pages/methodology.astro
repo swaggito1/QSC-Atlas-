@@ -1,0 +1,336 @@
+---
+import Base from '../layouts/Base.astro';
+import AxisMatrix from '../components/AxisMatrix.astro';
+import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
+import CredibilityGauge from '../components/CredibilityGauge';
+import evaluations from '../../data/evaluations.json';
+
+const fra = (evaluations as Record<string, any>)['FRA'] ?? null;
+
+// The methodology page (brief 4.2, 9.3, Part 11): the full model behind the Atlas, as a long
+// reading page with a sticky in-page contents. Two axes, the regulatory layer, the evaluative
+// layer with the six criteria and scoring, the verification rules, a live credibility gauge for
+// an example country, and the sources. Monochrome, no globe.
+
+const postureDef: Record<string, string> = {
+  'NIST-bloc': 'Works to the standards and cadence the United States sets through NIST. The largest group.',
+  EU: 'Migrates in step with the EU coordinated roadmap, on its 2030 and 2035 milestones, over the NIST algorithms underneath.',
+  'sovereign-bloc': 'Builds and mandates its own national algorithms, independent of NIST. The only real fork in the baseline.',
+  'engaged-unaligned': 'Active on the transition, but committed to no bloc, standard, or timeline.',
+};
+const roleDef: Record<string, string> = {
+  setter: 'Writes the standards others adopt. Today there is one: the United States.',
+  contextualiser: 'Adopts the baseline but adds national requirements, such as mandatory hybrid deployment or certification.',
+  taker: 'Adopts the baseline broadly as published, without a substantial national overlay.',
+  'sovereign-developer': 'Designs and standardises its own post-quantum algorithms.',
+};
+
+const criteria = [
+  ['Relevance', 'R1 transition plan; R2 threat articulation'],
+  ['Coherence', 'C1 policy integration; C2 consultation'],
+  ['Effectiveness', 'E1 milestones; E2 inventory duty; E3 measurement'],
+  ['Efficiency', 'Ef1 proportionate instrument mix'],
+  ['Governance quality', 'G1 mandate and authority; G2 capacity and skills'],
+  ['Impact (structured-for)', 'I1 exposure-reducing adoption'],
+];
+
+const toc = [
+  ['axes', 'The two axes'],
+  ['regulatory', 'The regulatory layer'],
+  ['evaluative', 'The evaluative layer'],
+  ['verification', 'Verification rules'],
+  ['gauge', 'The credibility gauge'],
+  ['sources', 'Sources'],
+];
+---
+
+<Base title="Methodology" description="The full model behind the QSC Atlas: the two-axis classification, the regulatory layer, the evaluative governance-credibility layer with its six criteria and scoring, and the verification rules.">
+  <div class="container method-page">
+    <nav class="toc" aria-label="On this page">
+      <p class="toc-head">On this page</p>
+      <ol>
+        {toc.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+      </ol>
+    </nav>
+
+    <article class="method-body">
+      <h1>Methodology</h1>
+      <p class="prose lead">
+        The Atlas reads every country on two axes, records the instrument behind each position, and
+        then scores how credible the plan is. Each layer is built only from official sources, and
+        every claim links to the document it rests on.
+      </p>
+
+      <section id="axes">
+        <h2>The two axes</h2>
+        <p class="prose">
+          Two different things are easy to confuse, so the Atlas records both. An EU member
+          coordinates through the European roadmap, yet the algorithms it deploys are the American
+          NIST standards. The map colour shows which collective transition a country coordinates
+          with; a badge on its profile shows whose algorithms it actually runs.
+        </p>
+        <AxisMatrix />
+        <h3 class="sub">Coordination posture, the map colour</h3>
+        <dl class="ref">
+          {
+            POSTURE_ORDER.map((k) => (
+              <div class="ref-row" style={`--c:${POSTURE_META[k].color}`}>
+                <span class="ref-sw" aria-hidden="true" />
+                <dt>{POSTURE_META[k].label}</dt>
+                <dd class="prose">{postureDef[k]}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <h3 class="sub">Standards role, the profile badge</h3>
+        <dl class="ref">
+          {
+            ROLE_ORDER.map((k) => (
+              <div class="ref-row">
+                <span class="ref-sw is-role" aria-hidden="true" />
+                <dt>{ROLE_META[k].label}</dt>
+                <dd class="prose">{roleDef[k]}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section id="regulatory">
+        <h2>The regulatory layer</h2>
+        <p class="prose">
+          Each profile records the main regulation behind a country's posture, whether it is
+          binding, soft-law or absent, and the plain obligation it places on organisations. This
+          turns a label into what an organisation must actually do, and shows where post-quantum
+          migration is mandated rather than merely encouraged. Binding EU duties under NIS2 and DORA
+          read differently from a soft national roadmap, which reads differently again from nothing
+          at all.
+        </p>
+      </section>
+
+      <section id="evaluative">
+        <h2>The evaluative layer</h2>
+        <p class="prose">
+          The evaluative layer asks not whether a plan exists but how credible it is. It adapts
+          Paglieri et al.'s (2025) six-criteria comparative method for national quantum strategies,
+          sharpened by Vance's (2025) split of evaluation into process, impact and cost-benefit,
+          with two checks drawn from the CEPS governance recommendations (Pupillo et al., 2025) and
+          the threat criterion from Pupillo et al. (2023). It sits inside the governance of
+          expectations (Budde and Konrad, 2019): a score is a reading at a date, not a verdict.
+        </p>
+        <p class="prose">
+          Six criteria become eleven sub-criteria, each scored 0 (absent), 1 (partial) or 2
+          (present), and reported as a six-axis profile rather than a single number.
+        </p>
+        <table class="crit">
+          <thead>
+            <tr><th scope="col">Criterion</th><th scope="col">Sub-criteria</th></tr>
+          </thead>
+          <tbody>
+            {criteria.map(([c, s]) => <tr><th scope="row">{c}</th><td>{s}</td></tr>)}
+          </tbody>
+        </table>
+      </section>
+
+      <section id="verification">
+        <h2>Verification rules</h2>
+        <ul class="rules prose">
+          <li>No sub-score is recorded unless it traces to a sourced instrument. An unsupported axis
+            reads as <em>not assessed</em>, never a default, and each axis is the mean of the
+            sub-criteria that could be assessed.</li>
+          <li>A second reviewer scores each country independently, and the two reconcile before a
+            profile is shown.</li>
+          <li>The Atlas confidence grade is carried onto each axis, so a country on thin evidence
+            reads as tentative.</li>
+        </ul>
+      </section>
+
+      <section id="gauge">
+        <h2>The credibility gauge</h2>
+        <p class="prose">
+          The instrument the layer produces: a six-axis reading, each axis linked to the source
+          behind it, so the reading is auditable rather than asserted. It appears on each country
+          profile, beside the regulatory basis.
+        </p>
+        <p class="prose">
+          France, an EU contextualiser, scores high on relevance, coherence, efficiency, governance
+          and impact, and a step lower on effectiveness: ANSSI publishes a phased roadmap and France
+          adopts the NIST baseline with mandatory hybridisation under binding EU instruments, while
+          effectiveness sits lower because the milestones are not-earlier-than windows.
+        </p>
+        <div class="gauge-slot">
+          {
+            fra ? (
+              <CredibilityGauge client:visible evaluation={fra} countryName="France" blocColor={POSTURE_META.EU.color} />
+            ) : (
+              <p class="empty">No example evaluation available.</p>
+            )
+          }
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources</h2>
+        <p class="prose">
+          Every country position rests on official institutional documents, government bodies,
+          national agencies and standards organisations. The full, searchable set is in the
+          <a href="/documents">Documents</a> tool, and each country profile links to the documents it
+          rests on.
+        </p>
+      </section>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .method-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    max-width: var(--content-max);
+  }
+  @media (min-width: 900px) {
+    .method-page {
+      grid-template-columns: 14rem minmax(0, 1fr);
+      gap: var(--space-12);
+      align-items: start;
+    }
+    .toc {
+      position: sticky;
+      top: var(--space-8);
+    }
+  }
+  .toc-head {
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: 0 0 var(--space-3);
+  }
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+  .toc a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    font-size: var(--text-sm);
+  }
+  .toc a:hover {
+    color: var(--ink);
+  }
+  .method-body {
+    min-width: 0;
+  }
+  .method-body h1 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--type-scene);
+    margin: 0 0 var(--space-4);
+  }
+  .lead {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+  }
+  .method-body section {
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .method-body h2 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-4);
+  }
+  .sub {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: var(--space-8) 0 var(--space-3);
+  }
+  .ref {
+    margin: 0;
+    display: grid;
+    gap: 0;
+  }
+  .ref-row {
+    display: grid;
+    grid-template-columns: 1em minmax(9em, 14em) 1fr;
+    gap: var(--space-3) var(--space-5);
+    align-items: baseline;
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .ref-row:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+  .ref-sw {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background: var(--c);
+    align-self: center;
+  }
+  .ref-sw.is-role {
+    background: var(--ink);
+  }
+  .ref dt {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .ref dd {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--ink-muted);
+  }
+  .crit {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: var(--text-sm);
+    margin-top: var(--space-4);
+  }
+  .crit th[scope='col'] {
+    text-align: left;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--ink);
+    padding: var(--space-2) var(--space-3);
+  }
+  .crit th[scope='row'] {
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+    vertical-align: top;
+    padding: var(--space-2) var(--space-3);
+    border-top: 1px solid var(--hairline);
+  }
+  .crit td {
+    padding: var(--space-2) var(--space-3);
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-muted);
+  }
+  .rules {
+    margin: 0;
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-3);
+  }
+  .gauge-slot {
+    margin-top: var(--space-4);
+    min-height: 4rem;
+  }
+  .empty {
+    color: var(--ink-muted);
+    font-style: italic;
+    margin: 0;
+  }
+</style>
