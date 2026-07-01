@@ -39,7 +39,7 @@ const actors = [
   { name: 'European Union', body: 'NIS CG', marks: [2035], text: '2035', kind: 'hard', color: '#5b54a8' },
   { name: 'United States', body: 'federal', marks: [2030, 2033], text: '2030, 2033 (federal)', kind: 'hard', color: '#2b4c7e' },
   { name: 'India', body: 'DST task force', marks: [2029, 2033], text: '2029 critical, 2033', kind: 'hard', color: '#6b7280' },
-  { name: 'Thailand', body: 'ETDA', marks: [], yr: 2038, text: 'no fixed date', kind: 'none', color: '#6b7280' },
+  { name: 'Thailand', body: 'NCSA QUANTA', marks: [2029, 2035], text: '2029 priority, 2035', kind: 'hard', color: '#2b4c7e' },
   { name: 'China', body: 'SM-series', marks: [], yr: 2038, text: 'no fixed date', kind: 'none', color: '#7a3b5e' },
 ];
 ---
@@ -82,8 +82,9 @@ const actors = [
       The timetables fragment as sharply as the instruments, and every one of them is set against a
       threat that cannot be dated. Germany works to 2032; the European Union coordinates to 2035; the
       United States now sets 2030 and 2033 deadlines for its federal systems; India, more aggressive
-      than any, wants its critical infrastructure quantum-safe by 2029 and the rest by 2033; while
-      Thailand and China publish no fixed national date at all. What each clock races is not an
+      than any, wants its critical infrastructure quantum-safe by 2029 and the rest by 2033; Thailand's
+      cyber agency runs a phased roadmap that completes in 2035; while China alone publishes no fixed
+      national date. What each clock races is not an
       observed danger but an expectation. Climate governance can point to rising temperatures;
       quantum-safe governance has no such observable, only the qubit counts the industry says it will
       reach and an uncertain threshold at which they break today's encryption. The gap between the two
@@ -102,8 +103,8 @@ const actors = [
         <desc id="r-d">
           A single 2024 to 2040 timeline. Above, industry qubit targets rise toward the threshold at
           which a quantum computer could break RSA-2048, with one stated target reaching it around 2029.
-          Below, national migration deadlines range from India's 2029 to the EU's 2035, while Thailand
-          and China set none.
+          Below, national migration deadlines range from India's 2029 to Thailand's and the EU's 2035,
+          while China alone sets none.
         </desc>
 
         {/* shared vertical gridlines + year labels */}
@@ -178,9 +179,9 @@ const actors = [
         The quantum-safe race. Above, where industry says its qubit counts are heading, against the
         threshold at which a machine could break RSA-2048; one stated target reaches it around 2029.
         Below, when each actor must have migrated: from India's 2029 for critical infrastructure to
-        the EU's 2035, with the United States at 2030 and 2033 for federal systems, while Thailand and
-        China set no fixed date. Qubit figures and targets are industry-stated; deadlines are the
-        national instruments. Sources below.
+        Thailand's and the EU's 2035, with the United States at 2030 and 2033 for federal systems,
+        while China alone sets no fixed date. Qubit figures and targets are industry-stated; deadlines
+        are the national instruments. Sources below.
       </figcaption>
     </figure>
 
@@ -208,7 +209,7 @@ const actors = [
       <li>BSI (Germany): guidance on the migration to post-quantum cryptography.</li>
       <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), with 2030 and 2033 milestones for national security systems; Executive Order 14412 (2026) setting federal deadlines; and Executive Order 14306 (2025), which removed the earlier mandatory procurement requirement.</li>
       <li>India: Department of Science and Technology task force, Implementation of a Quantum-Safe Ecosystem in India (2026), targeting critical infrastructure by 2029 and full migration by 2033.</li>
-      <li>Thailand: ETDA and the Quantum Technology Foundation, quantum-safe readiness aligned to NIST guidance, with no fixed national deadline.</li>
+      <li>Thailand: NCSA QUANTA post-quantum readiness platform (pqc-learn.ncsa.or.th), a phased advisory roadmap recommending the NIST standards, with high-priority systems migrated by 2028 to 2029 and national completion by 2035.</li>
       <li>China: OSCCA SM-series national cryptographic algorithms.</li>
       <li>Industry qubit figures and targets: IBM Quantum roadmap (Condor, 2023; about 100,000 qubits by 2033); Google Quantum AI roadmap (Willow, 2024; about 1,000,000 qubits); Microsoft (Majorana 1, 2025); Amazon (Ocelot, 2025).</li>
       <li>CRQC qubit-threshold estimate for RSA-2048: Gidney and Ekerå (2019); Gidney (2025).</li>

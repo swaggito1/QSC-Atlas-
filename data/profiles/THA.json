@@ -5,7 +5,7 @@
   "standardFamilies": "NIST FIPS 203, FIPS 204, FIPS 205",
   "algorithms": "ML-KEM, ML-DSA, SLH-DSA",
   "hybridDeployment": "None stated",
-  "migrationTimeline": "2025 | Discovery and risk assessment of cryptographic estate\n2027 | Post-quantum cryptography integration\n2031 | Full system migration\n2035 | National transition to quantum-resistant cryptography complete",
+  "migrationTimeline": "2026 | Survey and risk assessment of the cryptographic estate\n2027 | Initial transition planning\n2028 | Migration of high-priority systems\n2030 | Plan refinement and review\n2035 | National transition to quantum-resistant cryptography complete",
   "targetCompletion": "2035",
   "govActors": "NCSA | National Cyber Security Agency, runs the QUANTA national post-quantum readiness platform and the migration roadmap",
   "mainRegulation": "NCSA QUANTA recommended post-quantum cryptography standards and migration roadmap | national | guidance",
@@ -16,7 +16,7 @@
   "obligation": "There is no binding post-quantum mandate. Thailand's National Cyber Security Agency (NCSA), through its QUANTA platform, issues guidance recommending migration to the NIST post-quantum standards (ML-KEM, ML-DSA, SLH-DSA) on a phased national roadmap to 2035. This is guidance rather than a legal obligation.",
   "confidence": "Medium",
   "verificationStatus": "Corrected",
-  "classificationBasis": "summary + govActors (NCSA QUANTA): QUANTA platform, migration roadmap and standards pages on pqc-learn.ncsa.or.th (results rows, all marked included:false because direct fetch of the NCSA pages/PDF was blocked; corroborated by the candidates raw descriptions)\ndominantProcess NIST + standardFamilies + algorithms: QUANTA standards page recommends FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) - REVIEW (sourced from candidates description, not captured page text)\nmigrationTimeline 2035 + targetCompletion: QUANTA migration roadmap targets completion of the national transition by 2035 (results + candidates)\nhybridDeployment: OMITTED. A 2030 hybrid-for-new-sensitive-projects step appears only in Nation Thailand journalism in the candidates, not in an NCSA-issued document\nAll THA results are included:false, so this profile is a provisional draft on official NCSA-domain sources pending researcher confirmation - REVIEW",
+  "classificationBasis": "summary + govActors (NCSA QUANTA): QUANTA platform, migration roadmap and standards pages on pqc-learn.ncsa.or.th (results rows, all marked included:false because direct fetch of the NCSA pages/PDF was blocked; corroborated by the candidates raw descriptions)\ndominantProcess NIST + standardFamilies + algorithms: QUANTA standards page recommends FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) - REVIEW (sourced from candidates description, not captured page text)\nmigrationTimeline phases + targetCompletion: verified 2026-07 by direct fetch of the QUANTA roadmap at pqc-learn.ncsa.or.th - 2026 survey, 2027 initial planning, 2028-2029 high-priority migration, 2030-2034 refinement, 2035 completion; corroborated by the NCSA PQC document. Earlier draft years (2025/2027/2031) corrected to these\nhybridDeployment: OMITTED. A 2030 hybrid-for-new-sensitive-projects step appears only in Nation Thailand journalism in the candidates, not in an NCSA-issued document\nAll THA results are included:false, so this profile is a provisional draft on official NCSA-domain sources pending researcher confirmation - REVIEW",
   "lastUpdated": "2026-06-25",
   "country": "Thailand"
 }
