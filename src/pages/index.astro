@@ -386,10 +386,12 @@ for (const c of countries) {
     max-width: var(--measure);
   }
 
-  /* Stacked fallback: narrow screens and reduced motion drop the pinned, zoomed stage. The
-     threshold sits high because the enlarged globe plus a full text column only fit side by side
-     without overlap on wide screens; below this the globe stacks above the text instead. */
-  @media (max-width: 1200px) {
+  /* Stacked fallback: narrow screens AND reduced motion drop the pinned, zoomed stage for a clean
+     static layout. The width threshold is high because the enlarged globe plus a full text column
+     only fit side by side on wide screens; below it, OR when the visitor asks for reduced motion,
+     the globe is resized to a modest size and stacked above the text. Both conditions share one
+     block so reduced motion never leaves the globe at its full pinned size. */
+  @media (max-width: 1200px), (prefers-reduced-motion: reduce) {
     .globe-stage {
       position: static;
       height: auto;
@@ -409,36 +411,17 @@ for (const c of countries) {
     }
     .scene--hero {
       margin-top: 0;
+      padding-top: var(--space-8);
       text-align: left;
       justify-items: start;
+    }
+    .scene--hero .text {
+      background: none; /* the paper halo is only needed when the title overlays the globe */
     }
     .scene .text {
       opacity: 1;
       transform: none;
       grid-column: 1 !important;
-    }
-    .scroll-rail {
-      display: none;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .globe-stage {
-      position: static;
-      height: auto;
-      transform: none !important;
-      opacity: 1 !important;
-    }
-    .scene {
-      min-height: 0;
-      padding-block: var(--space-12);
-    }
-    .scene--hero {
-      margin-top: 0;
-    }
-    .scene .text {
-      opacity: 1;
-      transform: none;
-      transition: none;
     }
     .scroll-rail {
       display: none;
