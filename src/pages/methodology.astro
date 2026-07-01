@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import AxisMatrix from '../components/AxisMatrix.astro';
 import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
 import CredibilityGauge from '../components/CredibilityGauge';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import evaluations from '../../data/evaluations.json';
 
 const fra = (evaluations as Record<string, any>)['FRA'] ?? null;
@@ -45,11 +46,12 @@ const toc = [
 ---
 
 <Base title="Methodology" description="The full model behind the QSC Atlas: the two-axis classification, the regulatory layer, the evaluative governance-credibility layer with its six criteria and scoring, and the verification rules.">
+  <ReadingProgress />
   <div class="container method-page">
     <nav class="toc" aria-label="On this page">
       <p class="toc-head">On this page</p>
       <ol>
-        {toc.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+        {toc.map(([id, label]) => <li><a href={`#${id}`} data-spy={id}>{label}</a></li>)}
       </ol>
     </nav>
 
@@ -163,7 +165,7 @@ const toc = [
         <div class="gauge-slot">
           {
             fra ? (
-              <CredibilityGauge client:visible evaluation={fra} countryName="France" blocColor={POSTURE_META.EU.color} />
+              <CredibilityGauge client:idle evaluation={fra} countryName="France" blocColor={POSTURE_META.EU.color} />
             ) : (
               <p class="empty">No example evaluation available.</p>
             )
@@ -182,6 +184,27 @@ const toc = [
       </section>
     </article>
   </div>
+
+  <script>
+    // Scrollspy: mark the section currently in view in the sticky contents. Degrades to nothing
+    // without JS; the reading-progress line is handled by the ReadingProgress component.
+    (() => {
+      const links = new Map<string, Element>();
+      document.querySelectorAll('.toc a[data-spy]').forEach((a) => links.set(a.getAttribute('data-spy') || '', a));
+      const sections = Array.from(document.querySelectorAll('.method-body section[id]'));
+      const spy = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (!e.isIntersecting) continue;
+            const id = e.target.getAttribute('id');
+            for (const [k, a] of links) a.classList.toggle('is-current', k === id);
+          }
+        },
+        { rootMargin: '-15% 0px -75% 0px', threshold: 0 },
+      );
+      for (const s of sections) spy.observe(s);
+    })();
+  </script>
 </Base>
 
 <style>
@@ -221,9 +244,19 @@ const toc = [
     color: var(--ink-muted);
     text-decoration: none;
     font-size: var(--text-sm);
+    border-left: 2px solid transparent;
+    padding-left: var(--space-3);
+    margin-left: -2px;
+    transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
   }
   .toc a:hover {
     color: var(--ink);
+  }
+  /* scrollspy: the section currently in view */
+  .toc a.is-current {
+    color: var(--ink);
+    font-weight: var(--weight-semibold);
+    border-left-color: var(--ink);
   }
   .method-body {
     min-width: 0;

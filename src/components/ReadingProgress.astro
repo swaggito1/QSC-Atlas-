@@ -1,0 +1,47 @@
+---
+// A thin ink line at the very top that tracks reading progress on long pages. It reflects the
+// scroll position rather than animating on its own, so reduced motion is unaffected; it degrades
+// to nothing without JS. Drop it once at the top of a long-read page.
+---
+
+<div class="read-progress" aria-hidden="true"><span class="read-progress-fill"></span></div>
+
+<script>
+  (() => {
+    const fill = document.querySelector('.read-progress-fill');
+    if (!fill) return;
+    const doc = document.documentElement;
+    let ticking = false;
+    const update = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const max = doc.scrollHeight - doc.clientHeight;
+        const p = max > 0 ? Math.min(1, Math.max(0, doc.scrollTop / max)) : 0;
+        (fill as HTMLElement).style.transform = `scaleX(${p})`;
+        ticking = false;
+      });
+    };
+    document.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+</script>
+
+<style>
+  .read-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 2px;
+    z-index: 50;
+    pointer-events: none;
+  }
+  .read-progress-fill {
+    display: block;
+    height: 100%;
+    background: var(--ink);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 80ms linear;
+  }
+</style>

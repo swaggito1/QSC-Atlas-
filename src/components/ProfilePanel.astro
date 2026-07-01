@@ -128,7 +128,7 @@ const verifiedLabel =
           evaluation && (
             <div class="lead-col gauge-col">
               <h2>Governance credibility</h2>
-              <CredibilityGauge client:visible evaluation={evaluation} countryName={country.country} blocColor={blocColor ?? '#6b7280'} />
+              <CredibilityGauge client:idle evaluation={evaluation} countryName={country.country} blocColor={blocColor ?? '#6b7280'} />
             </div>
           )
         }
