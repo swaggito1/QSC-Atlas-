@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="One shared core, many wrappers"
+  description="A QSC Atlas commentary on the fragmentation of the post-quantum transition, and how it is governed through a network of expectations rather than a central authority."
+>
+  <div class="container commentary">
+    <p class="kicker">QSC Atlas commentary</p>
+    <h1>One shared core, many wrappers</h1>
+    <p class="standfirst prose">
+      Why the post-quantum transition is fragmenting, and how it is governed all the same.
+    </p>
+
+    <p class="prose">
+      One set of algorithms now sits underneath almost every national plan for post-quantum
+      cryptography. When a United States federal agency published three standards in August 2024, a
+      contested question became a settled technical fact, and within months those choices were in
+      European certification catalogues, in national guidance from Paris to Bonn, and in the browsers
+      shipping to the world. The core is shared. What surrounds it is not.
+    </p>
+
+    <h2>The wrappers: an instrument cascade</h2>
+    <p class="prose">
+      The same algorithms arrive wrapped in very different instruments. In the European Union they are
+      becoming binding through NIS2 and DORA and, from December 2027, the Cyber Resilience Act, though
+      rarely by name. The obligation is carried by an undefined phrase, state of the art, whose
+      cryptographic content is supplied by an interpretive layer of certification guidance that sits
+      between legislation and practice. Elsewhere the same core is wrapped in soft national roadmaps,
+      and across much of the world in nothing at all. What an organisation must do depends less on the
+      mathematics, which is common, than on the jurisdiction it operates in, which is not. This is the
+      instrument cascade: from an undefined legal standard down to a de facto migration obligation,
+      with the operative rule written in the interpretive layer rather than the statute.
+    </p>
+
+    <h2>The clocks diverge</h2>
+    <p class="prose">
+      The timetables fragment as sharply as the instruments. The European Union coordinates to 2030 and
+      2035; France works to a phased, not-earlier-than schedule; the United States gates procurement
+      through executive deadlines, one of which moved backwards in June 2025 when an order removed a
+      post-quantum procurement requirement; China runs a separate SM-series track. The same migration
+      therefore runs to different clocks in different places, and the deadlines are not simply
+      forecasts. They are coordination devices.
+    </p>
+
+    <h2>Governing by expectation</h2>
+    <p class="prose">
+      This is where the transition is most unusual. Its governance runs on expectations rather than on
+      an observed threat. Climate governance also coordinates through shared projections, but there the
+      danger is visible: temperatures rise, ice retreats. Quantum-safe governance has no such
+      observable; the cryptographically relevant quantum computer has not arrived, and may not for
+      years. The deadlines do their work anyway, because expectations are performative. They cascade
+      vertically, a revised hardware estimate registering at once in Washington's gates and Brussels'
+      milestones, and they align horizontally, as when four national agencies co-signed a single
+      position in January 2024 that confined quantum key distribution to niche uses and named
+      post-quantum migration the priority. Coordination happens without a coordinator.
+    </p>
+
+    <h2>The failure mode is congestion, not absence</h2>
+    <p class="prose">
+      A network of expectations can fail, and its failure mode is congestion rather than a missing
+      authority. The financial sector already faces DORA, national supervisors, G7 guidance and
+      sectoral roadmaps at once, and the result is deferral: ENISA finds only a small share of European
+      stakeholders have begun to migrate. The answer is not necessarily a central authority. It is to
+      make the state of the transition common knowledge, who stands where, on which instrument, to what
+      clock, which is the case the CEPS Task Force made for a public-private migration observatory under
+      ENISA. It is also, in a smaller way, what this Atlas is for.
+    </p>
+
+    <p class="prose close">
+      One shared core, many wrappers, held loosely together by a network of expectations. The Atlas
+      maps the wrappers, country by country, so the fragmentation can at least be read.
+    </p>
+
+    <p class="attribution">
+      A QSC Atlas commentary, drawing on the CEPS Task Force on Strengthening the EU Transition to a
+      Quantum-Safe World (2025). <a href="/methodology">How the Atlas classifies countries &rarr;</a>
+    </p>
+  </div>
+</Base>
+
+<style>
+  .commentary {
+    max-width: 44rem;
+  }
+  .kicker {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    margin: 0 0 var(--space-3);
+  }
+  .commentary h1 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--type-scene, 2rem);
+    line-height: 1.1;
+    margin: 0 0 var(--space-4);
+  }
+  .standfirst {
+    font-size: var(--text-lg);
+    color: var(--ink-muted);
+    margin: 0 0 var(--space-8);
+  }
+  .commentary h2 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--text-xl);
+    margin: var(--space-10) 0 var(--space-3);
+  }
+  .commentary .prose + .prose {
+    margin-top: var(--space-4);
+  }
+  .close {
+    margin-top: var(--space-8);
+    font-style: italic;
+    color: var(--ink);
+  }
+  .attribution {
+    margin-top: var(--space-10);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--hairline);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .attribution a {
+    color: var(--ink);
+    white-space: nowrap;
+  }
+</style>

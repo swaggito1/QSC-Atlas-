@@ -4,20 +4,19 @@ import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
 import AxisMatrix from '../components/AxisMatrix.astro';
 import { getCollection } from 'astro:content';
-import { POSTURE_ORDER, POSTURE_META } from '../lib/process';
 
 // The homepage: a pinned globe that zooms in and holds half the screen, moving side to side as
 // you scroll while text occupies the other half with no overlap. Centred at the top, then right
 // (text left), then left (text right). Native scroll drives an IntersectionObserver that sets
-// body[data-scene]; CSS maps each scene to a globe pose. Below the narrative, the standing
-// sections return. Stacks to plain blocks on small screens and under reduced motion.
+// body[data-scene]; CSS maps each scene to a globe pose. Each scene links onward (commentary,
+// methodology); there are no trailing bands. Stacks to plain blocks on small screens and under
+// reduced motion.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
 const CCN3: Record<string, string> = Object.fromEntries(worldCountries.map((c: any) => [c.cca3, c.ccn3]));
 
 const countries = await getCollection('countries');
-const docs = await getCollection('documents');
 const mapProcess: Record<string, any> = {};
 for (const c of countries) {
   const d = c.data;
@@ -25,10 +24,6 @@ for (const c of countries) {
   const ccn3 = CCN3[d.iso3];
   if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole ?? null, confidence: d.confidence ?? null };
 }
-
-const classified = countries.filter((c) => c.data.coordinationPosture).length;
-const blocGroups = POSTURE_ORDER.map((p) => ({ meta: POSTURE_META[p], count: countries.filter((c) => c.data.coordinationPosture === p).length })).filter((g) => g.count);
-const docCount = docs.length;
 ---
 
 <Base title="The geopolitics of the post-quantum transition" description="For any country, the rule that binds it, the deadline it works to, and how credible its plan is. Drawn only from official sources.">
@@ -62,6 +57,7 @@ const docCount = docs.length;
           United States' executive deadlines, China's separate SM-series track, so the same migration
           runs to different timetables in different places. That gap is what the Atlas maps.
         </p>
+        <p class="scene-link"><a href="/commentary">Read the commentary: one core, many wrappers &rarr;</a></p>
       </div>
     </section>
 
@@ -86,43 +82,6 @@ const docCount = docs.length;
     </nav>
   </main>
 
-  <div class="bands">
-    <section class="band" id="countries">
-      <div class="band-head"><h2>Countries</h2><a href="/countries">All countries &rarr;</a></div>
-      <p class="band-lede">{countries.length} profiles, {classified} placed in a coordination bloc.</p>
-      <ul class="bloc-counts">
-        {blocGroups.map((g) => (
-          <li style={`--c:${g.meta.color}`}><span class="sw" aria-hidden="true" />{g.meta.label}<span class="n mono">{g.count}</span></li>
-        ))}
-      </ul>
-    </section>
-
-    <section class="band" id="documents">
-      <div class="band-head"><h2>Documents</h2><a href="/documents">Search the documents &rarr;</a></div>
-      <p class="band-lede">
-        {docCount} institutional sources sit behind the Atlas, searchable by title and filterable by
-        country, type, year and tier.
-      </p>
-    </section>
-
-    <section class="band" id="about">
-      <div class="band-head"><h2>Who is behind it</h2><a href="/methodology">Method and sources &rarr;</a></div>
-      <p class="band-lede">
-        The Atlas is maintained within the Cybersecurity@CEPS Initiative at the Centre for European
-        Policy Studies, by Swann Ashworth (GRID Unit; rapporteur for the CEPS Task Force on the EU
-        transition to a quantum-safe world) and Lorenzo Pupillo (Head of the Cybersecurity@CEPS
-        Initiative). It draws on the Task Force's two reports.
-      </p>
-      <ul class="links">
-        <li><a href="https://www.ceps.eu/ceps-publications/quantum-technologies-and-cybersecurity/" target="_blank" rel="noopener">Quantum Technologies and Cybersecurity (CEPS, 2023) &rarr;</a></li>
-        <li><a href="https://www.ceps.eu/ceps-publications/strengthening-the-eu-transition-to-a-quantum-safe-world/" target="_blank" rel="noopener">Strengthening the EU transition to a quantum-safe world (CEPS Task Force report, 2025) &rarr;</a></li>
-      </ul>
-      <p class="advisory">
-        The Atlas runs alongside advisory work on the transition. For a briefing tailored to your
-        sector, <a href="/about#briefing">request one</a>.
-      </p>
-    </section>
-  </div>
 </Base>
 
 <script>
