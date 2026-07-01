@@ -19,13 +19,15 @@ const decades = [
   { q: 10000000, t: '10M' }, { q: 1000000, t: '1M' }, { q: 100000, t: '100k' },
   { q: 10000, t: '10k' }, { q: 1000, t: '1k' }, { q: 100, t: '100' }, { q: 10, t: '10' },
 ];
+// dLab is the demo-point label, tLab the stated target; ly/tly nudge those labels vertically and
+// mx nudges the demo marker sideways, so the clustered low-qubit points do not collide.
 const firms = [
-  { demo: { yr: 2024, q: 105 }, dLab: 'Google Willow, 105 (2024)',
-    target: { yr: 2029, q: 1000000 }, tLab: '1M by 2029' },
-  { demo: { yr: 2024, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)',
-    target: { yr: 2033, q: 100000 }, tLab: '100k by 2033' },
-  { demo: { yr: 2025, q: 8 }, dLab: 'Microsoft Majorana 1, 8 (2025), 1M ambition, no date' },
-  { demo: { yr: 2025, q: 9 }, dLab: 'Amazon Ocelot, about 9 (2025)', mx: 14, ly: 16 },
+  { demo: { yr: 2024, q: 105 }, dLab: 'Google Willow, 105 (2024)', ly: 6,
+    target: { yr: 2029, q: 1000000 }, tLab: '1M by 2029', tly: -9 },
+  { demo: { yr: 2024, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)', ly: -5,
+    target: { yr: 2033, q: 100000 }, tLab: '100k by 2033', tly: -9 },
+  { demo: { yr: 2025, q: 8 }, dLab: 'Microsoft Majorana 1, 8 (2025)', ly: -10 },
+  { demo: { yr: 2025, q: 9 }, dLab: 'Amazon Ocelot, ~9 (2025)', mx: 16, ly: 18 },
 ];
 
 // Bottom panel: national migration deadlines.
@@ -132,9 +134,9 @@ const actors = [
                 <line x1={x(f.demo.yr)} y1={qy(f.demo.q)} x2={x(f.target.yr)} y2={qy(f.target.q)} class="race-traj" />
               )}
               <circle cx={x(f.demo.yr) + (f.mx || 0)} cy={qy(f.demo.q)} r="4.5" class="race-demo" />
-              <text x={x(f.demo.yr) + (f.mx || 0) + 8} y={qy(f.demo.q) + 3 + (f.ly || 0)} class="race-label">{f.dLab}</text>
+              <text x={x(f.demo.yr) + (f.mx || 0) + 11} y={qy(f.demo.q) + 3 + (f.ly || 0)} class="race-label">{f.dLab}</text>
               {f.target && <circle cx={x(f.target.yr)} cy={qy(f.target.q)} r="5" class="race-target" />}
-              {f.target && <text x={x(f.target.yr) + 9} y={qy(f.target.q) + 3} class="race-label">{f.tLab}</text>}
+              {f.target && <text x={x(f.target.yr) + 9} y={qy(f.target.q) + 3 + (f.tly || 0)} class="race-label">{f.tLab}</text>}
             </g>
           ))
         }

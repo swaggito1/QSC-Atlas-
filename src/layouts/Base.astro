@@ -96,6 +96,7 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
       }
       main {
         min-height: 60vh;
+        flex: 1 0 auto; /* grow so the footer is pushed to the very bottom of the page */
       }
       .site-footer {
         margin-top: var(--space-16);
