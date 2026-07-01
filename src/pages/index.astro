@@ -217,9 +217,11 @@ for (const c of countries) {
   .scene--right .text {
     grid-column: 1;
   }
-  /* Globe to the left: text holds the right half. */
+  /* Globe to the left: text holds the right half. As the last scene, it is shorter than a full
+     screen so the footer follows the content closely instead of after a big empty tail. */
   .scene--left {
     grid-template-columns: 1fr minmax(0, 34rem);
+    min-height: 66svh;
   }
   .scene--left .text {
     grid-column: 2;
