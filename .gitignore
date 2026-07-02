@@ -30,3 +30,7 @@ data/analytical-notes.private.json
 
 # Claude Code local settings (personal, machine-specific permissions)
 .claude/settings.local.json
+
+# MS Office lock files
+~$*
+**/~$*

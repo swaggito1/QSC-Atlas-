@@ -77,12 +77,16 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
       .site-nav {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--space-4);
+        gap: 0 var(--space-4);
         font-size: 0.95rem;
       }
       .site-nav a {
         color: var(--ink-muted);
         text-decoration: none;
+        /* comfortable tap targets (~44px high) without changing the visual weight */
+        display: inline-flex;
+        align-items: center;
+        padding-block: var(--space-3);
       }
       .site-nav a:hover {
         color: var(--ink);
@@ -92,6 +96,20 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
         text-decoration: underline;
         text-decoration-color: var(--hairline);
         text-underline-offset: 5px;
+      }
+      /* Phones: the wordmark takes its own row and the nav wraps beneath it. */
+      @media (max-width: 700px) {
+        .site-header {
+          height: auto;
+          min-height: var(--header-h);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0;
+          padding: var(--space-2) var(--space-4);
+        }
+        .wordmark {
+          padding-block: var(--space-2);
+        }
       }
       main {
         min-height: 60vh;

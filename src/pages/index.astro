@@ -231,6 +231,7 @@ for (const c of countries) {
     transform: none;
     transition: opacity var(--dur-mid) var(--ease-standard), transform var(--dur-mid) var(--ease-out);
     pointer-events: auto;
+    min-width: 0; /* let the grid item shrink so wide children (the matrix) scroll inside it */
   }
   /* Hide-then-reveal only once JS is driving the scenes; without JS every text block stays visible. */
   body.is-scrolly .scene:not(.is-in) .text {

@@ -193,6 +193,13 @@ const unclassified = all.length - classified;
     color: var(--ink);
     text-decoration: none;
   }
+  /* Stretch the link's tap area over the whole row, so the target is the full ~53px row
+     rather than the 29px text line. The other cells are plain text, so nothing competes. */
+  .row-name::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
   .row-name:hover {
     text-decoration: underline;
     text-decoration-color: var(--hairline);

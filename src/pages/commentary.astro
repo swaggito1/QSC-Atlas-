@@ -98,6 +98,8 @@ const actors = [
     </p>
 
     <figure class="race">
+      <p class="scroll-hint" aria-hidden="true">Drag sideways to see the full chart &rarr;</p>
+      <div class="race-scroll">
       <svg viewBox="0 0 720 452" role="img" aria-labelledby="r-t r-d" class="race-svg">
         <title id="r-t">The quantum-safe race: qubit trajectories against migration deadlines</title>
         <desc id="r-d">
@@ -175,6 +177,7 @@ const actors = [
           ))
         }
       </svg>
+      </div>
       <figcaption>
         The quantum-safe race. Above, where industry says its qubit counts are heading, against the
         threshold at which a machine could break RSA-2048; one stated target reaches it around 2029.
@@ -285,6 +288,27 @@ const actors = [
     width: 100%;
     height: auto;
     display: block;
+  }
+  /* On phones the chart keeps a legible size and scrolls sideways in its own container,
+     rather than shrinking its labels below reading size. */
+  .race-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scroll-hint {
+    display: none;
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--ink-faint);
+  }
+  @media (max-width: 700px) {
+    .race-scroll .race-svg {
+      min-width: 680px;
+    }
+    .scroll-hint {
+      display: block;
+    }
   }
   .race-grid {
     stroke: var(--hairline);

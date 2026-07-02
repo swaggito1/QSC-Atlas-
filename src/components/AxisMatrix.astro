@@ -15,6 +15,7 @@ const noRole = (p: string) =>
 ---
 
 <figure class="matrix-fig">
+  <div class="matrix-scroll">
   <table class="matrix">
     <caption class="sr-only">Countries by coordination posture (columns) and standards role (rows).</caption>
     <thead>
@@ -45,6 +46,7 @@ const noRole = (p: string) =>
       </tr>
     </tbody>
   </table>
+  </div>
   <figcaption>
     Live counts across {classified} classified countries. Colour shows the bloc; every cell is labelled.
     The last row counts countries with a bloc but no standards role yet, including the engaged but unaligned.
@@ -54,6 +56,12 @@ const noRole = (p: string) =>
 <style>
   .matrix-fig {
     margin: var(--space-6) 0;
+  }
+  /* The matrix is wider than a phone; it scrolls sideways in its own container rather than
+     stretching the page (the page body must never scroll horizontally). */
+  .matrix-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .matrix {
     border-collapse: collapse;
