@@ -12,7 +12,6 @@ const partners = [
   { n: 'NIST', d: 'nist.gov' },
   { n: 'NATO', d: 'nato.int' },
   // National institutions
-  { n: 'BSI', d: 'bsi.bund.de' },
   { n: 'ANSSI', d: 'cyber.gouv.fr' },
   { n: 'TNO', d: 'tno.nl' },
   // Industry and big tech
@@ -45,7 +44,7 @@ const partners = [
     </p>
 
     <h2>Who is behind it</h2>
-    <ul class="team">
+    <ul class="team" id="team">
       <li>
         <a class="person" href="https://www.ceps.eu/ceps-staff/swann-ashworth/" target="_blank" rel="noopener">
           <img
@@ -65,16 +64,26 @@ const partners = [
           <img
             class="person-photo"
             src="/team/lorenzo-pupillo.jpeg"
-            alt="Lorenzo Pupillo"
+            alt="Dr. Lorenzo Pupillo"
             width="179"
             height="270"
             loading="lazy"
           />
-          <span class="person-name">Lorenzo Pupillo</span>
+          <span class="person-name">Dr. Lorenzo Pupillo</span>
           <span class="person-title">Head of the Cybersecurity@CEPS Initiative</span>
         </a>
       </li>
     </ul>
+    <script is:inline>
+      /* Alternate which of the two people leads the row on each visit, so neither
+         is fixed above the other. A coin flip moves the first card to the end. */
+      (() => {
+        const team = document.getElementById('team');
+        if (team && team.children.length > 1 && Math.random() < 0.5) {
+          team.appendChild(team.firstElementChild);
+        }
+      })();
+    </script>
 
     <h2>Our Task Forces</h2>
     <ul class="tasks">
@@ -193,14 +202,8 @@ const partners = [
     width: 8.5rem;
     height: 10.6rem;
     object-fit: cover;
-    filter: grayscale(1) contrast(1.02);
     border: 1px solid var(--hairline);
     margin-bottom: var(--space-2);
-    transition: filter var(--dur, 0.2s) var(--ease, ease);
-  }
-  .person:hover .person-photo,
-  .person:focus-visible .person-photo {
-    filter: grayscale(0);
   }
   .person-name {
     font-family: var(--font-instrument);
