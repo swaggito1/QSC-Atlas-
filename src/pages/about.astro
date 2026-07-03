@@ -46,20 +46,6 @@ const partners = [
     <h2>Who is behind it</h2>
     <ul class="team" id="team">
       <li>
-        <a class="person" href="https://www.ceps.eu/ceps-staff/swann-ashworth/" target="_blank" rel="noopener">
-          <img
-            class="person-photo"
-            src="/team/swann-ashworth.jpeg"
-            alt="Swann Ashworth"
-            width="465"
-            height="659"
-            loading="lazy"
-          />
-          <span class="person-name">Swann Ashworth</span>
-          <span class="person-title">Associate Research Assistant, GRID Unit</span>
-        </a>
-      </li>
-      <li>
         <a class="person" href="https://www.ceps.eu/ceps-staff/lorenzo-pupillo/" target="_blank" rel="noopener">
           <img
             class="person-photo"
@@ -73,17 +59,21 @@ const partners = [
           <span class="person-title">Head of the Cybersecurity@CEPS Initiative</span>
         </a>
       </li>
+      <li>
+        <a class="person" href="https://www.ceps.eu/ceps-staff/swann-ashworth/" target="_blank" rel="noopener">
+          <img
+            class="person-photo"
+            src="/team/swann-ashworth.jpeg"
+            alt="Swann Ashworth"
+            width="465"
+            height="659"
+            loading="lazy"
+          />
+          <span class="person-name">Swann Ashworth</span>
+          <span class="person-title">Associate Research Assistant, GRID Unit</span>
+        </a>
+      </li>
     </ul>
-    <script is:inline>
-      /* Alternate which of the two people leads the row on each visit, so neither
-         is fixed above the other. A coin flip moves the first card to the end. */
-      (() => {
-        const team = document.getElementById('team');
-        if (team && team.children.length > 1 && Math.random() < 0.5) {
-          team.appendChild(team.firstElementChild);
-        }
-      })();
-    </script>
 
     <h2>Our Task Forces</h2>
     <ul class="tasks">
