@@ -4,9 +4,9 @@ import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
 import { getCollection } from 'astro:content';
 
-// The homepage, kept simple: a globe hero with a plain-language explainer and clear actions,
-// then a short "at a glance" section that states all the content without detail and links out to
-// the map, the method and the explanation. No pinned-scroll choreography.
+// The homepage as two calm screens. The first is the title and the globe alone, centred and
+// filling the viewport, with a quiet cue to scroll. The second states what the Atlas is in plain
+// language and offers two understated ways on: the map and the explanation. Native scroll only.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
@@ -26,122 +26,57 @@ for (const c of countries) {
   title="The geopolitics of the post-quantum transition"
   description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources."
 >
-  <section class="hero">
-    <div class="hero-text">
-      <h1>The geopolitics of the post-quantum transition</h1>
-      <p class="lede">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">The geopolitics of the post-quantum transition</h1>
+    <div class="globe-box"><HeroGlobe client:idle mapProcess={mapProcess} /></div>
+    <a class="scroll-cue" href="#more">
+      <span>Scroll</span>
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
+        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </section>
+
+  <section class="intro" id="more" aria-labelledby="intro-lede">
+    <div class="intro-inner">
+      <p class="lede" id="intro-lede">
         Modern encryption protects almost everything online. A powerful enough quantum computer could
         one day break it, so the world is quietly switching to new, quantum-safe encryption. The QSC
         Atlas maps how far each country has got, and how ready it really is.
       </p>
       <div class="actions">
-        <a class="btn btn--primary" href="/map">Open the map</a>
+        <a class="btn" href="/map">Open the map</a>
         <a class="btn" href="/commentary">More information</a>
       </div>
     </div>
-    <div class="hero-globe">
-      <div class="globe-box"><HeroGlobe client:idle mapProcess={mapProcess} /></div>
-    </div>
-  </section>
-
-  <section class="glance">
-    <article class="block">
-      <h2>What it shows</h2>
-      <p>
-        For any country, the Atlas shows who it is switching alongside, which new encryption standards
-        it uses, the rule that requires it to act, the deadline it works to, and how solid its plan
-        looks. Every entry is drawn from official government and standards sources.
-      </p>
-      <a class="more" href="/map">Open the map &rarr;</a>
-    </article>
-
-    <article class="block">
-      <h2>How it reads each country</h2>
-      <p>
-        Two things are easy to confuse, so the Atlas keeps them apart. The first is the group a
-        country is migrating with, shown by the colour on the map. The second is what it does with the
-        standards, whether it helps write them, adapts them, simply adopts them, or builds its own,
-        shown on each country's page.
-      </p>
-      <a class="more" href="/methodology">See the full method &rarr;</a>
-    </article>
-
-    <article class="block">
-      <h2>Why it matters</h2>
-      <p>
-        No single authority is in charge of this change. One set of standards now sits underneath
-        almost every national plan, but the rules, deadlines and instruments around it differ from
-        country to country. That makes the switch uneven, and increasingly a question of power.
-      </p>
-      <a class="more" href="/commentary">Read the explanation &rarr;</a>
-    </article>
   </section>
 </Base>
 
 <style>
-  /* Hero: plain-language explainer beside the globe. */
+  /* Screen one: the title and the globe, alone. Header plus hero fill exactly one viewport. */
   .hero {
-    max-width: var(--content-wide);
-    margin: 0 auto;
-    padding: var(--space-10) var(--space-6) var(--space-8);
-    display: grid;
-    grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
-    gap: var(--space-10);
+    min-height: calc(100svh - var(--header-h));
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  .hero-text {
-    min-width: 0;
+    justify-content: center;
+    gap: var(--space-6);
+    text-align: center;
+    padding: var(--space-8) var(--space-6) var(--space-12);
+    position: relative;
   }
   h1 {
     font-family: var(--font-reading);
     font-weight: 500;
-    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
-    line-height: 1.06;
+    font-size: var(--type-display);
+    line-height: 1.05;
     letter-spacing: -0.015em;
-    margin: 0 0 var(--space-5);
-  }
-  .lede {
-    font-size: var(--text-lg);
-    line-height: var(--leading-normal);
-    color: var(--ink);
-    margin: 0 0 var(--space-6);
-    max-width: 34rem;
-  }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-  }
-  .btn {
-    display: inline-block;
-    border: 1px solid var(--ink);
-    border-radius: var(--radius);
-    padding: var(--space-3) var(--space-5);
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
-    color: var(--ink);
-    text-decoration: none;
-    transition: background var(--dur, 0.2s) var(--ease, ease), color var(--dur, 0.2s) var(--ease, ease);
-  }
-  .btn:hover {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .btn--primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .btn--primary:hover {
-    background: transparent;
-    color: var(--ink);
-  }
-  .hero-globe {
-    min-width: 0;
+    margin: 0;
+    max-width: 18ch;
   }
   .globe-box {
-    width: min(100%, 40rem);
+    width: min(62vmin, 34rem);
     aspect-ratio: 1 / 1;
-    margin-inline: auto;
   }
   .globe-box > * {
     width: 100%;
@@ -152,52 +87,95 @@ for (const c of countries) {
     display: none;
   }
 
-  /* At a glance: all the content, plainly, with a link onward from each. */
-  .glance {
-    max-width: var(--content-max);
-    margin: 0 auto;
-    padding: var(--space-10) var(--space-6) var(--space-16);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8);
-    border-top: 1px solid var(--hairline);
+  /* A quiet affordance that the page continues below. Clicking it scrolls to screen two. */
+  .scroll-cue {
+    position: absolute;
+    bottom: var(--space-5);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-faint);
+    text-decoration: none;
   }
-  .block h2 {
-    font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--text-xl);
-    margin: 0 0 var(--space-3);
-  }
-  .block p {
-    margin: 0 0 var(--space-4);
-    color: var(--ink-muted);
-  }
-  .more {
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
+  .scroll-cue:hover {
     color: var(--ink);
-    text-underline-offset: 3px;
-    text-decoration-color: var(--hairline);
   }
-  .more:hover {
-    text-decoration-color: var(--ink);
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-cue svg {
+      animation: cue 1.9s var(--ease, ease-in-out) infinite;
+    }
+  }
+  @keyframes cue {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
   }
 
-  @media (max-width: 960px) {
+  /* Screen two: the plain-language statement, then two understated ways on. */
+  .intro {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-16) var(--space-6);
+    border-top: 1px solid var(--hairline);
+  }
+  .intro-inner {
+    max-width: 40rem;
+    text-align: center;
+  }
+  .lede {
+    font-family: var(--font-reading);
+    font-size: clamp(1.25rem, 1rem + 1.1vw, 1.6rem);
+    line-height: var(--leading-normal);
+    color: var(--ink);
+    margin: 0 0 var(--space-9);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
+  }
+  /* Subtle by default: a hairline outline and muted ink, settling to full ink on hover or focus.
+     No filled button competes for attention now that the map is one of two equal, quiet choices. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-5);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color var(--dur, 0.2s) var(--ease, ease), border-color var(--dur, 0.2s) var(--ease, ease);
+  }
+  .btn:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+
+  /* Phones: the header stacks to roughly 10rem here (wordmark over a wrapped nav), so the hero
+     reclaims that height to keep the title, globe and cue inside one screen. Globe and gap tighten. */
+  @media (max-width: 700px) {
     .hero {
-      grid-template-columns: 1fr;
-      gap: var(--space-8);
-      padding-top: var(--space-8);
-    }
-    .hero-globe {
-      order: -1;
+      min-height: calc(100svh - 10rem);
+      gap: var(--space-5);
     }
     .globe-box {
-      width: min(72vw, 340px);
-    }
-    .glance {
-      grid-template-columns: 1fr;
-      gap: var(--space-8);
+      width: min(76vw, 22rem);
     }
   }
 </style>
