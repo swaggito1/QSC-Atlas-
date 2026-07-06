@@ -4,9 +4,11 @@ import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
 import { getCollection } from 'astro:content';
 
-// The homepage as two calm screens. The first is the title and the globe alone, centred and
-// filling the viewport, with a quiet cue to scroll. The second states what the Atlas is in plain
-// language and offers two understated ways on: the map and the explanation. Native scroll only.
+// The homepage: a pinned globe that holds the screen and slides side to side as you scroll, while
+// text takes the other half with no overlap. Two beats. First the globe sits centred under the
+// title alone; then it sweeps to the right and the plain-language lede and two quiet actions take
+// the left. Native scroll drives an IntersectionObserver that sets body[data-scene]; CSS maps each
+// scene to a globe pose. Stacks to plain blocks on small screens.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
@@ -22,60 +24,111 @@ for (const c of countries) {
 }
 ---
 
-<Base
-  title="The geopolitics of the post-quantum transition"
-  description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources."
->
-  <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title">The geopolitics of the post-quantum transition</h1>
-    <div class="globe-box"><HeroGlobe client:idle mapProcess={mapProcess} /></div>
-    <a class="scroll-cue" href="#more">
-      <span>Scroll</span>
-      <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true">
-        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </a>
-  </section>
-
-  <section class="intro" id="more" aria-labelledby="intro-lede">
-    <div class="intro-inner">
-      <p class="lede" id="intro-lede">
-        Modern encryption protects almost everything online. A powerful enough quantum computer could
-        one day break it, so the world is quietly switching to new, quantum-safe encryption. The QSC
-        Atlas maps how far each country has got, and how ready it really is.
-      </p>
-      <div class="actions">
-        <a class="btn" href="/map">Open the map</a>
-        <a class="btn" href="/commentary">More information</a>
+<Base title="The geopolitics of the post-quantum transition" description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources.">
+  <main class="scrolly">
+    <div class="globe-stage" data-scene="hero">
+      <div class="globe-box">
+        <HeroGlobe client:idle mapProcess={mapProcess} />
       </div>
     </div>
-  </section>
+
+    <section class="scene scene--hero" data-scene="hero" aria-labelledby="s-hero">
+      <div class="text">
+        <h1 id="s-hero">The geopolitics of the post-quantum transition</h1>
+      </div>
+    </section>
+
+    <section class="scene scene--right" data-scene="intro" aria-labelledby="s-intro">
+      <div class="text">
+        <p class="lede" id="s-intro">
+          Modern encryption protects almost everything online. A powerful enough quantum computer could
+          one day break it, so the world is quietly switching to new, quantum-safe encryption. The QSC
+          Atlas maps how far each country has got, and how ready it really is.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/map">Open the map</a>
+          <a class="btn" href="/commentary">More information</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="scroll-rail" aria-hidden="true">
+      <a href="#s-hero" data-mark="hero"></a>
+      <a href="#s-intro" data-mark="intro"></a>
+    </nav>
+  </main>
 </Base>
 
+<script>
+  // Scene driver: native scroll only. The observer marks the active scene on body[data-scene]
+  // (CSS reads it for the globe pose) and reveals each scene's text once. The choreography runs on
+  // wide screens whether or not reduced motion is set, because the sliding globe is the site's
+  // essential structure and is driven by the reader's own scroll (the globe's continuous auto-spin
+  // stays off under reduced motion, handled inside the component). Narrow screens stack instead.
+  const small = matchMedia('(max-width: 1200px)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  const rail = Array.from(document.querySelectorAll('.scroll-rail a'));
+
+  if (!small) {
+    // A short trigger band across the vertical centre of the viewport. The scene whose body
+    // crosses that band is the active one, which holds regardless of how tall a scene runs.
+    const active = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const scene = e.target.getAttribute('data-scene');
+          if (!scene) continue;
+          document.body.dataset.scene = scene;
+          for (const a of rail) a.classList.toggle('is-active', a.getAttribute('data-mark') === scene);
+        }
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
+    );
+    const reveal = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); reveal.unobserve(e.target); }
+      },
+      { threshold: 0.2 },
+    );
+    // Mark JS active (CSS only hides-then-reveals text when this is set) and show the hero at once.
+    document.body.classList.add('is-scrolly');
+    document.body.dataset.scene = 'hero';
+    if (scenes[0]) scenes[0].classList.add('is-in');
+    for (const s of scenes) { active.observe(s); reveal.observe(s); }
+  } else {
+    for (const s of scenes) s.classList.add('is-in');
+  }
+
+  for (const a of rail) {
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const id = a.getAttribute('href');
+      const el = id ? document.querySelector(id) : null;
+      if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    });
+  }
+</script>
+
 <style>
-  /* Screen one: the title and the globe, alone. Header plus hero fill exactly one viewport. */
-  .hero {
-    min-height: calc(100svh - var(--header-h));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-6);
-    text-align: center;
-    padding: var(--space-8) var(--space-6) var(--space-12);
+  .scrolly {
     position: relative;
   }
-  h1 {
-    font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--type-display);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    margin: 0;
-    max-width: 18ch;
+
+  /* The globe stage: pinned through-line, zoomed and posed per scene. */
+  .globe-stage {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+    transform: translateY(-7%) scale(0.58); /* hero pose by default, matches the JS hero pose */
+    transition: transform var(--dur-slow) var(--ease-out), opacity var(--dur-mid) var(--ease-standard);
+    will-change: transform, opacity;
   }
   .globe-box {
-    width: min(62vmin, 34rem);
+    width: min(108vw, 162svh);
     aspect-ratio: 1 / 1;
   }
   .globe-box > * {
@@ -87,64 +140,92 @@ for (const c of countries) {
     display: none;
   }
 
-  /* A quiet affordance that the page continues below. Clicking it scrolls to screen two. */
-  .scroll-cue {
-    position: absolute;
-    bottom: var(--space-5);
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-1);
-    font-family: var(--font-label);
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-faint);
-    text-decoration: none;
+  /* Centred and smaller at the hero; zoomed in and pushed to the right for the intro, so the globe
+     sits up close on the right half with roughly 40% of it on screen and the rest beyond the edge.
+     translateX is a share of the full stage width, so its magnitude sets how much of the globe stays
+     visible: raise it to hide more, lower it to show more. */
+  body[data-scene='hero'] .globe-stage {
+    transform: translateY(-7%) scale(0.58);
+    opacity: 1;
   }
-  .scroll-cue:hover {
-    color: var(--ink);
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .scroll-cue svg {
-      animation: cue 1.9s var(--ease, ease-in-out) infinite;
-    }
-  }
-  @keyframes cue {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(3px); }
+  body[data-scene='intro'] .globe-stage {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
   }
 
-  /* Screen two: the plain-language statement, then two understated ways on. */
-  .intro {
-    min-height: 100svh;
-    display: flex;
+  .scene {
+    position: relative;
+    z-index: 1;
+    min-height: var(--scene-min-h);
+    display: grid;
     align-items: center;
-    justify-content: center;
-    padding: var(--space-16) var(--space-6);
-    border-top: 1px solid var(--hairline);
+    gap: var(--space-8);
+    max-width: var(--content-wide);
+    margin-inline: auto;
+    padding: var(--space-8) var(--space-6);
+    /* Let clicks fall through the scene to the globe behind it; only the text blocks catch them. */
+    pointer-events: none;
   }
-  .intro-inner {
-    max-width: 40rem;
+  .scene--hero {
+    margin-top: -100svh;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: start;
     text-align: center;
+    padding-top: 3vh;
+  }
+  .scene--hero .text {
+    max-width: 46rem;
+    padding: var(--space-8);
+    /* a soft paper halo keeps the title legible where it layers over the centred globe */
+    background: radial-gradient(62% 56% at 50% 42%, var(--paper) 0%, var(--paper) 46%, transparent 100%);
+    /* Hero is title only: keep the whole centred globe behind it clickable. */
+    pointer-events: none;
+  }
+  /* Globe to the right: text (lede and actions) holds the left half. */
+  .scene--right {
+    grid-template-columns: minmax(0, 34rem) 1fr;
+  }
+  .scene--right .text {
+    grid-column: 1;
+  }
+  .scene .text {
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--dur-mid) var(--ease-standard), transform var(--dur-mid) var(--ease-out);
+    pointer-events: auto;
+    min-width: 0;
+  }
+  /* Hide-then-reveal only once JS is driving the scenes; without JS every text block stays visible. */
+  body.is-scrolly .scene:not(.is-in) .text {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  h1 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: var(--type-display);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin: 0;
   }
   .lede {
     font-family: var(--font-reading);
-    font-size: clamp(1.25rem, 1rem + 1.1vw, 1.6rem);
+    font-size: clamp(1.2rem, 1rem + 0.9vw, 1.5rem);
     line-height: var(--leading-normal);
     color: var(--ink);
-    margin: 0 0 var(--space-9);
+    margin: 0;
   }
+
+  /* Two understated actions: a hairline outline and muted ink, settling to full ink on hover or
+     focus. Neither is filled; the map and the explanation are equal, quiet choices. */
   .actions {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
-    justify-content: center;
+    margin-top: var(--space-7);
   }
-  /* Subtle by default: a hairline outline and muted ink, settling to full ink on hover or focus.
-     No filled button competes for attention now that the map is one of two equal, quiet choices. */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -167,15 +248,62 @@ for (const c of countries) {
     outline-offset: 2px;
   }
 
-  /* Phones: the header stacks to roughly 10rem here (wordmark over a wrapped nav), so the hero
-     reclaims that height to keep the title, globe and cue inside one screen. Globe and gap tighten. */
-  @media (max-width: 700px) {
-    .hero {
-      min-height: calc(100svh - 10rem);
-      gap: var(--space-5);
+  .scroll-rail {
+    position: fixed;
+    top: 50%;
+    right: var(--space-5);
+    transform: translateY(-50%);
+    display: grid;
+    gap: var(--space-3);
+    z-index: 5;
+  }
+  .scroll-rail a {
+    width: var(--rail-w);
+    height: 28px;
+    background: var(--hairline);
+    display: block;
+  }
+  .scroll-rail a.is-active {
+    background: var(--ink);
+  }
+
+  /* Stacked fallback: narrow screens drop the pinned, zoomed stage for a clean static layout. The
+     enlarged globe plus a full text column only fit side by side on wide screens; below the
+     threshold the globe is resized to a modest size and stacked above the text. */
+  @media (max-width: 1200px) {
+    .globe-stage {
+      position: static;
+      height: auto;
+      transform: none !important;
+      opacity: 1 !important;
+      padding: var(--space-8) var(--space-6) 0;
     }
     .globe-box {
-      width: min(76vw, 22rem);
+      width: min(72vw, 460px);
+      margin-inline: auto;
+    }
+    .scene {
+      grid-template-columns: 1fr !important;
+      min-height: 0;
+      padding-block: var(--space-10);
+      text-align: left;
+    }
+    .scene--hero {
+      margin-top: 0;
+      padding-top: var(--space-8);
+      text-align: left;
+      justify-items: start;
+    }
+    .scene--hero .text {
+      background: none; /* the paper halo is only needed when the title overlays the globe */
+    }
+    .scene .text {
+      opacity: 1;
+      transform: none;
+      grid-column: 1 !important;
+    }
+    .scroll-rail {
+      display: none;
     }
   }
 </style>
