@@ -2,15 +2,11 @@
 import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
-import AxisMatrix from '../components/AxisMatrix.astro';
 import { getCollection } from 'astro:content';
 
-// The homepage: a pinned globe that zooms in and holds half the screen, moving side to side as
-// you scroll while text occupies the other half with no overlap. Centred at the top, then right
-// (text left), then left (text right). Native scroll drives an IntersectionObserver that sets
-// body[data-scene]; CSS maps each scene to a globe pose. Each scene links onward (commentary,
-// methodology); there are no trailing bands. Stacks to plain blocks on small screens and under
-// reduced motion.
+// The homepage, kept simple: a globe hero with a plain-language explainer and clear actions,
+// then a short "at a glance" section that states all the content without detail and links out to
+// the map, the method and the explanation. No pinned-scroll choreography.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
@@ -26,134 +22,126 @@ for (const c of countries) {
 }
 ---
 
-<Base title="The geopolitics of the post-quantum transition" description="For any country, the rule that binds it, the deadline it works to, and how credible its plan is. Drawn only from official sources.">
-  <main class="scrolly">
-    <div class="globe-stage" data-scene="hero">
-      <div class="globe-box">
-        <HeroGlobe client:idle mapProcess={mapProcess} />
+<Base
+  title="The geopolitics of the post-quantum transition"
+  description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources."
+>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>The geopolitics of the post-quantum transition</h1>
+      <p class="lede">
+        Modern encryption protects almost everything online. A powerful enough quantum computer could
+        one day break it, so the world is quietly switching to new, quantum-safe encryption. The QSC
+        Atlas maps how far each country has got, and how ready it really is.
+      </p>
+      <div class="actions">
+        <a class="btn btn--primary" href="/map">Open the map</a>
+        <a class="btn" href="/commentary">More information</a>
       </div>
     </div>
+    <div class="hero-globe">
+      <div class="globe-box"><HeroGlobe client:idle mapProcess={mapProcess} /></div>
+    </div>
+  </section>
 
-    <section class="scene scene--hero" data-scene="hero" aria-labelledby="s-hero">
-      <div class="text">
-        <h1 id="s-hero">The geopolitics of the post-quantum transition</h1>
-      </div>
-    </section>
+  <section class="glance">
+    <article class="block">
+      <h2>What it shows</h2>
+      <p>
+        For any country, the Atlas shows who it is switching alongside, which new encryption standards
+        it uses, the rule that requires it to act, the deadline it works to, and how solid its plan
+        looks. Every entry is drawn from official government and standards sources.
+      </p>
+      <a class="more" href="/map">Open the map &rarr;</a>
+    </article>
 
-    <section class="scene scene--right" data-scene="thesis" aria-labelledby="s-thesis">
-      <div class="text">
-        <h2 id="s-thesis">One shared core, many wrappers</h2>
-        <p class="prose">
-          No single state or body sets the rules for post-quantum cryptography, yet almost every
-          country adopts the same standards underneath, the NIST algorithms. Authority sits at once
-          with standards bodies, regulators and national agencies; coordination stops at the
-          algorithm. Around that shared core the transition splits two ways.
-        </p>
-        <p class="prose">
-          The same algorithms arrive wrapped in very different instruments: binding duties under the
-          EU's NIS2 and DORA, soft national roadmaps elsewhere, and nothing at all across much of the
-          world. What an organisation must do depends on where it operates. The clocks diverge too,
-          the EU's coordinated 2030 and 2035 milestones, France's not-earlier-than schedule, the
-          United States' executive deadlines, China's separate SM-series track, so the same migration
-          runs to different timetables in different places. That gap is what the Atlas maps.
-        </p>
-        <p class="scene-link"><a href="/commentary">Read the commentary: one core, many wrappers &rarr;</a></p>
-      </div>
-    </section>
+    <article class="block">
+      <h2>How it reads each country</h2>
+      <p>
+        Two things are easy to confuse, so the Atlas keeps them apart. The first is the group a
+        country is migrating with, shown by the colour on the map. The second is what it does with the
+        standards, whether it helps write them, adapts them, simply adopts them, or builds its own,
+        shown on each country's page.
+      </p>
+      <a class="more" href="/methodology">See the full method &rarr;</a>
+    </article>
 
-    <section class="scene scene--left" data-scene="model" aria-labelledby="s-model">
-      <div class="text">
-        <h2 id="s-model">How the Atlas reads the world</h2>
-        <p class="prose">
-          Every country sits on two axes that a single label would confuse. An EU member coordinates
-          through the European roadmap, yet deploys the American NIST algorithms, because no European
-          alternative exists. So the map colour records the bloc a country migrates with, and a badge
-          on its profile records whose algorithms it runs.
-        </p>
-        <AxisMatrix />
-        <p class="scene-link"><a href="/methodology">The full method, with the scoring and the sources &rarr;</a></p>
-      </div>
-    </section>
-
-    <nav class="scroll-rail" aria-hidden="true">
-      <a href="#s-hero" data-mark="hero"></a>
-      <a href="#s-thesis" data-mark="thesis"></a>
-      <a href="#s-model" data-mark="model"></a>
-    </nav>
-  </main>
-
+    <article class="block">
+      <h2>Why it matters</h2>
+      <p>
+        No single authority is in charge of this change. One set of standards now sits underneath
+        almost every national plan, but the rules, deadlines and instruments around it differ from
+        country to country. That makes the switch uneven, and increasingly a question of power.
+      </p>
+      <a class="more" href="/commentary">Read the explanation &rarr;</a>
+    </article>
+  </section>
 </Base>
 
-<script>
-  // Scene driver: native scroll only. The observer marks the active scene on body[data-scene]
-  // (CSS reads it for the globe pose) and reveals each scene's text once. Guarded behind
-  // reduced-motion and a min-width check, so small screens and motion-averse visitors get plain
-  // stacked sections with no observer-driven motion.
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const small = matchMedia('(max-width: 1200px)').matches;
-  const scenes = Array.from(document.querySelectorAll('.scene'));
-  const rail = Array.from(document.querySelectorAll('.scroll-rail a'));
-
-  if (!reduce && !small) {
-    // A short trigger band across the vertical centre of the viewport. The scene whose body
-    // crosses that band is the active one, which holds regardless of how tall a scene runs.
-    const active = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (!e.isIntersecting) continue;
-          const scene = e.target.getAttribute('data-scene');
-          if (!scene) continue;
-          document.body.dataset.scene = scene;
-          for (const a of rail) a.classList.toggle('is-active', a.getAttribute('data-mark') === scene);
-        }
-      },
-      { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
-    );
-    const reveal = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); reveal.unobserve(e.target); }
-      },
-      { threshold: 0.2 },
-    );
-    // Mark JS active (CSS only hides-then-reveals text when this is set) and show the hero at once.
-    document.body.classList.add('is-scrolly');
-    document.body.dataset.scene = 'hero';
-    if (scenes[0]) scenes[0].classList.add('is-in');
-    for (const s of scenes) { active.observe(s); reveal.observe(s); }
-  } else {
-    for (const s of scenes) s.classList.add('is-in');
-  }
-
-  for (const a of rail) {
-    a.addEventListener('click', (ev) => {
-      ev.preventDefault();
-      const id = a.getAttribute('href');
-      const el = id ? document.querySelector(id) : null;
-      if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-    });
-  }
-</script>
-
 <style>
-  .scrolly {
-    position: relative;
-  }
-
-  /* The globe stage: pinned through-line, zoomed and posed per scene. */
-  .globe-stage {
-    position: sticky;
-    top: 0;
-    height: 100svh;
+  /* Hero: plain-language explainer beside the globe. */
+  .hero {
+    max-width: var(--content-wide);
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-6) var(--space-8);
     display: grid;
-    place-items: center;
-    z-index: 0;
-    transform: translateY(-7%) scale(0.58); /* hero pose by default, matches the JS hero pose */
-    transition: transform var(--dur-slow) var(--ease-out), opacity var(--dur-mid) var(--ease-standard);
-    will-change: transform, opacity;
+    grid-template-columns: minmax(0, 32rem) minmax(0, 1fr);
+    gap: var(--space-10);
+    align-items: center;
+  }
+  .hero-text {
+    min-width: 0;
+  }
+  h1 {
+    font-family: var(--font-reading);
+    font-weight: 500;
+    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    margin: 0 0 var(--space-5);
+  }
+  .lede {
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    color: var(--ink);
+    margin: 0 0 var(--space-6);
+    max-width: 34rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .btn {
+    display: inline-block;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-5);
+    font-family: var(--font-instrument);
+    font-size: var(--text-sm);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background var(--dur, 0.2s) var(--ease, ease), color var(--dur, 0.2s) var(--ease, ease);
+  }
+  .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn--primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn--primary:hover {
+    background: transparent;
+    color: var(--ink);
+  }
+  .hero-globe {
+    min-width: 0;
   }
   .globe-box {
-    width: min(108vw, 162svh);
+    width: min(100%, 40rem);
     aspect-ratio: 1 / 1;
+    margin-inline: auto;
   }
   .globe-box > * {
     width: 100%;
@@ -164,268 +152,52 @@ for (const c of countries) {
     display: none;
   }
 
-  /* Centred and smaller at the hero; zoomed in and pushed to a side for the content scenes, so
-     the globe sits up close on one half with roughly 40% of it on screen and the rest beyond the
-     edge. translateX is a share of the full stage width, so its magnitude sets how much of the
-     globe stays visible: raise it to hide more, lower it to show more. The sweep from +50% to
-     -50% carries the globe back through the centre between the two content scenes. 50% is the most
-     centred the enlarged globe can sit before the left scene's globe would overlap its text. */
-  body[data-scene='hero'] .globe-stage {
-    transform: translateY(-7%) scale(0.58);
-    opacity: 1;
-  }
-  body[data-scene='thesis'] .globe-stage {
-    transform: translateX(50%) scale(1);
-    opacity: 1;
-  }
-  body[data-scene='model'] .globe-stage {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-
-  .scene {
-    position: relative;
-    z-index: 1;
-    min-height: var(--scene-min-h);
+  /* At a glance: all the content, plainly, with a link onward from each. */
+  .glance {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-6) var(--space-16);
     display: grid;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-8);
-    max-width: var(--content-wide);
-    margin-inline: auto;
-    padding: var(--space-8) var(--space-6);
-    /* Let clicks fall through the scene to the globe behind it; only the text blocks catch them. */
-    pointer-events: none;
+    border-top: 1px solid var(--hairline);
   }
-  .scene--hero {
-    margin-top: -100svh;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-content: start;
-    text-align: center;
-    padding-top: 3vh;
-  }
-  .scene--hero .text {
-    max-width: 46rem;
-    padding: var(--space-8);
-    /* a soft paper halo keeps the title legible where it layers over the centred globe */
-    background: radial-gradient(62% 56% at 50% 42%, var(--paper) 0%, var(--paper) 46%, transparent 100%);
-  }
-  /* Globe to the right: text holds the left half. */
-  .scene--right {
-    grid-template-columns: minmax(0, 34rem) 1fr;
-  }
-  .scene--right .text {
-    grid-column: 1;
-  }
-  /* Globe to the left: text holds the right half. As the last scene, it is shorter than a full
-     screen so the footer follows the content closely instead of after a big empty tail. */
-  .scene--left {
-    grid-template-columns: 1fr minmax(0, 34rem);
-    min-height: 66svh;
-  }
-  .scene--left .text {
-    grid-column: 2;
-  }
-  .scene .text {
-    opacity: 1;
-    transform: none;
-    transition: opacity var(--dur-mid) var(--ease-standard), transform var(--dur-mid) var(--ease-out);
-    pointer-events: auto;
-    min-width: 0; /* let the grid item shrink so wide children (the matrix) scroll inside it */
-  }
-  /* Hide-then-reveal only once JS is driving the scenes; without JS every text block stays visible. */
-  body.is-scrolly .scene:not(.is-in) .text {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  /* Hero is title only: after .scene .text so it wins, keeping the whole centred globe clickable. */
-  .scene--hero .text {
-    pointer-events: none;
-  }
-
-  h1 {
+  .block h2 {
     font-family: var(--font-reading);
     font-weight: 500;
-    font-size: var(--type-display);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    margin: 0 0 var(--space-5);
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-3);
   }
-  .scene h2 {
-    font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--type-scene);
-    line-height: 1.1;
+  .block p {
     margin: 0 0 var(--space-4);
+    color: var(--ink-muted);
   }
-  .lede {
-    font-size: var(--text-lg);
-    line-height: var(--leading-snug);
-    color: var(--ink);
-    margin: 0 0 var(--space-5);
-  }
-  .scene--right .prose + .prose {
-    margin-top: var(--space-4);
-  }
-  .scene-link {
-    margin: var(--space-5) 0 0;
+  .more {
     font-family: var(--font-instrument);
-  }
-  .scene-link a,
-  .lede + .scene-link a {
+    font-size: var(--text-sm);
     color: var(--ink);
     text-underline-offset: 3px;
     text-decoration-color: var(--hairline);
   }
-  .scene-link a:hover {
+  .more:hover {
     text-decoration-color: var(--ink);
   }
 
-  .scroll-rail {
-    position: fixed;
-    top: 50%;
-    right: var(--space-5);
-    transform: translateY(-50%);
-    display: grid;
-    gap: var(--space-3);
-    z-index: 5;
-  }
-  .scroll-rail a {
-    width: var(--rail-w);
-    height: 28px;
-    background: var(--hairline);
-    display: block;
-  }
-  .scroll-rail a.is-active {
-    background: var(--ink);
-  }
-
-  /* The standing sections, returned below the narrative. */
-  .bands {
-    position: relative;
-    z-index: 1;
-    background: var(--paper);
-  }
-  .band {
-    max-width: var(--content-max);
-    margin: 0 auto;
-    padding: var(--space-12) var(--space-6);
-    border-top: 1px solid var(--hairline);
-  }
-  .band-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-4);
-  }
-  .band-head h2 {
-    font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--text-2xl);
-    margin: 0;
-  }
-  .band-head a {
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
-    color: var(--ink-muted);
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .band-head a:hover {
-    color: var(--ink);
-  }
-  .band-lede {
-    margin: 0;
-    color: var(--ink-muted);
-    max-width: var(--measure);
-  }
-  .bloc-counts {
-    list-style: none;
-    margin: var(--space-5) 0 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3) var(--space-8);
-  }
-  .bloc-counts li {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-2);
-    font-family: var(--font-instrument);
-    color: var(--ink);
-  }
-  .bloc-counts .sw {
-    width: 0.7em;
-    height: 0.7em;
-    border-radius: 50%;
-    background: var(--c);
-    align-self: center;
-  }
-  .bloc-counts .n {
-    color: var(--ink-faint);
-    font-size: var(--text-sm);
-  }
-  .links {
-    list-style: none;
-    margin: var(--space-4) 0 0;
-    padding: 0;
-    display: grid;
-    gap: var(--space-2);
-    max-width: var(--measure);
-  }
-  .links a {
-    color: var(--ink);
-    font-size: var(--text-sm);
-    text-underline-offset: 3px;
-    text-decoration-color: var(--hairline);
-  }
-  .advisory {
-    margin: var(--space-6) 0 0;
-    color: var(--ink-muted);
-    font-size: var(--text-sm);
-    max-width: var(--measure);
-  }
-
-  /* Stacked fallback: narrow screens AND reduced motion drop the pinned, zoomed stage for a clean
-     static layout. The width threshold is high because the enlarged globe plus a full text column
-     only fit side by side on wide screens; below it, OR when the visitor asks for reduced motion,
-     the globe is resized to a modest size and stacked above the text. Both conditions share one
-     block so reduced motion never leaves the globe at its full pinned size. */
-  @media (max-width: 1200px), (prefers-reduced-motion: reduce) {
-    .globe-stage {
-      position: static;
-      height: auto;
-      transform: none !important;
-      opacity: 1 !important;
-      padding: var(--space-8) var(--space-6) 0;
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      padding-top: var(--space-8);
+    }
+    .hero-globe {
+      order: -1;
     }
     .globe-box {
-      width: min(72vw, 460px);
-      margin-inline: auto;
+      width: min(72vw, 340px);
     }
-    .scene {
-      grid-template-columns: 1fr !important;
-      min-height: 0;
-      padding-block: var(--space-10);
-      text-align: left;
-    }
-    .scene--hero {
-      margin-top: 0;
-      padding-top: var(--space-8);
-      text-align: left;
-      justify-items: start;
-    }
-    .scene--hero .text {
-      background: none; /* the paper halo is only needed when the title overlays the globe */
-    }
-    .scene .text {
-      opacity: 1;
-      transform: none;
-      grid-column: 1 !important;
-    }
-    .scroll-rail {
-      display: none;
+    .glance {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
     }
   }
 </style>
