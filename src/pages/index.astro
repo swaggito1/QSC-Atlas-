@@ -25,15 +25,29 @@ for (const c of countries) {
 ---
 
 <Base hideNav title="The geopolitics of the post-quantum transition" description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources.">
-  <!-- Drawn from the ui-ux-god glass nav and its pure-CSS scroll reveal: a small, subtle menu that
-       stays out of the way at the top and rolls down into the corner once you begin scrolling. -->
-  <nav class="scroll-nav" aria-label="Sections">
+  <!-- The menu, drawn from the ui-ux-god glass nav + its pure-CSS scroll reveal: it stays out of the
+       way at the top and rolls down into the corner as you scroll. Wide screens get an inline bar;
+       phones get a small "Menu" disclosure that rolls the links down on tap (native details, no JS). -->
+  <nav class="scroll-nav scroll-nav--bar" aria-label="Sections">
     <a href="/map">Map</a>
     <a href="/countries">Countries</a>
     <a href="/methodology">Methodology</a>
     <a href="/documents">Documents</a>
     <a href="/about">About</a>
   </nav>
+  <details class="scroll-nav scroll-nav--menu">
+    <summary>
+      <span>Menu</span>
+      <svg class="chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>
+    </summary>
+    <nav aria-label="Sections">
+      <a href="/map">Map</a>
+      <a href="/countries">Countries</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/documents">Documents</a>
+      <a href="/about">About</a>
+    </nav>
+  </details>
 
   <main class="scrolly">
     <div class="globe-stage" data-scene="hero">
@@ -66,6 +80,14 @@ for (const c of countries) {
       <a href="#s-hero" data-mark="hero"></a>
       <a href="#s-intro" data-mark="intro"></a>
     </nav>
+
+    <!-- A subtle scroll hint by the globe's lower right, fading out as soon as you start scrolling. -->
+    <div class="scroll-cue" aria-hidden="true">
+      <svg viewBox="0 0 24 30" width="22" height="27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 8l7 7 7-7" />
+        <path d="M5 17l7 7 7-7" />
+      </svg>
+    </div>
   </main>
 
 </Base>
@@ -278,28 +300,31 @@ for (const c of countries) {
     background: var(--ink);
   }
 
-  /* The rolling menu: a small, subtle glass bar in the top-left. It is out of the way at the very
-     top so the title and globe stand alone, then rolls down into place as you begin scrolling. The
-     reveal is pure CSS driven by scroll position (drawn from the ui-ux-god method), so it needs no
-     script and cannot get stuck hidden on a hydration hiccup. */
+  /* The rolling menu, drawn from the ui-ux-god glass nav + its pure-CSS scroll reveal. It is out of
+     the way at the very top so the title and globe stand alone, then rolls down into the corner as
+     you begin scrolling. Shared shell: fixed top-left, frosted glass, scroll-driven reveal. */
   .scroll-nav {
     position: fixed;
     top: var(--space-3);
     left: var(--space-4);
     z-index: 50;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    max-width: min(92vw, 34rem);
-    padding: 4px;
     border: 1px solid var(--hairline);
-    border-radius: 999px;
     background: color-mix(in srgb, var(--paper) 72%, transparent);
     -webkit-backdrop-filter: blur(14px) saturate(1.5);
     backdrop-filter: blur(14px) saturate(1.5);
     animation: nav-roll linear both;
     animation-timeline: scroll(root block);
     animation-range: 5vh 24vh;
+  }
+  @keyframes nav-roll {
+    from { opacity: 0; transform: translateY(-160%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* Keyboard users reach the menu regardless of scroll: focusing it forces it fully into view. */
+  .scroll-nav:focus-within {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none;
   }
   .scroll-nav a {
     font-family: var(--font-instrument);
@@ -320,30 +345,112 @@ for (const c of countries) {
     outline: 2px solid var(--ink);
     outline-offset: 2px;
   }
-  @keyframes nav-roll {
-    from { opacity: 0; transform: translateY(-160%); }
+
+  /* Wide screens: the inline bar, links in a row inside a glass pill. */
+  .scroll-nav--bar {
+    display: flex;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 999px;
+  }
+  .scroll-nav--menu {
+    display: none;
+  }
+
+  /* Phones: a small "Menu" disclosure that rolls the links down on tap. Native details, no script. */
+  @media (max-width: 640px) {
+    .scroll-nav--bar {
+      display: none;
+    }
+    .scroll-nav--menu {
+      display: block;
+      border-radius: var(--radius);
+      overflow: hidden;
+      /* a touch more opaque than the desktop bar, since the open panel overlays the globe */
+      background: color-mix(in srgb, var(--paper) 85%, transparent);
+    }
+    .scroll-nav--menu summary {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      list-style: none;
+      cursor: pointer;
+      font-family: var(--font-instrument);
+      font-size: var(--text-xs);
+      color: var(--ink-muted);
+    }
+    .scroll-nav--menu summary::-webkit-details-marker {
+      display: none;
+    }
+    .scroll-nav--menu summary:hover {
+      color: var(--ink);
+    }
+    .scroll-nav--menu summary:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+      border-radius: var(--radius);
+    }
+    .scroll-nav--menu .chev {
+      color: var(--ink-faint);
+      transition: transform var(--dur, 0.2s) var(--ease, ease);
+    }
+    .scroll-nav--menu[open] .chev {
+      transform: rotate(180deg);
+    }
+    .scroll-nav--menu[open] nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0 4px 4px;
+      animation: menu-open var(--dur, 0.22s) var(--ease, ease);
+    }
+    /* Comfortable 44px tap rows on phones. */
+    .scroll-nav--menu nav a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      padding: var(--space-2) var(--space-4);
+    }
+  }
+  @keyframes menu-open {
+    from { opacity: 0; transform: translateY(-6px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  /* Keyboard users reach the menu regardless of scroll: focusing it forces it fully into view. */
-  .scroll-nav:focus-within {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none;
-  }
+
   /* Reduced motion: reveal by fade alone, no vertical travel. */
   @media (prefers-reduced-motion: reduce) {
-    @keyframes nav-roll {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    @keyframes nav-roll { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes menu-open { from { opacity: 0; } to { opacity: 1; } }
   }
   /* Where scroll-driven animation is unsupported, the menu simply stays visible in the corner. */
   @supports not (animation-timeline: scroll()) {
-    .scroll-nav {
-      animation: none;
-      opacity: 1;
-      transform: none;
+    .scroll-nav { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* A subtle scroll hint by the globe's lower right on the first beat: a faint double chevron that
+     nudges down and fades out as soon as you begin scrolling. */
+  .scroll-cue {
+    position: fixed;
+    bottom: var(--space-8);
+    right: var(--space-10);
+    z-index: 40;
+    color: var(--ink-faint);
+    pointer-events: none;
+    animation: cue-fade linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 14vh;
+  }
+  @keyframes cue-fade { from { opacity: 0.75; } to { opacity: 0; } }
+  @keyframes cue-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-cue {
+      animation: cue-fade linear both, cue-bob 1.9s ease-in-out infinite;
+      animation-timeline: scroll(root block), auto;
+      animation-range: 0 14vh, normal;
     }
+  }
+  @supports not (animation-timeline: scroll()) {
+    .scroll-cue { animation: none; opacity: 0.5; }
   }
 
   /* Stacked fallback: narrow screens drop the pinned, zoomed stage for a clean static layout. The
