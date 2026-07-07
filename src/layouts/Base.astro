@@ -4,11 +4,15 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  // The homepage hides the top nav and carries an index of the sections at the end instead, so the
+  // landing stays immersive. Interior pages keep the header nav.
+  hideNav?: boolean;
 }
 
 const {
   title = 'QSC Atlas',
   description = 'How governments are migrating to quantum-safe cryptography, country by country.',
+  hideNav = false,
 } = Astro.props;
 
 const pageTitle = title === 'QSC Atlas' ? title : `${title} - QSC Atlas`;
@@ -40,11 +44,13 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
     />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" class:list={[{ 'is-bare': hideNav }]}>
       <a class="wordmark" href="/">QSC Atlas</a>
-      <nav class="site-nav" aria-label="Primary">
-        {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
-      </nav>
+      {!hideNav && (
+        <nav class="site-nav" aria-label="Primary">
+          {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
+        </nav>
+      )}
     </header>
 
     <main>
