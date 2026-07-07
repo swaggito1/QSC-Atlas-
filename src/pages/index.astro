@@ -25,6 +25,16 @@ for (const c of countries) {
 ---
 
 <Base hideNav title="The geopolitics of the post-quantum transition" description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources.">
+  <!-- Drawn from the ui-ux-god glass nav and its pure-CSS scroll reveal: a small, subtle menu that
+       stays out of the way at the top and rolls down into the corner once you begin scrolling. -->
+  <nav class="scroll-nav" aria-label="Sections">
+    <a href="/map">Map</a>
+    <a href="/countries">Countries</a>
+    <a href="/methodology">Methodology</a>
+    <a href="/documents">Documents</a>
+    <a href="/about">About</a>
+  </nav>
+
   <main class="scrolly">
     <div class="globe-stage" data-scene="hero">
       <div class="globe-box">
@@ -58,17 +68,6 @@ for (const c of countries) {
     </nav>
   </main>
 
-  <!-- The menu, moved off the top: an index of the Atlas at the end of the scroll. -->
-  <nav class="home-index" aria-label="Sections of the Atlas">
-    <p class="home-index__label">The Atlas</p>
-    <ul>
-      <li><a href="/map"><span class="idx">01</span><span class="dest">Map</span></a></li>
-      <li><a href="/countries"><span class="idx">02</span><span class="dest">Countries</span></a></li>
-      <li><a href="/methodology"><span class="idx">03</span><span class="dest">Methodology</span></a></li>
-      <li><a href="/documents"><span class="idx">04</span><span class="dest">Documents</span></a></li>
-      <li><a href="/about"><span class="idx">05</span><span class="dest">About</span></a></li>
-    </ul>
-  </nav>
 </Base>
 
 <script>
@@ -279,66 +278,72 @@ for (const c of countries) {
     background: var(--ink);
   }
 
-  /* The menu, re-cast as an editorial index at the end of the scroll instead of a top bar. Each row
-     is a faint monospace number and a large serif destination on a hairline rule; on hover or focus
-     the row settles to full ink and eases a step to the right, like turning to a section. */
-  .home-index {
-    max-width: var(--content-max);
-    margin: 0 auto;
-    padding: var(--space-16) var(--space-6) var(--space-12);
-  }
-  .home-index__label {
-    font-family: var(--font-label);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-faint);
-    margin: 0 0 var(--space-5);
-  }
-  .home-index ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--hairline);
-  }
-  .home-index li {
-    border-bottom: 1px solid var(--hairline);
-  }
-  .home-index a {
+  /* The rolling menu: a small, subtle glass bar in the top-left. It is out of the way at the very
+     top so the title and globe stand alone, then rolls down into place as you begin scrolling. The
+     reveal is pure CSS driven by scroll position (drawn from the ui-ux-god method), so it needs no
+     script and cannot get stuck hidden on a hydration hiccup. */
+  .scroll-nav {
+    position: fixed;
+    top: var(--space-3);
+    left: var(--space-4);
+    z-index: 50;
     display: flex;
-    align-items: baseline;
-    gap: var(--space-6);
-    padding: var(--space-4) var(--space-2);
-    text-decoration: none;
-    color: var(--ink-muted);
-    transition: color var(--dur, 0.2s) var(--ease, ease), transform var(--dur, 0.2s) var(--ease, ease);
+    flex-wrap: wrap;
+    gap: 2px;
+    max-width: min(92vw, 34rem);
+    padding: 4px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--paper) 72%, transparent);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
+    animation: nav-roll linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 5vh 24vh;
   }
-  .home-index .idx {
-    font-family: var(--font-mono);
+  .scroll-nav a {
+    font-family: var(--font-instrument);
     font-size: var(--text-xs);
-    color: var(--ink-faint);
-    letter-spacing: 0.04em;
-    flex: none;
-    transition: color var(--dur, 0.2s) var(--ease, ease);
-  }
-  .home-index .dest {
-    font-family: var(--font-reading);
-    font-size: var(--type-scene);
     line-height: 1;
-    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: color var(--dur, 0.2s) var(--ease, ease), background var(--dur, 0.2s) var(--ease, ease);
   }
-  .home-index a:hover,
-  .home-index a:focus-visible {
+  .scroll-nav a:hover {
     color: var(--ink);
-    transform: translateX(var(--space-2));
+    background: color-mix(in srgb, var(--ink) 7%, transparent);
   }
-  .home-index a:hover .idx,
-  .home-index a:focus-visible .idx {
-    color: var(--ink);
-  }
-  .home-index a:focus-visible {
+  .scroll-nav a:focus-visible {
     outline: 2px solid var(--ink);
-    outline-offset: 3px;
+    outline-offset: 2px;
+  }
+  @keyframes nav-roll {
+    from { opacity: 0; transform: translateY(-160%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* Keyboard users reach the menu regardless of scroll: focusing it forces it fully into view. */
+  .scroll-nav:focus-within {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none;
+  }
+  /* Reduced motion: reveal by fade alone, no vertical travel. */
+  @media (prefers-reduced-motion: reduce) {
+    @keyframes nav-roll {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  }
+  /* Where scroll-driven animation is unsupported, the menu simply stays visible in the corner. */
+  @supports not (animation-timeline: scroll()) {
+    .scroll-nav {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
   }
 
   /* Stacked fallback: narrow screens drop the pinned, zoomed stage for a clean static layout. The
