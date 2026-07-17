@@ -23,8 +23,6 @@ const decades = [
 // dLab is the demo-point label, tLab the stated target; ly/tly nudge those labels vertically and
 // mx nudges the demo marker sideways, so the clustered low-qubit points do not collide.
 const firms = [
-  { demo: { yr: 2024, q: 105 }, dLab: 'Google Willow, 105 (2024)', ly: 6,
-    target: { yr: 2029, q: 1000000 }, tLab: '1M by 2029', tly: -9 },
   { demo: { yr: 2024, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)', ly: -5,
     target: { yr: 2033, q: 100000 }, tLab: '100k by 2033', tly: -9 },
   { demo: { yr: 2025, q: 8 }, dLab: 'Microsoft Majorana 1, 8 (2025)', ly: -10 },
@@ -74,10 +72,7 @@ const actors = [
       rarely by name. The obligation is carried by an undefined phrase, state of the art, whose
       cryptographic content is supplied by an interpretive layer of certification guidance that sits
       between legislation and practice. Elsewhere the same core is wrapped in soft national roadmaps,
-      and across much of the world in nothing at all. What an organisation must do depends less on the
-      mathematics, which is common, than on the jurisdiction it operates in, which is not. This is the
-      instrument cascade: from an undefined legal standard down to a de facto migration obligation,
-      with the operative rule written in the interpretive layer rather than the statute.
+      and across much of the world in nothing at all.
     </p>
 
     <h2>The clocks diverge, against an uncertain threat</h2>
@@ -226,6 +221,11 @@ const actors = [
       <li>Budde, B., and Konrad, K. (2019). Tentative governing in a dynamic network of expectations. Research Policy (the governance of expectations).</li>
       <li>CEPS: Pupillo, L., et al. (2025). Strengthening the EU Transition to a Quantum-Safe World, Task Force report.</li>
     </ul>
+    <p class="availability">
+      Data, code and structure are openly available: the Atlas is open source on
+      <a href="https://github.com/swaggito1/QSC-Atlas-" target="_blank" rel="noopener">GitHub</a>,
+      and archived on Zenodo (DOI: <a href="https://doi.org/10.5281/zenodo.21262284" target="_blank" rel="noopener">10.5281/zenodo.21262284</a>).
+    </p>
     <p class="attribution">
       An explanation from the QSC Atlas, drawing on the CEPS Task Force on Strengthening the EU
       Transition to a Quantum-Safe World (2025). <a href="/methodology">How the Atlas classifies countries &rarr;</a>
@@ -307,6 +307,19 @@ const actors = [
   .attribution a {
     color: var(--ink);
     white-space: nowrap;
+  }
+  .availability {
+    margin-top: var(--space-5);
+    font-size: var(--text-sm);
+    color: var(--ink-muted);
+  }
+  .availability a {
+    color: var(--ink);
+    text-underline-offset: 2px;
+    text-decoration-color: var(--hairline);
+  }
+  .availability a:hover {
+    text-decoration-color: var(--ink);
   }
 
   /* The quantum-safe race figure */
