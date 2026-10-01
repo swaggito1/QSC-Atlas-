@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/react": "^4.2.0",
     "@notionhq/client": "^5.22.0",
+    "@vercel/analytics": "^2.0.1",
     "astro": "^5.5.0",
     "d3-geo": "^3.1.1",
     "firecrawl": "^4.25.3",
