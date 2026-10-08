@@ -1,0 +1,1005 @@
+/* QSC Atlas: Target dates (/target-dates, spec 6.3). Built on the épuré tokens in global.css, the
+   frame in frame.css and the control kit in lab.css (labs/review/epure-audit.md); the page writes
+   no raw size, weight or colour where a token exists. Ink on paper, with CEPS teal as the one
+   interface colour (palette A): the current view in the frame's switch, links, the remove buttons
+   on the chosen places, ticked boxes, the option in hand, the focus ring and the dashed "today"
+   tick. On the chart colour appears only as the posture dot beside a place name; the marks stay
+   ink. The shape of a mark gives the kind of date; solid is the place's own record, open reaches
+   it through EU membership, dotted ink-faint is a lead (preview only). Whitespace separates the
+   search, the readout, the chart and the filters, with no rule between them: the inputs and the
+   view are related sections (--gap-related), the parts of the view one group (--gap-group and
+   --gap-group-lg), and Where to go next a change of subject (the frame's --gap-subject). The
+   field is a hairline under the words; the chart draws only its axis, its lane rules and the
+   marks. No negative margins; every control at least 44px; nothing moves unless the visitor
+   acts. Every rule is scoped to this page (.td, .td-*), because the gated route loads the
+   stylesheets of every built page together. The view switch is the frame's, under the H1. */
+
+/* The view switch is drawn in the frame's head here, the one page where it is (Countries and the
+   map draw it in their own head); it keeps the kit's tab styling (lab.css .lab-switch). */
+
+/* Where to go next is drawn by the island, inside the body, since its rows follow the places
+   chosen; About this view then closes the page a group below it, as the frame sets it after its
+   own Where to go next */
+.fr-body:has(.td-next) + .fr-about,
+.fr-body:has(.td-next) + .fr-about.lab-section {
+  margin-top: var(--gap-group-lg);
+}
+
+/* ---- one column: where you operate, then the readout and the view at the page's full width ---- */
+
+/* where you operate: unboxed, with whitespace above it; the field keeps a reading width */
+.td-inputs {
+  min-width: 0;
+}
+.td-field {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.td-legend {
+  padding: 0;
+  margin-bottom: var(--gap-mark);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink);
+}
+/* the search: the kit's field (.field-line, global.css), a hairline under the words that turns to
+   a 2px teal rule on focus, with the finder's lens; its list hangs under it */
+.td-combo {
+  position: relative;
+  max-width: 26rem;
+}
+.td-combo-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: none;
+  stroke: var(--ink-muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.td-search {
+  display: block;
+  width: 100%;
+  min-height: var(--lab-target, 44px);
+  padding: var(--space-2) 0 var(--space-2) 1.6rem;
+  border: 0;
+  border-bottom: var(--rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--type-control);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+.td-search:hover {
+  border-bottom-color: var(--ink-muted);
+}
+.td-search::placeholder {
+  color: var(--ink-muted);
+  opacity: 1;
+}
+/* the rule is the field's focus mark, growing downwards so nothing moves */
+.td-search:focus,
+.td-search:focus-visible {
+  outline: none;
+  border-bottom-color: var(--accent);
+  box-shadow: 0 1px 0 0 var(--accent);
+}
+
+/* the list: an overlay (global.css), the surface with a hairline edge and the one shadow */
+.td-pop {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + var(--gap-mark));
+  left: 0;
+  right: 0;
+  background: var(--surface-overlay);
+  border: var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel);
+}
+.td-pop[hidden] {
+  display: none;
+}
+.td-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.td-options:empty {
+  display: none;
+}
+.td-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--lab-target, 44px);
+  padding: var(--space-1) var(--space-3);
+  border-top: var(--rule);
+  cursor: pointer;
+}
+.td-option:first-child {
+  border-top: 0;
+}
+/* the option the arrow keys or the pointer are on: the finder's teal wash and 2px teal edge */
+.td-option.is-active {
+  background: var(--accent-wash);
+  box-shadow: inset var(--border-width-strong) 0 0 var(--accent);
+}
+.td-option .td-pname-p {
+  margin-left: auto;
+}
+.td-option.is-on .td-pname-n {
+  font-weight: var(--weight-ui-strong);
+}
+/* the line under the options ("8 of 12 places shown"), or the empty state in their place */
+.td-pop-msg {
+  margin: 0;
+  padding: var(--space-3);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.td-options:not(:empty) + .td-pop-msg {
+  border-top: var(--rule);
+}
+.td-options:empty + .td-pop-msg {
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: var(--type-body);
+}
+
+/* the box beside each option: a hairline square; ticked, a teal box with a white tick */
+.td-box {
+  position: relative;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--ink-muted);
+  border-radius: var(--radius);
+}
+.td-option.is-on .td-box {
+  border: 1.5px solid var(--accent);
+  background: var(--accent);
+}
+.td-option.is-on .td-box::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.5px;
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid var(--on-accent);
+  border-bottom: 2px solid var(--on-accent);
+  transform: rotate(45deg);
+}
+
+/* the chosen places: small chips under the field, each a name on a hairline with its own teal
+   remove button (Swann, 2 October 2026: the search and its chips stay) */
+.td-picked {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-inline) var(--gap-group);
+  margin-top: var(--space-3);
+}
+.td-chips-on {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-inline);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.td-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding-left: var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius);
+  font-size: var(--type-small);
+  line-height: 1;
+  color: var(--ink);
+}
+.td-chip-x {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: calc(2rem - 2px);
+  margin-left: var(--gap-mark);
+  padding: 0;
+  border: none;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard), background-color var(--dur-fast) var(--ease-standard);
+}
+/* the press area reaches 44px, beyond the chip's drawn edge */
+.td-chip-x::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.td-chip-x svg {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.td-chip-x:hover {
+  color: var(--accent-strong);
+  background: var(--accent-wash);
+}
+.td-chip-x:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+  color: var(--accent-strong);
+}
+/* Clear all: a quiet teal link */
+.td-textbtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--lab-target, 44px);
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+/* a one-word button ("Clear") still has a 44px-wide hit area */
+.td-textbtn::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.td-textbtn:hover {
+  color: var(--accent-strong);
+}
+.td-textbtn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* a place: the posture dot, the name and the posture's short label ("No coordination posture
+   recorded" is longer than any short label, so in a narrow column it moves to its own line) */
+.td-pname {
+  display: inline-flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--gap-inline);
+  min-width: 0;
+}
+.td-dot {
+  flex: none;
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-mark);
+}
+/* no posture recorded: the pale fill under its ink edge, as on every key, chip and finder option */
+.td-dot--none {
+  background: var(--process-none);
+  box-shadow: inset 0 0 0 1px var(--swatch-none-edge);
+}
+.td-pname-n {
+  min-width: 0;
+  color: var(--ink);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+}
+.td-pname-p {
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+/* ---- marks -------------------------------------------------------------------------------- */
+
+.td-glyph {
+  flex: none;
+  display: block;
+  overflow: visible;
+}
+.td-shape {
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.td-shape--own {
+  fill: currentColor;
+  stroke: currentColor;
+}
+.td-shape--membership {
+  fill: var(--paper);
+  stroke: currentColor;
+}
+.td-shape--lead {
+  fill: var(--paper);
+  stroke: var(--ink-faint);
+  stroke-dasharray: 1.6 1.8;
+}
+
+/* ---- the readout and the view ------------------------------------------------------------- */
+
+/* the view is the next facet of the same question: a related gap under the inputs */
+.td-view {
+  min-width: 0;
+  margin-top: var(--gap-related);
+}
+.td-readout {
+  max-width: var(--measure);
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+/* a shared link (?in=) shows this line until the island is live, in place of the empty state
+   (for six seconds at most: index.astro then drops .td--in and the server's view shows) */
+.td-loading {
+  display: none;
+  margin: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.td--in .td-tool:not(.is-ready) .td-loading {
+  display: block;
+}
+.td--in .td-tool:not(.is-ready) :is(.td-readout, .td-empty, .td-table) {
+  display: none;
+}
+/* the island still not live after six seconds on a shared link: the page says the link's places
+   were not drawn, in place of the empty state ("No place chosen" would contradict the address),
+   and the full table shows below. The island takes over when it comes up. */
+.td-late {
+  display: none;
+  max-width: var(--measure);
+  margin: 0;
+  font-family: var(--font-reading);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+.td--late .td-tool:not(.is-ready) .td-late {
+  display: block;
+}
+.td--late .td-tool:not(.is-ready) :is(.td-readout, .td-empty) {
+  display: none;
+}
+@media (min-width: 640px) {
+  .td--in .td-tool:not(.is-ready) .td-chartwrap {
+    min-height: 18rem;
+  }
+}
+/* on phones the table opens only once a place is chosen: it waits for the island before it shows
+   (index.astro stops the wait after six seconds, so a stalled island still leaves the table) */
+@media (max-width: 639px) {
+  .td--wait .td-tool:not(.is-ready) .td-table {
+    display: none;
+  }
+}
+
+/* on phones the standing note moves from the head to under the readout, so the first input stays
+   in reach. It is the kit's plain note (global.css .note): one ink-muted sentence at the measure,
+   space and one hairline above it since it follows the readout, never a box or a left rule */
+.td-note-phone {
+  display: none;
+}
+@media (max-width: 639px) {
+  .fr-main:has(.td) .fr-head .fr-note {
+    display: none;
+  }
+  .td-note-phone {
+    display: block;
+  }
+  .td-readout {
+    font-size: var(--type-body);
+  }
+}
+
+/* From 640px the view reads top to bottom as the answer, the chart, its key, then the folded
+   filters that narrow it. Only text and the chart move: the filters stay the first thing a
+   keyboard reaches after the search. On phones the order is the source order: the answer, the
+   folded filters, the key and the list by year. */
+@media (min-width: 640px) {
+  .td-view {
+    display: flex;
+    flex-direction: column;
+  }
+  .td-readout,
+  .td-loading,
+  .td-late {
+    order: 0;
+  }
+  .td-chartwrap {
+    order: 1;
+  }
+  .td-key {
+    order: 2;
+  }
+  .td-filters {
+    order: 3;
+  }
+}
+
+.td-key {
+  margin-top: var(--gap-group);
+}
+/* the key, quiet and right under the marks: the shapes drawn (the kind of date) on one line,
+   whose record a mark is on the next */
+.td-marks {
+  display: grid;
+  gap: var(--gap-mark);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.td-marks-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-mark) var(--gap-group);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.td-marks li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+}
+.td-marks .td-glyph {
+  color: var(--ink);
+}
+
+/* the kind and lane filters: the kit's plain checkboxes, each kind with its mark, folded behind
+   one quiet "Choose what to show (n)" at every width (a link that opens on a narrowed view opens
+   them). Nothing is ticked by default, and nothing ticked shows every date. */
+.td-filters {
+  margin-top: var(--gap-group);
+}
+.td-fold-body {
+  display: grid;
+  gap: var(--gap-group);
+}
+.td-lawnote,
+.td-filterhint {
+  max-width: var(--measure);
+  margin: 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.td-lawnote {
+  margin-top: var(--gap-mark);
+}
+
+/* "Choose what to show (n)": the kit's quiet disclosure (lab.css .lab-fold), teal words and the
+   chevron, no rule */
+.td-fold-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  min-height: var(--lab-target, 44px);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--accent);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.td-fold-toggle:hover,
+.td-fold-toggle:active {
+  color: var(--accent-strong);
+}
+/* the kit's disclosure chevron (lab.css), pointing down when closed and up when open */
+.td-fold-toggle::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+.td-filters.is-open .td-fold-toggle::before {
+  transform: translateY(2px) rotate(-135deg);
+}
+.td-fold-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.td-filters:not(.is-open) .td-fold-body {
+  display: none;
+}
+/* the filters fade in as a disclosure opens (opacity only, 200ms, easing out) and close at once */
+.td-filters.is-open .td-fold-body {
+  padding: var(--gap-mark) 0 var(--gap-inline);
+  animation: td-fade var(--dur-disclose) var(--ease-out);
+}
+@keyframes td-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+.td-empty {
+  margin-top: var(--gap-group);
+}
+.td-chartwrap > .td-empty {
+  margin-top: 0;
+}
+
+/* the chart, from 640px */
+.td-chartwrap {
+  position: relative;
+  margin-top: var(--gap-group-lg);
+}
+.td-chart {
+  display: block;
+  max-width: 100%;
+  overflow: visible;
+  color: var(--ink);
+}
+/* the chart's words are chart labels, at the caption step; years in mono, words in the interface face */
+.td-year {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-data);
+  font-feature-settings: 'tnum' 1;
+  font-size: var(--type-caption);
+  fill: var(--ink);
+}
+/* "Earlier" and "Later" are words, so they take the interface face */
+.td-year--side {
+  font-family: var(--font-instrument);
+  fill: var(--ink-muted);
+}
+.td-rule,
+.td-rule-tick {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+/* today: the one teal mark on the chart, an interface line rather than a date, drawn as the
+   profile timeline draws it (--rule-today: 2px, dashed, teal) */
+.td-today line {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 4 3;
+}
+.td-today text {
+  font-family: var(--font-instrument);
+  font-size: var(--type-caption);
+  fill: var(--accent);
+}
+/* a band's place name heads its three lanes: the interface face at the small step, 600 */
+.td-bname {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  fill: var(--ink);
+}
+.td-bpost {
+  font-size: var(--type-caption);
+  font-weight: var(--weight-ui);
+  fill: var(--ink-muted);
+}
+.td-lane {
+  font-family: var(--font-instrument);
+  font-size: var(--type-caption);
+  fill: var(--ink-muted);
+}
+.td-laneline {
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+.td-dotsvg--none {
+  fill: none;
+  stroke: var(--ink-faint);
+  stroke-width: 1.5;
+}
+.td-hit {
+  fill: transparent;
+}
+/* the keyboard route: the mark in focus takes the site's 2px ink ring, drawn on its hit circle */
+.td-mk {
+  outline: none;
+}
+.td-mk:focus-visible .td-hit {
+  stroke: var(--focus-ring);
+  stroke-width: 2;
+}
+
+/* the tooltip, an overlay as the kit's .lab-tip is: the surface, a hairline edge and the one
+   shadow, ink words; the date and the place, the label, then kind and bindingness */
+.td-tip {
+  position: absolute;
+  z-index: 5;
+  width: max-content;
+  max-width: 17rem;
+  padding: var(--space-2) var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface-overlay);
+  box-shadow: var(--shadow-panel);
+  color: var(--ink);
+  font-size: var(--type-small);
+  line-height: var(--leading-snug);
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 14px));
+}
+.td-tip--below {
+  transform: translate(-50%, 14px);
+}
+.td-tip p {
+  margin: 0;
+}
+.td-tip-h {
+  font-weight: var(--weight-ui-strong);
+}
+.td-tip-m {
+  color: var(--ink-muted);
+}
+.td-tip .td-tip-l {
+  margin: var(--gap-mark) 0;
+}
+
+/* the list grouped by year, below 640px: each target once, naming every place it reaches */
+.td-phone {
+  display: none;
+}
+@media (max-width: 639px) {
+  .td-chartwrap {
+    display: none;
+  }
+  .td-phone {
+    display: block;
+  }
+}
+.td-years {
+  margin: var(--gap-group) 0 0;
+  padding: 0;
+  list-style: none;
+}
+/* what every target of the list shares, said once above it (model.ts yearListMeta) */
+.td-years-m {
+  max-width: var(--measure);
+  margin-top: var(--gap-group);
+}
+.td-years-m + .td-years {
+  margin-top: var(--gap-inline);
+}
+.td-yr + .td-yr {
+  margin-top: var(--gap-group-lg);
+}
+.td-yr-h {
+  margin: 0;
+  padding-top: var(--gap-inline);
+  border-top: var(--rule);
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1;
+  font-size: var(--type-body);
+  font-weight: var(--weight-data);
+}
+.td-yr-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.td-item {
+  padding: var(--space-3) 0;
+  border-top: var(--rule);
+}
+.td-yr-list > .td-item:first-child {
+  border-top: none;
+}
+.td-item-p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--gap-group);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.td-item-p li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  min-width: 0;
+  color: var(--ink);
+}
+.td-item-p .td-pname {
+  flex: 0 1 auto;
+}
+.td-item-p .td-pname-n {
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+}
+.td-item-l {
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+.td-item-m {
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* ---- Show as a table ------------------------------------------------------------------------ */
+
+/* the table's disclosure follows the filters' one closely, at the same quiet rhythm */
+.td-table {
+  max-width: none;
+  margin: var(--gap-inline) 0 var(--gap-group-lg);
+}
+.td-scroll:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+@media (min-width: 640px) {
+  .td-table table {
+    min-width: 62rem;
+  }
+}
+.td-table caption {
+  font-family: var(--font-instrument);
+}
+/* the date in mono, at the size of the words around it */
+.td-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1;
+}
+.td-table th.td-mono {
+  white-space: nowrap;
+  font-weight: var(--weight-data);
+}
+/* a place heads its rows as a table's column heads head theirs: the ink rule under it */
+.td-grp th {
+  padding: var(--gap-group-lg) var(--space-2) var(--space-2);
+  border-top: none;
+  border-bottom: var(--rule-head);
+  text-align: left;
+  font-weight: var(--weight-ui-strong);
+}
+.td-grp .td-pname {
+  flex: 0 1 auto;
+}
+.td-grp .td-pname-n {
+  font-weight: var(--weight-ui-strong);
+}
+.td-grp + tr > * {
+  border-top: none;
+}
+.td-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+}
+.td-nr {
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+/* column widths from 640px: what the date marks takes the room; the date, kind, issuer, status,
+   bindingness and source are short words, and who a guide is written for is a muted note that
+   wraps. Every cell is at the table's one step (--type-small); none is set smaller */
+@media (min-width: 640px) {
+  .td-table th[scope='col']:nth-child(1) {
+    width: 7.25rem;
+  }
+  .td-table th[scope='col']:nth-child(2) {
+    width: 7.75rem;
+  }
+  .td-table th[scope='col']:nth-child(4) {
+    width: 7.5rem;
+  }
+  .td-table th[scope='col']:nth-child(5) {
+    width: 9.5rem;
+  }
+  .td-table th[scope='col']:nth-child(6) {
+    width: 6.25rem;
+  }
+  .td-table th[scope='col']:nth-child(7) {
+    width: 6.75rem;
+  }
+  .td-table th[scope='col']:nth-child(8) {
+    width: 7.75rem;
+  }
+  .td-table td:is(:nth-child(2), :nth-child(4), :nth-child(6), :nth-child(7), :nth-child(8)) {
+    line-height: var(--leading-normal);
+  }
+}
+.td-table td:nth-child(5) {
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.td-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* every row carries its source links, so they are index links (global.css .row-link, set on
+   each in parts.tsx): ink words on a thin teal underline, each at least 44px tall */
+.td-links a {
+  display: inline-flex;
+  align-items: flex-start;
+  min-height: var(--lab-target, 44px);
+}
+.td-leadtag {
+  margin-left: var(--gap-inline);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+  text-decoration: underline dotted var(--ink-faint);
+  text-underline-offset: 3px;
+}
+.td-row--lead > * {
+  color: var(--ink-muted);
+}
+@media (max-width: 639px) {
+  .td-grp th {
+    padding-top: var(--gap-group-lg);
+  }
+  .td-table table.is-stack .td-grp th {
+    display: block;
+    border-bottom: var(--rule-head);
+    padding: var(--gap-group-lg) 0 var(--gap-inline);
+  }
+  .td-table table.is-stack tr.td-grp {
+    padding: 0;
+    border-top: none;
+  }
+  .td-table table.is-stack .td-grp + tr {
+    border-top: none;
+  }
+  .td-table table.is-stack td:empty {
+    display: none;
+  }
+  .td-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 var(--gap-group);
+  }
+  .td-links a {
+    min-height: var(--lab-target, 44px);
+  }
+}
+
+/* without JavaScript the page is the head and the full table */
+html:not(.js) .td-view {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .td-search,
+  .td-chip-x,
+  .td-fold-toggle,
+  .td-fold-toggle::before {
+    transition: none;
+  }
+  .td-filters.is-open .td-fold-body {
+    animation: none;
+  }
+}
+
+/* phones: the 390px budget puts the first input within 420px of the top of the page. The
+   standing note moves to the readout, and the legend over the search field is read by screen
+   readers only: the question above already names the places you operate in. */
+@media (max-width: 639px) {
+  .td-legend--places {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* ---- print: the readout and the table, with their sources ---------------------------------- */
+
+@media print {
+  .td-inputs,
+  .td-loading,
+  .td-filters,
+  .td-key,
+  .td-chartwrap,
+  .td-phone,
+  .td-next,
+  .td-note-phone {
+    display: none !important;
+  }
+  .td-view {
+    margin-top: 0;
+  }
+  .td-table table {
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .td-scroll {
+    overflow: visible;
+  }
+  /* on A4 the eight columns share the page's width in fixed parts: the screen's widths would run
+     past the right margin, and what the date marks keeps the most room */
+  .td-table th[scope='col'] {
+    padding: 2pt 4pt 2pt 0;
+    font-size: 7pt;
+  }
+  .td-table th[scope='col']:nth-child(1) {
+    width: 12% !important;
+  }
+  .td-table th[scope='col']:nth-child(2) {
+    width: 13% !important;
+  }
+  .td-table th[scope='col']:nth-child(3) {
+    width: 22% !important;
+  }
+  .td-table th[scope='col']:nth-child(4) {
+    width: 12% !important;
+  }
+  .td-table th[scope='col']:nth-child(5) {
+    width: 11% !important;
+  }
+  .td-table th[scope='col']:nth-child(6) {
+    width: 9% !important;
+  }
+  .td-table th[scope='col']:nth-child(7) {
+    width: 11% !important;
+  }
+  .td-table th[scope='col']:nth-child(8) {
+    width: 10% !important;
+  }
+  .td-table td,
+  .td-table th[scope='row'] {
+    padding: 3pt 4pt 3pt 0;
+    font-size: 8.5pt;
+    overflow-wrap: break-word;
+  }
+  .td-table td:is(:nth-child(2), :nth-child(4), :nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
+    font-size: 8pt;
+  }
+  .td-table th.td-mono,
+  .td-nr {
+    white-space: normal;
+  }
+  .td-table tr {
+    break-inside: avoid;
+  }
+  .td-grp th {
+    padding-top: 8pt;
+    break-after: avoid;
+  }
+}

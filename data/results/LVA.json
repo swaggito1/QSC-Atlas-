@@ -20,5 +20,16 @@
     "url": "https://cert.lv/uploads/pasakumi/Andris_Ambainis_final.pdf",
     "summary": "Presentation hosted on CERT.LV's events area surveying post-quantum cryptography methods (lattice-based such as NTRU/LWE, code-based such as McEliece, and multivariate-quadratic schemes). Authored by an academic researcher rather than CERT.LV itself, so flagged for human review.",
     "included": true
+  },
+  {
+    "title": "Kriptogrāfijas vadlīnijas (Versija 1.0)",
+    "country": "LVA",
+    "issuingOrg": "NKDC",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://cyber.gov.lv/sites/cyber/files/document/20250912-Kriptografijas-vadlinijas.pdf",
+    "summary": "Version 1.0 (12.09.2025) of the cryptography guidelines published by Latvia's National Cyber Security Centre on cyber.gov.lv, recommending principles, algorithms, procedures and requirements for data confidentiality, integrity, authenticity and non-repudiation. It advises preparing for post-quantum cryptography by deploying hybrid solutions that combine classical algorithms such as RSA or ECDSA with post-quantum algorithms.",
+    "included": true
   }
 ]

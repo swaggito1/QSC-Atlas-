@@ -38,17 +38,17 @@ const BATCHES = [
 [{"iso3":"CHN","name":"China"},{"iso3":"HUN","name":"Hungary"},{"iso3":"IDN","name":"Indonesia"},{"iso3":"MYS","name":"Malaysia"},{"iso3":"PRT","name":"Portugal"},{"iso3":"ROU","name":"Romania"},{"iso3":"THA","name":"Thailand"},{"iso3":"FIN","name":"Finland"},{"iso3":"GRC","name":"Greece"},{"iso3":"LUX","name":"Luxembourg"},{"iso3":"SVN","name":"Slovenia"},{"iso3":"ARG","name":"Argentina"},{"iso3":"CHL","name":"Chile"},{"iso3":"IRL","name":"Ireland"},{"iso3":"ISR","name":"Israel"},{"iso3":"LVA","name":"Latvia"},{"iso3":"NZL","name":"New Zealand"},{"iso3":"RUS","name":"Russia"},{"iso3":"TUR","name":"Türkiye"},{"iso3":"UKR","name":"Ukraine"},{"iso3":"BHR","name":"Bahrain"},{"iso3":"BRN","name":"Brunei"},{"iso3":"CYP","name":"Cyprus"},{"iso3":"DJI","name":"Djibouti"},{"iso3":"EST","name":"Estonia"},{"iso3":"GUY","name":"Guyana"},{"iso3":"HRV","name":"Croatia"}],
 ]
 
-const prompt = (c) => `You are running a FRESHNESS / DELTA update for the QSC Atlas for ${c.name} (ISO3: ${c.iso3}). The corpus was last updated around 2026-06-22; find official PQC documents that are NEW since then and are NOT already stored.
+const prompt = (c) => `You are running a FRESHNESS / DELTA update for the QSC Atlas for ${c.name} (ISO3: ${c.iso3}). The corpus was last updated on 2026-06-25 and TODAY IS 2026-09-05, so roughly TEN WEEKS of official publishing may be missing.
 
 Do NOT use Firecrawl. Use WebSearch (free) for discovery; WebFetch only to disambiguate a borderline source. If WebSearch/WebFetch are not in your tool list, load them via ToolSearch (query "select:WebSearch,WebFetch").
 
 READ FIRST: ${ROOT}/data/results/${c.iso3}.json — the EXISTING corpus. Note every object's "url"; these are already stored and must NOT be returned again. Also read ${ROOT}/scraper/SCRAPER_BRIEF.md (binding rules) and ${ROOT}/data/trusted-domains.json.
 
-SEARCH (WebSearch, ~6-12 queries): the country's national cyber agency, standards body, ministry, central bank, and parliament, in English AND the native language, for post-quantum / quantum-safe cryptography material. PRIORITISE the most recent items (2025-2026, and anything dated after mid-2025). Use institution-scoped queries via allowed_domains.
+SEARCH (WebSearch, ~6-12 queries): the country's national cyber agency, standards body, ministry, central bank, and parliament, in English AND the native language, for post-quantum / quantum-safe cryptography material. PRIORITISE material published or updated in JULY, AUGUST and SEPTEMBER 2026 (the gap window), then anything else dated after mid-2026 that is not already stored. Use institution-scoped queries via allowed_domains.
 
 RETURN ONLY documents that (a) pass the brief's tests - institutional issuer DOMESTIC to ${c.name} + EXPLICIT post-quantum/quantum-safe cryptography reference (exclude vendors, journalism, academia, other countries'/EU/international-body docs) - AND (b) whose URL is NOT already in the corpus you read. Fields per new doc: title, country="${c.iso3}", issuingOrg, year (only if visibly stated, else null), docType (one of Strategy, Regulation, Guidance, Standard, Roadmap, Report, Advisory, Evaluation, Announcement, Bibliometric), tier (T1-T4), url (VERBATIM), summary (1-2 sentences), included (true only for clearly official government/standards domains, else false). Dedupe by URL.
 
-If there is nothing new, return an EMPTY documents array and upToDate=true - that is the EXPECTED outcome for a recently-updated corpus. Do NOT re-list existing documents and do NOT pad.
+If there is genuinely nothing new, return an EMPTY documents array and upToDate=true. But NOTE: over a ten-week gap an active country has usually published something, so an empty result for a major jurisdiction should make you search harder before concluding it. Never re-list existing documents and never pad with non-qualifying sources.
 
 ANALYSIS CHANGE CHECK: if an EXISTING corpus document looks SUPERSEDED or materially changed (a new edition published, a draft now adopted, a migration deadline changed, a new national strategy that shifts the country's posture), describe it in changeNote so the country's analysis can be refreshed; otherwise changeNote="none".
 
@@ -62,7 +62,7 @@ const batchNum = (() => {
 })()
 
 // CUSTOM run-list: when non-empty it overrides batch selection (e.g. re-running the countries a session limit killed).
-const CUSTOM = [{"iso3":"CHL","name":"Chile"},{"iso3":"IRL","name":"Ireland"},{"iso3":"ISR","name":"Israel"},{"iso3":"LVA","name":"Latvia"},{"iso3":"NZL","name":"New Zealand"},{"iso3":"RUS","name":"Russia"},{"iso3":"TUR","name":"Türkiye"},{"iso3":"UKR","name":"Ukraine"},{"iso3":"BHR","name":"Bahrain"},{"iso3":"BRN","name":"Brunei"},{"iso3":"CYP","name":"Cyprus"},{"iso3":"DJI","name":"Djibouti"},{"iso3":"EST","name":"Estonia"},{"iso3":"GUY","name":"Guyana"},{"iso3":"HRV","name":"Croatia"}]
+const CUSTOM = [{"iso3":"USA","name":"United States"},{"iso3":"JPN","name":"Japan"},{"iso3":"FRA","name":"France"},{"iso3":"EUU","name":"European Union"},{"iso3":"DEU","name":"Germany"},{"iso3":"AUS","name":"Australia"},{"iso3":"GBR","name":"United Kingdom"},{"iso3":"SGP","name":"Singapore"},{"iso3":"CHE","name":"Switzerland"},{"iso3":"NLD","name":"Netherlands"},{"iso3":"NOR","name":"Norway"},{"iso3":"ITA","name":"Italy"},{"iso3":"ESP","name":"Spain"},{"iso3":"KOR","name":"South Korea"},{"iso3":"NATO","name":"NATO"},{"iso3":"ARE","name":"United Arab Emirates"},{"iso3":"CAN","name":"Canada"},{"iso3":"LTU","name":"Lithuania"},{"iso3":"BRA","name":"Brazil"},{"iso3":"CZE","name":"Czechia"}]
 
 const list = CUSTOM.length ? CUSTOM : BATCHES[batchNum - 1]
 const title = CUSTOM.length ? ('Delta re-run (' + list.length + ' countries)') : ('Delta batch ' + batchNum + '/' + BATCHES.length + ' (' + list.length + ' countries)')

@@ -1,20 +1,109 @@
-/* QSC Atlas - design tokens and base styles.
-   A monochrome instrument: ink on warm paper. Colour appears in exactly ONE role,
-   encoding which standards process a country aligns with. Tokens and base styles
-   adopted from the QSC Atlas design system (Claude Design handoff). */
+/* QSC Atlas - design tokens and base styles: the épuré system (labs/review/epure-audit.md).
+   An instrument in CEPS charcoal on warm paper, with CEPS teal as its one interface colour
+   (palette A, Swann 2 October 2026). Teal marks only what a visitor can act on or the current
+   state, and in each view it draws the eye to one thing: the page's one filled button, or else
+   the current tab, rail item, chosen option or today line. Every other teal is text-weight, a
+   link's words and its 1px underline. On maps, globes and charts colour has exactly ONE role,
+   encoding coordination posture, and teal never appears there.
 
+   Three layers (ui-ux-pro-max, token-architecture):
+     1. primitives: raw values, named by what they are (--c-*, --space-*, the sizes and weights);
+     2. semantic: the names every component reads, named by role (--ink, --accent, --type-*,
+        --gap-*, --w-*, --rule-*, --radius, --dur-*);
+     3. component: a shared class may alias a semantic token locally (--btn-*, --note-*), and a
+        page never writes a raw value where a token exists.
+   A token marked "legacy" keeps its old value because the protected home page or an off-site
+   tool still reads it; no shared class reads it, and no page should start to. */
+
+/* ==== 1. Primitives ========================================================================= */
+/* The reading face's stand-in while Newsreader loads (font-display: swap): Georgia scaled to
+   Newsreader's width (95.6%, measured on the About page's own paragraphs), so a paragraph keeps
+   its line breaks when the real face arrives and nothing under it jumps. Lines are set with
+   numeric line heights everywhere, so only the width needed matching. Where Georgia is not
+   installed this face is skipped and the stack falls through as before. Used on every page with
+   the site header (below), not on the home page. */
+@font-face {
+  font-family: 'Newsreader Fallback';
+  src: local('Georgia');
+  size-adjust: 95.6%;
+}
 :root {
-  /* ---- Neutrals: the whole interface ---------------------------------- */
-  --ink: #1a1a1a;
-  --ink-muted: #5c5c5c;
-  --hairline: #d8d6d0;
-  --paper: #f7f5f0; /* warm off-white, not pure white */
-  --surface: #ffffff;
-  --ink-faint: #8a8a86;
-  --wash: #efece6;
-  --wash-strong: #e4e0d8;
+  /* palette A, as hex: the only place a neutral or teal value is written */
+  --c-charcoal-900: #202425; /* CEPS charcoal */
+  --c-charcoal-700: #4b5153;
+  --c-charcoal-600: #66696a;
+  --c-stone-300: #d9d6cf;
+  --c-stone-200: #e4e0d8;
+  --c-stone-100: #efece6;
+  --c-paper: #f7f5f0; /* warm off-white, not pure white */
+  --c-white: #ffffff;
+  --c-teal-700: #207164; /* CEPS teal */
+  --c-teal-800: #185a50;
+  --c-teal-50: #e4f0ec;
 
-  /* ---- Standards-process encoding: the ONLY functional colour --------- */
+  /* the three faces (fixed): Newsreader for reading, Schibsted Grotesk for the interface,
+     Spline Sans Mono for dates, numbers and codes only */
+  --font-instrument: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-reading: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* the weights the font request in Base.astro loads, and no others */
+  --weight-regular: 400;
+  --weight-medium: 500; /* Newsreader only */
+  --weight-semibold: 600; /* Schibsted Grotesk only */
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* the 8px scale (with its 4px half-steps) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1); /* hover, press and a chevron's turn */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* something arriving */
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1); /* something leaving: it accelerates away */
+
+  --content-max: 1100px;
+  --content-wide: 1400px; /* legacy: the home page's scenes and the Exposure Clock */
+  --border-width-strong: 2px;
+}
+
+/* ==== 2. Semantic ============================================================================ */
+:root {
+  /* ---- colour: neutrals for the whole interface --------------------------------------- */
+  --ink: var(--c-charcoal-900);
+  --ink-muted: var(--c-charcoal-700); /* 7.4:1 on paper: notes, meta lines, quiet labels */
+  --ink-faint: var(--c-charcoal-600); /* 4.7:1 on paper: the faintest text, and dots */
+  --hairline: var(--c-stone-300); /* the one separator */
+  --paper: var(--c-paper);
+  --surface: var(--c-white);
+  --wash: var(--c-stone-100); /* a hovered row or button */
+  --wash-strong: var(--c-stone-200); /* a pressed button */
+  /* ---- colour: CEPS teal, the one interface colour ------------------------------------ */
+  --accent: var(--c-teal-700); /* 5.3:1 on paper; white on it 5.8:1 */
+  --accent-strong: var(--c-teal-800); /* hover and pressed */
+  --accent-wash: var(--c-teal-50); /* the current row, a pressed toggle */
+  --on-accent: var(--c-white);
+  --text-body: var(--ink);
+  --surface-page: var(--paper);
+  --surface-overlay: var(--surface);
+  --focus-ring: var(--accent);
+
+  /* ---- colour: coordination posture, data only (POSTURE_META in src/lib/process.ts) ----
+     Maps and posture dots, never an accent. */
   --process-nist: #2b4c7e;
   --process-etsi: #2e7d6f;
   --process-iso: #b07a2b;
@@ -22,94 +111,129 @@
   --process-mixed: #6b7280;
   --process-none: #e7e5df;
   --process-no-role: #cfcdc7; /* a role is not recorded (distinct from no map data) */
+  /* "No coordination posture recorded", drawn as the map and the globe draw it: the pale fill
+     (--process-none) under this ink edge, on every key, chip, finder option and list */
+  --swatch-none-edge: color-mix(in srgb, var(--ink) 45%, transparent);
 
-  /* ---- Semantic aliases ----------------------------------------------- */
-  --text-strong: var(--ink);
-  --text-body: var(--ink);
-  --text-muted: var(--ink-muted);
-  --text-faint: var(--ink-faint);
-  --surface-page: var(--paper);
-  --surface-card: var(--surface);
-  --border-hairline: var(--hairline);
-  --border-strong: var(--ink);
-  --focus-ring: var(--ink);
+  /* ---- type: seven sizes in two roles, no others ---------------------------------------
+     Newsreader, for reading: */
+  --type-display: clamp(2.2rem, 1.2rem + 3.4vw, 4.6rem); /* the home page's title only */
+  /* every other page's H1, at 500. The floor is 1.75rem, so on a phone the H1 still stands a
+     step above a section heading */
+  --type-scene: clamp(1.75rem, 1rem + 1.6vw, 2.4rem);
+  --type-h1: var(--type-scene);
+  --type-section: 1.5rem; /* a section heading, 500 (.section-h, .fr-h) */
+  --type-lede: 1.2rem; /* the lede under the H1, an onward row, 400 */
+  --type-body: 1.0625rem; /* reading text, 400, at --leading-body */
+  /* Schibsted Grotesk, for the interface: */
+  --type-control: 1rem; /* buttons, tabs, choices, list rows, header links; 400 and 600 */
+  --type-small: 0.875rem; /* meta lines, notes, labels, table text; 400 and 600 */
+  --type-caption: 0.8rem; /* chart labels, the preview line and the finder's key hint only */
+  /* Spline Sans Mono takes the size of the words around it, at 400 only */
 
-  /* ---- Type families (brief Part 1.2): Newsreader serif displays, Schibsted
-     Grotesk runs the body, Spline Sans Mono carries data, counts and labels. ---- */
-  --font-instrument: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-reading: 'Newsreader', Georgia, 'Times New Roman', serif;
-  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace; /* data, counts, scores, ISO codes; tabular */
-  --font-label: 'Spline Sans Mono', ui-monospace, Menlo, monospace; /* small uppercase labels */
+  /* one weight pair per face: the eye anchors on two weights, never five */
+  --weight-reading: var(--weight-regular); /* Newsreader text */
+  --weight-heading: var(--weight-medium); /* Newsreader headings: H1, section and closing heads */
+  --weight-ui: var(--weight-regular); /* Schibsted Grotesk */
+  --weight-ui-strong: var(--weight-semibold); /* Schibsted emphasis: labels, table heads, a current tab */
+  --weight-data: var(--weight-regular); /* Spline Sans Mono, always */
 
-  /* ---- Display type (brief 1.1): hero and scene headings ------------------- */
-  --type-display: clamp(2.2rem, 1.2rem + 3.4vw, 4.6rem); /* hero H1 only */
-  --type-scene: clamp(1.5rem, 1.0rem + 1.6vw, 2.4rem); /* scene H2 */
+  --leading-body: var(--leading-relaxed); /* reading text */
+  --leading-heading: var(--leading-tight); /* an H1 */
+  --tracking-tight: -0.01em; /* an H1 */
+  --tracking-snug: -0.005em; /* a section heading */
+  --tracking-wide: 0.02em; /* the wordmark only */
 
-  /* ---- Type scale (restrained) ---------------------------------------- */
-  --text-2xs: 0.72rem;
-  --text-xs: 0.78rem;
-  --text-sm: 0.85rem;
-  --text-base: 1rem;
-  --text-md: 1.05rem;
-  --text-lg: 1.2rem;
-  --text-xl: 1.4rem;
-  --text-2xl: 2rem;
-  --text-3xl: 2.6rem;
+  /* ---- spacing by context (internal spacing never exceeds external spacing) ------------- */
+  --gap-mark: var(--space-1); /* 4px: a word and its mark */
+  --gap-inline: var(--space-2); /* 8px: the items of a meta line, a label and its control */
+  --gap-group: var(--space-4); /* 16px: a heading and its first line, the rows of one list */
+  --gap-group-lg: var(--space-6); /* 24px: two groups inside one section */
+  --gap-related: var(--space-10); /* 40px: the next facet of the same subject */
+  --gap-subject: var(--space-24); /* 96px: a new question on the page, and the closing area */
+  --flow: var(--gap-group); /* the older names of the two inside steps, kept */
+  --flow-lg: var(--gap-group-lg);
+  /* the older section token is now the related gap, so every section that reads it tightens at
+     once; a page names --gap-subject (or .lab-section--subject) where its subject changes */
+  --section-gap: var(--gap-related);
+  /* the room between the header and a page's first line: one value on every page, so the H1
+     never jumps when a visitor moves between pages */
+  --page-top: var(--space-8);
 
-  --weight-regular: 400;
-  --weight-medium: 500;
-  --weight-semibold: 600;
-  --weight-bold: 700;
+  /* ---- widths by content -------------------------------------------------------------- */
+  /* reading text. In em, so it resolves at the size of the text it holds: about 72 characters of
+     Newsreader at 17px (510px), about 67 of Schibsted Grotesk at 14px (420px) */
+  --measure: 30em;
+  --measure-heading: 20em; /* an H1: two balanced lines of about 40 characters */
+  --w-list: 48rem; /* rows of a label, a value and a link; the closing area */
+  --w-tool: 60rem; /* a tool's controls beside its chart; a figure */
+  --w-wide: calc(var(--shell-max) - 2 * var(--shell-gutter)); /* the map, wide tables, date bands */
 
-  --leading-tight: 1.15;
-  --leading-snug: 1.3;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.65;
+  /* ---- rules: whitespace first; each weight has one job -------------------------------- */
+  --rule: 1px solid var(--hairline); /* rows of a list or table; the one line above the closing area */
+  --rule-head: 1px solid var(--ink); /* under a table's column heads only */
+  --rule-strong: 2px solid var(--ink); /* at most once a page, above its main data block */
+  --rule-preview: 1px dashed var(--ink-muted); /* the preview line only */
+  --rule-today: 2px dashed var(--accent); /* the today line on a time axis only */
+  --rule-current: 2px solid var(--accent); /* the current item of a navigation rail only */
+  --rule-section: var(--rule); /* the older name, kept */
 
-  --tracking-label: 0.06em;
-  --tracking-wide: 0.02em;
-  --measure: 68ch;
+  /* ---- radius, by role rather than size ------------------------------------------------- */
+  --radius: 2px; /* controls (buttons, fields, boxed answers, chips, the key hint) and overlays */
+  --radius-mark: 50%; /* data marks only: posture dots, timeline and chart markers */
+  /* everything else is square: rows, sections, notes, tables, figures, the map frame */
 
-  /* ---- Spacing scale -------------------------------------------------- */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-24: 6rem;
+  /* ---- motion: colour, opacity and transform only; one moving thing per view ------------- */
+  --dur-fast: 150ms; /* hover and press, a chevron's turn */
+  --dur: 200ms; /* something opening: a disclosure's content, an overlay */
+  --dur-exit: 140ms; /* something closing, about 30% faster than it opened */
+  --dur-disclose: var(--dur);
+  --dur-slow: 1100ms; /* the home globe only */
 
-  /* ---- Radius, layout, borders ---------------------------------------- */
-  --radius: 2px;
-  --radius-sm: 1px;
-  --radius-pill: 999px;
-  --content-max: 1100px;
-  --content-wide: 1400px;
-  --panel-width: 30rem;
-  --header-h: 3.5rem;
-  --border-width: 1px;
-  --border-width-strong: 2px;
+  /* ---- depth: an overlay (a tooltip, a menu, the phone menu, the finder's list) is drawn on
+     the surface with this one shadow and a hairline edge. No other shadow anywhere. */
+  --shadow-panel: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent),
+    0 10px 28px -10px color-mix(in srgb, var(--ink) 22%, transparent);
 
-  /* ---- Motion and elevation (brief 1.1) ------------------------------- */
-  --ease: cubic-bezier(0.2, 0, 0, 1);
-  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-fast: 150ms;
-  --dur-mid: 240ms;
-  --dur-slow: 1100ms; /* the globe pose across scenes, the one sustained motion */
-  --dur: 200ms;
-  --dur-panel: 280ms;
-  --shadow-panel: -8px 0 30px -12px rgba(26, 26, 26, 0.18);
-  --shadow-sheet: 0 -8px 30px -12px rgba(26, 26, 26, 0.22);
+  /* ---- the shell: header, menu, finder, footer ------------------------------------------ */
+  --target-min: 44px; /* the smallest thing a visitor taps or clicks */
+  /* the inset of an empty ::after that grows a target drawn smaller than 44px to a 44 by 44 hit
+     area around its centre, moving nothing (the target is position: relative); a side already
+     44px or more is left as it is */
+  --hit-inset: min(0px, (100% - var(--target-min)) / 2);
+  --shell-max: var(--content-max); /* header and footer share the reading container's edges */
+  --shell-gutter: var(--space-6);
+  --header-h: 3.5rem; /* 56px: the one header row at every width */
+  --finder-w: 200px; /* the header's country finder at 1000px and wider */
+  --hd-link-gap: var(--space-5);
 
-  /* ---- Scroll scenes (brief 1.1) -------------------------------------- */
-  --scene-min-h: 100svh; /* each scene is at least one viewport */
+  /* ---- the home page's scroll scenes (protected) ---------------------------------------- */
+  --scene-min-h: 100svh;
   --globe-stage-w: clamp(280px, 42vw, 620px);
-  --rail-w: 2px; /* progress rail */
+  --rail-w: 2px;
+
+  /* ---- legacy: kept at their old values only because the protected home page or an off-site
+     tool still reads them. No shared class reads them; a page moves to the step in brackets. */
+  --text-2xs: var(--type-caption);
+  --text-xs: var(--type-caption);
+  --text-sm: 0.85rem; /* the home page's buttons; elsewhere [--type-small] */
+  --text-base: var(--type-control);
+  --text-md: var(--type-body);
+  --text-lg: var(--type-lede);
+  --text-xl: 1.4rem; /* [--type-section or --type-lede] */
+  --text-2xl: 2rem; /* [--type-h1 or --type-section] */
+  --text-label: 0.9rem; /* the home globe's hidden controls; elsewhere [--type-small] */
+  --font-label: var(--font-instrument); /* [--font-instrument] */
+  --tracking-label: 0;
+  --radius-sm: 1px; /* the home globe's hidden key; elsewhere [--radius] */
+  --dur-mid: 240ms; /* the home page's scenes and the off-site tools; elsewhere [--dur] */
+}
+@media (max-width: 639.98px) {
+  :root {
+    --page-top: var(--space-5);
+    --gap-related: var(--space-8); /* 32px */
+    --gap-subject: var(--space-16); /* 64px */
+  }
 }
 
 * { box-sizing: border-box; }
@@ -117,6 +241,7 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth; /* anchor links glide; reduced-motion forces auto below */
   scroll-padding-top: var(--space-6); /* a little breathing room above an anchored section */
+  scrollbar-gutter: stable; /* the open menu stills the page without the header shifting sideways */
 }
 
 body {
@@ -127,11 +252,25 @@ body {
   background: var(--surface-page);
   color: var(--text-body);
   font-family: var(--font-instrument);
-  font-size: var(--text-base);
+  font-size: var(--type-control);
   line-height: var(--leading-normal);
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+/* The font request (Base.astro) loads only the épuré weights. A retired weight that a page still
+   asks for renders at the nearest loaded one, never as a smeared fake bold. Every page with the
+   site header (the home page keeps its own, and asks for no weight it lacks). */
+.site-header,
+.site-header ~ .page-main,
+.site-header ~ .site-footer {
+  font-synthesis-weight: none;
+}
+/* the same pages read Newsreader with its width-matched stand-in (the @font-face above) next in
+   line, so the font swap moves no line (the About page shifted 0.10 without it); the home page,
+   which keeps its own header, keeps the stack as it was */
+.site-header ~ .page-main {
+  --font-reading: 'Newsreader', 'Newsreader Fallback', Georgia, 'Times New Roman', serif;
 }
 
 a {
@@ -140,47 +279,226 @@ a {
 }
 
 h1, h2, h3, h4 {
-  font-weight: var(--weight-semibold);
-  line-height: var(--leading-tight);
-  letter-spacing: -0.011em;
-  margin: 0 0 var(--space-4);
+  font-weight: var(--weight-ui-strong);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--gap-group);
 }
 
-/* The reading layer - country summaries, blog, about - uses the serif. */
+/* The reading layer (country summaries, the commentary, About) in Newsreader at the body step,
+   held to the reading measure: about 72 characters a line. */
 .prose {
   font-family: var(--font-reading);
   max-width: var(--measure);
-  font-size: var(--text-md);
-  line-height: var(--leading-relaxed);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
   text-wrap: pretty;
 }
-/* Reading-layer links: a quiet hairline underline that firms up to ink on hover or focus. */
-.prose a {
-  color: var(--ink);
+/* emphasis in Newsreader is its 500, the one heavier weight the reading face loads */
+.prose :where(strong, b) {
+  font-weight: var(--weight-heading);
+}
+/* A link looks like a link: teal and underlined, a shade deeper on hover, focus or press (.link
+   is the same hand for a link outside the reading layer). */
+.prose a,
+.link {
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: var(--hairline);
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  transition: text-decoration-color var(--dur-fast) var(--ease-standard);
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
 }
 .prose a:hover,
-.prose a:focus-visible {
-  text-decoration-color: var(--ink);
+.prose a:focus-visible,
+.prose a:active,
+.link:hover,
+.link:focus-visible,
+.link:active {
+  color: var(--accent-strong);
 }
 
-/* Monospace for years, tier codes, numeric fields. */
+/* An index row's name: when every row of a list is a link (the Countries list, the documents,
+   the guides, What changed, the hub's groups), the words are ink on a thin teal underline, so a
+   view of a hundred rows keeps one teal mass and each row still reads as a link. Hover deepens
+   the underline (Swann, 4 October 2026). A link inside a sentence stays teal (.prose a, .link). */
+.row-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-fast) var(--ease-standard);
+}
+.row-link:hover,
+.row-link:focus-visible {
+  text-decoration-color: var(--accent-strong);
+  text-decoration-thickness: 2px;
+}
+.row-link:active {
+  color: var(--accent-strong);
+  text-decoration-color: var(--accent-strong);
+  text-decoration-thickness: 2px;
+}
+
+/* Spline Sans Mono for dates, numbers and codes only, at the size of the words around it, with
+   figures of one width so columns of numbers align. */
 .mono {
   font-family: var(--font-mono);
+  font-weight: var(--weight-data);
   font-feature-settings: 'tnum' 1;
 }
 
-/* The small uppercase section label used throughout the profile and pages. */
+/* A section heading: Newsreader at the section step, in ink. Use it where a section has a real
+   heading; a small label sitting over a heading that says the same thing goes. */
+.section-h {
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--ink);
+  margin: 0 0 var(--gap-group);
+  text-wrap: balance;
+}
+
+/* The section label kept for a group of controls inside a tool: sentence case in the interface
+   face at the small step, weight 600, in ink (never teal: teal is for what you act on). Any
+   rule above it belongs to the section that holds it, drawn with var(--rule), the hairline. */
 .section-label {
-  font-family: var(--font-label);
-  font-size: var(--text-sm);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-label);
-  color: var(--text-muted);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  line-height: var(--leading-snug);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+/* Spacing by context, for a page that names its sections in its own styles: the next facet of
+   the same subject sits --gap-related below (40px, 32px on phones), and a change of subject
+   --gap-subject (96px, 64px on phones). .lab-section (lab.css) and the frame's closing area
+   already use them. */
+
+/* The one quiet meta line under a page's lede: the interface face at the small step, ink-muted,
+   items joined by middle dots ("As of 1 October 2026 · 41 actions from 7 guides"). Give it a
+   list of items (ul > li) and the dots are drawn here, each held to the item before it, so a
+   break never starts a line with a dot. Never mono, and short enough never to wrap on a desktop.
+   A link in it stands alone on its line, so it carries a 44px hit area that moves nothing. */
+.meta-line {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.meta-line > li {
+  display: inline;
+}
+.meta-line > li:not(:first-of-type)::before {
+  content: '\00A0\00B7\20';
+  content: '\00A0\00B7\20' / '';
+  color: var(--ink-faint);
+}
+.meta-line a {
+  white-space: nowrap; /* a link never breaks inside itself, so its hit area stays on its own words */
+  position: relative;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.meta-line a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.meta-line a:hover,
+.meta-line a:active {
+  color: var(--accent-strong);
+}
+
+/* A standing note: one plain sentence in ink-muted at the reading measure, set apart by space
+   first and by one hairline above it where space alone does not part it from what it follows.
+   No box, no fill, no left rule, no teal (a left-ruled callout is the most reliable machine
+   tell). .lab-note is the kit's older name; add .note--plain where space alone parts it. */
+.note,
+.lab-note {
+  --note-color: var(--ink-muted); /* 7.4:1 on paper */
+  max-width: var(--measure);
+  margin: var(--gap-group-lg) 0 0;
+  padding: var(--space-3) 0 0;
+  border: 0;
+  border-top: var(--rule);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-style: normal;
+  line-height: var(--leading-normal);
+  color: var(--note-color);
+}
+.note--plain {
+  padding-top: 0;
+  border-top: 0;
+}
+.note a,
+.lab-note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.note a:hover,
+.note a:active,
+.lab-note a:hover,
+.lab-note a:active {
+  color: var(--accent-strong);
+}
+
+/* A quotation of a source's own words (review only, behind ?review=1): indented, in Newsreader,
+   inside curly quotation marks, with its place in the document under it. No left rule. */
+.quote {
+  max-width: var(--measure);
+  margin: var(--gap-group) 0;
+  padding: 0 0 0 var(--space-6);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+.quote > p {
+  margin: 0;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+}
+.quote > p + p {
+  margin-top: var(--gap-inline);
+}
+.quote > p:first-of-type::before {
+  content: open-quote;
+}
+.quote > p:last-of-type::after {
+  content: close-quote;
+}
+.quote-source {
+  display: block;
+  margin-top: var(--gap-inline);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* An overlay: a tooltip, a menu, a popover. The surface, a hairline edge and the one shadow. */
+.overlay {
+  background: var(--surface-overlay);
+  border: var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel);
+}
+/* every native checkbox and radio is ticked in teal */
+input[type='checkbox'],
+input[type='radio'] {
+  accent-color: var(--accent);
 }
 
 /* A quiet, centred page container for reading pages. The map page goes full width. */
@@ -190,9 +508,137 @@ h1, h2, h3, h4 {
   padding: var(--space-8) var(--space-6);
 }
 
+/* Keyboard focus: a 2px teal outline on everything, set once here. */
 :focus-visible {
   outline: var(--border-width-strong) solid var(--focus-ring);
   outline-offset: 2px;
+}
+
+/* The text field in a page body (the Countries filter, the Documents search), drawn as the
+   country finder draws its own: no box, a hairline under the words that turns to a 2px teal rule
+   on focus, growing downwards so nothing moves, and 44px tall. Native selects keep their own
+   style. The rule is the field's focus mark, so it takes the place of the outline. */
+.field-line {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: var(--target-min);
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--hairline);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--type-control);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+.field-line::placeholder {
+  color: var(--ink-muted);
+  opacity: 1;
+}
+.field-line:hover {
+  border-bottom-color: var(--ink-muted);
+}
+.field-line:focus,
+.field-line:focus-visible {
+  outline: none;
+  border-bottom-color: var(--accent);
+  box-shadow: 0 1px 0 0 var(--accent);
+}
+/* a field that cannot be used: faint words over a dashed hairline */
+.field-line:disabled {
+  color: var(--ink-faint);
+  border-bottom-style: dashed;
+  border-bottom-color: var(--hairline);
+  cursor: not-allowed;
+}
+
+/* The 44px target rule. Disclosure toggles and selects are at least 44px tall everywhere;
+   :where() keeps it at zero specificity, so a component that sizes its own control wins.
+   Any other control opts in with .hit (buttons are left to their components, because some
+   sit inside a line of text). */
+:where(summary, select),
+.hit {
+  min-height: var(--target-min);
+}
+.hit {
+  display: inline-flex;
+  align-items: center;
+  min-width: var(--target-min);
+}
+
+/* Skip link: the first thing a keyboard reaches; hidden until it has focus. */
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: var(--space-2);
+  left: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  padding: 0 var(--space-4);
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  font-weight: var(--weight-ui-strong);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+@media print {
+  .skip-link {
+    display: none;
+  }
+}
+
+/* Visible only to screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Base.astro marks <html class="js"> before first paint: a control that needs scripts shows only
+   then, and its no-script fallback (a plain link) shows only without. Nothing shifts on load. */
+html:not(.js) .js-only,
+.js .nojs-only {
+  display: none !important;
+}
+
+/* A details element fades open in 200ms (--dur-disclose, easing out) and shut in 140ms
+   (--dur-exit, easing in), so it leaves faster than it arrived. Opacity only, so a long table never
+   animates its layout, and nothing is clipped (a focus ring at the edge stays whole). It is a
+   transition, so a details element that is open when the page loads does not move. The header's
+   Find and Menu and every page with the site header (the home page keeps its own), and only where
+   the browser can reach a details element's content; elsewhere it opens at once, as before.
+   Instant under reduced motion (below). */
+@supports selector(::details-content) {
+  .site-header details::details-content,
+  .site-header ~ .page-main details::details-content {
+    opacity: 0;
+    transition:
+      opacity var(--dur-exit) var(--ease-exit),
+      content-visibility var(--dur-exit) allow-discrete;
+  }
+  .site-header details[open]::details-content,
+  .site-header ~ .page-main details[open]::details-content {
+    opacity: 1;
+    transition:
+      opacity var(--dur-disclose) var(--ease-out),
+      content-visibility var(--dur-disclose) allow-discrete;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -203,115 +649,8 @@ h1, h2, h3, h4 {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* Governance-credibility gauge (CredibilityGauge island). Kept here rather than in the component so
-   the React island renders no inline <style>, which would otherwise mismatch on hydration. */
-.gauge {
-  margin: 0;
-  display: grid;
-  gap: var(--space-5);
-  max-width: 24rem;
-}
-.gauge-svg {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-.gauge .ring {
-  fill: none;
-  stroke: var(--hairline);
-  stroke-width: 0.75;
-}
-.gauge .spoke {
-  stroke: var(--hairline);
-  stroke-width: 0.75;
-  transition: stroke var(--dur-fast) var(--ease-standard), stroke-width var(--dur-fast) var(--ease-standard);
-}
-.gauge .spoke.na {
-  stroke-dasharray: 2 3;
-}
-.gauge .spoke.is-active {
-  stroke: var(--ink);
-  stroke-width: 1.4;
-}
-/* the ring drawn around the active criterion's value dot */
-.gauge .dot-halo {
-  fill: none;
-  stroke-width: 1.25;
-}
-/* transparent hover targets over each axis; pointer only */
-.gauge-hit {
-  fill: transparent;
-  cursor: pointer;
-}
-.gauge .area {
-  fill-opacity: 0.18;
-  stroke-width: 1.5;
-  stroke-opacity: 0.9;
-}
-.gauge .axis-label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  fill: var(--ink-muted);
-  transition: fill var(--dur-fast) var(--ease-standard);
-}
-.gauge .axis-label.is-active {
-  fill: var(--ink);
-  font-weight: 600;
-}
-.gauge-values {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-sm);
-}
-/* cross-highlight: hover or focus a row to light its axis, and vice versa */
-.gauge-values tbody tr {
-  transition: background var(--dur-fast) var(--ease-standard);
-}
-.gauge-values tbody tr:hover,
-.gauge-values tbody tr.is-active {
-  background: var(--wash);
-}
-.gauge-values tbody tr.is-active th[scope='row'],
-.gauge-values tbody tr.is-active td {
-  color: var(--ink);
-}
-.gauge-values tbody tr:focus-visible {
-  outline: var(--border-width-strong) solid var(--focus-ring);
-  outline-offset: -2px;
-}
-.gauge-values th[scope='col'] {
-  text-align: left;
-  font-family: var(--font-label);
-  font-size: var(--text-2xs);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-label);
-  color: var(--ink-muted);
-  border-bottom: 1px solid var(--ink);
-  padding: var(--space-1) var(--space-2);
-}
-.gauge-values th[scope='row'] {
-  text-align: left;
-  font-weight: 600;
-  padding: var(--space-2) var(--space-2);
-}
-.gauge-values td {
-  padding: var(--space-2) var(--space-2);
-  border-top: 1px solid var(--hairline);
-  color: var(--ink-muted);
-}
-.gauge-values td.mono {
-  color: var(--ink);
-}
-.gauge .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  .site-header details::details-content,
+  .site-header ~ .page-main details::details-content {
+    transition: none;
+  }
 }

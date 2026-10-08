@@ -75,5 +75,60 @@
     "url": "https://www2.eduskunta.fi/FI/naineduskuntatoimii/julkaisut/Documents/TuV-2-2025.pdf",
     "summary": "Finnish Parliament Committee for the Future publication (2/2025) with a dedicated chapter on quantum-safe cryptography (PQC), the 2025-2030 cryptographic transition, and a 'PQC-siirtymän prosessi' (PQC migration process) section setting out concrete migration steps. Parliamentary issuer with explicit PQC content; flagged for review only because eduskunta.fi is not on the auto-include trusted-domain list.",
     "included": false
+  },
+  {
+    "title": "Kryptografiset vahvuusvaatimukset luottamuksellisuuden suojaamiseen - kansalliset turvallisuusluokat",
+    "country": "FIN",
+    "issuingOrg": "Traficom",
+    "year": 2024,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/sites/default/files/media/file/Kryptografiset_vahvuusvaatimukset_-_kansalliset_turvallisuusluokat_0.pdf",
+    "summary": "Guideline of 30.9.2024 (Dnro 190/651/2015) from Traficom's National Cyber Security Centre. It sets out the minimum cryptographic strength requirements, defined by the Traficom-led National Crypto Working Group, that the Crypto Approval Authority applies when assessing encryption products for classified information in national security classes TL IV-II. It lists the quantum-safe ML-KEM, ML-DSA and SLH-DSA parameter sets, which should by default be used in hybrid mode with an approved classical algorithm, and recommends moving to quantum-safe algorithms as soon as possible.",
+    "included": true
+  },
+  {
+    "title": "Kvanttiturvallisiin salausratkaisuihin siirtyminen julkisessa hallinnossa: tietoperusta ja suositukset kunnille",
+    "country": "FIN",
+    "issuingOrg": "VM",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://dynastyjulkaisu.luumaki.fi/kokous/2026270-15-9011.PDF",
+    "summary": "Ministry of Finance letter of 26.2.2026 (VN/4273/2026-VM-2) to all municipalities except Åland, signed by the ministry's ICT director. It gives the knowledge base and recommendations for public administration's transition to quantum-safe encryption under measure 1.4 of the cyber security strategy implementation plan, and recommends inventorying current encryption and critical data and planning the transition during 2026, in line with the EU timelines of 2030 for high-risk systems and 2035 overall.",
+    "included": true
+  },
+  {
+    "title": "Kvanttiturvalliset algoritmit ja niihin siirtyminen",
+    "country": "FIN",
+    "issuingOrg": "NCSC-FI",
+    "year": 2024,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/kvanttiturvalliset-algoritmit-ja-niihin-siirtyminen",
+    "summary": "NCSC-FI (Traficom) page, last updated 17 June 2024, on quantum-safe (PQC) algorithms and the transition to them. It states the national crypto working group's position that NIST-standardised PQC algorithms will be added to the national crypto criteria used in evaluating encryption products.",
+    "included": true
+  },
+  {
+    "title": "Kvanttiturvallisia algoritmeja lisätty kansalliseen kriteeristöön",
+    "country": "FIN",
+    "issuingOrg": "NCSC-FI",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/ajankohtaista/kvanttiturvallisia-algoritmeja-lisatty-kansalliseen-kriteeristoon",
+    "summary": "News item of 9 October 2024 announcing that the national cryptographic criteria now approve NIST's ML-KEM, ML-DSA and SLH-DSA for national use. Traficom requires them in hybrid mode, following the European approach, and advises moving to quantum-safe algorithms as soon as possible.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Crypto -aikaan valmistautuminen on käynnissä myös Suomessa",
+    "country": "FIN",
+    "issuingOrg": "NCSC-FI",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.kyberturvallisuuskeskus.fi/fi/ajankohtaista/post-quantum-crypto-aikaan-valmistautuminen-kaynnissa-myos-suomessa",
+    "summary": "NCSC-FI news item of 7 June 2023 on Finland's preparation for the post-quantum cryptography era. It reports that the national crypto working group will accept algorithms standardised through NIST's PQC process in national encryption product evaluations, and stresses the importance of crypto agility.",
+    "included": true
   }
 ]

@@ -1,0 +1,14 @@
+#!/bin/bash
+# TEMPLATE. Install as scripts/lab/vercel-ignore.sh and set it as the Vercel project's
+# "Ignored Build Step" command: bash scripts/lab/vercel-ignore.sh
+# Vercel convention: exit 0 skips the build, exit 1 builds.
+# Skip only when every changed file is watch state, a snapshot or the ledger.
+
+CHANGED=$(git diff --name-only HEAD^ HEAD 2>/dev/null)
+if [ -z "$CHANGED" ]; then exit 1; fi
+
+if echo "$CHANGED" | grep -qvE '^(data/lab/watch/|labs/ledger/|labs/\.watch/)'; then
+  exit 1
+fi
+echo "Only lab watch state or ledger changed; skipping build."
+exit 0

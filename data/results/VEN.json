@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Mincyt promueve el desarrollo soberano y seguro de la Inteligencia Artificial en Venezuela",
+    "country": "VEN",
+    "issuingOrg": "MINCYT",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://mincyt.gob.ve/mincyt-promueve-el-desarrollo-soberano-y-seguro-de-la-inteligencia-artificial-en-venezuela/",
+    "summary": "Press article from the Ministry of Science and Technology (MINCYT), dated 29 September 2026. It reports a Venezolana de Televisión interview with Vice Minister Raúl Hernández about Venezuela's AI Code of Ethics, the National Artificial Intelligence Plan (in force since 2024), and AI security. Hernández stresses the need for next-generation cryptographic protection. He refers to preparing through the Plan Nacional de Adaptación a la criptografía poscuántica (National Plan for Adaptation to Post-Quantum Cryptography), which he links to AI development. He warns that future quantum computers will make current security protocols vulnerable and decipherable.",
+    "included": true
+  }
+]

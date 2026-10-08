@@ -1,37 +1,37 @@
 {
   "GBR": {
-    "lastScraped": "2026-06-23T15:44:21.087Z",
-    "docCount": 21,
+    "lastScraped": "2026-09-06T23:42:01.005Z",
+    "docCount": 36,
     "status": "Partial"
   },
   "USA": {
-    "lastScraped": "2026-06-23T15:41:59.456Z",
-    "docCount": 51,
+    "lastScraped": "2026-09-06T23:38:55.361Z",
+    "docCount": 73,
     "status": "Partial"
   },
   "FRA": {
-    "lastScraped": "2026-06-23T15:43:07.686Z",
-    "docCount": 38,
+    "lastScraped": "2026-09-06T23:40:04.288Z",
+    "docCount": 51,
     "status": "Partial"
   },
   "DEU": {
-    "lastScraped": "2026-06-23T15:44:01.754Z",
-    "docCount": 27,
+    "lastScraped": "2026-09-06T23:41:05.084Z",
+    "docCount": 40,
     "status": "Partial"
   },
   "AUS": {
-    "lastScraped": "2026-06-23T15:45:04.228Z",
-    "docCount": 25,
+    "lastScraped": "2026-09-06T23:41:29.421Z",
+    "docCount": 31,
     "status": "Partial"
   },
   "JPN": {
-    "lastScraped": "2026-06-23T15:43:37.707Z",
-    "docCount": 41,
+    "lastScraped": "2026-09-06T23:39:31.160Z",
+    "docCount": 54,
     "status": "Partial"
   },
   "EUU": {
-    "lastScraped": "2026-06-23T15:42:38.397Z",
-    "docCount": 36,
+    "lastScraped": "2026-09-06T23:40:36.070Z",
+    "docCount": 53,
     "status": "Partial"
   },
   "CAN": {
@@ -40,8 +40,8 @@
     "status": "Partial"
   },
   "ITA": {
-    "lastScraped": "2026-06-23T15:47:40.449Z",
-    "docCount": 18,
+    "lastScraped": "2026-09-06T23:43:00.330Z",
+    "docCount": 22,
     "status": "Partial"
   },
   "NLD": {
@@ -50,8 +50,8 @@
     "status": "Partial"
   },
   "SGP": {
-    "lastScraped": "2026-06-23T15:44:41.493Z",
-    "docCount": 21,
+    "lastScraped": "2026-09-06T23:42:25.104Z",
+    "docCount": 29,
     "status": "Partial"
   },
   "KOR": {
@@ -60,8 +60,8 @@
     "status": "Partial"
   },
   "CHE": {
-    "lastScraped": "2026-06-23T15:45:42.956Z",
-    "docCount": 20,
+    "lastScraped": "2026-09-06T23:42:43.422Z",
+    "docCount": 24,
     "status": "Partial"
   },
   "ESP": {
@@ -152,7 +152,7 @@
   "EST": {
     "lastScraped": "2026-06-12T12:14:28.364Z",
     "docCount": 1,
-    "status": "Partial"
+    "status": "Placeholder"
   },
   "LVA": {
     "lastScraped": "2026-06-12T12:14:35.070Z",
@@ -287,7 +287,7 @@
   "ARG": {
     "lastScraped": "2026-06-12T21:38:24.302Z",
     "docCount": 2,
-    "status": "Partial"
+    "status": "Placeholder"
   },
   "CHL": {
     "lastScraped": "2026-06-12T21:38:31.473Z",

@@ -1,0 +1,10 @@
+{
+  "_about": "Places in src/ where a gated address is written as an href in a table that is passed through pageHref() before any visitor sees it. scripts/site/lib/source.mjs skips a line only when the file and the whole trimmed line match an entry here, so an edited line is checked again. Keep the list short: a new entry needs a reason a reviewer can verify in the file.",
+  "entries": [
+    {
+      "file": "src/lib/site/nav.ts",
+      "line": "href: '/prepare',",
+      "reason": "The SECTIONS table; primaryNav() replaces every href with pageHref(path), so Prepare appears only when its hub is built."
+    }
+  ]
+}

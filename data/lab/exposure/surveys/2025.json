@@ -1,0 +1,403 @@
+{
+  "_about": "Quantum Threat Timeline Report 2025 (Mosca and Piani, Global Risk Institute and evolutionQ), read on 30 September 2026 from the full report PDF. Page numbers are the report’s printed page numbers, which match the PDF pages. Each range is the pessimistic (lower) and optimistic (upper) average of the experts’ likelihood bins. Where a figure appears only in a chart, the excerpt gives the figure caption and, in square brackets, the horizon, followed by the chart’s value labels. Context items sit beside the band and never change its numbers.",
+  "survey": {
+    "id": "qtt-2025",
+    "title": "Quantum Threat Timeline Report 2025",
+    "authors": [
+      "Michele Mosca",
+      "Marco Piani"
+    ],
+    "publishers": [
+      "Global Risk Institute",
+      "evolutionQ"
+    ],
+    "edition": 7,
+    "experts": 26,
+    "published": "2026-03",
+    "baseYear": 2025,
+    "reportUrl": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+    "summaryUrl": "https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2025",
+    "definitionVerbatim": "Twenty-six respondents estimated the likelihood of a quantum computer capable of breaking a scheme like RSA-2048 within 24 hours – our working notion of a CRQC – and shared their opinions on various aspects of quantum computing development and on diverse factors influencing it.",
+    "definitionLocator": "p. 53, Summary and outlook",
+    "rangeMethod": {
+      "quote": "We take a conservative approach and consider the two extreme alternatives where each respondent is assigned either the higher or the lower of the extreme values of the bin they picked. This can be roughly described as considering a “pessimistic interpretation” or, alternatively, an “optimistic interpretation” of the answers’ ranges.",
+      "locator": "p. 30, section 4.2.1 Coarse-grained likelihood estimates"
+    },
+    "verify": false,
+    "verifiedAt": "2026-09-30",
+    "provenance": [
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "MARCH 2026 QUANTUM THREAT TIMELINE REPORT 2025 Authors Dr. Michele Mosca, Co-Founder & CEO, evolutionQ Inc. Dr. Marco Piani, Senior Research Analyst, evolutionQ Inc.",
+        "locator": "p. 1",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "This “Quantum Threat Timeline Report 2025” is published under license by the Global Risk Institute in Financial Services (GRI).",
+        "locator": "p. 3",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "This is the 7th report in an annual series that began in 2019, intended to shed light on when a quantum computer powerful enough to be cryptographically relevant might be developed.",
+        "locator": "p. 9",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "In 2025, we collected responses from 26 experts (listed in Appendix A.1 ).",
+        "locator": "p. 19",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "For example, an estimate made in 2020 for 10 years into the future (2030) should roughly be compared with an estimate made in 2025 (this year) for 5 years into the future.",
+        "locator": "p. 33",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "Twenty-six respondents estimated the likelihood of a quantum computer capable of breaking a scheme like RSA-2048 within 24 hours – our working notion of a CRQC – and shared their opinions on various aspects of quantum computing development and on diverse factors influencing it.",
+        "locator": "p. 53",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "Q (key question): Please indicate how likely you estimate it is that a quantum computer able to factorize a 2048-bit number in less than 24 hours will be built within the next 5 years, 10 years, 15 years, 20 years, and 30 years.",
+        "locator": "p. 68",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute and evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "Cryptographically Relevant Quantum Computer (CRQC) A quantum computer powerful enough to break widely used cryptographic systems, such as RSA-2048, within practical timeframes.",
+        "locator": "p. 73",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://globalriskinstitute.org/publication/quantum-threat-timeline-report-2025b/",
+        "title": "Quantum Threat Timeline Report 2025",
+        "publisher": "Global Risk Institute",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "9 March 2026",
+        "locator": "publication date shown on the report page",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2025",
+        "title": "Quantum Threat Timeline Research Report 2025",
+        "publisher": "evolutionQ",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "Published on March 24, 2026",
+        "locator": "publication date shown on the summary page",
+        "sourceClass": "secondary"
+      }
+    ]
+  },
+  "points": [
+    {
+      "horizonYears": 5,
+      "lower": 0.05,
+      "upper": 0.15,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "An “optimistic” interpretation of the responses – focused on the upper end of the likelihood ranges the respondents could choose from – leads, on average, to a ~49% estimate of a CRQC being developed within a decade and ~15% within 5 years.",
+          "locator": "p. 6",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Figure 17 Averaged experts’ likelihood estimates by timeframe. [value labels at 5y] Optimistic 15% Pessimistic 5%",
+          "locator": "p. 31, Figure 17 (chart value labels)",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "horizonYears": 10,
+      "lower": 0.28,
+      "upper": 0.49,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By coarse-graining all the experts’ responses, one arrives at an average likelihood of between 28% and 49% within 10 years, that is, by roughly 2035 (see Figure 30 for reference).",
+          "locator": "p. 54",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025-exec-sum.pdf/",
+          "title": "Quantum Threat Timeline Report 2025: Executive Summary",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "An analysis of the average of the experts’ estimates suggests that, for cybersecurity purposes, the threat should be considered looming: the likelihood of CRQC within 10 years is between 28% and 49%, while it is between 51% and 70% within 15 years (Figure 3).",
+          "locator": "p. 3 (PDF page)",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Figure 17 Averaged experts’ likelihood estimates by timeframe. [value labels at 10y] Optimistic 49% Pessimistic 28%",
+          "locator": "p. 31, Figure 17 (chart value labels)",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "horizonYears": 15,
+      "lower": 0.51,
+      "upper": 0.7,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Still within a ‘pessimistic’ interpretation, the average estimated probability is ~51% by the 15-year mark, and ~69% by the 20-year mark.",
+          "locator": "p. 32",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025-exec-sum.pdf/",
+          "title": "Quantum Threat Timeline Report 2025: Executive Summary",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "An analysis of the average of the experts’ estimates suggests that, for cybersecurity purposes, the threat should be considered looming: the likelihood of CRQC within 10 years is between 28% and 49%, while it is between 51% and 70% within 15 years (Figure 3).",
+          "locator": "p. 3 (PDF page)",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Figure 17 Averaged experts’ likelihood estimates by timeframe. [value labels at 15y] Optimistic 70% Pessimistic 51%",
+          "locator": "p. 31, Figure 17 (chart value labels)",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "horizonYears": 20,
+      "lower": 0.69,
+      "upper": 0.86,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Still within a ‘pessimistic’ interpretation, the average estimated probability is ~51% by the 15-year mark, and ~69% by the 20-year mark.",
+          "locator": "p. 32",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Figure 17 Averaged experts’ likelihood estimates by timeframe. [value labels at 20y] Optimistic 86% Pessimistic 69%",
+          "locator": "p. 31, Figure 17 (chart value labels)",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "horizonYears": 30,
+      "lower": 0.81,
+      "upper": 0.93,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/mp-files/pdf-quantum-threat-timeline-report-2025.pdf/",
+          "title": "Quantum Threat Timeline Report 2025",
+          "publisher": "Global Risk Institute and evolutionQ",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Figure 17 Averaged experts’ likelihood estimates by timeframe. [value labels at 30y] Optimistic 93% Pessimistic 81%",
+          "locator": "p. 31, Figure 17 (chart value labels)",
+          "sourceClass": "secondary"
+        }
+      ]
+    }
+  ],
+  "context": [
+    {
+      "id": "gri-briefing-2026-03",
+      "date": "2026-03-19",
+      "precision": "day",
+      "label": "A Global Risk Institute briefing reports a proposed machine design that could cut the qubits needed to break current encryption, and new German guidance on phasing out classical public-key cryptography.",
+      "publisher": "Global Risk Institute",
+      "url": "https://globalriskinstitute.org/publication/quantum-briefing-developments-in-quantum-technology-and-in-regulations-addressing-the-quantum-threat/",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-developments-in-quantum-technology-and-in-regulations-addressing-the-quantum-threat/",
+          "title": "Quantum Briefing: Developments in Quantum Technology and in Regulations Addressing the Quantum Threat",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "19 March 2026",
+          "locator": "publication date shown on the page",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-developments-in-quantum-technology-and-in-regulations-addressing-the-quantum-threat/",
+          "title": "Quantum Briefing: Developments in Quantum Technology and in Regulations Addressing the Quantum Threat",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "One such development is the proposal of a new fault-tolerant quantum computing architecture (Pinnacle Architecture) which could significantly reduce the number of physical qubits needed to break traditional encryption.",
+          "locator": "page summary",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-developments-in-quantum-technology-and-in-regulations-addressing-the-quantum-threat/",
+          "title": "Quantum Briefing: Developments in Quantum Technology and in Regulations Addressing the Quantum Threat",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The major regulatory development of note is updated guidance from Germany’s Federal Office for Information Security (BSI), which now recommends phasing out traditional public-key cryptography by 2030–2031, especially for high-security use cases.",
+          "locator": "page summary",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "gri-briefing-2026-06",
+      "date": "2026-06-22",
+      "precision": "day",
+      "label": "A Global Risk Institute briefing reports two new research papers that lower the estimated resources needed to break common public-key cryptography, and says the timeline may be shortening again.",
+      "publisher": "Global Risk Institute",
+      "url": "https://globalriskinstitute.org/publication/quantum-briefing-recent-quantum-computing-progress-and-its-implications-for-cybersecurity/",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-recent-quantum-computing-progress-and-its-implications-for-cybersecurity/",
+          "title": "Quantum Briefing: Recent Quantum-Computing Progress and its Implications for Cybersecurity",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "22 June 2026",
+          "locator": "publication date shown on the page",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-recent-quantum-computing-progress-and-its-implications-for-cybersecurity/",
+          "title": "Quantum Briefing: Recent Quantum-Computing Progress and its Implications for Cybersecurity",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Recent advances in quantum computing suggest the timeline for a cryptographically relevant quantum computer may be shortening again, with important implications for cybersecurity and digital trust.",
+          "locator": "page summary",
+          "sourceClass": "secondary"
+        },
+        {
+          "url": "https://globalriskinstitute.org/publication/quantum-briefing-recent-quantum-computing-progress-and-its-implications-for-cybersecurity/",
+          "title": "Quantum Briefing: Recent Quantum-Computing Progress and its Implications for Cybersecurity",
+          "publisher": "Global Risk Institute",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This briefing note highlights the findings of two new research papers that significantly reduce estimated resource requirements for breaking widely used public-key cryptography, alongside strategic signals from Google that reinforce the case for faster action.",
+          "locator": "page summary",
+          "sourceClass": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "bsi-tr-02102-1-2026-01",
+      "date": "2026-01-23",
+      "precision": "day",
+      "label": "Germany’s BSI recommends classical key agreement on its own only until the end of 2031, and a move to quantum-safe key agreement by the end of 2030 where protection needs are very high.",
+      "publisher": "Federal Office for Information Security (BSI)",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile&v=14",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile&v=14",
+          "title": "BSI TR-02102-1 Cryptographic Mechanisms: Recommendations and Key Lengths, Version 2026-01",
+          "publisher": "Federal Office for Information Security (BSI)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Abbreviation: BSI TR-02102-1 Version: 2026-01 As of: January 23, 2026",
+          "locator": "title page (p. 1)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile&v=14",
+          "title": "BSI TR-02102-1 Cryptographic Mechanisms: Recommendations and Key Lengths, Version 2026-01",
+          "publisher": "Federal Office for Information Security (BSI)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The sole use of classic key agreement mechanisms is only recommended until the end of 2031, see also Section 2.3. For applications with very high protection requirements, the transition to quantum-safe mechanisms should already take place by the end of 2030.",
+          "locator": "Section 2.1, p. 28",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "reference": "Mosca, M. (2018). Cybersecurity in an era with quantum computers: Will we be ready? IEEE Security & Privacy, 16(5), 38 to 41.",
+    "doi": "10.1109/MSP.2018.3761723",
+    "verify": false,
+    "verifiedAt": "2026-09-30",
+    "provenance": [
+      {
+        "url": "https://doi.org/api/handles/10.1109/MSP.2018.3761723",
+        "title": "DOI handle record 10.1109/MSP.2018.3761723",
+        "publisher": "doi.org",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "\"handle\":\"10.1109/MSP.2018.3761723\",\"values\":[{\"index\":1,\"type\":\"URL\",\"data\":{\"format\":\"string\",\"value\":\"https://ieeexplore.ieee.org/document/8490169/\"}",
+        "locator": "handle record, index 1 (URL)",
+        "sourceClass": "secondary"
+      },
+      {
+        "url": "https://doi.org/10.1109/MSP.2018.3761723",
+        "title": "Cybersecurity in an Era with Quantum Computers: Will We Be Ready?",
+        "publisher": "doi.org (Crossref metadata)",
+        "retrievedAt": "2026-09-30",
+        "excerpt": "Mosca, M. (2018). Cybersecurity in an Era with Quantum Computers: Will We Be Ready? IEEE Security &Amp; Privacy, 16(5), 38–41. https://doi.org/10.1109/msp.2018.3761723",
+        "locator": "APA citation returned by doi.org content negotiation",
+        "sourceClass": "secondary"
+      }
+    ]
+  }
+}

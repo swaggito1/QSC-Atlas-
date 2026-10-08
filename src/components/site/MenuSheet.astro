@@ -1,0 +1,229 @@
+---
+// The menu under 1000px (spec 3.2): a native details element, so it opens and closes without
+// JavaScript. The sheet is an overlay on the surface (the one shadow); it holds the finder first,
+// then each shown section with its question as a muted line, then the quiet links of menuLinks()
+// in nav.ts: how to read the Atlas (/who) and Report an error, whose subject names this page.
+// Following a link closes it (src/scripts/finder.ts). Its states match the header's: Menu turns
+// teal on hover and carries the 2px teal rule while open, a section gets a hairline underline on
+// hover and the current one a 2px teal underline. Each row is the section's name at the control
+// step, weight 600, over its question at the small step in ink-muted: one face, two sizes.
+import CountryFinder from './CountryFinder.astro';
+import { withSubject } from '../../lib/site/meta';
+import { menuLinks } from '../../lib/site/nav';
+import type { NavItem } from '../../lib/site/nav';
+
+interface Props {
+  items: (NavItem & { current: boolean })[];
+  pathname: string;
+  title: string;
+}
+const { items, pathname, title } = Astro.props;
+const small = menuLinks().map((l) => ({ ...l, href: withSubject(l.href, title, pathname) }));
+---
+
+<details class="hd-pop hd-menu" data-hd="menu">
+  <summary class="hd-menu-btn">
+    <span class="lbl-menu">Menu</span>
+    <span class="lbl-close" aria-hidden="true">Close</span>
+  </summary>
+  <div class="sheet">
+    <div class="sheet-inner">
+      <CountryFinder id="finder-sheet" variant="panel" />
+      <nav aria-label="Menu">
+        <ul class="sheet-links">
+          {
+            items.map((item) => (
+              <li>
+                <a href={item.href} aria-current={item.current ? 'page' : undefined}>
+                  <span class="sl-label">{item.label}</span>
+                  <span class="sl-question">{item.question}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <ul class="sheet-small">
+        {
+          small.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</details>
+
+<style>
+  /* the menu exists under 1000px only; wide screens show the links in the row */
+  .hd-menu {
+    display: none;
+  }
+  @media (max-width: 999.98px) {
+    .hd-menu {
+      display: block;
+    }
+    /* while the sheet is open the page beneath stays still; CSS only, so it holds without scripts */
+    :global(html:has(.hd-menu[open])) {
+      overflow: hidden;
+    }
+  }
+  .hd-menu > summary {
+    list-style: none;
+  }
+  .hd-menu > summary::-webkit-details-marker {
+    display: none;
+  }
+  .hd-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--target-min);
+    min-height: var(--target-min);
+    padding: 0;
+    font-size: var(--type-control);
+    font-weight: var(--weight-ui);
+    color: var(--ink);
+    cursor: pointer;
+    user-select: none;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .hd-menu-btn:hover,
+  .hd-menu-btn:active {
+    color: var(--accent-strong);
+  }
+  /* open: the same 2px teal rule the open Find button carries */
+  .hd-menu[open] > .hd-menu-btn {
+    box-shadow: inset 0 calc(-1 * var(--border-width-strong)) 0 var(--accent);
+  }
+  .lbl-close {
+    display: none;
+  }
+  .hd-menu[open] .lbl-close {
+    display: inline;
+  }
+  /* "Menu" stays the accessible name while open; only the visible word changes */
+  .hd-menu[open] .lbl-menu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .sheet {
+    position: absolute;
+    top: calc(100% + 1px); /* below the header's hairline, which stays in view */
+    left: 0;
+    right: 0;
+    /* the sheet takes the whole screen under the header, so nothing of the page shows through */
+    height: calc(100svh - var(--header-h));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--surface-overlay);
+    box-shadow: var(--shadow-panel);
+  }
+  .sheet-inner {
+    max-width: var(--shell-max);
+    margin: 0 auto;
+    padding: var(--space-2) var(--shell-gutter) var(--space-6);
+  }
+
+  .sheet-links {
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+  }
+  .sheet-links li + li {
+    border-top: var(--rule);
+  }
+  .sheet-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-1);
+    min-height: var(--target-min);
+    padding: var(--space-3) 0;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .sl-label {
+    font-size: var(--type-control);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+    text-decoration: underline 2px transparent;
+    text-underline-offset: 6px;
+    transition: text-decoration-color var(--dur-fast) var(--ease-standard);
+  }
+  .sheet-links a:hover .sl-label {
+    text-decoration-color: var(--hairline);
+  }
+  .sheet-links a:active .sl-label {
+    text-decoration-color: var(--ink-muted);
+  }
+  /* the current section: a 2px teal underline, as in the wide header */
+  .sheet-links a[aria-current='page'] .sl-label {
+    text-decoration-color: var(--accent);
+  }
+  .sl-question {
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
+    max-width: var(--measure);
+  }
+
+  .sheet-small {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: var(--space-2) 0 0;
+    padding: var(--space-2) 0 0;
+    border-top: var(--rule);
+  }
+  .sheet-small li {
+    display: inline-flex;
+    align-items: center;
+  }
+  /* the dot follows its item, so a line that wraps never starts with one */
+  .sheet-small li:not(:last-child)::after {
+    content: '\00B7';
+    content: '\00B7' / '';
+    padding: 0 var(--gap-inline);
+    color: var(--ink-faint);
+  }
+  .sheet-small a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    text-decoration: underline;
+    text-decoration-color: var(--hairline);
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard), text-decoration-color var(--dur-fast) var(--ease-standard);
+  }
+  .sheet-small a:hover,
+  .sheet-small a:active {
+    color: var(--accent-strong);
+    text-decoration-color: currentColor;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hd-menu-btn,
+    .sl-label,
+    .sheet-small a {
+      transition: none;
+    }
+  }
+
+  /* on paper the Menu does nothing; the header's own print rule cannot reach this component */
+  @media print {
+    .hd-menu {
+      display: none !important;
+    }
+  }
+</style>

@@ -9,5 +9,82 @@
     "url": "https://cyber.ee/resources/news/estonia-pqc-transition/",
     "summary": "Announcement that Cybernetica was awarded strategic Estonian government procurements to lead the post-quantum/quantum-safe cryptography transition of national e-governance systems. Flagged for review as the issuer is a vendor-in-programme rather than a government body.",
     "included": false
+  },
+  {
+    "title": "Küberturvalisuse strateegia 2024-2030 „Läbivalt IT-vaatlikum Eesti“",
+    "country": "EST",
+    "issuingOrg": "MKM",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://mkm.ee/sites/default/files/documents/2024-12/Ku%CC%88berturvalisuse%20strateegia%202024-2030.pdf",
+    "summary": "Estonia's national cybersecurity strategy for 2024 to 2030 from the Ministry of Economic Affairs and Communications. It names quantum computers as a threat to current cryptographic algorithms, calls for quantum-resistant cryptographic solutions, and sets an objective that state information be protected with approved or certified quantum-safe communications security solutions, backed by a national crypto competence centre.",
+    "included": true
+  },
+  {
+    "title": "Krüptoalgoritmid ning nende tugi teekides ja infosüsteemides",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ria.ee/media/3041/download",
+    "summary": "Technical study written by Cybernetica for RIA (version 2.0, 15 June 2023) on cryptographic algorithms and their support in libraries and information systems. Sections 2.7-2.8 cover the mathematical foundations of post-quantum cryptography, the state of its standardisation, the adoption of post-quantum algorithms and the challenges involved. It notes that Estonia had not yet published a timeline or guidance for migrating to post-quantum algorithms, warns of the risk to e-identity and digital signatures, and recommends hybrid modes.",
+    "included": true
+  },
+  {
+    "title": "TLS 1.3 võtme kvantkindel hübriidkehtestus (X25519MLKEM768)",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://www.ria.ee/blogi/tls-13-votme-kvantkindel-hubriidkehtestus-x25519mlkem768",
+    "summary": "RIA technical article dated 29 April 2025 explaining hybrid quantum-safe key establishment in TLS 1.3, which combines classical X25519 with post-quantum ML-KEM. It walks through the protocol using diagrams and packet analysis.",
+    "included": true
+  },
+  {
+    "title": "Cryptographic algorithms lifecycle report 2016",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2016,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.ria.ee/sites/default/files/documents/2022-11/Cryptographic-Algorithms-Lifecycle-2016.pdf",
+    "summary": "Research report procured by RIA and written with Cybernetica (version 3.0, 22 June 2016) on the lifecycle of cryptographic algorithms used in Estonia. It has a dedicated chapter on post-quantum cryptography covering quantum computers and the major candidate asymmetric primitives for the post-quantum era.",
+    "included": true
+  },
+  {
+    "title": "Krüptograafiliste algoritmide elutsükli uuring 2017",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2018,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ria.ee/sites/default/files/documents/2022-11/Kruptograafiliste-algoritmide-elutsukkel-2017.pdf",
+    "summary": "RIA-commissioned technical study on the lifecycle of cryptographic algorithms (version 2.0, dated 9 February 2018). It states that preparations for the transition to post-quantum algorithms must begin now and discusses quantum-resistant algorithms in the context of the next ID card generation.",
+    "included": true
+  },
+  {
+    "title": "RIA CyberMeetUp in Tartu June 10th 2026",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.ria.ee/en/ria-cybermeetup-tartu-june-10th-2026",
+    "summary": "RIA event page for its CyberMeetUp in Tartu on 10 June 2026, announcing that the edition would introduce Estonia's roadmap for the transition to post-quantum cryptography. The programme lists a Cybernetica researcher presenting the \"Estonian PQC Migration Roadmap\"; the page itself gives no roadmap content.",
+    "included": true
+  },
+  {
+    "title": "Kvantarvutikindlus, tehisintellekt ja tervishoid saavad küberis suure rahasüsti",
+    "country": "EST",
+    "issuingOrg": "RIA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://ria.ee/kvantarvutikindlus-tehisintellekt-ja-tervishoid-saavad-kuberis-suure-rahasusti",
+    "summary": "RIA news item (2025) relaying new ECCC funding calls under Digital Europe and Horizon Europe, including a call on moving to post-quantum public key infrastructures and Horizon calls on evaluating PQC primitives, securing PQC implementations and integrating PQC into protocols (deadlines 12.11.2025). The calls are EU calls; RIA, which hosts Estonia's national coordination centre (NCC-EE), passes them on.",
+    "included": true
   }
 ]

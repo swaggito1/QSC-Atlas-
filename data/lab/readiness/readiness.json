@@ -1,0 +1,1661 @@
+{
+  "_about": "Readiness Check: published post-quantum migration guidance as frameworks, dated milestones and organisational actions, each quoted from its institutional source. Milestones are targets set by guidance or soft law, never legal deadlines. Excerpts were string-matched against the extracted source texts on 1 October 2026; French excerpts stay in French. Built from the readiness grounding pack; no score, no ranking, and nothing about a visitor is stored. documents holds the date printed on each source document, for the reference list. In entry, question text and the outcome yes and no are short labels; the page quotes the excerpts. A milestone with recurs set is asked for again every year from its date.",
+  "frameworks": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This document is the first deliverable of the NIS CG work stream on PQC and is meant to be a first high-level paper aimed at the Member States.",
+          "locator": "p. 2, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "With some adaptions this document will also be useful for government organisations and other entities including the ones that have to comply to the NIS2 Directive.",
+          "locator": "p. 5, section 3.1 Scope",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "In addition to these recommendations, this document presents a recommended timeline for the transition to PQC in the European Union",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-roadmap",
+      "label": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography",
+      "shortLabel": "EU roadmap",
+      "issuer": "NIS Cooperation Group",
+      "jurisdiction": "EUU",
+      "status": "published",
+      "bindingness": "soft-law",
+      "audience": "Member States in the first place and, with some adaptation, government organisations and other entities, including those that must comply with NIS2",
+      "appliesToPosture": "EU",
+      "milestones": [
+        {
+          "id": "eu-2026",
+          "year": 2026,
+          "month": 12,
+          "label": "the First Steps and the start of planning and pilots for high- and medium-risk use cases",
+          "kind": "plan",
+          "provenance": [
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Member States should ensure the measures listed in First Steps are accomplished before the end of 2026",
+              "locator": "p. 7, section 4.2",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "PQC transition planning and pilots for high- and medium-risk use cases have been initiated.",
+              "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2026",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "eu-2030",
+          "year": 2030,
+          "month": 12,
+          "label": "moving high-risk use cases, with quantum-safe software and firmware upgrades on by default",
+          "kind": "priority",
+          "provenance": [
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+              "locator": "p. 3, Executive Summary",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+              "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "eu-2035",
+          "year": 2035,
+          "month": 12,
+          "label": "moving medium-risk use cases, and as many low-risk ones as feasible",
+          "kind": "complete",
+          "provenance": [
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+              "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+              "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "In this guidance, the NCSC sets out some key target dates for migration activities.",
+          "locator": "Executive summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is primarily aimed at technical decision-makers and risk owners of large organisations, operators of critical national infrastructure (CNI) systems including industrial control systems (ICS), and companies that have bespoke IT (such as proprietary communications systems).",
+          "locator": "About this guidance",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-timelines",
+      "label": "Timelines for migration to post-quantum cryptography",
+      "shortLabel": "NCSC timelines",
+      "issuer": "National Cyber Security Centre",
+      "jurisdiction": "GBR",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "technical decision-makers and risk owners, mainly in large organisations, operators of critical national infrastructure and companies that have bespoke IT",
+      "appliesToPosture": "NIST-bloc",
+      "milestones": [
+        {
+          "id": "ncsc-2028",
+          "year": 2028,
+          "month": null,
+          "label": "discovery and assessment, and an initial migration plan",
+          "kind": "plan",
+          "provenance": [
+            {
+              "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+              "title": "Timelines for migration to post-quantum cryptography",
+              "publisher": "National Cyber Security Centre",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "2028 Complete the discovery and assessment phase.",
+              "locator": "Timelines for PQC migration, recommended timeline table, row 2028",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "ncsc-2031",
+          "year": 2031,
+          "month": null,
+          "label": "the highest-priority migration, and a refined plan",
+          "kind": "priority",
+          "provenance": [
+            {
+              "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+              "title": "Timelines for migration to post-quantum cryptography",
+              "publisher": "National Cyber Security Centre",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "2031 Complete your highest priority migration activities to protect your most critical assets.",
+              "locator": "Timelines for PQC migration, recommended timeline table, row 2031",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "ncsc-2035",
+          "year": 2035,
+          "month": null,
+          "label": "completing migration of all systems, services and products",
+          "kind": "complete",
+          "provenance": [
+            {
+              "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+              "title": "Timelines for migration to post-quantum cryptography",
+              "publisher": "National Cyber Security Centre",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "This leads to a target date of 2035 for completing migration to post-quantum cryptography.",
+              "locator": "Timelines for PQC migration",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+          "title": "Next steps in preparing for post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "How system owners can begin planning for the migration to post-quantum cryptography (PQC).",
+          "locator": "Page summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+          "title": "Next steps in preparing for post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Technical system and risk owners of both enterprise and bespoke IT should begin or continue financial planning for updating their systems to use PQC.",
+          "locator": "Implications of PQC migration for users and system owners",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-next-steps",
+      "label": "Next steps in preparing for post-quantum cryptography",
+      "shortLabel": "NCSC next steps",
+      "issuer": "National Cyber Security Centre",
+      "jurisdiction": "GBR",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "system owners, in particular technical system and risk owners of enterprise and bespoke IT",
+      "appliesToPosture": "NIST-bloc",
+      "milestones": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This publication is the Cyber Centre’s recommended roadmap for the migration of non-classified IT systems within the GC to use PQC.",
+          "locator": "Overview",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is aimed at directors and managers of IT systems in federal departments and agencies and decision makers accountable for the migration to PQC.",
+          "locator": "Overview",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-roadmap",
+      "label": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+      "shortLabel": "Canadian roadmap",
+      "issuer": "Canadian Centre for Cyber Security",
+      "jurisdiction": "CAN",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "directors and managers of IT systems in federal departments and agencies, and decision makers accountable for the migration, for non-classified systems only",
+      "appliesToPosture": "NIST-bloc",
+      "milestones": [
+        {
+          "id": "ca-2026-plan",
+          "year": 2026,
+          "month": 4,
+          "label": "an initial departmental migration plan",
+          "kind": "plan",
+          "provenance": [
+            {
+              "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+              "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+              "publisher": "Canadian Centre for Cyber Security",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "April 2026: Develop an initial departmental PQC migration plan",
+              "locator": "Section 4, Milestones and deliverables",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "ca-2026-report",
+          "year": 2026,
+          "month": 4,
+          "label": "progress reports, every year from April 2026",
+          "kind": "other",
+          "recurs": "yearly",
+          "provenance": [
+            {
+              "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+              "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+              "publisher": "Canadian Centre for Cyber Security",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Beginning April 2026 and annually after: Report on PQC migration progress",
+              "locator": "Section 4, Milestones and deliverables",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "ca-2031",
+          "year": 2031,
+          "month": 12,
+          "label": "completing migration of high priority systems",
+          "kind": "priority",
+          "provenance": [
+            {
+              "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+              "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+              "publisher": "Canadian Centre for Cyber Security",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "End of 2031: Completion of PQC migration of high priority systems",
+              "locator": "Section 4, Milestones and deliverables",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "id": "ca-2035",
+          "year": 2035,
+          "month": 12,
+          "label": "completing migration of the remaining systems",
+          "kind": "complete",
+          "provenance": [
+            {
+              "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+              "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+              "publisher": "Canadian Centre for Cyber Security",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "End of 2035: Completion of PQC migration of remaining systems",
+              "locator": "Section 4, Milestones and deliverables",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+          "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+          "publisher": "ANSSI",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "L'ANSSI conseille aux organisations publiques et privées de démarrer dès à présent un premier travail d'inventaire, afin d'obtenir une bonne visibilité de ses usages de la cryptographie.",
+          "locator": "Question on when organisations will need to implement PQC",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+          "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+          "publisher": "ANSSI",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "À noter : Les préconisations de l'ANSSI sur la PQC (y compris sur l'hybridation) n'ont pas à ce jour de caractère d'obligation réglementaire.",
+          "locator": "Posture technique",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "anssi-faq",
+      "label": "FaQ sur la Cryptographie post-quantique (PQC)",
+      "shortLabel": "ANSSI FAQ",
+      "issuer": "ANSSI",
+      "jurisdiction": "FRA",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "public and private organisations (organisations publiques et privées)",
+      "appliesToPosture": "EU",
+      "milestones": [
+        {
+          "id": "anssi-2030",
+          "year": 2030,
+          "month": null,
+          "label": "no longer buying products without post-quantum cryptography",
+          "kind": "procurement",
+          "provenance": [
+            {
+              "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+              "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+              "publisher": "ANSSI",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Ne plus acheter des produits n’intégrant pas de PQC à partir de 2030.",
+              "locator": "Question on prerequisites for a transition plan, Bonnes pratiques",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+          "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+          "publisher": "CISA, NSA and NIST",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "created this factsheet to inform organizations — especially those that support Critical Infrastructure — about the impacts of quantum capabilities",
+          "locator": "p. 1, Background",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+          "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+          "publisher": "CISA, NSA and NIST",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "CISA, NSA, and NIST urge organizations to begin preparing now by creating quantum-readiness roadmaps, conducting inventories, applying risk assessments and analysis, and engaging vendors.",
+          "locator": "p. 1, Why prepare now?",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cisa-factsheet",
+      "label": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+      "shortLabel": "CISA, NSA and NIST factsheet",
+      "issuer": "CISA, NSA and NIST",
+      "jurisdiction": "USA",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "organisations, especially those that support critical infrastructure",
+      "appliesToPosture": "NIST-bloc",
+      "milestones": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This manual mainly focuses on giving advice and concrete steps to urgent adopters",
+          "locator": "Printed p. 20, section 2.1",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Therefore, no rights can be derived from this publication and included advice may prove to be outdated after publication of this handbook.",
+          "locator": "Printed p. 2, colophon",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-handbook",
+      "label": "The PQC Migration Handbook: Guidelines for Migrating to Post-Quantum Cryptography",
+      "shortLabel": "Dutch Handbook",
+      "issuer": "AIVD, CWI and TNO",
+      "jurisdiction": "NLD",
+      "status": "published",
+      "bindingness": "guidance",
+      "audience": "organisations, with most of its advice aimed at urgent adopters",
+      "appliesToPosture": "EU",
+      "milestones": []
+    }
+  ],
+  "domains": [
+    {
+      "id": "governance",
+      "label": "Governance",
+      "description": "Who leads the migration, who pays for it and who is told how it is going."
+    },
+    {
+      "id": "discovery",
+      "label": "Discovery",
+      "description": "What cryptography you run, where it runs and what it protects."
+    },
+    {
+      "id": "planning",
+      "label": "Planning",
+      "description": "What moves first, by when and by which route."
+    },
+    {
+      "id": "suppliers",
+      "label": "Suppliers",
+      "description": "What you buy, and what your vendors say they will deliver."
+    },
+    {
+      "id": "migration",
+      "label": "Migration",
+      "description": "Moving systems to post-quantum cryptography and switching the old algorithms off."
+    },
+    {
+      "id": "assurance",
+      "label": "Assurance and agility",
+      "description": "Checking that the move holds, and keeping the next change easy."
+    }
+  ],
+  "actions": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "To develop this plan, we recommend establishing a committee and identify a dedicated migration lead. The committee should consist of stakeholders throughout the organization and should include at least one member from senior management to ensure executive buy in and support.",
+          "locator": "Section 3.1 Preparation; section 3.1.1 Roles and responsibilities",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-committee",
+      "domain": "governance",
+      "source": "ca-roadmap",
+      "label": "Form a migration committee with a senior sponsor and a named lead",
+      "description": "The committee draws on technical and non-technical areas such as finance, project management, procurement and asset management, and includes at least one senior manager. The roadmap also recommends an executive lead for oversight and accountability, and says a technical lead may handle coordination.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": [
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2026-plan"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+          "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+          "publisher": "CISA, NSA and NIST",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "the authoring agencies encourage organizations to create a quantum-readiness roadmap by first establishing a project management team to plan and scope the organization’s migration to PQC.",
+          "locator": "p. 1, Establish a quantum-readiness roadmap; p. 2, opening paragraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cisa-team",
+      "domain": "governance",
+      "source": "cisa-factsheet",
+      "label": "Set up a quantum-readiness project team",
+      "description": "The factsheet’s first step is a project team that plans and scopes the migration and leads the inventory, joined by the cybersecurity and privacy risk managers who can put the most exposed assets first. It sets no date and urges organisations to start preparing now.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Member States should encourage public administrations and other critical infrastructures, notably entities in scope of the NIS 2 Directive, to include the quantum threat to cryptography in their top-level risk management. This ensures that the threat and risk is being discussed and evaluated at the board level.",
+          "locator": "p. 12, section 6.2 First Steps, Perform quantum risk analysis",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-board-risk",
+      "domain": "governance",
+      "source": "eu-roadmap",
+      "label": "Put the quantum threat into board-level risk management",
+      "description": "One of the roadmap’s First Steps. It adds that quantum risk should in future be part of regular risk management.",
+      "audienceNote": "The roadmap asks Member States to encourage public administrations and NIS2 entities to do this.",
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Like any major IT or OT upgrade, the total financial cost of PQC migration could be significant, so it’s essential that organisations budget accordingly, including for preparatory activities as well as the actual migration.",
+          "locator": "Background",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-budget",
+      "domain": "governance",
+      "source": "ncsc-timelines",
+      "label": "Budget for the preparation as well as the migration",
+      "description": "The NCSC expects the migration to span several leadership cycles in most large organisations, and says its headline dates matter for investment decisions.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Before embarking on cryptographic discovery, it is essential to identify and understand the organisation's cryptographic policies. This preparatory step ensures that cryptographic efforts are aligned with legal requirements and organisational security goals and defines the roles and responsibilities related to cryptographic tasks.",
+          "locator": "Printed p. 30, section 2.3.1 Cryptographic Policies; no-regret moves on printed pp. 15 to 16",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-policies",
+      "domain": "governance",
+      "source": "nl-handbook",
+      "label": "Review your cryptographic policies before discovery",
+      "description": "Policies cover procedures for keys and their life-cycle, the algorithms and protocols you allow, and road maps and target dates for cryptographic migrations, checked against the rules that apply to you. The Handbook counts reviewing them among its no-regret moves.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Beginning April 2026 and annually after: Report on PQC migration progress",
+          "locator": "Overview; section 4 Milestones and deliverables; section 5.2",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-report",
+      "domain": "governance",
+      "source": "ca-roadmap",
+      "label": "Report migration progress every year",
+      "description": "The Treasury Board of Canada Secretariat collects the reports with the yearly departmental plan on service and digital.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": [
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2026-report"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "To signal the demand to your suppliers and demonstrate to your customers and other stakeholders that you are actively addressing the threat, you could consider sharing a statement of intent for your PQC migration.",
+          "locator": "Next steps",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-intent",
+      "domain": "governance",
+      "source": "ncsc-timelines",
+      "label": "Consider publishing a statement of intent",
+      "description": "Optional in the source. It could cover how you see the threat, your proposed responses, your level of ambition and timelines, and the end state you want, and it shows suppliers there is demand.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Firstly, Urgent Adopters are organisations that should already start taking steps towards PQC migration now, or should already have done so. Secondly, Regular Adopters are organisations that can take a more reactive stance towards PQC migration for now",
+          "locator": "Printed p. 19, chapter 2; flowchart Figure 2.2, printed p. 26; section 2.1.4, printed p. 24",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-persona",
+      "domain": "discovery",
+      "source": "nl-handbook",
+      "label": "Work out whether you are an urgent or a regular adopter",
+      "description": "The Handbook’s flowchart asks about long-lived confidential or personal data, systems that large numbers of people depend on, systems meant to last more than ten years, and the organisations you supply. It advises being conservative when you decide.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "A first essential step and “no-regret” move for every entity is to create and maintain current inventories of assets that perform cryptographic operations and of assets that have cryptographic operations performed on them as part of asset management.",
+          "locator": "p. 11, section 6.2 First Steps",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120",
+          "title": "EU Roadmap on PQC: Frequently Asked Questions",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "No, organisations do not need to complete their inventory prior to commencing planning and prioritisation.",
+          "locator": "p. 8, question 4.2",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-inventory",
+      "domain": "discovery",
+      "source": "eu-roadmap",
+      "label": "Create and keep a cryptographic inventory",
+      "description": "A First Step, and one the roadmap calls a no-regret move for every entity. It recommends a standard format such as a Cryptographic Bill of Materials (CBOM). Its FAQ adds that planning and setting priorities need not wait for a complete inventory.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Carry out a full discovery exercise (assessing your estate to understand which services and infrastructure that depend on cryptography need to be upgraded to PQC)",
+          "locator": "Executive summary, By 2028; Timelines for PQC migration",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-discovery",
+      "domain": "discovery",
+      "source": "ncsc-timelines",
+      "label": "Carry out a full discovery exercise",
+      "description": "Assess the estate to find which services and infrastructure that depend on cryptography need upgrading. The NCSC expects discovery, a migration strategy and an initial plan to take large organisations two to three years.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2028"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "forming a record of the data you hold (including its expected lifetime and its value to an adversary)",
+          "locator": "Planning your PQC migration, Discovery and assessment",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-data-record",
+      "domain": "discovery",
+      "source": "ncsc-timelines",
+      "label": "Record the data you hold, how long it must stay secret and what it is worth to an attacker",
+      "description": "Part of the NCSC’s discovery and assessment, alongside identifying your key services and applications and how data is protected in transit and at rest.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2028"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+          "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+          "publisher": "CISA, NSA and NIST",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Organizations should create a cryptographic inventory that offers visibility into how the organization leverages cryptography in its IT and OT systems. Cryptographic discovery tools should be used to identify quantum-vulnerable algorithms in:",
+          "locator": "p. 2, Prepare a cryptographic inventory",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cisa-discovery-tools",
+      "domain": "discovery",
+      "source": "cisa-factsheet",
+      "label": "Run cryptographic discovery tools across IT and OT",
+      "description": "The factsheet points the tools at network protocols, end-user systems and servers, and the development pipeline. Because tools can miss cryptography embedded in products, it asks organisations to request lists from vendors and to match the inventory against existing asset records.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The information gathered in this phase will be used to create an inventory that should include the following information per system:",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-inventory-fields",
+      "domain": "discovery",
+      "source": "ca-roadmap",
+      "label": "Record the same set of facts for each system",
+      "description": "The roadmap lists components that use cryptography, vendor and product version, the security controls that rely on it, network zones, current settings, hosting platform, dependencies, service contracts and their expiry, expected refresh year, a point of contact, and whether the system is a priority. It advises starting with an initial, incomplete inventory and improving it.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Entities should do a mapping of dependencies for applications, products, platforms, operations, looking at both internal dependencies and third party dependencies. This dependency mapping will eventually be driven by supply chain dependencies.",
+          "locator": "pp. 11 to 12, section 6.2 First Steps",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-dependencies",
+      "domain": "discovery",
+      "source": "eu-roadmap",
+      "label": "Map internal and third-party dependencies",
+      "description": "A First Step, covering applications, products, platforms and operations. The roadmap says the information needed to set priorities and plan is only available after this step.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+          "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+          "publisher": "ANSSI",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Chaque organisation doit réaliser un inventaire afin d'obtenir une bonne visibilité sur la liste des produits et usages métier intégrant de la cryptographie, les algorithmes cryptographiques utilisés, ainsi que les données dont la confidentialité et/ou l'authenticité doivent être garanties après 2030, en précisant systématiquement cette durée.",
+          "locator": "Question on prerequisites for a transition plan",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "anssi-inventory",
+      "domain": "discovery",
+      "source": "anssi-faq",
+      "label": "List the products, algorithms and data that must stay protected after 2030, and for how long",
+      "description": "ANSSI asks every organisation for an inventory that states, for each set of data, how long its confidentiality or authenticity must hold, and encourages starting now.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120",
+          "title": "EU Roadmap on PQC: Frequently Asked Questions",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "At a minimum, entities in scope of the NIS 2 Directive, including public administration entities and critical infrastructure providers, should create an inventory of cryptographic assets and dependency maps, involve the supply chain, and perform a quantum risk analysis. However, as a proactive measure to ensure a robust security posture, all organisations are encouraged to undertake these steps.",
+          "locator": "p. 15, question 7.4",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-scope",
+      "domain": "planning",
+      "source": "eu-roadmap",
+      "label": "Check whether four of the First Steps are expected of you",
+      "description": "The roadmap’s FAQ says that entities in scope of NIS2, public administrations and critical infrastructure providers among them, should at a minimum create an inventory of cryptographic assets and dependency maps, involve the supply chain and perform a quantum risk analysis. It encourages every organisation to take these steps.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "If confidentiality needs to be protected for a long time period (at least 10 years), and an attack after 10 years or more would still have significant impact, then the quantum risk level is high.",
+          "locator": "p. 10, section 5 Estimating the quantum risk",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-risk-levels",
+      "domain": "planning",
+      "source": "eu-roadmap",
+      "label": "Rate each use case as high, medium or low quantum risk",
+      "description": "The level decides the roadmap’s target: high risk by the end of 2030, medium risk by the end of 2035. It depends on how weak the cryptography is, the impact if it breaks, and the time and effort to migrate, scored with the Dutch Handbook’s method.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "A migration is executed in that time if X + Y < Z. This inequality is also known as Mosca’s inequality, named after the researcher that introduced it. The closer X + Y is to Z, the more urgent the migration is.",
+          "locator": "Printed p. 45, section 3.1 When to Start Migrating?",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-mosca",
+      "domain": "planning",
+      "source": "nl-handbook",
+      "label": "Set protection time plus migration time against the time left",
+      "description": "The Handbook’s test is that migration finishes in time if the years an asset must stay secure plus the years it takes to migrate are fewer than the years until a quantum computer can break public-key cryptography. The closer the two sides, the more urgent the move.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is recommended that any systems susceptible to a HNDL threat be a high priority for migrating to PQC. Other considerations include the information lifespan, support for cryptographic agility, and the impact of compromise.",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-hndl-first",
+      "domain": "planning",
+      "source": "ca-roadmap",
+      "label": "Put systems exposed to harvest now, decrypt later first",
+      "description": "Systems protecting information in transit over public networks may be at risk earlier. The roadmap also names information lifespan, support for cryptographic agility and the impact of compromise.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": [
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2031"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "For such a plan, it can be helpful to include three high-level steps: “prepare”, “plan”, and “act”. However, it should be noted that these are not three consecutive phases of the PQC transition, but rather follow different timelines for each individual use case.",
+          "locator": "p. 13, section 6.2 First Steps",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-plan",
+      "domain": "planning",
+      "source": "eu-roadmap",
+      "label": "Write a timeline and an implementation plan, use case by use case",
+      "description": "A First Step. The roadmap suggests three steps, prepare, plan and act, and says they are not consecutive phases; each use case follows its own timeline.",
+      "audienceNote": "Addressed to Member States for their national roadmaps.",
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Complete the discovery and assessment phase. Create an initial migration plan identifying:",
+          "locator": "Timelines for PQC migration, recommended timeline table, row 2028",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-plan",
+      "domain": "planning",
+      "source": "ncsc-timelines",
+      "label": "Have an initial migration plan",
+      "description": "The plan names the highest-priority, earliest migration activities, dependencies on suppliers and physical infrastructure, the investment needed, and any long-lived hardware roots of trust that must move.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2028"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "You will need to decide on an approach for the migration of each system, service or product that you are responsible for.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-approach",
+      "domain": "planning",
+      "source": "ncsc-timelines",
+      "label": "Choose a migration approach for each system",
+      "description": "On commodity platforms, the upgrade will mostly come from your provider. Otherwise the NCSC’s options are migrating in place, moving to a new platform, retiring the service, running it to the end of its life, or tolerating the risk. Legacy systems that cannot move still need a place in the strategy.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2028"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "the transition plan has to take into account that the transition of systems with a long life-cycle or of complex systems (such as PKIs) to PQC will take a lot of time. Therefore, it is necessary to plan the migration of these systems well in advance.",
+          "locator": "p. 8, section 4.2; Milestone 1 box, p. 8",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-long-lived",
+      "domain": "planning",
+      "source": "eu-roadmap",
+      "label": "Start planning long-lived systems and public-key infrastructure now",
+      "description": "Systems with a long life-cycle and complex ones such as public-key infrastructures take a long time to move, so the roadmap asks for detailed transition plans as soon as possible, with pilots and testing for business continuity.",
+      "audienceNote": "Written for national transition plans.",
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The growth model is presented as an assessment matrix and clusters the fifteen challenges into eight main priority aspects:",
+          "locator": "Printed p. 49, section 3.2.2 PQC Maturity Assessment",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-maturity",
+      "domain": "planning",
+      "source": "nl-handbook",
+      "label": "Assess how ready your organisation is for the migration",
+      "description": "The Handbook points to a growth model with eight aspects: collaboration, awareness, governance, policies and regulations, availability of post-quantum cryptography, the hybrid approach, strategies for cryptographic security, and knowledge of the migration. The model comes from a report the Handbook cites.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120",
+          "title": "EU Roadmap on PQC: Frequently Asked Questions",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Any acceleration in quantum computing developments will increase the urgency for the transition to PQC. To address the threat to prioritised systems, it is essential for organisations to establish contingency plans outlining swift mitigation actions.",
+          "locator": "p. 14, question 7.2",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-contingency",
+      "domain": "planning",
+      "source": "eu-roadmap",
+      "label": "Prepare a contingency plan in case quantum computing speeds up",
+      "description": "The roadmap’s FAQ asks for contingency plans with swift mitigation for prioritised systems. The roadmap itself says unexpected advances could warrant speeding up the transition.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Every organisation also needs to start the dialogue with product and service suppliers because the transition depends on them.",
+          "locator": "p. 12, section 6.2 First Steps, Include the supply chain",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-suppliers",
+      "domain": "suppliers",
+      "source": "eu-roadmap",
+      "label": "Start the dialogue with your product and service suppliers",
+      "description": "A First Step. Suppliers need to build post-quantum cryptography and cryptographic agility into their product and service roadmaps.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2026"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+          "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+          "publisher": "CISA, NSA and NIST",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The authoring agencies also urge organizations to proactively plan for necessary changes to existing and future contracts. Considerations should be in place ensuring that new products will be delivered with PQC built-in, and older products will be upgraded with PQC to meet transition timelines.",
+          "locator": "p. 2, Discuss post-quantum roadmaps with technology vendors; p. 3, Supply chain quantum-readiness",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cisa-contracts",
+      "domain": "suppliers",
+      "source": "cisa-factsheet",
+      "label": "Change contracts so that new products arrive with post-quantum cryptography",
+      "description": "The factsheet also asks organisations to request vendors’ quantum-readiness roadmaps, to record when and how each vendor of off-the-shelf products will deliver post-quantum cryptography and at what expected cost, and to ask cloud providers about their plans.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Communicate your needs to your suppliers.",
+          "locator": "Timelines for PQC migration, recommended timeline table, row 2028",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-tell-suppliers",
+      "domain": "suppliers",
+      "source": "ncsc-timelines",
+      "label": "Tell your suppliers what you need",
+      "description": "Part of the NCSC’s first milestone. It adds that your plan will move as your suppliers change theirs.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2028"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "To maximize the lifetime of new systems, departments and agencies should ensure new procurements have requirements that support PQC.",
+          "locator": "Section 3.1.4 Procurement policies",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-procurement",
+      "domain": "suppliers",
+      "source": "ca-roadmap",
+      "label": "Require post-quantum support in new procurements",
+      "description": "Among the roadmap’s best practices are contract clauses committing vendors to post-quantum support that follows the Cyber Centre’s algorithm guidance (ITSP.40.111), cryptographic modules certified by the Cryptographic Module Validation Program, and support for cryptographic agility. The earlier the clauses, the lower the cost.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+          "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+          "publisher": "ANSSI",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Ne plus acheter des produits n’intégrant pas de PQC à partir de 2030.",
+          "locator": "Question on prerequisites for a transition plan, Bonnes pratiques",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "anssi-purchasing",
+      "domain": "suppliers",
+      "source": "anssi-faq",
+      "label": "Stop buying products without post-quantum cryptography from 2030",
+      "description": "One of ANSSI’s good practices, next to mapping when equipment with cryptography is due for renewal and planning replacements that include post-quantum cryptography. ANSSI says its recommendations carry no regulatory obligation today outside the areas already regulated, so 2030 is advice.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "anssi-faq",
+          "milestone": "anssi-2030"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+          "title": "Next steps in preparing for post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "As systems are updated in-service or replaced as they come to the end of their supported lifecycle, new IT should either use PQC or be capable of being upgraded to PQC once robust implementations based on final standards are available.",
+          "locator": "Implications of PQC migration for users and system owners",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-new-it",
+      "domain": "suppliers",
+      "source": "ncsc-next-steps",
+      "label": "Buy new IT that uses post-quantum cryptography or can be upgraded to it",
+      "description": "The white paper also asks owners of enterprise IT to ask their suppliers about their plans and to begin or continue financial planning. Upgrades can be planned into wider technology refreshes.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "data that needs to remain confidential for at least 10 years should be protected from quantum computer attacks starting no later than by the end of 2030.",
+          "locator": "p. 8, section 4.2; Milestone 2 box, p. 9",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-high-risk",
+      "domain": "migration",
+      "source": "eu-roadmap",
+      "label": "Protect data that must stay confidential for ten years or more",
+      "description": "By the roadmap’s second milestone, high-risk use cases are moved, planning and pilots for medium-risk ones are done, and quantum-safe software and firmware upgrades are on by default.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2030"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Complete your highest priority migration activities to protect your most critical assets.",
+          "locator": "Executive summary, By 2031; Timelines for PQC migration, table, row 2031",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-priority",
+      "domain": "migration",
+      "source": "ncsc-timelines",
+      "label": "Finish your highest-priority migration",
+      "description": "The NCSC’s second milestone also asks you to ready your infrastructure and to refine the plan into a clear route to full migration by 2035.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2031"
+        },
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2031"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is therefore highly recommended to ensure that products entering the market with an expected lifetime beyond 2030 should be upgradable to PQC and that the upgrade mechanism for software and firmware upgrades should incorporate post-quantum signature schemes for integrity and authenticity.",
+          "locator": "p. 9, after the Milestone 2 box; p. 13, section 6.3 Next Steps",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-signatures",
+      "domain": "migration",
+      "source": "eu-roadmap",
+      "label": "Sign software and firmware updates with post-quantum signatures",
+      "description": "The roadmap asks for a quantum-safe upgrade path: even a product not yet fully moved should use quantum-safe signatures in its update routines. If you buy rather than build, this is a question for your suppliers.",
+      "audienceNote": "Written about products entering the market.",
+      "dueBy": [
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2030"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The plan for each system will typically require multiple stages and should be integrated with existing IT change management processes to ensure proper preparation including:",
+          "locator": "Section 3.3 Transition",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-change-mgmt",
+      "domain": "migration",
+      "source": "ca-roadmap",
+      "label": "Run each system change through change management",
+      "description": "Each system’s move includes an impact assessment, a rollback playbook, a staging environment for testing and monitoring once it is done.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The first stage for a system transition may be to support the use of PQC, followed by a second stage to disable the vulnerable, legacy cryptography.",
+          "locator": "Section 3.3 Transition; section 4 Milestones and deliverables",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-disable-legacy",
+      "domain": "migration",
+      "source": "ca-roadmap",
+      "label": "Turn post-quantum cryptography on, then switch the old off",
+      "description": "Systems that cannot move without full replacement may be isolated on the network or tunnelled inside a post-quantum protected layer. The roadmap counts its 2031 and 2035 milestones as met only when vulnerable algorithms are disabled, isolated or tunnelled.",
+      "audienceNote": "Written for Government of Canada departments and agencies, for non-classified systems.",
+      "dueBy": [
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2031"
+        },
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2035"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Complete your migration to PQC, taking the opportunity to build more robust general cyber resilience into your systems.",
+          "locator": "Executive summary, By 2035; Timelines for PQC migration, table, row 2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-complete",
+      "domain": "migration",
+      "source": "ncsc-timelines",
+      "label": "Complete the migration",
+      "description": "The NCSC’s last milestone covers all systems, services and products. It accepts that a tail of rarely used technologies may take longer, and asks you to put first the systems that handle business and personally sensitive data or run critical communications.",
+      "audienceNote": null,
+      "dueBy": [
+        {
+          "framework": "ncsc-timelines",
+          "milestone": "ncsc-2035"
+        },
+        {
+          "framework": "eu-roadmap",
+          "milestone": "eu-2035"
+        },
+        {
+          "framework": "ca-roadmap",
+          "milestone": "ca-2035"
+        }
+      ]
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "When migrating to post-quantum cryptographic solutions, it is recommended to use standardised and tested hybrid solutions, whenever feasible and suitable.",
+          "locator": "p. 3, Executive Summary; repeated p. 6, section 4.1",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "eu-hybrid",
+      "domain": "migration",
+      "source": "eu-roadmap",
+      "label": "Use standardised, tested hybrid schemes where feasible",
+      "description": "This is the EU position. The NCSC and ANSSI see hybrids differently.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "For example, you should be able to quantify how many of your software clients are using PQC, and be able to identify those that are not.",
+          "locator": "Planning your PQC migration, Executing your migration plan",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-measure",
+      "domain": "assurance",
+      "source": "ncsc-timelines",
+      "label": "Measure how much of your estate uses post-quantum cryptography",
+      "description": "Metrics show how far the migration has gone, whether remedial action is needed and when support for the traditional algorithms can end. The NCSC also asks for tests that systems really use post-quantum cipher suites and do not fall back to traditional cryptography.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "You should therefore seek solutions that offer cryptographic agility; that is, the ability to readily support alternative suites of cryptographic algorithms, and you should identify the criteria you will use to determine when to end support for the traditional algorithms.",
+          "locator": "Planning your PQC migration, Developing your migration plan",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-agility",
+      "domain": "assurance",
+      "source": "ncsc-timelines",
+      "label": "Build in cryptographic agility and decide when to retire the old algorithms",
+      "description": "Traditional and post-quantum cryptography will likely run side by side for a while. The NCSC says you are fully secure against the quantum threat once nothing depends on traditional public-key cryptography alone.",
+      "audienceNote": null,
+      "dueBy": []
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf",
+          "title": "The PQC Migration Handbook, second edition",
+          "publisher": "AIVD, CWI and TNO",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Next to technical solutions, cryptographic agility can and should also be enforced by including it in existing processes.",
+          "locator": "Printed p. 64, section 4.4 Cryptographic Agility; inventory warning, section 4.1",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "nl-agility-processes",
+      "domain": "assurance",
+      "source": "nl-handbook",
+      "label": "Write cryptographic agility into everyday processes",
+      "description": "The Handbook names procurement, change management, software development and release, and incident response. It also warns that an inventory made two years ago will not reflect current use, so the inventory needs keeping up to date.",
+      "audienceNote": null,
+      "dueBy": []
+    }
+  ],
+  "positions": [
+    {
+      "id": "hybrid",
+      "topic": "Hybrid schemes, which pair a post-quantum algorithm with a traditional one",
+      "stances": [
+        {
+          "framework": "eu-roadmap",
+          "summary": "Recommends standardised and tested hybrid solutions whenever they are feasible and suitable. Its FAQ adds that there is no clear guidance yet on whether hybrids are a long-term or a short-term strategy.",
+          "provenance": [
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+              "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "When migrating to post-quantum cryptographic solutions, it is recommended to use standardised and tested hybrid solutions, whenever feasible and suitable.",
+              "locator": "p. 3, Executive Summary; p. 6, section 4.1",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120",
+              "title": "EU Roadmap on PQC: Frequently Asked Questions",
+              "publisher": "NIS Cooperation Group",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Currently, there is no clear guidance on whether hybrid cryptographic schemes are considered a long-term or short-term strategy.",
+              "locator": "p. 6, question 3.2",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "framework": "ncsc-next-steps",
+          "summary": "If a hybrid scheme is chosen, it should be an interim step on the way to post-quantum cryptography alone. For public-key infrastructure, the NCSC prefers a single move to a fully post-quantum PKI over an intermediate hybrid one.",
+          "provenance": [
+            {
+              "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+              "title": "Next steps in preparing for post-quantum cryptography",
+              "publisher": "National Cyber Security Centre",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "If a PQ/T hybrid scheme is chosen, the NCSC recommends it is used as an interim measure that allows a straightforward migration to PQC-only in the future.",
+              "locator": "Key takeaways",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+              "title": "Next steps in preparing for post-quantum cryptography",
+              "publisher": "National Cyber Security Centre",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "This additional complexity and the difficulty in migrating PKIs mean that a single migration to a fully post-quantum PKI is preferred to adopting an intermediate PQ/T hybrid PKI.",
+              "locator": "Additional considerations for PQ/T hybrid schemes",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "framework": "anssi-faq",
+          "summary": "Insists that hybridisation is essential wherever post-quantum algorithms are deployed, in the short and the medium term. The only exceptions are the hash-based signatures SLH-DSA, XMSS and LMS. Summarised in English; the source is in French.",
+          "provenance": [
+            {
+              "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+              "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+              "publisher": "ANSSI",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "L'ANSSI insiste fortement sur le caractère essentiel de l'hybridation des algorithmes de cryptographie post-quantique partout où ils sont déployés, à la fois à court et moyen terme.",
+              "locator": "Question: L'ANSSI recommande-t-elle l'usage de l'hybridation ?",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+              "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+              "publisher": "ANSSI",
+              "retrievedAt": "2026-10-01",
+              "excerpt": "Les seuls algorithmes post-quantiques pour lesquels l'ANSSI ne recommande pas un recours systématique à l'hybridation sont les algorithmes de signature fondés sur le hachage : SLH-DSA, XMSS et LMS.",
+              "locator": "Question: L'ANSSI recommande-t-elle l'usage de l'hybridation ?",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "entry": {
+    "source": "nl-handbook",
+    "intro": "The Dutch Handbook sorts organisations into urgent and regular adopters with a flowchart. These are its questions, in its own words, leaving out those for organisations that develop cryptographic standards or infrastructure.",
+    "questions": [
+      {"id": "confidential", "text": "Confidential data that must stay secret for a long time", "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Do you handle confidential data with a long confidentiality span?", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]},
+      {"id": "personal", "text": "Personal data that must stay secret for a long time", "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Do you handle personal data with a long confidentiality span?", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]},
+      {"id": "many-depend", "text": "Systems that large numbers of people depend on", "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Do you produce systems crucial to functioning of large bodies of people?", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]},
+      {"id": "long-lived", "text": "Systems meant to last more than ten years", "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Do you produce systems with a long life-span (more than 10 years)?", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]},
+      {"id": "supplier", "text": "Supplying an organisation that would answer yes", "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Do you supply to at least one organisation which would answer yes to at least one of the above questions?", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]}
+    ],
+    "outcome": {
+      "yes": "Urgent adopter: start now",
+      "no": "Regular adopter",
+      "yesProvenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "These organisations should start taking first steps on PQC migration as soon as possible.", "locator": "section 2.1 PQC Personas, printed p. 20", "sourceClass": "trusted-institutional"}],
+      "noProvenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "If you do not have a persona yet, you are a Regular Adopter", "locator": "Figure 2.2, printed p. 26", "sourceClass": "trusted-institutional"}]
+    }
+  },
+  "documents": [
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507", "date": "2025-06-11", "precision": "day",
+      "provenance": [{"url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507", "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1", "publisher": "NIS Cooperation Group", "retrievedAt": "2026-10-01", "excerpt": "Part 1, Version: 1.1, EU PQC Workstream 11.06.2025", "locator": "cover, p. 1", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120", "date": "2026-04-15", "precision": "day",
+      "provenance": [{"url": "https://ec.europa.eu/newsroom/dae/redirection/document/132120", "title": "EU Roadmap on PQC: Frequently Asked Questions", "publisher": "NIS Cooperation Group", "retrievedAt": "2026-10-01", "excerpt": "NIS Cooperation Group 15.04.2026", "locator": "cover, p. 1", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines", "date": "2025-03-20", "precision": "day",
+      "provenance": [{"url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines", "title": "Timelines for migration to post-quantum cryptography", "publisher": "National Cyber Security Centre", "retrievedAt": "2026-10-01", "excerpt": "Published 20 March 2025", "locator": "page details", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography", "date": "2024-08-14", "precision": "day",
+      "provenance": [{"url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography", "title": "Next steps in preparing for post-quantum cryptography", "publisher": "National Cyber Security Centre", "retrievedAt": "2026-10-01", "excerpt": "Published 14 August 2024", "locator": "page details", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001", "date": "2025-06", "precision": "month",
+      "provenance": [{"url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001", "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)", "publisher": "Canadian Centre for Cyber Security", "retrievedAt": "2026-10-01", "excerpt": "June 2025 | Management series", "locator": "page header", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf", "date": "2023-08-17", "precision": "day",
+      "provenance": [{"url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf", "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography", "publisher": "CISA, NSA and NIST", "retrievedAt": "2026-10-01", "excerpt": "As of August 17, 2023", "locator": "page footer", "sourceClass": "trusted-institutional"}]},
+    {"verify": false, "verifiedAt": "2026-10-01", "url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "date": "2024-12", "precision": "month",
+      "provenance": [{"url": "https://publications.tno.nl/publication/34643386/fXcPVHsX/TNO-2024-pqc-en.pdf", "title": "The PQC Migration Handbook, second edition", "publisher": "AIVD, CWI and TNO", "retrievedAt": "2026-10-01", "excerpt": "Revised and Extended Second Edition December, 2024", "locator": "cover", "sourceClass": "trusted-institutional"}]}
+  ]
+}

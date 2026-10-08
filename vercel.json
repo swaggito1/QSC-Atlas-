@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "qsc-atlas.vercel.app" }], "destination": "https://www.qscatlas.app/:path*", "permanent": true },
+    { "source": "/lab", "destination": "/", "permanent": true },
+    { "source": "/lab/readiness", "destination": "/prepare/check", "permanent": true },
+    { "source": "/lab/exposure-clock", "destination": "/prepare/exposure", "permanent": true },
+    { "source": "/lab/cascade", "destination": "/standards/cascade", "permanent": true },
+    { "source": "/lab/rulebook", "destination": "/", "permanent": false },
+    { "source": "/lab/:path*", "destination": "/", "permanent": false },
+    { "source": "/prepare/eu-rules", "destination": "/", "permanent": false },
+    { "source": "/prepare/differences", "destination": "/prepare", "permanent": false },
+    { "source": "/prepare/approach", "destination": "/prepare", "permanent": false },
+    { "source": "/qsc-hero-prototype.html", "destination": "/", "permanent": true },
+    { "source": "/qsc-strata-prototype.html", "destination": "/", "permanent": true }
+  ]
+}

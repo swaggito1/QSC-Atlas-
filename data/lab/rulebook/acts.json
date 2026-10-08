@@ -1,0 +1,951 @@
+{
+  "_about": "The six base acts of Rulebook in Motion, read from CELLAR (metadata through the SPARQL endpoint, texts through content negotiation) and from EUR-Lex document pages on 2026-09-30. Status history: adopted on the date of the act, applies-from on entry into force while application waits, in-force once the general date of application has passed. The applies list gives each date of application with the sentence that sets it. Related acts are the amending, delegated and implementing acts CELLAR links to each base act; corrigenda, consolidated versions and proposals are left out.",
+  "checkedAt": "2026-09-30",
+  "acts": [
+    {
+      "celex": "32022L2555",
+      "eli": "http://data.europa.eu/eli/dir/2022/2555/oj",
+      "shortTitle": "NIS2 Directive",
+      "documentTitle": "Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972, and repealing Directive (EU) 2016/1148 (NIS 2 Directive) (Text with EEA relevance)",
+      "documentDate": "2022-12-14",
+      "entryIntoForce": "2023-01-16",
+      "applies": [
+        {
+          "date": "2024-10-18",
+          "precision": "day",
+          "label": "Member States apply their national measures transposing the Directive",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+              "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive. They shall immediately inform the Commission thereof. They shall apply those measures from 18 October 2024.",
+              "locator": "Article 41(1)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "in-force",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2022-12-14",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+            "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "DIRECTIVE (EU) 2022/2555 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 December 2022",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2023-01-16",
+          "precision": "day",
+          "provenance": {
+            "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2555",
+            "title": "EUR-Lex document information, Directive (EU) 2022/2555",
+            "publisher": "EUR-Lex",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "Date of effect: 16/01/2023; Entry into force Date pub. +20 See Art 45",
+            "locator": "Dates",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "in-force",
+          "date": "2024-10-18",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+            "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive. They shall immediately inform the Commission thereof. They shall apply those measures from 18 October 2024.",
+            "locator": "Article 41(1)",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2022-12-27",
+      "related": [
+        {
+          "celex": "32024R2690",
+          "relation": "implementing act",
+          "documentDate": "2024-10-17",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024 laying down rules for the application of Directive (EU) 2022/2555 as regards technical and methodological requirements of cybersecurity risk-management measures and further specification of the cases in which an incident is considered to be significant with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2555",
+          "title": "EUR-Lex document information, Directive (EU) 2022/2555",
+          "publisher": "EUR-Lex",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Date of effect: 16/01/2023; Entry into force Date pub. +20 See Art 45",
+          "locator": "Dates",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+          "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Consolidated TEXT: 32022L2555 — EN — 27.12.2022",
+          "locator": "Header of the consolidated text",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2555",
+          "title": "EUR-Lex document information, Directive (EU) 2022/2555",
+          "publisher": "EUR-Lex",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Current consolidated version: 27/12/2022",
+          "locator": "Document information",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "celex": "32022L2557",
+      "eli": "http://data.europa.eu/eli/dir/2022/2557/oj",
+      "shortTitle": "Critical Entities Resilience Directive",
+      "documentTitle": "Directive (EU) 2022/2557 of the European Parliament and of the Council of 14 December 2022 on the resilience of critical entities and repealing Council Directive 2008/114/EC (Text with EEA relevance)",
+      "documentDate": "2022-12-14",
+      "entryIntoForce": "2023-01-16",
+      "applies": [
+        {
+          "date": "2024-10-18",
+          "precision": "day",
+          "label": "Member States apply their national measures transposing the Directive",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/32022L2557",
+              "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive. They shall immediately inform the Commission thereof. They shall apply those measures from 18 October 2024.",
+              "locator": "Article 26(1)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "in-force",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2022-12-14",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/32022L2557",
+            "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "DIRECTIVE (EU) 2022/2557 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 December 2022",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2023-01-16",
+          "precision": "day",
+          "provenance": {
+            "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2557",
+            "title": "EUR-Lex document information, Directive (EU) 2022/2557",
+            "publisher": "EUR-Lex",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "Date of effect: 16/01/2023; Entry into force Date pub. +20 See Art 28",
+            "locator": "Dates",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "in-force",
+          "date": "2024-10-18",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/32022L2557",
+            "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive. They shall immediately inform the Commission thereof. They shall apply those measures from 18 October 2024.",
+            "locator": "Article 26(1)",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2022-12-27",
+      "related": [
+        {
+          "celex": "32023R2450",
+          "relation": "delegated act",
+          "documentDate": "2023-07-25",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2023/2450 of 25 July 2023 supplementing Directive (EU) 2022/2557 of the European Parliament and of the Council by establishing a list of essential services"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2557",
+          "title": "EUR-Lex document information, Directive (EU) 2022/2557",
+          "publisher": "EUR-Lex",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Date of effect: 16/01/2023; Entry into force Date pub. +20 See Art 28",
+          "locator": "Dates",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022L2557",
+          "title": "EUR-Lex document information, Directive (EU) 2022/2557",
+          "publisher": "EUR-Lex",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "All consolidated versions Hide consolidated versions 27/12/2022 Legal act",
+          "locator": "Table of contents",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/cellar/718a9f8b-ef47-11ed-a05c-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 02022L2557-20221227",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<WORK_DATE_DOCUMENT type=\"date\"> <VALUE>2022-12-27</VALUE>",
+          "locator": "WORK_DATE_DOCUMENT of the consolidated version",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "celex": "32022R2554",
+      "eli": "http://data.europa.eu/eli/reg/2022/2554/oj",
+      "shortTitle": "Digital Operational Resilience Act (DORA)",
+      "documentTitle": "Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (EC) No 1060/2009, (EU) No 648/2012, (EU) No 600/2014, (EU) No 909/2014 and (EU) 2016/1011 (Text with EEA relevance)",
+      "documentDate": "2022-12-14",
+      "entryIntoForce": "2023-01-16",
+      "applies": [
+        {
+          "date": "2025-01-17",
+          "precision": "day",
+          "label": "The Regulation applies",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/32022R2554",
+              "title": "Regulation (EU) 2022/2554 (DORA), text published in the Official Journal",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "It shall apply from 17 January 2025.",
+              "locator": "Article 64, second paragraph",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "in-force",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2022-12-14",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/32022R2554",
+            "title": "Regulation (EU) 2022/2554 (DORA), text published in the Official Journal",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "REGULATION (EU) 2022/2554 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 December 2022",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2023-01-16",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/cellar/0caf473a-85bd-11ed-9887-01aa75ed71a1/xml/object?decoding=en",
+            "title": "CELLAR object notice for CELEX 32022R2554",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2023-01-16</VALUE> <YEAR>2023</YEAR> <MONTH>01</MONTH> <DAY>16</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+            "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "in-force",
+          "date": "2025-01-17",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/32022R2554",
+            "title": "Regulation (EU) 2022/2554 (DORA), text published in the Official Journal",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "It shall apply from 17 January 2025.",
+            "locator": "Article 64, second paragraph",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2022-12-27",
+      "related": [
+        {
+          "celex": "32024R1502",
+          "relation": "delegated act",
+          "documentDate": "2024-02-22",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2024/1502 of 22 February 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council by specifying the criteria for the designation of ICT third-party service providers as critical for financial entities"
+        },
+        {
+          "celex": "32024R1505",
+          "relation": "delegated act",
+          "documentDate": "2024-02-22",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2024/1505 of 22 February 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council by determining the amount of the oversight fees to be charged by the Lead Overseer to critical ICT third-party service providers and the way in which those fees are to be paid"
+        },
+        {
+          "celex": "32024R1772",
+          "relation": "delegated act",
+          "documentDate": "2024-03-13",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2024/1772 of 13 March 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying the criteria for the classification of ICT-related incidents and cyber threats, setting out materiality thresholds and specifying the details of reports of major incidents"
+        },
+        {
+          "celex": "32024R1773",
+          "relation": "delegated act",
+          "documentDate": "2024-03-13",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2024/1773 of 13 March 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying the detailed content of the policy regarding contractual arrangements on the use of ICT services supporting critical or important functions provided by ICT third-party service providers"
+        },
+        {
+          "celex": "32024R1774",
+          "relation": "delegated act",
+          "documentDate": "2024-03-13",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2024/1774 of 13 March 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying ICT risk management tools, methods, processes, and policies and the simplified ICT risk management framework"
+        },
+        {
+          "celex": "32025R0301",
+          "relation": "delegated act",
+          "documentDate": "2024-10-23",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/301 of 23 October 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying the content and time limits for the initial notification of, and intermediate and final report on, major ICT-related incidents, and the content of the voluntary notification for significant cyber threats"
+        },
+        {
+          "celex": "32025R0302",
+          "relation": "implementing act",
+          "documentDate": "2024-10-23",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2025/302 of 23 October 2024 laying down implementing technical standards for the application of Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to the standard forms, templates, and procedures for financial entities to report a major ICT-related incident and to notify a significant cyber threat"
+        },
+        {
+          "celex": "32025R0295",
+          "relation": "delegated act",
+          "documentDate": "2024-10-24",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/295 of 24 October 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards on harmonisation of conditions enabling the conduct of the oversight activities"
+        },
+        {
+          "celex": "32024R2956",
+          "relation": "implementing act",
+          "documentDate": "2024-11-29",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2024/2956 of 29 November 2024 laying down implementing technical standards for the application of Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to standard templates for the register of information"
+        },
+        {
+          "celex": "32025R0420",
+          "relation": "delegated act",
+          "documentDate": "2024-12-16",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/420 of 16 December 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards to specify the criteria for determining the composition of the joint examination team ensuring a balanced participation of staff members from the ESAs and from the relevant competent authorities, their designation, tasks and working arrangements"
+        },
+        {
+          "celex": "32025R1190",
+          "relation": "delegated act",
+          "documentDate": "2025-02-13",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/1190 of 13 February 2025 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying the criteria used for identifying financial entities required to perform threat-led penetration testing, the requirements and standards governing the use of internal testers, the requirements in relation to the scope, testing methodology and approach for each phase of the testing, results, closure and remediation stages and the type of supervisory and other relevant cooperation needed for the implementation of TLPT and for the facilitation of mutual recognition"
+        },
+        {
+          "celex": "32025R0532",
+          "relation": "delegated act",
+          "documentDate": "2025-03-24",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/532 of 24 March 2025 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying the elements that a financial entity has to determine and assess when subcontracting ICT services supporting critical or important functions"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/cellar/0caf473a-85bd-11ed-9887-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 32022R2554",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2023-01-16</VALUE> <YEAR>2023</YEAR> <MONTH>01</MONTH> <DAY>16</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+          "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/cellar/d142a739-1048-11ee-b12e-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 02022R2554-20221227",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<WORK_DATE_DOCUMENT type=\"date\"> <VALUE>2022-12-27</VALUE>",
+          "locator": "WORK_DATE_DOCUMENT of the consolidated version",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "celex": "32024R2847",
+      "eli": "http://data.europa.eu/eli/reg/2024/2847/oj",
+      "shortTitle": "Cyber Resilience Act",
+      "documentTitle": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements and amending Regulations (EU) No 168/2013 and (EU) 2019/1020 and Directive (EU) 2020/1828 (Cyber Resilience Act) (Text with EEA relevance)",
+      "documentDate": "2024-10-23",
+      "entryIntoForce": "2024-12-10",
+      "applies": [
+        {
+          "date": "2026-06-11",
+          "precision": "day",
+          "label": "Chapter IV on the notification of conformity assessment bodies (Articles 35 to 51) applies",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+              "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.",
+              "locator": "Article 71(2), second subparagraph",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2026-09-11",
+          "precision": "day",
+          "label": "Article 14, the reporting obligations of manufacturers, applies",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+              "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.",
+              "locator": "Article 71(2), second subparagraph",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2027-12-11",
+          "precision": "day",
+          "label": "The rest of the Regulation applies",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+              "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "This Regulation shall apply from 11 December 2027.",
+              "locator": "Article 71(2), first subparagraph",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "applies-from",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2024-10-23",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+            "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "REGULATION (EU) 2024/2847 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 23 October 2024",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2024-12-10",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/cellar/21b7d4eb-a6e2-11ef-85f0-01aa75ed71a1/xml/object?decoding=en",
+            "title": "CELLAR object notice for CELEX 32024R2847",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2024-12-10</VALUE> <YEAR>2024</YEAR> <MONTH>12</MONTH> <DAY>10</DAY> <ANNOTATION> <COMMENT_ON_DATE>{DATPUB|http://publications.europa.eu/resource/authority/fd_335/DATPUB} +20 {V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 71.1</COMMENT_ON_DATE> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+            "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2024-11-20",
+      "related": [
+        {
+          "celex": "32025R0327",
+          "relation": "amending act",
+          "documentDate": "2025-02-11",
+          "sourceTitle": "Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847 (Text with EEA relevance)"
+        },
+        {
+          "celex": "32025R1535",
+          "relation": "delegated act",
+          "documentDate": "2025-07-29",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2025/1535 of 29 July 2025 supplementing Regulation (EU) 2024/2847 of the European Parliament and of the Council with regard to an exclusion from the application of that Regulation for certain products with digital elements falling within the scope of Regulation (EU) No 168/2013 of the European Parliament and of the Council"
+        },
+        {
+          "celex": "32025R2392",
+          "relation": "implementing act",
+          "documentDate": "2025-11-28",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025 on the technical description of the categories of important and critical products with digital elements pursuant to Regulation (EU) 2024/2847 of the European Parliament and of the Council"
+        },
+        {
+          "celex": "32026R0881",
+          "relation": "delegated act",
+          "documentDate": "2025-12-11",
+          "sourceTitle": "Commission Delegated Regulation (EU) 2026/881 of 11 December 2025 supplementing Regulation (EU) 2024/2847 of the European Parliament and of the Council by specifying the terms and conditions for applying the cybersecurity-related grounds in relation to delaying the dissemination of notifications"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/cellar/21b7d4eb-a6e2-11ef-85f0-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 32024R2847",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2024-12-10</VALUE> <YEAR>2024</YEAR> <MONTH>12</MONTH> <DAY>10</DAY> <ANNOTATION> <COMMENT_ON_DATE>{DATPUB|http://publications.europa.eu/resource/authority/fd_335/DATPUB} +20 {V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 71.1</COMMENT_ON_DATE> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+          "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Consolidated TEXT: 32024R2847 — EN — 20.11.2024",
+          "locator": "Header of the consolidated text",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.",
+          "locator": "Article 71(2), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Regulation shall apply from 11 December 2027.",
+          "locator": "Article 71(2), first subparagraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "celex": "32024R1689",
+      "eli": "http://data.europa.eu/eli/reg/2024/1689/oj",
+      "shortTitle": "Artificial Intelligence Act",
+      "documentTitle": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (Text with EEA relevance)",
+      "documentDate": "2024-06-13",
+      "entryIntoForce": "2024-08-01",
+      "applies": [
+        {
+          "date": "2025-02-02",
+          "precision": "day",
+          "label": "Chapters I and II (general provisions and prohibited practices) apply, except Article 5(1)(ba) and (bb) and Article 5(1a) and (1b)",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "Chapters I and II shall apply from 2 February 2025, with the exception of Article 5(1), first subparagraph, points (ba) and (bb), and Article 5(1a) and (1b) which shall apply from 2 December 2026;",
+              "locator": "Article 113, third paragraph, point (a)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2025-08-02",
+          "precision": "day",
+          "label": "Chapter III Section 4, Chapters V, VII and XII and Article 78 apply, except Article 101",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the exception of Article 101;",
+              "locator": "Article 113, third paragraph, point (b)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2026-07-27",
+          "precision": "day",
+          "label": "Articles 102 to 110 apply",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "Articles 102 to 110 shall apply from 27 July 2026.",
+              "locator": "Article 113, third paragraph, point (d)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-02",
+          "precision": "day",
+          "label": "The Regulation applies in general, apart from the provisions with their own dates",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "It shall apply from 2 August 2026.",
+              "locator": "Article 113, second paragraph",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2026-12-02",
+          "precision": "day",
+          "label": "Article 5(1)(ba) and (bb) and Article 5(1a) and (1b) apply",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "Chapters I and II shall apply from 2 February 2025, with the exception of Article 5(1), first subparagraph, points (ba) and (bb), and Article 5(1a) and (1b) which shall apply from 2 December 2026;",
+              "locator": "Article 113, third paragraph, point (a)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2027-12-02",
+          "precision": "day",
+          "label": "The high-risk rules in Chapter III Sections 1 to 3 apply to AI systems classified as high-risk under Article 6(2) and Annex III",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and",
+              "locator": "Article 113, third paragraph, point (c)(i)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "http://publications.europa.eu/resource/celex/32026R1744",
+              "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI), text published in the Official Journal",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "‘(c) Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and (ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;’;",
+              "locator": "Article 1, point (40)(b)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "date": "2028-08-02",
+          "precision": "day",
+          "label": "The high-risk rules in Chapter III Sections 1 to 3 apply to AI systems classified as high-risk under Article 6(1) and Annex I",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+              "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "(ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;",
+              "locator": "Article 113, third paragraph, point (c)(ii)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "http://publications.europa.eu/resource/celex/32026R1744",
+              "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI), text published in the Official Journal",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "‘(c) Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and (ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;’;",
+              "locator": "Article 1, point (40)(b)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "in-force",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2024-06-13",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+            "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "REGULATION (EU) 2024/1689 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 13 June 2024",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2024-08-01",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1/xml/object?decoding=en",
+            "title": "CELLAR object notice for CELEX 32024R1689",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2024-08-01</VALUE> <YEAR>2024</YEAR> <MONTH>08</MONTH> <DAY>01</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+            "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "in-force",
+          "date": "2026-08-02",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+            "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "It shall apply from 2 August 2026.",
+            "locator": "Article 113, second paragraph",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2026-07-27",
+      "related": [
+        {
+          "celex": "32025R0454",
+          "relation": "implementing act",
+          "documentDate": "2025-03-07",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2025/454 of 7 March 2025 laying down the rules for the application of Regulation (EU) 2024/1689 of the European Parliament and of the Council as regards the establishment of a scientific panel of independent experts in the field of artificial intelligence"
+        },
+        {
+          "celex": "32026R1744",
+          "relation": "amending act",
+          "documentDate": "2026-07-08",
+          "sourceTitle": "Regulation (EU) 2026/1744 of the European Parliament and of the Council of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI) (Text with EEA relevance)"
+        },
+        {
+          "celex": "32026R1755",
+          "relation": "implementing act",
+          "documentDate": "2026-07-20",
+          "sourceTitle": "Commission Implementing Regulation (EU) 2026/1755 of 20 July 2026 on detailed arrangements for the conduct of certain proceedings by the Commission pursuant to Regulation (EU) 2024/1689 of the European Parliament and of the Council"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 32024R1689",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2024-08-01</VALUE> <YEAR>2024</YEAR> <MONTH>08</MONTH> <DAY>01</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+          "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+          "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Consolidated TEXT: 32024R1689 — EN — 27.07.2026",
+          "locator": "Header of the consolidated text",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/32026R1744",
+          "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "‘(c) Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and (ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;’;",
+          "locator": "Article 1, point (40)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "celex": "32016R0679",
+      "eli": "http://data.europa.eu/eli/reg/2016/679/oj",
+      "shortTitle": "General Data Protection Regulation",
+      "documentTitle": "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance)",
+      "documentDate": "2016-04-27",
+      "entryIntoForce": "2016-05-24",
+      "applies": [
+        {
+          "date": "2018-05-25",
+          "precision": "day",
+          "label": "The Regulation applies",
+          "provenance": [
+            {
+              "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+              "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+              "publisher": "Publications Office of the European Union",
+              "retrievedAt": "2026-09-30",
+              "excerpt": "It shall apply from 25 May 2018.",
+              "locator": "Article 99(2)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "status": "in-force",
+      "statusHistory": [
+        {
+          "status": "adopted",
+          "date": "2016-04-27",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+            "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016",
+            "locator": "Title",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "applies-from",
+          "date": "2016-05-24",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1/xml/object?decoding=en",
+            "title": "CELLAR object notice for CELEX 32016R0679",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2016-05-24</VALUE> <YEAR>2016</YEAR> <MONTH>05</MONTH> <DAY>24</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+            "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+            "sourceClass": "trusted-institutional"
+          }
+        },
+        {
+          "status": "in-force",
+          "date": "2018-05-25",
+          "precision": "day",
+          "provenance": {
+            "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+            "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+            "publisher": "Publications Office of the European Union",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "It shall apply from 25 May 2018.",
+            "locator": "Article 99(2)",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "consolidatedVersion": "2016-05-04",
+      "related": [
+        {
+          "celex": "32019D0419",
+          "relation": "implementing act",
+          "documentDate": "2019-01-23",
+          "sourceTitle": "Commission Implementing Decision (EU) 2019/419 of 23 January 2019 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by Japan under the Act on the Protection of Personal Information (Text with EEA relevance)"
+        },
+        {
+          "celex": "32021D0914",
+          "relation": "implementing act",
+          "documentDate": "2021-06-04",
+          "sourceTitle": "Commission Implementing Decision (EU) 2021/914 of 4 June 2021 on standard contractual clauses for the transfer of personal data to third countries pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council (Text with EEA relevance)"
+        },
+        {
+          "celex": "32021D0915",
+          "relation": "implementing act",
+          "documentDate": "2021-06-04",
+          "sourceTitle": "Commission Implementing Decision (EU) 2021/915 of 4 June 2021 on standard contractual clauses between controllers and processors under Article 28(7) of Regulation (EU) 2016/679 of the European Parliament and of the Council and Article 29(7) of Regulation (EU) 2018/1725 of the European Parliament and of the Council (Text with EEA relevance)"
+        },
+        {
+          "celex": "32021D1772",
+          "relation": "implementing act",
+          "documentDate": "2021-06-28",
+          "sourceTitle": "Commission Implementing Decision (EU) 2021/1772 of 28 June 2021 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by the United Kingdom (notified under document C(2021)4800) (Text with EEA relevance)"
+        },
+        {
+          "celex": "32022D0254",
+          "relation": "implementing act",
+          "documentDate": "2021-12-17",
+          "sourceTitle": "Commission Implementing Decision (EU) 2022/254 of 17 December 2021 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by the Republic of Korea under the Personal Information Protection Act (notified under document C(2021) 9316) (Text with EEA relevance)"
+        },
+        {
+          "celex": "32023D0975",
+          "relation": "implementing act",
+          "documentDate": "2023-05-15",
+          "sourceTitle": "Commission Implementing Decision (EU) 2023/975 of 15 May 2023 amending Commission Implementing Decision (EU) 2019/417 laying down guidelines for the management of the European Union Rapid Information System ‘RAPEX’ established under Article 12 of Directive 2001/95/EC of the European Parliament and of the Council on general product safety and its notification system (notified under document C(2023) 2817) (Text with EEA relevance)"
+        },
+        {
+          "celex": "32023D1795",
+          "relation": "implementing act",
+          "documentDate": "2023-07-10",
+          "sourceTitle": "Commission Implementing Decision EU 2023/1795 of 10 July 2023 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate level of protection of personal data under the EU-US Data Privacy Framework (notified under document C(2023)4745) (Text with EEA relevance)"
+        },
+        {
+          "celex": "32025D1226",
+          "relation": "implementing act",
+          "documentDate": "2025-06-24",
+          "sourceTitle": "Commission Implementing Decision (EU) 2025/1226 of 24 June 2025 amending Implementing Decision (EU) 2021/1772 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by the United Kingdom (notified under document C(2025) 3928)"
+        },
+        {
+          "celex": "32025D1382",
+          "relation": "implementing act",
+          "documentDate": "2025-07-15",
+          "sourceTitle": "Commission Implementing Decision (EU) 2025/1382 of 15 July 2025 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by the European Patent Organisation (notified under document C(2025) 4626)"
+        },
+        {
+          "celex": "32025D2574",
+          "relation": "implementing act",
+          "documentDate": "2025-12-19",
+          "sourceTitle": "Commission Implementing Decision (EU) 2025/2574 of 19 December 2025 amending Commission Implementing Decision (EU) 2021/1772 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate protection of personal data by the United Kingdom (notified under document C(2025) 8771)"
+        },
+        {
+          "celex": "32026D0179",
+          "relation": "implementing act",
+          "documentDate": "2026-01-26",
+          "sourceTitle": "Commission Implementing Decision (EU) 2026/179 of 26 January 2026 pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council on the adequate level of protection of personal data by Brazil (notified under document C(2026) 373)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 32016R0679",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2016-05-24</VALUE> <YEAR>2016</YEAR> <MONTH>05</MONTH> <DAY>24</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+          "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+          "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Consolidated TEXT: 32016R0679 — EN — 04.05.2016",
+          "locator": "Header of the consolidated text",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

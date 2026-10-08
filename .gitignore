@@ -34,3 +34,23 @@ data/analytical-notes.private.json
 # MS Office lock files
 ~$*
 **/~$*
+
+# Labs: private planning material, kept on this Mac only. These files describe
+# unpublished research and plans not yet public.
+labs/README.md
+labs/prompts/
+labs/context/02-research-threads.md
+labs/seeds/ransomware-cases.seed.json
+
+# Labs: local watch output (the workflow commits snapshots under data/lab/watch)
+labs/.watch/
+
+# Labs: data and components kept on this Mac only; never commit them
+data/lab/two-clocks/
+src/components/lab/tools/two-clocks/
+
+# Labs: overnight review material, local only
+labs/review/
+
+# Claude Code worktrees for parallel sessions
+.claude/worktrees/

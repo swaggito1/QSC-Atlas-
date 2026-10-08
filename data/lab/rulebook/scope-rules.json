@@ -1,0 +1,1120 @@
+{
+  "_about": "The Rulebook’s scope engine, as data. Each rule cites the paragraph it comes from; src/lib/lab/scope.ts evaluates them. The sector lists come from NIS2 Annexes I and II (CER Annex sectors flagged). Question wording and the six golden cases await Swann’s approval.",
+  "sectors": [
+    {
+      "id": "energy",
+      "label": "Energy",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [
+        {
+          "id": "energy-electricity",
+          "label": "Electricity"
+        },
+        {
+          "id": "energy-district-heating-and-cooling",
+          "label": "District heating and cooling"
+        },
+        {
+          "id": "energy-oil",
+          "label": "Oil"
+        },
+        {
+          "id": "energy-gas",
+          "label": "Gas"
+        },
+        {
+          "id": "energy-hydrogen",
+          "label": "Hydrogen"
+        }
+      ],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Electricity undertakings as defined in Article 2, point (57), of Directive (EU) 2019/944 of the European Parliament and of the Council (1), which carry out the function of ‘supply’ as defined in Article 2, point (12), of that Directive",
+          "locator": "Annex I, sector 1",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [
+        {
+          "id": "transport-air",
+          "label": "Air"
+        },
+        {
+          "id": "transport-rail",
+          "label": "Rail"
+        },
+        {
+          "id": "transport-water",
+          "label": "Water"
+        },
+        {
+          "id": "transport-road",
+          "label": "Road"
+        }
+      ],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Air carriers as defined in Article 3, point (4), of Regulation (EC) No 300/2008 used for commercial purposes",
+          "locator": "Annex I, sector 2",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "banking",
+      "label": "Banking",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Credit institutions as defined in Article 4, point (1), of Regulation (EU) No 575/2013 of the European Parliament and of the Council (15)",
+          "locator": "Annex I, sector 3",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "financial-market-infrastructures",
+      "label": "Financial market infrastructures",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Operators of trading venues as defined in Article 4, point (24), of Directive 2014/65/EU of the European Parliament and of the Council (16)",
+          "locator": "Annex I, sector 4",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Health",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Healthcare providers as defined in Article 3, point (g), of Directive 2011/24/EU of the European Parliament and of the Council (18)",
+          "locator": "Annex I, sector 5",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "drinking-water",
+      "label": "Drinking water",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Suppliers and distributors of water intended for human consumption as defined in Article 2, point (1)(a), of Directive (EU) 2020/2184 of the European Parliament and of the Council (22), excluding distributors for which distribution of water for human consumption is",
+          "locator": "Annex I, sector 6",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "waste-water",
+      "label": "Waste water",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Undertakings collecting, disposing of or treating urban waste water, domestic waste water or industrial waste water as defined in Article 2, points (1), (2) and (3), of Council Directive 91/271/EEC (23), excluding undertakings for which collecting, disposing of or treating",
+          "locator": "Annex I, sector 7",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "digital-infrastructure",
+      "label": "Digital infrastructure",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Internet Exchange Point providers",
+          "locator": "Annex I, sector 8",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ict-service-management",
+      "label": "ICT service management (business-to-business)",
+      "annex": "I",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Managed service providers — Managed security service providers",
+          "locator": "Annex I, sector 9",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "public-administration",
+      "label": "Public administration",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Public administration entities of central governments as defined by a Member State in accordance with national law",
+          "locator": "Annex I, sector 10",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "label": "Space",
+      "annex": "I",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Operators of ground-based infrastructure, owned, managed and operated by Member States or by private parties, that support the provision of space-based services, excluding providers of public electronic communications networks",
+          "locator": "Annex I, sector 11",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "postal-and-courier-services",
+      "label": "Postal and courier services",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Postal service providers as defined in Article 2, point (1a), of Directive 97/67/EC, including providers of courier services",
+          "locator": "Annex II, sector 1",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "waste-management",
+      "label": "Waste management",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Undertakings carrying out waste management as defined in Article 3, point (9), of Directive 2008/98/EC of the European Parliament and of the Council (1), excluding undertakings for whom waste management is not their principal economic activity",
+          "locator": "Annex II, sector 2",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "chemicals",
+      "label": "Manufacture, production and distribution of chemicals",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Undertakings carrying out the manufacture of substances and the distribution of substances or mixtures, as referred to in Article 3, points (9) and (14), of Regulation (EC) No 1907/2006 of the European Parliament and of the Council (2) and undertakings",
+          "locator": "Annex II, sector 3",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Production, processing and distribution of food",
+      "annex": "II",
+      "cer": true,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Food businesses as defined in Article 3, point (2), of Regulation (EC) No 178/2002 of the European Parliament and of the Council (3) which are engaged in wholesale distribution and industrial production and processing",
+          "locator": "Annex II, sector 4",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "label": "Manufacturing",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [
+        {
+          "id": "manufacturing-manufacture-of-medical-devices-and-in-vitro-diagnostic-medical-devices",
+          "label": "Manufacture of medical devices and in vitro diagnostic medical devices"
+        },
+        {
+          "id": "manufacturing-manufacture-of-computer-electronic-and-optical-products",
+          "label": "Manufacture of computer, electronic and optical products"
+        },
+        {
+          "id": "manufacturing-manufacture-of-electrical-equipment",
+          "label": "Manufacture of electrical equipment"
+        },
+        {
+          "id": "manufacturing-manufacture-of-machinery-and-equipment-n-e-c",
+          "label": "Manufacture of machinery and equipment n.e.c."
+        },
+        {
+          "id": "manufacturing-manufacture-of-motor-vehicles-trailers-and-semi-trailers",
+          "label": "Manufacture of motor vehicles, trailers and semi-trailers"
+        },
+        {
+          "id": "manufacturing-manufacture-of-other-transport-equipment",
+          "label": "Manufacture of other transport equipment"
+        }
+      ],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Entities manufacturing medical devices as defined in Article 2, point (1), of Regulation (EU) 2017/745 of the European Parliament and of the Council (4), and entities manufacturing in vitro diagnostic medical devices as defined in Article 2, point (2), of",
+          "locator": "Annex II, sector 5",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "digital-providers",
+      "label": "Digital providers",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "— Providers of online marketplaces",
+          "locator": "Annex II, sector 6",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "annex": "II",
+      "cer": false,
+      "subsectors": [],
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Research organisations",
+          "locator": "Annex II, sector 7",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ],
+  "sizeClasses": [
+    {
+      "id": "micro",
+      "label": "Micro",
+      "description": "Fewer than 10 people, and turnover or balance sheet total of EUR 2 million or less",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361",
+          "title": "Commission Recommendation 2003/361/EC",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Within the SME category, a microenterprise is defined as an enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million.",
+          "locator": "Annex, Article 2(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "small",
+      "label": "Small",
+      "description": "Fewer than 50 people, and turnover or balance sheet total of EUR 10 million or less",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361",
+          "title": "Commission Recommendation 2003/361/EC",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Within the SME category, a small enterprise is defined as an enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million.",
+          "locator": "Annex, Article 2(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "medium",
+      "label": "Medium",
+      "description": "Fewer than 250 people, and turnover of EUR 50 million or less or balance sheet total of EUR 43 million or less",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361",
+          "title": "Commission Recommendation 2003/361/EC",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The category of micro, small and medium-sized enterprises (SMEs) is made up of enterprises which employ fewer than 250 persons and which have an annual turnover not exceeding EUR 50 million, and/or an annual balance sheet total not exceeding EUR 43 million.",
+          "locator": "Annex, Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "large",
+      "label": "Large",
+      "description": "Above the ceilings for medium-sized enterprises",
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "nis2-listed-service",
+      "instrument": "32022L2555",
+      "when": {
+        "answers": {
+          "alwaysInScopeService": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "You provide a service NIS2 covers whatever the size of the entity",
+      "articleRef": "Article 2(2)(a)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "services are provided by: (i) providers of public electronic communications networks or of publicly available electronic communications services; (ii) trust service providers; (iii) top-level domain name registries and domain name system service providers;",
+          "locator": "Article 2(2)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-critical-entity",
+      "instrument": "32022L2555",
+      "when": {
+        "answers": {
+          "cerDesignated": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "Entities identified as critical under the CER Directive are covered whatever their size",
+      "articleRef": "Article 2(3)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Regardless of their size, this Directive applies to entities identified as critical entities under Directive (EU) 2022/2557.",
+          "locator": "Article 2(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-financial",
+      "instrument": "32022L2555",
+      "when": {
+        "answers": {
+          "financialEntity": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "For financial entities, DORA’s rules on ICT risk and incident reporting take the place of the equivalent NIS2 duties",
+      "articleRef": "Article 4(1)",
+      "priority": 25,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where sector-specific Union legal acts require essential or important entities to adopt cybersecurity risk-management measures or to notify significant incidents and where those requirements are at least equivalent in effect to the obligations laid down in this Directive, the relevant provisions of this Directive, including the provisions on supervision and enforcement laid down in Chapter",
+          "locator": "Article 4(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-public-administration",
+      "instrument": "32022L2555",
+      "when": {
+        "answers": {
+          "publicAdmin": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Central government bodies are covered; regional bodies are covered where a Member State’s risk-based assessment brings them in",
+      "articleRef": "Article 2(2)(f)",
+      "priority": 20,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "the entity is a public administration entity: (i) of central government as defined by a Member State in accordance with national law; or (ii) at regional level as defined by a Member State in accordance with national law that, following a risk-based assessment, provides services the disruption of which could have a significant impact on",
+          "locator": "Article 2(2)(f)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-size",
+      "instrument": "32022L2555",
+      "when": {
+        "sectorAnnex": [
+          "I",
+          "II"
+        ],
+        "sizeIn": [
+          "medium",
+          "large"
+        ]
+      },
+      "outcome": "appears-to-apply",
+      "reason": "Your sector is listed in Annex I or II and your organisation is medium-sized or larger",
+      "articleRef": "Article 2(1)",
+      "priority": 10,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide their services or carry out",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-listed-service-unsure",
+      "instrument": "32022L2555",
+      "when": {
+        "answers": {
+          "alwaysInScopeService": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether you provide one of the services covered whatever the size of the entity",
+      "articleRef": "Article 2(2)(a)",
+      "priority": 8,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "services are provided by: (i) providers of public electronic communications networks or of publicly available electronic communications services; (ii) trust service providers; (iii) top-level domain name registries and domain name system service providers;",
+          "locator": "Article 2(2)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-smaller",
+      "instrument": "32022L2555",
+      "when": {
+        "sectorAnnex": [
+          "I",
+          "II"
+        ],
+        "sizeIn": [
+          "micro",
+          "small"
+        ]
+      },
+      "outcome": "applies-if-designated",
+      "reason": "Smaller entities in these sectors are covered where the Member State identifies them, for example as a sole provider or as critical at national level",
+      "articleRef": "Article 2(2)(b) to (e)",
+      "priority": 6,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "the entity is the sole provider in a Member State of a service which is essential for the maintenance of critical societal or economic activities;",
+          "locator": "Article 2(2)(b) to (e)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-outside",
+      "instrument": "32022L2555",
+      "when": {
+        "sectorNone": true,
+        "answers": {
+          "alwaysInScopeService": [
+            "no"
+          ],
+          "publicAdmin": [
+            "no"
+          ],
+          "cerDesignated": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "does-not-appear-to-apply",
+      "reason": "Your answers place you outside the sectors and services NIS2 lists",
+      "articleRef": "Article 2(1)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS2)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide their services or carry out",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-designated",
+      "instrument": "32022L2557",
+      "when": {
+        "answers": {
+          "cerDesignated": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "You have been identified as a critical entity",
+      "articleRef": "Article 6(1) and (3)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By 17 July 2026, each Member State shall identify the critical entities for the sectors and subsectors set out in the Annex.",
+          "locator": "Article 6(1) and (3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-sector",
+      "instrument": "32022L2557",
+      "when": {
+        "sectorIn": [
+          "energy",
+          "energy-electricity",
+          "energy-district-heating-and-cooling",
+          "energy-oil",
+          "energy-gas",
+          "energy-hydrogen",
+          "transport",
+          "transport-air",
+          "transport-rail",
+          "transport-water",
+          "transport-road",
+          "banking",
+          "financial-market-infrastructures",
+          "health",
+          "drinking-water",
+          "waste-water",
+          "digital-infrastructure",
+          "public-administration",
+          "space",
+          "food"
+        ],
+        "answers": {
+          "cerDesignated": [
+            "no",
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "applies-if-designated",
+      "reason": "Your sector is one in which each Member State identifies critical entities, by 17 July 2026",
+      "articleRef": "Article 6(1)",
+      "priority": 10,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By 17 July 2026, each Member State shall identify the critical entities for the sectors and subsectors set out in the Annex.",
+          "locator": "Article 6(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-unsure",
+      "instrument": "32022L2557",
+      "when": {
+        "answers": {
+          "cerDesignated": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether your Member State has notified you that you are a critical entity",
+      "articleRef": "Article 6(3)",
+      "priority": 5,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Each Member State shall establish a list of the critical entities identified pursuant to paragraph 2 and ensure that those critical entities are notified that they have been identified as critical entities within one month of that identification. Member States shall inform those critical entities of their obligations under Chapters III and IV and the",
+          "locator": "Article 6(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-not-designated",
+      "instrument": "32022L2557",
+      "when": {
+        "answers": {
+          "cerDesignated": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "does-not-appear-to-apply",
+      "reason": "You have not been identified as a critical entity",
+      "articleRef": "Article 6(3)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Each Member State shall establish a list of the critical entities identified pursuant to paragraph 2 and ensure that those critical entities are notified that they have been identified as critical entities within one month of that identification. Member States shall inform those critical entities of their obligations under Chapters III and IV and the",
+          "locator": "Article 6(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-products",
+      "instrument": "32024R2847",
+      "when": {
+        "answers": {
+          "productsDigital": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "You make or import products with digital elements made available on the EU market",
+      "articleRef": "Article 2(1)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Regulation applies to products with digital elements made available on the market, the intended purpose or reasonably foreseeable use of which includes a direct or indirect logical or physical data connection to a device or network.",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-products-unsure",
+      "instrument": "32024R2847",
+      "when": {
+        "answers": {
+          "productsDigital": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether your products connect to a device or network and are made available on the EU market",
+      "articleRef": "Article 2(1)",
+      "priority": 5,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Regulation applies to products with digital elements made available on the market, the intended purpose or reasonably foreseeable use of which includes a direct or indirect logical or physical data connection to a device or network.",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-products-no",
+      "instrument": "32024R2847",
+      "when": {
+        "answers": {
+          "productsDigital": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "does-not-appear-to-apply",
+      "reason": "You do not make or import products with digital elements",
+      "articleRef": "Article 2(1)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This Regulation applies to products with digital elements made available on the market, the intended purpose or reasonably foreseeable use of which includes a direct or indirect logical or physical data connection to a device or network.",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-financial",
+      "instrument": "32022R2554",
+      "when": {
+        "answers": {
+          "financialEntity": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "You are one of the financial entities DORA lists",
+      "articleRef": "Article 2(1)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 (DORA)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Without prejudice to paragraphs 3 and 4, this Regulation applies to the following entities: credit institutions;",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-financial-unsure",
+      "instrument": "32022R2554",
+      "when": {
+        "answers": {
+          "financialEntity": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether your organisation is one of the financial entities DORA lists",
+      "articleRef": "Article 2(1)",
+      "priority": 5,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 (DORA)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Without prejudice to paragraphs 3 and 4, this Regulation applies to the following entities: credit institutions;",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-financial-no",
+      "instrument": "32022R2554",
+      "when": {
+        "answers": {
+          "financialEntity": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "does-not-appear-to-apply",
+      "reason": "You are not one of the financial entities DORA lists",
+      "articleRef": "Article 2(1)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 (DORA)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Without prejudice to paragraphs 3 and 4, this Regulation applies to the following entities: credit institutions;",
+          "locator": "Article 2(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-controller",
+      "instrument": "32016R0679",
+      "when": {
+        "answers": {
+          "personalDataController": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "As a controller, you must notify personal data breaches to the supervisory authority",
+      "articleRef": "Article 33(1)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (GDPR)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk",
+          "locator": "Article 33(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-controller-unsure",
+      "instrument": "32016R0679",
+      "when": {
+        "answers": {
+          "personalDataController": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether you decide the purposes and means of processing personal data",
+      "articleRef": "Article 33(1)",
+      "priority": 5,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (GDPR)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk",
+          "locator": "Article 33(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-controller-no",
+      "instrument": "32016R0679",
+      "when": {
+        "answers": {
+          "personalDataController": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "A processor still has to tell its controller about a breach without undue delay",
+      "articleRef": "Article 33(2)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (GDPR)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The processor shall notify the controller without undue delay after becoming aware of a personal data breach.",
+          "locator": "Article 33(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ai-high-risk",
+      "instrument": "32024R1689",
+      "when": {
+        "answers": {
+          "highRiskAi": [
+            "yes"
+          ]
+        }
+      },
+      "outcome": "appears-to-apply",
+      "reason": "Providers of high-risk AI systems must report serious incidents",
+      "articleRef": "Article 73(1)",
+      "priority": 30,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (AI Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "locator": "Article 73(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ai-high-risk-unsure",
+      "instrument": "32024R1689",
+      "when": {
+        "answers": {
+          "highRiskAi": [
+            "unsure"
+          ]
+        }
+      },
+      "outcome": "may-apply-check",
+      "reason": "Check whether an AI system you provide or deploy is classed as high-risk",
+      "articleRef": "Article 73(1)",
+      "priority": 5,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (AI Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "locator": "Article 73(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ai-high-risk-no",
+      "instrument": "32024R1689",
+      "when": {
+        "answers": {
+          "highRiskAi": [
+            "no"
+          ]
+        }
+      },
+      "outcome": "does-not-appear-to-apply",
+      "reason": "You do not provide or deploy a high-risk AI system",
+      "articleRef": "Article 73(1)",
+      "priority": 1,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (AI Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "locator": "Article 73(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+---
+// One standard, /standards/{id} (spec 8): its name as the H1, a facts line (body, status and the
+// date that status comes from, as of), then "Named by": every government whose verified
+// documents name it, in alphabetical order, each with the relation phrase of the Cascade's copy
+// ("names", "adopts", "adds national requirements to"), the date of its first document, each
+// document (to its row on the Atlas documents page) and its profile; where there are more than
+// two, one line of their names jumps to each. Then the link into the Cascade (only where the
+// Cascade has a view of the standard's body: NIST's, or another body it offers, with the
+// standard chosen), its standards body's own events, and About this view. Built only for a
+// standard with at least one verified document (routes.ts), wherever the Cascade is built (Swann,
+// 8 October 2026; until then on his machine only); computed by src/lib/site/standards.ts. It
+// shows verified records only and quotes no source's words.
+import PageFrame from '../../frame/PageFrame.astro';
+import { standardPageModel } from '../../../../lib/site/standards';
+import type { SitePage } from '../../../../lib/site/routes';
+import '../../../../styles/standards.css';
+
+interface Props {
+  page: SitePage;
+  standardId: string;
+}
+const { page, standardId } = Astro.props;
+const m = standardPageModel(standardId);
+if (!m) throw new Error(`No verified document names ${standardId}, so it has no page`);
+const c = m.copy;
+---
+
+<PageFrame
+  question={m.question}
+  title={m.label}
+  section="standards"
+  gate={page.gate}
+  description={m.lede}
+  lede={m.lede}
+  reads={m.facts.map((label) => ({ label, href: null }))}
+  asOf={m.asOf}
+  next={m.next}
+  sources={m.sources}
+  methodAnchor="standards"
+>
+  {m.others && <p class="sd-aka sd-aka--head" slot="head">{m.others}</p>}
+
+  <div class="sd">
+    <section class="sd-section sd-section--first" aria-labelledby="sd-named">
+      <h2 class="sd-h" id="sd-named">{m.namedByHead}</h2>
+      <p class="sd-intro">{m.namedByIntro}</p>
+      {
+        /* a long page gets one wrapped line of the governments, each a jump to its block; no counts */
+        m.namers.length > 2 && (
+          <nav class="sd-jump" aria-label={c.jumpLabel}>
+            <ul>
+              {m.namers.map((n) => (
+                <li>
+                  <a href={`#gov-${n.iso3.toLowerCase()}`}>{n.name}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+      <ul class="sd-namers">
+        {
+          m.namers.map((n) => (
+            <li class="sd-namer" id={`gov-${n.iso3.toLowerCase()}`}>
+              <div class="sd-who">
+                <h3 class="sd-gov">{n.name}</h3>
+                <p class="sd-first">{n.firstText}</p>
+                <ul class="sd-gov-links">
+                  {n.profileHref && (
+                    <li>
+                      <a href={n.profileHref}>{n.profileLabel}</a>
+                    </li>
+                  )}
+                  {n.documentsHref && (
+                    <li>
+                      <a href={n.documentsHref}>{n.documentsLabel}</a>
+                    </li>
+                  )}
+                </ul>
+              </div>
+              <div class="sd-what">
+                {n.groups.map((g) => (
+                  <div class="sd-group">
+                    <p class="sd-rel">{g.phrase}</p>
+                    <ol class="sd-docs">
+                      {g.docs.map((d) => (
+                        <li class="sd-doc">
+                          <span class="sd-date">{d.dateText}</span>
+                          {/* the title and the issuer are one link to the document's row on the Atlas documents page */}
+                          <a href={d.href ?? d.url} rel={d.href ? undefined : 'noopener'} class="sd-doc-body sd-doc-link">
+                            <span class="sd-doc-title">{d.title}</span>
+                            <span class="sd-issuer">{d.issuer}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ))}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+      {
+        m.cascade.href && (
+          <p class="sd-cascade">
+            <a href={m.cascade.href}>
+              <span>{m.cascade.label}</span>
+              <span class="sd-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          </p>
+        )
+      }
+    </section>
+
+    <section class="sd-section" aria-labelledby="sd-events">
+      <h2 class="sd-h" id="sd-events">{c.eventsHead}</h2>
+      {
+        m.events.length ? (
+          <ol class="sd-events">
+            {m.events.map((e) => (
+              <li class="sd-event">
+                <span class="sd-date">{e.dateText}</span>
+                <span class="sd-event-body">
+                  <span class="sd-event-label">{e.label}</span>
+                  <span class="sd-issuer">
+                    {e.body}
+                    {e.url && (
+                      <>
+                        {' · '}
+                        <a href={e.url} rel="noopener" class="sd-source">
+                          {c.source}
+                        </a>
+                      </>
+                    )}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="sd-empty">{m.eventsNone}</p>
+        )
+      }
+    </section>
+  </div>
+</PageFrame>

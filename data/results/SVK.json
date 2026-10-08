@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "title": "Správa o kybernetickej bezpečnosti v Slovenskej republike v roku 2024",
+    "country": "SVK",
+    "issuingOrg": "NBÚ",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nbu.gov.sk/data/att/3305.pdf",
+    "summary": "The National Security Authority's report on cybersecurity in Slovakia in 2024. It records that the authority took part in the NIS Cooperation Group in 2024, including its Work Stream on Post-Quantum Cryptography.",
+    "included": true
+  },
+  {
+    "title": "Výstup č. 1.1.3: Štandardizácia pre bezpečnosť a ochranu údajov",
+    "country": "SVK",
+    "issuingOrg": "MIRRI",
+    "year": 2023,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://mirri.gov.sk/wp-content/uploads/2023/10/1.1.3-Standardizacia-pre-bezpecnost-a-ochranu-udajov.pdf",
+    "summary": "Deliverable 1.1.3 on data security and protection standards for public administration, from the ESF-funded project to improve the use of data in public administration, published by the Ministry of Investments, Regional Development and Informatization (version 0.2, April 2023). It recommends encrypting data at rest with an algorithm that will ideally also withstand the post-quantum era.",
+    "included": true
+  }
+]

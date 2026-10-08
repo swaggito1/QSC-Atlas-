@@ -1,8 +1,7 @@
 {
   "iso3": "GUY",
-  "dataStatus": "Placeholder",
-  "country": "Guyana",
-  "confidence": "Medium",
-  "verificationStatus": "Unverified",
-  "lastUpdated": "2026-06-14"
+  "summary": "Guyana has no published post-quantum policy, standard or migration plan. The only institutional material on record is a government announcement reporting that the cybersecurity team of the National Data Management Authority placed eighteenth, inside the top twenty, at the CyberQ: Security in the Quantum Era hackathon hosted in the United Arab Emirates, an event covering post-quantum cryptography, quantum key distribution and quantum-safe migration strategies. That places the country at the level of nascent technical skills rather than institutional commitment. No lead agency has been given a quantum-safe mandate, no algorithm suite or standards family has been adopted, and no migration timeline or completion date has been set.",
+  "govActors": "National Data Management Authority (NDMA) | Government agency whose cybersecurity team competed in the CyberQ quantum-era hackathon covering post-quantum cryptography, quantum key distribution and quantum-safe migration",
+  "legalStatus": "none",
+  "dataStatus": "Partial"
 }

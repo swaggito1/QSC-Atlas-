@@ -119,5 +119,38 @@
     "url": "https://www.msb.se/siteassets/dokument/amnesomraden/informationssakerhet-cybersakerhet-och-sakra-kommunikationer/72e-policy-for-utveckling-och-integrering-av-ny-cybersakerhetsteknologi-251019.pdf",
     "summary": "MSB (from 1 Jan 2026 the Agency for Civil Defence, MCF) policy on developing and integrating new cybersecurity technology, naming quantum cryptography among a new generation of risk-management tools and referencing the transition to post-quantum cryptography. Flagged for review: the explicit PQC framing appears alongside broader emerging-technology and EU-call language, so QSC-specificity is borderline.",
     "included": false
+  },
+  {
+    "title": "Sveriges strategi för kvantteknikområdet",
+    "country": "SWE",
+    "issuingOrg": "Regeringen",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.regeringen.se/contentassets/3b82dc6d3f2d4e299cb288237dc4a988/sveriges-strategi-for-kvantteknikomradet.pdf",
+    "summary": "The Swedish Government's strategy for the quantum technology field, setting national goals up to 2036 for research, skills, coordination, protection of strategic technology and international cooperation. Its security section says quantum-safe cryptology must be developed now because of harvest-now-decrypt-later risk, describes PQC as the more immediately applicable protection, and points to the NCSC recommendations for the transition to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "En kraftsamling för Sveriges cybersäkerhet 2025: En årsberättelse från Nationellt cybersäkerhetscenter",
+    "country": "SWE",
+    "issuingOrg": "NCSC",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ncsc.se/siteassets/publikationer/en-kraftsamling-for-sveriges-cybersakerhet-2025.pdf",
+    "summary": "The Swedish National Cyber Security Centre's annual report on its 2025 activities and the cybersecurity situation it followed during the year. The year overview lists a fact sheet on recommendations for quantum-safe cryptography, and the section on standardisation coordination says the agencies discussed developments in post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Financial Stability Report 2026:1",
+    "country": "SWE",
+    "issuingOrg": "Riksbank",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.riksbank.se/globalassets/media/rapporter/fsr/engelska/2026/260529/financial-stability-report-2026_1.pdf",
+    "summary": "The Riksbank's semi-annual assessment of risks and threats to the Swedish financial system. In its discussion of cyber threats it says quantum computers could eventually break current encryption and that the transition to quantum-safe cryptography should be made in a coordinated way at the recommended pace, citing the NIS Cooperation Group's 2030 and 2035 targets.",
+    "included": true
   }
 ]

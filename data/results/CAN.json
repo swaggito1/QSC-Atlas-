@@ -141,5 +141,93 @@
     "url": "https://www.cyber.gc.ca/en/news-events/g7-cybersecurity-working-group-statement-preparing-post-quantum-cryptography-migration",
     "summary": "Statement published on Canada's Cyber Centre site (last modified June 2026), co-issued by Canada's Communications Security Establishment with the cyber agencies of the other G7 nations and the EU, offering practical recommendations for medium-to-large organisations to prepare for the transition to post-quantum cryptography. Flagged for review because it is a multinational G7 collective statement rather than a purely domestic Canadian instrument.",
     "included": false
+  },
+  {
+    "title": "Quantum Readiness Phases and Timelines",
+    "country": "CAN",
+    "issuingOrg": "OSFI",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.osfi-bsif.gc.ca/en/risks/technology-cyber-risk-management/technology-risk-bulletin/quantum-readiness-phases-timelines",
+    "summary": "OSFI technology risk bulletin giving federally regulated financial institutions best practices for five phases of migration to post-quantum cryptography: build competency, inventory cryptographic assets, assess risk and plan the migration, carry out the transition, then test and validate. It notes that guidance from the Canadian Centre for Cyber Security, NIST and the G7 Cyber Expert Group generally recommends quantum readiness across all systems by 2035.",
+    "included": true
+  },
+  {
+    "title": "G7 Cybersecurity Working Group call to action on preparing for the post-quantum era",
+    "country": "CAN",
+    "issuingOrg": "Cyber Centre (CCCS)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/news-events/g7-cybersecurity-working-group-call-action-preparing-post-quantum-era",
+    "summary": "Cyber Centre announcement (dated 2026-09-03) of the G7 Cybersecurity Working Group joint publication Preparing for the post-quantum era: a call to action, summarising its five priority action areas and recommending cryptographic inventories and transition plans. The full joint text is linked on cyber.gouv.fr rather than hosted by Canada.",
+    "included": true
+  },
+  {
+    "title": "Le Centre pour la cybersécurité souligne l'établissement par le NIST de nouvelles normes post-quantiques",
+    "country": "CAN",
+    "issuingOrg": "Cyber Centre (CCCS)",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/fr/nouvelles-evenements/centre-cybersecurite-souligne-letablissement-nist-nouvelles-normes-post-quantiques",
+    "summary": "Cyber Centre notice (2024-08-15) marking NIST's publication of the ML-KEM, ML-DSA and SLH-DSA post-quantum standards. It encourages Canadian practitioners to prepare through cryptographic agility and validated implementations.",
+    "included": true
+  },
+  {
+    "title": "Cyber Centre welcomes round 2 of NIST's additional digital signature scheme standardization process",
+    "country": "CAN",
+    "issuingOrg": "Cyber Centre (CCCS)",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/news-events/cyber-centre-welcomes-round-2-nists-additional-digital-signature-scheme-standardization-process",
+    "summary": "Cyber Centre notice (2025-04-29) welcoming NIST's second round of additional post-quantum digital signature standardisation, in which 14 of 40 candidates advanced. It advises Canadian organisations to prepare for the PQC transition through cryptographic agility and validated modules.",
+    "included": true
+  },
+  {
+    "title": "NIST announces post-quantum cryptography selections",
+    "country": "CAN",
+    "issuingOrg": "Cyber Centre (CCCS)",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/en/news-events/nist-announces-post-quantum-cryptography-selections",
+    "summary": "Cyber Centre notice (2022-07-06) welcoming NIST's initial PQC selections: CRYSTALS-KYBER for key encapsulation (replacing ECDH/RSA key transport) and CRYSTALS-Dilithium, Falcon and SPHINCS+ for signatures (replacing ECDSA/RSA). It advises organisations to wait for further guidance before using these algorithms to protect data or systems, and points to its preparation guidance on the quantum threat and on cryptographic agility.",
+    "included": true
+  },
+  {
+    "title": "Faire face à la menace que l'informatique quantique fait peser sur la cryptographie (ITSE.00.017)",
+    "country": "CAN",
+    "issuingOrg": "Cyber Centre (CCCS)",
+    "year": 2020,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gc.ca/fr/orientation/faire-face-la-menace-que-linformatique-quantique-fait-peser-sur-la-cryptographie",
+    "summary": "Senior Leaders Series guidance (May 2020) explaining the harvest-now-decrypt-later threat and recommending that organisations assess data sensitivity and retention, review IT lifecycle plans and educate staff. It notes that adopting post-quantum mechanisms will require software and hardware updates.",
+    "included": true
+  },
+  {
+    "title": "Communications Security Establishment Canada Annual Report 2025-2026",
+    "country": "CAN",
+    "issuingOrg": "CSE",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cse-cst.gc.ca/en/accountability/transparency/reports/communications-security-establishment-canada-annual-report-2025-2026",
+    "summary": "CSE annual report for April 2025 to March 2026, with a subsection on the transition to post-quantum cryptography covering the GC migration roadmap, a Cyber Centre learning series and quantum-safe procurement work with PSPC.",
+    "included": true
+  },
+  {
+    "title": "The Department of National Defence and Canadian Armed Forces Quantum Science & Technology Strategy Implementation Plan",
+    "country": "CAN",
+    "issuingOrg": "DND/CAF",
+    "year": 2023,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.canada.ca/en/department-national-defence/corporate/reports-publications/overview-quantum-2030/quantum-s-t-strategy-implementation-plan.html",
+    "summary": "DND/CAF implementation plan for its Quantum S&T Strategy (Quantum 2030). It treats PQC as a countermeasure under its quantum communications mission and states that DND/CAF and CSE are working with allies to implement PQC once standards are set.",
+    "included": true
   }
 ]

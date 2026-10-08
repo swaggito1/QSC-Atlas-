@@ -1,0 +1,29 @@
+{
+  "_about": "Seed for the spine of the Standards Cascade: the standards events that edges attach to, and the sovereign branches. Every entry is a lead from working knowledge and Swann's earlier sessions. Confirm each date and identifier against the issuing body's own page, record the URL and a short verbatim excerpt, and set verify to false. Drop any entry that cannot be confirmed rather than keeping a guessed date.",
+  "spine": [
+    { "id": "nist-call", "date": "2016-12", "precision": "month", "body": "NIST", "event": "Call for post-quantum public-key algorithm proposals", "standards": [], "verify": true },
+    { "id": "nist-selection", "date": "2022-07", "precision": "month", "body": "NIST", "event": "Selection of CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON and SPHINCS+ for standardisation", "standards": [], "verify": true },
+    { "id": "fips-203-204-205", "date": "2024-08", "precision": "month", "body": "NIST", "event": "Publication of FIPS 203 (ML-KEM), FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA)", "standards": ["FIPS 203", "FIPS 204", "FIPS 205"], "verify": true },
+    { "id": "nist-ir-8547-draft", "date": "2024-11", "precision": "month", "body": "NIST", "event": "Draft transition document proposing deprecation of quantum-vulnerable algorithms by 2030 and disallowance by 2035", "standards": ["NIST IR 8547"], "verify": true },
+    { "id": "hqc-selection", "date": "2025-03", "precision": "month", "body": "NIST", "event": "HQC selected as an additional key-encapsulation algorithm", "standards": ["HQC"], "verify": true },
+    { "id": "fips-206", "date": null, "precision": null, "body": "NIST", "event": "FN-DSA (FIPS 206) draft or final: find the current status", "standards": ["FIPS 206"], "verify": true }
+  ],
+  "coordination": [
+    { "id": "eu-rec-2024-1101", "date": "2024-04", "precision": "month", "body": "European Commission", "event": "Recommendation (EU) 2024/1101 on a coordinated implementation roadmap for the transition to post-quantum cryptography", "celex": "32024H1101", "verify": true },
+    { "id": "eu-nis-cg-roadmap", "date": "2025-06", "precision": "month", "body": "NIS Cooperation Group", "event": "Coordinated implementation roadmap: first steps by 2026, high-risk use cases by 2030, as much as feasible by 2035", "verify": true },
+    { "id": "uk-ncsc-timelines", "date": "2025-03", "precision": "month", "body": "NCSC (United Kingdom)", "event": "PQC migration timelines: 2028, 2031 and 2035 milestones", "verify": true }
+  ],
+  "sovereignBranches": [
+    { "id": "kor-kpqc", "iso3": "KOR", "date": "2025-01", "precision": "month", "body": "KpqC competition", "event": "Selection of national post-quantum algorithms that remain interoperable with the NIST suite", "relation": "parallel-interoperable", "verify": true },
+    { "id": "chn-ngcc", "iso3": "CHN", "date": "2025-02", "precision": "month", "body": "Institute of Commercial Cryptography Standards", "event": "Call for next-generation commercial cryptographic algorithms, including post-quantum", "relation": "fork", "verify": true },
+    { "id": "rus-gost", "iso3": "RUS", "date": null, "precision": null, "body": "Russian standardisation bodies", "event": "National post-quantum candidates within the GOST family: find the documented event and date, or drop", "relation": "fork", "verify": true }
+  ],
+  "relations": {
+    "adopts": "The document states that the jurisdiction uses or requires the standard.",
+    "references": "The document names the standard without adopting it.",
+    "profiles": "The document adopts the standard with national requirements on top, such as mandatory hybridisation or larger parameters.",
+    "participates": "The document records participation in a standards process.",
+    "fork": "The document establishes a national alternative that replaces the NIST suite.",
+    "parallel-interoperable": "A national process that produces its own algorithms while staying interoperable with the NIST suite."
+  }
+}

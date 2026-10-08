@@ -207,5 +207,16 @@
     "url": "https://www.finanstilsynet.no/publikasjoner-og-analyser/risiko--og-sarbarhetsanalyse/risiko--og-sarbarhetsanalyse-2025/ros-2025/risiko--og-sarbarhetsanalyse-ros-2025/",
     "summary": "The Norwegian Financial Supervisory Authority's 2025 risk and vulnerability analysis includes a quantum-technology threat assessment, warning of 'steal data today, decrypt later' and recommending that financial firms adopt new quantum-safe encryption algorithms, QRNG, QKD and quantum-safe hardware. First explicit QSC reference from a Norwegian financial regulator in the corpus.",
     "included": true
+  },
+  {
+    "title": "Fremtidens signaturalgoritmer",
+    "country": "NOR",
+    "issuingOrg": "NSM",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nsm.no/kurs-og-konferanser/sikkerhetskonferansen/sikkerhetskonferansen-2024/program/fremtidens-signaturalgoritmer",
+    "summary": "Programme page for a session in the cryptology track of NSM's Security Conference 2024 (14 March 2024) on standardising further quantum-safe signature algorithms. It notes that quantum computers could break today's key-encapsulation and signature algorithms, and says the talk covers work on standardising new cryptography and what to expect from future quantum-safe signatures.",
+    "included": true
   }
 ]

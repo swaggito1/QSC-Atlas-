@@ -53,5 +53,71 @@
     "url": "https://observatory.nc3.lu/",
     "summary": "National Cybersecurity Competence Center (NC3) survey report, produced with LuxQuantum, assessing post-quantum cryptography maturity across 25+ Luxembourg organisations; it finds high PQC awareness (92%) but weak action (only 16% have run pilots, 11% have identified vulnerable systems) ahead of the EU's 2030 PQC deadline, and sets out five action imperatives including cryptographic inventory and crypto-agility.",
     "included": true
+  },
+  {
+    "title": "Survey PQCReadiness: a NC3 self-assessment tool",
+    "country": "LUX",
+    "issuingOrg": "National Cybersecurity Competence Center (NC3), Luxembourg House of Cybersecurity",
+    "year": 2026,
+    "docType": "Evaluation",
+    "tier": "T3",
+    "url": "https://survey.nc3.lu/",
+    "summary": "Anonymous NC3 Luxembourg self-assessment questionnaire, now closed, for all businesses, SMEs included, to report their post-quantum cryptography readiness. It evaluated the overall ecosystem's readiness and awareness of the need to start PQC planning early, rather than auditing individual companies.",
+    "included": true
+  },
+  {
+    "title": "La stratégie du Luxembourg en matière de données (Accélérer la souveraineté numérique 2030)",
+    "country": "LUX",
+    "issuingOrg": "Government of Luxembourg",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://gouvernement.lu/dam-assets/images-documents/actualites/2025/05/16-strategies-ai-donnees-quantum/2024115332-ministere-etat-strategie-nationale-des-donnees-fr-bat-acc-ua.pdf",
+    "summary": "The national data strategy, produced by the Ministry of State, MESR, MECO and MinDigital, restates the ambition to speed up the transition to post-quantum cryptography. It also describes a cybersecurity flagship project that would provide test infrastructure and tools to help the Luxembourg ecosystem adopt PQC.",
+    "included": true
+  },
+  {
+    "title": "Luxembourg Cybersecurity Factory (AI 4 Lux)",
+    "country": "LUX",
+    "issuingOrg": "Government of Luxembourg (AI 4 Lux)",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://ai4lux.public.lu/en/projets/cybersecurite.html",
+    "summary": "A government AI 4 Lux project page on the Luxembourg Cybersecurity Factory, which combines an open cybersecurity dataspace, an AI Cybersecurity Hub and a Quantum Lab to strengthen threat intelligence, AI governance and post-quantum readiness. Its plans for 2026-2030 include expanding Post-Quantum Cryptography (PQC) testing.",
+    "included": true
+  },
+  {
+    "title": "Standards Analysis ICT Sector Luxembourg, Version 17.0",
+    "country": "LUX",
+    "issuingOrg": "ILNAS",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://portail-qualite.public.lu/content/dam/qualite/publications/normalisation/2026/standards-analysis-ict-sector-luxembourg-v17.pdf",
+    "summary": "ILNAS's July 2026 analysis of ICT standardisation committees and Luxembourg's national involvement. Its profiles list ETSI TC CYBER WG QSC (Quantum-Safe Cryptography) and ETSI TC ESI WG PQC, and the WG PQC chair is a Luxembourg participant.",
+    "included": true
+  },
+  {
+    "title": "Quantum Technologies (Normes et Normalisation, secteur TIC)",
+    "country": "LUX",
+    "issuingOrg": "ILNAS",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://portail-qualite.public.lu/fr/normes-normalisation/secteurs/tic/quantum-technologies.html",
+    "summary": "An ILNAS standardisation page (last updated 8 January 2026) on Luxembourg's involvement in quantum technology standardisation through national committee NSC 03, CEN/CLC JTC 22 and ISO/IEC JTC 3. In listing CEN/CLC JTC 22 work, it mentions a project document that will analyse the links between QKD and post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Le Digital Learning Hub inaugure trois académies pour former les talents numériques de demain",
+    "country": "LUX",
+    "issuingOrg": "MENJE",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://gouvernement.lu/fr/actualites/toutes_actualites/communiques/2026/06-juin/16-meisch-digital-learning-hub.html",
+    "summary": "A Ministry of Education press release dated 16 June 2026 launching three Digital Learning Hub academies. The Quantum Computing Academy's curriculum includes post-quantum cryptography.",
+    "included": true
   }
 ]

@@ -1,0 +1,164 @@
+/* QSC Atlas: the notes (src/pages/notes), on the épuré system (labs/review/epure-audit.md).
+   The list is an index on hairlines, as the guides are: the day in mono in a narrow column on wide
+   screens (over the title on phones), the title as an index link (ink on a thin teal underline),
+   the summary in Newsreader at the reading measure, and the pages the note introduces. A note's
+   page is reading prose at the measure, then one filled button for the page it introduces (a
+   second page takes the quiet button, so a view keeps one teal fill) and a quiet link back to
+   the list. No card, no left rule, no tinted box. Built on the tokens in global.css. */
+
+/* ---- the list ------------------------------------------------------------------------------ */
+
+.nt-list {
+  max-width: var(--w-list);
+  padding: 0;
+  list-style: none;
+  border-top: var(--rule);
+}
+.nt-row {
+  display: grid;
+  gap: var(--gap-mark) var(--space-8);
+  padding: var(--gap-group-lg) 0;
+  border-bottom: var(--rule);
+}
+@media (min-width: 860px) {
+  .nt-row {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+  /* the day lines up with the title's first line */
+  .nt-row > .nt-meta {
+    padding-top: 0.3em;
+  }
+}
+.nt-meta time {
+  white-space: nowrap;
+}
+.nt-row-body {
+  min-width: 0;
+}
+.nt-t {
+  max-width: var(--measure);
+  margin: 0;
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+/* inline padding gives the title's link a 44px hit area without moving the line */
+.nt-t a {
+  display: inline;
+  padding: 0.7em 0;
+}
+.nt-sum {
+  max-width: var(--measure);
+  margin: var(--gap-inline) 0 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-normal);
+  text-wrap: pretty;
+}
+/* the pages a note introduces: a quiet word, then the names joined by middle dots, each dot held
+   to the name before it so a line never starts on one */
+.nt-pages {
+  max-width: var(--measure);
+  margin: var(--gap-inline) 0 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+}
+.nt-k {
+  margin-right: 0.6em;
+  color: var(--ink-muted);
+}
+.nt-pl {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nt-pl > li {
+  display: inline;
+}
+.nt-pl > li:not(:last-child)::after {
+  content: '\00A0\00B7\20';
+  content: '\00A0\00B7\20' / '';
+  color: var(--ink-faint);
+}
+/* a name stands alone on its line, so it carries a 44px hit area that moves nothing */
+.nt-pl a {
+  position: relative;
+}
+.nt-pl a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+
+/* ---- one note -------------------------------------------------------------------------------- */
+
+.nt-fig {
+  max-width: var(--w-list);
+  margin: var(--gap-related) 0 0;
+}
+.nt-fig img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.nt-body {
+  margin-top: var(--gap-related);
+}
+.nt-body > * {
+  margin: 0;
+}
+.nt-body > * + * {
+  margin-top: var(--gap-group);
+}
+.nt-body > h2 {
+  margin-top: var(--gap-related);
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-section);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+}
+.nt-body > h3 {
+  margin-top: var(--gap-group-lg);
+  font-family: var(--font-instrument);
+  font-weight: var(--weight-ui-strong);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+}
+.nt-body :where(ul, ol) {
+  padding-left: 1.25em;
+}
+.nt-body li + li {
+  margin-top: var(--gap-mark);
+}
+.nt-body img {
+  max-width: 100%;
+  height: auto;
+}
+.nt-go {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-inline);
+  margin: var(--gap-related) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.nt-back {
+  margin: var(--gap-group-lg) 0 0;
+  font-size: var(--type-small);
+}
+.nt-back a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+}
+@media (max-width: 639px) {
+  .nt-fig,
+  .nt-body {
+    margin-top: var(--gap-group-lg);
+  }
+}

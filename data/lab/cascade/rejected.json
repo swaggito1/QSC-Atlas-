@@ -1,0 +1,47 @@
+{
+  "_about": "Candidate edges checked against the document itself and not recorded as edges, with the reason, so the watch pipeline does not propose them again. Candidates from jurisdictions outside the first verification set (CHE, ESP, ITA, POL, SWE, THA) were not checked and are not listed here.",
+  "rejected": [
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
+      "standardId": "FIPS-203",
+      "reason": "unreachable: the recorded address returns 404 Not Found, so the document could not be read",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
+      "standardId": "FIPS-204",
+      "reason": "unreachable: the recorded address returns 404 Not Found, so the document could not be read",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://home.treasury.gov/system/files/136/FAQs-Financial-Sector-Risks-Quantum-Computing.pdf",
+      "standardId": "FIPS-203",
+      "reason": "names FIPS 203 and ML-KEM, but the document carries no date of its own, so the edge cannot be dated; recheck if a dated version is found",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://pages.nist.gov/piv-standards/",
+      "standardId": "FIPS-203",
+      "reason": "names ML-KEM and ML-DSA, but the page carries no publication or update date, so the edge cannot be dated; recheck if a dated version is found",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://pages.nist.gov/piv-standards/",
+      "standardId": "FIPS-204",
+      "reason": "names ML-KEM and ML-DSA, but the page carries no publication or update date, so the edge cannot be dated; recheck if a dated version is found",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/05/nine-candidates-advance-third-round-additional-digital-signatures-pqc",
+      "standardId": "FIPS-204",
+      "reason": "the document does not name the standard; the match came from the Atlas summary only",
+      "checkedAt": "2026-09-30"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/05/nine-candidates-advance-third-round-additional-digital-signatures-pqc",
+      "standardId": "FIPS-205",
+      "reason": "the document does not name the standard; the match came from the Atlas summary only",
+      "checkedAt": "2026-09-30"
+    }
+  ]
+}

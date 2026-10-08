@@ -108,5 +108,27 @@
     "url": "https://antoanthongtin.vn/tin/bao-dam-an-ninh-mang-quoc-gia-trong-ky-nguyen-ai-va-luong-tu-thach-thuc-va-giai-phap-de-xuat-cho-viet-nam",
     "summary": "Policy article in the Government Cipher Committee's journal analysing the quantum threat (including 'collect now, decrypt later') to Vietnamese critical infrastructure and proposing a rapid national migration to post-quantum cryptography, noting the Committee has been tasked with building Vietnam's quantum-resistant cryptography development plan for 2026-2030.",
     "included": true
+  },
+  {
+    "title": "Chủ động xây dựng tiêu chuẩn mật mã cho kỷ nguyên hậu lượng tử",
+    "country": "VNM",
+    "issuingOrg": "MST",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://mst.gov.vn/chu-dong-xay-dung-tieu-chuan-mat-ma-cho-ky-nguyen-hau-luong-tu-197260721151804532.htm",
+    "summary": "Ministry of Science and Technology portal item (22 July 2026, MST Science and Technology Communication Centre) reporting an international workshop held on 21 July 2026 by the ministry's National Electronic Authentication Centre (NEAC) with SAVIS Group and DigiCert on transitioning cryptographic standards for PKI and trust services toward the post-quantum era. At the workshop, Hoàng Nguyên Vân, deputy director of the Institute of Innovation and Digital Transformation (VIDTI), said the finance and banking sector should soon build a roadmap for migrating to post-quantum cryptography to counter the harvest-now-decrypt-later risk to sensitive data. The item reports discussion and recommendations, not a binding ministry decision.",
+    "included": true
+  },
+  {
+    "title": "Ban Cơ yếu Chính phủ và Công ty Cổ phần Tập đoàn MK hợp tác phát triển công nghệ lượng tử, bảo mật và an toàn thông tin",
+    "country": "VNM",
+    "issuingOrg": "BCY",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://bcy.gov.vn/tin-tuc-ban-nganh/ban-co-yeu-chinh-phu-va-cong-ty-co-phan-tap-doan-mk-hop-tac-phat-trien-cong-nghe-luong-tu-bao-ma-929045",
+    "summary": "Government Cipher Committee notice of a five-year comprehensive cooperation agreement signed with MK Group in December 2025 covering quantum technology, cryptography and information security, aimed at a 'Make in Vietnam' cryptographic product ecosystem. The cooperation areas include developing and transferring technology to design and manufacture HSM-PQC-MPC devices using Vietnamese cryptographic algorithms.",
+    "included": true
   }
 ]

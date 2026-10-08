@@ -1,0 +1,75 @@
+# QSC Atlas Labs: checks on every pull request. Validation, invariant tests, house style on
+# changed lab files and an Astro build (without Notion secrets the Notion collections are empty,
+# which is fine for the labs). Enables auto-merge only for lab-watch pull requests whose source
+# class and item type have graduated, reading the autonomy rules from main, never from the
+# pull request itself.
+name: lab-gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, ready_for_review]
+
+concurrency:
+  group: lab-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Validate lab data against schemas and invariants
+        run: npm run lab:validate
+      - name: Unit and invariant tests
+        run: npm run lab:test
+      - name: House style on changed lab files
+        env:
+          BASE: ${{ github.base_ref }}
+        run: |
+          CHANGED=$(git diff --name-only --diff-filter=ACMR "origin/$BASE...HEAD" -- \
+            'data/lab/**' 'src/pages/lab/**' 'src/components/lab/**' 'src/lib/lab/**' 'scripts/lab/**' \
+            'labs/**' '.claude/skills/**' '.github/workflows/lab-*.yml' 'CLAUDE.md' ':!data/lab/watch/**' ':!data/lab/cascade/candidates.json' \
+            | grep -E '\.(md|astro|tsx|ts|mjs|json|ya?ml|sh|rq|html)$' || true)
+          if [ -n "$CHANGED" ]; then node labs/tools/style-scan.mjs $CHANGED; else echo "No changed lab files."; fi
+      - name: Build
+        run: npm run build
+
+  maybe-auto-merge:
+    needs: checks
+    if: contains(github.event.pull_request.labels.*.name, 'lab-watch') && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.base_ref }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Is this source class and item type graduated? (labels, changed files and lab-meta)
+        id: autonomy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          gh pr view "$PR" --json labels,files,body > "$RUNNER_TEMP/pr.json"
+          node scripts/lab/autonomy-check.mjs --pr-json "$RUNNER_TEMP/pr.json" | tee -a "$GITHUB_OUTPUT"
+      - name: Enable auto-merge for graduated pairs only
+        if: steps.autonomy.outputs.eligible == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.LAB_BOT_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: gh pr merge "$PR" --auto --squash

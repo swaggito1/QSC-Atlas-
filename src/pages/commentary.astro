@@ -1,14 +1,178 @@
 ---
+// Commentary: "One shared core, many wrappers". Decision 4 (Swann, 1 October 2026): the page and
+// its race chart stay, with every date corrected in place to what the Atlas's own sourced records
+// hold, and each migration date drawn by its kind and its bindingness instead of as a hard
+// deadline.
+//
+// The migration half of the chart is read at build from the Atlas's records: the lines of each
+// place's profile timeline as the profile itself shows them (readTimeline in
+// src/lib/site/evidence.ts, over the JSON copy in data/profiles) and the dated targets of the
+// guides a place issues, which for the EU are the targets of the EU coordinated roadmap as
+// readiness.json records them (datesFor in src/lib/site/dates.ts). A profile line that a confirmed
+// annotation folds into a guide is drawn once, as the guide's row, as on Target dates. Each mark
+// carries the kind and bindingness its record holds; what rests on an annotation still awaiting
+// confirmation is drawn as "not recorded". The profile lines are not taken from datesFor alone
+// because it holds the United States' lines back from production until they are re-read at the
+// primary source (REREAD, a condition of the Target dates comparison), while the United States
+// profile shows them and the prose names them. The chart therefore cannot drift from the
+// profiles; the dates written in the prose are checked against the same marks at build
+// (PROSE_DATES, with a warning) and by a test in src/lib/site/changelog.test.ts.
+//
+// The qubit half shows figures the companies have announced. They are not Atlas records, so
+// each was read at its source in this session (1 October 2026), as were the citations below:
+//   IBM, https://www.ibm.com/quantum/blog/quantum-roadmap-2033 (4 Dec 2023):
+//     "We have introduced IBM Condor, a 1,121 superconducting qubit quantum processor based on our
+//     cross-resonance gate technology."
+//   IBM, https://www.ibm.com/quantum/blog/100k-qubit-supercomputer (21 May 2023):
+//     "100,000 connected qubits is an achievable goal by 2033."
+//   Microsoft, https://azure.microsoft.com/en-us/blog/quantum/2025/02/19/microsoft-unveils-majorana-1-the-worlds-first-quantum-processor-powered-by-topological-qubits/
+//     (19 Feb 2025): "And we've already placed eight topological qubits on a chip designed to house one million."
+//   Amazon, https://www.amazon.science/blog/amazon-announces-ocelot-quantum-chip (27 Feb 2025):
+//     five cat data qubits and four ancilla qubits, nine in all.
+//   Gidney, https://arxiv.org/abs/2505.15917 (21 May 2025): "I estimate that a 2048 bit RSA
+//     integer could be factored in less than a week by a quantum computer with less than a million
+//     noisy qubits."
+//   Gidney and Ekerå, https://arxiv.org/abs/1905.09749 (23 May 2019): "How to factor 2048 bit RSA
+//     integers in 8 hours using 20 million noisy qubits".
+//   G7 Cyber Expert Group, https://home.treasury.gov/news/press-releases/jy2609 (25 Sep 2024).
+//   Global Risk Institute, https://globalriskinstitute.org/publication/2024-quantum-threat-timeline-report/
+//     (6 Dec 2024): "combines insights from 32 global experts".
+//   Budde and Konrad, https://doi.org/10.1016/j.respol.2019.01.007: "Tentative governing of fuel
+//     cell innovation in a dynamic network of expectations", Research Policy 48(5), 2019.
+// The other dates on the page come from Atlas records: FIPS 203 (data/results/USA.json, 13 August
+// 2024); the Cyber Resilience Act (data/lab/rulebook/acts.json, the rest of the Regulation applies
+// from 11 December 2027); the NIS Cooperation Group roadmap (2025, data/profiles/EUU.json);
+// Executive Orders 14412 (22 June 2026) and 14306 (2025) (data/results/USA.json); the DST task
+// force report (2026, data/results/IND.json); the joint position on quantum key distribution
+// (2024, January in its address, data/results/NLD.json).
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import Base from '../layouts/Base.astro';
-import ReadingProgress from '../components/ReadingProgress.astro';
+import DataTable from '../components/lab/DataTable.astro';
+import { datesFor, foldLines } from '../lib/site/dates';
+import type { DateRow } from '../lib/site/dates';
+import { readTimeline } from '../lib/site/evidence';
+import { isEuMember, nameInSentence, profilesByIso3, placeName } from '../lib/site/joins';
+import { projectRoot } from '../lib/lab/load';
+import { INSTRUMENT_STATUS_META } from '../lib/regulation';
+import { pageHref } from '../lib/site/gates';
+import { GITHUB_URL, ZENODO_DOI, ZENODO_URL } from '../lib/site/config';
+import datesCopy from '../../data/lab/dates/copy.json';
 
-// The quantum-safe race: industry qubit trajectories toward the threshold at which a machine could
-// break RSA-2048 (top), set against national migration deadlines (bottom), on one 2024-2040 axis.
-// Qubit figures and targets are industry-stated; migration dates are the national instruments.
-const YMIN = 2024;
+const copy = datesCopy.copy as Record<string, any>;
+
+// ---- the migration dates, from the Atlas's records -------------------------------------------
+
+const ACTORS = ['DEU', 'EUU', 'USA', 'IND', 'THA', 'CHN'];
+const profiles = profilesByIso3();
+
+/** One dated line of a place's own record, as the chart, the table and the description use it. */
+interface Mark {
+  iso3: string;
+  year: number;
+  month: number | null;
+  display: string | null; // the year as the record writes it, when it is a range
+  label: string;
+  kind: DateRow['kind'];
+  bindingness: DateRow['bindingness'];
+  source: string; // the record it is read from
+}
+
+// the profile's migration timeline as the JSON copy holds it
+const rawTimeline = (iso3: string): string | null => {
+  const file = join(projectRoot(), 'data', 'profiles', `${iso3}.json`);
+  if (!existsSync(file)) return null;
+  const raw = JSON.parse(readFileSync(file, 'utf8')) as { migrationTimeline?: unknown };
+  return typeof raw.migrationTimeline === 'string' ? raw.migrationTimeline : null;
+};
+
+function marksOf(iso3: string, name: string): Mark[] {
+  // the profile's own lines, as its profile shows them; a line folded into a guide is drawn as the guide's row
+  const lines = readTimeline(iso3, rawTimeline(iso3), isEuMember(iso3)).filter(
+    (l): l is typeof l & { year: number } => typeof l.year === 'number',
+  );
+  const folded = foldLines(iso3, lines.map((l) => ({ year: l.year, label: l.label })));
+  const own: Mark[] = lines
+    .filter((l, i) => !folded[i] && !l.open)
+    .map((l) => ({
+      iso3,
+      year: l.year,
+      month: null,
+      display: l.display !== String(l.year) ? l.display : null,
+      label: l.label,
+      // what rests on an annotation awaiting confirmation is not drawn: the line reads not recorded
+      kind: l.lead ? null : l.kind,
+      bindingness: l.lead ? null : ((l.bindingness as DateRow['bindingness']) ?? null),
+      source: `${name} profile`,
+    }));
+  // the dated targets of the guides the place issues itself (the EU coordinated roadmap, for the EU)
+  const issued: Mark[] = datesFor([iso3])
+    .filter((r) => r.relation === 'own' && r.origin === 'guide' && !r.lead)
+    .map((r) => ({
+      iso3,
+      year: r.year,
+      month: r.month,
+      display: r.display ?? null,
+      label: r.label,
+      kind: r.kind,
+      bindingness: r.bindingness,
+      source: r.issuer ? `${r.issuer}${r.guideTitle ? `, ${r.guideTitle}` : ''}` : `${name} profile`,
+    }));
+  return [...own, ...issued].sort((a, b) => a.year - b.year || (a.month ?? 13) - (b.month ?? 13));
+}
+
+type Lane = 'law' | 'guidance' | 'none';
+const laneOf = (b: DateRow['bindingness']): Lane => {
+  if (!b) return 'none';
+  return INSTRUMENT_STATUS_META[b]?.binding ? 'law' : 'guidance';
+};
+const LANE_HEAD: Record<Lane, string> = {
+  law: 'Set in law',
+  guidance: 'Set in guidance',
+  none: 'Bindingness not recorded',
+};
+const kindKey = (k: DateRow['kind']) => k ?? 'none';
+const kindWord = (k: DateRow['kind']) => (copy.kindWord as Record<string, string>)[kindKey(k)];
+const kindLabel = (k: DateRow['kind']) => (copy.kind as Record<string, string>)[kindKey(k)];
+const kindNameOf = (k: string) => (copy.kind as Record<string, string>)[k] ?? k;
+const howSet = (r: Mark) => {
+  const lane = laneOf(r.bindingness);
+  if (lane === 'none') return 'Bindingness not recorded';
+  const b = INSTRUMENT_STATUS_META[r.bindingness!]?.label ?? r.bindingness!;
+  return `${LANE_HEAD[lane]} (${b.toLowerCase()})`;
+};
+
+const actors = ACTORS.map((iso3) => {
+  const p = profiles.get(iso3);
+  const name = p?.country ?? placeName(iso3);
+  return { iso3, name, posture: p?.posture ?? null, rows: marksOf(iso3, name) };
+});
+const rows = actors.flatMap((a) => a.rows);
+const withDates = actors.filter((a) => a.rows.length > 0);
+const withoutDates = actors.filter((a) => a.rows.length === 0);
+// the coordination posture of a place in words, so colour is never the only carrier of it
+const postureWords = (a: (typeof actors)[number]) => a.posture?.short ?? 'no coordination posture recorded';
+
+// The dates the prose names, each checked against the marks above when the page is built. A
+// profile edit that removes one prints a warning in the build log and fails the test that reads
+// this literal (src/lib/site/changelog.test.ts); the prose is then Swann's to correct, and the
+// chart and table already follow the record.
+const PROSE_DATES: Record<string, number[]> = { DEU: [2030, 2031, 2035], EUU: [2030, 2035], USA: [2030, 2031, 2035], IND: [2029, 2033], THA: [2028, 2035] };
+for (const [iso3, years] of Object.entries(PROSE_DATES)) {
+  const have = new Set(rows.filter((r) => r.iso3 === iso3).map((r) => r.year));
+  const missing = years.filter((y) => !have.has(y));
+  if (missing.length) console.warn(`[commentary] the prose names ${missing.join(', ')} for ${iso3}, which its record no longer holds`);
+}
+if (withoutDates.some((a) => a.iso3 !== 'CHN') || !withoutDates.some((a) => a.iso3 === 'CHN')) {
+  console.warn('[commentary] the prose says the Atlas records no migration date for China; check that sentence against the record');
+}
+
+// ---- the chart --------------------------------------------------------------------------------
+
+const YMIN = 2023;
 const YMAX = 2040;
-const X0 = 110;
-const X1 = 690;
+const X0 = 150;
+const X1 = 700;
 const x = (yr: number) => X0 + ((yr - YMIN) / (YMAX - YMIN)) * (X1 - X0);
 const ticks = [2024, 2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040];
 
@@ -20,335 +184,565 @@ const decades = [
   { q: 10000000, t: '10M' }, { q: 1000000, t: '1M' }, { q: 100000, t: '100k' },
   { q: 10000, t: '10k' }, { q: 1000, t: '1k' }, { q: 100, t: '100' }, { q: 10, t: '10' },
 ];
-// dLab is the demo-point label, tLab the stated target; ly/tly nudge those labels vertically and
-// mx nudges the demo marker sideways, so the clustered low-qubit points do not collide.
+// dLab is the announced chip, tLab the stated target; ly and tly nudge those labels vertically and
+// mx nudges a marker sideways, so the clustered low-qubit points do not collide.
 const firms = [
-  { demo: { yr: 2024, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)', ly: -5,
-    target: { yr: 2033, q: 100000 }, tLab: '100k by 2033', tly: -9 },
+  { demo: { yr: 2023, q: 1121 }, dLab: 'IBM Condor, 1,121 (2023)', ly: 14,
+    target: { yr: 2033, q: 100000 }, tLab: 'IBM target, 100,000 by 2033', tly: -9 },
   { demo: { yr: 2025, q: 8 }, dLab: 'Microsoft Majorana 1, 8 (2025)', ly: -10 },
-  { demo: { yr: 2025, q: 9 }, dLab: 'Amazon Ocelot, ~9 (2025)', mx: 16, ly: 18 },
+  { demo: { yr: 2025, q: 9 }, dLab: 'Amazon Ocelot, 9 (2025)', mx: 16, ly: 18 },
 ];
 
-// Bottom panel: national migration deadlines.
-const R0 = 308;
-const RH = 20;
-const actors = [
-  { name: 'Germany', body: 'BSI', marks: [2032], text: '2032', kind: 'hard', color: '#5b54a8' },
-  { name: 'European Union', body: 'NIS CG', marks: [2035], text: '2035', kind: 'hard', color: '#5b54a8' },
-  { name: 'United States', body: 'federal', marks: [2030, 2033], text: '2030, 2033 (federal)', kind: 'hard', color: '#2b4c7e' },
-  { name: 'India', body: 'DST task force', marks: [2029, 2033], text: '2029 critical, 2033', kind: 'hard', color: '#6b7280' },
-  { name: 'Thailand', body: 'NCSA QUANTA', marks: [2029, 2035], text: '2029 priority, 2035', kind: 'hard', color: '#2b4c7e' },
-  { name: 'China', body: 'SM-series', marks: [], yr: 2038, text: 'no fixed date', kind: 'none', color: '#7a3b5e' },
+// Bottom panel: one group per way a date is set, one row per place in it, the places without a
+// recorded date last. The rows are grouped, never ranked: places keep the order of ACTORS.
+const LANES: Lane[] = ['law', 'guidance', 'none'];
+const B0 = 286; // the panel title
+const RH = 28; // a place's row
+const GH = 26; // a group's head
+type ChartRow = { y: number; name: string; color: string | null; marks: Mark[] };
+type ChartGroup = { y: number; head: string; rows: ChartRow[] };
+const groups: ChartGroup[] = [];
+let cy = B0 + 22;
+for (const lane of LANES) {
+  const inLane = withDates
+    .map((a) => ({ a, marks: a.rows.filter((r) => laneOf(r.bindingness) === lane) }))
+    .filter((e) => e.marks.length > 0);
+  if (!inLane.length) continue;
+  const g: ChartGroup = { y: cy, head: LANE_HEAD[lane], rows: [] };
+  cy += GH;
+  for (const { a, marks } of inLane) {
+    g.rows.push({ y: cy, name: a.name, color: a.posture?.color ?? null, marks });
+    cy += RH;
+  }
+  groups.push(g);
+  cy += 6;
+}
+const noneGroup = withoutDates.length
+  ? { y: cy, head: 'No date recorded', rows: withoutDates.map((a, i) => ({ y: cy + GH + i * RH, name: a.name, color: a.posture?.color ?? null })) }
+  : null;
+if (noneGroup) cy += GH + withoutDates.length * RH;
+const AXIS_Y = cy + 4;
+const H = AXIS_Y + 28;
+
+// the shape of a mark gives its kind of date, as on the Target dates view
+function shape(kind: string, cx: number, cyy: number): { tag: 'circle' | 'rect' | 'polygon'; attrs: Record<string, number | string> } {
+  switch (kind) {
+    case 'plan':
+      return { tag: 'circle', attrs: { cx, cy: cyy, r: 5 } };
+    case 'priority':
+      return { tag: 'polygon', attrs: { points: `${cx},${cyy - 6} ${cx + 6},${cyy} ${cx},${cyy + 6} ${cx - 6},${cyy}` } };
+    case 'complete':
+      return { tag: 'rect', attrs: { x: cx - 4.5, y: cyy - 4.5, width: 9, height: 9 } };
+    case 'procurement':
+      return { tag: 'polygon', attrs: { points: `${cx},${cyy - 6} ${cx + 6},${cyy + 4.5} ${cx - 6},${cyy + 4.5}` } };
+    case 'other':
+      return { tag: 'rect', attrs: { x: cx - 6, y: cyy - 2.25, width: 12, height: 4.5 } };
+    default:
+      return { tag: 'rect', attrs: { x: cx - 1.75, y: cyy - 6.5, width: 3.5, height: 13 } };
+  }
+}
+// the coordination postures of the places drawn, for the key: colour beside a name means only this
+const postures = [...new Map(actors.filter((a) => a.posture).map((a) => [a.posture!.key, a.posture!])).values()];
+const kindsShown = [...new Set(rows.map((r) => kindKey(r.kind)))].sort(
+  (a, b) => ['plan', 'priority', 'complete', 'procurement', 'other', 'none'].indexOf(a) - ['plan', 'priority', 'complete', 'procurement', 'other', 'none'].indexOf(b),
+);
+
+// ---- words drawn from the same rows ---------------------------------------------------------------
+
+const joinAnd = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+const yearsOf = (a: (typeof actors)[number]) => joinAnd([...new Set(a.rows.map((r) => String(r.year)))]);
+const placeLine = (a: (typeof actors)[number]) => {
+  const lanes = [...new Set(a.rows.map((r) => howSet(r).toLowerCase()))];
+  const dates = a.rows.some((r) => r.kind) ? joinAnd(a.rows.map((r) => `${r.year} (${kindWord(r.kind)})`)) : yearsOf(a);
+  return `${a.name} (${postureWords(a)}): ${dates}, ${joinAnd(lanes)}`;
+};
+const noDateSentence = withoutDates.length
+  ? `The Atlas records no migration date for ${joinAnd(withoutDates.map((a) => nameInSentence(a.name)))}.`
+  : '';
+const sentenceCase = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+const chartDesc = [
+  `One ${YMIN} to ${YMAX} timeline. Above, qubit counts the companies have announced and IBM's stated target of 100,000 connected qubits by 2033, against a 2025 estimate that breaking RSA-2048 would take under a million noisy qubits.`,
+  `Below, the migration dates the Atlas records, each place with its coordination posture: ${withDates.map(placeLine).join('. ')}.`,
+  withoutDates.length ? `${joinAnd(withoutDates.map((a) => `${a.name} (${postureWords(a)})`))}: no date recorded.` : '',
+].join(' ');
+
+const tableRows = withDates.flatMap((a) =>
+  a.rows.map((r) => ({
+    place: a.name,
+    posture: sentenceCase(postureWords(a)),
+    year: r.month ? `${['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][r.month - 1]} ${r.year}` : String(r.display ?? r.year),
+    label: sentenceCase(r.label),
+    kind: kindLabel(r.kind),
+    set: howSet(r),
+    source: r.source,
+  })),
+);
+const tableColumns = [
+  { key: 'place', label: 'Place' },
+  { key: 'posture', label: 'Coordination posture' },
+  { key: 'year', label: 'Date' },
+  { key: 'label', label: 'What the record says' },
+  { key: 'kind', label: 'Kind of date' },
+  { key: 'set', label: 'How it is set' },
+  { key: 'source', label: 'Record' },
 ];
+
+const methodology = pageHref('/methodology');
+const methodDates = methodology ? `${methodology}#dates` : null;
+const profileHref = (iso3: string) => pageHref(`/countries/${iso3.toLowerCase()}`);
 ---
 
 <Base
   title="One shared core, many wrappers"
-  description="A QSC Atlas explanation of the fragmentation of the post-quantum transition, and how it is governed through a network of expectations rather than a central authority."
+  description="A QSC Atlas commentary on why the post-quantum transition is fragmenting, and how it is governed all the same, with every migration date drawn as the Atlas records it."
 >
-  <ReadingProgress />
-  <div class="container commentary">
-    <p class="kicker">QSC Atlas explanation</p>
-    <h1>One shared core, many wrappers</h1>
-    <p class="standfirst prose">
-      Why the post-quantum transition is fragmenting, and how it is governed all the same.
-    </p>
-    <p class="method-cta">
-      <a class="method-link" href="/methodology">How the Atlas classifies countries &rarr;</a>
-    </p>
+  <article class="cm">
+    <header class="cm-head">
+      <h1 class="cm-h1">One shared core, many wrappers</h1>
+      <p class="cm-standfirst">Why the post-quantum transition is fragmenting, and how it is governed all the same.</p>
+      {
+        methodology && (
+          <p class="cm-meta">
+            A commentary from the QSC Atlas. <a href={methodology}>How the Atlas classifies countries</a>
+          </p>
+        )
+      }
+    </header>
 
     <p class="prose">
-      One set of algorithms now sits underneath almost every national plan for post-quantum
-      cryptography. When a United States federal agency published three standards in August 2024, a
-      contested question became a settled technical fact, and within months those choices were in
-      European certification catalogues, in national guidance from Paris to Bonn, and in the browsers
-      shipping to the world. The core is shared. What surrounds it is not.
+      One set of algorithms now sits underneath almost every national plan for post-quantum cryptography. When a United
+      States federal agency published three standards in August 2024, a contested question became a settled technical
+      fact, and within months those choices were in European certification catalogues, in national guidance from Paris
+      to Bonn, and in the browsers shipping to the world. The core is shared. What surrounds it is not.
     </p>
 
     <h2>The wrappers: an instrument cascade</h2>
     <p class="prose">
-      The same algorithms arrive wrapped in very different instruments. In the European Union they are
-      becoming binding through NIS2 and DORA and, from December 2027, the Cyber Resilience Act, though
-      rarely by name. The obligation is carried by an undefined phrase, state of the art, whose
-      cryptographic content is supplied by an interpretive layer of certification guidance that sits
-      between legislation and practice. Elsewhere the same core is wrapped in soft national roadmaps,
-      and across much of the world in nothing at all.
+      The same algorithms arrive wrapped in very different instruments. In the European Union they are becoming binding
+      through NIS2 and DORA and, from December 2027, the Cyber Resilience Act, though rarely by name. The obligation is
+      carried by an undefined phrase, state of the art, whose cryptographic content is supplied by an interpretive layer
+      of certification guidance that sits between legislation and practice. Elsewhere the same core is wrapped in soft
+      national roadmaps, and across much of the world in nothing at all.
     </p>
 
     <h2>The clocks diverge, against an uncertain threat</h2>
     <p class="prose">
-      The timetables fragment as sharply as the instruments, and every one of them is set against a
-      threat that cannot be dated. Germany works to 2032; the European Union coordinates to 2035; the
-      United States now sets 2030 and 2033 deadlines for its federal systems; India, more aggressive
-      than any, wants its critical infrastructure quantum-safe by 2029 and the rest by 2033; Thailand's
-      cyber agency runs a phased roadmap that completes in 2035; while China alone publishes no fixed
-      national date. What each clock races is not an
-      observed danger but an expectation. Climate governance can point to rising temperatures;
-      quantum-safe governance has no such observable, only the qubit counts the industry says it will
-      reach and an uncertain threshold at which they break today's encryption. The gap between the two
-      is the whole risk: on its own roadmap one firm expects to cross that threshold around 2029, as
-      early as the most aggressive migration deadline. The deadlines do their work anyway, because
-      expectations are performative: they cascade vertically, a revised hardware estimate registering
-      at once in Washington's gates and Brussels' milestones, and they align horizontally, as when
-      four national agencies co-signed a single position in January 2024 that confined quantum key
-      distribution to niche uses and named post-quantum migration the priority. Each national clock
-      is, in the end, a wager that migration will finish before the machine arrives.
+      The timetables fragment as sharply as the instruments, and every one of them is set against a threat that cannot
+      be dated. Germany's BSI, in its technical guideline, sets 2030 for highly sensitive applications, 2031 for
+      classical asymmetric encryption used on its own and 2035 for classical signatures. The EU coordinated roadmap, a
+      recommendation to Member States, sets 2030 for high-risk use cases and 2035 for medium-risk ones. A United States
+      executive order of June 2026 sets 2030 and 2031 for federal high value assets and high-impact systems, and
+      national security systems are to complete their move to CNSA 2.0 by 2035. India's Department of Science and
+      Technology names 2029 for critical information infrastructure and 2033 for enterprise-wide adoption. Thailand's
+      cyber agency runs a phased roadmap that moves high-priority systems by 2028 and completes in 2035. The Atlas
+      records no national migration date for China.
+    </p>
+    <p class="prose">
+      What each clock races is not an observed danger but an expectation. Climate governance can point to rising
+      temperatures; quantum-safe governance has no such observable, only the qubit counts the industry says it will
+      reach and an uncertain threshold at which they break today's encryption. The gap between the two is the whole
+      risk, and no calendar settles it: a 2025 estimate (Gidney) puts a machine able to break RSA-2048 at under a
+      million noisy qubits, while the largest target any roadmap in the chart below states is 100,000 connected
+      qubits by 2033. The dates do their work anyway, because expectations are performative: they cascade vertically, a
+      revised hardware estimate registering at once in Washington's gates and Brussels' targets, and they align
+      horizontally, as when four national agencies co-signed a single position in January 2024 that confined quantum
+      key distribution to niche uses and named post-quantum migration the priority. Each national clock is, in the
+      end, a wager that migration will finish before the machine arrives.
     </p>
 
-    <figure class="race">
-      <p class="scroll-hint" aria-hidden="true">Drag sideways to see the full chart &rarr;</p>
-      <div class="race-scroll">
-      <svg viewBox="0 0 720 452" role="img" aria-labelledby="r-t r-d" class="race-svg">
-        <title id="r-t">The quantum-safe race: qubit trajectories against migration deadlines</title>
-        <desc id="r-d">
-          A single 2024 to 2040 timeline. Above, industry qubit targets rise toward the threshold at
-          which a quantum computer could break RSA-2048, with one stated target reaching it around 2029.
-          Below, national migration deadlines range from India's 2029 to Thailand's and the EU's 2035,
-          while China alone sets none.
-        </desc>
+    <figure class="race" aria-labelledby="race-cap">
+      <p class="race-hint" aria-hidden="true">Drag sideways to see the full chart</p>
+      <div class="race-scroll" tabindex="0" role="region" aria-label="The quantum-safe race, a chart that scrolls sideways">
+        <svg viewBox={`0 0 720 ${H}`} role="img" aria-labelledby="r-t r-d" class="race-svg">
+          <title id="r-t">The quantum-safe race: qubit counts against the migration dates the Atlas records</title>
+          <desc id="r-d">{chartDesc}</desc>
 
-        {/* shared vertical gridlines + year labels */}
-        {
-          ticks.map((t) => (
-            <g>
-              <line x1={x(t)} y1="48" x2={x(t)} y2="418" class="race-grid" />
-              <text x={x(t)} y="440" class="race-year" text-anchor="middle">{t}</text>
-            </g>
-          ))
-        }
-        {/* the 2030 marker, emphasised across both panels */}
-        <line x1={x(2030)} y1="48" x2={x(2030)} y2="418" class="race-2030" />
+          {
+            ticks.map((t) => (
+              <g>
+                <line x1={x(t)} y1="48" x2={x(t)} y2={AXIS_Y} class="race-grid" />
+                <text x={x(t)} y={AXIS_Y + 18} class="race-year" text-anchor="middle">
+                  {t}
+                </text>
+              </g>
+            ))
+          }
 
-        {/* ---- top panel: the quantum clock ---- */}
-        <text x="8" y="24" class="race-panel">The quantum clock: where industry expects qubit counts to go</text>
-        <rect x={X0} y={qy(10000000)} width={X1 - X0} height={qy(100000) - qy(10000000)} class="race-band" />
-        <line x1={X0} y1={qy(1000000)} x2={X1} y2={qy(1000000)} class="race-crqc" />
-        <text x={X1} y={qy(1000000) - 5} class="race-note" text-anchor="end">CRQC threshold (RSA-2048)</text>
-        {
-          decades.map((d) => (
-            <g>
-              <line x1={X0} y1={qy(d.q)} x2={X1} y2={qy(d.q)} class="race-grid faint" />
-              <text x={X0 - 8} y={qy(d.q) + 3} class="race-axis" text-anchor="end">{d.t}</text>
-            </g>
-          ))
-        }
-        {
-          firms.map((f) => (
-            <g>
-              {f.target && (
-                <line x1={x(f.demo.yr)} y1={qy(f.demo.q)} x2={x(f.target.yr)} y2={qy(f.target.q)} class="race-traj" />
-              )}
-              <circle cx={x(f.demo.yr) + (f.mx || 0)} cy={qy(f.demo.q)} r="4.5" class="race-demo" />
-              <text x={x(f.demo.yr) + (f.mx || 0) + 11} y={qy(f.demo.q) + 3 + (f.ly || 0)} class="race-label">{f.dLab}</text>
-              {f.target && <circle cx={x(f.target.yr)} cy={qy(f.target.q)} r="5" class="race-target" />}
-              {f.target && <text x={x(f.target.yr) + 9} y={qy(f.target.q) + 3 + (f.tly || 0)} class="race-label">{f.tLab}</text>}
-            </g>
-          ))
-        }
+          {/* top panel: the quantum clock */}
+          <text x="8" y="24" class="race-panel">The quantum clock: where industry says its qubit counts are heading</text>
+          {
+            decades.map((d) => (
+              <g>
+                <line x1={X0} y1={qy(d.q)} x2={X1} y2={qy(d.q)} class="race-grid faint" />
+                <text x={X0 - 8} y={qy(d.q) + 3} class="race-axis" text-anchor="end">
+                  {d.t}
+                </text>
+              </g>
+            ))
+          }
+          <line x1={X0} y1={qy(1000000)} x2={X1} y2={qy(1000000)} class="race-crqc" />
+          <text x={X1} y={qy(1000000) - 6} class="race-note" text-anchor="end">
+            Under a million noisy qubits: estimate to break RSA-2048 (Gidney, 2025)
+          </text>
+          {
+            firms.map((f) => (
+              <g>
+                {f.target && <line x1={x(f.demo.yr)} y1={qy(f.demo.q)} x2={x(f.target.yr)} y2={qy(f.target.q)} class="race-traj" />}
+                <circle cx={x(f.demo.yr) + (f.mx || 0)} cy={qy(f.demo.q)} r="4.5" class="race-demo" />
+                <text x={x(f.demo.yr) + (f.mx || 0) + 11} y={qy(f.demo.q) + 3 + (f.ly || 0)} class="race-label">
+                  {f.dLab}
+                </text>
+                {f.target && <circle cx={x(f.target.yr)} cy={qy(f.target.q)} r="5" class="race-target" />}
+                {f.target && (
+                  <text x={x(f.target.yr) + 9} y={qy(f.target.q) + 3 + (f.tly || 0)} class="race-label">
+                    {f.tLab}
+                  </text>
+                )}
+              </g>
+            ))
+          }
 
-        {/* ---- bottom panel: the migration race ---- */}
-        <text x="8" y="286" class="race-panel">The migration race: when each actor must have crossed the line</text>
-        {
-          actors.map((a, i) => (
-            <g>
-              <text x="8" y={R0 + i * RH + 4} class="race-name">{a.name} &middot; {a.body}</text>
-              {a.kind === 'none' ? (
-                <g>
-                  <line x1={x(2036)} y1={R0 + i * RH} x2={x(a.yr)} y2={R0 + i * RH} class="race-open" style={`stroke:${a.color}`} />
-                  <polygon
-                    points={`${x(a.yr)},${R0 + i * RH - 4} ${x(a.yr) + 9},${R0 + i * RH} ${x(a.yr)},${R0 + i * RH + 4}`}
-                    style={`fill:${a.color}`}
-                  />
-                </g>
-              ) : (
-                <g>
-                  {a.marks.length > 1 && (
-                    <line x1={x(a.marks[0])} y1={R0 + i * RH} x2={x(a.marks[a.marks.length - 1])} y2={R0 + i * RH} class="race-span" style={`stroke:${a.color}`} />
-                  )}
-                  {a.marks.map((m) => (
-                    <circle cx={x(m)} cy={R0 + i * RH} r="5" class="race-dot" style={`fill:${a.color}`} />
-                  ))}
-                </g>
-              )}
-              <text x={(a.kind === 'none' ? x(a.yr) : x(a.marks[a.marks.length - 1])) + 12} y={R0 + i * RH + 3} class="race-year2">{a.text}</text>
-            </g>
-          ))
-        }
-      </svg>
+          {/* bottom panel: the migration dates, grouped by how each is set */}
+          <text x="8" y={B0} class="race-panel">The migration dates the Atlas records, by how each is set</text>
+          {
+            groups.map((g) => (
+              <g>
+                <text x="8" y={g.y + 14} class="race-group">
+                  {g.head}
+                </text>
+                <line x1="8" y1={g.y + 19} x2={X1} y2={g.y + 19} class="race-rule" />
+                {g.rows.map((r) => (
+                  <g>
+                    {r.color ? (
+                      <circle cx="13" cy={r.y + 16} r="4" style={`fill:${r.color}`} />
+                    ) : (
+                      <circle cx="13" cy={r.y + 16} r="3.5" class="race-dot-none" />
+                    )}
+                    <text x="23" y={r.y + 20} class="race-name">
+                      {r.name}
+                    </text>
+                    <line x1={x(Math.min(...r.marks.map((m) => m.year)))} y1={r.y + 16} x2={x(Math.max(...r.marks.map((m) => m.year)))} y2={r.y + 16} class="race-span" />
+                    {r.marks.map((m) => {
+                      const s = shape(kindKey(m.kind), x(m.year), r.y + 16);
+                      const Tag = s.tag;
+                      return (
+                        <g>
+                          <Tag {...s.attrs} class="race-mark" />
+                          <text x={x(m.year)} y={r.y + 5} class="race-y" text-anchor="middle">
+                            {m.year}
+                          </text>
+                        </g>
+                      );
+                    })}
+                  </g>
+                ))}
+              </g>
+            ))
+          }
+          {
+            noneGroup && (
+              <g>
+                <text x="8" y={noneGroup.y + 14} class="race-group">
+                  {noneGroup.head}
+                </text>
+                <line x1="8" y1={noneGroup.y + 19} x2={X1} y2={noneGroup.y + 19} class="race-rule" />
+                {noneGroup.rows.map((r) => (
+                  <g>
+                    {r.color ? (
+                      <circle cx="13" cy={r.y + 12} r="4" style={`fill:${r.color}`} />
+                    ) : (
+                      <circle cx="13" cy={r.y + 12} r="3.5" class="race-dot-none" />
+                    )}
+                    <text x="23" y={r.y + 16} class="race-name">
+                      {r.name}
+                    </text>
+                    <text x={X0} y={r.y + 16} class="race-none">
+                      No migration date in its profile
+                    </text>
+                  </g>
+                ))}
+              </g>
+            )
+          }
+          <line x1={X0} y1={AXIS_Y} x2={X1} y2={AXIS_Y} class="race-axisline" />
+        </svg>
       </div>
-      <figcaption>
-        The quantum-safe race. Above, where industry says its qubit counts are heading, against the
-        threshold at which a machine could break RSA-2048; one stated target reaches it around 2029.
-        Below, when each actor must have migrated: from India's 2029 for critical infrastructure to
-        Thailand's and the EU's 2035, with the United States at 2030 and 2033 for federal systems,
-        while China alone sets no fixed date. Qubit figures and targets are industry-stated; deadlines
-        are the national instruments. Sources below.
+
+      <dl class="race-key">
+        <div>
+          <dt>Kind of date, the shape of a mark:</dt>
+          <dd>
+            <ul>
+              {
+                kindsShown.map((k) => {
+                  const s = shape(k, 8, 8);
+                  const Tag = s.tag;
+                  return (
+                    <li>
+                      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                        <Tag {...s.attrs} class="race-mark" />
+                      </svg>
+                      {kindNameOf(k)}
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Coordination posture, the dot beside a name:</dt>
+          <dd>
+            <ul>
+              {
+                postures.map((m) => (
+                  <li>
+                    <span class="race-key-dot" style={`background:${m.color}`} aria-hidden="true" />
+                    {m.short}
+                  </li>
+                ))
+              }
+              {
+                actors.some((a) => !a.posture) && (
+                  <li>
+                    <span class="race-key-dot race-key-dot--none" aria-hidden="true" />
+                    No coordination posture recorded
+                  </li>
+                )
+              }
+            </ul>
+          </dd>
+        </div>
+      </dl>
+
+      <figcaption id="race-cap">
+        The quantum-safe race. Above, qubit counts the companies have announced and IBM's stated target, against a 2025
+        published estimate of what breaking RSA-2048 would take. Below, the migration dates the Atlas records for{' '}
+        {joinAnd(withDates.map((a) => nameInSentence(a.name)))}, grouped by whether the Atlas records them as set in law or
+        set in guidance, or has not recorded their bindingness; the shape of each mark gives its kind of date where the
+        Atlas has recorded it.{' '}
+        {withoutDates.length > 0 && `${noDateSentence} `}
+        A target is not a legal deadline unless a binding instrument sets it.{' '}
+        {methodDates && (
+          <>
+            <a href={methodDates}>How the Atlas labels dates</a>.
+          </>
+        )}
       </figcaption>
+
+      <DataTable
+        caption="The migration dates in the chart, by place"
+        columns={tableColumns}
+        rows={tableRows}
+      />
     </figure>
 
     <h2>The failure mode is congestion, not absence</h2>
     <p class="prose">
-      A network of expectations can fail, and its failure mode is congestion rather than a missing
-      authority. The financial sector already faces DORA, national supervisors, G7 guidance and
-      sectoral roadmaps at once, and the result is deferral: ENISA finds only a small share of European
-      stakeholders have begun to migrate. The answer is not necessarily a central authority. It is to
-      make the state of the transition common knowledge, who stands where, on which instrument, to what
-      clock.
+      A network of expectations can fail, and its failure mode is congestion rather than a missing authority. The
+      financial sector already faces DORA, national supervisors, G7 guidance and sectoral roadmaps at once, and the
+      result is deferral: ENISA finds only a small share of European stakeholders have begun to migrate. The answer is
+      not necessarily a central authority. It is to make the state of the transition common knowledge, who stands where,
+      on which instrument, to what clock.
     </p>
 
-    <p class="prose close">
-      One shared core, many wrappers, held loosely together by a network of expectations. The Atlas
-      maps the wrappers, country by country, so the fragmentation can at least be read.
+    <p class="prose cm-close">
+      One shared core, many wrappers, held loosely together by a network of expectations. The Atlas maps the wrappers,
+      country by country, so the fragmentation can at least be read.
     </p>
 
-    <h2>Sources</h2>
-    <ul class="sources">
+    <p class="note">
+      Every migration date on this page follows the Atlas's own records, each drawn by its kind of date and by how it
+      is set. An earlier version drew some of them as hard deadlines and gave years the records do not hold.
+    </p>
+
+    <h2 class="cm-subject">Sources</h2>
+    <ul class="cm-sources">
       <li>NIST, FIPS 203, 204 and 205: post-quantum cryptography standards (August 2024).</li>
-      <li>European Union: Directive (EU) 2022/2555 (NIS2); Regulation (EU) 2022/2554 (DORA); Regulation (EU) 2024/2847 (Cyber Resilience Act), applicable from December 2027.</li>
-      <li>ENISA, European Union Agency for Cybersecurity: cryptographic certification (EUCC) and post-quantum readiness surveys (with ISACA).</li>
-      <li>NIS Cooperation Group: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (2026), setting the 2030 and 2035 milestones.</li>
-      <li>BSI (Germany): guidance on the migration to post-quantum cryptography.</li>
-      <li>United States: NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), with 2030 and 2033 milestones for national security systems; Executive Order 14412 (2026) setting federal deadlines; and Executive Order 14306 (2025), which removed the earlier mandatory procurement requirement.</li>
-      <li>India: Department of Science and Technology task force, Implementation of a Quantum-Safe Ecosystem in India (2026), targeting critical infrastructure by 2029 and full migration by 2033.</li>
-      <li>Thailand: NCSA QUANTA post-quantum readiness platform (pqc-learn.ncsa.or.th), a phased advisory roadmap recommending the NIST standards, with high-priority systems migrated by 2028 to 2029 and national completion by 2035.</li>
+      <li>
+        European Union: Directive (EU) 2022/2555 (NIS2); Regulation (EU) 2022/2554 (DORA); Regulation (EU) 2024/2847
+        (Cyber Resilience Act), most of which applies from 11 December 2027.
+      </li>
+      <li>
+        ENISA, the European Union Agency for Cybersecurity: cryptographic certification (EUCC) and post-quantum readiness
+        surveys (with ISACA).
+      </li>
+      <li>
+        NIS Cooperation Group: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography
+        (2025), a recommendation to Member States setting targets for the end of 2026, 2030 and 2035.
+      </li>
+      <li>BSI (Germany): technical guideline TR-02102 and its recommendations on the migration to post-quantum cryptography.</li>
+      <li>
+        United States: Executive Order 14412, Securing the Nation Against Advanced Cryptographic Attacks (22 June 2026),
+        setting 2030 and 2031 for federal high value assets and high-impact systems; NSA Commercial National Security
+        Algorithm Suite 2.0 (CNSA 2.0), with migration of national security systems targeted by 2035; Executive Order
+        14306 (2025), amending Executive Order 14144.
+      </li>
+      <li>
+        India: Department of Science and Technology, Implementation of Quantum Safe Ecosystem in India, Report of the Task
+        Force (2026), and Report on Quantum-Safe Ecosystem in India, naming 2029 for critical information infrastructure
+        and 2033 for enterprise-wide adoption; NITI Aayog, Roadmap for Transforming India into a Leading Quantum-Powered
+        Economy, with a 2035 horizon.
+      </li>
+      <li>
+        Thailand: NCSA QUANTA post-quantum readiness platform (pqc-learn.ncsa.or.th), a phased roadmap recommending the
+        NIST standards, with high-priority systems migrated by 2028 and national completion by 2035.
+      </li>
       <li>China: OSCCA SM-series national cryptographic algorithms.</li>
-      <li>Industry qubit figures and targets: IBM Quantum roadmap (Condor, 2023; about 100,000 qubits by 2033); Google Quantum AI roadmap (Willow, 2024; about 1,000,000 qubits); Microsoft (Majorana 1, 2025); Amazon (Ocelot, 2025).</li>
-      <li>CRQC qubit-threshold estimate for RSA-2048: Gidney and Ekerå (2019); Gidney (2025).</li>
-      <li>ANSSI, BSI, the Netherlands NLNCSA and the Swedish National Communications Security Authority: joint position paper on quantum key distribution (January 2024), prioritising post-quantum migration.</li>
-      <li>Global Risk Institute and evolutionQ: Quantum Threat Timeline Report (2024), and Mosca's risk inequality (x + y &gt; z).</li>
-      <li>G7 Cyber Expert Group: statement on quantum computing risks to the financial sector (2024).</li>
+      <li>
+        Industry qubit figures and targets: IBM (Condor, 1,121 qubits, 2023; a goal of 100,000 connected qubits by 2033);
+        Microsoft (Majorana 1, eight topological qubits, 2025); Amazon (Ocelot, five data qubits and four ancilla qubits,
+        2025).
+      </li>
+      <li>
+        Qubits needed to break RSA-2048: Gidney, C., and Ekerå, M. (2019), 20 million noisy qubits; Gidney, C. (2025),
+        under a million noisy qubits.
+      </li>
+      <li>
+        ANSSI, BSI, the Netherlands NLNCSA and the Swedish National Communications Security Authority: joint position
+        paper on quantum key distribution (January 2024), prioritising post-quantum migration.
+      </li>
+      <li>
+        Global Risk Institute and evolutionQ: Quantum Threat Timeline Report (2024), and Mosca's risk inequality (x + y
+        &gt; z).
+      </li>
+      <li>G7 Cyber Expert Group: statement on the risks of quantum computing to the financial sector (September 2024).</li>
       <li>Bradford, A. (2020). The Brussels Effect. Oxford University Press.</li>
-      <li>Budde, B., and Konrad, K. (2019). Tentative governing in a dynamic network of expectations. Research Policy (the governance of expectations).</li>
+      <li>
+        Budde, B., and Konrad, K. (2019). Tentative governing of fuel cell innovation in a dynamic network of
+        expectations. Research Policy, 48(5).
+      </li>
       <li>CEPS: Pupillo, L., et al. (2025). Strengthening the EU Transition to a Quantum-Safe World, Task Force report.</li>
     </ul>
-    <p class="availability">
-      Data, code and structure are openly available: the Atlas is open source on
-      <a href="https://github.com/swaggito1/QSC-Atlas-" target="_blank" rel="noopener">GitHub</a>,
-      and archived on Zenodo (DOI: <a href="https://doi.org/10.5281/zenodo.21262284" target="_blank" rel="noopener">10.5281/zenodo.21262284</a>).
+    <p class="cm-avail">
+      The Atlas's data and code are public on <a href={GITHUB_URL} rel="noopener">GitHub</a> and archived on Zenodo (DOI:
+      <a href={ZENODO_URL} rel="noopener">{ZENODO_DOI}</a>). The profiles behind the chart:{' '}
+      {
+        withDates
+          .map((a) => ({ a, href: profileHref(a.iso3) }))
+          .filter((e) => e.href)
+          .map((e, i, all) => <><a href={e.href!}>{e.a.name}</a>{i < all.length - 1 ? ', ' : '.'}</>)
+      }
     </p>
-    <p class="attribution">
-      An explanation from the QSC Atlas, drawing on the CEPS Task Force on Strengthening the EU
-      Transition to a Quantum-Safe World (2025). <a href="/methodology">How the Atlas classifies countries &rarr;</a>
+    <p class="cm-attr">
+      A commentary from the QSC Atlas, drawing on the CEPS Task Force on Strengthening the EU Transition to a
+      Quantum-Safe World (2025).
     </p>
-  </div>
+  </article>
 </Base>
 
 <style>
-  .commentary {
+  /* The épuré pass (4 October 2026): the column holds the reading measure, and the race figure
+     breaks wider than it from 1100px. The head in the frame's hand: the H1 over the lede in ink,
+     as every other page sets it. The three argued sections stand a related gap apart; Sources is
+     a change of subject, a subject's gap above it. The closing note is the kit's plain sentence
+     (global.css .note): ink-muted on one hairline, no left rule. */
+  .cm {
     max-width: 44rem;
+    margin: 0 auto;
+    padding: var(--page-top) var(--shell-gutter) 0;
   }
-  .kicker {
-    font-family: var(--font-label);
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
+  .cm-h1 {
+    max-width: var(--measure-heading);
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0 0 var(--gap-group);
+    text-wrap: balance;
+  }
+  .cm-standfirst {
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
+    color: var(--ink);
     margin: 0 0 var(--space-3);
+    text-wrap: pretty;
   }
-  .commentary h1 {
-    font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--type-scene, 2rem);
-    line-height: 1.1;
-    margin: 0 0 var(--space-4);
-  }
-  .standfirst {
-    font-size: var(--text-lg);
+  .cm-meta {
+    max-width: var(--measure);
+    margin: 0 0 var(--gap-related);
+    font-size: var(--type-small);
     color: var(--ink-muted);
-    margin: 0 0 var(--space-6);
   }
-  /* A quiet button, up top, to the method behind the classification. Same understated
-     treatment as the homepage actions. */
-  .method-cta {
-    margin: 0 0 var(--space-9);
+  .cm a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
   }
-  .method-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: var(--space-2) var(--space-4);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius);
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
-    color: var(--ink-muted);
-    text-decoration: none;
-    transition: color var(--dur, 0.2s) var(--ease, ease), border-color var(--dur, 0.2s) var(--ease, ease);
+  .cm a:hover,
+  .cm a:active {
+    color: var(--accent-strong);
   }
-  .method-link:hover {
-    color: var(--ink);
-    border-color: var(--ink);
+  @media (prefers-reduced-motion: reduce) {
+    .cm a {
+      transition: none;
+    }
   }
-  .method-link:focus-visible {
-    outline: 2px solid var(--ink);
-    outline-offset: 2px;
-  }
-  .commentary h2 {
+  .cm h2 {
+    max-width: var(--measure);
     font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--text-xl);
-    margin: var(--space-10) 0 var(--space-3);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-section);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-snug);
+    margin: var(--gap-related) 0 var(--gap-group);
   }
-  .commentary .prose + .prose {
-    margin-top: var(--space-4);
+  .cm h2.cm-subject {
+    margin-top: var(--gap-subject);
   }
-  .close {
-    margin-top: var(--space-8);
+  .cm .prose {
+    margin: 0;
+  }
+  .cm .prose + .prose {
+    margin-top: var(--gap-group);
+  }
+  .cm-close {
+    margin-top: var(--gap-group-lg) !important;
     font-style: italic;
-    color: var(--ink);
-  }
-  .attribution {
-    margin-top: var(--space-10);
-    padding-top: var(--space-5);
-    border-top: 1px solid var(--hairline);
-    font-size: var(--text-sm);
-    color: var(--ink-muted);
-  }
-  .attribution a {
-    color: var(--ink);
-    white-space: nowrap;
-  }
-  .availability {
-    margin-top: var(--space-5);
-    font-size: var(--text-sm);
-    color: var(--ink-muted);
-  }
-  .availability a {
-    color: var(--ink);
-    text-underline-offset: 2px;
-    text-decoration-color: var(--hairline);
-  }
-  .availability a:hover {
-    text-decoration-color: var(--ink);
   }
 
-  /* The quantum-safe race figure */
+  /* the race figure: from 1100px it stands wider than the reading column, so its labels keep a
+     legible size; the key and the caption keep the reading measure */
   .race {
-    margin: var(--space-6) 0 var(--space-8);
+    margin: var(--gap-related) 0 var(--gap-group-lg);
+  }
+  @media (min-width: 1100px) {
+    .race {
+      margin-inline: calc((100% - var(--w-tool)) / 2);
+    }
+    .race-key,
+    .race figcaption {
+      max-width: var(--measure);
+    }
   }
   .race-svg {
     width: 100%;
     height: auto;
     display: block;
   }
-  /* On phones the chart keeps a legible size and scrolls sideways in its own container,
-     rather than shrinking its labels below reading size. */
+  /* below 1100px the chart keeps a legible size (no label under 0.8rem: 10 units at 940px are
+     13px) and scrolls sideways inside its own region */
   .race-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .scroll-hint {
+  .race-hint {
     display: none;
     margin: 0 0 var(--space-2);
-    font-family: var(--font-mono);
-    font-size: var(--text-2xs);
-    color: var(--ink-faint);
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    color: var(--ink-muted);
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1099.98px) {
     .race-scroll .race-svg {
-      min-width: 680px;
+      min-width: 940px;
     }
-    .scroll-hint {
+    .race-hint {
       display: block;
     }
   }
@@ -359,19 +753,9 @@ const actors = [
   .race-grid.faint {
     opacity: 0.5;
   }
-  .race-2030 {
+  .race-axisline {
     stroke: var(--ink);
     stroke-width: 1;
-    stroke-dasharray: 4 3;
-    opacity: 0.55;
-  }
-  .race-band {
-    fill: var(--ink);
-    opacity: 0.05;
-  }
-  .race-conv {
-    fill: var(--ink);
-    opacity: 0.05;
   }
   .race-crqc {
     stroke: var(--ink);
@@ -387,64 +771,140 @@ const actors = [
   .race-demo {
     fill: var(--ink);
   }
-  .race-span {
-    stroke-width: 2;
-    opacity: 0.45;
-  }
   .race-target {
     fill: var(--paper);
     stroke: var(--ink);
     stroke-width: 2;
   }
-  .race-dot.is-soft {
-    fill: var(--paper);
-    stroke-width: 2;
+  .race-rule {
+    stroke: var(--hairline);
+    stroke-width: 1;
   }
-  .race-open {
-    stroke-width: 1.5;
-    stroke-dasharray: 4 3;
-    opacity: 0.7;
+  .race-span {
+    stroke: var(--ink);
+    stroke-width: 1;
+    opacity: 0.35;
+  }
+  .race-mark {
+    fill: var(--ink);
+  }
+  .race-dot-none {
+    fill: none;
+    stroke: var(--ink-muted);
+    stroke-width: 1;
   }
   .race-panel {
     font-family: var(--font-instrument);
     font-size: 11.5px;
-    font-weight: 600;
+    font-weight: var(--weight-ui-strong);
     fill: var(--ink);
   }
-  .race-axis,
-  .race-year,
-  .race-year2 {
+  .race-group {
     font-family: var(--font-instrument);
     font-size: 11px;
+    font-weight: var(--weight-ui-strong);
     fill: var(--ink-muted);
   }
+  .race-axis,
+  .race-year {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    font-size: 10.5px;
+    fill: var(--ink-muted);
+  }
+  .race-y {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    font-size: 10px;
+    fill: var(--ink);
+  }
   .race-label,
-  .race-note {
+  .race-note,
+  .race-none {
     font-family: var(--font-instrument);
     font-size: 10.5px;
     fill: var(--ink-muted);
+  }
+  .race-none {
+    font-style: italic;
   }
   .race-name {
     font-family: var(--font-instrument);
     font-size: 11px;
     fill: var(--ink);
   }
+  /* the key: two labelled lines, so the shapes (kind of date) and the dots (posture) never read as one */
+  .race-key {
+    margin: var(--space-3) 0 0;
+    display: grid;
+    gap: var(--gap-inline);
+    font-size: var(--type-caption);
+    color: var(--ink-muted);
+  }
+  .race-key > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1) var(--space-3);
+  }
+  .race-key dt {
+    font-family: var(--font-instrument);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink);
+  }
+  .race-key dd {
+    margin: 0;
+  }
+  .race-key ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-5);
+  }
+  .race-key li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .race-key-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-mark);
+  }
+  .race-key-dot--none {
+    border: 1px solid var(--ink-muted);
+  }
   .race figcaption {
     margin-top: var(--space-3);
-    font-size: var(--text-sm);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
     color: var(--ink-muted);
   }
 
-  /* Sources */
-  .sources {
-    margin: var(--space-4) 0 0;
+  .cm-sources {
+    max-width: var(--measure);
+    margin: var(--gap-group) 0 0;
     padding-left: var(--space-5);
     display: grid;
     gap: var(--space-2);
-    font-size: var(--text-sm);
+    font-size: var(--type-small);
     color: var(--ink-muted);
   }
-  .sources li {
-    line-height: 1.45;
+  .cm-sources li {
+    line-height: var(--leading-normal);
+  }
+  .cm-avail,
+  .cm-attr {
+    max-width: var(--measure);
+    margin: var(--space-5) 0 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .cm-attr {
+    margin-top: var(--gap-related);
+    padding-top: var(--space-5);
+    border-top: var(--rule);
   }
 </style>

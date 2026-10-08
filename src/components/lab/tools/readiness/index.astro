@@ -1,0 +1,123 @@
+---
+// The Readiness Check page, the spine of Prepare: the frame (question, lede, facts line, Where
+// to go next, About this view with the method and sources) around the island, a guided
+// self-assessment that asks one question per action, group by group, and ends on an assessment
+// of the visitor's own answers. Every address the island links to is computed here through
+// link() and pageHref(), so a page this build does not make is never named, in the HTML or in
+// the island's props.
+//
+// Source words: the island receives an excerpt only in a build that may carry them
+// (sourceWordsInBuild), and shows it only when the page is opened with ?review=1. A production
+// build puts no excerpt in the HTML at all. Nothing on this page is stored or sent, and the
+// island says so once, beside the answers; About this view does not say it again.
+//
+// Where to go next keeps only what the Prepare side menu beside it does not list (beyondMenu).
+// A link that opens the checklist or the assessment (?view=) marks the page before its first
+// paint, so the view asked for is drawn at once and nothing moves when the island takes over.
+import LabLayout from '../../LabLayout.astro';
+import ReadinessTool from './ReadinessTool.tsx';
+import { ENTRY_ACTION, checkLinks, checkedSentence, islandCopy, islandData, loadReadiness } from '../../../../lib/lab/readiness-data';
+import { fillIn, questionsFor } from '../../../../lib/lab/readiness';
+import { sourceWordsInBuild } from '../../../../lib/site/review-build';
+import { beyondMenu } from '../../../../lib/site/prepare-elements';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/lab-readiness.css';
+
+const { tool } = Astro.props as { tool: LabTool };
+const data = loadReadiness();
+const { copy } = data;
+const links = checkLinks(data);
+const sourceWords = sourceWordsInBuild();
+const island = islandData(data, sourceWords);
+const entry = data.actions.find((a) => a.id === ENTRY_ACTION);
+
+const minutes = Number.parseInt(String(copy.minutes), 10);
+// the method's first note, with the day or days the source's words were checked (none when no record is)
+const method1 = fillIn(copy.method1, { checked: checkedSentence(copy, data.checked) }).replace(/\s+/g, ' ').trim();
+const methods = [method1, copy.method2, copy.method3, copy.method4, copy.method5, copy.method6].filter(Boolean);
+
+// without JavaScript: every question of every guide, group by group, to read or print
+const shortLabel = new Map(data.frameworks.map((f) => [f.id, f.shortLabel]));
+const all = questionsFor(data.actions, data.domains, data.frameworks.map((f) => f.id));
+const groups = data.domains.map((d) => ({ ...d, questions: all.filter((a) => a.domain === d.id) })).filter((g) => g.questions.length > 0);
+---
+
+<LabLayout
+  tool={tool}
+  question={copy.question}
+  lede={copy.lede}
+  reads={[]}
+  minutes={Number.isFinite(minutes) ? minutes : null}
+  asOf={data.asOf}
+  sources={data.sources}
+  description={copy.description}
+  next={beyondMenu(links.next)}
+>
+  <div class="rd">
+    <script is:inline>
+      // before the first paint: a link that asks for the checklist or the assessment (and opens no
+      // question, group or entry) marks the page, so lab-readiness.css draws that view and not the
+      // first question until the island, reading the same address, takes over
+      (function () {
+        try {
+          var q = new URLSearchParams(window.location.search);
+          var v = q.get('view');
+          if ((v === 'list' || v === 'assessment') && !q.get('action') && !q.get('theme') && !q.get('group') && !q.get('start')) {
+            document.documentElement.setAttribute('data-rd-view', v);
+          }
+          // an address that carries answers after the # sign: what the island draws from them is
+          // known only once it is live, so the parts below the view wait for it (lab-readiness.css)
+          // and nothing already on screen is pushed down when the answers fill in
+          if (/(^#|&)[dunx]=/.test(window.location.hash)) {
+            document.documentElement.setAttribute('data-rd-answers', '');
+          }
+        } catch (e) {
+          // an address the browser cannot read opens on the first question
+        }
+      })();
+    </script>
+    <ReadinessTool
+      client:load
+      copy={islandCopy(copy)}
+      frameworks={island.frameworks}
+      domains={data.domains}
+      actions={island.actions}
+      defaults={data.defaults}
+      entryAction={entry ? entry.id : null}
+      guides={links.guides}
+      elements={links.elements}
+      sourceWordsAvailable={sourceWords}
+    />
+    <noscript>
+      <style is:inline>
+        /* the island's buttons do nothing without JavaScript, so the plain list stands in for it */
+        .rd-tool {
+          display: none;
+        }
+      </style>
+      <section class="rd-noscript" aria-labelledby="rd-noscript-h">
+        <h2 id="rd-noscript-h" class="section-h">{copy.noscriptHead}</h2>
+        <p class="rd-hint">{copy.noscript}</p>
+        {
+          groups.map((g) => (
+            <section class="rd-ns-group">
+              <h3 class="rd-ns-h">{g.label}</h3>
+              <ul class="rd-ns-list">
+                {g.questions.map((a) => (
+                  <li>
+                    {a.label} <span class="rd-ns-guide">{shortLabel.get(a.source)}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+        <p class="rd-hint">{copy.targetsNote}</p>
+      </section>
+    </noscript>
+  </div>
+
+  <Fragment slot="method">
+    {methods.map((m) => <p>{m}</p>)}
+  </Fragment>
+</LabLayout>

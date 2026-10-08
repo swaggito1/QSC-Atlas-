@@ -1,0 +1,90 @@
+---
+// The Prepare side menu (spec 3.5): built pages only, from routes.sectionMenu(), with a 2px
+// teal rule on the current page (the current menu item is one of the few things teal marks).
+// Since the minimal pass it is how a Prepare page says where it is: there is no breadcrumb.
+// Two forms of one list:
+//   variant "rail": a sticky column at 1100px and wider, placed after the page in source order
+//   so the skip link and the tab order reach the question first;
+//   variant "fold": an "In Prepare" disclosure (a native details element, so it works without
+//   JavaScript) for narrower screens, in one quiet row at the top of the page; its open list is
+//   an overlay on the surface. Its list keeps the "In Prepare" landmark at that width, as the
+//   rail does at its own.
+// PageFrame renders both; the stylesheet shows the one that fits. With JavaScript the open
+// disclosure closes when focus leaves it, on a click outside it, and on Escape pressed inside
+// it (focus then returns to "In Prepare"); an Escape meant for another control is left alone.
+import type { MenuItem } from './contracts';
+import '../../../styles/frame.css';
+
+interface Props {
+  items: MenuItem[];
+  variant?: 'rail' | 'fold';
+  label?: string;
+}
+const { items = [], variant = 'rail', label = 'In Prepare' } = Astro.props;
+
+const list = items.map((it) => ({ ...it, current: Boolean(it.current) }));
+---
+
+{
+  list.length > 0 &&
+    (variant === 'rail' ? (
+      <nav class="fr-menu" aria-label={label}>
+        <p class="fr-menu-head" aria-hidden="true">{label}</p>
+        <ul class="fr-menu-list">
+          {list.map((it) => (
+            <li>
+              <a href={it.href} aria-current={it.current ? 'page' : undefined}>
+                <span>{it.label}</span>
+                {it.note && <span class="fr-menu-note">{it.note}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    ) : (
+      <details class="fr-menu-d" data-fr-fold>
+        <summary>{label}</summary>
+        <nav class="fr-menu-pop" aria-label={label}>
+          <ul class="fr-menu-list">
+            {list.map((it) => (
+              <li>
+                <a href={it.href} aria-current={it.current ? 'page' : undefined}>
+                  <span>{it.label}</span>
+                  {it.note && <span class="fr-menu-note">{it.note}</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </details>
+    ))
+}
+
+<script>
+  // The open "In Prepare" list lies over the top of the page, so it closes as soon as the
+  // visitor is elsewhere: focus moving out of it, a click outside it, or Escape inside it.
+  const folds = () => Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-fr-fold]'));
+  folds().forEach((d) => {
+    d.addEventListener('focusout', (e) => {
+      const next = e.relatedTarget as Node | null;
+      if (d.open && next && !d.contains(next)) d.open = false;
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const active = document.activeElement;
+    const idle = !active || active === document.body;
+    folds().forEach((d) => {
+      if (!d.open) return;
+      const inside = Boolean(active && d.contains(active));
+      if (!inside && !idle) return; // the Escape belongs to another control
+      d.open = false;
+      if (inside) d.querySelector('summary')?.focus();
+    });
+  });
+  document.addEventListener('click', (e) => {
+    folds().forEach((d) => {
+      if (d.open && !d.contains(e.target as Node)) d.open = false;
+    });
+  });
+</script>

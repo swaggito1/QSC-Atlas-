@@ -1,5 +1,7 @@
 {
-  "dataStatus": "Partial",
   "iso3": "URY",
-  "country": "Uruguay"
+  "summary": "Uruguay has no national post-quantum programme on record. What exists sits with the central bank: the Banco Central del Uruguay has published an analytical report for central banks and financial-system regulators on the disruption that quantum computing poses to the financial and payments system, and that report deals directly with post-quantum cryptography, pointing to the NIST standardisation of quantum-resistant algorithms and to the hybrid post-quantum protocols that central banks have tested between themselves. There is no published migration timeline, no national list of approved algorithms and no binding requirement to migrate. Uruguay's national cybersecurity strategy for 2024 to 2030, led by the digital government agency AGESIC, was examined for this atlas but no post-quantum reference could be confirmed in its published text, so the country's posture is best read as early financial-sector awareness rather than a governed national transition.",
+  "govActors": "BCU | Banco Central del Uruguay, the central bank; published an analytical report on the disruption of quantum computing to the financial and payments system that addresses post-quantum cryptography and the NIST standardisation",
+  "legalStatus": "none",
+  "dataStatus": "Partial"
 }

@@ -1,0 +1,220 @@
+---
+// One guide, /prepare/guides/{id} (spec 5.2). The H1 is the guide's title in its own language; the
+// facts line names the issuer and the date printed on the document. Then "Mark these actions" (the
+// Readiness Check with this guide chosen); four rows of facts: Status and Bindingness as two
+// separate labels, who it is written for in one line, and a link to the document; and What it
+// covers: the actions Prepare draws from it, each in the Atlas's words with its theme and any
+// target date the guide sets, and the guide's status phrase saying that date is not a legal
+// deadline. No quoted words reach a visitor: the guide's own words are kept for review inside
+// SourceWords. Computed by guidePageModel() in src/lib/site/prepare-elements.ts; every visible
+// string of the Atlas's own is in data/lab/prepare/elements-copy.json.
+//
+// Épuré (labs/review/epure-audit.md): Mark these actions is the view's one filled button; the facts
+// and What it covers are rows at the list width (--w-list), their text at the reading measure, and
+// each action in What it covers is an index link (.row-link), ink on a thin teal underline.
+import PageFrame from '../../frame/PageFrame.astro';
+import SourceWords from '../../frame/SourceWords.astro';
+import Words from '../prepare-inventory/Words.astro';
+import { guidePageModel } from '../../../../lib/site/prepare-elements';
+import type { SitePage } from '../../../../lib/site/routes';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  page: SitePage;
+  guideId: string;
+}
+const { page, guideId } = Astro.props;
+const m = guidePageModel(guideId);
+if (!m) throw new Error(`prepare-guide: no guide "${guideId}" in readiness.json`);
+const c = m.copy;
+const g = m.card;
+const audience = g.audience.charAt(0).toUpperCase() + g.audience.slice(1);
+---
+
+<PageFrame
+  question={g.title}
+  questionLang={g.lang ?? null}
+  title={page.title}
+  section="prepare"
+  gate={page.gate}
+  description={m.lede}
+  lede={m.lede}
+  reads={m.reads}
+  asOf={m.asOf}
+  standingNote={m.standingNote}
+  standingNoteIn="about"
+  next={m.next}
+  sources={m.sources}
+  methodAnchor="prepare"
+>
+  <div class="pe gp">
+    {
+      m.mark && (
+        <p class="pe-go">
+          <a class="lab-btn lab-btn--primary" href={m.mark.href}>
+            {m.mark.label}
+          </a>
+          <span class="pe-small gp-note">{c.markNote}</span>
+        </p>
+      )
+    }
+
+    <dl class="gp-facts">
+      <div>
+        <dt>{m.labels.status}</dt>
+        <dd>{g.status}</dd>
+      </div>
+      <div>
+        <dt>{m.labels.bindingness}</dt>
+        <dd>{g.bindingness}</dd>
+      </div>
+      <div>
+        <dt>{m.labels.writtenFor}</dt>
+        <dd class="gp-for">
+          {audience}
+          {
+            g.ownWords && (
+              <SourceWords inline>
+                <span lang={g.lang ?? undefined}>{g.ownWords}</span>
+              </SourceWords>
+            )
+          }
+        </dd>
+      </div>
+      {
+        g.source && (
+          <div>
+            <dt>{m.labels.source}</dt>
+            <dd>
+              <a href={g.source.url} rel="noopener">
+                {m.common.openSource}
+              </a>
+            </dd>
+          </div>
+        )
+      }
+    </dl>
+    <Words quotes={m.quotes} />
+
+    {
+      m.covers.length > 0 && (
+        <section class="pe-sec gp-sec" aria-labelledby="gp-covers-h">
+          <h2 class="pe-h2" id="gp-covers-h">
+            {c.coversHead}
+          </h2>
+          <p class="pe-small gp-intro">{c.coversIntro}</p>
+          <ul class="gp-list">
+            {m.covers.map((x) => (
+              <li class="gp-item" id={`action-${x.id}`}>
+                <p class="gp-l">
+                  {x.href ? (
+                    <a class="row-link" href={x.href}>
+                      {x.label}
+                    </a>
+                  ) : (
+                    x.label
+                  )}
+                </p>
+                <p class="pe-meta gp-meta">
+                  <span>{x.group}</span>
+                  {x.target && <span>{x.target}</span>}
+                </p>
+                <Words quotes={x.quotes} />
+              </li>
+            ))}
+          </ul>
+          {m.targetsNote && <p class="pe-small">{m.targetsNote}</p>}
+        </section>
+      )
+    }
+  </div>
+</PageFrame>
+
+<style>
+  .gp-note {
+    margin: 0;
+  }
+  /* the facts: a quiet label column and its value, on hairlines, at the list width; a value
+     keeps the reading measure */
+  .gp-facts {
+    max-width: var(--w-list);
+    margin: var(--space-8) 0 0;
+    border-top: var(--rule);
+  }
+  .gp-facts > div {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-bottom: var(--rule);
+  }
+  .gp-facts dt {
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink-muted);
+  }
+  .gp-facts dd {
+    max-width: var(--measure);
+    margin: 0;
+    font-size: var(--type-control);
+    line-height: var(--leading-normal);
+  }
+  .gp-facts dd a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    margin: -0.6rem 0;
+  }
+  @media (max-width: 479px) {
+    .gp-facts > div {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--gap-mark);
+    }
+  }
+
+  .gp-sec {
+    margin-top: var(--section-gap);
+  }
+  .gp-intro {
+    margin: 0 0 var(--gap-group);
+  }
+  /* What it covers: one action a row, on hairlines, its group and target in one quiet line */
+  .gp-list {
+    max-width: var(--w-list);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: var(--rule);
+  }
+  .gp-item {
+    padding: var(--space-2) 0 var(--space-3);
+    border-bottom: var(--rule);
+  }
+  .gp-l {
+    max-width: var(--measure);
+    margin: 0;
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    line-height: var(--leading-snug);
+  }
+  /* the padding sets the row; the empty box over it grows the link's hit area to 44px, over the
+     row's own padding, without moving anything */
+  .gp-l a {
+    position: relative;
+    display: inline-block;
+    padding: 0.45em 0 0.2em;
+  }
+  .gp-l a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .gp-meta {
+    margin-top: 0;
+  }
+  .gp-list + .pe-small {
+    margin-top: var(--gap-group);
+  }
+</style>

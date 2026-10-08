@@ -1,0 +1,19 @@
+---
+// The preview line (spec 11, item 1). Shown in any non-production build on a page whose gate is
+// not public; every page that shows it also carries <meta name="robots" content="noindex">
+// (PageFrame passes noindex to the layout). One quiet sentence of at most 32px under the site
+// header: the dashed rule is the Atlas's mark for something provisional, there is no fill and no
+// label, and the text lines up with the column of the page below (pass the same width the page
+// uses).
+import '../../styles/frame.css';
+
+interface Props {
+  wide?: boolean; // the page below is a wide tool (frame.css keeps one measure for all, the header's)
+  menu?: boolean; // the page below has the Prepare side menu
+}
+const { wide = false, menu = false } = Astro.props;
+---
+
+<div class="fr-banner" role="note">
+  <p class:list={['fr-w', { 'fr-w--wide': wide, 'fr-w--menu': menu }]}>Preview: not public yet. Please do not quote or share.</p>
+</div>

@@ -1,0 +1,81 @@
+# base-acts-amendments.rq
+#
+# What it returns: for each watched base act, every legal resource that CELLAR
+# links to it as amending, correcting, consolidating, repealing, extending,
+# supplementing, implementing or being based on it, plus Commission proposals
+# to amend it. One row per base act, relation and related resource.
+#
+# Watched base acts (CELEX): 32022L2555 NIS2, 32022L2557 CER, 32022R2554 DORA,
+# 32024R2847 Cyber Resilience Act, 32024R1689 AI Act, 32016R0679 GDPR,
+# 32019D0797 Council Decision (CFSP) 2019/797, 32024H1101 PQC Recommendation.
+#
+# Columns:
+#   base_celex        CELEX of the watched base act
+#   relation          fixed label for the CDM property (see the VALUES block)
+#   celex             CELEX of the related resource
+#   date              document date of the related resource, YYYY-MM-DD
+#   entry_into_force  earliest date of entry into force recorded, blank if none
+#   type              resource type code (e.g. REG_IMPL, CORRIGENDUM, CONS_TEXT);
+#                     where CELLAR records several, the alphabetically first
+#   title_en          English title, blank when CELLAR holds no English version
+#                     (common for corrigenda that concern other languages only)
+#
+# Notes:
+#   Sorted by base act, then date, then CELEX, then relation.
+#   "based-on" rows are limited to sector 3 CELEX numbers (legal acts); this
+#   drops Parliament resolutions, communications and OJ C notices that name the
+#   base act as their basis.
+#   "consolidates" uses act_consolidated_based_on_resource_legal, so it lists
+#   consolidated versions of the base act itself, not of other acts it amends.
+#   A delegated act normally appears twice, as "based-on" and "supplements".
+#   Works flagged do_not_index (superseded duplicates without a CELEX) are left out.
+#   CELEX literals must be typed ^^xsd:string: plain literals match nothing here.
+
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?base_celex ?relation ?celex ?date
+       (MIN(?eif0) AS ?entry_into_force)
+       (MIN(?type0) AS ?type)
+       (MIN(?title0) AS ?title_en)
+WHERE {
+  VALUES ?base_celex {
+    "32022L2555"^^xsd:string "32022L2557"^^xsd:string "32022R2554"^^xsd:string
+    "32024R2847"^^xsd:string "32024R1689"^^xsd:string "32016R0679"^^xsd:string
+    "32019D0797"^^xsd:string "32024H1101"^^xsd:string
+  }
+  VALUES (?p ?relation) {
+    (cdm:resource_legal_amends_resource_legal              "amends")
+    (cdm:resource_legal_corrects_resource_legal            "corrects")
+    (cdm:act_consolidated_based_on_resource_legal          "consolidates")
+    (cdm:resource_legal_repeals_resource_legal             "repeals")
+    (cdm:resource_legal_extends_validity_of_resource_legal "extends-validity")
+    (cdm:resource_legal_based_on_resource_legal            "based-on")
+    (cdm:resource_legal_completes_resource_legal           "supplements")
+    (cdm:resource_legal_implements_resource_legal          "implements")
+    (cdm:resource_legal_proposes_to_amend_resource_legal   "proposes-amendment")
+  }
+  ?base cdm:resource_legal_id_celex ?base_celex .
+  ?work ?p ?base ;
+        cdm:resource_legal_id_celex ?celex .
+  FILTER(?relation != "based-on" || STRSTARTS(STR(?celex), "3"))
+  FILTER NOT EXISTS { ?work cdm:do_not_index "true"^^xsd:boolean }
+
+  OPTIONAL { ?work cdm:work_date_document ?d }
+  BIND(COALESCE(STR(?d), "") AS ?date)
+
+  OPTIONAL { ?work cdm:resource_legal_date_entry-into-force ?e }
+  BIND(COALESCE(STR(?e), "") AS ?eif0)
+
+  OPTIONAL { ?work cdm:work_has_resource-type ?t }
+  BIND(COALESCE(REPLACE(STR(?t), "^.*/", ""), "") AS ?type0)
+
+  OPTIONAL {
+    ?expr cdm:expression_belongs_to_work ?work ;
+          cdm:expression_uses_language <http://publications.europa.eu/resource/authority/language/ENG> ;
+          cdm:expression_title ?tt .
+  }
+  BIND(COALESCE(REPLACE(STR(?tt), "\\s+", " "), "") AS ?title0)
+}
+GROUP BY ?base_celex ?relation ?celex ?date
+ORDER BY ?base_celex ?date ?celex ?relation

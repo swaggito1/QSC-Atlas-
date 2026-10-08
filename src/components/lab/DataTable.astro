@@ -1,0 +1,95 @@
+---
+// The table alternative every chart carries: the same data, one step away behind "Show as a
+// table" (TableDisclosure), readable by a screen reader and printable. It uses the shared
+// .lab-table style in lab.css, the one the islands use: sentence-case column heads at weight 600
+// over a 1px ink rule, hairline rows, figures in the mono face. Under 640px the rows stack, each cell
+// named by its column head, so nothing scrolls sideways; a wide table on a wider screen scrolls
+// inside its own labelled, focusable region instead of widening the page.
+import TableDisclosure from '../site/frame/TableDisclosure.astro';
+import '../../styles/lab.css';
+
+interface Column {
+  key: string;
+  label: string;
+  numeric?: boolean; // right-aligned, mono, tabular figures
+}
+
+interface Props {
+  caption: string;
+  columns: Column[];
+  rows: Record<string, string | number | null | undefined>[];
+  collapsible?: boolean;
+  summary?: string; // the disclosure label
+  openOnPhones?: boolean; // date tools: open by default below 640px
+  stack?: boolean; // rows stack under 640px (default true)
+}
+const { caption, columns, rows, collapsible = true, summary = 'Show as a table', openOnPhones = false, stack = true } = Astro.props;
+// an empty cell says so in the Atlas's words, never by a blank or a dash
+const cell = (v: string | number | null | undefined) => (v === null || v === undefined || v === '' ? 'Not recorded' : String(v));
+---
+
+{
+  collapsible ? (
+    <TableDisclosure summary={summary} openOnPhones={openOnPhones}>
+      <div class="lab-scroll" tabindex="0" role="region" aria-label={caption}>
+        <table class:list={{ 'is-stack': stack }}>
+          <caption>{caption}</caption>
+          <thead>
+            <tr>
+              {columns.map((c) => (
+                <th scope="col" class:list={{ num: c.numeric }}>
+                  {c.label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr>
+                {columns.map((c, i) =>
+                  i === 0 ? (
+                    <th scope="row">{cell(r[c.key])}</th>
+                  ) : (
+                    <td class:list={{ num: c.numeric, mono: c.numeric }} data-label={c.label}>
+                      {cell(r[c.key])}
+                    </td>
+                  ),
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </TableDisclosure>
+  ) : (
+    <div class="lab-table lab-scroll" tabindex="0" role="region" aria-label={caption}>
+      <table class:list={{ 'is-stack': stack }}>
+        <caption>{caption}</caption>
+        <thead>
+          <tr>
+            {columns.map((c) => (
+              <th scope="col" class:list={{ num: c.numeric }}>
+                {c.label}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              {columns.map((c, i) =>
+                i === 0 ? (
+                  <th scope="row">{cell(r[c.key])}</th>
+                ) : (
+                  <td class:list={{ num: c.numeric, mono: c.numeric }} data-label={c.label}>
+                    {cell(r[c.key])}
+                  </td>
+                ),
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}

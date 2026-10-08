@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "ПРЕДЛОГ Стратегија развоја система електронских комуникација у Републици Србији до 2030. године",
+    "country": "SRB",
+    "issuingOrg": "MIT (Ministry of Information and Telecommunications)",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.mit.gov.rs/extfile/sr/5667/Predlog%20strategije%20sa%20obrazlozenjem.pdf",
+    "summary": "Proposed national strategy for developing Serbia's electronic communications system to 2030, prepared by the Ministry of Information and Telecommunications with an action plan for 2024 to 2027. In its review of the EU strategic framework it notes that the EU should start developing new encryption methods and a transition strategy towards quantum-safe digital infrastructure protected from quantum computer attacks.",
+    "included": true
+  }
+]

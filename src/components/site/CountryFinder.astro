@@ -1,0 +1,313 @@
+---
+// The country finder (spec 3.3): an ARIA combobox over every profile, by name, ISO3 code or
+// alias. The list (/data/finder.json) is fetched on first focus. Without JavaScript the field
+// is a plain link to the countries list, where every name is in the HTML.
+//
+// Variants: "header" is the 200px field in the wide header; "panel" fills the Find panel and
+// the menu sheet; "page" is the inline field on the home page (phones) and the 404.
+// Give each instance a unique id. The client code is in src/scripts/finder.ts.
+// Type: the field and each country's name at the control step, every quieter line at the small
+// step, the "/" key hint at the caption step (one of its three uses); no arrow after a link.
+import { pageHref } from '../../lib/site/gates';
+
+interface Props {
+  id: string;
+  variant?: 'header' | 'panel' | 'page';
+}
+const { id, variant = 'page' } = Astro.props;
+const all = pageHref('/countries') ?? '/countries';
+const listId = `${id}-list`;
+---
+
+<div class={`finder finder--${variant}`} data-finder={variant} data-src="/data/finder.json" data-base={`${all}/`}>
+  <a class="fd-fallback nojs-only" href={all}>
+    <svg class="fd-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.75"></circle><path d="M10 10l4.25 4.25"></path></svg>
+    <span>Find a country</span>
+  </a>
+  <div class="fd-field js-only">
+    <label class="sr-only" for={id}>Find a country</label>
+    <svg class="fd-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.75"></circle><path d="M10 10l4.25 4.25"></path></svg>
+    <input
+      id={id}
+      type="text"
+      role="combobox"
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-controls={listId}
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      enterkeyhint="go"
+      placeholder="Find a country"
+    />
+    {variant === 'header' && <kbd class="fd-key mono" aria-hidden="true">/</kbd>}
+  </div>
+  <div class="fd-pop" hidden>
+    <ul class="fd-list" id={listId} role="listbox" aria-label="Countries"></ul>
+    <p class="fd-msg fd-more" hidden></p>
+    <p class="fd-msg fd-empty" hidden>No country by that name. <a href={all}>See all countries</a></p>
+    <p class="fd-msg fd-wait" hidden>loading the list of countries</p>
+    <p class="fd-msg fd-err" hidden>
+      The list did not load. <button type="button" class="fd-retry">Try again</button> or <a href={all}>see all countries</a>.
+    </p>
+  </div>
+  <p class="fd-status sr-only" role="status" aria-live="polite"></p>
+</div>
+
+<style is:global>
+  .finder {
+    position: relative;
+    font-family: var(--font-instrument);
+  }
+
+  /* the field: no box, one hairline rule that turns to a 2px teal rule on focus */
+  .finder .fd-field,
+  .finder .fd-fallback {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--target-min);
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink-muted);
+  }
+  .finder .fd-fallback {
+    text-decoration: none;
+    font-size: var(--type-small);
+    transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+  }
+  .finder .fd-fallback:hover,
+  .finder .fd-fallback:active {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+  .finder .fd-field {
+    transition: border-color var(--dur-fast) var(--ease-standard);
+  }
+  .finder .fd-field:hover {
+    border-bottom-color: var(--ink-muted);
+  }
+  .finder .fd-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+  .finder input {
+    flex: 1;
+    min-width: 0;
+    height: var(--target-min);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--type-small);
+    outline: none;
+    appearance: none;
+  }
+  .finder input::placeholder {
+    color: var(--ink-muted);
+    opacity: 1;
+  }
+  .finder .fd-field:focus-within {
+    border-bottom-color: var(--accent);
+    box-shadow: 0 1px 0 0 var(--accent); /* a 2px teal rule that grows downwards; nothing moves */
+    color: var(--ink);
+  }
+  .finder .fd-key {
+    flex: none;
+    min-width: 1.25rem;
+    padding: 0 0.3rem;
+    border: var(--rule);
+    border-radius: var(--radius);
+    font-size: var(--type-caption);
+    line-height: var(--leading-snug);
+    text-align: center;
+    color: var(--ink-muted);
+  }
+  .finder .fd-field:focus-within .fd-key {
+    visibility: hidden;
+  }
+
+  /* the list: an overlay on the surface with a hairline edge and the one shadow */
+  .finder .fd-pop {
+    position: absolute;
+    z-index: 60;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    background: var(--surface-overlay);
+    border: var(--rule);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-panel);
+    max-height: min(26rem, calc(100svh - 7rem));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .finder .fd-pop[hidden] {
+    display: none;
+  }
+  /* in the header the list hangs from the field's rule, wider than the field */
+  .finder--header .fd-pop {
+    left: auto;
+    width: 22rem;
+  }
+  .finder .fd-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .finder .fd-list:empty {
+    display: none;
+  }
+  .finder [role='option'] {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--target-min);
+    padding: var(--space-2) var(--space-4);
+    border-top: var(--rule);
+    cursor: pointer;
+    transition: background-color var(--dur-fast) var(--ease-standard);
+  }
+  .finder [role='option']:hover {
+    background: var(--wash);
+  }
+  .finder [role='option']:first-child {
+    border-top: 0;
+  }
+  .finder [role='option']:active {
+    background: var(--wash-strong);
+  }
+  /* the current row of the list a visitor moves through with the arrow keys: the teal wash with
+     the rail's current rule (--rule-current) at its left edge, drawn inside so nothing moves */
+  .finder [role='option'][aria-selected='true'] {
+    background: var(--accent-wash);
+    box-shadow: inset var(--border-width-strong) 0 0 var(--accent);
+  }
+  .finder .fd-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: var(--radius-mark);
+    background: var(--c);
+  }
+  /* no posture recorded: the map's pale fill under its ink edge */
+  .finder .fd-dot.is-none {
+    background: var(--process-none);
+    box-shadow: inset 0 0 0 1px var(--swatch-none-edge);
+  }
+  .finder .fd-name {
+    color: var(--ink);
+    font-size: var(--type-control);
+    line-height: var(--leading-snug);
+  }
+  .finder .fd-post {
+    color: var(--ink-muted);
+    font-size: var(--type-small);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .finder .fd-msg {
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    color: var(--ink-muted);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+  }
+  .finder .fd-empty {
+    font-family: var(--font-reading);
+    font-style: italic;
+    font-size: var(--type-body);
+  }
+  /* the actions inside a message keep the 44px target; inline-flex holds them on the text's line */
+  .finder .fd-empty a,
+  .finder .fd-err a,
+  .finder .fd-retry {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+  }
+  .finder .fd-empty a,
+  .finder .fd-err a {
+    font-family: var(--font-instrument);
+    font-style: normal;
+    font-size: var(--type-small);
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .finder .fd-empty a:hover,
+  .finder .fd-err a:hover,
+  .finder .fd-retry:hover,
+  .finder .fd-empty a:active,
+  .finder .fd-err a:active,
+  .finder .fd-retry:active {
+    color: var(--accent-strong);
+  }
+  .finder .fd-retry:disabled {
+    color: var(--ink-faint);
+    cursor: not-allowed;
+  }
+  /* more matches than shown: a quiet line under the last option */
+  .finder .fd-more {
+    border-top: var(--rule);
+  }
+  .finder .fd-retry {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  /* the panel and page variants: a taller field for a thumb, at the control step (16px, so a
+     phone never zooms into it) */
+  .finder--panel input,
+  .finder--page input {
+    height: 3rem;
+    font-size: var(--type-control);
+  }
+  .finder--panel .fd-field,
+  .finder--page .fd-field {
+    min-height: 3rem;
+  }
+  .finder--panel .fd-fallback,
+  .finder--page .fd-fallback {
+    min-height: 3rem;
+    font-size: var(--type-control);
+  }
+  .finder--page .fd-pop {
+    max-height: min(24rem, calc(100svh - 12rem));
+  }
+  /* inside the Find panel and the menu sheet the list joins the flow: the panel grows to hold
+     it, and the panel is already the overlay, so the list draws no edge or shadow of its own */
+  .finder--panel .fd-pop {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+  .finder--panel [role='option'] {
+    padding-inline: var(--space-3) 0;
+  }
+  .finder--panel .fd-msg {
+    padding-inline: var(--space-3) 0;
+  }
+  .finder--page {
+    max-width: 28rem;
+  }
+</style>

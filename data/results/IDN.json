@@ -42,5 +42,27 @@
     "url": "https://csirt.makassarkota.go.id/posts/jaktek-series-2",
     "summary": "Post on developments in post-quantum cryptography and related SNI ISO standards in Indonesia, published by the Makassar city government CSIRT reporting on national cryptographic-policy activity. Local-government republisher, so flagged for review.",
     "included": false
+  },
+  {
+    "title": "Wamenkomdigi Nezar Patria Perkuat Kolaborasi Teknologi UK-RI dalam Kunjungan ke IBM dan Plexal Innovation Hub di London",
+    "country": "IDN",
+    "issuingOrg": "Komdigi",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://portal.komdigi.go.id/kanal-publik/berita-kini/9400",
+    "summary": "Ministry of Communication and Digital Affairs news item on the Deputy Minister's visit to IBM and Plexal in London to strengthen UK-Indonesia technology collaboration, mainly on AI. Post-quantum cryptography is listed as one discussion topic, stressing preparation for quantum computers able to break current algorithms and the harvest-now-decrypt-later risk.",
+    "included": true
+  },
+  {
+    "title": "AI Jadi Senjata Siber, Deepfake Naik 1.400 Persen - Wamen Komdigi Buka Workshop Cybersecurity #13 di Yogyakarta, Sekaligus Luncurkan Digital Talent Hub untuk Desa Wisata DIY 2026",
+    "country": "IDN",
+    "issuingOrg": "BLSDM Komdigi Yogyakarta",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://bpsdm.komdigi.go.id/upt/yogyakarta/berita-ai-jadi-senjata-siber-deepfake-naik-1-400-persen-wamen-komdigi-buka-worksho-5-88",
+    "summary": "News item from Komdigi's Yogyakarta training centre on the Deputy Minister opening a cybersecurity workshop on AI-driven threats and launching a Digital Talent Hub. It notes in passing that AI combined with quantum technology threatens encryption, prompting the concept of post-quantum cryptography.",
+    "included": true
   }
 ]

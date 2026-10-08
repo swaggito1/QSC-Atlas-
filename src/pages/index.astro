@@ -3,12 +3,14 @@ import { createRequire } from 'node:module';
 import Base from '../layouts/Base.astro';
 import HeroGlobe from '../components/HeroGlobe';
 import { getCollection } from 'astro:content';
+import { anyShown, pageHref } from '../lib/site/gates';
+import { notesHref } from '../lib/site/notes';
 
 // The homepage: a pinned globe that holds the screen and slides side to side as you scroll, while
 // text takes the other half with no overlap. Two beats. First the globe sits centred under the
 // title alone; then it sweeps to the right and the plain-language lede and two quiet actions take
 // the left. Native scroll drives an IntersectionObserver that sets body[data-scene]; CSS maps each
-// scene to a globe pose. Stacks to plain blocks on small screens.
+// scene to a globe pose. Narrower windows and phones run the same two beats with their own poses.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
@@ -18,10 +20,26 @@ const countries = await getCollection('countries');
 const mapProcess: Record<string, any> = {};
 for (const c of countries) {
   const d = c.data;
-  if (!d.coordinationPosture) continue;
   const ccn3 = CCN3[d.iso3];
-  if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole ?? null, confidence: d.confidence ?? null };
+  if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture ?? null, role: d.standardsRole ?? null, confidence: d.confidence ?? null };
 }
+// The rolling menu is the live one (Map, Countries, Methodology, Documents, About). Prepare and
+// Standards join it only once a tool in them is public, so a production build shows exactly the
+// live menu until then (Swann, 2 October 2026: the home page stays as it was). Notes joins it
+// once a note is published with its page (notesHref), between Documents and About.
+const prepareHref = anyShown('prepare') ? '/prepare' : null;
+const standardsHref = pageHref('/standards');
+const notesLink = notesHref();
+const menu = [
+  { label: 'Map', href: '/map' },
+  { label: 'Countries', href: '/countries' },
+  prepareHref && { label: 'Prepare', href: prepareHref },
+  standardsHref && { label: 'Standards', href: standardsHref },
+  { label: 'Methodology', href: '/methodology' },
+  { label: 'Documents', href: '/documents' },
+  notesLink && { label: 'Notes', href: notesLink },
+  { label: 'About', href: '/about' },
+].filter((i): i is { label: string; href: string } => !!i);
 ---
 
 <Base hideNav title="The geopolitics of the post-quantum transition" description="A plain, evidence-based map of how countries are switching to quantum-safe encryption, and how ready each one is. Built only from official sources.">
@@ -29,11 +47,7 @@ for (const c of countries) {
        way at the top and rolls down into the corner as you scroll. Wide screens get an inline bar;
        phones get a small "Menu" disclosure that rolls the links down on tap (native details, no JS). -->
   <nav class="scroll-nav scroll-nav--bar" aria-label="Sections">
-    <a href="/map">Map</a>
-    <a href="/countries">Countries</a>
-    <a href="/methodology">Methodology</a>
-    <a href="/documents">Documents</a>
-    <a href="/about">About</a>
+    {menu.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>
   <details class="scroll-nav scroll-nav--menu">
     <summary>
@@ -41,11 +55,7 @@ for (const c of countries) {
       <svg class="chev" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>
     </summary>
     <nav aria-label="Sections">
-      <a href="/map">Map</a>
-      <a href="/countries">Countries</a>
-      <a href="/methodology">Methodology</a>
-      <a href="/documents">Documents</a>
-      <a href="/about">About</a>
+      {menu.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
   </details>
 
@@ -97,13 +107,13 @@ for (const c of countries) {
   // (CSS reads it for the globe pose) and reveals each scene's text once. The choreography runs on
   // wide screens whether or not reduced motion is set, because the sliding globe is the site's
   // essential structure and is driven by the reader's own scroll (the globe's continuous auto-spin
-  // stays off under reduced motion, handled inside the component). Narrow screens stack instead.
-  const small = matchMedia('(max-width: 1200px)').matches;
+  // stays off under reduced motion, handled inside the component). It runs at every width: narrower
+  // windows and phones get their own globe poses in the CSS below (Swann, 2 October 2026).
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const scenes = Array.from(document.querySelectorAll('.scene'));
   const rail = Array.from(document.querySelectorAll('.scroll-rail a'));
 
-  if (!small) {
+  if ('IntersectionObserver' in window) {
     // A short trigger band across the vertical centre of the viewport. The scene whose body
     // crosses that band is the active one, which holds regardless of how tall a scene runs.
     const active = new IntersectionObserver(
@@ -146,6 +156,9 @@ for (const c of countries) {
 <style>
   .scrolly {
     position: relative;
+    /* the globe pushed off the right edge in the intro scene must not make the page scroll
+       sideways; clip, unlike hidden, keeps the sticky stage working */
+    overflow-x: clip;
   }
 
   /* The globe stage: pinned through-line, zoomed and posed per scene. */
@@ -171,6 +184,15 @@ for (const c of countries) {
   }
   .globe-box :global(.hg-controls) {
     display: none;
+  }
+  /* The globe fills its square box at every width: HeroGlobe's own rule under 860px caps the
+     canvas height for stacked layouts, which the home page no longer uses. */
+  .globe-box :global(.hg) {
+    height: 100%;
+  }
+  .globe-box :global(.hg-stage) {
+    flex: 1 1 auto;
+    height: auto;
   }
 
   /* Centred and smaller at the hero; zoomed in and pushed to the right for the intro, so the globe
@@ -257,7 +279,9 @@ for (const c of countries) {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
-    margin-top: var(--space-7);
+    /* the live page asked for var(--space-7), which it never defined, so the buttons sat
+       directly under the lede; kept that way (Swann, 2 October 2026: the home page as it was) */
+    margin-top: 0;
   }
   .btn {
     display: inline-flex;
@@ -454,40 +478,59 @@ for (const c of countries) {
     .scroll-cue { animation: none; opacity: 0.5; }
   }
 
-  /* Stacked fallback: narrow screens drop the pinned, zoomed stage for a clean static layout. The
-     enlarged globe plus a full text column only fit side by side on wide screens; below the
-     threshold the globe is resized to a modest size and stacked above the text. */
+  /* Narrower windows keep the same two beats, so the globe moves on scroll at every width (Swann,
+     2 October 2026; the live page stacked everything below 1200px). Up to 1200px the intro text
+     takes a narrower left column, so the globe keeps the right half to itself. */
   @media (max-width: 1200px) {
-    .globe-stage {
-      position: static;
-      height: auto;
-      transform: none !important;
-      opacity: 1 !important;
-      padding: var(--space-8) var(--space-6) 0;
-    }
+    /* a larger box, so the hero globe fills the screen as it does on wide windows */
     .globe-box {
-      width: min(92vw, 460px);
-      margin-inline: auto;
+      width: min(130vw, 162svh);
+    }
+    body[data-scene='intro'] .globe-stage {
+      transform: translateX(62%) scale(1);
+    }
+    .scene--right {
+      grid-template-columns: minmax(0, 40vw) 1fr;
+    }
+    .lede {
+      font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.3rem);
+    }
+  }
+
+  /* Phones and narrow panes: side by side no longer fits, so the beats run top to bottom. At the
+     hero the globe sits under the title; for the intro it slides down and to the right, and the
+     lede and actions take the top of the screen above it. */
+  @media (max-width: 700px) {
+    /* the box stays inside the screen so the grid can centre it; the poses do the zooming */
+    .globe-box {
+      width: min(100vw, 62svh);
+    }
+    .globe-stage,
+    body[data-scene='hero'] .globe-stage {
+      transform: translateY(3%) scale(1.12);
+    }
+    body[data-scene='intro'] .globe-stage {
+      transform: translate(28%, 40%) scale(1.45);
     }
     .scene {
-      grid-template-columns: 1fr !important;
-      min-height: 0;
-      padding-block: var(--space-10);
-      text-align: left;
+      padding: var(--space-6) var(--space-5);
     }
     .scene--hero {
-      margin-top: 0;
-      padding-top: var(--space-8);
-      text-align: left;
-      justify-items: start;
+      padding-top: var(--space-10);
     }
     .scene--hero .text {
-      background: none; /* the paper halo is only needed when the title overlays the globe */
+      padding: var(--space-4);
     }
-    .scene .text {
-      opacity: 1;
-      transform: none;
-      grid-column: 1 !important;
+    .scene--right {
+      grid-template-columns: 1fr;
+      align-content: start;
+      padding-top: calc(var(--space-10) + var(--space-8));
+    }
+    .scene--right .text {
+      /* the same soft paper halo as the hero, in case the globe's rim reaches the last lines */
+      background: radial-gradient(80% 70% at 40% 45%, var(--paper) 0%, var(--paper) 60%, transparent 100%);
+      padding: var(--space-3);
+      margin: calc(-1 * var(--space-3));
     }
     .scroll-rail {
       display: none;

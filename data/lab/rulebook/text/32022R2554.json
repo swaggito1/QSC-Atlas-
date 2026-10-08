@@ -1,0 +1,617 @@
+{
+  "_about": "Verbatim text of the in-scope articles of Regulation (EU) 2022/2554 (DORA), read on 2026-09-30 from the text published in the Official Journal through CELLAR, because CELLAR holds no English expression of its consolidated version. Footnote call numbers are left out; each paragraph, subparagraph and point is one entry.",
+  "celex": "32022R2554",
+  "consolidatedVersion": null,
+  "sourceUrl": "http://publications.europa.eu/resource/celex/32022R2554",
+  "retrievedAt": "2026-09-30",
+  "articles": [
+    {
+      "id": "art2",
+      "ref": "Article 2",
+      "sourceTitle": "Scope",
+      "theme": "scope",
+      "paragraphs": [
+        {
+          "id": "32022R2554/art2/par1",
+          "ref": "Article 2(1)",
+          "quote": "Without prejudice to paragraphs 3 and 4, this Regulation applies to the following entities:",
+          "crossRefs": [
+            "paragraphs 3 and 4"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-a",
+          "ref": "Article 2(1)(a)",
+          "quote": "credit institutions;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-b",
+          "ref": "Article 2(1)(b)",
+          "quote": "payment institutions, including payment institutions exempted pursuant to Directive (EU) 2015/2366;",
+          "crossRefs": [
+            "Directive (EU) 2015/2366"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-c",
+          "ref": "Article 2(1)(c)",
+          "quote": "account information service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-d",
+          "ref": "Article 2(1)(d)",
+          "quote": "electronic money institutions, including electronic money institutions exempted pursuant to Directive 2009/110/EC;",
+          "crossRefs": [
+            "Directive 2009/110/EC"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-e",
+          "ref": "Article 2(1)(e)",
+          "quote": "investment firms;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-f",
+          "ref": "Article 2(1)(f)",
+          "quote": "crypto-asset service providers as authorised under a Regulation of the European Parliament and of the Council on markets in crypto-assets, and amending Regulations (EU) No 1093/2010 and (EU) No 1095/2010 and Directives 2013/36/EU and (EU) 2019/1937 (‘the Regulation on markets in crypto-assets’) and issuers of asset-referenced tokens;",
+          "crossRefs": [
+            "Regulations (EU) No 1093/2010",
+            "(EU) No 1095/2010",
+            "Directives 2013/36/EU",
+            "(EU) 2019/1937"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-g",
+          "ref": "Article 2(1)(g)",
+          "quote": "central securities depositories;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-h",
+          "ref": "Article 2(1)(h)",
+          "quote": "central counterparties;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-i",
+          "ref": "Article 2(1)(i)",
+          "quote": "trading venues;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-j",
+          "ref": "Article 2(1)(j)",
+          "quote": "trade repositories;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-k",
+          "ref": "Article 2(1)(k)",
+          "quote": "managers of alternative investment funds;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-l",
+          "ref": "Article 2(1)(l)",
+          "quote": "management companies;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-m",
+          "ref": "Article 2(1)(m)",
+          "quote": "data reporting service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-n",
+          "ref": "Article 2(1)(n)",
+          "quote": "insurance and reinsurance undertakings;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-o",
+          "ref": "Article 2(1)(o)",
+          "quote": "insurance intermediaries, reinsurance intermediaries and ancillary insurance intermediaries;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-p",
+          "ref": "Article 2(1)(p)",
+          "quote": "institutions for occupational retirement provision;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-q",
+          "ref": "Article 2(1)(q)",
+          "quote": "credit rating agencies;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-r",
+          "ref": "Article 2(1)(r)",
+          "quote": "administrators of critical benchmarks;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-s",
+          "ref": "Article 2(1)(s)",
+          "quote": "crowdfunding service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-t",
+          "ref": "Article 2(1)(t)",
+          "quote": "securitisation repositories;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par1/pt-u",
+          "ref": "Article 2(1)(u)",
+          "quote": "ICT third-party service providers.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par2",
+          "ref": "Article 2(2)",
+          "quote": "For the purposes of this Regulation, entities referred to in paragraph 1, points (a) to (t), shall collectively be referred to as ‘financial entities’.",
+          "crossRefs": [
+            "paragraph 1, points (a) to (t)"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par3",
+          "ref": "Article 2(3)",
+          "quote": "This Regulation does not apply to:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-a",
+          "ref": "Article 2(3)(a)",
+          "quote": "managers of alternative investment funds as referred to in Article 3(2) of Directive 2011/61/EU;",
+          "crossRefs": [
+            "Article 3(2)",
+            "Directive 2011/61/EU"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-b",
+          "ref": "Article 2(3)(b)",
+          "quote": "insurance and reinsurance undertakings as referred to in Article 4 of Directive 2009/138/EC;",
+          "crossRefs": [
+            "Article 4",
+            "Directive 2009/138/EC"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-c",
+          "ref": "Article 2(3)(c)",
+          "quote": "institutions for occupational retirement provision which operate pension schemes which together do not have more than 15 members in total;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-d",
+          "ref": "Article 2(3)(d)",
+          "quote": "natural or legal persons exempted pursuant to Articles 2 and 3 of Directive 2014/65/EU;",
+          "crossRefs": [
+            "Articles 2 and 3",
+            "Directive 2014/65/EU"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-e",
+          "ref": "Article 2(3)(e)",
+          "quote": "insurance intermediaries, reinsurance intermediaries and ancillary insurance intermediaries which are microenterprises or small or medium-sized enterprises;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art2/par3/pt-f",
+          "ref": "Article 2(3)(f)",
+          "quote": "post office giro institutions as referred to in Article 2(5), point (3), of Directive 2013/36/EU.",
+          "crossRefs": [
+            "Article 2(5), point (3)",
+            "Directive 2013/36/EU"
+          ]
+        },
+        {
+          "id": "32022R2554/art2/par4",
+          "ref": "Article 2(4)",
+          "quote": "Member States may exclude from the scope of this Regulation entities referred to in Article 2(5), points (4) to (23), of Directive 2013/36/EU that are located within their respective territories. Where a Member State makes use of such option, it shall inform the Commission thereof as well as of any subsequent changes thereto. The Commission shall make that information publicly available on its website or other easily accessible means.",
+          "crossRefs": [
+            "Article 2(5), points (4) to (23)",
+            "Directive 2013/36/EU"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art17",
+      "ref": "Article 17",
+      "sourceTitle": "ICT-related incident management process",
+      "theme": "risk-management",
+      "paragraphs": [
+        {
+          "id": "32022R2554/art17/par1",
+          "ref": "Article 17(1)",
+          "quote": "Financial entities shall define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art17/par2",
+          "ref": "Article 17(2)",
+          "quote": "Financial entities shall record all ICT-related incidents and significant cyber threats. Financial entities shall establish appropriate procedures and processes to ensure a consistent and integrated monitoring, handling and follow-up of ICT-related incidents, to ensure that root causes are identified, documented and addressed in order to prevent the occurrence of such incidents.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art17/par3",
+          "ref": "Article 17(3)",
+          "quote": "The ICT-related incident management process referred to in paragraph 1 shall:",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-a",
+          "ref": "Article 17(3)(a)",
+          "quote": "put in place early warning indicators;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-b",
+          "ref": "Article 17(3)(b)",
+          "quote": "establish procedures to identify, track, log, categorise and classify ICT-related incidents according to their priority and severity and according to the criticality of the services impacted, in accordance with the criteria set out in Article 18(1);",
+          "crossRefs": [
+            "Article 18(1)"
+          ]
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-c",
+          "ref": "Article 17(3)(c)",
+          "quote": "assign roles and responsibilities that need to be activated for different ICT-related incident types and scenarios;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-d",
+          "ref": "Article 17(3)(d)",
+          "quote": "set out plans for communication to staff, external stakeholders and media in accordance with Article 14 and for notification to clients, for internal escalation procedures, including ICT-related customer complaints, as well as for the provision of information to financial entities that act as counterparts, as appropriate;",
+          "crossRefs": [
+            "Article 14"
+          ]
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-e",
+          "ref": "Article 17(3)(e)",
+          "quote": "ensure that at least major ICT-related incidents are reported to relevant senior management and inform the management body of at least major ICT-related incidents, explaining the impact, response and additional controls to be established as a result of such ICT-related incidents;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art17/par3/pt-f",
+          "ref": "Article 17(3)(f)",
+          "quote": "establish ICT-related incident response procedures to mitigate impacts and ensure that services become operational and secure in a timely manner.",
+          "crossRefs": []
+        }
+      ]
+    },
+    {
+      "id": "art18",
+      "ref": "Article 18",
+      "sourceTitle": "Classification of ICT-related incidents and cyber threats",
+      "theme": "incident-reporting",
+      "paragraphs": [
+        {
+          "id": "32022R2554/art18/par1",
+          "ref": "Article 18(1)",
+          "quote": "Financial entities shall classify ICT-related incidents and shall determine their impact based on the following criteria:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-a",
+          "ref": "Article 18(1)(a)",
+          "quote": "the number and/or relevance of clients or financial counterparts affected and, where applicable, the amount or number of transactions affected by the ICT-related incident, and whether the ICT-related incident has caused reputational impact;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-b",
+          "ref": "Article 18(1)(b)",
+          "quote": "the duration of the ICT-related incident, including the service downtime;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-c",
+          "ref": "Article 18(1)(c)",
+          "quote": "the geographical spread with regard to the areas affected by the ICT-related incident, particularly if it affects more than two Member States;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-d",
+          "ref": "Article 18(1)(d)",
+          "quote": "the data losses that the ICT-related incident entails, in relation to availability, authenticity, integrity or confidentiality of data;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-e",
+          "ref": "Article 18(1)(e)",
+          "quote": "the criticality of the services affected, including the financial entity’s transactions and operations;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par1/pt-f",
+          "ref": "Article 18(1)(f)",
+          "quote": "the economic impact, in particular direct and indirect costs and losses, of the ICT-related incident in both absolute and relative terms.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par2",
+          "ref": "Article 18(2)",
+          "quote": "Financial entities shall classify cyber threats as significant based on the criticality of the services at risk, including the financial entity’s transactions and operations, number and/or relevance of clients or financial counterparts targeted and the geographical spread of the areas at risk.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par3",
+          "ref": "Article 18(3)",
+          "quote": "The ESAs shall, through the Joint Committee and in consultation with the ECB and ENISA, develop common draft regulatory technical standards further specifying the following:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par3/pt-a",
+          "ref": "Article 18(3)(a)",
+          "quote": "the criteria set out in paragraph 1, including materiality thresholds for determining major ICT-related incidents or, as applicable, major operational or security payment-related incidents, that are subject to the reporting obligation laid down in Article 19(1);",
+          "crossRefs": [
+            "paragraph 1",
+            "Article 19(1)"
+          ]
+        },
+        {
+          "id": "32022R2554/art18/par3/pt-b",
+          "ref": "Article 18(3)(b)",
+          "quote": "the criteria to be applied by competent authorities for the purpose of assessing the relevance of major ICT-related incidents or, as applicable, major operational or security payment-related incidents, to relevant competent authorities in other Member States’, and the details of reports of major ICT-related incidents or, as applicable, major operational or security payment-related incidents, to be shared with other competent authorities pursuant to Article 19(6) and (7);",
+          "crossRefs": [
+            "Article 19(6)"
+          ]
+        },
+        {
+          "id": "32022R2554/art18/par3/pt-c",
+          "ref": "Article 18(3)(c)",
+          "quote": "the criteria set out in paragraph 2 of this Article, including high materiality thresholds for determining significant cyber threats.",
+          "crossRefs": [
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32022R2554/art18/par4",
+          "ref": "Article 18(4)",
+          "quote": "When developing the common draft regulatory technical standards referred to in paragraph 3 of this Article, the ESAs shall take into account the criteria set out in Article 4(2), as well as international standards, guidance and specifications developed and published by ENISA, including, where appropriate, specifications for other economic sectors. For the purposes of applying the criteria set out in Article 4(2), the ESAs shall duly consider the need for microenterprises and small and medium-sized enterprises to mobilise sufficient resources and capabilities to ensure that ICT-related incidents are managed swiftly.",
+          "crossRefs": [
+            "paragraph 3",
+            "Article 4(2)"
+          ]
+        },
+        {
+          "id": "32022R2554/art18/par4/sub-2",
+          "ref": "Article 18(4), second subparagraph",
+          "quote": "The ESAs shall submit those common draft regulatory technical standards to the Commission by 17 January 2024.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art18/par4/sub-3",
+          "ref": "Article 18(4), third subparagraph",
+          "quote": "Power is delegated to the Commission to supplement this Regulation by adopting the regulatory technical standards referred to in paragraph 3 in accordance with Articles 10 to 14 of Regulations (EU) No 1093/2010, (EU) No 1094/2010 and (EU) No 1095/2010.",
+          "crossRefs": [
+            "paragraph 3",
+            "Articles 10 to 14",
+            "Regulations (EU) No 1093/2010",
+            "(EU) No 1094/2010",
+            "(EU) No 1095/2010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art19",
+      "ref": "Article 19",
+      "sourceTitle": "Reporting of major ICT-related incidents and voluntary notification of significant cyber threats",
+      "theme": "incident-reporting",
+      "paragraphs": [
+        {
+          "id": "32022R2554/art19/par1",
+          "ref": "Article 19(1)",
+          "quote": "Financial entities shall report major ICT-related incidents to the relevant competent authority as referred to in Article 46 in accordance with paragraph 4 of this Article.",
+          "crossRefs": [
+            "Article 46",
+            "paragraph 4"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par1/sub-2",
+          "ref": "Article 19(1), second subparagraph",
+          "quote": "Where a financial entity is subject to supervision by more than one national competent authority referred to in Article 46, Member States shall designate a single competent authority as the relevant competent authority responsible for carrying out the functions and duties provided for in this Article.",
+          "crossRefs": [
+            "Article 46"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par1/sub-3",
+          "ref": "Article 19(1), third subparagraph",
+          "quote": "Credit institutions classified as significant, in accordance with Article 6(4) of Regulation (EU) No 1024/2013, shall report major ICT-related incidents to the relevant national competent authority designated in accordance with Article 4 of Directive 2013/36/EU, which shall immediately transmit that report to the ECB.",
+          "crossRefs": [
+            "Article 6(4)",
+            "Regulation (EU) No 1024/2013",
+            "Article 4",
+            "Directive 2013/36/EU"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par1/sub-4",
+          "ref": "Article 19(1), fourth subparagraph",
+          "quote": "For the purpose of the first subparagraph, financial entities shall produce, after collecting and analysing all relevant information, the initial notification and reports referred to in paragraph 4 of this Article using the templates referred to in Article 20 and submit them to the competent authority. In the event that a technical impossibility prevents the submission of the initial notification using the template, financial entities shall notify the competent authority about it via alternative means.",
+          "crossRefs": [
+            "first subparagraph",
+            "paragraph 4",
+            "Article 20"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par1/sub-5",
+          "ref": "Article 19(1), fifth subparagraph",
+          "quote": "The initial notification and reports referred to in paragraph 4 shall include all information necessary for the competent authority to determine the significance of the major ICT-related incident and assess possible cross-border impacts.",
+          "crossRefs": [
+            "paragraph 4"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par1/sub-6",
+          "ref": "Article 19(1), sixth subparagraph",
+          "quote": "Without prejudice to the reporting pursuant to the first subparagraph by the financial entity to the relevant competent authority, Member States may additionally determine that some or all financial entities shall also provide the initial notification and each report referred to in paragraph 4 of this Article using the templates referred to in Article 20 to the competent authorities or the computer security incident response teams (CSIRTs) designated or established in accordance with Directive (EU) 2022/2555.",
+          "crossRefs": [
+            "first subparagraph",
+            "paragraph 4",
+            "Article 20",
+            "Directive (EU) 2022/2555"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par2",
+          "ref": "Article 19(2)",
+          "quote": "Financial entities may, on a voluntary basis, notify significant cyber threats to the relevant competent authority when they deem the threat to be of relevance to the financial system, service users or clients. The relevant competent authority may provide such information to other relevant authorities referred to in paragraph 6.",
+          "crossRefs": [
+            "paragraph 6"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par2/sub-2",
+          "ref": "Article 19(2), second subparagraph",
+          "quote": "Credit institutions classified as significant, in accordance with Article 6(4) of Regulation (EU) No 1024/2013, may, on a voluntary basis, notify significant cyber threats to relevant national competent authority, designated in accordance with Article 4 of Directive 2013/36/EU, which shall immediately transmit the notification to the ECB.",
+          "crossRefs": [
+            "Article 6(4)",
+            "Regulation (EU) No 1024/2013",
+            "Article 4",
+            "Directive 2013/36/EU"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par2/sub-3",
+          "ref": "Article 19(2), third subparagraph",
+          "quote": "Member States may determine that those financial entities that on a voluntary basis notify in accordance with the first subparagraph may also transmit that notification to the CSIRTs designated or established in accordance with Directive (EU) 2022/2555.",
+          "crossRefs": [
+            "first subparagraph",
+            "Directive (EU) 2022/2555"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par3",
+          "ref": "Article 19(3)",
+          "quote": "Where a major ICT-related incident occurs and has an impact on the financial interests of clients, financial entities shall, without undue delay as soon as they become aware of it, inform their clients about the major ICT-related incident and about the measures that have been taken to mitigate the adverse effects of such incident.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par3/sub-2",
+          "ref": "Article 19(3), second subparagraph",
+          "quote": "In the case of a significant cyber threat, financial entities shall, where applicable, inform their clients that are potentially affected of any appropriate protection measures which the latter may consider taking.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par4",
+          "ref": "Article 19(4)",
+          "quote": "Financial entities shall, within the time limits to be laid down in accordance with Article 20, first paragraph, point (a), point (ii), submit the following to the relevant competent authority:",
+          "crossRefs": [
+            "Article 20, first paragraph, point (a), point (ii)"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par4/pt-a",
+          "ref": "Article 19(4)(a)",
+          "quote": "an initial notification;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par4/pt-b",
+          "ref": "Article 19(4)(b)",
+          "quote": "an intermediate report after the initial notification referred to in point (a), as soon as the status of the original incident has changed significantly or the handling of the major ICT-related incident has changed based on new information available, followed, as appropriate, by updated notifications every time a relevant status update is available, as well as upon a specific request of the competent authority;",
+          "crossRefs": [
+            "point (a)"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par4/pt-c",
+          "ref": "Article 19(4)(c)",
+          "quote": "a final report, when the root cause analysis has been completed, regardless of whether mitigation measures have already been implemented, and when the actual impact figures are available to replace estimates.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par5",
+          "ref": "Article 19(5)",
+          "quote": "Financial entities may outsource, in accordance with Union and national sectoral law, the reporting obligations under this Article to a third-party service provider. In case of such outsourcing, the financial entity remains fully responsible for the fulfilment of the incident reporting requirements.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par6",
+          "ref": "Article 19(6)",
+          "quote": "Upon receipt of the initial notification and of each report referred to in paragraph 4, the competent authority shall, in a timely manner, provide details of the major ICT-related incident to the following recipients based, as applicable, on their respective competences:",
+          "crossRefs": [
+            "paragraph 4"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par6/pt-a",
+          "ref": "Article 19(6)(a)",
+          "quote": "EBA, ESMA or EIOPA;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par6/pt-b",
+          "ref": "Article 19(6)(b)",
+          "quote": "the ECB, in the case of financial entities referred to in Article 2(1), points (a), (b) and (d);",
+          "crossRefs": [
+            "Article 2(1), points (a), (b) and (d)"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par6/pt-c",
+          "ref": "Article 19(6)(c)",
+          "quote": "the competent authorities, single points of contact or CSIRTs designated or established in accordance with Directive (EU) 2022/2555;",
+          "crossRefs": [
+            "Directive (EU) 2022/2555"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par6/pt-d",
+          "ref": "Article 19(6)(d)",
+          "quote": "the resolution authorities, as referred to in Article 3 of Directive 2014/59/EU, and the Single Resolution Board (SRB) with respect to entities referred to in Article 7(2) of Regulation (EU) No 806/2014 of the European Parliament and of the Council, and with respect to entities and groups referred to in Article 7(4)(b) and (5) of Regulation (EU) No 806/2014 if such details concern incidents that pose a risk to ensuring critical functions within the meaning of Article 2(1), point (35), of Directive 2014/59/EU; and",
+          "crossRefs": [
+            "Article 3",
+            "Directive 2014/59/EU",
+            "Article 7(2)",
+            "Regulation (EU) No 806/2014",
+            "Article 7(4)(b)",
+            "Article 2(1), point (35)"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par6/pt-e",
+          "ref": "Article 19(6)(e)",
+          "quote": "other relevant public authorities under national law.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022R2554/art19/par7",
+          "ref": "Article 19(7)",
+          "quote": "Following receipt of information in accordance with paragraph 6, EBA, ESMA or EIOPA and the ECB, in consultation with ENISA and in cooperation with the relevant competent authority, shall assess whether the major ICT-related incident is relevant for competent authorities in other Member States. Following that assessment, EBA, ESMA or EIOPA shall, as soon as possible, notify relevant competent authorities in other Member States accordingly. The ECB shall notify the members of the European System of Central Banks on issues relevant to the payment system. Based on that notification, the competent authorities shall, where appropriate, take all of the necessary measures to protect the immediate stability of the financial system.",
+          "crossRefs": [
+            "paragraph 6"
+          ]
+        },
+        {
+          "id": "32022R2554/art19/par8",
+          "ref": "Article 19(8)",
+          "quote": "The notification to be done by ESMA pursuant to paragraph 7 of this Article shall be without prejudice to the responsibility of the competent authority to urgently transmit the details of the major ICT-related incident to the relevant authority in the host Member State, where a central securities depository has significant cross-border activity in the host Member State, the major ICT-related incident is likely to have severe consequences for the financial markets of the host Member State and where there are cooperation arrangements among competent authorities related to the supervision of financial entities.",
+          "crossRefs": [
+            "paragraph 7"
+          ]
+        }
+      ]
+    }
+  ]
+}

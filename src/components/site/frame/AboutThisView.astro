@@ -1,0 +1,211 @@
+---
+// "About this view" (spec 11, item 14), in the manner of OWID's key facts and the NCSC's page
+// stamps. Since the minimal pass it is a disclosure at the foot of the page, closed until a
+// visitor asks for it (a native details element, so it opens without JavaScript, and it prints
+// open), holding everything the top of the page no longer says. A definition list, in this order:
+//   Sources: the count, then each source (Sources.astro, APA 7, each with its link);
+//   As of: the date of the data and when it was last checked ("verified n days ago");
+//   Written for: the audience, in the source's words, when the page names one;
+//   Privacy: "Nothing you enter leaves this page", on a page where a visitor enters something;
+//   By: "{byline}, CEPS";
+//   Method: the page's own method note (slot "method") and the link to /methodology#{anchor};
+//   How to cite: the copyable citation;
+//   Note: the standing note, once, when the page keeps it here;
+//   Corrections: "Report an error in this view".
+// A row with nothing to say is left out. The "method" and "sources" slots are rendered first
+// and tested for content, because a slot forwarded under a condition always looks present to
+// Astro.slots.has.
+//
+// The source list is folded behind its own count line ("9 sources, by author then date"), a native
+// details element that is open by default, so it reads in full without JavaScript and in print.
+// On phones it starts closed, so How to cite and Report an error are not three screens away.
+import Sources from '../../lab/Sources.astro';
+import FreshnessBadge from '../../lab/FreshnessBadge.astro';
+import CiteThis from './CiteThis.astro';
+import ReportError from './ReportError.astro';
+import { pageHref } from './contracts';
+import { formatDate } from '../../../lib/lab/format';
+import type { SourceEntry } from '../../../lib/lab/format';
+import '../../../styles/lab.css';
+import '../../../styles/frame.css';
+
+interface Props {
+  title: string; // the page or tool name, for the citation and the correction subject
+  path?: string;
+  sources?: SourceEntry[];
+  asOf?: string | null;
+  lawAsOf?: string | null;
+  freshnessDays?: number | null;
+  writtenFor?: string | null; // "Written for {audience}", in the source's words
+  local?: boolean; // "Nothing you enter leaves this page"
+  byline?: string | null;
+  methodAnchor?: string | null;
+  citation?: string;
+  standingNote?: string | null;
+  heading?: string;
+}
+const {
+  title,
+  path = Astro.url.pathname,
+  sources = [],
+  asOf,
+  lawAsOf = null,
+  freshnessDays = null,
+  writtenFor = null,
+  local = false,
+  byline = null,
+  methodAnchor = null,
+  citation,
+  standingNote = null,
+  heading = 'About this view',
+} = Astro.props;
+
+async function slotHtml(name: string): Promise<string> {
+  if (!Astro.slots.has(name)) return '';
+  return String((await Astro.slots.render(name)) ?? '').trim();
+}
+const methodHtml = await slotHtml('method');
+const sourcesHtml = await slotHtml('sources');
+
+const methodology = pageHref('/methodology');
+const methodHref = methodology ? `${methodology}${methodAnchor ? `#${methodAnchor}` : ''}` : null;
+const n = sources.length;
+const countLine = n === 1 ? '1 source' : `${n} sources, by author then date`;
+const id = 'fr-about-h';
+---
+
+<section class="fr-about lab-section" aria-labelledby={id}>
+  <details class="fr-about-d" data-fr-about>
+    <summary class="fr-about-sum"><h2 class="fr-h" id={id}>{heading}</h2></summary>
+    <dl class="fr-kv">
+      {
+        (n > 0 || sourcesHtml) && (
+          <div class="fr-kv-sources">
+            <dt>Sources</dt>
+            <dd>
+              {n > 0 ? (
+                <details class="fr-src lab-disclose" open data-fr-src>
+                  <summary class="fr-count">{countLine}</summary>
+                  <Sources entries={sources} />
+                  {sourcesHtml && <Fragment set:html={sourcesHtml} />}
+                </details>
+              ) : (
+                <Fragment set:html={sourcesHtml} />
+              )}
+            </dd>
+          </div>
+        )
+      }
+      {
+        asOf !== undefined && (
+          <div>
+            <dt>As of</dt>
+            <dd>
+              {asOf ? (
+                <p>
+                  <span class="fr-mono">{formatDate(asOf)}</span>
+                  {freshnessDays !== null && <FreshnessBadge verifiedAt={asOf} thresholdDays={freshnessDays} />}
+                </p>
+              ) : (
+                <p>No value in this view has been verified against its source.</p>
+              )}
+              {lawAsOf && (
+                <p>
+                  Law as of <span class="fr-mono">{formatDate(lawAsOf)}</span>
+                </p>
+              )}
+            </dd>
+          </div>
+        )
+      }
+      {
+        writtenFor && (
+          <div>
+            <dt>Written for</dt>
+            <dd>
+              <p>{writtenFor}</p>
+            </dd>
+          </div>
+        )
+      }
+      {
+        local && (
+          <div>
+            <dt>Privacy</dt>
+            <dd>
+              <p>Nothing you enter leaves this page</p>
+            </dd>
+          </div>
+        )
+      }
+      {
+        byline && (
+          <div>
+            <dt>By</dt>
+            <dd>
+              <p>{byline}, CEPS</p>
+            </dd>
+          </div>
+        )
+      }
+      {
+        (methodHtml || methodHref) && (
+          <div>
+            <dt>Method</dt>
+            <dd>
+              {methodHtml && (
+                <div class="prose">
+                  <Fragment set:html={methodHtml} />
+                </div>
+              )}
+              {methodHref && (
+                <p class="fr-more">
+                  <a href={methodHref}>How the Atlas is built, in the methodology</a>
+                </p>
+              )}
+            </dd>
+          </div>
+        )
+      }
+      <div>
+        <dt>How to cite</dt>
+        <dd>
+          <CiteThis text={citation} title={title} path={path} asOf={asOf ?? null} />
+        </dd>
+      </div>
+      {
+        standingNote && (
+          <div>
+            <dt>Note</dt>
+            <dd>
+              <p>{standingNote}</p>
+            </dd>
+          </div>
+        )
+      }
+      <div class="fr-report-row">
+        <dt>Corrections</dt>
+        <dd>
+          <ReportError title={title} path={path} />
+        </dd>
+      </div>
+    </dl>
+  </details>
+</section>
+
+<script>
+  // On phones the source list starts closed behind its count line. Printing opens About this view
+  // and its source list, then puts both back as the visitor left them.
+  const lists = Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-fr-src]'));
+  const abouts = Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-fr-about]'));
+  if (window.matchMedia('(max-width: 639px)').matches) lists.forEach((d) => (d.open = false));
+  const all = [...abouts, ...lists];
+  let before: boolean[] = [];
+  window.addEventListener('beforeprint', () => {
+    before = all.map((d) => d.open);
+    all.forEach((d) => (d.open = true));
+  });
+  window.addEventListener('afterprint', () => {
+    all.forEach((d, i) => (d.open = before[i] ?? d.open));
+  });
+</script>

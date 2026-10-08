@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Avanzan alianzas para dotar de tecnología para fortalecer la seguridad",
+    "country": "GTM",
+    "issuingOrg": "MINGOB",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://mingob.gob.gt/avanzan-alianzas-para-dotar-de-tecnologia-para-fortalecer-la-seguridad/",
+    "summary": "Guatemala's Ministry of the Interior (Ministerio de Gobernación) reports a meeting between its Vice Minister of Security and a UAE Embassy delegation, which presented a portfolio of security technologies as part of the ministry's efforts to incorporate advanced technology through international alliances. The secure communications and cybersecurity solutions analysed included post-quantum encryption systems and cryptographic satellites, which would help protect strategic information.",
+    "included": true
+  }
+]

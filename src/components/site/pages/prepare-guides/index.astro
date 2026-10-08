@@ -1,0 +1,232 @@
+---
+// The guides, /prepare/guides (spec 5.2): the guides Prepare draws on, one row each. A row gives
+// the issuer and the date printed on the document, the title in its own language (linking to the
+// guide's page), Status and Bindingness as two separate labels, who it is written for in one line,
+// the themes it covers as a short list, and a link to the document itself. No quoted words reach a
+// visitor: the source's own words for its audience (the French in brackets for ANSSI) are kept for
+// review inside SourceWords. Computed by guidesModel() in src/lib/site/prepare-elements.ts; every
+// visible string is in data/lab/prepare/elements-copy.json.
+//
+// Épuré (labs/review/epure-audit.md): the list is an index, so each title is a .row-link, ink on a
+// thin teal underline (Swann, 4 October 2026), and the rows keep the list width (--w-list) with
+// every line of text at the reading measure.
+import PageFrame from '../../frame/PageFrame.astro';
+import SourceWords from '../../frame/SourceWords.astro';
+import { guidesModel } from '../../../../lib/site/prepare-elements';
+import type { SitePage } from '../../../../lib/site/routes';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  page: SitePage;
+}
+const { page } = Astro.props;
+const m = guidesModel();
+const c = m.copy;
+---
+
+<PageFrame
+  question={m.h1}
+  title={page.title}
+  section="prepare"
+  gate={page.gate}
+  description={m.lede}
+  lede={m.lede}
+  reads={m.reads}
+  asOf={m.asOf}
+  next={m.next}
+  sources={m.sources}
+  methodAnchor="prepare"
+>
+  <div class="pe gd-page">
+    <ul class="gd-list">
+      {
+        m.guides.map((g) => (
+          <li class="gd" id={`guide-${g.id}`}>
+            <p class="gd-by">
+              <span>{g.issuer}</span>
+              <span class="gd-date">{g.dateLine}</span>
+            </p>
+            <div class="gd-body">
+              <h2 class="gd-t">
+                {g.href ? (
+                  <a class="row-link" href={g.href} lang={g.lang ?? undefined}>
+                    {g.title}
+                  </a>
+                ) : (
+                  <span lang={g.lang ?? undefined}>{g.title}</span>
+                )}
+              </h2>
+              <dl class="gd-axes">
+                <div>
+                  <dt>{c.statusWord}</dt>
+                  <dd>{g.status}</dd>
+                </div>
+                <div>
+                  <dt>{c.bindingnessWord}</dt>
+                  <dd>{g.bindingness}</dd>
+                </div>
+              </dl>
+              <p class="gd-for">
+                {g.writtenFor}
+                {g.ownWords && (
+                  <SourceWords inline>
+                    <span lang={g.lang ?? undefined}>{g.ownWords}</span>
+                  </SourceWords>
+                )}
+              </p>
+              {g.covers.length > 0 && (
+                <div class="gd-covers">
+                  <span class="gd-k" id={`gd-cov-${g.id}`}>
+                    {c.covers}
+                  </span>
+                  <ul class="gd-cl" aria-labelledby={`gd-cov-${g.id}`}>
+                    {g.covers.map((x) => (
+                      <li>{x}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {g.source && (
+                <p class="gd-src">
+                  <a href={g.source.url} rel="noopener">
+                    {m.common.openSource}
+                  </a>
+                </p>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</PageFrame>
+
+<style>
+  /* one guide a row, on hairlines: who issued it and when in a narrow column on wide screens (one
+     line over the title on phones), then the title in Newsreader, Status and Bindingness as two
+     quiet labels, who it is written for, what it covers and the link to the document */
+  .gd-list {
+    max-width: var(--w-list);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: var(--rule);
+  }
+  .gd {
+    display: grid;
+    gap: var(--gap-mark) var(--space-8);
+    padding: var(--gap-group-lg) 0 var(--space-2);
+    border-bottom: var(--rule);
+  }
+  @media (min-width: 860px) {
+    .gd {
+      grid-template-columns: 12rem minmax(0, 1fr);
+    }
+  }
+  .gd-by {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.75em;
+    margin: 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
+  }
+  @media (min-width: 860px) {
+    .gd-by {
+      flex-direction: column;
+      gap: var(--gap-mark);
+      padding-top: 0.3em;
+    }
+  }
+  .gd-date {
+    white-space: nowrap;
+  }
+  .gd-body {
+    min-width: 0;
+  }
+  .gd-t {
+    max-width: var(--measure);
+    margin: 0;
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-snug);
+    letter-spacing: 0;
+    text-wrap: pretty;
+  }
+  /* inline padding gives the title's link a 44px hit area without moving the line (0.7em above
+     and below the 19px words; 0.5em left it at 38px) */
+  .gd-t a {
+    display: inline;
+    padding: 0.7em 0;
+  }
+
+  /* Status and Bindingness: two labels side by side, each with its own word */
+  .gd-axes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-5);
+    margin: var(--gap-inline) 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+  }
+  .gd-axes > div {
+    display: flex;
+    gap: 0.45em;
+    align-items: baseline;
+  }
+  .gd-axes dt {
+    color: var(--ink-muted);
+  }
+  /* the value in ink beside its ink-muted word: colour parts them, so no extra weight */
+  .gd-axes dd {
+    margin: 0;
+    font-weight: var(--weight-ui);
+  }
+
+  .gd-for {
+    margin: var(--gap-inline) 0 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    line-height: var(--leading-normal);
+  }
+  /* the themes it covers: one line of text that wraps like a sentence, items joined by middle
+     dots, each dot held to the item before it so a line never starts on one */
+  /* a short list, held by the row's text column (about 70 characters at this size) and wrapped
+     so that no theme stands alone on its line */
+  .gd-covers {
+    margin: var(--gap-inline) 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    text-wrap: pretty;
+  }
+  .gd-k {
+    margin-right: 0.6em;
+    color: var(--ink-muted);
+  }
+  .gd-cl {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .gd-cl > li {
+    display: inline;
+  }
+  .gd-cl > li:not(:last-child)::after {
+    content: '\00A0\00B7\20';
+    content: '\00A0\00B7\20' / '';
+    color: var(--ink-faint);
+  }
+  .gd-src {
+    margin: 0;
+    font-size: var(--type-small);
+  }
+  .gd-src a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+  }
+</style>

@@ -1,0 +1,169 @@
+---
+// The footer on every page but the home (spec 3.4, after the minimal pass): one calm band under
+// a hairline. On the left the CEPS logo in ink tones and one quiet line, "Data as of {date}" (the
+// latest profile update; left out when no profile records one, and the build date is never
+// offered in its place) with the copyright; on the right six links at most, from footerLinks(),
+// which lists built pages only: Methodology, About, How to read the Atlas, Report an error, Data
+// downloads, GitHub. No link farm: the sections are in the header. No licence line until Swann
+// and CEPS agree one. The row keeps the header's measure (--shell-max) on every page, so the two
+// frame each page alike. On phones the links wrap under the logo, each a 44px target.
+import { getCollection } from 'astro:content';
+import { footerLinks } from '../../lib/site/nav';
+import { formatDay, latestDay, todayIso, withSubject } from '../../lib/site/meta';
+
+interface Props {
+  pathname: string;
+  title: string;
+}
+const { pathname, title } = Astro.props;
+
+const links = footerLinks();
+const profiles = await getCollection('countries');
+const dataAsOf = formatDay(latestDay(profiles.map((p) => p.data.lastUpdated)));
+const year = todayIso().slice(0, 4);
+const external = (href: string) => /^https?:\/\//.test(href);
+---
+
+<footer class="site-footer">
+  <div class="ft-row">
+    <div class="ft-brand">
+      <img class="ceps-logo" src="/ceps-logo.png" alt="CEPS" width="240" height="262" loading="lazy" decoding="async" />
+      <p class="ft-meta">
+        {dataAsOf && <span>Data as of {dataAsOf}</span>}
+        <span>&copy; {year} CEPS</span>
+      </p>
+    </div>
+    {
+      links.length > 0 && (
+        <nav class="ft-nav" aria-label="Footer">
+          <ul>
+            {links.map((l) => (
+              <li>
+                <a href={withSubject(l.href, title, pathname)} rel={external(l.href) ? 'noopener' : undefined}>
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
+  </div>
+</footer>
+
+<style>
+  /* one calm band on the paper under a hairline; every line in it is at least 4.5:1. The site's
+     own band is a change of subject from the page above it, so it sits --gap-subject below */
+  .site-footer {
+    margin-top: var(--gap-subject);
+    border-top: var(--rule);
+    color: var(--ink-muted);
+    font-size: var(--type-small);
+  }
+  .ft-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-10);
+    max-width: var(--shell-max);
+    margin: 0 auto;
+    padding: var(--space-8) var(--shell-gutter);
+  }
+  .ft-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  /* the CEPS mark in ink tones, as it has always been drawn here */
+  .ceps-logo {
+    display: block;
+    flex: none;
+    height: 40px;
+    width: auto;
+    filter: grayscale(1) contrast(1.35);
+    mix-blend-mode: multiply;
+  }
+  /* one quiet line in the interface face: the data date and the copyright, joined by a dot */
+  .ft-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--gap-inline);
+    margin: 0;
+    line-height: var(--leading-normal);
+  }
+  .ft-meta > span + span::before {
+    content: '\00B7';
+    content: '\00B7' / '';
+    margin-right: var(--gap-inline);
+    color: var(--ink-faint);
+  }
+  .ft-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-5);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ft-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    color: var(--ink-muted);
+    text-decoration: underline 1px transparent;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard), text-decoration-color var(--dur-fast) var(--ease-standard);
+  }
+  /* a short link ("About") still has a 44px-wide hit area; the gap between links is wider than
+     what it adds */
+  .ft-nav a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .ft-nav a:hover,
+  .ft-nav a:active {
+    color: var(--accent-strong);
+    text-decoration-color: currentColor;
+  }
+
+  /* phones: the logo and its two short lines (stacked, so no line starts with a dot), then the
+     links wrapping beneath, left-aligned */
+  @media (max-width: 639.98px) {
+    .ft-row {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-block: var(--space-6);
+    }
+    .ft-meta {
+      flex-direction: column;
+    }
+    .ft-meta > span + span::before {
+      content: none;
+    }
+    .ft-nav ul {
+      column-gap: var(--space-4);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft-nav a {
+      transition: none;
+    }
+  }
+
+  /* on paper the date matters and the links do not */
+  @media print {
+    .site-footer {
+      margin-top: var(--space-8);
+    }
+    .ft-nav {
+      display: none;
+    }
+    .ft-row {
+      padding: var(--space-4) 0 0;
+    }
+  }
+</style>

@@ -1,0 +1,225 @@
+---
+// Across the Atlas (spec 7.2): what the Atlas tools hold for one country, built at build time
+// by connectedEvidence() in src/lib/site/evidence.ts. A short, quiet list (the minimal pass,
+// 2 October 2026): one sentence per row, its verb links and the as-of date of the dataset under
+// it, with no group column, no marker and no key.
+//
+// - Rows come only from tools this build shows, only where the country has a record, and only
+//   with a link: every link goes through link() or pageHref(), and a row whose links all come
+//   back null is not drawn, so the block never shows a sentence that leads nowhere.
+// - One fixed order, Standards, Dates, Guidance, never sorted by volume. EU rules has left the
+//   site, so there is no Rules row; standards are named in plain text, with no link to the
+//   standards list or a standard's page, and the row's link is the Standards Cascade.
+// - A record that reaches the country through EU membership says so in words: every such
+//   sentence begins "As an EU Member State", so no marker or key has to.
+// - Each row: one sentence (counts and dates in mono, at the size of the words around them,
+//   inline links) and its verb links, with no arrow after them.
+// - The as-of date is said once (the épuré pass, 4 October 2026): the date most rows share
+//   stands on one line under the list, and a row whose dataset is dated otherwise keeps its own
+//   date beside its links, so nothing is said twice and no row's date is lost.
+// - No tally, no ticks, no total across rows, and nothing of this block in the rail.
+// - The dates row that restates the profile's own timeline is left out (isTimelineRow): the
+//   timeline stands just above with the same two links. When it was the only row, the block is
+//   left out too, since the timeline already holds that record.
+// - Empty states: with no evidence tool shown, or for a Placeholder profile with no row, the
+//   block is absent; with some tool shown and no record, one italic muted line.
+import { connectedEvidence, isTimelineRow, type EvidenceInput } from '../../lib/site/evidence';
+import { nameInSentence } from '../../lib/site/joins';
+import { formatDay } from '../../lib/site/meta';
+
+interface Props {
+  input: EvidenceInput;
+}
+const { input } = Astro.props;
+const evidence = connectedEvidence(input);
+const rows = evidence.rows.filter((r) => !isTimelineRow(r));
+// the timeline row was the only one: the timeline above already says it, so nothing is drawn
+const empty = evidence.rows.length > 0 && rows.length === 0 ? 'absent' : evidence.empty;
+const name = nameInSentence(input.name);
+// the as-of date of each row in words, then the one most rows share (the newest on a tie), said
+// once under the list; a row keeps its own only where it differs
+const asOfText = (d: string | null) => (d ? `As of ${formatDay(d) ?? d}` : 'As of: not recorded');
+const asOfs = rows.map((r) => asOfText(r.asOf));
+const shared = (() => {
+  const tally = new Map<string, { n: number; at: string }>();
+  rows.forEach((r, i) => {
+    const t = tally.get(asOfs[i]) ?? { n: 0, at: r.asOf ?? '' };
+    tally.set(asOfs[i], { n: t.n + 1, at: t.at });
+  });
+  return [...tally.entries()].sort((a, b) => b[1].n - a[1].n || b[1].at.localeCompare(a[1].at))[0]?.[0] ?? null;
+})();
+// A standard's short name ("NIST SP 800-208") and a short linked name (a keeping period's preset)
+// are values a reader copies and cites, so they never break at a hyphen or between words; a
+// longer linked phrase may still wrap, so nothing runs past the column on a phone.
+const KEEP_WHOLE = 24;
+---
+
+{
+  empty !== 'absent' && (
+    <section class="across" id="across" aria-labelledby="across-h">
+      <h2 class="section-h" id="across-h">Across the Atlas</h2>
+      {empty === 'no-record' ? (
+        <p class="across-empty">The Atlas tools hold no record for {name}.</p>
+      ) : (
+        <>
+          <ul class="ev-list">
+            {rows.map((r, i) => (
+              <li class="ev-row" data-group={r.group} data-relation={r.relation}>
+                <p class="ev-sentence">
+                  {r.parts.map((p) =>
+                    'mono' in p ? (
+                      <span class="mono">{p.mono}</span>
+                    ) : 'href' in p ? (
+                      <a href={p.href} class:list={{ 'is-whole': p.text.length <= KEEP_WHOLE }}>{p.text}</a>
+                    ) : 'whole' in p ? (
+                      <span class="is-whole">{p.text}</span>
+                    ) : (
+                      <Fragment>{p.text}</Fragment>
+                    ),
+                  )}
+                </p>
+                {(r.links.length > 0 || asOfs[i] !== shared) && (
+                  <p class="ev-foot">
+                    {r.links.length > 0 && (
+                      <span class="ev-links">
+                        {r.links.map((l) => (
+                          <a class="ev-link" href={l.href}>
+                            {l.label}
+                            {l.hint && <span class="sr-only">{l.hint}</span>}
+                          </a>
+                        ))}
+                      </span>
+                    )}
+                    {asOfs[i] !== shared && <span class="ev-asof">{asOfs[i]}</span>}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+          {shared && <p class="ev-asof-all">{shared}</p>}
+        </>
+      )}
+    </section>
+  )
+}
+
+<style>
+  /* the next facet of the profile's opening subject: a related gap above it */
+  .across {
+    margin-top: var(--gap-related);
+  }
+  .across-empty {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-style: italic;
+    color: var(--ink-muted);
+  }
+  .ev-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--gap-group-lg);
+  }
+  /* each row at the reading measure of the interface face, its links and any own date under it */
+  .ev-row {
+    max-width: var(--measure);
+  }
+  .ev-sentence {
+    margin: 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-control);
+    line-height: var(--leading-normal);
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .ev-sentence a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .ev-sentence a:hover,
+  .ev-sentence a:active {
+    color: var(--accent-strong);
+  }
+  .ev-sentence .is-whole {
+    white-space: nowrap;
+  }
+  /* Under the sentence: the verb links, then the dataset's as-of date. From 640px the date ends
+     the first line of every row and the links wrap inside their own box before it, so no row
+     leaves its date alone on a line; on phones the date always takes its own line under the
+     links. Each link reaches a 44px target through vertical padding, which leaves the line its
+     own height, and link lines that wrap stand a full target apart, so no two targets overlap. */
+  .ev-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--gap-mark) var(--space-5);
+    margin: var(--gap-mark) 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+  }
+  .ev-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: calc(var(--target-min) - 1.5em) var(--space-5);
+    min-width: 0;
+  }
+  .ev-link {
+    padding-block: calc((var(--target-min) - 1.5em) / 2);
+    margin-block: calc((var(--target-min) - 1.5em) / -2);
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .ev-link:hover,
+  .ev-link:active {
+    color: var(--accent-strong);
+  }
+  .ev-asof,
+  .ev-asof-all {
+    color: var(--ink-muted);
+  }
+  /* the date the rows share, once, under the list */
+  .ev-asof-all {
+    margin: var(--gap-group) 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+  }
+  @media (min-width: 640px) {
+    .ev-foot {
+      flex-wrap: nowrap;
+    }
+    .ev-links {
+      flex: 0 1 auto;
+    }
+    .ev-asof {
+      flex: none;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 639px) {
+    .ev-asof {
+      flex-basis: 100%;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ev-sentence a,
+    .ev-link {
+      transition: none;
+    }
+  }
+  @media print {
+    .across {
+      display: none;
+    }
+  }
+</style>

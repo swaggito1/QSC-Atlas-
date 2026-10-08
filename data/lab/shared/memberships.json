@@ -1,0 +1,290 @@
+{
+  "_about": "EU member states and NATO Allies, read from the official lists. The names are as each list gives them; the ISO3 codes come from data/countries.json. Re-verify at least once a year (src/lib/lab/freshness.ts).",
+  "lists": [
+    {
+      "id": "eu",
+      "label": "EU member states",
+      "count": 27,
+      "members": [
+        {
+          "iso3": "AUT",
+          "name": "Austria"
+        },
+        {
+          "iso3": "BEL",
+          "name": "Belgium"
+        },
+        {
+          "iso3": "BGR",
+          "name": "Bulgaria"
+        },
+        {
+          "iso3": "HRV",
+          "name": "Croatia"
+        },
+        {
+          "iso3": "CYP",
+          "name": "Cyprus"
+        },
+        {
+          "iso3": "CZE",
+          "name": "Czechia"
+        },
+        {
+          "iso3": "DNK",
+          "name": "Denmark"
+        },
+        {
+          "iso3": "EST",
+          "name": "Estonia"
+        },
+        {
+          "iso3": "FIN",
+          "name": "Finland"
+        },
+        {
+          "iso3": "FRA",
+          "name": "France"
+        },
+        {
+          "iso3": "DEU",
+          "name": "Germany"
+        },
+        {
+          "iso3": "GRC",
+          "name": "Greece"
+        },
+        {
+          "iso3": "HUN",
+          "name": "Hungary"
+        },
+        {
+          "iso3": "IRL",
+          "name": "Ireland"
+        },
+        {
+          "iso3": "ITA",
+          "name": "Italy"
+        },
+        {
+          "iso3": "LVA",
+          "name": "Latvia"
+        },
+        {
+          "iso3": "LTU",
+          "name": "Lithuania"
+        },
+        {
+          "iso3": "LUX",
+          "name": "Luxembourg"
+        },
+        {
+          "iso3": "MLT",
+          "name": "Malta"
+        },
+        {
+          "iso3": "NLD",
+          "name": "Netherlands"
+        },
+        {
+          "iso3": "POL",
+          "name": "Poland"
+        },
+        {
+          "iso3": "PRT",
+          "name": "Portugal"
+        },
+        {
+          "iso3": "ROU",
+          "name": "Romania"
+        },
+        {
+          "iso3": "SVK",
+          "name": "Slovakia"
+        },
+        {
+          "iso3": "SVN",
+          "name": "Slovenia"
+        },
+        {
+          "iso3": "ESP",
+          "name": "Spain"
+        },
+        {
+          "iso3": "SWE",
+          "name": "Sweden"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en",
+          "title": "EU countries",
+          "publisher": "European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Pages (27)",
+          "locator": "Results heading above the country cards, page 1 of 2 (Austria to Netherlands)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en?page=1",
+          "title": "EU countries",
+          "publisher": "European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "EU Member State since 1995, Schengen area member since 2001 and more about Sweden’s participation in the EU.",
+          "locator": "Country card for Sweden, page 2 of 2 (Poland to Sweden)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nato",
+      "label": "NATO Allies",
+      "count": 32,
+      "members": [
+        {
+          "iso3": "ALB",
+          "name": "Albania"
+        },
+        {
+          "iso3": "BEL",
+          "name": "Belgium"
+        },
+        {
+          "iso3": "BGR",
+          "name": "Bulgaria"
+        },
+        {
+          "iso3": "CAN",
+          "name": "Canada"
+        },
+        {
+          "iso3": "HRV",
+          "name": "Croatia"
+        },
+        {
+          "iso3": "CZE",
+          "name": "Czechia"
+        },
+        {
+          "iso3": "DNK",
+          "name": "Denmark"
+        },
+        {
+          "iso3": "EST",
+          "name": "Estonia"
+        },
+        {
+          "iso3": "FIN",
+          "name": "Finland"
+        },
+        {
+          "iso3": "FRA",
+          "name": "France"
+        },
+        {
+          "iso3": "DEU",
+          "name": "Germany"
+        },
+        {
+          "iso3": "GRC",
+          "name": "Greece"
+        },
+        {
+          "iso3": "HUN",
+          "name": "Hungary"
+        },
+        {
+          "iso3": "ISL",
+          "name": "Iceland"
+        },
+        {
+          "iso3": "ITA",
+          "name": "Italy"
+        },
+        {
+          "iso3": "LVA",
+          "name": "Latvia"
+        },
+        {
+          "iso3": "LTU",
+          "name": "Lithuania"
+        },
+        {
+          "iso3": "LUX",
+          "name": "Luxembourg"
+        },
+        {
+          "iso3": "MNE",
+          "name": "Montenegro"
+        },
+        {
+          "iso3": "MKD",
+          "name": "North Macedonia"
+        },
+        {
+          "iso3": "NOR",
+          "name": "Norway"
+        },
+        {
+          "iso3": "POL",
+          "name": "Poland"
+        },
+        {
+          "iso3": "PRT",
+          "name": "Portugal"
+        },
+        {
+          "iso3": "ROU",
+          "name": "Romania"
+        },
+        {
+          "iso3": "SVK",
+          "name": "Slovakia"
+        },
+        {
+          "iso3": "SVN",
+          "name": "Slovenia"
+        },
+        {
+          "iso3": "ESP",
+          "name": "Spain"
+        },
+        {
+          "iso3": "SWE",
+          "name": "Sweden"
+        },
+        {
+          "iso3": "NLD",
+          "name": "The Netherlands"
+        },
+        {
+          "iso3": "TUR",
+          "name": "Türkiye"
+        },
+        {
+          "iso3": "GBR",
+          "name": "United Kingdom"
+        },
+        {
+          "iso3": "USA",
+          "name": "United States"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.nato.int/en/about-us/organization/nato-member-countries",
+          "title": "NATO member countries",
+          "publisher": "NATO",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "At present, NATO has 32 member countries.",
+          "locator": "Page introduction under the heading \"NATO member countries\"",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    }
+  ]
+}

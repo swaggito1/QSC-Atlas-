@@ -1,0 +1,39 @@
+---
+// A source's own words on the Prepare element pages, kept for review and never shown to a visitor
+// (Swann, 2 October 2026): every excerpt goes inside SourceWords, which a production build leaves
+// out and a local or preview build hides until the page is opened with ?review=1. Each excerpt is
+// shown exactly as stored, in its own language (lang="fr" for ANSSI), with the document named and
+// linked, where in it the words stand and the day they were read, so Swann can check the plain
+// label beside it against its source. The plain label itself is always the page's own. The words
+// take the kit's quotation (.quote and .quote-source in global.css): indented, inside curly
+// quotation marks, with no left rule.
+import SourceWords from '../../frame/SourceWords.astro';
+import { formatDate } from '../../../../lib/lab/format';
+import type { Quote } from '../../../../lib/site/prepare-elements';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  quotes: Quote[];
+}
+const { quotes } = Astro.props;
+---
+
+{
+  quotes.length > 0 && (
+    <SourceWords>
+      {quotes.map((q) => (
+        <figure class="pe-words">
+          <blockquote class="quote" cite={q.url} lang={q.lang ?? undefined}>
+            <p>{q.text}</p>
+          </blockquote>
+          <figcaption class="pe-src quote-source">
+            <a href={q.url} rel="noopener">
+              {q.publisher ?? q.title ?? q.url}
+            </a>
+            <span class="pe-src-meta">{[q.locator, `read ${formatDate(q.retrievedAt)}`].filter(Boolean).join(' · ')}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </SourceWords>
+  )
+}

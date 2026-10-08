@@ -1,0 +1,67 @@
+---
+// /notes: the notes this build lists, newest first (listedNotes() in src/lib/site/notes.ts). Each
+// row gives the day in mono, the title as an index link to the note, the summary and the pages the
+// note introduces, each linked. Built only when the build lists a note, so a production build has
+// no /notes until the first note is published with its page; a draft is listed in a local build
+// only, marked so. The rest parameter lets this route build /notes alone, or nothing.
+import Shell from './_Shell.astro';
+import { productionBuild } from '../../lib/site/gates';
+import { formatDay } from '../../lib/site/meta';
+import { NOTES_COPY, introducedPages, listedNotes, noteHref, notesListPublic } from '../../lib/site/notes';
+
+export function getStaticPaths() {
+  return listedNotes().length > 0 ? [{ params: { list: undefined } }] : [];
+}
+
+const notes = listedNotes().map((n) => ({ ...n, href: noteHref(n.slug), day: formatDay(n.date), introduced: introducedPages(n) }));
+const preview = !productionBuild() && !notesListPublic();
+---
+
+<Shell heading={NOTES_COPY.title} title={NOTES_COPY.title} description={NOTES_COPY.lede} preview={preview}>
+  <p class="fr-lede" slot="head">{NOTES_COPY.lede}</p>
+
+  <ul class="nt-list fr-body">
+    {
+      notes.map((n) => (
+        <li class="nt-row">
+          <ul class="meta-line nt-meta">
+            <li>
+              <time class="mono" datetime={n.date}>
+                {n.day}
+              </time>
+            </li>
+            {n.state === 'draft' && <li>{NOTES_COPY.draft}</li>}
+          </ul>
+          <div class="nt-row-body">
+            <h2 class="nt-t">
+              {n.href ? (
+                <a class="row-link" href={n.href}>
+                  {n.title}
+                </a>
+              ) : (
+                n.title
+              )}
+            </h2>
+            <p class="nt-sum">{n.summary}</p>
+            <div class="nt-pages">
+              <span class="nt-k">{NOTES_COPY.introduces}</span>
+              <ul class="nt-pl">
+                {n.introduced.map((p) => (
+                  <li>
+                    {p.href ? (
+                      <a class="row-link" href={p.href}>
+                        {p.name}
+                      </a>
+                    ) : (
+                      p.name
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Shell>

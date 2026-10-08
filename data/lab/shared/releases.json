@@ -1,0 +1,21 @@
+{
+  "_about": "Site and data releases for What changed (/about/changes, spec 10), one row per release, in any order (the page sorts them). Each row is a day, a plain sentence and the record it was read from. Add a row only when the release has happened and its date can be read in a source: the move to qscatlas.org gets its row on the day the domain serves the site, never before. Tool publications, the dates tool data was checked and profile updates are generated from the registry, the lab data and the profiles, so they are not written here.",
+  "releases": [
+    {
+      "date": "2026-07-08",
+      "precision": "day",
+      "text": "The Atlas dataset was archived on Zenodo, with a DOI to cite it by.",
+      "provenance": [
+        {
+          "url": "https://zenodo.org/api/records/21262284",
+          "title": "The geopolitics of the post-quantum transition",
+          "publisher": "Zenodo",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "\"publication_date\": \"2026-07-08\"",
+          "locator": "record metadata",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

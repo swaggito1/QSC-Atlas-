@@ -2,55 +2,37 @@
   {
     "title": "National Cyber Security Centre Research & Innovation Priorities",
     "url": "https://www.ncsc.gov.ie/ncc-ie/research/",
-    "description": "The global shift to post-quantum cryptography is already underway. Ireland must ensure a secure transition for Government, regulated sectors, and critical ...",
+    "description": "post-quantum cryptography? The global shift to post-quantum cryptography is already underway. best validate PQC performance and manage key rollover risks?",
     "markdown": ""
   },
   {
     "title": "NCSC: National Cyber Security Centre",
     "url": "https://www.ncsc.gov.ie/",
-    "description": "The NCSC is responsible for advising and informing Government IT and Critical National Infrastructure providers of current threats and vulnerabilities.",
+    "description": "The NCSC is responsible for advising and informing Government IT and Critical National Infrastructure providers of current threats and vulnerabilities",
     "markdown": ""
   },
   {
     "title": "Post-Quantum Cryptography Initiative | CISA",
     "url": "https://www.cisa.gov/topics/risk-management/quantum",
-    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "description": "# Post-Quantum Cryptography Initiative\n## CISA's Resources for PQC Migration\n### [Preparing for the Post-Quantum Era: A Call to Action](https://www.cisa.gov/resources-tools/resources/preparing-post-quantum-era-call-action)\nThis guidance highlights the urgent need for organizations and governments to begin transitioning to post-quantum cryptography to protect sensitive data, authentication systems, and critical assets from emerging quantum computing threats.\n\n## PQC Related Resources\n### GSA Guidance\n- [**PQC Buyers Guide**](https://buy.gsa.gov/api/system/files/documents/final-508c-pqc_buyer-s_guide_2025.pdf) **.** GSA designed this guide to enable agencies to safeguard existing systems from both classical and quantum computer-based risks and maintain the confidentiality and integrity of data communications.",
     "markdown": ""
   },
   {
     "title": "Next steps in preparing for post-quantum cryptography",
     "url": "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography",
-    "description": "This guidance helps system and risk owners in commercial enterprises, public sector organisations and critical national infrastructure to think about how to ...",
+    "description": "# Next steps in preparing for post-quantum cryptography\n## Key takeaways from this guidance\n- PQC upgrades can be planned to take place as systems are being updated or replaced.\n- ML-KEM (Kyber) and ML-DSA (Dilithium) are algorithms standardised by NIST that are suitable for general purpose use. All proposed parameter sets provide an acceptable level of security for personal, enterprise and OFFICIAL-tier government information. The NCSC recommends ML-KEM-768 and ML-DSA-65 as providing appropriate levels of security and efficiency for most use cases.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | CSRC",
+    "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+    "description": "With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography.",
     "markdown": ""
   },
   {
     "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
     "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
-    "description": "CSE has published detailed PQC guidance. Acquisition guidelines. Migration by 2031/2035. ... Start Planning PQC algorithm submission: 10 Oct 2025 – 30 June 2026.",
-    "markdown": ""
-  },
-  {
-    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
-    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
-    "description": "Learn how U.S. federal agencies can meet Post-Quantum Cryptography (PQC) mandates using secure hardware, crypto-agile operating systems, ...",
-    "markdown": ""
-  },
-  {
-    "title": "Post-Quantum Cryptography | Homeland Security",
-    "url": "https://www.dhs.gov/quantum",
-    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting ...",
-    "markdown": ""
-  },
-  {
-    "title": "Securing the Nation Against Advanced Cryptographic Attacks",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/",
-    "description": "(g) the term “post-quantum cryptography” or “PQC” means those cryptographic algorithms or methods that are designed to be resistant to ...",
-    "markdown": ""
-  },
-  {
-    "title": "[PDF] GUIDANCE FOR POST- QUANTUM CRYPTOGRAPHY",
-    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
-    "description": "This paper emphasises the urgency of managing quantum risk and aligns with the UK National Cyber. Security Centre's (NCSC) guidance1 for the ...",
+    "description": "## Annex A References\n| **Ref** | **Doc Number** | **Title** |\n|-|-|-|\n| ASD-2025a |  | Planning for post-quantum cryptography, 22 Sep 2025   [[https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography](https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography)](https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography) [[https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf](https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf)](https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf) |\n| CCN.ES-2022 | CCN-TEC 009 | Recommendations for a safe post-quantum transition, centro criptológico nacional, Dec 2022   [https://www.ccn.cni.es/index.php/es/docman/documentos-publicos/boletines-pytec/499-ccn-tec-009-recomendaciones-transicion-postcuantica-segura-english/file](https://www.ccn.cni.es/index.php/es/docman/documentos-publicos/boletines-pytec/499-ccn-tec-009-recomendaciones-transicion-postcuantica-segura-english/file)   Recomendaciones para una transición postcuántica Segura, centro criptológico nacional, Dec 2022   [https://www.ccn.cni.es/eu/docman/documentos-publicos/boletines-pytec/495-ccn-tec-009-recomendaciones-transicion-postcuantica-segura/file](https://www.ccn.cni.es/eu/docman/documentos-publicos/boletines-pytec/495-ccn-tec-009-recomendaciones-transicion-postcuantica-segura/file) |\n| CISA-2021 |  | Preparing for Post-Quantum Cryptography, CISA (US Cybersecurity and Infrastructure Security Agency), October 2021   [[https://www.dhs.gov/sites/default/files/publications/post-quantum\\_cryptography\\_infographic\\_october\\_2021\\_508.pdf](https://www.dhs.gov/sites/default/files/publications/post-quantum\\_cryptography\\_infographic\\_october\\_2021\\_508.pdf)](https://www.dhs.gov/sites/default/files/publications/post-quantum_cryptography_infographic_october_2021_508.pdf) |\n| CISA-2022 |  | CISA Insights: Preparing Critical Infrastructure for Post-Quantum Cryptography, CISA (US Cybersecurity and Infrastructure Security Agency), Aug 2022   [https://www.cisa.gov/sites/default/files/publications/cisa\\_insight\\_post\\_quantum\\_cryptography\\_508.pdf](https://www.cisa.gov/sites/default/files/publications/cisa\\_insight\\_post\\_quantum\\_cryptography\\_508.pdf) |\n| CISA-2026b |  | Product Categories for Technologies That Use Post-Quantum Cryptography Standards, January 23, 2026   [[https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards)](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards) |\n| EC-2024 | C(2024) 2393 final | Commission Recommendation of 11.4.2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography   [[https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography](https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography)](https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography) |\n| G7-2026 |  | G7 CYBER EXPERT GROUP STATEMENT ON Advancing a Coordinated Roadmap for the Transition to Post-Quantum Cryptography in the Financial Sector, January 2026   [[https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf](https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf)](https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf) |",
     "markdown": ""
   },
   {
@@ -60,69 +42,105 @@
     "markdown": ""
   },
   {
-    "title": "Migration to Post-Quantum Cryptography",
+    "title": "Post-Quantum Cryptography | Homeland Security",
+    "url": "https://www.dhs.gov/quantum",
+    "description": "# Post-Quantum Cryptography\nDHS’s new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially vulnerable data, algorithms, protocols, and systems.\n\nIn March, DHS [outlined the vision for cybersecurity resilience](https://www.dhs.gov/news/2021/03/31/secretary-mayorkas-outlines-his-vision-cybersecurity-resilience) and identified the transition to post-quantum encryption as a priority. DHS also issued internal policy guidance to drive the Department’s own preparedness efforts and is conducting a macro-level analysis to inform the government’s action and ensure a smooth and equitable transition.\n\n## DHS Approach\n### Planning for the DHS Transition to Post-Quantum Cryptography\nThis guidance directs the Department to prepare for transition to new post-quantum cryptography standards when available from NIST following the quantum roadmap. This guidance will result in an inventory of all DHS cryptographic systems and data types, broader understanding of the risk across the enterprise, and plans for the transition to post-quantum cryptography.\n\n## Roadmap\nIn partnership with NIST, DHS created a guide to provide relevant stakeholders with concrete and achievable steps they can take now to prepare their organizations for the transition to post-quantum cryptography.\n\n1. Organizations should direct their Chief Information Officers to increase their engagement with standards developing organizations for latest developments relating to necessary algorithm and dependent protocol changes.\n\n## Quantum Background\nDHS will prioritize preparing for the challenge of post-quantum cryptography without purchasing or implementing any tools or solutions until the new standards are approved by NIST.",
+    "markdown": ""
+  },
+  {
+    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "This guide explains the federal PQC mandate, key requirements, and how solutions like IGEL and wolfSSL enable crypto-agility and long-term ...",
+    "markdown": ""
+  },
+  {
+    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
+    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
+    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
+    "markdown": ""
+  },
+  {
+    "title": "Migration to Post-Quantum Cryptography - NCCoE - NIST",
     "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
     "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
     "markdown": ""
   },
   {
+    "title": "PQC Roadmaps and Transition Guidance - PQShield",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "CNSA 2.0 provides a detailed roadmap for migration, with the goal of complete transition for all NSS to quantum-resistance by 2035.",
+    "markdown": ""
+  },
+  {
     "title": "Post-Quantum Cryptography Migration in the United States",
     "url": "https://www.rstreet.org/research/post-quantum-cryptography-migration-in-the-united-states-managing-risk-and-advancing-cyber-readiness-in-critical-infrastructure/",
-    "description": "On the Senate side, the National Quantum Cybersecurity Migration Strategy Act (S.2558) and the Quantum Readiness and Innovation Act (S.3312) ...",
+    "description": "this paper examines how the United States can approach PQC migration across critical infrastructure through a risk-based lens. National Quantum ...",
     "markdown": ""
   },
   {
-    "title": "Migration to Post-Quantum Cryptography (PQC)",
-    "url": "https://www.iisf.ie/Post-Quantum-Cryptography",
-    "description": "Organisations are encouraged to proactively prepare for future migration to products implementing the post-quantum cryptographic standards. This ...",
+    "title": "Etienne de Séréville's Post - LinkedIn",
+    "url": "https://www.linkedin.com/posts/etiennedesereville_timelines-for-migration-to-post-quantum-cryptography-activity-7311087759346053120-iMUY",
+    "description": "By 2028: Define your migration goals, Build an initial plan for migration By 2031: Carry out your early, highest-priority PQC migration ...",
     "markdown": ""
   },
   {
-    "title": "PQC Roadmaps and Transition Guidance",
-    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
-    "description": "In 2025, the UK's National Center for Cybersecurity (NCSC) published a detailed roadmap and Next Steps in preparing for post-quantum cryptography including ...",
-    "markdown": ""
-  },
-  {
-    "title": "Post-Quantum Cryptography Preparation National ...",
+    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
     "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
     "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
     "markdown": ""
   },
   {
-    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
-    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
-    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
+    "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography (PQC)",
+    "url": "https://www.iisf.ie/Post-Quantum-Cryptography",
+    "description": "Organisations are encouraged to proactively prepare for future migration to products implementing the post-quantum cryptographic standards.",
     "markdown": ""
   },
   {
-    "title": "EU Defines Clear Roadmap for Post Quantum Cryptography ...",
-    "url": "https://www.encryptionconsulting.com/eu-defines-clear-roadmap-for-post-quantum-cryptography-transition-by-2035/",
-    "description": "The roadmap anticipates that by 2030, Member States will have completed the PQC migration for all high-risk systems. Key actions include:.",
+    "title": "Quantum-safe Cryptography Roadmap - PQShield",
+    "url": "https://pqshield.com/quantum-safe-cryptography-hsbc-roadmap/",
+    "description": "Learn how quantum-safe cryptography can future-proof your organization. PQShield explores HSBC's roadmap and why acting now matters.",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography | Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/post-quantum-cryptography",
+    "description": "# Post-Quantum Cryptography\nTo stay protected, we need to progress towards Post-Quantum Cryptography (PCQ), a **new type of public-key cryptography** designed to resist to both quantum and classical attacks.\n\n## A PQC Implementation Roadmap\nAt the same time, the protection of high-risk use cases should be transitioned to PQC as soon as possible, no later than by the end of 2030.",
     "markdown": ""
   },
   {
     "title": "Quantum Roadmap and Strategy - evolutionQ",
     "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
-    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
+    "description": "Build your quantum strategy to address quantum computing threats of the future. (PQC) standards. Migrating to quantum-safe cryptography can take 4–10+ years, ...",
+    "markdown": ""
+  },
+  {
+    "title": "Your practical roadmap to quantum-safe security - Conscia",
+    "url": "https://conscia.com/ie/blog/your-practical-roadmap-to-quantum-safe-security/",
+    "description": "Learn how to build a quantum-safe security roadmap, prepare for post-quantum cryptography, and meet emerging compliance requirements.",
+    "markdown": ""
+  },
+  {
+    "title": "EU Commission Roadmap Targets 2030 for Post-Quantum ... - LinkedIn",
+    "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
+    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
+    "markdown": ""
+  },
+  {
+    "title": "New PQC Migration Roadmap offers actionable guidance for ...",
+    "url": "https://industrialcyber.co/threats-attacks/new-pqc-migration-roadmap-offers-actionable-guidance-for-transitioning-to-quantum-safe-cryptography/",
+    "description": "The PQC Migration Roadmap helps organizations transition to quantum-safe cryptography in four phases: The Post-Quantum Cryptography Coalition ( ...",
     "markdown": ""
   },
   {
     "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
     "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
-    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
+    "description": "## January 2026\nRecognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated approach for migration to quantum-resistant cryptography and transition to cryptographic agility.\n\n## Support for Navigating the Risks of Quantum Computing in the Financial System\nBuilding on the 2024 statement, the G7 CEG developed this high-level roadmap to inform senior leaders on the types of activities that may help organizations transition to post-quantum cryptography in a coordinated, timely, and objective-driven way in advance of future risks.\n\n## TLP: CLEAR\nThis roadmap may help these entities better understand the importance of quantum-resistant cryptography to the financial sector and the potential time constraints for migration.\n\n- Monitor progress with post-quantum cryptography migration and share information across jurisdictions, support transitional efforts, and encourage jurisdictional consistency. As the technology and our understanding of it develops, timelines may be revisited as needed.",
     "markdown": ""
   },
   {
-    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
-    "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
-    "description": "Quantum computing has been identified as a threat to many cryptographic algorithms used to protect the confidentiality and authenticity of ...",
-    "markdown": ""
-  },
-  {
-    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
-    "url": "https://www.fortinet.com/uk/resources/articles/post-quantum-cryptography-preparation",
-    "description": "Post-quantum cryptography safeguards long-lived data against emerging quantum-enabled risks that threaten today's encryption.",
+    "title": "[PDF] Department of War Post Quantum Cryptography Strategy - DoW CIO",
+    "url": "https://dodcio.defense.gov/Portals/0/Documents/Library/DoW-PQC-Strategy.pdf",
+    "description": "## Strategic Intent [Image: Im0]\nECU) and embedded cryptographic modules.\n\n• **LOE 2: Baseline Inventory and Plan** the migration of cryptographic technologies used • **LOE 3: Develop and Analyze** CRQC resistant algorithms, protocols, and solutions to\n\n• **LOE 3: Develop and Analyze** CRQC resistant algorithms, protocols, and solutions to support the migration to PQC.\n\nquantum algorithms within DoW systems (including weapon platforms) while meeting • **LOE 5: Deploy Quantum Resistant Devices** and update and replace cryptography (both\n\n• **LOE 5: Deploy Quantum Resistant Devices** and update and replace cryptography (both\n\nFor the purposes of this strategy, the terms Post Quantum, Quantum Resistant, Quantum Resilient, Quantum Safe, and Quantum Secure should be considered as analogous.\n\n# Quantum Computing: Existential Threat [Image: Im0]\n## Do Not Introduce New Security Risks [Image: Im0]\nalgorithms will be phased out and replaced **not later than December 31, 2030**, unless otherwise\n\n## Line of Effort 2: Baseline Inventory and Plan [Image: Im0] [Image: Im1]\nDoW planners and systems owners must identify **all** cryptography in\n\n## [Image: Im0] [Image: Im1]\n| Identify all Non-NSS Cryptography | DoW Components will identify and report to DoW CIO all cryptographic capabilities present within non-NSSs5including Defense Industrial Base(DIB) systems that hold/process DoW data. Processes and tools for efficiency and automation should be considered where appropriate.Inventory should include vulnerability assessments where applicable. |\n|-|-|\n| Conduct Impact Assessments from Quantum Threats | For identified CRQC vulnerable systems,DoW Components should estimate the potential adversarial collection and decryption of associated traffic and the short/long term impact of that data being known by adversaries,as well as impact of adversarial capability to own or control systems and data through authenticity vulnerabilities.DoW Components should consider engaging DoW intel and threat expertise while executing this objective(e.g.,NSA).This information is critical to establishing migration prioritization plans.6 |\n| Develop Strategic and Component Level Migration Roadmaps | DoW Components will leverage DoW guidance and strategy documents as well as NSA deprecation guidance on CRQCVulnerable cryptography to create roadmaps for PQC migration.Roadmaps should be tailorable to individual Components,account for strategic system prioritizations and be maintained/updated during the migration.Early cryptographic solution analysis,interoperability,and future cryptographic agility should be considered with these roadmaps. |\n| Develop Response Plans | The mission impact assessment estimation of adversarial compromise and impacts(e.g.,general security,mission failures,etc.)should form the basis for advance response planning to mitigate the risk to DoW missions,personnel,and security.Mission planning alternatives and response plans should be considered and developed as appropriate to enable mission survivability in the case of quantum threat exploitation of vulnerable cryptographic systems. |\n\n| Objective | Overview |\n|-|-|\n| Develop CRQC Algorithms and Protocols | NIST and the NSA will develop and publish certified post quantum algorithms that will be implemented in cryptographic products within the DoW. Additionally, the DoW and NSA will develop PQC protocols, as needed, that can incorporate PQC algorithms and introduce designs to international standards bodies as appropriate. |\n| Collaborate with International Standards Organizations to Mature Cryptography | The DoW and NSA will collaborate with standards organizations for standardization of relevant protocols, variants, and novel approaches that incorporate PQC algorithms to enable open source and widely used communication and security standards. Additionally, the DoW should engage with standards organizations on use case needs to ensure that functionality considerations of DoW systems are accounted for in protocol development and profiles. This includes participation in the North Atlantic Treaty Organization (NATO) standards body, Internet Engineering Task Force (IETF), and similar organizations to ensure interoperability. |\n\n| Promote Cryptographic Agility and Agile Implementations | The DoW and DIB will investigate agile cryptographic implementations. Agile solutions will enhance the DoW's ability to respond to future cryptographic threats and reduce the cost, time,and effort needed to update or migrate to new cryptographic algorithms and protocols moving forward. This may include implementation of multiple algorithm and protocol options beyond defaults and should include pathways for updating and replacing algorithms and protocols swiftly,as required.The DoW must ensure enablement of cryptographic agility does not introduce new vulnerabilities. |\n|-|-|\n| Early Analysis of Commercial Solutions | The DoW will position itself to ensure early, preliminary analysis of commercial and DoW developed cryptography-enabled solutions to ensure that they meet security requirements and PQC needs.Early analysis of cryptography-enabled solutions will enhance the DoW's ability to assess solution viability quickly and centralize intake of potential solutions that meet security requirements,conserving DoW and NSA resources to prioritized solutions based on mission need. |\n| Validate Commercial Solution Security for DoW Use Cases | The DoW will validate the cryptography-enabled solutions' security within the context of the specific use case needs and threat model,including commercial and DoW solutions.This includes not only that solutions utilize approved PQC algorithms and have passed early analysis while also meeting the security and functional needs of the intended use case.This may include jamming resilience,latency needs,key-compromise resilience,etc.Additionally,the DoW should ensure that implemented solutions do not utilize symmetric key establishment or distribution,PSK-based solutions without PQC asymmetric key establishment derivation,QKD,non-local quantum randomness generation,or quantum networking as a security solution for quantum resistance. |\n| Develop PQC Support and Reference Task Force | The DoW should stand up a centralized task force for migration and acquisition support,early analysis,commercial solution review,and use case alignment to ensure support for cases not explicitly clear in guidance,such as in special operations or new DoW systems still in the acquisition process,and to alleviate the risk and costs of mis-assessed acquisitions. |\n| Ensure DoW and Mission Partner Interoperability | Components will ensure coordination to mitigate risk in the mission partner environment.The responsible,accountable, consulted and informed (RACI) chart,(Appendix B),provides strategic objectives in which mission partners should be involved. |\n\n| Objective | Overview |\n|-|-|\n| Modernize Critical KMI | The NSA will adapt the KMI(for High Assurance devices only) for PQC algorithms while ensuring it maintains interoperability requirements and scales key production to meet DoW Component needs. |\n| Deploy Secure Data Transport Systems | DoW Components will upgrade the systems at the transport layer(e.g.,inline network encryptors,High Assurance internet protocol encryptors,高速 speed encryptors,and link/trunk encryptor family)to utilize PQC to ensure data-in-transit is protected by PQC. |\n\n# Appendix B: Responsible, Accountable, Consulted, and Informed Chart\n| LOE |  | DCIO | NSA/CSS | Components DoW | Partners DIB | FVEY |\n|-|-|-|-|-|-|-|\n|  | Develop CRQC Resistant Algorithms & Protocols Collaborate with International Standards Organizations to Mature Cryptography | R/C R | R/A R | R | R |  |",
     "markdown": ""
   }
 ]

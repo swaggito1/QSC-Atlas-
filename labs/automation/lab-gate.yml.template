@@ -1,0 +1,57 @@
+# TEMPLATE. Prompt 00 finalises this file and installs it as .github/workflows/lab-gate.yml.
+name: lab-gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate lab data against schemas and invariants
+        run: npm run lab:validate
+      - name: Unit and invariant tests
+        run: npm run lab:test
+      - name: House style on changed copy
+        run: |
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'src/**' 'data/lab/**' 'labs/**' | grep -E '\.(md|astro|tsx|ts|json|ya?ml)$' || true)
+          if [ -n "$CHANGED" ]; then node labs/tools/style-scan.mjs $CHANGED; fi
+      - name: Build (without Notion secrets the Notion collections are empty, which is fine for the labs)
+        run: npm run build
+
+  maybe-auto-merge:
+    needs: checks
+    if: contains(github.event.pull_request.labels.*.name, 'lab-watch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Is this source class and item type graduated? (labels, changed files and lab-meta)
+        id: autonomy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr view ${{ github.event.pull_request.number }} --json labels,files,body > pr.json
+          node scripts/lab/autonomy-check.mjs --pr-json pr.json >> "$GITHUB_OUTPUT"
+      - name: Enable auto-merge for graduated pairs only
+        if: steps.autonomy.outputs.eligible == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.LAB_BOT_TOKEN }}
+        run: gh pr merge ${{ github.event.pull_request.number }} --auto --squash

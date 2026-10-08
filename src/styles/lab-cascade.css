@@ -1,0 +1,955 @@
+/* QSC Atlas: the Standards Cascade. Ink on paper, as the Atlas's globe and map are: the
+   controls, the tooltip and the loading line come from the shared kit in lab.css (the text tabs
+   for "Draw as", the plain choice control for Group and Show). On the chart, the globe and the
+   map colour is the posture only, set inline from POSTURE_META; lines and countries are ink,
+   weight and dash. CEPS teal (palette A) stays in the interface around them: the time slider's
+   handle and filled rail, links, the chosen option and focus rings. The chart is the page's
+   centre: "Draw as" stays in view, and the standards body, group, show and standard controls and
+   the fork view wait behind one quiet "Choose what to show" disclosure at every width. Whitespace separates
+   the controls, the chart, the time line and the key; no rule is drawn between them. Every word
+   on the orbit and the map reads at 0.8rem or more (cascade-layout.ts lays the orbit's out).
+   The épuré pass (labs/review/epure-audit.md): the page reads the kit's semantic tokens only, the
+   seven type steps, the weights each face loads (mono at 400 only), the gaps by context and the
+   radius by role. The controls, the chart and its time line are one group (--gap-group and
+   --gap-group-lg); the chart's words are chart labels (--type-caption, or orbit units); the key
+   and the documents beside it are at the small step; a source's words, for review only, are
+   the kit's quotation (.quote), never a left rule. The chart and its key run the shell's
+   column, since the orbit is the page's centre; its sentences keep the reading measure. */
+
+.cc {
+  position: relative;
+  --cc-k: 1.1; /* stroke scale for the orbit and map lines, in chart units per pixel */
+}
+
+/* ---- controls: the view's text tabs, then one quiet disclosure for the rest ---------------- */
+.cc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--gap-group-lg);
+}
+.cc-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-inline) var(--gap-group-lg);
+  min-width: 0;
+  max-width: 100%;
+}
+/* a label and its control */
+.cc-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  max-width: 100%;
+  min-width: 0;
+}
+.cc-field .lab-select {
+  min-width: 0;
+  flex: 0 1 auto;
+}
+/* a control's label: sentence case in the interface face, as the kit's switch labels it */
+.cc-field .lbl {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted); /* 7.4:1 on paper */
+}
+/* a switch: the label beside a column of options, so an option that wraps stays under the first */
+.lab-switch.cc-switch {
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.cc-switch .lbl {
+  flex: none;
+}
+.cc-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--gap-group);
+  min-width: 0;
+}
+/* Group (radios) and Show (checkboxes): the kit's plain choices beside their label; options
+   that wrap stay under the first */
+.cc-choices {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-group);
+  min-width: 0;
+}
+.cc-choices .lbl {
+  flex: none;
+  min-width: 4.5rem;
+  min-height: var(--lab-target);
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.cc-choices .cc-opts {
+  gap: 0 var(--gap-group-lg);
+}
+/* "Choose what to show (5)": the kit's quiet disclosure (lab.css .lab-fold), teal words and the
+   chevron, no rule; it opens under "Draw as" at every width, and a link that names a narrowed
+   view (or another standards body) opens it */
+.cc-fold {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+.cc-fold-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  min-height: var(--lab-target);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--accent);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.cc-fold-toggle:hover,
+.cc-fold-toggle:active {
+  color: var(--accent-strong);
+}
+/* the kit's disclosure chevron (lab.css), pointing down when closed and up when open */
+.cc-fold-toggle::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+.cc-fold.is-open .cc-fold-toggle::before {
+  transform: translateY(2px) rotate(-135deg);
+}
+.cc-fold-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.cc-fold-body {
+  display: none;
+}
+/* the controls fade in as a disclosure opens (opacity only, 200ms, easing out) and close at once */
+.cc-fold.is-open .cc-fold-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: var(--gap-mark) 0 var(--gap-inline);
+  animation: cc-fade var(--dur-disclose) var(--ease-out);
+}
+@keyframes cc-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* (a line read by a screen reader only is the frame's .fr-sr) */
+
+/* ---- the grid: chart and time on the left, the key or the documents on the right ----------- */
+/* the chart answers the controls just above it, so it follows them a group apart, not a section */
+.cc-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  /* a long panel of documents lengthens the flexible second row, under the counter, so the time
+     line stays right under the chart */
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'stage side'
+    'when side';
+  gap: 0 var(--gap-related);
+  margin-top: var(--gap-group-lg);
+  align-items: start;
+}
+.cc-stage {
+  grid-area: stage;
+  position: relative;
+  min-width: 0;
+}
+.cc-when {
+  grid-area: when;
+  min-width: 0;
+}
+/* the key or the documents: at the small step, the table's and the meta line's */
+.cc-side {
+  grid-area: side;
+  position: sticky; /* the hairline on top comes from .lab-group */
+  top: var(--gap-group);
+  max-height: calc(100svh - 2 * var(--gap-group));
+  overflow-y: auto;
+  font-size: var(--type-small);
+}
+.cc-fork-caption {
+  margin: 0 0 var(--gap-group);
+  max-width: var(--measure);
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: var(--type-body);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+}
+
+/* ---- the charts ----------------------------------------------------------------------------- */
+.cc-chart {
+  position: relative;
+  margin: 0 auto;
+}
+.cc-chart--orbit {
+  max-width: 800px;
+}
+.cc-chart--globe {
+  max-width: 720px;
+  aspect-ratio: 1 / 1;
+}
+.cc-chart--map {
+  width: 100%;
+}
+.cc-chart--waiting {
+  aspect-ratio: 980 / 500;
+  display: grid;
+  place-items: center;
+}
+.cc-world-state {
+  margin: 0;
+}
+.cc-chart--globe .cc-world-state {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.cc-world-state button {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+}
+.cc-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-instrument);
+}
+.cc-globe-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-mark); /* the focus ring follows the globe's rim */
+  touch-action: pan-y; /* a vertical swipe still scrolls the page on a phone */
+}
+.cc-globe-canvas:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* text laid over lines keeps a paper edge so it stays legible (paint-order is also set as an
+   attribute on each text, so the downloaded image keeps the ink above the edge) */
+.cc-halo {
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+/* orbit: rings, the sectors and their names */
+.cc-year-ring {
+  fill: none;
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+.cc-year-ring.is-now {
+  stroke: var(--ink-muted);
+}
+/* the orbit's words, in orbit units (cascade-layout.ts WORD): 17 units is 0.8rem on the
+   narrowest orbit that shows the wide layout; years and codes in mono, words in the interface face */
+.cc-ring-label,
+.cc-small-label {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1;
+  font-size: 17px;
+  fill: var(--ink-muted);
+}
+.cc-svg--orbit .cc-small-label {
+  font-family: var(--font-instrument);
+}
+.cc-outside {
+  fill: none;
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+.cc-leader {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+.cc-sector {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+.cc-sector-label {
+  font-family: var(--font-instrument);
+  font-size: 17px;
+  fill: var(--ink-muted);
+}
+.cc-centre {
+  fill: var(--ink);
+}
+/* NIST and a national process are codes, so mono, at the one weight mono loads; the centre's
+   square and the national squares already mark them, so no heavier weight is asked for */
+.cc-centre-label {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: var(--weight-data);
+  fill: var(--ink);
+}
+.cc-national rect {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+/* in the fork view the national lines are drawn at least 2px wide and every other country fades,
+   so the label needs no weight of its own (mono is loaded at 400 only) */
+.cc-national text {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-data);
+  font-size: 17px;
+  fill: var(--ink);
+}
+.cc-national-tie {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+
+/* lines: ink, their opacity the kind of reference (set inline from cascade.ts), their weight the
+   number of documents; dashed for pre-standard names only, dotted in ink-faint for a lead */
+.cc-link {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+}
+.cc-link.is-pre {
+  stroke-dasharray: 3 3;
+  stroke-linecap: butt;
+}
+.cc-link.is-lead {
+  stroke: var(--ink-faint);
+  stroke-dasharray: 1 3;
+}
+
+/* nothing on the chart moves by itself: a line appears whole, at its weight, once the month
+   shown reaches its first document (Swann, 2 October 2026: no playback of events) */
+
+/* nodes */
+.cc-node {
+  cursor: pointer;
+  outline: none;
+}
+.cc-hit {
+  fill: transparent;
+}
+.cc-node-fill {
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+.cc-ring-ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.cc-open {
+  fill: var(--paper);
+  stroke-width: 2;
+}
+.cc-orbit {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 0.75;
+  opacity: 0.6;
+}
+.cc-node-faint {
+  fill: none;
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+/* the chosen jurisdiction is ringed in ink, as on the globe and the map; keyboard focus draws the
+   site's teal focus ring */
+.cc-node.is-selected .cc-hit {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.cc-node:focus-visible .cc-hit {
+  stroke: var(--focus-ring);
+  stroke-width: 2;
+}
+.cc-node-label {
+  font-size: 17px;
+  font-weight: var(--weight-ui-strong);
+  fill: var(--ink);
+}
+/* the map's words, in map units (980 across): 0.8rem wherever the wide layout shows */
+.cc-svg--map .cc-small-label,
+.cc-svg--map .cc-centre-label {
+  font-size: 19px;
+}
+/* each name has a place for this size and one for the phone size, where it is twice as large */
+.cc-at-phone {
+  display: none;
+}
+
+/* map: the Atlas map's borders and hover */
+.cc-countries path {
+  stroke: color-mix(in srgb, var(--ink) 45%, transparent);
+  stroke-width: 0.4;
+}
+/* a country with no posture whose document names the standards (another body's view): the
+   no-data grey, marked open by a dashed ink edge (CascadeMap, CascadeGlobe, the key) */
+.cc-country-open path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+  pointer-events: none;
+}
+.cc-point.is-open circle:not(.cc-hit) {
+  stroke: var(--ink);
+  stroke-dasharray: 2 1.5;
+}
+.cc-country-outline path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  pointer-events: none;
+}
+.cc-point {
+  cursor: pointer;
+}
+.cc-point circle:not(.cc-hit) {
+  stroke: color-mix(in srgb, var(--ink) 62%, transparent);
+  stroke-width: 0.6;
+}
+.cc-point.is-on circle:not(.cc-hit) {
+  stroke: var(--ink);
+  stroke-width: 1.4;
+}
+.cc-fork-rings circle {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 0.75;
+  opacity: 0.6;
+}
+
+/* under the chart: the instruction line and the keyboard route */
+.cc-under {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-inline) var(--gap-group-lg);
+  margin-top: var(--gap-group);
+}
+.cc-under .lab-hint {
+  margin: 0;
+}
+
+/* ---- time ------------------------------------------------------------------------------------ */
+/* the time line is the chart's own control: a group under it, not a new section */
+.cc-time {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--gap-group-lg);
+  align-items: center;
+  margin-top: var(--gap-group-lg);
+}
+.cc-track {
+  position: relative;
+  padding-top: 30px;
+  --thumb: 18px;
+}
+/* "Events" over the ticks, and the two years under the rail, are chart labels: the caption step */
+.cc-spine-label {
+  position: absolute;
+  top: 0;
+  left: calc(var(--thumb) / 2);
+  font-family: var(--font-instrument);
+  font-size: var(--type-caption);
+  font-weight: var(--weight-ui-strong);
+  line-height: 1;
+  color: var(--ink-muted);
+}
+.cc-spine {
+  position: absolute;
+  top: 16px;
+  left: calc(var(--thumb) / 2);
+  right: calc(var(--thumb) / 2);
+  height: 12px;
+}
+.cc-spine-mark {
+  position: absolute;
+  top: 2px;
+  left: calc(var(--cc-at) * 100%);
+  width: 1px;
+  height: 9px;
+  background: var(--ink-faint);
+  transform: translateX(-0.5px);
+}
+.cc-spine-mark.is-past {
+  background: var(--ink);
+}
+/* the rail and its filled part are drawn under the native range, which keeps its keyboard and
+   touch handling; no gradient is needed for the fill. The slider is interface, so its filled
+   part and its handle are teal. */
+.cc-rail {
+  position: absolute;
+  top: calc(30px + 21px); /* the middle of the 44px range */
+  left: calc(var(--thumb) / 2);
+  right: calc(var(--thumb) / 2);
+  height: 2px;
+  background: var(--hairline);
+  pointer-events: none;
+}
+.cc-rail span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--cc-f) * 100%);
+  background: var(--accent);
+}
+.cc-range {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: var(--target-min);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.cc-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: transparent;
+}
+.cc-range::-moz-range-track {
+  height: 2px;
+  background: transparent;
+}
+.cc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--thumb, 18px);
+  height: var(--thumb, 18px);
+  margin-top: -8px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.cc-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.cc-range:hover::-webkit-slider-thumb {
+  border-color: var(--accent-strong);
+}
+.cc-range:hover::-moz-range-thumb {
+  border-color: var(--accent-strong);
+}
+/* held: the handle takes the teal wash, as a pressed toggle does */
+.cc-range:active::-webkit-slider-thumb {
+  border-color: var(--accent-strong);
+  background: var(--accent-wash);
+}
+.cc-range:active::-moz-range-thumb {
+  border-color: var(--accent-strong);
+  background: var(--accent-wash);
+}
+.cc-range:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+.cc-track-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--type-caption);
+  color: var(--ink-muted);
+}
+/* the month shown is a date: mono at the control step, the size of the slider it answers */
+.cc-month {
+  font-size: var(--type-control);
+  font-weight: var(--weight-data);
+  color: var(--ink);
+  min-width: 10ch;
+  text-align: right;
+}
+/* the frame's sentence: Newsreader at the lede step, held to the reading measure */
+.cc-counter {
+  margin: var(--gap-group) 0 0;
+  max-width: var(--measure);
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-normal);
+}
+.cc-empty-line {
+  margin: var(--gap-inline) 0 0;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* ---- the key: beside the chart, under one hairline, with no title of its own --------------- */
+/* each part of the key is headed by a small ink label (.section-label's hand), never teal; the
+   parts are groups of one key, so a group's gap parts them */
+.cc-key-head {
+  margin: var(--gap-group-lg) 0 var(--gap-inline);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  line-height: var(--leading-snug);
+  color: var(--ink);
+}
+.cc-legend .fr-sr + .cc-key-head {
+  margin-top: 0;
+}
+.cc-key-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap-mark);
+  color: var(--ink);
+}
+.cc-key-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  min-height: 22px;
+}
+/* a posture swatch is a data mark (round); the grey one is a country with no recorded document
+   by the month shown, filled as the globe and the map fill it, and drawn as a square at the kit's
+   one corner (--radius), so the two never read as the same mark */
+.cc-swatch {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: var(--radius-mark);
+  flex: none;
+}
+.cc-swatch--open {
+  border-radius: var(--radius);
+  background: var(--process-none);
+  box-sizing: border-box;
+  border: 1px dashed var(--ink);
+}
+.cc-swatch--grey {
+  border-radius: var(--radius);
+  background: var(--process-none);
+  box-sizing: border-box;
+  border: 0.5px solid var(--swatch-none-edge);
+}
+.cc-key-shape {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  overflow: visible;
+}
+.cc-key-line {
+  width: 40px;
+  height: 10px;
+  flex: none;
+  overflow: visible;
+}
+.cc-key-square {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+/* the role badge (parts.tsx RoleBadge), set as the Atlas's RoleBadge.astro sets it: the small
+   step, weight 400, ink-muted */
+.cc .role-badge {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+/* the key's two notes: sentences, not chart labels, so the side's small step in ink-muted */
+.cc-key-note {
+  max-width: var(--measure);
+  margin: var(--gap-group) 0 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* ---- a jurisdiction's documents ------------------------------------------------------------ */
+.cc-detail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--gap-inline);
+}
+/* the country's name heads its documents as any section is headed: Newsreader, the section step */
+.cc-detail h2 {
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-section);
+  line-height: var(--leading-snug);
+  margin: 0;
+}
+.lab-btn.cc-close {
+  width: var(--target-min);
+  padding: 0;
+  flex: none;
+}
+.cc-close svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+/* the posture, the role and the record's state: one quiet line at the small step */
+.cc-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-mark) var(--gap-group);
+  margin: var(--gap-inline) 0 var(--gap-group-lg);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.cc-empty {
+  font-style: italic;
+  color: var(--ink-muted);
+}
+/* one document a row, the rows under hairlines a group apart */
+.cc-evidence {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap-group-lg);
+}
+.cc-evidence > li {
+  padding-top: var(--space-3);
+  border-top: var(--rule);
+}
+/* a document dated after the month shown: its words in ink-muted (7.4:1), never fainter */
+.cc-evidence li.is-later {
+  color: var(--ink-muted);
+}
+.cc-ev-head {
+  margin: 0 0 var(--gap-inline);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.cc-ev-head .mono {
+  color: var(--ink);
+  margin-right: var(--gap-mark);
+}
+.cc-ev-group + .cc-ev-group {
+  margin-top: var(--gap-group);
+}
+.cc-ev-quote {
+  margin: 0;
+}
+.cc-ev-quote + .cc-ev-quote {
+  margin-top: var(--gap-inline);
+}
+/* a source's own words (review only): the kit's quotation (global.css .quote), indented, in
+   Newsreader, inside curly quotation marks, with no left rule; inside a row it keeps no margin
+   of its own, and its place in the document (.quote-source) takes the same indent */
+.cc-evidence .quote {
+  margin: 0;
+}
+.cc-ev-loc {
+  margin: var(--gap-mark) 0 0;
+  padding-left: var(--space-6);
+}
+.cc-ev-rel {
+  margin: 0 0 var(--gap-mark);
+  font-weight: var(--weight-ui);
+}
+/* "Read the document" and "The Atlas record": index links (global.css .row-link, set in
+   CascadeTool.tsx), each standing alone on its line, so each carries a 44px hit area that moves
+   nothing */
+.cc-ev-source {
+  margin: var(--gap-inline) 0 0;
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.cc-ev-source a {
+  position: relative;
+}
+.cc-ev-source a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.cc-flag {
+  font-style: italic;
+  color: var(--ink-muted); /* meaningful words: ink-faint is below 4.5:1 on paper */
+  font-weight: var(--weight-ui);
+}
+/* the two onward links under a country's documents (its profile, its documents): teal words,
+   each a 44px row */
+.cc-links {
+  display: grid;
+  gap: 0;
+  margin-top: var(--gap-group-lg);
+}
+.cc-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.cc-links a:hover,
+.cc-links a:active {
+  color: var(--accent-strong);
+}
+
+/* "Show as a table" is the chart's text alternative: it follows the quiet actions under the view
+   a group apart, as Target dates sets its own, not a section's gap below them */
+.cc > .lab-table {
+  margin: var(--gap-group) 0 0;
+}
+
+/* under 640px the tables are ruled rows (lab.css .is-stack); wider, a table that outgrows its
+   column scrolls inside its own named, focusable region, never the page */
+/* 4px of padding, taken back by the margin, leaves room for a link's focus ring at the edges */
+.cc-table-scroll {
+  overflow-x: auto;
+  padding-inline: var(--space-1);
+  margin-inline: calc(-1 * var(--space-1));
+}
+.cc-table-scroll:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+@media (min-width: 640px) {
+  .cc-table-scroll table {
+    min-width: 36rem;
+  }
+  /* a row is at least 44px tall, so each row's "source" link has a 44px hit area of its own */
+  .cc-table-scroll tbody th,
+  .cc-table-scroll tbody td {
+    height: var(--target-min);
+  }
+}
+.cc-table-scroll td a {
+  position: relative;
+}
+.cc-table-scroll td a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+
+/* ---- narrower screens ------------------------------------------------------------------------ */
+@media (max-width: 1100px) {
+  .cc-body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      'stage'
+      'when'
+      'side';
+  }
+  .cc-side {
+    position: static;
+    max-height: none;
+    margin-top: var(--gap-related);
+  }
+  /* once a country is chosen, its documents follow the chart and the country select, before
+     the time line, so the evidence is next to the choice */
+  .cc--sel .cc-body {
+    grid-template-areas:
+      'stage'
+      'side'
+      'when';
+  }
+  .cc--sel .cc-side {
+    margin-top: var(--gap-group-lg);
+  }
+}
+@media (max-width: 640px) {
+  .cc {
+    --cc-k: 2.2; /* the orbit is drawn at under half size here, so its lines scale up */
+  }
+  .cc-controls {
+    gap: 0 var(--gap-group);
+  }
+  .cc-time {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cc-month {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    text-align: left;
+  }
+  .cc-choices {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cc-choices .lbl {
+    min-height: 0;
+    padding-top: var(--gap-inline);
+  }
+  .cc-under .cc-field {
+    width: 100%;
+  }
+  .cc-under .lab-select {
+    flex: 1;
+  }
+}
+/* under 720px the orbit is drawn at under 0.76 of its size: its words are set twice as large
+   (PHONE in cascade-layout.ts, which places them for this size), so on a 390px phone the
+   smallest still reads at 0.8rem, and the map's by the same measure */
+@media (max-width: 719.98px) {
+  .cc-svg--orbit .cc-small-label,
+  .cc-svg--orbit .cc-ring-label,
+  .cc-svg--orbit .cc-centre-label,
+  .cc-svg--orbit .cc-sector-label,
+  .cc-svg--orbit .cc-national text,
+  .cc-svg--orbit .cc-node-label {
+    font-size: 34px;
+  }
+  .cc-svg--orbit .cc-halo {
+    stroke-width: 9px;
+  }
+  .cc-svg--orbit .cc-at-wide {
+    display: none;
+  }
+  .cc-svg--orbit .cc-at-phone {
+    display: inline;
+  }
+  /* at this size the top of the ring is too tight for the "none recorded" name; the key's
+     rings note carries it */
+  .cc-svg--orbit .cc-no-nist {
+    display: none;
+  }
+  .cc-svg--map .cc-small-label,
+  .cc-svg--map .cc-centre-label {
+    font-size: 37px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-fold-toggle,
+  .cc-fold-toggle::before {
+    transition: none;
+  }
+  .cc-fold.is-open .cc-fold-body {
+    animation: none;
+  }
+}

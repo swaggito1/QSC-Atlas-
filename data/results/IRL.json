@@ -20,5 +20,27 @@
     "url": "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_foreign_affairs_and_defence/submissions/2023/2023-05-23_opening-statement-richard-browne-director-national-cyber-security-centre-ncsc_en.pdf",
     "summary": "Opening statement by the Director of Ireland's National Cyber Security Centre to an Oireachtas joint committee, which references the challenges associated with the shift to post-quantum computing alongside other cyber threats.",
     "included": true
+  },
+  {
+    "title": "National Cyber Security Strategy Draft for Public Consultation 2026",
+    "country": "IRL",
+    "issuingOrg": "Department of Justice, Home Affairs and Migration",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://assets.gov.ie/static/documents/3fdec2f9/Draft_National_Cyber_Security_Strategy_for_Public_Consultation.pdf",
+    "summary": "Draft national cyber security strategy for public consultation, prepared by the Department of Justice, Home Affairs and Migration. Measure 2.1.4 commits Government Departments to agreeing a national roadmap for the transition to post-quantum cryptography, and the draft states that a PQC working group will be established.",
+    "included": true
+  },
+  {
+    "title": "Research Ireland Public Service Fellowship 2026: Cyber Security Research - Post Quantum Cryptography",
+    "country": "IRL",
+    "issuingOrg": "NCSC (Ireland) / Research Ireland",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://media.researchireland.ie/wp-content/uploads/2026/01/NCSC2_PostQuantumCryptography.docx",
+    "summary": "Research Ireland Public Service Fellowship 2026 project description in which the National Cyber Security Centre invites research on secure communications in a post-quantum era, including the impact of quantum computing on encryption standards and quantum-safe cryptographic methods for national security applications.",
+    "included": false
   }
 ]

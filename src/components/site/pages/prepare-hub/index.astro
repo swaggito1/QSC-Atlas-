@@ -1,0 +1,109 @@
+---
+// The Prepare hub, /prepare (spec 5.1, made shorter on 2 October 2026, quieter in the minimal
+// pass, then épuré on 4 October 2026). Top to bottom: the section's question as H1, one sentence
+// and the standing line that a target is not a legal deadline (once, in the frame's head); the
+// one filled button into the Readiness Check, which asks whom the visitor answers for itself, so
+// nothing asks it twice (Swann, 4 October 2026); "What the guides ask", the Check's six groups as
+// a quiet list on hairline rows, each row's name an index link (.row-link) opening the Check at
+// that group; one link to the guides; and About this section.
+//
+// Everything shown is computed by src/lib/site/prepare-hub.ts and every link goes through
+// link() or pageHref(): with the Check hidden, the hub names only the Prepare tools this build
+// shows, and a heading with nothing under it is never drawn. No source's words, no total,
+// percentage or score, and nothing a visitor does here is stored or sent.
+import PageFrame from '../../frame/PageFrame.astro';
+import AboutThisView from '../../frame/AboutThisView.astro';
+import { methodAnchorFor } from '../../frame/contracts';
+import { hubModel } from '../../../../lib/site/prepare-hub';
+import type { SitePage } from '../../../../lib/site/routes';
+import '../../../../styles/prepare.css';
+
+interface Props {
+  page: SitePage;
+}
+const { page } = Astro.props;
+const m = hubModel();
+---
+
+<PageFrame
+  question={m.h1}
+  title={page.title}
+  section="prepare"
+  gate={page.gate}
+  description={m.lede}
+  lede={m.lede}
+  asOf={m.asOf}
+  standingNote={m.standingNote}
+  about={false}
+>
+  <div class="ph">
+    {
+      m.start && (
+        <p class="ph-start">
+          <a class="lab-btn lab-btn--primary" href={m.start.href}>
+            {m.start.label}
+          </a>
+        </p>
+      )
+    }
+
+    {
+      m.groups.length > 0 && (
+        <section class="ph-sec" aria-labelledby="ph-groups-h">
+          <h2 class="section-h" id="ph-groups-h">
+            {m.groupsHead}
+          </h2>
+          <p class="ph-intro">{m.groupsIntro}</p>
+          <ul class="ph-check">
+            {m.groups.map((g) => (
+              <li class="ph-ck">
+                <div class="ph-ck-body">
+                  <h3 class="ph-ck-h">
+                    {g.href ? (
+                      <a class="row-link" href={g.href}>
+                        {g.label}
+                      </a>
+                    ) : (
+                      g.label
+                    )}
+                  </h3>
+                  <p class="ph-ck-d">{g.description}</p>
+                </div>
+                <p class="ph-ck-n">{g.countLabel}</p>
+              </li>
+            ))}
+          </ul>
+          {m.guides && (
+            <p class="ph-more">
+              <a href={m.guides.href}>{m.guides.label}</a>
+            </p>
+          )}
+        </section>
+      )
+    }
+
+    {
+      m.others.length > 0 && (
+        <ul class="ph-others">
+          {m.others.map((l) => (
+            <li>
+              <a class="row-link" href={l.href}>
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+
+  <AboutThisView
+    title={page.title}
+    heading={m.aboutHead}
+    sources={m.sources}
+    asOf={m.asOf}
+    methodAnchor={m.methodTool ? methodAnchorFor(m.methodTool) : null}
+    standingNote={null}
+    slot="after"
+  />
+</PageFrame>

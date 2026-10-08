@@ -1,0 +1,761 @@
+/* QSC Atlas Labs: the Exposure Clock. Ink on warm paper. Controls come from the shared kit in
+   lab.css (.lab-choice, .lab-select, .lab-group, .lab-chip, .lab-disclose); this file only lays
+   them out. CEPS teal (palette A) is the interface colour: the sliders' handle and filled track,
+   the one quiet disclosure, links, the date in hand and the "today" rule. The chart's marks, bars
+   and survey band stay ink and greys; the one data colour is the posture dot beside the target
+   dates heading. The readout is the one passage in Newsreader; the values beside the sliders are
+   quiet figures. Whitespace separates the parts. No chart text is set under 0.8rem. */
+
+.xc {
+  position: relative;
+}
+
+/* ---- layout: the controls column on the left (the sliders, then where and what), the chart
+   and its readout on the right. Under 900px one column: the sliders, the chart and its readout,
+   then where and what, so the chart is never pushed below the list of what you protect. */
+.xc-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'controls main'
+    'where main';
+  gap: var(--space-8) var(--space-10);
+  align-items: start;
+  margin: 0;
+}
+.xc-main {
+  grid-area: main;
+  min-width: 0;
+}
+
+/* ---- controls: two unboxed groups, each under one hairline (.lab-group) */
+.xc-controls,
+.xc-where {
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+}
+.xc-controls {
+  grid-area: controls;
+}
+.xc-where {
+  grid-area: where;
+}
+.xc-field {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.xc-field > label,
+.xc-field > legend,
+.xc-slider-head label {
+  font-size: var(--type-small);
+  font-weight: var(--weight-semibold);
+  color: var(--ink);
+  padding: 0;
+  margin-bottom: var(--space-1);
+}
+.xc-field .lab-select {
+  width: 100%;
+}
+.xc-context {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* sliders: a hairline track, teal up to the handle, and a round open handle ringed in teal */
+.xc-slider-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+.xc-value {
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  color: var(--ink);
+  white-space: nowrap;
+  /* as wide as "100 years", so the label beside it never rewraps while the value changes */
+  min-width: 9ch;
+  text-align: right;
+  font-feature-settings: 'tnum' 1;
+}
+.xc-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.xc-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(to right, var(--accent) 0 var(--xc-fill), var(--hairline) var(--xc-fill) 100%);
+}
+.xc-range::-moz-range-track {
+  height: 2px;
+  background: var(--hairline);
+}
+.xc-range::-moz-range-progress {
+  height: 2px;
+  background: var(--accent);
+}
+.xc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.xc-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.xc-range:hover::-webkit-slider-thumb {
+  border-color: var(--accent-strong);
+}
+.xc-range:hover::-moz-range-thumb {
+  border-color: var(--accent-strong);
+}
+.xc-range:focus-visible {
+  outline: var(--border-width-strong) solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.xc-slider-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-2xs);
+  color: var(--ink-muted);
+  margin-top: calc(var(--space-2) * -1);
+}
+.xc-note {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.xc-note a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.xc-note a:hover {
+  color: var(--accent-strong);
+}
+.xc-flag {
+  font-style: italic;
+  color: var(--ink-muted);
+}
+/* under a sourced shelf life: what kind of period it is and its source, in the interface face,
+   as the target dates say what sets each date */
+.xc-shelf-src {
+  display: block;
+  margin-top: var(--space-1);
+  font-family: var(--font-instrument);
+  font-size: var(--text-2xs);
+  color: var(--ink-muted);
+}
+/* "Use N years": a quiet teal text action on its own line, 44px high */
+.xc-textlink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.xc-textlink:hover {
+  color: var(--accent-strong);
+}
+/* "Use N years" at the sourced period: nothing to do, so hidden, but its line is kept */
+.xc-textlink.is-spent {
+  visibility: hidden;
+}
+/* "When your migration starts": the tool's one quiet disclosure, teal words and the kit's chevron */
+.xc-advanced > summary {
+  font-size: var(--type-small);
+  color: var(--accent);
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.xc-advanced > summary:hover,
+.xc-advanced > summary:active {
+  color: var(--accent-strong);
+}
+.xc-advanced[open] > summary {
+  margin-bottom: var(--space-1);
+}
+
+/* ---- chart ---------------------------------------------------------------------- */
+.xc-figure {
+  position: relative;
+  margin: 0;
+  container-type: inline-size;
+}
+/* before the island has measured its width, the server's chart is drawn at three widths and the
+   one for this box is shown: a 390px phone below 400px, the desktop column up to 520px, a tablet
+   above. Each holds the chart's own height, so the measured chart replaces it without a jump. */
+.xc-first {
+  display: none;
+}
+@container (max-width: 399.98px) {
+  .xc-first--342 {
+    display: block;
+  }
+}
+@container (min-width: 400px) and (max-width: 519.98px) {
+  .xc-first--464 {
+    display: block;
+  }
+}
+@container (min-width: 520px) {
+  .xc-first--720 {
+    display: block;
+  }
+}
+@supports not (container-type: inline-size) {
+  .xc-first--342 {
+    display: block;
+  }
+}
+.xc-svg {
+  display: block;
+  overflow: visible;
+  font-family: var(--font-instrument);
+}
+.xc-svg text {
+  fill: var(--ink);
+}
+.xc-band-title {
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+}
+.xc-grid {
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+.xc-tick {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-feature-settings: 'tnum' 1;
+  fill: var(--ink-muted) !important;
+}
+.xc-band-fill {
+  fill: var(--wash-strong);
+}
+.xc-band-edge {
+  stroke: var(--ink-muted);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+}
+.xc-rangebar {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.xc-open {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+.xc-range-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+}
+.xc-stops {
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+}
+/* a paper ground under each survey figure, so no band edge or gridline runs through a digit */
+.xc-knock {
+  fill: var(--paper);
+}
+.xc-band.is-checking .xc-band-fill {
+  opacity: 0.55;
+}
+.xc-checking {
+  fill: none;
+  stroke: var(--ink-muted);
+  stroke-dasharray: 3 3;
+}
+.xc-checking-text {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+}
+/* today: the one teal rule on the chart, an interface line rather than a date */
+.xc-today {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+.xc-today-label {
+  font-family: var(--font-instrument);
+  font-size: var(--text-xs);
+  fill: var(--accent) !important;
+}
+.xc-horizon {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.xc-horizon-dot {
+  fill: var(--ink);
+}
+/* labels a rule can cross carry a paper halo. paint-order is also set as an attribute on each,
+   because the share image replaces inline styles and a halo painted last would hide the glyphs.
+   The survey's own figures sit on a paper ground (.xc-knock) instead. */
+.xc-horizon-label,
+.xc-cross-label,
+.xc-lane-label,
+.xc-date-year,
+.xc-stops {
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+.xc-horizon-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  stroke-width: 5px;
+}
+.xc-lane-label {
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+  stroke-width: 4px;
+}
+.xc-bar,
+.xc-hair {
+  fill: var(--ink);
+}
+.xc-end {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.xc-start-tick {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.xc-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  font-feature-settings: 'tnum' 1;
+}
+.xc-lane-rule {
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+.xc-date-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  fill: var(--ink-muted) !important;
+  stroke-width: 4px;
+}
+
+/* date marks: the profile timeline's 7px ink dot; open for a standards body; a dotted
+   outline for a lead. Hover and focus draw a ring round the dot; nothing grows. */
+.xc-dot {
+  fill: var(--ink);
+}
+.xc-dot.is-open {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+.xc-dot.is-lead {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 1 1;
+  stroke-linecap: butt;
+}
+.xc-hit {
+  fill: transparent;
+}
+/* the shared target under a cluster takes the pointer, so moving onto a dot keeps it ringed */
+.xc-marker {
+  pointer-events: none;
+}
+.xc-ring {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 1;
+  transition: stroke var(--dur-fast) var(--ease-standard);
+}
+.xc-marker.is-active .xc-ring {
+  stroke: var(--ink);
+}
+
+.xc-axis {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.xc-crosshair line {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+.xc-cross-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  stroke-width: 5px;
+}
+.xc-hover-zone {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+/* the marks glide to new values frame by frame in the island (motion.ts), in SVG attributes, and
+   stand still under reduced motion; nothing here animates them */
+
+.xc-error {
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* ---- readout -------------------------------------------------------------------- */
+.xc-readout {
+  margin-top: var(--space-6);
+  max-width: var(--measure);
+  font-family: var(--font-reading);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+}
+/* each sentence shares one grid cell with every other wording it can take, laid out but unseen,
+   so the readout keeps the height of its longest wording while the values change */
+.xc-line {
+  display: grid;
+  margin: 0 0 var(--space-3);
+}
+.xc-line > p {
+  grid-area: 1 / 1;
+  margin: 0;
+  text-wrap: pretty;
+}
+.xc-room {
+  visibility: hidden;
+}
+.xc-num {
+  font-size: 0.92em;
+  font-weight: var(--weight-semibold);
+}
+.xc-readout-survey {
+  color: var(--ink);
+}
+/* the standing note under the readout: a plain sentence in ink-muted with a hairline above it, as
+   the kit's .note; never a left rule or a box */
+.xc-standing {
+  margin: var(--space-5) 0 var(--space-3);
+  padding-top: var(--space-3);
+  border-top: var(--rule);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* ---- target dates: a dot, the year, then the line, as the profile timeline's rows ---- */
+.xc-dates {
+  margin-top: var(--space-12);
+  max-width: var(--measure);
+}
+.xc-dates-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+.xc-dates-head h2 {
+  margin: 0;
+}
+.xc-dates-head .lab-chip {
+  font-size: var(--type-small);
+}
+.xc-kinds {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.xc-kinds:empty {
+  display: none;
+}
+.xc-dates-head + .xc-note {
+  margin-bottom: var(--space-3);
+}
+.xc-date-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* the year column takes the widest year of its list, so every line starts at one edge; each
+     row shares these columns and their gap */
+  grid-template-columns: 10px max-content minmax(0, 1fr);
+  column-gap: var(--space-3);
+}
+.xc-date-list li {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: start;
+  padding: var(--space-3) var(--space-2);
+  border-top: 1px solid var(--hairline);
+  transition: background-color var(--dur-fast) var(--ease-standard);
+}
+.xc-row-year {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  font-feature-settings: 'tnum' 1;
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.xc-date-list li:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+/* the date in hand, from the chart or the list: the current row's teal wash */
+.xc-date-list li.is-active {
+  background: var(--accent-wash);
+}
+.xc-date-list p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+/* a row's short link to its source: teal and underlined */
+.xc-date-list a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.xc-date-list a:hover {
+  color: var(--accent-strong);
+}
+.xc-date-list .xc-sub {
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+}
+/* what sets the date: the Target dates view's words, under the line, in the interface face */
+.xc-date-list .xc-basis {
+  margin-top: var(--space-1);
+  font-family: var(--font-instrument);
+  font-size: var(--text-2xs);
+  color: var(--ink-muted);
+}
+.xc-date-list li.is-past p:first-child,
+.xc-date-list li.is-past .xc-row-year {
+  color: var(--ink-muted);
+}
+/* the standards bodies' dates: their own group under a quiet head, as their own lane in the chart */
+.xc-group {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-3);
+}
+.xc-group-head {
+  margin: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink);
+}
+.xc-key {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.4em;
+  overflow: visible;
+}
+
+/* the way on from the dates: to other places, and to the place's own profile */
+.xc-links {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+}
+.xc-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--lab-target, 44px);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.xc-links a:hover {
+  color: var(--accent-strong);
+}
+.xc-links a:focus-visible,
+.xc-textlink:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- presentation mode (?present=1 only): larger type, controls in one row ---------- */
+/* no control opens it; the bar at its top closes it, and so does Escape */
+.xc-present-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-4);
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+}
+.xc-present-hint {
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+.xc--present .xc-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  grid-template-rows: none;
+  grid-template-areas:
+    'controls where'
+    'main main';
+  gap: var(--space-6) var(--space-5);
+}
+/* the two sliders, then where and what (the widest, for its options), in one row */
+.xc--present .xc-controls {
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: var(--space-5);
+}
+.xc--present .xc-where {
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+  gap: var(--space-5);
+}
+.xc--present .xc-context,
+.xc--present .xc-advanced,
+.xc--present .xc-controls .xc-note,
+.xc--present .xc-where .xc-note {
+  display: none;
+}
+.xc--present .xc-readout {
+  font-size: var(--text-2xl);
+  max-width: 60ch;
+}
+.xc--present .xc-value {
+  font-size: var(--text-xl);
+}
+/* the frame steps back: the header, footer, breadcrumb, side menu, the lede, facts and closing
+   sections leave, and the tool takes the wide measure; the question it answers stays as the
+   heading, and so does the preview line */
+html.xc-presenting .site-header,
+html.xc-presenting .site-footer,
+html.xc-presenting .fr-grid > :not(.fr-main),
+html.xc-presenting .fr-main > :not(.fr-body):not(.fr-head),
+html.xc-presenting .fr-head > :not(.fr-q),
+html.xc-presenting .xc .share-bar,
+html.xc-presenting .xc .lab-table {
+  display: none;
+}
+html.xc-presenting .fr-grid {
+  display: block;
+}
+html.xc-presenting .fr-w,
+html.xc-presenting .fr-main {
+  max-width: var(--content-wide);
+}
+html.xc-presenting .fr-body {
+  margin-top: 0;
+}
+
+/* ---- small screens ------------------------------------------------------------------ */
+@media (max-width: 900px) {
+  .xc-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      'controls'
+      'main'
+      'where';
+    row-gap: var(--space-8);
+  }
+  .xc--present .xc-layout {
+    grid-template-areas:
+      'controls'
+      'where'
+      'main';
+    row-gap: var(--space-6);
+  }
+}
+@media (max-width: 720px) {
+  .xc-readout {
+    font-size: var(--text-md);
+  }
+  .xc-controls,
+  .xc-where {
+    gap: var(--space-5);
+  }
+  .xc--present .xc-controls,
+  .xc--present .xc-where {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .xc--present .xc-readout {
+    font-size: var(--text-xl);
+  }
+  /* the 390px budget: the first slider follows close under its question */
+  .xc-field {
+    gap: var(--space-1);
+  }
+  .xc-slider-head label {
+    margin-bottom: 0;
+  }
+}
+
+/* a source named in the table keeps a 44px hit area when it wraps to two short lines on a phone */
+.xc .lab-table td a {
+  position: relative;
+}
+.xc .lab-table td a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+
+/* print: the page as read, without the presentation bar */
+@media print {
+  .xc-present-bar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xc-textlink,
+  .xc-advanced > summary,
+  .xc-ring,
+  .xc-date-list li {
+    transition: none;
+  }
+}

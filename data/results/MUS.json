@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Cybersecurity Trends & Predictions 2025",
+    "country": "MUS",
+    "issuingOrg": "CERT-MU",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://cert-mu.govmu.org/cert-mu/wp-content/uploads/2025/04/Cybersecurity-Trends-and-Predictions-2025.pdf",
+    "summary": "CERT-MU's April 2025 report reviews notable cyber attacks of 2024 and sets out predicted cybersecurity trends for 2025. Its short 'Quantum Computing Threats' section warns that intercepted data may be stockpiled for future quantum decryption and advises adopting post-quantum cryptography early.",
+    "included": true
+  }
+]

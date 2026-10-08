@@ -1,7 +1,8 @@
 ---
-// A thin ink line at the very top that tracks reading progress on long pages. It reflects the
-// scroll position rather than animating on its own, so reduced motion is unaffected; it degrades
-// to nothing without JS. Drop it once at the top of a long-read page.
+// A thin ink line at the very top that tracks reading progress on long pages. It follows the
+// scroll position directly, with no transition of its own, so it moves only when the visitor
+// scrolls and reduced motion is unaffected; it degrades to nothing without JS. Drop it once at
+// the top of a long-read page.
 ---
 
 <div class="read-progress" aria-hidden="true"><span class="read-progress-fill"></span></div>
@@ -39,9 +40,8 @@
   .read-progress-fill {
     display: block;
     height: 100%;
-    background: var(--ink);
+    background: var(--accent);
     transform-origin: left center;
     transform: scaleX(0);
-    transition: transform 80ms linear;
   }
 </style>

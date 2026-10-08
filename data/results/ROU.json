@@ -53,5 +53,27 @@
     "url": "https://www.research.gov.ro/romania-intra-in-era-securitatii-cuantice-29983/",
     "summary": "Romanian National Authority for Research announcement (27 April 2026) of the launch of RExQTCS, the Romanian Centre of Excellence in Quantum Technologies for Enhancing Cybersecurity (coordinated by Politehnica University of Bucharest, ~86 million lei funding), explicitly linking frontier research in classical and post-quantum ('post-cuantică') cryptography to communications security.",
     "included": true
+  },
+  {
+    "title": "ANC lansează competiția 2026 pentru dezvoltarea ecosistemului național de tehnologii cuantice",
+    "country": "ROU",
+    "issuingOrg": "ANC",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.research.gov.ro/anc-lanseaza-competitia-2026-pentru-dezvoltarea-ecosistemului-national-de-tehnologii-cuantice-30835/",
+    "summary": "The National Research Authority (ANC) announces a 2026 competition allocating 16 million lei to a single-contractor project developing Romania's national quantum technology ecosystem (education, research infrastructure, industrial collaboration, community engagement), to be completed by 31 December 2028. Post-quantum cryptography is listed among the fields covered, alongside quantum computing, communication and sensing.",
+    "included": true
+  },
+  {
+    "title": "NATO Știință pentru Pace și Securitate (Science for Peace and Security-SPS)",
+    "country": "ROU",
+    "issuingOrg": "ANC",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.research.gov.ro/cooperare-internationala/organizatii-internationale/nato-organizatia-tratatului-atlanticului-de-nord-north-atlantic-treaty-organization/nato-stiinta-pentru-pace-si-securitate-science-for-peace-and-security-sps/",
+    "summary": "ANC information page on Romania's participation in the NATO Science for Peace and Security programme, highlighting the project 'Post-quantum Digital Signature using Verkle Trees' coordinated by Transilvania University of Brasov with a Georgian team, which held an international workshop in Brasov in April 2025.",
+    "included": true
   }
 ]

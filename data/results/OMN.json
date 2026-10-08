@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Investment Opportunity In Cybersecurity Sector: Quantum Cybersecurity Center",
+    "country": "OMN",
+    "issuingOrg": "MTCIT",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://cert.gov.om/librarys/investment/Quantum%20Cybersecurity%20Center.pdf",
+    "summary": "Government investment-opportunity sheet, hosted on the Oman National CERT site with an MTCIT contact address, inviting investors to set up a quantum cybersecurity centre in Muscat (estimated USD 20M total, 3 to 5 years to implement). It says quantum computers could break many current encryption protocols, which calls for a shift toward quantum-resistant and quantum-enhanced security. It names post-quantum cryptography and quantum cryptography (such as QKD) as the two approaches.",
+    "included": true
+  }
+]

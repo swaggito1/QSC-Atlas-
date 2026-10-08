@@ -1,0 +1,895 @@
+/* QSC Atlas: the frame around every tool, element and section page (spec 11), after the minimal
+   pass (labs/review/minimal-spec.md) and the épuré pass (labs/review/epure-audit.md).
+   Top: the preview line, the side menu on Prepare pages (folded into "In Prepare" under 1100px),
+   the question as H1, the section's view switch directly under it (as on Countries and the map),
+   the lede, one quiet meta line, an optional "Not for you?" line and at most one standing note,
+   a plain sentence. No breadcrumb: the header shows the section and the side menu the page.
+   Body: the page's own content.
+   Bottom: "Where to go next" and the "About this view" disclosure, which holds everything else:
+   sources, verified dates, who the page is written for, that nothing entered leaves the page,
+   the method, how to cite and how to report an error.
+   Source order inside .fr-grid: the "In Prepare" row (under 1100px only), the page (.fr-main),
+   the side menu. From 1100px a Prepare page places the menu in the left column beside the page.
+   Ink on paper, hairlines where a separator is needed, whitespace first. Teal only on links,
+   buttons, the current menu item and the focus ring (palette A). Spacing by context: the body
+   sits a related gap under the head, the closing area a change of subject below the body.
+   Built on the tokens in global.css; the control kit the body uses is in lab.css. */
+
+:root {
+  --fr-gutter: var(--shell-gutter, var(--space-6)); /* the header's gutter, so left edges agree */
+  --fr-menu-w: 12.5rem; /* the Prepare side menu */
+  --fr-menu-gap: var(--space-12);
+  --fr-row: 32px; /* the preview line and the "In Prepare" row, each at most this tall */
+  --fr-close-w: var(--w-list); /* legacy name of --w-list, still read by page styles */
+}
+
+/* ---- the column ------------------------------------------------------------------------ */
+
+/* one measure for the preview line, the side menu and the page: the header's own (--shell-max,
+   the same on every page), so the menu and the question start on the wordmark's edge and the
+   widest view ends on the finder's. A wide tool (.fr-w--wide) and a Prepare page with its side
+   menu (.fr-w--menu) keep this measure too: the header never widens. */
+.fr-w {
+  max-width: var(--shell-max, var(--content-max));
+  margin-inline: auto;
+  padding-inline: var(--fr-gutter);
+}
+
+/* the frame is the positioning box of the open "In Prepare" list, which then spans the
+   column's gutters with plain offsets of zero. The page top is the same on every page; the
+   footer's own margin keeps a section's gap below the last line. */
+.fr {
+  --fr-top: var(--page-top);
+  position: relative;
+  padding-top: var(--fr-top);
+}
+
+.fr-grid {
+  display: block;
+}
+@media (min-width: 1100px) {
+  .fr-grid--menu {
+    display: grid;
+    grid-template-columns: var(--fr-menu-w) minmax(0, 1fr);
+    column-gap: var(--fr-menu-gap);
+    align-items: start;
+  }
+  .fr-grid--menu > .fr-main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .fr-grid--menu > .fr-menu {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.fr-main {
+  min-width: 0;
+}
+
+/* ---- 1. the preview line: one quiet line, a dashed rule, no fill ----------------------- */
+
+.fr-banner {
+  border-bottom: var(--rule-preview);
+}
+/* the line's box is 31px and the rule 1px, so the whole line is 32px; the sentence never wraps */
+.fr-banner p {
+  display: flex;
+  align-items: center;
+  height: calc(var(--fr-row) - 1px);
+  margin-block: 0;
+  font-size: var(--type-caption);
+  line-height: var(--leading-tight);
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- 2. a quiet way back, only on a page that would otherwise have none ----------------
+   One small link over the H1, "← The guides", teal and underlined as every link is. */
+
+.fr-back {
+  display: flex;
+  align-items: center;
+  min-height: var(--fr-row);
+  margin: 0 0 var(--space-2);
+  font-size: var(--type-small);
+}
+.fr-back-a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--fr-row);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+/* the row is 32px, the target 44px: the hit area grows past the row without moving anything */
+.fr-back-a::after {
+  content: '';
+  position: absolute;
+  inset: -6px -4px;
+}
+.fr-back-a:hover,
+.fr-back-a:active {
+  color: var(--accent-strong);
+}
+
+/* ---- 3. the side menu (Prepare pages only) ----------------------------------------------- */
+
+.fr-menu {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fr-menu {
+    display: block;
+    position: sticky;
+    top: var(--space-8);
+  }
+}
+/* the menu's quiet head, ink-muted in the interface face: a label, not a control */
+.fr-menu-head {
+  display: flex;
+  align-items: center;
+  min-height: var(--fr-row);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink-muted);
+  margin: 0 0 var(--space-2);
+}
+.fr-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* the rail shows one rule at a time: the current page's (--rule-current), a position in a list a
+   visitor moves through, not a card's accent. Every other item keeps the rule's room, transparent,
+   so the words line up; hover and press change the words' colour only. */
+.fr-menu-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--target-min);
+  padding: var(--space-1) 0 var(--space-1) var(--space-3);
+  border-left: var(--rule-current);
+  border-left-color: transparent;
+  font-size: var(--type-small);
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-menu-list a:hover,
+.fr-menu-list a:active {
+  color: var(--ink);
+}
+/* the current page: the teal rule, the words in ink at weight 600 */
+.fr-menu-list a[aria-current='page'] {
+  color: var(--ink);
+  font-weight: var(--weight-ui-strong);
+  border-left-color: var(--accent);
+}
+/* a page homed in another section ("in Countries"): a second, fainter line in the same size */
+.fr-menu-note {
+  font-family: var(--font-instrument);
+  font-size: inherit;
+  font-weight: var(--weight-ui);
+  color: var(--ink-faint);
+}
+
+/* under 1100px the same list folds into "In Prepare", one quiet row at the top of the page */
+.fr-fold-row {
+  display: flex;
+  align-items: center;
+  min-height: var(--fr-row);
+  margin: 0 0 var(--space-2);
+  font-size: var(--type-small);
+}
+@media (min-width: 1100px) {
+  .fr-fold-row {
+    display: none;
+  }
+}
+.fr-menu-d {
+  flex: none;
+}
+.fr-menu-d > summary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--fr-row);
+  list-style: none;
+  cursor: pointer;
+  color: var(--accent);
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-menu-d > summary::-webkit-details-marker {
+  display: none;
+}
+.fr-menu-d > summary::after {
+  content: '';
+  position: absolute;
+  inset: -6px -4px;
+}
+/* the kit's disclosure chevron (lab.css), after the label here, as a menu's is */
+.fr-menu-d > summary::before {
+  order: 2;
+}
+.fr-menu-d > summary:hover,
+.fr-menu-d > summary:active,
+.fr-menu-d[open] > summary {
+  color: var(--accent-strong);
+}
+/* the open list is an overlay: it hangs from the foot of the row on the surface, with the one
+   shadow, and spans the column's gutters; the row's own height never changes. It closes when
+   focus or a click goes elsewhere (SideMenu.astro), so it never hides the control that has focus. */
+.fr-menu-pop {
+  position: absolute;
+  top: calc(var(--fr-top) + var(--fr-row));
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: var(--space-2) var(--fr-gutter) var(--space-3);
+  background: var(--surface-overlay);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  box-shadow: var(--shadow-panel);
+}
+@media (min-width: 640px) {
+  .fr-menu-pop .fr-menu-list {
+    columns: 2;
+    column-gap: var(--space-8);
+  }
+  .fr-menu-pop .fr-menu-list li {
+    break-inside: avoid;
+  }
+}
+
+/* ---- 4 to 8. the head: question, view switch, lede, meta line, "Not for you?", note ------ */
+
+/* every text in the head is held to the reading measure at its own size (--measure is in em):
+   the lede at about 62 characters, the meta line's neighbours and the note at about 67. The
+   question takes the heading measure, two balanced lines; the meta line and the view switch may
+   run the column, so a long meta line (the Exposure Clock's) stays on one desktop line. */
+.fr-head > * {
+  max-width: var(--measure);
+}
+.fr-head > .fr-facts,
+.fr-head > .fr-views {
+  max-width: none;
+}
+.fr-q {
+  max-width: var(--measure-heading);
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-h1);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-3);
+  text-wrap: balance;
+}
+.fr-nb {
+  white-space: nowrap;
+}
+.fr-lede {
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  margin: 0 0 var(--space-3);
+  text-wrap: pretty;
+}
+/* the view switch comes directly under the H1, as it does on Countries and the map, so the same
+   control is found in the same place on every view of the section */
+.fr-q:has(+ .fr-views) {
+  margin-bottom: var(--space-2);
+}
+.fr-head > .fr-views {
+  margin: 0 0 var(--space-2);
+}
+/* phones: the 390px budget (spec 11) puts the first input within 420px of the top, so the
+   head keeps its order and its words and gives up only spacing and the lede's size */
+@media (max-width: 639px) {
+  .fr-q {
+    margin-bottom: var(--space-2);
+  }
+  .fr-lede {
+    font-size: var(--type-body);
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* the meta line, the frame's own hand of .meta-line (global.css): one quiet line in the interface
+   face, ink-muted, items joined by middle dots, each dot held to the item before it so a break
+   never starts a line with one. (:first-of-type, not li + li: the dev server can hoist a script
+   into the list between items.) A date, a duration or a count never breaks inside itself. The
+   freshness item shows only when the data is due for a check, and then only as "due for a check"
+   after the as-of date; the full "verified n days ago" is in About this view. */
+.fr-facts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.fr-facts > li {
+  display: inline;
+}
+.fr-facts > li:not(:first-of-type)::before {
+  content: '\00A0\00B7\20';
+  content: '\00A0\00B7\20' / '';
+  color: var(--ink-faint);
+}
+/* a link in the meta line stands alone on its line, so it carries a 44px hit area (an empty
+   ::after at --hit-inset) that moves nothing. Like a date or a count, it never breaks inside
+   itself: a link split over two lines has a box that spans both, and its hit area then covered the
+   item before it ("41 actions" on the guides page at 390px) */
+.fr-facts a {
+  white-space: nowrap;
+  position: relative;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-facts a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.fr-facts a:hover,
+.fr-facts a:active {
+  color: var(--accent-strong);
+}
+.fr-facts .fr-nw,
+.fr-facts .fresh-words {
+  white-space: nowrap;
+}
+.fr-facts .fr-fresh:not(:has(.is-stale)) {
+  display: none;
+}
+.fr-facts .fr-fresh [data-lab-fresh-text],
+.fr-facts .fr-fresh .fresh-comma {
+  display: none;
+}
+.fr-nfy {
+  margin: var(--space-2) 0 0;
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.fr-nfy a {
+  position: relative;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-nfy a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.fr-nfy a:hover,
+.fr-nfy a:active {
+  color: var(--accent-strong);
+}
+
+/* the standing note in the head: the plain note of global.css (.note) without its hairline, since
+   it follows the meta line and space alone parts it. One sentence in ink-muted at the reading
+   measure; no box, no fill, no left rule, no teal. */
+.fr-note {
+  max-width: var(--measure);
+  margin: var(--gap-group) 0 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* ---- 9 to 12. the body ------------------------------------------------------------------- */
+
+/* the view switch: the kit's text tabs (lab.css .lab-switch), no dots between them; in the frame
+   it sits in the head under the H1 (above) */
+.fr-views {
+  margin-top: var(--space-4);
+}
+.fr-actions .fr-status {
+  flex-basis: 100%;
+}
+/* the page's answer follows its question: a related gap under the head */
+.fr-body {
+  margin-top: var(--gap-related);
+}
+@media (max-width: 639px) {
+  .fr-body {
+    margin-top: var(--gap-group); /* the phone budget: the first input within 420px of the top */
+  }
+  .fr-note {
+    margin-top: var(--space-3);
+  }
+}
+
+/* ---- 13 and 14. the closing sections -------------------------------------------------- */
+
+/* a closing head: a section heading in Newsreader at the section step, in ink, no rule of its own */
+.fr-h {
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--ink);
+  margin: 0;
+}
+
+/* the closing area is a change of subject: it starts under one hairline, --gap-subject below the
+   page's own content, at the width of a list of rows */
+.fr-next {
+  margin-top: var(--gap-subject);
+  padding-top: var(--gap-group-lg);
+  border-top: var(--rule);
+  max-width: var(--w-list);
+}
+.fr-next ul {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+}
+.fr-next li + li {
+  border-top: var(--rule);
+}
+.fr-next a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 52px;
+  padding: var(--space-2) 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-snug);
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-next-label {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.fr-next a:hover,
+.fr-next a:active {
+  color: var(--accent-strong);
+}
+.fr-next-arrow {
+  flex: none;
+  font-family: var(--font-instrument);
+  color: var(--accent);
+  transition: transform var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
+}
+.fr-next a:hover .fr-next-arrow {
+  color: var(--accent-strong);
+  transform: translateX(3px);
+}
+
+/* About this view: a disclosure at the foot of the page, closed until asked for. Its summary is
+   the section heading with the kit's chevron after it; inside, the key facts in a definition
+   list, labels in the interface face at weight 600. Alone it opens the closing area, a change of
+   subject below the body; under Where to go next the two close the page together, a group apart. */
+.fr-about {
+  max-width: var(--w-list);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+}
+/* About this view keeps the .lab-section hook (a tool's own styles may hide it) without its gap:
+   the closing area's own gaps outrank the kit's section gap whatever order the sheets load in */
+.fr-about,
+.fr-about.lab-section {
+  margin-top: var(--gap-subject);
+  padding-top: 0;
+}
+.fr-next + .fr-about,
+.fr-next + .fr-about.lab-section {
+  margin-top: var(--gap-group-lg);
+}
+.fr-about-sum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--target-min);
+  padding: var(--space-3) 0;
+  list-style: none;
+  cursor: pointer;
+  color: var(--ink);
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-about-sum::-webkit-details-marker {
+  display: none;
+}
+.fr-about-sum .fr-h {
+  color: inherit;
+}
+/* the chevron: down when closed, up when open; it turns only when the visitor opens or closes it */
+.fr-about-sum::after {
+  content: '';
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-right: var(--space-2);
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+.fr-about-d[open] > .fr-about-sum::after {
+  transform: translateY(3px) rotate(-135deg);
+}
+.fr-about-sum:hover,
+.fr-about-sum:active {
+  color: var(--accent-strong);
+}
+.fr-about-sum:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.fr-about-d > .fr-kv {
+  border-top: var(--rule);
+  padding-bottom: var(--space-2);
+}
+
+.fr-kv {
+  margin: 0;
+}
+.fr-kv > div {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--space-1) var(--space-6);
+  padding: var(--space-4) 0;
+  border-bottom: var(--rule);
+}
+.fr-kv > div:last-child {
+  border-bottom: none;
+}
+.fr-kv dt {
+  padding-top: 1px;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+}
+.fr-kv dd {
+  margin: 0;
+  min-width: 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+}
+.fr-kv dd > p {
+  margin: 0;
+}
+.fr-kv dd > p + p,
+.fr-kv dd > * + .fr-more {
+  margin-top: var(--space-2);
+}
+/* a link that stands on its own line is a 44px target */
+.fr-more a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+}
+.fr-kv .prose {
+  font-size: var(--type-body);
+}
+.fr-kv .prose p {
+  margin: 0 0 var(--space-3);
+}
+.fr-kv .prose p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 639px) {
+  .fr-kv > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* the source list is folded behind its count line, a disclosure in the kit's hand (lab.css) */
+.fr-kv .fr-count {
+  margin: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--accent);
+}
+.fr-kv .fr-count:hover,
+.fr-kv .fr-count:active {
+  color: var(--accent-strong);
+}
+.fr-src[open] > summary {
+  margin-bottom: var(--space-2);
+}
+/* from 640px the label shares the count line's 44px line */
+@media (min-width: 640px) {
+  .fr-kv > .fr-kv-sources:has(.fr-src) {
+    padding-top: var(--space-1);
+  }
+  .fr-kv-sources:has(.fr-src) dt {
+    align-self: start;
+    display: flex;
+    align-items: center;
+    min-height: var(--target-min);
+    padding-top: 0;
+  }
+}
+/* a date in the mono face, at the size of the words around it; the words keep the interface face */
+.fr-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-data);
+  font-feature-settings: 'tnum' 1;
+}
+
+/* a plain link in the head or in About this view (one written into a sentence, with no class
+   of its own) reads as a link: teal and underlined, deeper on hover. The view switch's tabs are
+   left to the kit (lab.css .lab-switch), which marks the current view instead */
+.fr-head a:not([class]):not(.lab-switch a),
+.fr-kv dd a:not([class]) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-head a:not([class]):not(.lab-switch a):hover,
+.fr-kv dd a:not([class]):hover,
+.fr-head a:not([class]):not(.lab-switch a):active,
+.fr-kv dd a:not([class]):active {
+  color: var(--accent-strong);
+}
+
+/* a quiet link or text button in the instrument face: teal and underlined, deeper on hover */
+.fr-link,
+.fr-more a,
+.fr-act {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.fr-link:hover,
+.fr-more a:hover,
+.fr-act:hover,
+.fr-link:active,
+.fr-more a:active,
+.fr-act:active {
+  color: var(--accent-strong);
+}
+.fr-act:disabled {
+  color: var(--ink-faint);
+  cursor: not-allowed;
+}
+
+/* the citation, in the reading face so it reads as a reference, with a copy action under it */
+.fr-cite-text {
+  margin: 0;
+  max-width: var(--measure);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-normal);
+  overflow-wrap: anywhere;
+}
+.fr-cite-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-3);
+  min-height: var(--target-min);
+  margin: var(--space-1) 0 0;
+}
+.fr-cite-bar .fr-act {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+}
+.fr-status {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+
+.fr-report {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+}
+/* the label shares the link's 44px line, so "Corrections" and the link read as one line; on
+   phones the label stands above and keeps the other rows' spacing */
+@media (min-width: 640px) {
+  .fr-kv > .fr-report-row {
+    align-items: center;
+    padding-block: var(--space-1);
+  }
+  .fr-report-row dt {
+    padding-top: 0;
+  }
+}
+
+/* ---- quiet actions for pages without an island: Copy link, Download CSV, Print ---------- */
+
+.fr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-2);
+  margin: var(--space-6) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-faint);
+}
+.fr-actions .fr-act,
+.fr-actions a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+/* a one-word action ("Print") still has a 44px-wide hit area, inside the gap and dot beside it */
+.fr-actions .fr-act::after,
+.fr-actions a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+/* the line's own colour rule outranks the shared .fr-act states, so they are written again here */
+.fr-actions .fr-act:hover,
+.fr-actions a:hover,
+.fr-actions .fr-act:active,
+.fr-actions a:active {
+  color: var(--accent-strong);
+}
+.fr-actions .fr-act:disabled {
+  color: var(--ink-faint);
+  text-decoration-style: dashed;
+  cursor: not-allowed;
+}
+/* an action that needs JavaScript stays hidden until the page can do it: the display rules
+   above would otherwise override the hidden attribute */
+.fr-cite-bar .fr-act[hidden],
+.fr-actions .fr-act[hidden] {
+  display: none;
+}
+
+/* the empty state: one italic muted sentence */
+.fr-empty {
+  max-width: var(--measure);
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* screen-reader text */
+.fr-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- motion and print ------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .fr-back-a,
+  .fr-next a,
+  .fr-menu-list a,
+  .fr-nfy a,
+  .fr-menu-d > summary,
+  .fr-menu-d > summary::before,
+  .fr-about-sum,
+  .fr-about-sum::after,
+  .fr-facts a,
+  .fr-nfy a,
+  .fr-next-arrow,
+  .fr-link,
+  .fr-more a,
+  .fr-act {
+    transition: none;
+  }
+  .fr-next a:hover .fr-next-arrow {
+    transform: none;
+  }
+}
+
+@media print {
+  /* the header prints as the wordmark alone: its Find and Menu controls do nothing on paper */
+  .site-header summary,
+  .site-header button,
+  .site-header .hd-menu {
+    display: none !important;
+  }
+  .fr-banner,
+  .fr-back,
+  .fr-fold-row,
+  .fr-menu,
+  .fr-views,
+  .fr-next,
+  .fr-actions,
+  .fr-cite-bar,
+  .fr-report-row,
+  .share-bar {
+    display: none !important;
+  }
+  .fr-grid--menu {
+    display: block;
+  }
+  .fr {
+    padding: 0;
+  }
+  .fr-q {
+    margin-top: 0;
+  }
+  /* About this view prints open (AboutThisView.astro opens it before printing), without its
+     chevron */
+  .fr-about-sum::after {
+    display: none;
+  }
+  /* a link that does not already show its address prints it; the source list prints its own */
+  .fr-about a[href^='http']:not(.apa-url)::after {
+    content: ' (' attr(href) ')';
+    font-family: var(--font-instrument);
+    font-size: 8pt;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Source words: kept for review, never shown to visitors (src/lib/site/review.ts). Hidden unless
+   the page was opened with ?review=1 in a local or preview build. A block of them is the épuré
+   quotation: indented, no left rule; the dashed underline of an inline run is the Atlas's mark
+   for something provisional, as on the preview line. */
+.src-words {
+  display: none;
+}
+:root.is-review .src-words {
+  display: block;
+  max-width: var(--measure);
+  margin: var(--space-2) 0;
+  padding: 0 0 0 var(--space-6);
+  border: 0;
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+:root.is-review span.src-words {
+  display: inline;
+  padding: 0 var(--space-1);
+  border-bottom: var(--rule-preview);
+}
+:root.is-review .src-words::before {
+  content: 'Source words, for review: ';
+  font-family: var(--font-instrument);
+  color: var(--ink-faint);
+}

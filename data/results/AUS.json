@@ -273,5 +273,115 @@
     "url": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
     "summary": "ASD change log for the March 2026 release of the Information Security Manual, documenting updates to cryptography guidance including the transition to ASD-approved post-quantum algorithms (ML-DSA, ML-KEM) and timelines for ceasing traditional asymmetric cryptography.",
     "included": true
+  },
+  {
+    "title": "Post-quantum questions to ask your vendors",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/quantum/post-quantum-questions-to-ask-your-vendors",
+    "summary": "ASD/ACSC publication first released on 16 July 2026 setting out 31 vendor-neutral questions, aligned to the five phases of ASD's LATICE framework, that organisations can use in procurement, contract renewal and vendor assurance to assess third-party readiness for the post-quantum cryptography transition. It frames vendor readiness as one of the biggest factors influencing whether an organisation can adopt PQC within ASD's recommended timeframes.",
+    "included": true
+  },
+  {
+    "title": "Post-quantum questions to ask your vendors (PDF)",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/sites/default/files/2026-07/Post-quantum%20questions%20to%20ask%20your%20vendors.pdf",
+    "summary": "Downloadable July 2026 PDF of ASD's vendor-assessment guidance for the post-quantum cryptography transition, covering cryptographic dependencies, risk assessment, transition planning, implementation approaches and communication with suppliers. Published in the cyber.gov.au 2026-07 file directory.",
+    "included": true
+  },
+  {
+    "title": "New guidance helps organisations assess vendor readiness for post-quantum cryptography",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/about-us/view-all-content/news/new-guidance-helps-organisations-assess-vendor-readiness-for-post-quantum-cryptography",
+    "summary": "ASD/ACSC news item announcing the release of 'Post-quantum questions to ask your vendors', restating that the ISM recommends ceasing traditional asymmetric cryptography by end of 2030 and that organisations should have a refined PQC transition plan by end of 2026. It stresses that vendors often control cryptographic mechanisms in cloud and managed-service environments, making vendor readiness decisive for PQC migration.",
+    "included": true
+  },
+  {
+    "title": "APRA Member Therese McCarthy Hockey's remarks to the 2026 AFIA Risk Summit",
+    "country": "AUS",
+    "issuingOrg": "APRA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.apra.gov.au/news-and-publications/apra-member-therese-mccarthy-hockeys-remarks-2026-afia-risk-summit",
+    "summary": "Speech delivered on 24 June 2026 in Melbourne in which APRA Member Therese McCarthy Hockey sets out the prudential regulator's expectations on the quantum threat, endorsing ASD's timeline that organisations have a post-quantum cryptography transition plan by end of 2026 and have commenced transition by end of 2028. She states that APRA will step up supervisory engagement, expects regulated entities to map cryptographic dependencies across systems, data and third-party providers, and wants evidence that boards understand the risk and are advancing migration plans.",
+    "included": true
+  },
+  {
+    "title": "Information security manual (June 2026)",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/sites/default/files/2026-06/Information%20security%20manual%20(June%202026).pdf",
+    "summary": "Consolidated June 2026 release of ASD's Information Security Manual, whose Guidelines for cryptography carry the ASD-approved post-quantum algorithm set (ML-KEM-768/1024, ML-DSA-87) and the requirement that new cryptographic equipment, applications and libraries support these algorithms by no later than 2030. This release also renamed the 'data protection' cyber security principle to 'cryptographic protection' and retains principle PRO-17 on cryptographic agility, which explicitly covers changes to post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantum technology primer: Sensing",
+    "country": "AUS",
+    "issuingOrg": "ACSC",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cyber.gov.au/business-government/secure-design/quantum/quantum-technology-primer-sensing",
+    "summary": "Fourth entry (published 24 June 2026) in ASD/ACSC's Quantum Technology Primer series for cyber security leaders, covering how quantum sensing works, emerging applications across industries such as mining, and cyber security risks including sensor spoofing, noise sensitivity, integration and data management. Flagged for human review: unlike the Overview, Computing and Communications primers already in the corpus, an explicit post-quantum/quantum-safe cryptography reference in this primer could not be verified because cyber.gov.au would not serve the page to the fetcher.",
+    "included": false
+  },
+  {
+    "title": "APRA Corporate Plan 2026-27: Our strategic objectives",
+    "country": "AUS",
+    "issuingOrg": "APRA",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.apra.gov.au/apra-corporate-plan-2026-27/our-strategic-objectives",
+    "summary": "Strategic objectives section of APRA's Corporate Plan 2026-27. Under cyber risks from frontier AI and quantum computing, it cites ASD's recommendation to have a PQC transition plan by the end of 2026 and start implementing it by the end of 2028, and says APRA expects regulated entities to make timely progress and will increase its focus on quantum computing risks.",
+    "included": true
+  },
+  {
+    "title": "Financial Stability Review: October 2026",
+    "country": "AUS",
+    "issuingOrg": "RBA",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf",
+    "summary": "The Reserve Bank of Australia's October 2026 Financial Stability Review, assessing risks to the Australian financial system. In its discussion of operational and technology risks, it warns that quantum decryption will become a growing threat if post-quantum cryptography is not implemented early enough.",
+    "included": true
+  },
+  {
+    "title": "Resilience, Innovation and the Future of the Payments System",
+    "country": "AUS",
+    "issuingOrg": "RBA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.rba.gov.au/speeches/2025/sp-ag-2025-12-16.html",
+    "summary": "Speech by RBA Assistant Governor (Financial System) Brad Jones at the AusPayNet Summit on 16 December 2025. It flags harvest-now-decrypt-later risks from quantum computing and says the Payments System Board supports migrating card payments to AES as a quantum-safe solution. The Board expects AES to be ready for use by 2030 and plans to consult on using RBA standard-setting powers under the PSRA to support the migration.",
+    "included": true
+  },
+  {
+    "title": "Blueprint for Secure Cloud: Microsoft Edge for Business",
+    "country": "AUS",
+    "issuingOrg": "ASD",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T2",
+    "url": "https://blueprint.asd.gov.au/design/endpoints/applications/microsoft-edge-for-business/",
+    "summary": "ASD Blueprint for Secure Cloud configuration guidance for Microsoft Edge for Business. It notes that Edge enables hybrid post-quantum key agreement by default, consistent with ISM-1996, and advises considering a preference for quantum-safe algorithms (ML-KEM-1024 per ISM-1995) within a post-quantum cryptography transition plan (ISM-2073).",
+    "included": true
   }
 ]

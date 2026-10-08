@@ -1,0 +1,72 @@
+---
+// The quiet actions of a page without an island (spec 11, item 12): teal text links in the
+// interface face, joined by middle dots, "Copy link · Download CSV · Print". An island draws the same line with ShareBar,
+// which adds "Download image". Copy link and Print need JavaScript and appear only with it;
+// a download is a plain link and always works. Settings live in the query string and private
+// marks only in the hash, so the copied link reopens the view as it is.
+import '../../../styles/frame.css';
+
+interface Props {
+  copyLink?: boolean;
+  csv?: { href: string; label?: string; filename?: string } | null;
+  print?: boolean;
+}
+const { copyLink = true, csv = null, print = true } = Astro.props;
+---
+
+<p class="fr-actions" data-fr-actions>
+  {
+    copyLink && (
+      <button type="button" class="fr-act" data-fr-copy-link hidden>
+        Copy link
+      </button>
+    )
+  }
+  {
+    csv && (
+      <a class="fr-act" href={csv.href} download={csv.filename ?? ''}>
+        {csv.label ?? 'Download CSV'}
+      </a>
+    )
+  }
+  {
+    print && (
+      <button type="button" class="fr-act" data-fr-print hidden>
+        Print
+      </button>
+    )
+  }
+  <span class="fr-status" role="status" data-fr-actions-status></span>
+</p>
+
+<script>
+  // Show the actions that need JavaScript, put a middle dot between the visible ones, and say
+  // what happened in the status line.
+  document.querySelectorAll<HTMLElement>('[data-fr-actions]').forEach((bar) => {
+    const status = bar.querySelector<HTMLElement>('[data-fr-actions-status]');
+    const copy = bar.querySelector<HTMLButtonElement>('[data-fr-copy-link]');
+    const print = bar.querySelector<HTMLButtonElement>('[data-fr-print]');
+    if (copy && navigator.clipboard) {
+      copy.hidden = false;
+      copy.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          if (status) status.textContent = 'Link copied. It opens this view as you see it now.';
+        } catch {
+          if (status) status.textContent = 'The link could not be copied here; copy it from the address bar.';
+        }
+      });
+    }
+    if (print) {
+      print.hidden = false;
+      print.addEventListener('click', () => window.print());
+    }
+    const shown = Array.from(bar.querySelectorAll<HTMLElement>('.fr-act')).filter((el) => !el.hidden);
+    shown.slice(1).forEach((el) => {
+      const dot = document.createElement('span');
+      dot.setAttribute('aria-hidden', 'true');
+      dot.className = 'dot-sep';
+      el.before(dot);
+    });
+  });
+</script>

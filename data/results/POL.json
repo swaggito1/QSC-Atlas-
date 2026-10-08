@@ -97,5 +97,27 @@
     "url": "https://uodo.gov.pl/en/553/1953",
     "summary": "Report by Poland's Personal Data Protection Office (UODO) on its conference on quantum technologies and data protection, explicitly discussing the use of post-quantum cryptography in digital-identity wallets and blockchain and the need to develop post-quantum software against the quantum threat. Flagged for human review: issuer is a domestic regulator but uodo.gov.pl is not on the trusted-domains list, the publication date could not be verified, and the item is a conference report rather than a substantive PQC policy or guidance document.",
     "included": false
+  },
+  {
+    "title": "Nowy przetarg ECCC: 25 mln euro na budowę europejskiej infrastruktury do testowania kryptografii postkwantowej (PQC)",
+    "country": "POL",
+    "issuingOrg": "NCC-PL",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.gov.pl/web/cyber-nccpl/nowy-przetarg-eccc-25-mln-euro-na-budowe-europejskiej-infrastruktury-do-testowania-kryptografii-postkwantowej-pqc",
+    "summary": "News item from NCC-PL (Krajowe Centrum Kompetencji Cyberbezpieczeństwa, Poland's National Cybersecurity Competence Centre under the Ministry of Digital Affairs) announcing a 25 million euro ECCC tender (TED 849943-2025) to build a European benchmarking infrastructure for testing post-quantum cryptography. It describes verification of interoperability and crypto-agility during migration to PQC algorithms and open-source libraries supporting hybrid classical and post-quantum approaches, and encourages Polish firms, research institutes and integrators to apply.",
+    "included": true
+  },
+  {
+    "title": "Sprawozdanie z działalności Społecznego Zespołu Ekspertów przy Prezesie UODO za okres 10 czerwca 2025 r. - 27 czerwca 2026 r.",
+    "country": "POL",
+    "issuingOrg": "UODO",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://uodo.gov.pl/pl/file/7787",
+    "summary": "Activity report of the Social Expert Team advising the President of the Polish data protection authority (UODO) for June 2025 to June 2026. It names quantum technologies and post-quantum cryptography as an important area of the team's work, including a talk on the EU quantum strategy and post-quantum cryptography roadmap.",
+    "included": true
   }
 ]

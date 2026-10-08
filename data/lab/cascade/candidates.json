@@ -1,0 +1,536 @@
+{
+  "_about": "Candidate edges found by scripts/lab/cascade-candidates.mjs. Leads only: never rendered. An edge becomes real only when its document has been read and the sentence naming the standard quoted in edges.json.",
+  "generatedAt": "2026-09-30",
+  "candidates": [
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
+      "docTitle": "Information Security Manual: March 2026 changes",
+      "issuingOrg": "ASD",
+      "iso3": "AUS",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-03/ISM%20March%202026%20changes%20(March%202026).pdf",
+      "docTitle": "Information Security Manual: March 2026 changes",
+      "issuingOrg": "ASD",
+      "iso3": "AUS",
+      "year": 2026,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-06/Information%20security%20manual%20(June%202026).pdf",
+      "docTitle": "Information security manual (June 2026)",
+      "issuingOrg": "ASD",
+      "iso3": "AUS",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gov.au/sites/default/files/2026-06/Information%20security%20manual%20(June%202026).pdf",
+      "docTitle": "Information security manual (June 2026)",
+      "issuingOrg": "ASD",
+      "iso3": "AUS",
+      "year": 2026,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gc.ca/en/guidance/cryptographic-algorithms-unclassified-protected-protected-b-information-itsp40111",
+      "docTitle": "Cryptographic algorithms for UNCLASSIFIED, PROTECTED A, and PROTECTED B information (ITSP.40.111)",
+      "issuingOrg": "CCCS",
+      "iso3": "CAN",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gc.ca/en/guidance/cryptographic-algorithms-unclassified-protected-protected-b-information-itsp40111",
+      "docTitle": "Cryptographic algorithms for UNCLASSIFIED, PROTECTED A, and PROTECTED B information (ITSP.40.111)",
+      "issuingOrg": "CCCS",
+      "iso3": "CAN",
+      "year": 2026,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cyber.gc.ca/en/guidance/cryptographic-algorithms-unclassified-protected-protected-b-information-itsp40111",
+      "docTitle": "Cryptographic algorithms for UNCLASSIFIED, PROTECTED A, and PROTECTED B information (ITSP.40.111)",
+      "issuingOrg": "CCCS",
+      "iso3": "CAN",
+      "year": 2026,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bit.admin.ch/dam/en/sd-web/AxB62cQzpkmh/empfohlene-algorithmen-abk%C3%BCndigung-rsa-de.pdf",
+      "docTitle": "Empfohlene Algorithmen - Abkündigung RSA (Terminierung RSA)",
+      "issuingOrg": "BIT (FOITT)",
+      "iso3": "CHE",
+      "year": 2026,
+      "matchedSynonym": "CRYSTALS-Kyber",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bit.admin.ch/dam/en/sd-web/AxB62cQzpkmh/empfohlene-algorithmen-abk%C3%BCndigung-rsa-de.pdf",
+      "docTitle": "Empfohlene Algorithmen - Abkündigung RSA (Terminierung RSA)",
+      "issuingOrg": "BIT (FOITT)",
+      "iso3": "CHE",
+      "year": 2026,
+      "matchedSynonym": "CRYSTALS-Dilithium",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bit.admin.ch/dam/en/sd-web/AxB62cQzpkmh/empfohlene-algorithmen-abk%C3%BCndigung-rsa-de.pdf",
+      "docTitle": "Empfohlene Algorithmen - Abkündigung RSA (Terminierung RSA)",
+      "issuingOrg": "BIT (FOITT)",
+      "iso3": "CHE",
+      "year": 2026,
+      "matchedSynonym": "SPHINCS+",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bit.admin.ch/dam/en/sd-web/AxB62cQzpkmh/empfohlene-algorithmen-abk%C3%BCndigung-rsa-de.pdf",
+      "docTitle": "Empfohlene Algorithmen - Abkündigung RSA (Terminierung RSA)",
+      "issuingOrg": "BIT (FOITT)",
+      "iso3": "CHE",
+      "year": 2026,
+      "matchedSynonym": "FALCON",
+      "standardId": "FIPS-206",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
+      "docTitle": "BSI erweitert kryptographische Empfehlungen mit Blick auf Quantencomputer",
+      "issuingOrg": "BSI",
+      "iso3": "DEU",
+      "year": 2025,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
+      "docTitle": "BSI erweitert kryptographische Empfehlungen mit Blick auf Quantencomputer",
+      "issuingOrg": "BSI",
+      "iso3": "DEU",
+      "year": 2025,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
+      "docTitle": "BSI erweitert kryptographische Empfehlungen mit Blick auf Quantencomputer",
+      "issuingOrg": "BSI",
+      "iso3": "DEU",
+      "year": 2025,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
+      "docTitle": "BSI erweitert kryptographische Empfehlungen mit Blick auf Quantencomputer",
+      "issuingOrg": "BSI",
+      "iso3": "DEU",
+      "year": 2025,
+      "matchedSynonym": "XMSS",
+      "standardId": "SP-800-208",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.ccn-cert.cni.es/es/series-ccn-stic/guias-de-acceso-publico-ccn-stic/6954-ccn-stic-221-guia-de-mecanismos-criptograficos-autorizados-por-el-ccn-1/file.html",
+      "docTitle": "CCN-STIC 221 - Guía de mecanismos criptográficos autorizados por el CCN (noviembre 2025)",
+      "issuingOrg": "CCN (Centro Criptológico Nacional)",
+      "iso3": "ESP",
+      "year": 2025,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.etsi.org/deliver/etsi_tr/104200_104299/10423902/01.01.01_60/tr_10423902v010101p.pdf",
+      "docTitle": "ETSI TR 104 239-2 V1.1.1 - Quantum-Safe Cryptography (QSC); Secure Implementation Guidance for Key Encapsulation Mechanisms and Digital Signature Schemes; Part 2: ML-KEM",
+      "issuingOrg": "ETSI",
+      "iso3": "EUU",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://www.ncsc.gov.uk/blog-post/post-quantum-cryptography-what-comes-next",
+      "docTitle": "Post-quantum cryptography: what comes next?",
+      "issuingOrg": "NCSC",
+      "iso3": "GBR",
+      "year": 2024,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.ncsc.gov.uk/blog-post/post-quantum-cryptography-what-comes-next",
+      "docTitle": "Post-quantum cryptography: what comes next?",
+      "issuingOrg": "NCSC",
+      "iso3": "GBR",
+      "year": 2024,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.ncsc.gov.uk/blog-post/post-quantum-cryptography-what-comes-next",
+      "docTitle": "Post-quantum cryptography: what comes next?",
+      "issuingOrg": "NCSC",
+      "iso3": "GBR",
+      "year": 2024,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Firme_Digitali_v1.0.pdf/aa1b3d8e-38d9-984c-97ef-0c855b0278e8?t=1781863650694",
+      "docTitle": "Linee Guida Funzioni Crittografiche: Firme Digitali (v1.0)",
+      "issuingOrg": "ACN",
+      "iso3": "ITA",
+      "year": null,
+      "matchedSynonym": "FIPS 204",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Firme_Digitali_v1.0.pdf/aa1b3d8e-38d9-984c-97ef-0c855b0278e8?t=1781863650694",
+      "docTitle": "Linee Guida Funzioni Crittografiche: Firme Digitali (v1.0)",
+      "issuingOrg": "ACN",
+      "iso3": "ITA",
+      "year": null,
+      "matchedSynonym": "FIPS 205",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Firme_Digitali_v1.0.pdf/aa1b3d8e-38d9-984c-97ef-0c855b0278e8?t=1781863650694",
+      "docTitle": "Linee Guida Funzioni Crittografiche: Firme Digitali (v1.0)",
+      "issuingOrg": "ACN",
+      "iso3": "ITA",
+      "year": null,
+      "matchedSynonym": "FALCON",
+      "standardId": "FIPS-206",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Transport_Layer_Security_TLS.pdf/32f67240-a7e5-c707-e7fd-cc3ac0de2d3c?t=1781863650693",
+      "docTitle": "Linee Guida Funzioni Crittografiche: Transport Layer Security (TLS)",
+      "issuingOrg": "ACN",
+      "iso3": "ITA",
+      "year": null,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cryptrec.go.jp/symposium/2025_cryptrec-eval.pdf",
+      "docTitle": "Cryptographic Technology Evaluation Committee Activity Report (2025)",
+      "issuingOrg": "CRYPTREC",
+      "iso3": "JPN",
+      "year": 2025,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2022r2.pdf",
+      "docTitle": "List of Ciphers to be Referred to for Procurement in e-Government (CRYPTREC Cipher List), LS-0001-2022R2",
+      "issuingOrg": "CRYPTREC (Digital Agency / MIC / METI)",
+      "iso3": "JPN",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.ncsc.nl/api/media/sites/default/files/TLS-Security%20guidelines-2025-05.pdf",
+      "docTitle": "Security guidelines for Transport Layer Security (TLS) version 2025-05",
+      "issuingOrg": "NCSC-NL",
+      "iso3": "NLD",
+      "year": 2025,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.gov.pl/web/national-institute-of-telecommunications/seminar-with-prof-kris-gaj-post-quantum-digital-signature-standards-and-hardware-implementations",
+      "docTitle": "Seminar with Prof. Kris Gaj: Post-Quantum Digital Signature Standards and Hardware Implementations",
+      "issuingOrg": "Instytut Łączności – PIB (National Institute of Telecommunications)",
+      "iso3": "POL",
+      "year": 2025,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.gov.pl/web/national-institute-of-telecommunications/seminar-with-prof-kris-gaj-post-quantum-digital-signature-standards-and-hardware-implementations",
+      "docTitle": "Seminar with Prof. Kris Gaj: Post-Quantum Digital Signature Standards and Hardware Implementations",
+      "issuingOrg": "Instytut Łączności – PIB (National Institute of Telecommunications)",
+      "iso3": "POL",
+      "year": 2025,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.ncsc.se/siteassets/publikationer/rekommendationer-for-overgangen-till-kvantsaker-kryptografi.pdf",
+      "docTitle": "Rekommendationer för övergången till kvantsäker kryptografi (Tidpunkter)",
+      "issuingOrg": "NCSC Sweden",
+      "iso3": "SWE",
+      "year": 2026,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://pqc-learn.ncsa.or.th/standards.html",
+      "docTitle": "Recommended Post-Quantum Cryptography Standards (QUANTA)",
+      "issuingOrg": "NCSA",
+      "iso3": "THA",
+      "year": null,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://pqc-learn.ncsa.or.th/standards.html",
+      "docTitle": "Recommended Post-Quantum Cryptography Standards (QUANTA)",
+      "issuingOrg": "NCSA",
+      "iso3": "THA",
+      "year": null,
+      "matchedSynonym": "FIPS 204",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://pqc-learn.ncsa.or.th/standards.html",
+      "docTitle": "Recommended Post-Quantum Cryptography Standards (QUANTA)",
+      "issuingOrg": "NCSA",
+      "iso3": "THA",
+      "year": null,
+      "matchedSynonym": "FIPS 205",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://csrc.nist.gov/projects/pqc-dig-sig",
+      "docTitle": "Post-Quantum Cryptography: Additional Digital Signature Schemes",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": null,
+      "matchedSynonym": "FIPS 204",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://csrc.nist.gov/projects/pqc-dig-sig",
+      "docTitle": "Post-Quantum Cryptography: Additional Digital Signature Schemes",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": null,
+      "matchedSynonym": "FIPS 205",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://home.treasury.gov/system/files/136/FAQs-Financial-Sector-Risks-Quantum-Computing.pdf",
+      "docTitle": "Frequently Asked Questions on Financial Sector Risks from Quantum Computing",
+      "issuingOrg": "U.S. Department of the Treasury",
+      "iso3": "USA",
+      "year": null,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://pages.nist.gov/piv-standards/",
+      "docTitle": "PIV Standards and Guidelines - PQC Drafts (SP 800-73 Parts 1 and 2, SP 800-78, PQC Overview)",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": null,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://pages.nist.gov/piv-standards/",
+      "docTitle": "PIV Standards and Guidelines - PQC Drafts (SP 800-73 Parts 1 and 2, SP 800-78, PQC Overview)",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": null,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.203.pdf",
+      "docTitle": "FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM)",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2024,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.204.pdf",
+      "docTitle": "FIPS 204: Module-Lattice-Based Digital Signature Standard (ML-DSA)",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2024,
+      "matchedSynonym": "FIPS 204",
+      "standardId": "FIPS-204",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.205.pdf",
+      "docTitle": "FIPS 205: Stateless Hash-Based Digital Signature Standard (SLH-DSA)",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2024,
+      "matchedSynonym": "FIPS 205",
+      "standardId": "FIPS-205",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+      "docTitle": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2024,
+      "matchedSynonym": "FIPS 203",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf",
+      "docTitle": "NIST IR 8545: Status Report on the Fourth Round of the NIST Post-Quantum Cryptography Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2025,
+      "matchedSynonym": "HQC",
+      "standardId": "HQC",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+      "docTitle": "NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2025,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+      "docTitle": "NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2025,
+      "matchedSynonym": "HQC",
+      "standardId": "HQC",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://csrc.nist.gov/pubs/sp/800/230/ipd",
+      "docTitle": "NIST SP 800-230 (Initial Public Draft): Additional SLH-DSA Parameter Sets for Limited Signature Use Cases",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "title"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8610.pdf",
+      "docTitle": "NIST IR 8610: Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "FIPS 204",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8610.pdf",
+      "docTitle": "NIST IR 8610: Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "FIPS 205",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8610.pdf",
+      "docTitle": "NIST IR 8610: Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "SP 800-208",
+      "standardId": "SP-800-208",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/05/nine-candidates-advance-third-round-additional-digital-signatures-pqc",
+      "docTitle": "Nine Candidates Advance to the Third Round of the Additional Digital Signatures for the PQC Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/05/nine-candidates-advance-third-round-additional-digital-signatures-pqc",
+      "docTitle": "Nine Candidates Advance to the Third Round of the Additional Digital Signatures for the PQC Standardization Process",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "SLH-DSA",
+      "standardId": "FIPS-205",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/06/working-drafts-post-quantum-cryptography-updates-piv-standards",
+      "docTitle": "Working Drafts: Post-Quantum Cryptography Updates to the PIV Standards",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "ML-KEM",
+      "standardId": "FIPS-203",
+      "field": "summary"
+    },
+    {
+      "docUrl": "https://www.nist.gov/news-events/news/2026/06/working-drafts-post-quantum-cryptography-updates-piv-standards",
+      "docTitle": "Working Drafts: Post-Quantum Cryptography Updates to the PIV Standards",
+      "issuingOrg": "NIST",
+      "iso3": "USA",
+      "year": 2026,
+      "matchedSynonym": "ML-DSA",
+      "standardId": "FIPS-204",
+      "field": "summary"
+    }
+  ]
+}

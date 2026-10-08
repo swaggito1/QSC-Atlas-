@@ -1,0 +1,263 @@
+---
+// The site header (spec 3.1 and 3.2): one 56px row at every width.
+// 1000px and wider: the wordmark, the shown section links and the 200px finder field.
+// Narrower: the wordmark, a Find button and a Menu, both native details elements, so they
+// open and close without JavaScript; with it, Escape closes either and returns focus.
+// Every link comes from primaryNav(), which lists only built sections ("Standards" opens the
+// Standards overview since 5 October 2026, and no item names EU rules). Since the minimal pass
+// the header is how a page says which section it is in (there is no breadcrumb): the section
+// links are the kit's text tabs at the control step, ink-muted, a hairline underline on hover and
+// the current one in ink with a 2px teal underline (by colour and underline, never by weight, so
+// no link moves when the section changes); the open Find panel is an overlay on the surface. The
+// row keeps one
+// measure (--shell-max) on every page, so the wordmark, the links and the finder never move
+// sideways when a visitor goes from one page to another; pages set their own content widths.
+import CountryFinder from './CountryFinder.astro';
+import MenuSheet from './MenuSheet.astro';
+import { primaryNav, isCurrent } from '../../lib/site/nav';
+
+interface Props {
+  pathname: string;
+  title: string;
+  home?: boolean;
+}
+const { pathname, title, home = false } = Astro.props;
+const items = primaryNav().map((item) => ({ ...item, current: isCurrent(item, pathname) }));
+---
+
+<header class:list={['site-header', { 'is-home': home }]}>
+  <div class="hd-row">
+    <a class="wordmark" href="/" aria-current={pathname === '/' ? 'page' : undefined}>QSC Atlas</a>
+
+    <nav class="hd-nav" aria-label="Sections">
+      <ul>
+        {
+          items.map((item) => (
+            <li>
+              <a href={item.href} aria-current={item.current ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="hd-finder">
+      <CountryFinder id="finder-header" variant="header" />
+    </div>
+
+    <details class="hd-pop hd-find" data-hd="find">
+      <summary class="hd-btn hd-btn--icon">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.75"></circle><path d="M10 10l4.25 4.25"></path></svg>
+        <span class="sr-only">Find a country</span>
+      </summary>
+      <div class="hd-panel">
+        <div class="hd-panel-inner">
+          <CountryFinder id="finder-panel" variant="panel" />
+        </div>
+      </div>
+    </details>
+
+    <MenuSheet items={items} pathname={pathname} title={title} />
+  </div>
+</header>
+
+<script>
+  import { initShell } from '../../scripts/finder';
+  initShell();
+</script>
+
+<style>
+  /* 56px in all, the rule included */
+  .site-header {
+    position: relative;
+    z-index: 50;
+    height: var(--header-h);
+    background: var(--paper);
+    border-bottom: 1px solid var(--hairline);
+  }
+  /* the home page drops the rule so the title and globe stand alone; the row keeps its height */
+  .site-header.is-home {
+    border-bottom-color: transparent;
+  }
+  .hd-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    height: 100%;
+    max-width: var(--shell-max);
+    margin: 0 auto;
+    padding: 0 var(--shell-gutter);
+  }
+
+  /* the brand, not a step of the type scale: its own 1.1rem at 600. Hover and press give it the
+     section links' hairline underline, so it reads as the way home */
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    flex: none;
+    font-weight: var(--weight-ui-strong);
+    font-size: 1.1rem;
+    letter-spacing: var(--tracking-wide);
+    text-decoration: underline 2px transparent;
+    text-underline-offset: 6px;
+    color: var(--ink);
+    white-space: nowrap;
+    transition: text-decoration-color var(--dur-fast) var(--ease-standard);
+  }
+  .wordmark:hover {
+    text-decoration-color: var(--hairline);
+  }
+  .wordmark:active {
+    text-decoration-color: var(--ink-muted);
+  }
+
+  .hd-nav {
+    margin-left: auto;
+  }
+  .hd-nav ul {
+    display: flex;
+    gap: var(--hd-link-gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hd-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    font-size: var(--type-control);
+    color: var(--ink-muted);
+    text-decoration: underline 2px transparent;
+    text-underline-offset: 6px;
+    white-space: nowrap;
+    transition: color var(--dur-fast) var(--ease-standard), text-decoration-color var(--dur-fast) var(--ease-standard);
+  }
+  /* a short section name ("About") still has a 44px-wide hit area, inside the gap beside it */
+  .hd-nav a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .hd-nav a:hover {
+    color: var(--ink);
+    text-decoration-color: var(--hairline);
+  }
+  .hd-nav a:active {
+    color: var(--ink);
+    text-decoration-color: var(--ink-muted);
+  }
+  /* the current section: ink, with a 2px teal underline */
+  .hd-nav a[aria-current='page'] {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+  }
+
+  /* the field fills the row; its rule is the header's own, which turns to 2px teal on focus */
+  .hd-finder {
+    flex: none;
+    align-self: stretch;
+    width: var(--finder-w);
+  }
+  .hd-finder :global(.finder),
+  .hd-finder :global(.fd-field),
+  .hd-finder :global(.fd-fallback),
+  .hd-finder :global(input) {
+    height: 100%;
+  }
+  .hd-finder :global(.fd-field),
+  .hd-finder :global(.fd-fallback) {
+    border-bottom: 0;
+  }
+  .hd-finder :global(.fd-field:focus-within),
+  .hd-finder :global(.fd-fallback:hover) {
+    box-shadow: 0 1px 0 0 var(--accent), inset 0 -1px 0 0 var(--accent);
+  }
+
+  /* the narrow controls: hidden at 1000px and wider */
+  .hd-pop {
+    display: none;
+  }
+  .hd-pop > summary {
+    list-style: none;
+  }
+  .hd-pop > summary::-webkit-details-marker {
+    display: none;
+  }
+  .hd-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--target-min);
+    min-height: var(--target-min);
+    color: var(--ink);
+    cursor: pointer;
+    user-select: none;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .hd-btn:hover,
+  .hd-btn:active {
+    color: var(--accent-strong);
+  }
+  .hd-btn--icon svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+  .hd-find[open] > .hd-btn {
+    box-shadow: inset 0 calc(-1 * var(--border-width-strong)) 0 var(--accent);
+  }
+  /* the Find panel: an overlay on the surface, a hairline at its foot and the one shadow */
+  .hd-panel {
+    position: absolute;
+    top: calc(100% + 1px); /* below the header's hairline, which stays in view */
+    left: 0;
+    right: 0;
+    background: var(--surface-overlay);
+    border-bottom: var(--rule);
+    box-shadow: var(--shadow-panel);
+  }
+  .hd-panel-inner {
+    max-width: var(--shell-max);
+    margin: 0 auto;
+    padding: var(--space-2) var(--shell-gutter) var(--space-4);
+  }
+
+  @media (max-width: 999.98px) {
+    .hd-row {
+      gap: var(--space-1);
+    }
+    .hd-nav,
+    .hd-finder {
+      display: none;
+    }
+    .hd-pop {
+      display: block;
+    }
+    .hd-find {
+      margin-left: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wordmark,
+    .hd-nav a,
+    .hd-btn {
+      transition: none;
+    }
+  }
+
+  @media print {
+    .hd-nav,
+    .hd-finder,
+    .hd-pop {
+      display: none !important;
+    }
+  }
+</style>

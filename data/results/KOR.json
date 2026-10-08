@@ -163,5 +163,16 @@
     "url": "https://www.kisa.or.kr/403/form?postSeq=10673",
     "summary": "KISA procurement/tender notice (19 May 2026) for building joint-certificate PKI infrastructure to support the post-quantum cryptography transition, budget KRW 95 million, project running through 30 November 2026.",
     "included": true
+  },
+  {
+    "title": "양자내성암호 국가공모전 2라운드(최종) 결과 발표",
+    "country": "KOR",
+    "issuingOrg": "KpqC",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://kpqc.or.kr/contents/03_exhibit/board.html?board_id=board_competition&mode=view&no=9&cate=",
+    "summary": "Notice dated 16 January 2025 from the KpqC research group (양자내성암호연구단) announcing the four final Round 2 algorithms of Korea's national post-quantum cryptography competition: AIMer and HAETAE for digital signatures, NTRU+ and SMAUG-T for public-key encryption and key establishment. It points readers to the National Intelligence Service homepage for the official announcement.",
+    "included": true
   }
 ]

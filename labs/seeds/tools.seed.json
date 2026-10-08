@@ -1,0 +1,8 @@
+{
+  "_about": "Registry of lab tools. Prompt 00 copies this to data/lab/tools.json. The public flag controls whether a tool is included in the production build; preview deployments build every tool. A tool goes public only after Swann records Lorenzo Pupillo's no-objection in the pull request.",
+  "tools": [
+    { "id": "exposure", "title": "Exposure Clock", "route": "/lab/exposure-clock", "byline": "Swann Ashworth", "public": false, "status": "planned", "gates": ["lorenzo-no-objection"] },
+    { "id": "cascade", "title": "Standards Cascade", "route": "/lab/cascade", "byline": "Swann Ashworth", "public": false, "status": "planned", "gates": ["lorenzo-no-objection"] },
+    { "id": "rulebook", "title": "Rulebook in Motion", "route": "/lab/rulebook", "byline": "Swann Ashworth", "public": false, "status": "planned", "gates": ["lorenzo-no-objection", "legal-disclaimer-reviewed"] }
+  ]
+}

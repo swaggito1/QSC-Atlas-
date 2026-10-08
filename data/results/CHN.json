@@ -64,5 +64,16 @@
     "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_1937428197396713472.html",
     "summary": "English-language announcement by the Institute of Commercial Cryptography Standards (under OSCCA's standards system) launching the NGCC global call for next-generation public-key, hash and block-cipher algorithms, explicitly motivated by the threat of quantum computing and aimed at standardising quantum-resistant commercial cryptographic algorithms. This is the English counterpart to the Chinese NGCC notice already in the corpus, at a distinct URL.",
     "included": false
+  },
+  {
+    "title": "国家密码管理局公告（第46号）",
+    "country": "CHN",
+    "issuingOrg": "OSCCA",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.oscca.gov.cn/sca/xwdt/2023-12/13/content_1061150.shtml",
+    "summary": "State Cryptography Administration announcement (12 December 2023) releasing the application guidelines for the first batch of general and key projects of the National Cryptography Science Fund. Several funded research directions cover quantum-resistant public-key cryptography, including practical design, security evaluation, implementation, certification systems, migration techniques and integration with existing protocols against store-now-decrypt-later attacks.",
+    "included": true
   }
 ]

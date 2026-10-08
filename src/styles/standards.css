@@ -1,0 +1,547 @@
+/* qscatlas.org: the Standards overview and the page of each standard (spec 8). Ink on paper, as
+   the profile is: hairline rows, section headings in Newsreader with whitespace above them, dates
+   and codes in mono and every phrase in the interface face. CEPS teal (palette A) marks the links
+   and the current view, nothing else; no boxes, no fills, no left rules. The frame around both
+   pages is frame.css; the shared kit is lab.css and global.css (.row-link, .meta-line, .link). */
+
+.sd {
+  min-width: 0;
+}
+
+/* a section head: the site's section heading (global.css .section-h), Newsreader in ink, with
+   whitespace above it and no rule */
+.sd-h {
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.sd-section {
+  margin-top: var(--section-gap);
+}
+.sd-section--first {
+  margin-top: 0;
+}
+.sd-intro {
+  max-width: var(--measure);
+  margin: var(--space-2) 0 var(--space-6);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.sd-empty {
+  margin: var(--space-3) 0 0;
+  font-family: var(--font-reading);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* other names, muted, in the interface face: under a standard's name in the table, and under the
+   meta line */
+.sd-aka {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-instrument);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+}
+.sd-aka--head {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+}
+/* ---- one standard: who names it ---------------------------------------------------------- */
+
+/* one wrapped line of the governments on a long page, each a jump to its block */
+.sd-jump ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: var(--fr-close-w, 48rem);
+  list-style: none;
+  margin: calc(-1 * var(--space-3)) 0 var(--space-4);
+  padding: 0;
+  font-size: var(--text-sm);
+}
+.sd-jump li {
+  display: inline-flex;
+  align-items: center;
+}
+/* the dot follows a name, so a line that wraps ends on a dot and the next starts on a name */
+.sd-jump li:not(:last-child)::after {
+  content: '\00B7' / '';
+  padding: 0 var(--space-2);
+  color: var(--ink-muted);
+}
+.sd-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.sd-jump a:hover {
+  color: var(--accent-strong);
+}
+
+.sd-namers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sd-namer {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-10);
+  padding: var(--space-5) 0 var(--space-6);
+  border-top: 1px solid var(--hairline);
+  scroll-margin-top: var(--space-8);
+}
+.sd-gov {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+}
+.sd-first {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.sd-gov-links {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+}
+.sd-gov-links a,
+.sd-source {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.sd-gov-links a:hover,
+.sd-source:hover {
+  color: var(--accent-strong);
+}
+.sd-group + .sd-group {
+  margin-top: var(--space-5);
+}
+/* the relation phrase: what this government's documents do with the standard */
+.sd-rel {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink);
+}
+.sd-docs,
+.sd-events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sd-doc,
+.sd-event {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 0 var(--space-4);
+  padding: var(--space-2) 0;
+}
+.sd-doc + .sd-doc,
+.sd-event + .sd-event {
+  border-top: 1px solid var(--hairline);
+}
+.sd-date {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1;
+  font-size: var(--text-xs);
+  line-height: 1.9;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.sd-doc-body,
+.sd-event-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+/* a document opens its row on the Atlas documents page: the title and the issuer are one link,
+   at least 44px tall, with only the title teal and underlined */
+.sd-doc-link {
+  min-height: var(--target-min);
+  padding: 2px 0;
+  color: inherit;
+  text-decoration: none;
+}
+.sd-doc-title {
+  font-family: var(--font-reading);
+  font-size: var(--text-md);
+  line-height: var(--leading-snug);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.sd-doc-link:hover .sd-doc-title {
+  color: var(--accent-strong);
+}
+.sd-doc-link .sd-issuer {
+  margin-top: 2px;
+}
+.sd-issuer {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+}
+.sd-event-label {
+  max-width: var(--measure);
+  font-family: var(--font-reading);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  padding-top: 2px;
+}
+
+/* the way into the Cascade, as Where to go next reads: teal words, underlined, and a teal arrow;
+   the rule, the words and the arrow keep the width of Where to go next below, so their arrows
+   line up */
+.sd-cascade {
+  max-width: var(--fr-close-w, 48rem);
+  margin: var(--space-4) 0 0;
+  border-top: var(--rule);
+}
+.sd-cascade a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 52px;
+  padding: var(--space-2) 0;
+  line-height: var(--leading-snug);
+  font-family: var(--font-reading);
+  font-size: var(--text-lg);
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.sd-cascade a span:first-child {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.sd-cascade a:hover {
+  color: var(--accent-strong);
+}
+.sd-arrow {
+  font-family: var(--font-instrument);
+  color: inherit;
+}
+
+.sd-jump a:focus-visible,
+.sd-gov-links a:focus-visible,
+.sd-source:focus-visible,
+.sd-doc-link:focus-visible,
+.sd-cascade a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- narrower screens ---------------------------------------------------------------------- */
+
+@media (max-width: 899px) {
+  .sd-namer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sd-gov-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-4);
+    margin-top: 0;
+  }
+}
+
+/* under 640px a standard page's documents and events drop their date column: the date goes
+   above the words */
+@media (max-width: 639px) {
+  .sd-doc,
+  .sd-event {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sd-date {
+    line-height: 1.5;
+  }
+}
+
+/* ---- the overview (/standards) -------------------------------------------------------------
+   One section a body, in the order of the plan, under its Newsreader heading and one muted line
+   saying what the body is; then its standards as hairline rows: the name in Newsreader (ink, on
+   a thin teal underline where it opens the standard's own page), the meta line of kind, status
+   and date (dates in mono), what it builds on and who cites it. The documents are one step away
+   in the kit's disclosure. No card, no box, no left rule; teal is text-weight only, so the
+   current view in the switch stays the view's one teal mark. */
+
+.so {
+  min-width: 0;
+}
+.so-section {
+  margin-top: var(--gap-related);
+}
+.so-section:first-child {
+  margin-top: 0;
+}
+.so-h {
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+/* what a body is, in one line, and the national processes' own line */
+.so-about {
+  max-width: var(--measure);
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.so-about--row {
+  margin-top: var(--gap-mark);
+}
+/* two bodies under one heading (the IETF and the IRTF): each name, then its line */
+.so-bodies {
+  max-width: var(--measure);
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.so-body + .so-body {
+  margin-top: var(--gap-mark);
+}
+.so-body dt {
+  display: inline;
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink);
+}
+.so-body dt::after {
+  content: ': ';
+}
+.so-body dd {
+  display: inline;
+  margin: 0;
+}
+
+/* the way into the Cascade on this body: a quiet index link (global.css .row-link, ink on a thin
+   teal underline), at the small step under the body's own line, with a 44px hit area that moves
+   nothing */
+.so-cascade {
+  max-width: var(--measure);
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+}
+.so-cascade-link {
+  position: relative;
+}
+.so-cascade-link::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+
+.so-rows {
+  list-style: none;
+  max-width: var(--w-list);
+  margin: var(--gap-group) 0 0;
+  padding: 0;
+}
+.so-row {
+  padding: var(--space-4) 0 var(--space-4);
+  border-top: var(--rule);
+  scroll-margin-top: var(--space-8);
+}
+.so-row:target {
+  background: var(--accent-wash);
+}
+.so-name {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+/* the name opens the standard's own page (a build on Swann's machine only): a 44px hit area that
+   moves nothing */
+.so-name-link {
+  position: relative;
+}
+.so-name-link::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+/* a lead in a local build, said in words: never a colour, never a box */
+.so-lead {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui);
+  letter-spacing: 0;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.so-lead::before {
+  content: '\00A0\00B7\20';
+  content: '\00A0\00B7\20' / '';
+  color: var(--ink-faint);
+}
+.so-facts {
+  margin-top: var(--gap-mark);
+}
+/* a date or a version never breaks inside itself ("30 / January 2026" on a phone) */
+.so-facts .mono,
+.so-doc-meta .mono {
+  white-space: nowrap;
+}
+.so-line {
+  max-width: var(--measure);
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+}
+/* a link inside a line (Builds on FIPS 203): teal words, a 44px hit area that moves nothing */
+.so-inline {
+  position: relative;
+  white-space: nowrap;
+}
+.so-inline::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+
+/* the documents, one step away */
+.so-evidence {
+  margin-top: var(--space-2);
+}
+.so-evidence > summary {
+  width: fit-content;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink);
+}
+.so-docs {
+  list-style: none;
+  max-width: var(--measure);
+  margin: var(--space-1) 0 var(--space-2);
+  padding: 0 0 0 var(--space-6);
+}
+.so-doc {
+  padding: var(--space-3) 0;
+}
+.so-doc + .so-doc {
+  border-top: var(--rule);
+}
+.so-doc-head {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+.so-doc-title {
+  position: relative;
+}
+.so-doc-title::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.so-doc-meta {
+  margin-top: var(--gap-mark);
+}
+.so-written {
+  margin: var(--gap-mark) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}
+/* a source's words, for review only (SourceWords): the épuré quotation, its place under it */
+.so-quote {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.so-quote + .so-quote {
+  margin-top: var(--space-2);
+}
+.so-quote-at {
+  display: block;
+  font-family: var(--font-instrument);
+  color: var(--ink-faint);
+}
+
+.so-name-link:focus-visible,
+.so-inline:focus-visible,
+.so-doc-title:focus-visible,
+.so-cascade-link:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media print {
+  .so-evidence > summary {
+    display: none;
+  }
+  .so-docs {
+    padding-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sd-jump a,
+  .sd-gov-links a,
+  .sd-source,
+  .sd-doc-title,
+  .sd-cascade a {
+    transition: none;
+  }
+}
+
+@media print {
+  .sd-jump,
+  .sd-gov-links,
+  .sd-cascade {
+    display: none;
+  }
+  .sd-doc-title {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,710 @@
+---
+// The migration approach (spec 5.2): which of the NCSC's routes fits each system. Taken off the
+// Atlas on 5 October 2026 (Swann) and kept for its return: its registry entry has site
+// "elsewhere", so the page is built at /elsewhere/approach on Swann's machine only, no Atlas page
+// links to it, and vercel.json sends its old address, /prepare/approach, to /prepare. Its code
+// keeps this folder (KEPT_FOLDERS in src/lib/site/routes.ts). To bring it back, give the entry
+// section "prepare" and route "/prepare/approach" again, drop that redirect, and restore the
+// links the change of 5 October removed (the Prepare side menu, the Readiness Check, the
+// inventory template and the methodology).
+// Explain first, then the worksheet (Swann, 4 October 2026). The page reads top to bottom:
+//   1. the H1 and a one-sentence lede saying what the page helps a visitor do;
+//   2. What each route means: a small diagram of the NCSC's migration strategy selection, grouped
+//      and ordered as the source's own sentences give it and adding no rule of its own. Each
+//      system you are responsible for; the two cases that need no choice (no public-key
+//      cryptography, a system resting entirely on commodity platforms); the NCSC's five options,
+//      which it sets out for a system that does not rely on commodity technology, in its order;
+//      then its note on legacy systems that cannot move. Every name and plain summary is the
+//      data's (approach.json). The diagram is drawn in CSS over a nested list (a list of the two
+//      groups, each a description list of its routes), so the list is its text alternative: a
+//      screen reader, a print or a page without styles reads the same content, and the two can
+//      never drift apart. Ink on paper: hairlines in ink-faint, no colour, no teal;
+//   3. Your systems: the worksheet, the page's one input. The visitor names systems and chooses a
+//      route for each, under the same two heads and names as the diagram. It is kept in the page's
+//      address after the # and nowhere else; it prints, downloads as CSV and copies as a link, and
+//      nothing is stored, sent or recommended. Clear all and Remove can be undone until the next
+//      edit. The one privacy sentence stands beside it;
+//   4. Source: the NCSC timelines named and linked once, with the place in them and the day they
+//      were read, who they are written for, and the Readiness Check action the routes come from.
+//      The NCSC's own words are kept for review inside SourceWords (Words.astro), each under the
+//      name it backs, never shown to a visitor. Then the frame's Where to go next and About this
+//      view. The head carries no "Reads" line, so the source is named once.
+// The inventory template's Migration approach column names the same five options and two cases.
+//
+// Computed by src/lib/site/prepare-elements.ts; every visible string of the Atlas's own is in
+// data/lab/prepare/elements-copy.json. The script holds no route string and makes no request.
+//
+// Épuré (labs/review/epure-audit.md): Add a system is the view's one filled button. The sentence
+// that nothing is stored or sent stands beside the worksheet, where a visitor needs it, so About
+// this view does not say it again (no local row). The diagram and the worksheet keep the list
+// width (--w-list), their text the reading measure; the source line's link carries a 44px hit area.
+import LabLayout from '../../../lab/LabLayout.astro';
+import SourceWords from '../../frame/SourceWords.astro';
+import Words from '../prepare-inventory/Words.astro';
+import QuotedFrom from '../prepare-inventory/QuotedFrom.astro';
+import { approachModel } from '../../../../lib/site/prepare-elements';
+import { formatDate } from '../../../../lib/lab/format';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  tool: LabTool;
+}
+const { tool } = Astro.props;
+const m = approachModel();
+const c = m.copy;
+const common = m.common;
+const audience = m.writtenFor ? c.writtenFor.replace('{audience}', m.writtenFor) : null;
+// the source's words for review, each under the name on the page it backs, in the diagram's order
+const review = [
+  { label: c.diagramRoot, quotes: m.intro },
+  ...m.cases.map((o) => ({ label: o.label, quotes: o.quotes })),
+  ...m.options.map((o) => ({ label: o.label, quotes: o.quotes })),
+  ...m.legacy.map((o) => ({ label: c.legacyHead, quotes: o.quotes })),
+].filter((r) => r.quotes.length > 0);
+
+// what the script needs, as data: the known route ids, their labels, the CSV header and the strings
+const config = {
+  known: Object.keys(m.labels),
+  labels: m.labels,
+  csvHeader: m.csvHeader,
+  filename: c.filename,
+  strings: {
+    removeLabel: c.removeLabel,
+    rowName: c.rowName,
+    cleared: c.cleared,
+    removed: c.removed,
+    restored: c.restored,
+    printEmpty: c.printEmpty,
+    linkCopied: common.linkCopied,
+    linkFailed: common.linkFailed,
+    csvDone: common.csvDone,
+  },
+};
+---
+
+<LabLayout
+  tool={tool}
+  question={c.question}
+  lede={m.lede}
+  description={m.description}
+  reads={[]}
+  asOf={m.asOf}
+  sources={m.sources}
+  next={m.next}
+>
+  <div class="pe pe-appr">
+    <section class="pe-sec ap-explain" aria-labelledby="ap-explain-h">
+      <h2 class="pe-h2" id="ap-explain-h">{c.routesHead}</h2>
+      <figure class="ap-map" aria-labelledby="ap-explain-h">
+        <p class="ap-root">{c.diagramRoot}</p>
+        <ul class="ap-branches" role="list">
+          {
+            m.cases.length > 0 && (
+              <li class="ap-branch">
+                <h3 class="ap-bh" id="ap-cases-h">
+                  {c.casesHead}
+                </h3>
+                <dl class="ap-leaves">
+                  {m.cases.map((o) => (
+                    <div class="ap-leaf" id={`route-${o.id}`}>
+                      <dt>{o.label}</dt>
+                      <dd>{o.text}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </li>
+            )
+          }
+          <li class="ap-branch">
+            <h3 class="ap-bh" id="ap-opts-h">{c.optionsHead}</h3>
+            <p class="ap-bi">{c.optionsIntro}</p>
+            <dl class="ap-leaves">
+              {
+                m.options.map((o) => (
+                  <div class="ap-leaf" id={`route-${o.id}`}>
+                    <dt>{o.label}</dt>
+                    <dd>{o.text}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+          </li>
+        </ul>
+        {
+          m.legacy.length > 0 && (
+            <div class="ap-cannot">
+              <h3 class="ap-ch" id="ap-legacy-h">
+                {c.legacyHead}
+              </h3>
+              {m.legacy.map((o) => (
+                <p>{o.text}</p>
+              ))}
+            </div>
+          )
+        }
+      </figure>
+    </section>
+
+    <section class="pe-sec pe-ws" aria-labelledby="pe-ws-h" data-pe-ws>
+      <h2 class="pe-h2" id="pe-ws-h">{c.worksheetHead}</h2>
+      <p class="pe-small pe-ws-intro" id="pe-ws-intro">{c.worksheetIntro}</p>
+      <noscript><p class="pe-small">{c.noScript}</p></noscript>
+
+      <div class="pe-ws-head" aria-hidden="true">
+        <span>{c.systemLabel}</span>
+        <span>{c.routeLabel}</span>
+        <span></span>
+      </div>
+      <ul class="pe-rows" data-pe-rows>
+        <li class="pe-row" data-pe-row>
+          <span class="pe-cell-name">
+            <label class="fr-sr" for="pe-name-1">{c.systemLabel} 1</label>
+            <input class="lab-input" type="text" id="pe-name-1" maxlength="120" autocomplete="off" spellcheck="false" placeholder={c.systemHint} data-pe-name />
+          </span>
+          <span class="pe-cell-route">
+            <label class="fr-sr" for="pe-route-1">{c.routeLabel} 1</label>
+            <select class="lab-select" id="pe-route-1" data-pe-route>
+              <option value="">{c.routeNone}</option>
+              {
+                m.choices.map((g) => (
+                  <optgroup label={g.group}>
+                    {g.items.map((o) => (
+                      <option value={o.id}>{o.label}</option>
+                    ))}
+                  </optgroup>
+                ))
+              }
+            </select>
+          </span>
+          <button type="button" class="pe-act pe-remove is-idle" data-pe-remove aria-hidden="true" tabindex="-1">{c.remove}</button>
+        </li>
+      </ul>
+      <p class="pe-ws-add">
+        <button type="button" class="lab-btn lab-btn--primary js-only" data-pe-add>{c.add}</button>
+      </p>
+      <p class="fr-actions js-only" data-pe-actions>
+        <button type="button" class="fr-act" data-pe-copy>{common.copyLink}</button>
+        <span class="dot-sep" aria-hidden="true"></span>
+        <button type="button" class="fr-act" data-pe-csv>{common.downloadCsv}</button>
+        <span class="dot-sep" aria-hidden="true"></span>
+        <button type="button" class="fr-act" data-pe-print>{common.print}</button>
+        <span class="dot-sep" aria-hidden="true"></span>
+        <button type="button" class="fr-act" data-pe-clear>{c.clear}</button>
+        <span class="pe-status">
+          <span class="fr-status" role="status" data-pe-status></span>
+          <button type="button" class="fr-act" data-pe-undo aria-label={c.undoLabel} hidden>{c.undo}</button>
+        </span>
+      </p>
+      <p class="pe-small pe-privacy">{c.privacy}</p>
+      {
+        m.inventoryHref && (
+          <p class="pe-small ap-inv">
+            <a href={m.inventoryHref}>{c.inventoryLink}</a>
+          </p>
+        )
+      }
+
+      <div class="pe-print-only">
+        <h3 class="pe-h3">{c.printHead}</h3>
+        <table class="pe-print-table">
+          <thead>
+            <tr>
+              <th scope="col">{m.csvHeader[0]}</th>
+              <th scope="col">{m.csvHeader[1]}</th>
+            </tr>
+          </thead>
+          <tbody data-pe-print-rows>
+            <tr>
+              <td colspan="2">{c.printEmpty}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script type="application/json" data-pe-config set:html={JSON.stringify(config).replace(/</g, '\\u003c')} />
+    </section>
+
+    <section class="pe-sec ap-source" aria-labelledby="ap-source-h">
+      <h2 class="pe-h2" id="ap-source-h">{c.sourceHead}</h2>
+      {
+        m.source && (
+          <p class="pe-meta ap-src">
+            {/* one line, so no space falls inside the link or before a comma */}
+            <a href={m.source.url} rel="noopener">{m.source.name}</a>{m.source.where && `, ${m.source.where}`}, <span class="ap-nowrap">read {formatDate(m.source.retrievedAt)}</span>
+          </p>
+        )
+      }
+      {audience && <p class="pe-small">{audience}</p>}
+      {
+        review.map((r) => (
+          <>
+            <SourceWords>
+              <p class="ap-rv">{r.label}</p>
+            </SourceWords>
+            <Words quotes={r.quotes} />
+          </>
+        ))
+      }
+      <QuotedFrom actions={m.actions} label={common.quotedFrom} />
+    </section>
+  </div>
+
+  <Fragment slot="method">
+    {m.method.map((p) => <p>{p}</p>)}
+  </Fragment>
+</LabLayout>
+
+<style>
+  /* ---- What each route means: the diagram -----------------------------------------------------
+     A root (each system you are responsible for) joined by thin ink-faint lines to the two groups
+     the NCSC sets apart: the cases that need no choice, then its five options. On phones a trunk
+     runs down the left from the root to the second group's head, with a short tick to each head
+     and each group's routes indented beside it. From 760px the two groups stand side by side
+     under one bar, the root's stem dropping into it, a drop to each head (the page's asymmetric
+     moment: two cases beside five options). Lines are drawn as 1px boxes, never as a left border.
+     Nothing moves. */
+  .ap-map {
+    --ap-line: var(--ink-faint);
+    --ap-drop: var(--space-4);
+    --ap-indent: var(--space-6);
+    --ap-head-mid: 0.75rem; /* the middle of a group head's first line, where its tick meets it */
+    --ap-cols-gap: var(--space-10);
+    margin: 0;
+    max-width: var(--w-list);
+  }
+  .ap-root {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-instrument);
+    font-size: var(--type-control);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+  }
+  .ap-branches {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ap-branch {
+    position: relative;
+    min-width: 0;
+    padding: var(--ap-drop) 0 0 var(--ap-indent);
+  }
+  .ap-branch + .ap-branch {
+    padding-top: var(--gap-group-lg);
+  }
+  /* the trunk beside a group, from the root down; it stops at the last group's head */
+  .ap-branch::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--ap-line);
+  }
+  .ap-branch:last-child::before {
+    bottom: auto;
+    height: calc(var(--ap-drop) + var(--ap-head-mid));
+  }
+  .ap-branch + .ap-branch:last-child::before {
+    height: calc(var(--gap-group-lg) + var(--ap-head-mid));
+  }
+  /* the tick from the trunk to a group's head */
+  .ap-branch::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(var(--ap-drop) + var(--ap-head-mid));
+    width: calc(var(--ap-indent) - var(--space-2));
+    height: 1px;
+    background-color: var(--ap-line);
+  }
+  .ap-branch + .ap-branch::after {
+    top: calc(var(--gap-group-lg) + var(--ap-head-mid));
+  }
+  /* a group's head: Newsreader at the lede step, in ink */
+  .ap-bh {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    letter-spacing: 0;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .ap-bi {
+    margin: var(--gap-mark) 0 0;
+    max-width: var(--measure);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+    text-wrap: pretty;
+  }
+  /* each route: its name in the interface face, its plain meaning under it */
+  .ap-leaves {
+    margin: var(--space-3) 0 0;
+  }
+  .ap-leaf + .ap-leaf {
+    margin-top: var(--space-3);
+  }
+  .ap-leaf dt {
+    max-width: var(--measure);
+    text-wrap: pretty; /* a case's name breaks after its colon, not before its last word */
+    font-family: var(--font-instrument);
+    font-size: var(--type-control);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+  }
+  .ap-leaf dd {
+    margin: 2px 0 0;
+    max-width: var(--measure);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  /* the note on systems that cannot move: apart from the routes, under one hairline */
+  .ap-cannot {
+    max-width: var(--measure);
+    margin-top: var(--gap-group-lg);
+    padding-top: var(--space-3);
+    border-top: var(--rule);
+  }
+  .ap-ch {
+    margin: 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+  }
+  .ap-cannot p {
+    margin: 2px 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  @media (min-width: 760px) {
+    .ap-map {
+      --ap-drop: var(--space-6);
+    }
+    /* the root's stem, then one bar from it across to the second group */
+    .ap-branches {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      column-gap: var(--ap-cols-gap);
+      margin-top: var(--ap-drop);
+    }
+    .ap-branches::before {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--ap-drop));
+      left: 0;
+      width: 1px;
+      height: var(--ap-drop);
+      background-color: var(--ap-line);
+    }
+    .ap-branches:has(> .ap-branch + .ap-branch)::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc((100% - var(--ap-cols-gap)) * 0.4 + var(--ap-cols-gap) + 1px);
+      height: 1px;
+      background-color: var(--ap-line);
+    }
+    .ap-branch,
+    .ap-branch + .ap-branch {
+      padding: var(--ap-drop) 0 0;
+    }
+    /* a drop from the bar to each head */
+    .ap-branch::before,
+    .ap-branch:last-child::before,
+    .ap-branch + .ap-branch:last-child::before {
+      top: 0;
+      bottom: auto;
+      height: calc(var(--ap-drop) - var(--space-2));
+    }
+    .ap-branch::after {
+      display: none;
+    }
+  }
+
+  /* ---- Your systems and the source ----------------------------------------------------------- */
+  .ap-inv {
+    margin-top: var(--space-3);
+  }
+  /* the sentence is one link; its hit area reaches 44px over the space around it. It runs to two
+     lines, so it is one box (inline-block): a link broken across lines has no single box for the
+     hit area to grow from */
+  .ap-inv a {
+    position: relative;
+    display: inline-block;
+  }
+  .ap-inv a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .ap-nowrap {
+    white-space: nowrap;
+  }
+  /* the one source line, as the brief names it: the guide linked to its document, the place in
+     it, the day it was read. Commas, so a phone's line break never strands a separator */
+  .ap-src {
+    max-width: var(--w-list);
+  }
+  /* review only: the name on the page that the words under it back */
+  .ap-rv {
+    margin: var(--gap-group) 0 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink-muted);
+  }
+  /* Remove: a quiet text action at the foot of its row, beside the fields it clears */
+  .pe-remove {
+    justify-content: flex-start;
+  }
+
+  @media print {
+    .ap-map {
+      --ap-line: var(--ink);
+    }
+    .ap-branch,
+    .ap-leaf,
+    .ap-cannot {
+      break-inside: avoid;
+    }
+  }
+</style>
+
+<script>
+  import { decodeWorksheet, encodeWorksheet, worksheetCsv, type WorksheetRow } from './worksheet';
+
+  // The worksheet: rows of a name and a route, written to the address after the # on every change
+  // (replaceState, so the back button is not filled with edits), read back on load and when the
+  // address changes to another worksheet. Clear all and Remove keep the sheet as it was, and Undo
+  // puts it back until the visitor's next edit. Nothing is stored and nothing is sent.
+  const root = document.querySelector<HTMLElement>('[data-pe-ws]');
+  const configEl = root?.querySelector<HTMLScriptElement>('[data-pe-config]');
+  if (root && configEl) {
+    const cfg = JSON.parse(configEl.textContent || '{}') as {
+      known: string[];
+      labels: Record<string, string>;
+      csvHeader: [string, string];
+      filename: string;
+      strings: Record<string, string>;
+    };
+    const list = root.querySelector<HTMLUListElement>('[data-pe-rows]')!;
+    const template = list.querySelector<HTMLLIElement>('[data-pe-row]')!.cloneNode(true) as HTMLLIElement;
+    const status = root.querySelector<HTMLElement>('[data-pe-status]');
+    const undoBtn = root.querySelector<HTMLButtonElement>('[data-pe-undo]');
+    const addBtn = root.querySelector<HTMLButtonElement>('[data-pe-add]')!;
+    const printRows = root.querySelector<HTMLTableSectionElement>('[data-pe-print-rows]');
+    const say = (msg: string) => {
+      if (status) status.textContent = msg;
+    };
+    const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (m, k) => (k in v ? String(v[k]) : m));
+
+    let serial = 1;
+    const rowEls = () => Array.from(list.querySelectorAll<HTMLLIElement>('[data-pe-row]'));
+    const readRows = (): WorksheetRow[] =>
+      rowEls().map((li) => ({
+        name: li.querySelector<HTMLInputElement>('[data-pe-name]')!.value,
+        route: li.querySelector<HTMLSelectElement>('[data-pe-route]')!.value || null,
+      }));
+
+    // each row's labels and the remove button's name follow its place and its name; a lone empty
+    // row has nothing to remove, so its button is kept out of sight and out of the tab order
+    // while still holding its column, and the heads stay over their controls
+    const relabel = () => {
+      const els = rowEls();
+      els.forEach((li, i) => {
+        const name = li.querySelector<HTMLInputElement>('[data-pe-name]')!;
+        const labels = li.querySelectorAll('label');
+        labels[0].textContent = `${labels[0].textContent?.replace(/ \d+$/, '')} ${i + 1}`;
+        labels[1].textContent = `${labels[1].textContent?.replace(/ \d+$/, '')} ${i + 1}`;
+        const remove = li.querySelector<HTMLButtonElement>('[data-pe-remove]')!;
+        const idle = els.length < 2 && !name.value && !li.querySelector<HTMLSelectElement>('[data-pe-route]')!.value;
+        remove.classList.toggle('is-idle', idle);
+        if (idle) {
+          remove.setAttribute('aria-hidden', 'true');
+          remove.tabIndex = -1;
+        } else {
+          remove.removeAttribute('aria-hidden');
+          remove.removeAttribute('tabindex');
+        }
+        remove.setAttribute('aria-label', fill(cfg.strings.removeLabel, { name: name.value.trim() || fill(cfg.strings.rowName, { n: i + 1 }) }));
+      });
+    };
+
+    const makeRow = (row: WorksheetRow): HTMLLIElement => {
+      serial += 1;
+      const li = template.cloneNode(true) as HTMLLIElement;
+      const name = li.querySelector<HTMLInputElement>('[data-pe-name]')!;
+      const route = li.querySelector<HTMLSelectElement>('[data-pe-route]')!;
+      const [ln, lr] = Array.from(li.querySelectorAll('label'));
+      name.id = `pe-name-${serial}`;
+      route.id = `pe-route-${serial}`;
+      ln.htmlFor = name.id;
+      lr.htmlFor = route.id;
+      name.value = row.name;
+      route.value = row.route ?? '';
+      return li;
+    };
+
+    const renderPrint = (rows: WorksheetRow[]) => {
+      if (!printRows) return;
+      const kept = rows.filter((r) => r.name.trim() || r.route);
+      printRows.replaceChildren(
+        ...(kept.length
+          ? kept.map((r) => {
+              const tr = document.createElement('tr');
+              const a = document.createElement('td');
+              const b = document.createElement('td');
+              a.textContent = r.name.trim();
+              b.textContent = r.route ? (cfg.labels[r.route] ?? '') : '';
+              tr.append(a, b);
+              return tr;
+            })
+          : [
+              (() => {
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                td.colSpan = 2;
+                td.textContent = cfg.strings.printEmpty;
+                tr.append(td);
+                return tr;
+              })(),
+            ]),
+      );
+    };
+
+    const save = () => {
+      const rows = readRows();
+      const frag = encodeWorksheet(rows, cfg.known);
+      const url = `${location.pathname}${location.search}${frag ? `#${frag}` : ''}`;
+      if (url !== `${location.pathname}${location.search}${location.hash}`) history.replaceState(history.state, '', url);
+      renderPrint(rows);
+      relabel();
+    };
+
+    const render = (rows: WorksheetRow[]) => {
+      const els = (rows.length ? rows : [{ name: '', route: null }]).map(makeRow);
+      list.replaceChildren(...els);
+      renderPrint(rows);
+      relabel();
+    };
+
+    // Undo: the sheet as it was before the last Clear all or Remove, kept in this page only and
+    // forgotten at the visitor's next edit, so it never overwrites newer work
+    let before: WorksheetRow[] | null = null;
+    const offerUndo = (rows: WorksheetRow[] | null) => {
+      before = rows && rows.some((r) => r.name.trim() || r.route) ? rows : null;
+      if (undoBtn) undoBtn.hidden = before === null;
+    };
+    const forgetUndo = () => {
+      if (before === null) return;
+      offerUndo(null);
+      say('');
+    };
+
+    // start from the address, when it holds a worksheet
+    const fromHash = decodeWorksheet(location.hash, cfg.known);
+    if (fromHash) render(fromHash);
+    relabel();
+
+    let timer = 0;
+    list.addEventListener('input', () => {
+      forgetUndo();
+      window.clearTimeout(timer);
+      timer = window.setTimeout(save, 250);
+    });
+    list.addEventListener('change', (e) => {
+      if ((e.target as HTMLElement).matches('[data-pe-route]')) forgetUndo();
+      save();
+    });
+    list.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-pe-remove]');
+      if (!btn || btn.classList.contains('is-idle')) return;
+      const kept = readRows();
+      const li = btn.closest<HTMLLIElement>('[data-pe-row]')!;
+      const next = (li.nextElementSibling ?? li.previousElementSibling) as HTMLLIElement | null;
+      li.remove();
+      if (!rowEls().length) list.append(makeRow({ name: '', route: null }));
+      save();
+      offerUndo(kept);
+      say(cfg.strings.removed);
+      (next?.querySelector<HTMLInputElement>('[data-pe-name]') ?? list.querySelector<HTMLInputElement>('[data-pe-name]'))?.focus();
+    });
+    addBtn.addEventListener('click', () => {
+      const li = makeRow({ name: '', route: null });
+      list.append(li);
+      relabel();
+      li.querySelector<HTMLInputElement>('[data-pe-name]')!.focus();
+    });
+
+    root.querySelector('[data-pe-copy]')?.addEventListener('click', async () => {
+      save();
+      try {
+        await navigator.clipboard.writeText(location.href);
+        say(cfg.strings.linkCopied);
+      } catch {
+        say(cfg.strings.linkFailed);
+      }
+    });
+    root.querySelector('[data-pe-csv]')?.addEventListener('click', () => {
+      const blob = new Blob([worksheetCsv(readRows(), cfg.labels, cfg.csvHeader)], { type: 'text/csv;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = cfg.filename;
+      document.body.append(a);
+      a.click();
+      a.remove();
+      window.setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      say(cfg.strings.csvDone);
+    });
+    root.querySelector('[data-pe-print]')?.addEventListener('click', () => {
+      renderPrint(readRows());
+      window.print();
+    });
+    root.querySelector('[data-pe-clear]')?.addEventListener('click', () => {
+      const kept = readRows();
+      render([]);
+      save();
+      offerUndo(kept);
+      say(cfg.strings.cleared);
+      list.querySelector<HTMLInputElement>('[data-pe-name]')?.focus();
+    });
+    undoBtn?.addEventListener('click', () => {
+      if (before === null) return;
+      const rows = before;
+      render(rows);
+      save();
+      offerUndo(null);
+      say(cfg.strings.restored);
+      list.querySelector<HTMLInputElement>('[data-pe-name]')?.focus();
+    });
+
+    // the address changed: a worksheet link opened or edited by hand is read again; any other
+    // fragment (the skip link's #main, a section anchor) leaves the sheet as it is and the sheet
+    // is written back, so a reload or a copied link still holds it
+    window.addEventListener('hashchange', () => {
+      const rows = decodeWorksheet(location.hash, cfg.known);
+      if (rows !== null) {
+        render(rows);
+        offerUndo(null);
+      } else {
+        save();
+      }
+    });
+  }
+</script>

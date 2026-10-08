@@ -119,5 +119,27 @@
     "url": "https://news.microsoft.com/pt-br/com-apoio-da-fenasbac-banco-central-brazil-quantum-e-microsoft-exploram-o-uso-de-criptografia-pos-quantica-para-melhorar-seguranca-do-sistema-pix/",
     "summary": "Study involving the Central Bank of Brazil with Brazil Quantum and Microsoft (and Fenasbac support) analysing the feasibility of post-quantum cryptography algorithms to strengthen the security of the Pix instant-payment system. Published on a vendor (Microsoft) site, not on an official BCB domain.",
     "included": false
+  },
+  {
+    "title": "Um Governo Confiável e Seguro (Estratégia Federal de Governo Digital 2024-2027)",
+    "country": "BRA",
+    "issuingOrg": "SGD/MGI",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/EFGD/confiavel-e-seguro",
+    "summary": "Page of Brazil's Federal Digital Government Strategy 2024-2027 (Portaria SGD/MGI No 6.618 of 25 September 2024) setting out the 'Trustworthy and Secure Government' principle. Under Objective 9, initiative 9.5 commits the government to define a post-quantum cryptographic standard by 2027.",
+    "included": true
+  },
+  {
+    "title": "5° Webinário de Segurança da Informação: Relatório geral do evento",
+    "country": "BRA",
+    "issuingOrg": "GSI",
+    "year": null,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.gov.br/gsi/pt-br/seguranca-da-informacao-e-cibernetica/eventos-anteriores/relatorio.pdf",
+    "summary": "General report by the Institutional Security Cabinet on its 5th Information Security Webinar, covering implementation of the new National Information Security Policy. It records that Cepesc/ABIN is researching post-quantum cryptography and aims to progressively incorporate post-quantum cryptographic solutions into core government systems, and that the TCU flagged quantum computing as a priority audit risk.",
+    "included": true
   }
 ]

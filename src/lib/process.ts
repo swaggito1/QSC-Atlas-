@@ -59,7 +59,7 @@ export interface PostureMeta {
 
 export const POSTURE_META: Record<CoordinationPosture, PostureMeta> = {
   'NIST-bloc': { key: 'NIST-bloc', label: 'NIST-led ecosystem', short: 'NIST bloc', color: '#2b4c7e' },
-  EU: { key: 'EU', label: 'EU coordinated roadmap', short: 'EU roadmap', color: '#5b54a8' },
+  EU: { key: 'EU', label: 'EU coordinated roadmap', short: 'EU coordinated', color: '#5b54a8' },
   'sovereign-bloc': { key: 'sovereign-bloc', label: 'Sovereign bloc', short: 'Sovereign', color: '#7a3b5e' },
   'engaged-unaligned': { key: 'engaged-unaligned', label: 'Engaged but unaligned', short: 'Engaged', color: '#6b7280' },
 };

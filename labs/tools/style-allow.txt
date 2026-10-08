@@ -1,0 +1,5 @@
+# Exact phrases masked before the style scan runs: proper nouns and statutory titles
+# that happen to contain a banned word. One per line. Keep this list short and literal.
+Comprehensive Cyber Defence Policy
+Comprehensive and Progressive Agreement for Trans-Pacific Partnership
+Robust ICT systems

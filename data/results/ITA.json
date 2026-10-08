@@ -196,5 +196,126 @@
     "url": "https://www.mimit.gov.it/images/stories/digitale/Ecosistema_industriale_italiano_delle_tecnologie_quantistiche.pdf",
     "summary": "Official report by the Italian Ministry of Enterprises and Made in Italy (MIMIT/MISE) mapping Italy's industrial ecosystem for quantum technologies, which explicitly addresses post-quantum cryptography among quantum-security matters for enterprises and critical digital infrastructure.",
     "included": true
+  },
+  {
+    "title": "Transizione alla crittografia post-quantistica: call to action del Gruppo di lavoro G7 sulla cybersicurezza",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/w/transizione-alla-crittografia-post-quantistica-call-to-action-per-i-settori-pubblico-e-privato-dall-anssi-e-partner-g7",
+    "summary": "ACN announcement (3 September 2026) that the Agency contributed to the G7 Cybersecurity Working Group joint document 'Preparing for the Post-Quantum Era: A Call to Action', which urges coordinated public and private action to secure ICT systems against the quantum threat. The call to action recommends raising awareness of quantum risk, developing national post-quantum cryptography migration strategies, and strengthening research in the field.",
+    "included": true
+  },
+  {
+    "title": "Transition to post-quantum cryptography: call to action released by the G7 Cybersecurity Working Group",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/en/w/transizione-alla-crittografia-post-quantistica-call-to-action-per-i-settori-pubblico-e-privato-dall-anssi-e-partner-g7",
+    "summary": "English-language version of the ACN announcement (3 September 2026) describing Italy's contribution to the G7 joint document 'Preparing for the Post-Quantum Era: A Call to Action' on the transition to post-quantum cryptography. It addresses the threat quantum computing poses to current cryptographic systems and calls on both public and private sectors to begin migration.",
+    "included": true
+  },
+  {
+    "title": "Linee Guida Funzioni Crittografiche: Firme Digitali (v1.0)",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Firme_Digitali_v1.0.pdf/aa1b3d8e-38d9-984c-97ef-0c855b0278e8?t=1781863650694",
+    "summary": "ACN technical guideline on digital signature schemes, one of the two new documents added in the June 2026 refresh of the national cryptographic-functions guidelines, which includes post-quantum alternatives for quantum-vulnerable signature algorithms. The document references the NIST post-quantum standards FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA) together with the Dilithium, Falcon and SPHINCS+ specifications and the NIST PQC standardisation process.",
+    "included": true
+  },
+  {
+    "title": "Linee Guida Funzioni Crittografiche: Transport Layer Security (TLS)",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/documents/20119/85999/ACN_LG_Transport_Layer_Security_TLS.pdf/32f67240-a7e5-c707-e7fd-cc3ac0de2d3c?t=1781863650693",
+    "summary": "ACN technical guideline on the configuration and use of TLS, updated so that post-quantum solutions are included among the recommended options. It cites the IETF hybrid key-exchange work, including draft-ietf-tls-hybrid-design and draft-ietf-tls-ecdhe-mlkem (ML-KEM hybrid key exchange) and the PQUIP hybrid signature spectrums draft.",
+    "included": true
+  },
+  {
+    "title": "Building a quantum-safe financial system: what role for authorities and for the private sector?",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bancaditalia.it/pubblicazioni/interventi-direttorio/int-dir-2024/SIGNORINI-24.09.2024.pdf",
+    "summary": "Opening speech by Senior Deputy Governor Luigi Federico Signorini at the Bank of Italy Scientific Workshop of 24 September 2024 on quantum technology and the financial sector. He argues that quantum-resistant cryptography must be implemented before quantum computers become operational, cites the EU PQC roadmap Recommendation and the NIST PQC algorithms, and calls for coordinated G7 action towards a transition roadmap.",
+    "included": true
+  },
+  {
+    "title": "Linee Guida: Configurazione del servizio di posta elettronica per l'autenticazione",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/documents/20119/1200079/Linee+guida+config+posta+elettronica+autenticazione_2604.pdf/25368f47-772b-c78c-4cd4-9cf3258ecaf7?t=1776698888764",
+    "summary": "ACN guidelines (April 2026, version 1.0.1) on configuring SPF, DKIM and DMARC to authenticate email and counter sender-domain spoofing. In the DKIM section they note that neither RSA nor Ed25519 resists future quantum computers and that a move to post-quantum algorithms will require new DKIM standards that do not yet exist.",
+    "included": true
+  },
+  {
+    "title": "The Financial Cryptography in Rome (FCiR25) conference: Welcome address by Giuseppe Zingrillo",
+    "country": "ITA",
+    "issuingOrg": "Banca d'Italia",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bancaditalia.it/pubblicazioni/interventi-vari/int-var-2025/Zingrillo-FCiR-conference-01102025.pdf",
+    "summary": "Welcome address by Giuseppe Zingrillo, Director General for Information Technology of Banca d'Italia, opening the FCiR25 conference in Rome on 1 October 2025. It says the quantum threat to RSA and elliptic-curve algorithms and the harvest-now-decrypt-later risk require developing and adopting post-quantum cryptographic solutions as part of financial resilience.",
+    "included": true
+  },
+  {
+    "title": "G7 Cybersecurity Working Group: origins and evolution of an initiative spearheaded by ACN",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/en/w/gruppo-di-lavoro-g7-sulla-cybersicurezza-genesi-e-sviluppi-di-un-iniziativa-promossa-da-acn",
+    "summary": "ACN article (28 May 2025) on Italy's role in setting up the G7 Cybersecurity Working Group after the June 2024 Apulia Summit. It lists the group's work areas, including AI supply-chain transparency, the transition to post-quantum cryptography and IoT cybersecurity.",
+    "included": true
+  },
+  {
+    "title": "Acn participated in the Quantum Computing and Cybersecurity workshop",
+    "country": "ITA",
+    "issuingOrg": "ACN",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.acn.gov.it/portale/en/w/acn-participated-in-the-quantum-computing-and-cybersecurity-workshop",
+    "summary": "ACN news item (27 February 2025) on a workshop held in New York on 18 February, organised by Italy's Permanent Mission to the UN with Ghana's Mission. ACN described its work on quantum computing risks and international cooperation on the post-quantum transition, citing the November 2024 joint PQC statement and its July 2024 PQC publication.",
+    "included": true
+  },
+  {
+    "title": "Sintesi degli interventi degli auditi e tabella",
+    "country": "ITA",
+    "issuingOrg": "Camera dei deputati",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.camera.it/temiap/2025/05/08/OCD177-8047.pdf",
+    "summary": "Chamber of Deputies synthesis table of the hearings held in a parliamentary inquiry on cyber defence (2024 to 2025), from the Undersecretary for security to the Minister of Defence. It records witnesses including Innovery, IBM and LUISS calling for quantum-proof solutions and urgent post-quantum security measures.",
+    "included": true
+  },
+  {
+    "title": "Indagine conoscitiva sulla difesa cibernetica: nuovi profili e criticità - Audizione del Rettore della LUISS Guido Carli, Paolo Boccardelli (resoconto stenografico, 3 dicembre 2024)",
+    "country": "ITA",
+    "issuingOrg": "Camera dei deputati",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://documenti.camera.it/leg19/resoconti/commissioni/stenografici/html/04/indag/c04_difesa_cibernetica/2024/12/03/indice_stenografico.0025.html",
+    "summary": "Stenographic record of the IV Commission (Defence) hearing of 3 December 2024 in its inquiry on cyber defence, hearing LUISS rector Paolo Boccardelli. The testimony names post-quantum cryptography as an advanced frontier of cyber defence and calls for investment in it.",
+    "included": true
   }
 ]

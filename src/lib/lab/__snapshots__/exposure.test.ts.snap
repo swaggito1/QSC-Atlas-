@@ -1,0 +1,60 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`the live target dates > draws 2030 and 2035 once each for Belgium, with the annotation in preview 1`] = `
+[
+  {
+    "basis": "guidance",
+    "basisLead": false,
+    "id": "eu-pqc-roadmap-2026-first-steps",
+    "lane": "roadmap",
+    "restated": null,
+    "year": "2026",
+  },
+  {
+    "basis": "guidance",
+    "basisLead": false,
+    "id": "eu-pqc-roadmap-2030-high-risk",
+    "lane": "roadmap",
+    "restated": {
+      "label": "High-risk use cases migrated",
+      "lead": true,
+    },
+    "year": "2030",
+  },
+  {
+    "basis": null,
+    "basisLead": false,
+    "id": "nist-ir-8547-ipd-deprecate-2030",
+    "lane": "standards",
+    "restated": null,
+    "year": "2030",
+  },
+  {
+    "basis": "guidance",
+    "basisLead": false,
+    "id": "eu-pqc-roadmap-2035-medium-risk",
+    "lane": "roadmap",
+    "restated": {
+      "label": "Full migration of all systems complete",
+      "lead": true,
+    },
+    "year": "2035",
+  },
+  {
+    "basis": null,
+    "basisLead": false,
+    "id": "nist-ir-8547-ipd-disallow-2035",
+    "lane": "standards",
+    "restated": null,
+    "year": "2035",
+  },
+]
+`;
+
+exports[`the readout > inside the survey range: names the nearest surveyed horizon at or before 1`] = `
+[
+  "today until 2036.",
+  "takes 5, ends 2031, last until 2041.",
+  "The experts surveyed for the Test Survey 2025 put the chance within 15 years of 2025 at 51 to 70 per cent.",
+]
+`;

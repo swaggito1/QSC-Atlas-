@@ -1,0 +1,247 @@
+{
+  "_about": "The bodies whose post-quantum standards the Atlas records, in the order the Standards overview shows them (5 October 2026). Each standard names its body by id (bodyId in standards.json). Each body’s name and site were read at its own source on 5 October 2026. A national body carries its country’s ISO3 code. description is the overview’s one-line note on the body, visible copy for Swann’s approval.",
+  "bodies": [
+    {
+      "id": "nist",
+      "name": "National Institute of Standards and Technology",
+      "shortName": "NIST",
+      "kind": "national-agency",
+      "iso3": "USA",
+      "url": "https://www.nist.gov/",
+      "description": "United States federal agency whose Federal Information Processing Standards (FIPS) and Special Publications specify post-quantum algorithms.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.nist.gov/about-nist",
+          "title": "About NIST",
+          "publisher": "NIST",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The National Institute of Standards and Technology (NIST) was founded in 1901 and is now part of the U.S. Department of Commerce. NIST is one of the nation's oldest physical science laboratories.",
+          "locator": "About NIST page, opening paragraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ietf",
+      "name": "Internet Engineering Task Force",
+      "shortName": "IETF",
+      "kind": "international-standards-body",
+      "iso3": null,
+      "url": "https://www.ietf.org/",
+      "description": "Develops the protocols the internet runs on. An RFC is a published document; an Internet-Draft is work in progress that may become one.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.ietf.org/about/introduction/",
+          "title": "Introduction to the IETF",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The Internet Engineering Task Force (IETF), founded in 1986, is the premier standards development organization (SDO) for the Internet. The IETF makes voluntary standards that are often adopted by Internet users, network operators, and equipment vendors, and it thus helps shape the trajectory of the development of the Internet.",
+          "locator": "Introduction to the IETF, 'About the IETF'",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "irtf",
+      "name": "Internet Research Task Force",
+      "shortName": "IRTF",
+      "kind": "research-group",
+      "iso3": null,
+      "url": "https://www.irtf.org/",
+      "description": "Research groups working beside the IETF. Its Crypto Forum Research Group (CFRG) publishes informational RFCs on cryptographic algorithms.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.irtf.org/",
+          "title": "Internet Research Task Force",
+          "publisher": "IRTF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The Internet Research Task Force (IRTF) focuses on longer term research issues related to the Internet while the parallel organization, the Internet Engineering Task Force ( IETF ), focuses on the shorter term issues of engineering and standards making. The IRTF is comprised of a number of focused and long-term Research Groups.",
+          "locator": "Home page, Overview",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "etsi",
+      "name": "European Telecommunications Standards Institute",
+      "shortName": "ETSI",
+      "kind": "regional-standards-body",
+      "iso3": null,
+      "url": "https://www.etsi.org/",
+      "description": "European standards organisation for telecommunications. A Technical Specification (TS) is normative; a Technical Report (TR) is informative.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.etsi.org/about",
+          "title": "About us",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "We are the European Telecommunication Standards Institute . ETSI provides an open, inclusive and collaborative environment for the development and testing of globally applicable standards for ICT-enabled systems, services and applications. ... As a European Union recognised European Standardisation Organisation (ESO) , ETSI plays a leading role in creating technology standards",
+          "locator": "About us page, opening paragraphs",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "iso-iec",
+      "name": "International Organization for Standardization and International Electrotechnical Commission",
+      "shortName": "ISO/IEC",
+      "kind": "international-standards-body",
+      "iso3": null,
+      "url": "https://www.iso.org/committee/45306.html",
+      "description": "Two international standards bodies that work jointly on information security standards in JTC 1/SC 27.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "Preview ISO/IEC 18033-2:2006/Amd 2:2026, Foreword",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ISO (the International Organization for Standardization) and IEC (the International Electrotechnical Commission) form the specialized system for worldwide standardization. National bodies that are members of ISO or IEC participate in the development of International Standards through technical committees established by the respective organization to deal with particular fields of technical activity.",
+          "locator": "Public preview (Read sample) of ISO/IEC 18033-2:2006/Amd 2:2026, Foreword; read in the browser pane",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "itu-t",
+      "name": "International Telecommunication Union, Telecommunication Standardization Sector",
+      "shortName": "ITU-T",
+      "kind": "international-standards-body",
+      "iso3": null,
+      "url": "https://www.itu.int/en/ITU-T/",
+      "description": "The standardisation sector of the International Telecommunication Union. It publishes Recommendations, among them X.509 for public key certificates.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.itu.int/en/ITU-T/about/Pages/default.aspx",
+          "title": "ITU-T in brief",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The Study Groups of ITU’s Telecommunication Standardization Sector (ITU-T) assemble experts from around the world to develop international standards known as ITU-T Recommendations which act as defining elements in the global infrastructure of information and communication technologies (ICTs).",
+          "locator": "ITU-T in brief, opening paragraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "x9",
+      "name": "Accredited Standards Committee X9",
+      "shortName": "ANSI X9",
+      "kind": "national-standards-body",
+      "iso3": "USA",
+      "url": "https://x9.org/",
+      "description": "Accredited Standards Committee X9, which develops standards for the financial services industry.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://x9.org/committees/program-of-work/",
+          "title": "Program of Work | Accredited Standards Committee X9",
+          "publisher": "Accredited Standards Committee X9",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ASC X9 is accredited by the American National Standards Institute (ANSI) to develop and maintain United States standards for the financial services industry. X9 has 128 standards that are either under development or being maintained by X9 as American National Standards.",
+          "locator": "Program of Work page, 'Overview of the Work of X9 (May 2026)'",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cen-cenelec",
+      "name": "European Committee for Standardization (CEN) and European Committee for Electrotechnical Standardization (CENELEC)",
+      "shortName": "CEN-CENELEC",
+      "kind": "regional-standards-body",
+      "iso3": null,
+      "url": "https://www.cencenelec.eu/",
+      "description": "Two European standards organisations; their joint technical committee JTC 22 covers quantum technologies.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.cencenelec.eu/about-cen/",
+          "title": "About CEN - CEN-CENELEC",
+          "publisher": "CEN-CENELEC",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The European Committee for Standardization is one of three European Standardization Organizations (together with CENELEC and ETSI) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.",
+          "locator": "About CEN page, opening paragraph",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "kpqc",
+      "name": "KpqC research group (양자내성암호연구단)",
+      "shortName": "KpqC",
+      "kind": "research-group",
+      "iso3": "KOR",
+      "url": "https://kpqc.or.kr/",
+      "description": "South Korea’s post-quantum research group, which ran the KpqC competition.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://kpqc.or.kr/contents/01_company/sub01.html",
+          "title": "연구단 소개: 목적",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "이러한 배경 속에서 2021년, 국내 양자내성암호의 기술 저변을 확대하고 경쟁력을 강화하여 세계 수준의 기술력을 확보하기 위해 ‘양자내성암호연구단(KpqC 연구단)’을 발족하였습니다. 이후 연구단은 산·학·관·연 전문가로 구성되어",
+          "locator": "About us, purpose page (English: against this background, in 2021 the KpqC research group was launched to broaden Korea's post-quantum cryptography base and reach world-class capability; it is made up of experts from industry, academia, government and research institutes)",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "iccs",
+      "name": "Institute of Commercial Cryptography Standards",
+      "shortName": "ICCS",
+      "kind": "national-standards-body",
+      "iso3": "CHN",
+      "url": "https://www.niccs.org.cn/",
+      "description": "China’s Institute of Commercial Cryptography Standards, which runs the NGCC call for next-generation commercial cryptographic algorithms.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.niccs.org.cn/niccs/AboutUs/pc/content/content_1937408868663955456.html",
+          "title": "About Us - Institute of Commercial Cryptography Standards",
+          "publisher": "Institute of Commercial Cryptography Standards",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Institute of Commercial Cryptography Standards (ICCS) is mainly responsible for conducting research on commercial cryptography standardization strategies, implementing the system of commercial cryptography standards, developing and revising commercial cryptography standards, ... as well as acting as the Secretariat of national and industry commercial cryptography standards.",
+          "locator": "English About Us page (dated 2025-06-24)",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "tc26",
+      "name": "Technical Committee for Standardisation 26, Cryptographic Protection of Information (ТК 26)",
+      "shortName": "TC 26",
+      "kind": "national-standards-body",
+      "iso3": "RUS",
+      "url": "https://tc26.ru/",
+      "description": "Russia’s technical committee for cryptographic standards; its Working Group 2.5 covers post-quantum mechanisms.",
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://tc26.ru/about/",
+          "title": "О ТК 26",
+          "publisher": "ТК 26",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "В соответствии с Приказом Федерального агентства по техническому регулированию и метрологии от 09 июня 2017 года № 1319 «Об организации деятельности технического комитета по стандартизации «Криптографическая защита информации» (ТК 26), за техническим комитетом закреплены объекты стандартизации, относящиеся к методам шифрования (криптографического преобразования) информации",
+          "locator": "About TC 26 page, first paragraph (English: under Rosstandart order No. 1319 of 9 June 2017 on the technical committee for standardisation 'Cryptographic protection of information' (TC 26), the committee is assigned standardisation of methods of encryption (cryptographic transformation) of information)",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    }
+  ]
+}

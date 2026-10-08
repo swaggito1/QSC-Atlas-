@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "title": "Regulatory Guidelines for Government Information Security Management",
+    "country": "NGA",
+    "issuingOrg": "NITDA",
+    "year": 2026,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://nitda.gov.ng/wp-content/uploads/2026/07/REV_Regulatory_Guidelines_for_information_Cyber-security_Final_Draft_26_05_2026-1.pdf",
+    "summary": "Final draft (dated 26 May 2026) of regulatory guidelines from NITDA under the NITDA Act 2007, which take effect on signature. They set information security governance requirements and technical controls for federal public institutions. Annex 1 Domain 15 (Post-Quantum Cybersecurity) sets controls PQC-01 to PQC-08. These cover a cryptographic inventory, a quantum risk assessment against harvest-now-decrypt-later, a PQC migration plan with timelines towards ML-KEM, ML-DSA and SLH-DSA, crypto-agility, TLS/PKI and VPN readiness, digital signature migration, and monitoring of QKD.",
+    "included": true
+  },
+  {
+    "title": "Cyber Resilience Framework for Nigeria Communication Sector (CRF-NCS)",
+    "country": "NGA",
+    "issuingOrg": "NCC",
+    "year": 2026,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://ncc.gov.ng/sites/default/files/2026-03/Cyber-Resilience-Framework-for-Nigeria-Communication-Sector-(CRF-NCS).pdf",
+    "summary": "Version 1.0 (February 2026) cyber resilience framework from the Nigerian Communications Commission setting compliance obligations for communication service providers. It lists Quantum Secure Cryptography among emerging domains, requires risk assessments to cover post-quantum risks and harvest-now-decrypt-later attacks, and states that service providers are required to use PQC for quantum-resistant cryptography.",
+    "included": true
+  }
+]

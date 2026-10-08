@@ -48,20 +48,15 @@ Task: produce the FULL updated profile object reflecting what the NEW documents 
 
 STRICT GUARDRAILS:
 - Attest every value to a specific document in the results file. If a development is only a "watch item" (announced but no document captured), do NOT encode it as a field value; mention it in couldNotAttest.
-- dominantProcess COLOURS THE MAP. Do NOT change it unless a new document UNAMBIGUOUSLY states a new standards alignment. If you think it may have shifted, leave it as-is and describe the case in dominantProcessProposedChange for human review.
+- dominantProcess COLOURS THE MAP. Do NOT change it unless a new document UNAMBIGUOUSLY states a new standards alignment. If you think it may have shifted, leave it as-is and describe the case in dominantProcessProposedChange for human review. NOTE FOR THIS RUN: dominantProcess is currently ABSENT for these countries, so they render grey despite holding documents. You MAY set it, but ONLY if the ingested documents unambiguously attest a standards alignment (for example the national guidance adopts the NIST FIPS suite by name). If the evidence is mixed, partial or inferred, leave it absent and explain in dominantProcessProposedChange - a grey country is correct where the evidence does not support a colour.
 - Field formats: migrationTimeline lines "YYYY | milestone"; govActors lines "name | role"; mainRegulation lines "instrument | level | status" (status in binding-law / binding-by-market-access / soft-law / guidance); processParticipation lines "process | role". Selects must match the allowed values exactly (see PROFILE_GUIDE and the schema). British English, no em-dashes or en-dashes in summary.
 - dataStatus = "Partial".
 
 Return: iso3, the full profile object, changedFields (list), couldNotAttest (string), and dominantProcessProposedChange (string).`
 
 const COUNTRIES = [
-  { iso3: 'EUU', name: 'European Union' }, { iso3: 'GBR', name: 'United Kingdom' }, { iso3: 'SGP', name: 'Singapore' },
-  { iso3: 'NLD', name: 'Netherlands' }, { iso3: 'CHE', name: 'Switzerland' }, { iso3: 'NOR', name: 'Norway' },
-  { iso3: 'NATO', name: 'NATO' }, { iso3: 'KOR', name: 'South Korea' }, { iso3: 'BEL', name: 'Belgium' },
-  { iso3: 'SWE', name: 'Sweden' }, { iso3: 'DNK', name: 'Denmark' }, { iso3: 'POL', name: 'Poland' },
-  { iso3: 'CHN', name: 'China' }, { iso3: 'MYS', name: 'Malaysia' }, { iso3: 'PRT', name: 'Portugal' },
-  { iso3: 'LUX', name: 'Luxembourg' }, { iso3: 'SVN', name: 'Slovenia' }, { iso3: 'RUS', name: 'Russia' },
-  { iso3: 'TUR', name: 'Türkiye' },
+  { iso3: 'CHE', name: 'Switzerland' }, { iso3: 'NATO', name: 'NATO' },
+  { iso3: 'GUY', name: 'Guyana' }, { iso3: 'URY', name: 'Uruguay' },
 ]
 
 phase('Refresh profiles')

@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "title": "Maßnahmenkatalog der Österreichischen Strategie für Cybersicherheit 2021: Fortschrittsbericht 1/2025",
+    "country": "AUT",
+    "issuingOrg": "Bundeskanzleramt",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bundeskanzleramt.gv.at/dam/jcr:cdfd1277-9df5-4e65-87bc-bffd0c54ed7b/Massnahmenkatalog_OeSCS_Fortschrittsbericht_1_2025.pdf",
+    "summary": "Progress report 1/2025 on the measures catalogue of the Austrian Cyber Security Strategy 2021, published by the Federal Chancellery. It tracks project 2073, an AIT project on post-quantum-computer-secure encryption running from 1 January 2021 to 31 December 2026, reported with green status at 70 per cent progress.",
+    "included": true
+  },
+  {
+    "title": "Österreichischer Forschungs- und Technologiebericht 2025",
+    "country": "AUT",
+    "issuingOrg": "BMFWF / BMIMI / BMWET",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://www.parlament.gv.at/dokument/XXVIII/III/177/imfname_1689370.pdf",
+    "summary": "Austria's federal research and technology report for 2025, published by the science, infrastructure and economy ministries and laid before Parliament (III-177 der Beilagen, XXVIII. GP). Its profile of the Austrian Institute of Technology (AIT) lists quantum communication, in particular quantum key distribution including post-quantum cryptography methods, among AIT's research priorities.",
+    "included": true
+  },
+  {
+    "title": "AUTKRYPTO: Kryptosystem Made-in-Austria",
+    "country": "AUT",
+    "issuingOrg": "FFG (KIRAS security research programme)",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://projekte.ffg.at/projekt/01d0423e-f36b-1410-8616-00d3c07d99bb/pdf",
+    "summary": "FFG project record for AUTKRYPTO, a KIRAS cooperative R&D project (October 2024 to March 2027) to build an Austrian encryption device, including a demonstrator hardware platform implementing a post-quantum secure VPN with an FPGA/software co-design architecture.",
+    "included": false
+  }
+]

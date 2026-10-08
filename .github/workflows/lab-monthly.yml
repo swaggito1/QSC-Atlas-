@@ -1,0 +1,54 @@
+# QSC Atlas Labs: the monthly ledger report. Writes labs/ledger/STATUS.md, applies the tier
+# transitions assigned to ledger-report.mjs (expired demotions, end of the shadow window,
+# model-change re-shadow), proposes graduations as pull requests for Swann, and opens or
+# updates the "Lab data freshness" issue.
+name: lab-monthly
+
+on:
+  schedule:
+    - cron: "23 4 1 * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: lab-monthly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.LAB_BOT_TOKEN || github.token }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Ledger report, tier transitions and graduation candidates
+        run: node scripts/lab/ledger-report.mjs --write labs/ledger/STATUS.md --apply-transitions --candidates labs/.watch/graduation.json
+      - name: Commit the report and any tier changes
+        run: |
+          git config user.name "qsc-atlas-lab-bot"
+          git config user.email "lab-bot@users.noreply.github.com"
+          git add labs/ledger/STATUS.md labs/config/autonomy.yaml
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lab-monthly): ledger report"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Propose graduations as pull requests for Swann
+        env:
+          GH_TOKEN: ${{ secrets.LAB_BOT_TOKEN }}
+        run: node scripts/lab/propose-graduation.mjs labs/.watch/graduation.json
+      - name: Open or update the freshness issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/lab/freshness.mjs --issue

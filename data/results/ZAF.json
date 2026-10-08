@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "National Payment System Vision 2030+ Consultation Paper February 2026",
+    "country": "ZAF",
+    "issuingOrg": "SARB",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.resbank.co.za/content/dam/sarb/what-we-do/payments-and-settlements/consultation-documents/2026/vision-2030--/NPS%202030+%20Consultation%20Paper%20-%2024%20February%202026.pdf",
+    "summary": "South African Reserve Bank consultation paper asking industry for input on its proposed approach to the National Payment System Framework and Strategy, Vision 2030+. Its section on shifting fraud risks says quantum computing poses a threat to legacy cryptography and that developing post-quantum cybersecurity is likely to require effort and resources across the payments system.",
+    "included": true
+  }
+]

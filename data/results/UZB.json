@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "O‘zbekiston Respublikasida kriptologiya sohasida ta’lim va ilm-fanni rivojlantirish bo‘yicha qo‘shimcha chora-tadbirlar to‘g‘risida (PQ-293, 15.08.2024)",
+    "country": "UZB",
+    "issuingOrg": "President of Uzbekistan",
+    "year": 2024,
+    "docType": "Regulation",
+    "tier": "T4",
+    "url": "https://lex.uz/uz/docs/-7067656",
+    "summary": "Presidential Resolution PQ-293 of 15 August 2024 sets additional measures for cryptology education and science. It creates an interdepartmental cryptology expert group under the State Security Service, a 2024-2025 action plan and a 2024-2028 research programme of 15 budgeted projects. Three of those projects (Annex 2, 2024-2028) task the creation of a national post-quantum asymmetric encryption algorithm, a post-quantum digital signature algorithm and a post-quantum key generation protocol, all resistant to quantum attacks. Their executors include the Ministry of Higher Education, Science and Innovation, the Academy of Sciences, the Ministry of Digital Technologies and the State Security Service.",
+    "included": true
+  }
+]

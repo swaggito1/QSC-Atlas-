@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`golden cases (draft, awaiting approval) > a large bank in France 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "may-apply-check",
+  "32022L2557": "applies-if-designated",
+  "32022R2554": "appears-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "does-not-appear-to-apply",
+}
+`;
+
+exports[`golden cases (draft, awaiting approval) > a large energy company in the Netherlands designated under CER 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "appears-to-apply",
+  "32022L2557": "appears-to-apply",
+  "32022R2554": "does-not-appear-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "does-not-appear-to-apply",
+}
+`;
+
+exports[`golden cases (draft, awaiting approval) > a medium-sized hospital in Belgium 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "appears-to-apply",
+  "32022L2557": "applies-if-designated",
+  "32022R2554": "does-not-appear-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "does-not-appear-to-apply",
+}
+`;
+
+exports[`golden cases (draft, awaiting approval) > a micro-enterprise in Estonia that makes connected devices 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "applies-if-designated",
+  "32022L2557": "does-not-appear-to-apply",
+  "32022R2554": "does-not-appear-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "appears-to-apply",
+}
+`;
+
+exports[`golden cases (draft, awaiting approval) > a regional public administration in Germany 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "may-apply-check",
+  "32022L2557": "applies-if-designated",
+  "32022R2554": "does-not-appear-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "does-not-appear-to-apply",
+}
+`;
+
+exports[`golden cases (draft, awaiting approval) > a small DNS service provider in Ireland 1`] = `
+{
+  "32016R0679": "appears-to-apply",
+  "32022L2555": "appears-to-apply",
+  "32022L2557": "applies-if-designated",
+  "32022R2554": "does-not-appear-to-apply",
+  "32024R1689": "does-not-appear-to-apply",
+  "32024R2847": "does-not-appear-to-apply",
+}
+`;

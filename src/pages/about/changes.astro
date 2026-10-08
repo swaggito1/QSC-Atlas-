@@ -1,0 +1,243 @@
+---
+// What changed (spec 10): what has been updated on the Atlas, and when, generated at build by
+// src/lib/site/changelog.ts. Grouped by month, newest first: site and data releases, tools as
+// they are published and their sources checked (shown tools only, so a production build names
+// public tools alone), and the profiles updated on each day, by name and in alphabetical order.
+// No count appears anywhere: a profile is named, never tallied.
+//
+// The épuré pass (4 October 2026): nothing is said twice. Under a month's heading a day shows its
+// day alone (the full date stays in the time element). When every tool entry is a preview, "preview
+// only" is said once above the list, in the timeline's "Every date on this timeline" pattern, and
+// a row keeps its own mark only where it differs. Every row is a link, so the entries and the
+// places are index links: ink words on a thin teal underline (global.css .row-link). Entries hold
+// the reading measure; the list holds the list width.
+import { getCollection } from 'astro:content';
+import PageFrame from '../../components/site/frame/PageFrame.astro';
+import { changelog } from '../../lib/site/changelog';
+import { pageHref } from '../../lib/site/gates';
+import { GITHUB_URL } from '../../lib/site/config';
+
+const countries = await getCollection('countries');
+const months = changelog(countries.map((c) => ({ iso3: c.data.iso3, country: c.data.country, lastUpdated: c.data.lastUpdated })));
+const latest = months[0]?.days[0]?.date ?? null;
+const hasTools = months.some((m) => m.days.some((d) => d.entries.some((e) => e.kind === 'tool' || e.kind === 'data')));
+// "preview only" once, when it holds for every tool entry (preview and local builds only)
+const toolEntries = months.flatMap((m) => m.days.flatMap((d) => d.entries.filter((e) => e.kind === 'tool' || e.kind === 'data')));
+const allPreview = toolEntries.length > 0 && toolEntries.every((e) => e.preview);
+
+// a day with more places than this lists them in columns, so a long run of names stays easy to scan
+const MANY = 6;
+
+const about = pageHref('/about');
+const lede = hasTools
+  ? 'Releases of the site and its data, tools as they are published and their sources checked, and the country profiles updated on each day, newest first.'
+  : 'Releases of the site and its data, and the country profiles updated on each day, newest first.';
+const next = [
+  { label: 'Find a country', href: pageHref('/countries') },
+  { label: 'How the Atlas is built', href: pageHref('/methodology') },
+  { label: 'About the Atlas', href: about },
+];
+---
+
+<PageFrame
+  question="What has been updated, and when?"
+  title="What changed"
+  description="What has been updated on the QSC Atlas, and when: releases of the site and its data, and the country profiles updated on each day."
+  lede={lede}
+  asOf={latest}
+  next={next}
+>
+  {
+    months.length ? (
+      <div class="ch">
+        {allPreview && <p class="ch-preview ch-preview-all">Every tool entry: preview only.</p>}
+        {months.map((m) => (
+          <section class="ch-month" aria-labelledby={`ch-${m.month}`}>
+            <h2 class="ch-mh" id={`ch-${m.month}`}>
+              {m.label}
+            </h2>
+            <ol class="ch-days">
+              {m.days.map((d) => (
+                <li class="ch-day">
+                  <p class="ch-date mono">
+                    <time datetime={d.date}>{d.day}</time>
+                  </p>
+                  <ul class="ch-entries">
+                    {d.entries.map((e) => (
+                      <li class:list={['ch-entry', `ch-entry--${e.kind}`]}>
+                        {e.kind === 'profiles' && e.places.length > MANY ? (
+                          <>
+                            <p class="ch-what">{e.text}:</p>
+                            <ul class="ch-places">
+                              {e.places.map((p) => (
+                                <li>
+                                  {p.href ? (
+                                    <a class="row-link" href={p.href}>
+                                      {p.name}
+                                    </a>
+                                  ) : (
+                                    p.name
+                                  )}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : e.kind === 'profiles' ? (
+                          <p>
+                            <span class="ch-what">{e.text}:</span>{' '}
+                            {/* each name and its separator in one expression, so no space falls before a comma */}
+                            {e.places.map((p, i) => <>{p.href ? <a class="row-link" href={p.href}>{p.name}</a> : <span>{p.name}</span>}{i < e.places.length - 1 ? ', ' : '.'}</>)}
+                          </p>
+                        ) : (
+                          <p>
+                            {e.href ? <a class="row-link" href={e.href}>{e.text}</a> : e.text}
+                            {e.preview && !allPreview && <>{' '}<span class="ch-preview">· preview only</span></>}
+                          </p>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+      </div>
+    ) : (
+      <p class="ch-empty">No change is recorded.</p>
+    )
+  }
+
+  <Fragment slot="sources">
+    <p>
+      Generated when the site is built, from the Atlas's own records: its release notes, the tool registry, the day
+      each tool's sources were last checked, and the Updated date on each country profile.
+    </p>
+    <p>
+      The full history of the data, change by change, is in the <a href={`${GITHUB_URL}/commits`}>public repository</a>.
+    </p>
+  </Fragment>
+</PageFrame>
+
+<style>
+  .ch {
+    max-width: var(--w-list);
+  }
+  /* the next month is the next facet of one list: a related gap above it */
+  .ch-month + .ch-month {
+    margin-top: var(--gap-related);
+  }
+  .ch-preview-all {
+    display: block;
+    margin: 0 0 var(--gap-group-lg);
+  }
+  /* the month: a Newsreader heading in ink at the section step, as the profile's sections stand,
+     with no rule over it; the days under it are hairline-ruled */
+  .ch-mh {
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-section);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-snug);
+    margin: 0 0 var(--gap-inline);
+  }
+  .ch-days {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* the day of the month in a narrow column, its entries beside it */
+  .ch-day {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: var(--gap-mark) var(--space-6);
+    padding: var(--gap-group) 0;
+    border-bottom: var(--rule);
+  }
+  .ch-day:last-child {
+    border-bottom: none;
+  }
+  .ch-date {
+    margin: 0;
+    padding-top: 2px;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  /* entries stand 16px apart, so each one-line link's 44px hit area (below) has room to itself */
+  .ch-entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--gap-group);
+  }
+  .ch-entry p {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    line-height: var(--leading-body);
+    text-wrap: pretty;
+  }
+  .ch-what {
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+  }
+  /* an entry that is one link, and each place in a long list, has a 44px hit area that moves
+     nothing; names inside a sentence are left as running text */
+  .ch-entry > p > a:first-child,
+  .ch-places a {
+    position: relative;
+  }
+  .ch-entry > p > a:first-child::after,
+  .ch-places a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .ch-preview {
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  /* many places on one day: a plain list in columns under its label, ruled by nothing */
+  .ch-entry p.ch-what {
+    margin: 0 0 var(--gap-mark);
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+  }
+  .ch-places {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3 10rem;
+    column-gap: var(--space-6);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    line-height: var(--leading-body);
+  }
+  .ch-places li {
+    break-inside: avoid;
+  }
+  /* each place is a row of its own, 44px tall */
+  .ch-places a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+  }
+  .ch-empty {
+    font-family: var(--font-reading);
+    font-style: italic;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  @media (max-width: 639px) {
+    .ch-day {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,373 @@
+---
+// The supplier letter, /prepare/suppliers (spec 5.2): what to ask your suppliers. It opens on why
+// to ask at all: one paragraph on cryptographic dependencies, every statement in it resting on what
+// the guides say (WHY_EVIDENCE in prepare-elements.ts). Then questions drawn from the six supplier
+// actions of the Readiness Check and the guides' sentences on vendors, in plain words under four
+// plain heads, each with its source in brackets. The guides' own words are kept for review inside
+// SourceWords (Words.astro), never shown to a visitor. The same source chooser as the Check (the EU
+// roadmap and the NCSC timelines to start with; ?f= presets it, as the Check's supplier links write
+// it), an editable covering paragraph that stays in the page only, then Print, Copy as text and
+// Download .txt. Printed, the page is the letter alone (the covering paragraph, the questions, the
+// sources), as Copy as text gives it: the Atlas's header, byline, citation and footer stay off the
+// paper, and so does the paragraph on why.
+//
+// No form, no input that submits, no contact address and no sign-off. Nothing is stored or sent:
+// the chosen guides go in the address as ?f=, and the paragraph goes nowhere but the clipboard or a
+// file the visitor saves. Computed by src/lib/site/prepare-elements.ts; every visible string of the
+// Atlas's own is in data/lab/prepare/elements-copy.json.
+//
+// Épuré (labs/review/epure-audit.md): Copy as text is the view's one filled button. The sentence
+// that the paragraph stays in the page stands under it, where a visitor needs it, so About this
+// view does not say it again (no local row).
+import LabLayout from '../../../lab/LabLayout.astro';
+import Words from '../prepare-inventory/Words.astro';
+import { suppliersModel } from '../../../../lib/site/prepare-elements';
+import { formatDate } from '../../../../lib/lab/format';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  tool: LabTool;
+}
+const { tool } = Astro.props;
+const m = suppliersModel();
+const c = m.copy;
+const common = m.common;
+
+// the documents each question quotes, named for the letter's list of sources, in the order first
+// quoted, each with the latest day its words were read: the letter's own as-of date, which prints
+// and copies with it while the Atlas's frame stays off the paper
+const docs: Record<string, string> = {};
+const readOn: Record<string, string> = {};
+for (const g of m.groups)
+  for (const q of g.questions)
+    for (const w of q.quotes) {
+      docs[w.url] ??= [w.publisher, w.title].filter(Boolean).join(', ');
+      if (!readOn[w.url] || w.retrievedAt > readOn[w.url]) readOn[w.url] = w.retrievedAt;
+    }
+for (const url of Object.keys(docs)) docs[url] = `${docs[url]} (${c.textRead.replace('{date}', formatDate(readOn[url]))})`;
+
+const config = {
+  known: m.guides.map((g) => g.id),
+  defaults: m.defaults,
+  docs,
+  checkHref: m.checkHref,
+  filename: c.filename,
+  strings: {
+    textSources: c.textSources,
+    copied: c.copied,
+    copyFailed: c.copyFailed,
+    downloaded: c.downloaded,
+  },
+};
+// "5 of 20 questions": the questions the chosen guides give, of all the letter holds
+const count = (n: number) => c.count.replace('{n}', String(n)).replace('{total}', String(m.count));
+---
+
+<LabLayout
+  tool={tool}
+  question={c.question}
+  lede={m.lede}
+  description={m.description}
+  reads={m.reads}
+  asOf={m.asOf}
+  standingNote={m.standingNote}
+  standingNoteIn="about"
+  sources={m.sources}
+  next={m.next}
+>
+  <div
+    class="pe pe-letter"
+    id="pe-letter"
+    data-known={JSON.stringify(config.known)}
+    data-defaults={JSON.stringify(config.defaults)}
+    data-count={c.count}
+    data-total={m.count}
+  >
+    {
+      m.why && (
+        <section class="pe-sec su-why" aria-labelledby="su-why-h">
+          <h2 class="pe-h2" id="su-why-h">
+            {m.why.head}
+          </h2>
+          <p class="pe-para">{m.why.text}</p>
+          <Words quotes={m.why.quotes} />
+        </section>
+      )
+    }
+
+    <section class="pe-choose lab-group" aria-labelledby="pe-choose-h">
+      <h2 class="section-label" id="pe-choose-h">{c.chooserHead}</h2>
+      <fieldset class="lab-choice pe-choice" data-pe-chooser>
+        <legend class="fr-sr">{c.chooserLegend}</legend>
+        {
+          m.guides.map((g) => (
+            <label>
+              <input type="checkbox" value={g.id} checked />
+              <span>{g.shortLabel}</span>
+            </label>
+          ))
+        }
+      </fieldset>
+      <p class="pe-count" data-pe-count aria-live="polite">{count(m.count)}</p>
+      {m.chooserHint && <p class="pe-small pe-hint" data-pe-hint>{m.chooserHint}</p>}
+    </section>
+
+    <section class="pe-sec pe-letter-sec" aria-labelledby="pe-para-h">
+      <h2 class="pe-h2" id="pe-para-h">{c.paragraphHead}</h2>
+      <label class="fr-sr" for="pe-para">{c.paragraphLabel}</label>
+      <textarea id="pe-para" class="lab-input pe-letter-para" rows="5" spellcheck="true" data-pe-para>{c.paragraph}</textarea>
+      <p class="pe-print-only pe-letter-print" data-pe-para-print>{c.paragraph}</p>
+      <p class="pe-small pe-letter-note">{c.paragraphNote}</p>
+      {
+        m.intent && (
+          <>
+            <p class="pe-small su-intent">
+              {m.intent.text}
+              {' '}
+              <span class="su-tag">{m.intent.tag}</span>
+            </p>
+            <Words quotes={m.intent.quotes} />
+          </>
+        )
+      }
+    </section>
+
+    <section class="pe-sec pe-letter-sec pe-qs-all" aria-labelledby="pe-qs-h">
+      <h2 class="pe-h2" id="pe-qs-h">{c.letterHead}</h2>
+      <p class="fr-empty" data-pe-empty hidden>{c.empty}</p>
+      {
+        m.groups.map((g) => (
+          <div class="pe-qgroup" data-pe-group={g.id}>
+            <h3 class="pe-gh">{g.head}</h3>
+            <ol class="pe-qs">
+              {g.questions.map((q) => (
+                <li class="pe-qi" id={`q-${q.id}`} data-guide={q.guide} data-docs={q.quotes.map((w) => w.url).join(' ')}>
+                  <p class="pe-qt">
+                    <span data-pe-q>{q.label}</span> <span class="pe-tag" data-pe-tag>{q.tag}</span>
+                  </p>
+                  <Words quotes={q.quotes} />
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))
+      }
+      <div class="pe-print-only pe-letter-sources">
+        <h3 class="pe-gh">{c.textSources}</h3>
+        <ul>
+          {
+            Object.entries(docs).map(([url, label]) => (
+              <li data-pe-src={url}>
+                {label}: {url}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <script is:inline>
+        // Before the first paint: choose the guides ?f= names (the letter's defaults when it names
+        // none of them), hide the other guides' questions, set the count to what shows, and keep
+        // the note on the starting choice only while it is true, so the letter never flashes in
+        // full or says something its ticks contradict. The module script below does the same
+        // from then on.
+        (function () {
+          var root = document.getElementById('pe-letter');
+          if (!root) return;
+          try {
+            var known = JSON.parse(root.getAttribute('data-known') || '[]');
+            var defaults = JSON.parse(root.getAttribute('data-defaults') || '[]');
+            var asked = (new URLSearchParams(window.location.search).get('f') || '').split(',');
+            var start = known.filter(function (id) { return defaults.indexOf(id) >= 0; });
+            var chosen = known.filter(function (id) { return asked.indexOf(id) >= 0; });
+            if (!chosen.length) chosen = start;
+            root.querySelectorAll('[data-pe-chooser] input').forEach(function (i) { i.checked = chosen.indexOf(i.value) >= 0; });
+            var shown = 0;
+            root.querySelectorAll('.pe-qi').forEach(function (li) {
+              li.hidden = chosen.indexOf(li.getAttribute('data-guide')) < 0;
+              if (!li.hidden) shown += 1;
+            });
+            root.querySelectorAll('[data-pe-group]').forEach(function (g) { g.hidden = !g.querySelector('.pe-qi:not([hidden])'); });
+            var count = root.querySelector('[data-pe-count]');
+            if (count) count.textContent = (root.getAttribute('data-count') || '').replace('{n}', String(shown)).replace('{total}', root.getAttribute('data-total') || '');
+            var hint = root.querySelector('[data-pe-hint]');
+            if (hint) hint.hidden = chosen.join(',') !== start.join(',');
+          } catch (e) {
+            // an address the browser cannot read leaves every question showing
+          }
+        })();
+      </script>
+    </section>
+
+    <p class="fr-actions pe-letter-actions" data-pe-actions hidden>
+      <button type="button" class="lab-btn lab-btn--primary pe-letter-copy" data-pe-copy>{c.copyText}</button>
+      <button type="button" class="fr-act" data-pe-print>{common.print}</button>
+      <span class="dot-sep" aria-hidden="true"></span>
+      <button type="button" class="fr-act" data-pe-txt>{c.downloadTxt}</button>
+      <span class="fr-status" role="status" data-pe-status></span>
+    </p>
+    <script type="application/json" data-pe-config set:html={JSON.stringify(config).replace(/</g, '\\u003c')} />
+  </div>
+
+  <Fragment slot="method">
+    {m.method.map((p) => <p>{p}</p>)}
+  </Fragment>
+</LabLayout>
+
+<style>
+  /* why ask: the page's opening paragraph, above the chooser; it stays off the printed letter */
+  .su-why {
+    margin-bottom: var(--gap-related);
+  }
+  .su-intent {
+    margin-top: var(--gap-group);
+  }
+  /* the letter's main action, Copy as text, is the page's one filled button; Print and Download
+     .txt follow it as quiet links */
+  .pe-letter-copy {
+    margin-right: var(--space-4);
+  }
+  @media print {
+    .su-why,
+    .su-intent {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  import { letterText, readSources, sourcesValue } from './letter';
+
+  // The letter: the chooser filters the questions and writes the chosen guides to ?f= (replaceState,
+  // no request); the covering paragraph is mirrored for print; Copy as text and Download .txt
+  // compose the letter from what is on screen. Nothing is stored and nothing is sent.
+  const root = document.getElementById('pe-letter');
+  const configEl = root?.querySelector<HTMLScriptElement>('[data-pe-config]');
+  if (root && configEl) {
+    const cfg = JSON.parse(configEl.textContent || '{}') as {
+      known: string[];
+      defaults: string[];
+      docs: Record<string, string>;
+      checkHref: string | null;
+      filename: string;
+      strings: Record<string, string>;
+    };
+    const boxes = Array.from(root.querySelectorAll<HTMLInputElement>('[data-pe-chooser] input'));
+    const items = Array.from(root.querySelectorAll<HTMLLIElement>('.pe-qi'));
+    const groups = Array.from(root.querySelectorAll<HTMLElement>('[data-pe-group]'));
+    const para = root.querySelector<HTMLTextAreaElement>('[data-pe-para]');
+    const paraPrint = root.querySelector<HTMLElement>('[data-pe-para-print]');
+    const countEl = root.querySelector<HTMLElement>('[data-pe-count]');
+    const hint = root.querySelector<HTMLElement>('[data-pe-hint]');
+    const empty = root.querySelector<HTMLElement>('[data-pe-empty]');
+    const printSources = Array.from(root.querySelectorAll<HTMLElement>('[data-pe-src]'));
+    const status = root.querySelector<HTMLElement>('[data-pe-status]');
+    const countText = root.dataset.count ?? '';
+    const total = root.dataset.total ?? '';
+    const start = sourcesValue(cfg.defaults, cfg.known);
+    const say = (msg: string) => {
+      if (status) status.textContent = msg;
+    };
+    const chosen = () => boxes.filter((b) => b.checked).map((b) => b.value);
+
+    // the Where to go next link back to the Check carries the chosen guides, in the Check's own hash
+    const backLink = cfg.checkHref ? Array.from(document.querySelectorAll<HTMLAnchorElement>('.fr-next a')).find((a) => a.getAttribute('href') === cfg.checkHref) : undefined;
+
+    const apply = (write: boolean) => {
+      const ids = chosen();
+      items.forEach((li) => (li.hidden = !ids.includes(li.dataset.guide ?? '')));
+      groups.forEach((g) => (g.hidden = !g.querySelector('.pe-qi:not([hidden])')));
+      const shown = items.filter((li) => !li.hidden);
+      const n = shown.length;
+      if (countEl) countEl.textContent = countText.replace('{n}', String(n)).replace('{total}', total);
+      // the note says which guides the letter starts from: true only while those are the ones chosen
+      if (hint) hint.hidden = sourcesValue(ids, cfg.known) !== start;
+      if (empty) empty.hidden = n > 0;
+      // the printed sources: the documents the questions on screen quote
+      const used = new Set(shown.flatMap((li) => (li.dataset.docs ?? '').split(' ').filter(Boolean)));
+      printSources.forEach((el) => (el.hidden = !used.has(el.dataset.peSrc ?? '')));
+      if (backLink && cfg.checkHref) backLink.href = ids.length ? `${cfg.checkHref}#f=${sourcesValue(ids, cfg.known)}` : cfg.checkHref;
+      if (write) {
+        const params = new URLSearchParams(location.search);
+        if (ids.length) params.set('f', sourcesValue(ids, cfg.known));
+        else params.delete('f');
+        const query = params.toString().replace(/%2C/gi, ',');
+        history.replaceState(history.state, '', `${location.pathname}${query ? `?${query}` : ''}${location.hash}`);
+      }
+    };
+
+    const initial = readSources(location.search, cfg.known, cfg.defaults);
+    boxes.forEach((b) => (b.checked = initial.includes(b.value)));
+    apply(false);
+    boxes.forEach((b) => b.addEventListener('change', () => apply(true)));
+
+    para?.addEventListener('input', () => {
+      if (paraPrint) paraPrint.textContent = para.value;
+    });
+    // where the browser cannot size the box to its text in CSS (field-sizing), size it here, so
+    // the whole paragraph shows; no animation, only a height
+    if (para && !(window.CSS && CSS.supports('field-sizing', 'content'))) {
+      const fit = () => {
+        para.style.height = 'auto';
+        para.style.height = `${para.scrollHeight + 2}px`;
+      };
+      fit();
+      para.addEventListener('input', fit);
+      // a resize sizes the box at most once a frame
+      let frame = 0;
+      window.addEventListener('resize', () => {
+        if (frame) return;
+        frame = requestAnimationFrame(() => {
+          frame = 0;
+          fit();
+        });
+      });
+    }
+
+    const text = () =>
+      letterText({
+        paragraph: para?.value ?? '',
+        groups: groups
+          .filter((g) => !g.hidden)
+          .map((g) => ({
+            head: g.querySelector('.pe-gh')?.textContent?.trim() ?? '',
+            questions: Array.from(g.querySelectorAll<HTMLLIElement>('.pe-qi'))
+              .filter((li) => !li.hidden)
+              .map((li) => ({
+                label: li.querySelector('[data-pe-q]')?.textContent?.trim() ?? '',
+                tag: li.querySelector('[data-pe-tag]')?.textContent?.trim() ?? '',
+              })),
+          })),
+        sourcesHead: cfg.strings.textSources,
+        sources: [...new Set(items.filter((li) => !li.hidden).flatMap((li) => (li.dataset.docs ?? '').split(' ').filter(Boolean)))].map((url) => ({
+          label: cfg.docs[url] ?? url,
+          url,
+        })),
+      });
+
+    root.querySelector('[data-pe-print]')?.addEventListener('click', () => {
+      if (paraPrint && para) paraPrint.textContent = para.value;
+      window.print();
+    });
+    root.querySelector('[data-pe-copy]')?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(text());
+        say(cfg.strings.copied);
+      } catch {
+        say(cfg.strings.copyFailed);
+      }
+    });
+    root.querySelector('[data-pe-txt]')?.addEventListener('click', () => {
+      const blob = new Blob([text().replace(/\n/g, '\r\n')], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = cfg.filename;
+      document.body.append(a);
+      a.click();
+      a.remove();
+      window.setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      say(cfg.strings.downloaded);
+    });
+    root.querySelector<HTMLElement>('[data-pe-actions]')!.hidden = false;
+  }
+</script>

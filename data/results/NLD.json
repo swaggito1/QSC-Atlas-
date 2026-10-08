@@ -182,7 +182,7 @@
     "year": 2025,
     "docType": "Standard",
     "tier": "T1",
-    "url": "https://english.ncsc.nl/binaries/ncsc-en/documenten/publications/2025/06/26/security-guidelines-for-transport-layer-security-2025-05/Publication_TLS-Security+guidelines-2025-05_ENG.pdf",
+    "url": "https://www.ncsc.nl/api/media/sites/default/files/TLS-Security%20guidelines-2025-05.pdf",
     "summary": "NCSC-NL TLS security guidelines (version 2025-05, published 26 June 2025) that explicitly address hybrid quantum-safe key-exchange algorithms (X25519MLKEM768, SecP256r1MLKEM768, SecP384r1MLKEM1024 combining ECDHE with ML-KEM) and advise organisations, by quantum-risk profile, on when to implement quantum-safe cryptography in TLS.",
     "included": true
   },
@@ -207,5 +207,49 @@
     "url": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2026Z04601&did=2026D10402",
     "summary": "Dutch government assessment (BNC-fiche, 6 March 2026) of the European Commission proposal to simplify the NIS2 Directive, which explicitly notes the Commission's proposal that member states make post-quantum cryptography a mandatory part of the national cybersecurity strategy; the PQC reference is incidental to a NIS2-focused fiche, hence flagged for review.",
     "included": false
+  },
+  {
+    "title": "Focus op quantum bij de rijksoverheid",
+    "country": "NLD",
+    "issuingOrg": "Algemene Rekenkamer",
+    "year": 2026,
+    "docType": "Evaluation",
+    "tier": "T3",
+    "url": "https://www.rekenkamer.nl/site/binaries/site-content/collections/documents/2026/02/04/focus-op-quantum-bij-de-rijksoverheid/rapport-focus-op-quantum-bij-de-rijksoverheid.pdf",
+    "summary": "Netherlands Court of Audit report on how central government handles quantum technology, covering both its opportunities and the quantum threat to cryptography. It examines the PQC migration of central government organisations under the QvC NL programme and the obstacles to it, and finds that few organisations have started addressing the quantum threat.",
+    "included": true
+  },
+  {
+    "title": "Rijksbreed beleidskader cryptografie: Een raamwerk voor het opstellen van cryptografiebeleid",
+    "country": "NLD",
+    "issuingOrg": "BZK (CIO Rijk)",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2025/03/Rijksbreed-Beleidskader-Cryptografie.pdf",
+    "summary": "Government-wide cryptography policy framework (version 1.0, dated 14 February 2025, managed by BZK/CIO Rijk and drafted by the QvC-Rijk working group) that sets mandatory requirements for the cryptography policies of central government organisations. It asks organisations to record the quantum-safety level of the cryptography they use, and it lists quantum-safe cryptography, including hybrid classical and quantum-safe algorithms, among the technical aspects their policies must cover.",
+    "included": true
+  },
+  {
+    "title": "Antwoorden op aanvullende kennisvragen inzake Kwantumtechnologie en de gevolgen voor encryptie",
+    "country": "NLD",
+    "issuingOrg": "BZK",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://open.overheid.nl/documenten/7cc21d78-75bb-4778-9615-cccb2b79b613/file",
+    "summary": "Letter of 7 November 2023 from State Secretary Van Huffelen (BZK), sent also on behalf of the Minister of Economic Affairs and Climate, answering the Tweede Kamer Digital Affairs committee's additional questions on quantum technology and its consequences for encryption. It describes how the Quantumveilige Cryptografie Rijk programme prepares central government's migration to quantum-safe cryptography and names the obstacles to that transition.",
+    "included": true
+  },
+  {
+    "title": "Position paper over Quantum Key Distribution",
+    "country": "NLD",
+    "issuingOrg": "AIVD",
+    "year": 2024,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://www.aivd.nl/site/binaries/site-content/collections/documents/2024/01/26/position-paper-on-quantum-key-distribution/Position+Paper+over+Quantum+Key+Distribution.pdf",
+    "summary": "Joint position paper by ANSSI, BSI, the Netherlands National Communications Security Agency (NLNCSA, part of the AIVD) and the Swedish national communications security authority; the AIVD hosts this Dutch version. It concludes that QKD is usable only in niche cases and is not yet mature enough, and says priority should go to migration to post-quantum cryptography and/or symmetric keys.",
+    "included": true
   }
 ]

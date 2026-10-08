@@ -1,0 +1,45 @@
+---
+// "How to cite" (spec 11, item 14): the citation as selectable text in the reading face, and a
+// quiet "Copy citation" under it once JavaScript is there to do the copying. Without
+// JavaScript the text is still there to select. The text comes from src/lib/site/cite.ts:
+// pass `text`, or the title, path and as-of date and the citation is built here. It names the
+// Zenodo record's creators and CEPS, and states no licence.
+import { citeText } from '../../../lib/site/cite';
+import '../../../styles/frame.css';
+
+interface Props {
+  text?: string;
+  title?: string;
+  path?: string;
+  asOf?: string | null;
+}
+const { title = '', path = Astro.url.pathname, asOf = null } = Astro.props;
+const text = Astro.props.text ?? citeText({ title, path, asOf });
+---
+
+<div class="fr-cite" data-fr-cite>
+  <p class="fr-cite-text" data-fr-cite-text>{text}</p>
+  <p class="fr-cite-bar">
+    <button type="button" class="fr-act" data-fr-cite-copy hidden>Copy citation</button>
+    <span class="fr-status" role="status" data-fr-cite-status></span>
+  </p>
+</div>
+
+<script>
+  // The copy action appears only when the page can copy. The status line says what happened.
+  document.querySelectorAll<HTMLElement>('[data-fr-cite]').forEach((box) => {
+    const btn = box.querySelector<HTMLButtonElement>('[data-fr-cite-copy]');
+    const text = box.querySelector<HTMLElement>('[data-fr-cite-text]')?.textContent?.trim() ?? '';
+    const status = box.querySelector<HTMLElement>('[data-fr-cite-status]');
+    if (!btn || !text || !navigator.clipboard) return;
+    btn.hidden = false;
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        if (status) status.textContent = 'Citation copied.';
+      } catch {
+        if (status) status.textContent = 'The citation could not be copied here; select the text above.';
+      }
+    });
+  });
+</script>

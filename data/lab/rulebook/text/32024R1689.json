@@ -1,0 +1,249 @@
+{
+  "_about": "Verbatim text of the in-scope articles of Regulation (EU) 2024/1689 (AI Act), read on 2026-09-30 from the consolidated version of 2026-07-27 (CELEX 02024R1689-20260727) through CELLAR. Consolidation markers and footnote call numbers are left out; each paragraph, subparagraph and point is one entry.",
+  "celex": "32024R1689",
+  "consolidatedVersion": "2026-07-27",
+  "sourceUrl": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+  "retrievedAt": "2026-09-30",
+  "articles": [
+    {
+      "id": "art3",
+      "ref": "Article 3",
+      "sourceTitle": "Definitions",
+      "theme": "definitions",
+      "paragraphs": [
+        {
+          "id": "32024R1689/art3/par1/pt-49",
+          "ref": "Article 3, point (49)",
+          "quote": "‘serious incident’ means an incident or malfunctioning of an AI system that directly or indirectly leads to any of the following:",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art3/par1/pt-49/pt-a",
+          "ref": "Article 3, point (49)(a)",
+          "quote": "the death of a person, or serious harm to a person’s health;",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art3/par1/pt-49/pt-b",
+          "ref": "Article 3, point (49)(b)",
+          "quote": "a serious and irreversible disruption of the management or operation of critical infrastructure;",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art3/par1/pt-49/pt-c",
+          "ref": "Article 3, point (49)(c)",
+          "quote": "the infringement of obligations under Union law intended to protect fundamental rights;",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art3/par1/pt-49/pt-d",
+          "ref": "Article 3, point (49)(d)",
+          "quote": "serious harm to property or the environment;",
+          "crossRefs": []
+        }
+      ]
+    },
+    {
+      "id": "art73",
+      "ref": "Article 73",
+      "sourceTitle": "Reporting of serious incidents",
+      "theme": "incident-reporting",
+      "paragraphs": [
+        {
+          "id": "32024R1689/art73/par1",
+          "ref": "Article 73(1)",
+          "quote": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art73/par2",
+          "ref": "Article 73(2)",
+          "quote": "The report referred to in paragraph 1 shall be made immediately after the provider has established a causal link between the AI system and the serious incident or the reasonable likelihood of such a link, and, in any event, not later than 15 days after the provider or, where applicable, the deployer, becomes aware of the serious incident.",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par2/sub-2",
+          "ref": "Article 73(2), second subparagraph",
+          "quote": "The period for the reporting referred to in the first subparagraph shall take account of the severity of the serious incident.",
+          "crossRefs": [
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par3",
+          "ref": "Article 73(3)",
+          "quote": "Notwithstanding paragraph 2 of this Article, in the event of a widespread infringement or a serious incident as defined in Article 3, point (49)(b), the report referred to in paragraph 1 of this Article shall be provided immediately, and not later than two days after the provider or, where applicable, the deployer becomes aware of that incident.",
+          "crossRefs": [
+            "paragraph 2",
+            "Article 3, point (49)(b)",
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par4",
+          "ref": "Article 73(4)",
+          "quote": "Notwithstanding paragraph 2, in the event of the death of a person, the report shall be provided immediately after the provider or the deployer has established, or as soon as it suspects, a causal relationship between the high-risk AI system and the serious incident, but not later than 10 days after the date on which the provider or, where applicable, the deployer becomes aware of the serious incident.",
+          "crossRefs": [
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par5",
+          "ref": "Article 73(5)",
+          "quote": "Where necessary to ensure timely reporting, the provider or, where applicable, the deployer, may submit an initial report that is incomplete, followed by a complete report.",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art73/par6",
+          "ref": "Article 73(6)",
+          "quote": "Following the reporting of a serious incident pursuant to paragraph 1, the provider shall, without delay, perform the necessary investigations in relation to the serious incident and the AI system concerned. This shall include a risk assessment of the incident, and corrective action.",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par6/sub-2",
+          "ref": "Article 73(6), second subparagraph",
+          "quote": "The provider shall cooperate with the competent authorities, and where relevant with the notified body concerned, during the investigations referred to in the first subparagraph, and shall not perform any investigation which involves altering the AI system concerned in a way which may affect any subsequent evaluation of the causes of the incident, prior to informing the competent authorities of such action.",
+          "crossRefs": [
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par7",
+          "ref": "Article 73(7)",
+          "quote": "Upon receiving a notification related to a serious incident referred to in Article 3, point (49)(c), the relevant market surveillance authority shall inform the national public authorities or bodies referred to in Article 77(1). The Commission shall develop dedicated guidance to facilitate compliance with the obligations set out in paragraph 1 of this Article. That guidance shall be issued by 2 August 2025, and shall be assessed regularly.",
+          "crossRefs": [
+            "Article 3, point (49)(c)",
+            "Article 77(1)",
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par8",
+          "ref": "Article 73(8)",
+          "quote": "The market surveillance authority shall take appropriate measures, as provided for in Article 19 of Regulation (EU) 2019/1020, within seven days from the date it received the notification referred to in paragraph 1 of this Article, and shall follow the notification procedures as provided in that Regulation.",
+          "crossRefs": [
+            "Article 19",
+            "Regulation (EU) 2019/1020",
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par9",
+          "ref": "Article 73(9)",
+          "quote": "For high-risk AI systems referred to in Annex III that are placed on the market or put into service by providers that are subject to Union legislative instruments laying down reporting obligations equivalent to those set out in this Regulation, the notification of serious incidents shall be limited to those referred to in Article 3, point (49)(c).",
+          "crossRefs": [
+            "Annex III",
+            "Article 3, point (49)(c)"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par10",
+          "ref": "Article 73(10)",
+          "quote": "For high-risk AI systems which are safety components of devices, or are themselves devices, covered by Regulations (EU) 2017/745 and (EU) 2017/746, the notification of serious incidents shall be limited to those referred to in Article 3, point (49)(c) of this Regulation, and shall be made to the national competent authority chosen for that purpose by the Member States where the incident occurred.",
+          "crossRefs": [
+            "Regulations (EU) 2017/745",
+            "(EU) 2017/746",
+            "Article 3, point (49)(c)"
+          ]
+        },
+        {
+          "id": "32024R1689/art73/par11",
+          "ref": "Article 73(11)",
+          "quote": "National competent authorities shall immediately notify the Commission of any serious incident, whether or not they have taken action on it, in accordance with Article 20 of Regulation (EU) 2019/1020.",
+          "crossRefs": [
+            "Article 20",
+            "Regulation (EU) 2019/1020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art113",
+      "ref": "Article 113",
+      "sourceTitle": "Entry into force and application",
+      "theme": "dates",
+      "paragraphs": [
+        {
+          "id": "32024R1689/art113/par1",
+          "ref": "Article 113, first paragraph",
+          "quote": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art113/par2",
+          "ref": "Article 113, second paragraph",
+          "quote": "It shall apply from 2 August 2026.",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art113/par3",
+          "ref": "Article 113, third paragraph",
+          "quote": "However:",
+          "crossRefs": []
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-a",
+          "ref": "Article 113, third paragraph, point (a)",
+          "quote": "Chapters I and II shall apply from 2 February 2025, with the exception of Article 5(1), first subparagraph, points (ba) and (bb), and Article 5(1a) and (1b) which shall apply from 2 December 2026;",
+          "crossRefs": [
+            "Chapters I and II",
+            "Article 5(1), first subparagraph, points (ba) and (bb)",
+            "Article 5(1a)"
+          ]
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-b",
+          "ref": "Article 113, third paragraph, point (b)",
+          "quote": "Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the exception of Article 101;",
+          "crossRefs": [
+            "Chapter III Section 4",
+            "Chapter V",
+            "Chapter VII",
+            "Chapter XII",
+            "Article 78",
+            "Article 101"
+          ]
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-c",
+          "ref": "Article 113, third paragraph, point (c)",
+          "quote": "Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from:",
+          "crossRefs": [
+            "Chapter III, Sections 1, 2, and 3",
+            "Article 6(5)"
+          ]
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-c/pt-i",
+          "ref": "Article 113, third paragraph, point (c)(i)",
+          "quote": "2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and",
+          "crossRefs": [
+            "Article 6(2)",
+            "Annex III"
+          ]
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-c/pt-ii",
+          "ref": "Article 113, third paragraph, point (c)(ii)",
+          "quote": "2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;",
+          "crossRefs": [
+            "Article 6(1)",
+            "Annex I"
+          ]
+        },
+        {
+          "id": "32024R1689/art113/par3/pt-d",
+          "ref": "Article 113, third paragraph, point (d)",
+          "quote": "Articles 102 to 110 shall apply from 27 July 2026.",
+          "crossRefs": [
+            "Articles 102 to 110"
+          ]
+        }
+      ]
+    }
+  ]
+}

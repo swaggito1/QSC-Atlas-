@@ -1,0 +1,585 @@
+{
+  "_about": "Every visible string of the Prepare element pages (spec 5.2): the inventory template, the migration approach (off the Atlas since 5 October 2026, kept for its return at /elsewhere/approach, linked from no Atlas page), the supplier letter and the guides, under copy; and the supplier letter’s questions under questions, keyed by the id of the Readiness Check action each is drawn from, each with the source’s own words read on 1 October 2026; and under notes, the passage the letter’s statement of intent line rests on. A source’s own words are kept for review only: the pages show them inside SourceWords, which a production build leaves out. A question’s cite is the short locator in its bracketed source tag. A {milestone:id} placeholder is filled from that milestone’s year in readiness.json, so a date is kept once.",
+  "copy": {
+    "common": {
+      "quotedFrom": "In the Readiness Check",
+      "openSource": "Open the document",
+      "copyLink": "Copy link",
+      "downloadCsv": "Download CSV",
+      "print": "Print",
+      "linkCopied": "Link copied. It opens this page as you see it now.",
+      "linkFailed": "The link could not be copied here; copy it from the address bar.",
+      "csvDone": "CSV downloaded."
+    },
+    "inventory": {
+      "question": "What to record about each system",
+      "lede": "The facts {guides} published guides ask you to record about each system that uses cryptography, as a template to download.",
+      "description": "What to record about each system that uses cryptography, from the Canadian roadmap, the NCSC timelines and the EU roadmap, as a checklist and a header-only CSV template.",
+      "reads": "{columns} template columns from {guides} guides",
+      "download": "Download the template (CSV)",
+      "downloadNote": "A header row only: one column for each numbered field below, and no example rows.",
+      "howTo": "Add a row for each system.",
+      "groupHead": "From the {guide}",
+      "colNo": "Column",
+      "colField": "Field",
+      "colRecord": "What to record",
+      "wholeHead": "For the inventory as a whole",
+      "csvHeader": "{label} ({guide}, {locator})",
+      "csvApproach": "{label}, one of the NCSC’s {optionCount} options ({options}) or its {caseCount} cases that need no choice ({cases}) ({guide}, {locator})",
+      "filename": "inventory-template.csv",
+      "nextGuide": "The Canadian roadmap, and who it is written for",
+      "nextCheck": "The discovery actions in the Readiness Check",
+      "method1": "The template’s columns are the facts the Canadian roadmap lists for each system in its section 3.2, the two facts about data the NCSC asks for in its discovery and assessment, and the route the NCSC asks you to choose for each system. The EU roadmap’s advice on a standard format applies to the inventory as a whole, so it is shown here but is not a column.",
+      "method2": "Each column header names the guide and the place in it that the column comes from. The template holds no example rows, because any example would be invented data. The plain wording of each field is the Atlas’s, written from the guide’s own text."
+    },
+    "approach": {
+      "question": "Choosing a route for each system",
+      "lede": "See the routes to post-quantum cryptography that the NCSC sets out, then record the one you choose for each of your systems.",
+      "description": "The NCSC’s five migration options for each system and its two cases that need no choice, with a worksheet that stays in the page.",
+      "worksheetHead": "Your systems",
+      "worksheetIntro": "Name each system and choose its route.",
+      "systemLabel": "System",
+      "systemHint": "Name of the system",
+      "routeLabel": "Route",
+      "routeNone": "Not chosen",
+      "add": "Add a system",
+      "remove": "Remove",
+      "removeLabel": "Remove {name}",
+      "rowName": "system {n}",
+      "clear": "Clear all",
+      "cleared": "Worksheet cleared.",
+      "removed": "System removed.",
+      "undo": "Undo",
+      "undoLabel": "Undo: put the worksheet back as it was",
+      "restored": "Worksheet restored.",
+      "privacy": "Nothing here is recommended for you, and nothing is stored or sent. The worksheet is kept in this page’s address, after the # sign, which browsers do not send to any server; it leaves only in a link you copy or a file you download.",
+      "noScript": "The worksheet needs JavaScript. The routes above read the same without it.",
+      "printHead": "Routes chosen",
+      "printEmpty": "No system named.",
+      "csvSystem": "System",
+      "csvRoute": "Migration approach ({guide}, {locator})",
+      "filename": "migration-approach.csv",
+      "routesHead": "What each route means",
+      "diagramRoot": "Each system, service or product you are responsible for",
+      "writtenFor": "The NCSC timelines are written for {audience}.",
+      "casesHead": "Two cases that need no choice",
+      "optionsHead": "The NCSC’s five options",
+      "optionsIntro": "For a system that does not rely on commodity technology, the NCSC sets out these options.",
+      "legacyHead": "Systems that cannot move",
+      "inventoryLink": "The inventory template records the route in its Migration approach column.",
+      "sourceHead": "Source",
+      "nextInventory": "Record each system in the inventory template",
+      "nextGuide": "The NCSC timelines, and who they are written for",
+      "nextCheck": "The planning actions in the Readiness Check",
+      "method1": "The five options and the two cases that need no choice are the NCSC’s, from the migration strategy selection in its timelines guidance. Each name is the NCSC’s own; the short summary under it is the Atlas’s, written from the NCSC’s text.",
+      "method2": "The worksheet records the route you choose. It recommends nothing, weighs nothing and keeps nothing: what you type stays in this page’s address and leaves only in a link you copy or a file you download."
+    },
+    "suppliers": {
+      "question": "What to ask your suppliers",
+      "lede": "What {guides} published guides ask an organisation to raise with its suppliers, as questions you can send, each with its source in brackets.",
+      "description": "Questions to send to suppliers about post-quantum cryptography, drawn from published migration guidance, each with its source in brackets. Printable, with nothing sent or stored.",
+      "reads": "{questions} questions from {guides} guides",
+      "whyHead": "Why ask your suppliers",
+      "why": "For many organisations, much of the cryptography they rely on is in what they buy: embedded in products and equipment, delivered in software and firmware updates, or run by cloud and managed service providers. An organisation’s own move to post-quantum cryptography therefore depends on what its suppliers do, and when: the EU roadmap asks every organisation to start talking to its suppliers for that reason, and the NCSC expects an organisation’s plan to move as its suppliers’ plans change. The inventory needs their answers too: discovery tools may not find cryptography embedded inside a product, so the CISA, NSA and NIST factsheet advises asking vendors to list it. Procurement and contracts are where an organisation can ask: the Canadian roadmap advises putting post-quantum requirements into new procurements, and the factsheet advises planning changes to existing and future contracts, so that new products arrive with post-quantum cryptography built in.",
+      "chooserHead": "Guides to draw on",
+      "chooserLegend": "Choose the guides whose questions go in the letter",
+      "chooserHint": "{guides} are chosen to start with, as in the Readiness Check.",
+      "count": "{n} of {total} questions",
+      "paragraphHead": "Covering paragraph",
+      "paragraphLabel": "Covering paragraph, which you can edit",
+      "paragraph": "We are preparing to move our systems to post-quantum cryptography, which protects information against a future quantum computer able to break today’s public-key encryption. Much of that move depends on the products and services you supply to us, so we would be grateful for your answers to the questions below.",
+      "paragraphNote": "Edit it here. It stays in this page: it is not saved, not sent and not put in any link.",
+      "intentText": "The NCSC suggests you could also share a statement of intent: how you see the quantum threat, how you plan to respond, your ambition and timelines, and the end state you want. It says this helps suppliers understand the demand and bring post-quantum products to market.",
+      "letterHead": "The questions",
+      "empty": "Choose at least one guide to see its questions.",
+      "copyText": "Copy as text",
+      "downloadTxt": "Download .txt",
+      "copied": "The letter is copied as plain text.",
+      "copyFailed": "The letter could not be copied here. Download it as a text file instead.",
+      "downloaded": "The letter is downloaded as a text file.",
+      "textSources": "Sources",
+      "textRead": "read {date}",
+      "filename": "supplier-letter.txt",
+      "nextCheck": "The supplier actions in the Readiness Check",
+      "nextGuides": "The guides quoted here, and who each is written for",
+      "nextInventory": "What to record about each system",
+      "method1": "Each question is the Atlas’s plain wording of something a guide asks an organisation to raise with its suppliers; the brackets name the guide and the place in it. The paragraph on why to ask rests only on what the guides say about suppliers, products and contracts.",
+      "method2": "The questions are a starting point to edit, drop or add to before you send anything. The letter carries no sender, address or sign-off: those are yours to add outside this page. Your choice of guides is kept in the page’s address, so a copied link opens the same letter; the covering paragraph stays in the page."
+    },
+    "groups": {
+      "plans": "Plans and dates",
+      "inside": "Cryptography inside products",
+      "contracts": "Contracts and procurement",
+      "updates": "Updates and signatures"
+    },
+    "status": {
+      "proposal": "Proposal",
+      "adopted": "Adopted",
+      "in-force": "In force",
+      "applies-from": "Applies from",
+      "repealed": "Repealed",
+      "withdrawn": "Withdrawn",
+      "published": "Published",
+      "superseded": "Superseded"
+    },
+    "guides": {
+      "h1": "Which guides does Prepare draw on, and who are they written for?",
+      "lede": "The {count} guides behind Prepare: who issued each and when, how far it binds, who it is written for and what it covers.",
+      "factGuides": "{n} guides",
+      "factDocuments": "{n} documents",
+      "factActions": "{n} actions",
+      "statusWord": "Status",
+      "bindingnessWord": "Bindingness",
+      "published": "published {date}",
+      "dateNone": "publication date not recorded",
+      "writtenFor": "Written for {audience}",
+      "covers": "Covers",
+      "nextCheck": "Readiness Check",
+      "nextDocuments": "Documents the Atlas records"
+    },
+    "guide": {
+      "lede": "Who this guide is written for, how far it binds and the {n} actions Prepare draws from it.",
+      "ledeOne": "Who this guide is written for, how far it binds and the one action Prepare draws from it.",
+      "docs": "{n} documents",
+      "mark": "Mark these actions",
+      "markNote": "in the Readiness Check, with this guide chosen",
+      "writtenForWord": "Written for",
+      "sourceWord": "Source",
+      "coversHead": "What it covers",
+      "coversIntro": "The actions Prepare draws from this guide, in the Atlas’s words. Each opens in the Readiness Check.",
+      "target": "target {when}",
+      "targetsNote": "Its target dates are {phrase}.",
+      "issuedIn": "Issued in {place}",
+      "record": "The Atlas record of this document",
+      "recordOf": "The Atlas record of {title}",
+      "nextGuides": "The guides"
+    }
+  },
+  "questions": {
+    "eu-suppliers": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+            "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+            "publisher": "NIS Cooperation Group",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Every organisation also needs to start the dialogue with product and service suppliers because the transition depends on them.",
+            "locator": "p. 12, section 6.2 First Steps, Include the supply chain",
+            "sourceClass": "trusted-institutional"
+          },
+          {
+            "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+            "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+            "publisher": "NIS Cooperation Group",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "They need to integrate PQC and cryptographic agility (see also the corresponding item in Next Steps) in the development of their product/service roadmap, seeking alignment with the PQC roadmap, nationally and across the EU.",
+            "locator": "p. 12, section 6.2 First Steps, Include the supply chain",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "eu-roadmap",
+        "group": "plans",
+        "label": "What is your roadmap for building post-quantum cryptography into the products and services you supply to us, and how does it line up with national and EU roadmaps?",
+        "cite": "p. 12"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+            "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+            "publisher": "NIS Cooperation Group",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "They need to integrate PQC and cryptographic agility (see also the corresponding item in Next Steps) in the development of their product/service roadmap, seeking alignment with the PQC roadmap, nationally and across the EU.",
+            "locator": "p. 12, section 6.2 First Steps, Include the supply chain",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "eu-agility",
+        "group": "inside",
+        "label": "Will your products and services support cryptographic agility, the ability to switch to other algorithms when needed?",
+        "cite": "p. 12"
+      }
+    ],
+    "ncsc-tell-suppliers": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+            "title": "Timelines for migration to post-quantum cryptography",
+            "publisher": "National Cyber Security Centre",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Communicate your needs to your suppliers.",
+            "locator": "Timelines for PQC migration, recommended timeline table, row 2028",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ncsc-change",
+        "group": "plans",
+        "label": "Which of the products and services you supply to us will change to support post-quantum cryptography, and when?",
+        "cite": "timeline table"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+            "title": "Timelines for migration to post-quantum cryptography",
+            "publisher": "National Cyber Security Centre",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "For many organisations, managed service providers are likely to deliver most of your IT capability, in which case it is important to ensure that they are also carrying out these assessment activities for all the services that they provide.",
+            "locator": "Planning your PQC migration, Discovery and assessment",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ncsc-managed",
+        "group": "plans",
+        "label": "If you manage IT services for us, are you assessing the cryptography in every service you provide to us?",
+        "cite": "Discovery and assessment"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+            "title": "Timelines for migration to post-quantum cryptography",
+            "publisher": "National Cyber Security Centre",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "As you do this, you are likely to refine your plan, and as your suppliers evolve their plans, yours will move with them.",
+            "locator": "Planning your PQC migration, Executing your migration plan",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ncsc-updates",
+        "group": "plans",
+        "label": "Will you tell us when your post-quantum plans change, so that we can adjust ours?",
+        "cite": "Executing your migration plan"
+      }
+    ],
+    "ncsc-new-it": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+            "title": "Next steps in preparing for post-quantum cryptography",
+            "publisher": "National Cyber Security Centre",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "System owners of enterprise IT (such as those who own IT systems designed to meet the demands of a large organisation) should communicate with their IT system suppliers about their plans for supporting PQC in their products.",
+            "locator": "Implications of PQC migration for users and system owners",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "next-plans",
+        "group": "plans",
+        "label": "What are your plans for supporting post-quantum cryptography in the IT systems you supply to us?",
+        "cite": "Implications for users and system owners"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.ncsc.gov.uk/whitepaper/next-steps-preparing-for-post-quantum-cryptography",
+            "title": "Next steps in preparing for post-quantum cryptography",
+            "publisher": "National Cyber Security Centre",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "As systems are updated in-service or replaced as they come to the end of their supported lifecycle, new IT should either use PQC or be capable of being upgraded to PQC once robust implementations based on final standards are available.",
+            "locator": "Implications of PQC migration for users and system owners",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "next-upgrade",
+        "group": "updates",
+        "label": "Do your products use post-quantum cryptography today? If not, can they be upgraded to it once implementations based on the final standards are available?",
+        "cite": "Implications for users and system owners"
+      }
+    ],
+    "cisa-contracts": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Solidly built roadmaps should describe how vendors plan to migrate to PQC, charting timelines for testing PQC algorithms and integration into products.",
+            "locator": "p. 2, Discuss post-quantum roadmaps with technology vendors",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-roadmap",
+        "group": "plans",
+        "label": "Please share your quantum-readiness roadmap: how you plan to move to post-quantum cryptography, with timelines for testing the new algorithms and building them into your products.",
+        "cite": "p. 2"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "An organization’s quantum-readiness roadmap should include details of when and how each COTS vendor plans to deliver updates or upgrades to enable the use of PQC, as well as the expected cost associated with migration to PQC.",
+            "locator": "p. 3, Supply chain quantum-readiness",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-cots",
+        "group": "plans",
+        "label": "For each off-the-shelf product, when and how will you deliver the updates or upgrades that enable post-quantum cryptography, and at what expected cost?",
+        "cite": "p. 3"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "The authoring agencies also urge organizations to proactively plan for necessary changes to existing and future contracts. Considerations should be in place ensuring that new products will be delivered with PQC built-in, and older products will be upgraded with PQC to meet transition timelines.",
+            "locator": "p. 2, Discuss post-quantum roadmaps with technology vendors",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-contracts",
+        "group": "contracts",
+        "label": "Can our contracts with you state that new products will arrive with post-quantum cryptography built in, and that older products will be upgraded to it?",
+        "cite": "p. 2"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "For cloud-hosted products, organizations should engage with their cloud service providers to understand the provider’s quantum-readiness roadmap. Once PQC standards are available, engagements should evolve to focus on how to enable the use of PQC, for example through configuration changes or application updates.",
+            "locator": "p. 3, Supply chain quantum-readiness",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-cloud",
+        "group": "updates",
+        "label": "If you provide cloud services, what is your quantum-readiness roadmap, and how will we turn post-quantum cryptography on: through configuration changes or application updates?",
+        "cite": "p. 3"
+      }
+    ],
+    "cisa-discovery-tools": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Discovery tools may not be able to identify embedded cryptography used internally within products, hindering discoverability or documentation. Organizations should ask vendors for lists of embedded cryptography within their products.",
+            "locator": "p. 2, Prepare a cryptographic inventory",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-embedded",
+        "group": "inside",
+        "label": "Please list the cryptography embedded in each product you supply to us. Our discovery tools may not be able to see it.",
+        "cite": "p. 2"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cisa.gov/sites/default/files/2023-08/Quantum%20Readiness_Final_CLEAR_508c%20%283%29.pdf",
+            "title": "Quantum-Readiness: Migration to Post-Quantum Cryptography",
+            "publisher": "CISA, NSA and NIST",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Systems and assets with quantum-vulnerable cryptography include those involved in creating and validating digital signatures, which also incorporates software and firmware updates.",
+            "locator": "p. 1, Establish a quantum-readiness roadmap",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "cisa-signatures",
+        "group": "updates",
+        "label": "Which algorithms sign the software and firmware updates you send us, and when will those signatures be quantum-safe?",
+        "cite": "p. 1"
+      }
+    ],
+    "ca-procurement": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+            "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+            "publisher": "Canadian Centre for Cyber Security",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "contracts have clauses to ensure that the vendor will include support for PQC that is compliant with Cyber Centre recommendations in Cryptographic algorithms for UNCLASSIFIED, PROTECTED A, and PROTECTED B information (ITSP.40.111)",
+            "locator": "Section 3.1.4 Procurement policies",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ca-clauses",
+        "group": "contracts",
+        "label": "Will you commit in our contracts to support post-quantum cryptography that follows the Canadian Centre for Cyber Security’s algorithm recommendations (ITSP.40.111)?",
+        "cite": "section 3.1.4"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+            "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+            "publisher": "Canadian Centre for Cyber Security",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "cryptographic modules have been certified by the Cryptographic Module Validation Program",
+            "locator": "Section 3.1.4 Procurement policies",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ca-cmvp",
+        "group": "inside",
+        "label": "Have the cryptographic modules in your products been certified by the Cryptographic Module Validation Program?",
+        "cite": "section 3.1.4"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+            "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+            "publisher": "Canadian Centre for Cyber Security",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "support for cryptographic agility to allow for future configuration changes",
+            "locator": "Section 3.1.4 Procurement policies",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ca-agility",
+        "group": "inside",
+        "label": "Do your products support cryptographic agility, so that their configuration can change in future?",
+        "cite": "section 3.1.4"
+      }
+    ],
+    "ca-inventory-fields": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+            "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+            "publisher": "Canadian Centre for Cyber Security",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "During the identification phase, departments should use the inventory to engage relevant IT vendors and contractors to determine their plans to implement PQC in their products and services. Understanding which system components will be eligible for upgrades versus replacement will assist in the next phase of developing a transition plan.",
+            "locator": "Section 3.2 Identification",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "ca-upgrade",
+        "group": "plans",
+        "label": "Which components of the systems you supply to us can be upgraded to post-quantum cryptography, and which will need replacing?",
+        "cite": "section 3.2"
+      }
+    ],
+    "anssi-purchasing": [
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+            "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+            "publisher": "ANSSI",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Identifier les équipements qui vont devoir être mis à jour et contacter les fournisseurs pour connaître leur feuille de route.",
+            "locator": "Question on prerequisites for a transition plan, Bonnes pratiques",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "anssi-roadmap",
+        "group": "plans",
+        "label": "Which of the equipment you supply to us will need updating for post-quantum cryptography, and what is your roadmap for it?",
+        "cite": "Bonnes pratiques"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+            "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+            "publisher": "ANSSI",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Identifier les délais de renouvellement des équipements intégrant de la cryptographie et prévoir un calendrier de renouvellement avec des solutions incluant de la PQC.",
+            "locator": "Question on prerequisites for a transition plan, Bonnes pratiques",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "anssi-renewal",
+        "group": "plans",
+        "label": "When is the equipment you supply to us due for renewal, and will its replacement include post-quantum cryptography?",
+        "cite": "Bonnes pratiques"
+      },
+      {
+        "verify": false,
+        "verifiedAt": "2026-10-01",
+        "provenance": [
+          {
+            "url": "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/",
+            "title": "FaQ sur la Cryptographie post-quantique (PQC)",
+            "publisher": "ANSSI",
+            "retrievedAt": "2026-10-01",
+            "excerpt": "Ne plus acheter des produits n’intégrant pas de PQC à partir de 2030.",
+            "locator": "Question on prerequisites for a transition plan, Bonnes pratiques",
+            "sourceClass": "trusted-institutional"
+          }
+        ],
+        "id": "anssi-purchasing",
+        "group": "contracts",
+        "label": "ANSSI advises organisations to stop buying products without post-quantum cryptography from {milestone:anssi-2030}. Will the products you offer us include it by then?",
+        "cite": "Bonnes pratiques"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This statement of intent could include recognition of the quantum threat, your proposed responses, level of ambition and timelines, and the desired end-state. This will help suppliers understand the demand for PQC migration and bring post-quantum secure products to market.",
+          "locator": "Next steps",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ncsc-intent",
+      "label": "A statement of intent",
+      "cite": "Next steps"
+    }
+  ]
+}
