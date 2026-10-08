@@ -416,5 +416,203 @@
     "url": "https://www.senat.fr/questions/base/2025/qSEQ250303672.html",
     "summary": "Senate written question (17th legislature, March 2025, answered June 2025) on quantum-computing threats to bank-card payments; the government answer sets out the transition to post-quantum cryptography, ANSSI's PQC roadmap and France's participation in the EU-coordinated PQC implementation.",
     "included": true
+  },
+  {
+    "title": "Transition post-quantique : l'ANSSI et ses partenaires du G7 publient un appel à action",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/actualites/transition-post-quantique-lanssi-et-ses-partenaires-du-g7-publient-un-appel-a-action/",
+    "summary": "ANSSI news item of 3 September 2026 announcing that, under France's 2026 G7 presidency, ANSSI and its G7 partners have published a call to action on the transition to post-quantum cryptography, presented as a major security challenge requiring collective and coordinated effort.",
+    "included": true
+  },
+  {
+    "title": "Preparing for the Post-Quantum Era: A Call to Action",
+    "country": "FRA",
+    "issuingOrg": "G7 Cybersecurity Working Group (via ANSSI)",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/nous-connaitre/publications/publications-internationales/preparing-for-the-post-quantum-era-a-call-to-action/",
+    "summary": "Publication of 3 September 2026 issued by the G7 Cybersecurity Working Group under ANSSI's chairmanship, stating that PQC is a new field of cryptography resistant to classical and quantum attacks and urging organisations to begin their PQC transition as soon as possible, with cryptographic inventories, dependency mapping and phased transition plans. Co-portage international publication hosted by ANSSI; flagged for routing review against any G7/other-country entries.",
+    "included": true
+  },
+  {
+    "title": "Déclaration du groupe de travail sur la cybersécurité du G7 concernant la préparation d'une migration vers la cryptographie post-quantique",
+    "country": "FRA",
+    "issuingOrg": "G7 Cybersecurity Working Group (via ANSSI)",
+    "year": 2026,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/nous-connaitre/publications/publications-internationales/d%C3%A9claration-du-groupe-de-travail-sur-la-cybers%C3%A9curit%C3%A9-du-g7-concernant-la-pr%C3%A9paration-dune-migration-vers-la-cryptographie-post-quantique/",
+    "summary": "Declaration of the G7 cybersecurity working group on preparing a migration to post-quantum cryptography, republished by ANSSI on 1 June 2026; it sets out a shared vision among G7 cyber agencies and gives practical advice to technical managers of medium and large organisations preparing the PQC transition. Flagged for routing review as a G7 instrument hosted by ANSSI.",
+    "included": true
+  },
+  {
+    "title": "Securing Tomorrow, Today: Transitioning to Post-Quantum Cryptography",
+    "country": "FRA",
+    "issuingOrg": "ANSSI (with BSI, NCSC-NL and other EU member states)",
+    "year": 2024,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/nous-connaitre/publications/publications-internationales/securing-tomorrow-today-transitioning-to-post-quantum-cryptography/",
+    "summary": "Joint statement of 30 November 2024 co-led by ANSSI with the German BSI, the Dutch NCSC and 15 further EU member states, declaring that post-quantum cryptography must become an absolute priority engaged immediately and inviting member states to join a dedicated PQC working group under the NIS cooperation framework. Multi-country instrument hosted by ANSSI; flagged for routing review.",
+    "included": true
+  },
+  {
+    "title": "Efforts prioritaires en matière de sécurité numérique de l'État : feuille de route annuelle 2026-2027",
+    "country": "FRA",
+    "issuingOrg": "SGDSN",
+    "year": 2026,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.sgdsn.gouv.fr/publications/efforts-prioritaires-en-matiere-de-securite-numerique-de-letat-publication-de-la",
+    "summary": "Annual state digital security roadmap published 9 April 2026 by the SGDSN, which states that it 'prépare ces administrations à la transition vers la cryptographie post-quantique avec des premières étapes d'inventaire en 2026 et 2027 et des objectifs de mise en œuvre à l'horizon 2030'. First French instrument setting a whole-of-government PQC inventory and 2030 implementation milestone.",
+    "included": true
+  },
+  {
+    "title": "Publication de la feuille de route des efforts prioritaires en matière de sécurité numérique de l'État 2026-2027 (ANSSI)",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://cyber.gouv.fr/actualites/feuille-de-route-des-efforts-prioritaires-en-matiere-de-securite-numerique-de-letat-2026-2027/",
+    "summary": "ANSSI news item presenting the 2026-2027 state digital security roadmap, including the action to complete by end-2026 an inventory of durably sensitive data for which post-quantum cryptography will be required. Companion announcement to the SGDSN roadmap.",
+    "included": true
+  },
+  {
+    "title": "Les technologies du quantique et leur impact sur les réseaux (note de synthèse Réseaux du futur)",
+    "country": "FRA",
+    "issuingOrg": "Arcep",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.arcep.fr/uploads/tx_gspublication/reseau-du-futur-note-synthese_technologies_quantique_juin2026.pdf",
+    "summary": "Arcep synthesis note of June 2026 in its 'Réseaux du futur' cycle, devoting a section to post-quantum cryptography (PQC) as the set of algorithms designed to stay secure against quantum-capable attackers, relaying ANSSI's call for firms to include the quantum threat in risk analysis, and noting that normative integration of quantum-safe mechanisms is mainly envisaged in 3GPP Release 21 and 6G. First telecom-regulator entry for France.",
+    "included": true
+  },
+  {
+    "title": "Se préparer aux technologies quantiques : éléments clés à prendre en compte pour les acteurs du secteur financier",
+    "country": "FRA",
+    "issuingOrg": "G7 Quantum Technologies Working Group (co-chaired by Banque de France)",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.banque-france.fr/system/files/2026-06/G7-Key-Considerations-for-Financial-Sector-Participants-June-2026_FR.pdf",
+    "summary": "May 2026 reference report of the G7 central banks' Quantum Technologies Working Group, co-chaired by the Banque de France and the Bank of Canada, stating that post-quantum cryptography backed by international standardisation is becoming central to the quantum-resilient transition and that migration requires inventorying cryptographic dependencies. Hosted on the Banque de France site; flagged for routing review as a G7 deliverable.",
+    "included": true
+  },
+  {
+    "title": "Follow up position paper on Post-Quantum Cryptography",
+    "country": "FRA",
+    "issuingOrg": "ANSSI",
+    "year": null,
+    "docType": "Advisory",
+    "tier": "T1",
+    "url": "https://messervices.cyber.gouv.fr/guides/en-follow-position-paper-post-quantum-cryptography",
+    "summary": "ANSSI's English-language follow-up position paper on post-quantum cryptography, the predecessor of the current 'ANSSI views on the Post-Quantum Cryptography transition' guide, published on ANSSI's official guides portal.",
+    "included": true
+  },
+  {
+    "title": "La France envoie son premier télégramme post-quantique",
+    "country": "FRA",
+    "issuingOrg": "France 2030 (Stratégie nationale quantique)",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://quantique.france2030.gouv.fr/la-france-envoie-son-premier-telegramme-post-quantique/",
+    "summary": "Announcement on the national quantum strategy portal that the French embassy in Washington transmitted the first diplomatic message encrypted with a new generation of cryptography called post-quantum cryptography, designed to resist decryption by quantum computers.",
+    "included": true
+  },
+  {
+    "title": "Les clés pour comprendre la cryptographie (dossier LINC)",
+    "country": "FRA",
+    "issuingOrg": "CNIL",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://linc.cnil.fr/sites/linc/files/2025-03/dossier_linc_mars_2025_les_cles_pour_comprendre_la_cryptographie.pdf",
+    "summary": "March 2025 dossier of the CNIL's digital innovation laboratory (LINC) on cryptography, whose first part is devoted to post-quantum cryptography, describing the replacement of current asymmetric mechanisms by algorithms resistant to both quantum and classical computers and the NIST standardisation process.",
+    "included": true
+  },
+  {
+    "title": "La Banque de France réalise avec CryptoNext Security une expérimentation de sécurité post-quantique",
+    "country": "FRA",
+    "issuingOrg": "Banque de France",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.banque-france.fr/en/espace-presse/communiques-bdf/la-banque-de-france-realise-avec-cryptonext-security-une-experimentation-de-securite-post-quantique",
+    "summary": "Banque de France press release reporting a successful experiment with the French PQC vendor CryptoNext Security using post-quantum security technologies to protect central bank communications. Distinct from the later Banque de France experiments already recorded.",
+    "included": true
+  },
+  {
+    "title": "Feuille de route cyber de l'État 2026-2027 : renforcer la résilience numérique",
+    "country": "FRA",
+    "issuingOrg": "Ministère des Armées (COMCYBER)",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.defense.gouv.fr/comcyber/actualites/feuille-route-cyber-letat-2026-2027-renforcer-resilience-numerique",
+    "summary": "COMCYBER article of 5 May 2026 presenting the state's 2026-2027 cyber roadmap and listing 'la transition vers la cryptographie post-quantique, face à la menace future des ordinateurs quantiques' among its priority axes, with a 2030 deadline for deploying post-quantum solutions. First Ministry of Armed Forces entry for France.",
+    "included": true
+  },
+  {
+    "title": "Question n°16723 : Recommandation de l'ANSSI sur le passage à une cryptographie post-quantique",
+    "country": "FRA",
+    "issuingOrg": "Assemblée nationale",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://questions.assemblee-nationale.fr/q17/17-16723QE.htm",
+    "summary": "Written question by deputy Aurélien Saintoul to the minister for artificial intelligence and digital affairs (answer assigned to the Prime Minister), published in the Journal Officiel on 7 July 2026. It asks for the timetable for applying ANSSI's 21 December 2023 recommendation to move to post-quantum cryptography in ministries and sectors of vital importance, and argues for a national PQC strategy; no answer had been published.",
+    "included": true
+  },
+  {
+    "title": "Phase 2 du projet Leap : systèmes de paiement quantum résistant",
+    "country": "FRA",
+    "issuingOrg": "Banque de France",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.banque-france.fr/fr/actualites/phase-2-du-projet-leap-systemes-de-paiement-quantum-resistant",
+    "summary": "Banque de France news item (published 11 December 2025) reporting that phase 2 of Project Leap, run with the BIS Innovation Hub Eurosystem centre, Banca d'Italia, Deutsche Bundesbank, Nexi-Colt and Swift, tested post-quantum cryptography in an operational payment system by replacing traditional digital signatures during liquidity transfers. It sets out lessons on performance, interoperability and cryptographic agility for moving payment systems to quantum-resistant solutions.",
+    "included": true
+  },
+  {
+    "title": "France 2030 : Lauréats de la quatrième édition du dispositif « Développement de technologies innovantes critiques »",
+    "country": "FRA",
+    "issuingOrg": "DGE",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.entreprises.gouv.fr/espace-presse/france-2030-laureats-de-la-quatrieme-edition-du-dispositif-developpement-de",
+    "summary": "Press release of 22 June 2026 announcing the thirteen winners of the fourth France 2030 call for critical innovative technologies in data protection and cybersecurity. Two funded project descriptions refer to adapting technology offerings to post-quantum cryptography and to giving organisations an inventory of their cryptographic assets for the post-quantum transition.",
+    "included": true
+  },
+  {
+    "title": "Forum quantique défense : transformer l'innovation en capacités opérationnelles",
+    "country": "FRA",
+    "issuingOrg": "Ministère des Armées",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.defense.gouv.fr/actualites/forum-quantique-defense-transformer-linnovation-capacites-operationnelles",
+    "summary": "Ministry of the Armed Forces news article dated 16 April 2026 on the Defence Quantum Forum and turning quantum innovation into operational capabilities. It states that French authorities currently prioritise post-quantum cryptography and preparing systems resistant to quantum computers, alongside work on the quantum internet.",
+    "included": true
+  },
+  {
+    "title": "Feuille de route de la France: La décennie numérique 2024-2030",
+    "country": "FRA",
+    "issuingOrg": "Ministère de l'Économie",
+    "year": 2024,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.entreprises.gouv.fr/files/files/presse/2024/Feuille_route%20num%C3%A9rique_web.pdf",
+    "summary": "France's national roadmap for the Digital Decade 2024 to 2030 (March 2024), introduced by the minister for the economy, finance and industrial and digital sovereignty and other ministers, setting out policies and measures toward the digital decade targets. In describing the national quantum technologies strategy it lists the development and dissemination of post-quantum cryptography as one of four objectives.",
+    "included": true
   }
 ]

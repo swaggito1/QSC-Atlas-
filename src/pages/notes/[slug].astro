@@ -1,0 +1,68 @@
+---
+// /notes/<slug>: one note (src/content/notes/<slug>.md). The title as the H1, the day in mono
+// (and "Draft" on a draft, in a local build only), the image when the note has one, the body at
+// the reading measure, then a link to each page the note introduces, named by the page's title:
+// the first a filled button and any other the quiet one (one teal fill per view), and a quiet link
+// back to all notes. Built only for the notes this build lists (listedNotes() in
+// src/lib/site/notes.ts); the body comes from the notes collection (src/content.config.ts).
+import { getEntry, render } from 'astro:content';
+import Shell from './_Shell.astro';
+import { productionBuild } from '../../lib/site/gates';
+import { formatDay } from '../../lib/site/meta';
+import { NOTES_COPY, introducedPages, listedNotes, notesHref } from '../../lib/site/notes';
+
+export function getStaticPaths() {
+  return listedNotes().map((n) => ({ params: { slug: n.slug } }));
+}
+
+const note = listedNotes().find((n) => n.slug === Astro.params.slug);
+if (!note) return new Response(null, { status: 404 });
+const entry = await getEntry('notes', note.slug);
+const Content = entry ? (await render(entry)).Content : null;
+const pages = introducedPages(note).filter((p): p is typeof p & { href: string } => p.href !== null);
+const back = notesHref();
+const preview = !productionBuild() && !note.public;
+---
+
+<Shell heading={note.title} title={note.title} description={note.summary} preview={preview}>
+  <ul class="meta-line nt-meta" slot="head">
+    <li>
+      <time class="mono" datetime={note.date}>{formatDay(note.date)}</time>
+    </li>
+    {note.state === 'draft' && <li>{NOTES_COPY.draft}</li>}
+  </ul>
+
+  {
+    note.image && (
+      <figure class="nt-fig">
+        <img src={note.image} alt={note.alt} decoding="async" />
+      </figure>
+    )
+  }
+
+  <div class="nt-body prose">{Content && <Content />}</div>
+
+  {
+    pages.length > 0 && (
+      <ul class="nt-go">
+        {pages.map((p, i) => (
+          <li>
+            <a class:list={['lab-btn', { 'lab-btn--primary': i === 0 }]} href={p.href}>
+              {p.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  {
+    back && (
+      <p class="nt-back">
+        <a class="link" href={back}>
+          {NOTES_COPY.back}
+        </a>
+      </p>
+    )
+  }
+</Shell>

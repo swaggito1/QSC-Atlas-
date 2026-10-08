@@ -1,32 +1,46 @@
 ---
+// The layout every page shares: a skip link first, one header, exactly one main element and
+// one footer, all built from src/lib/site/nav.ts; the canonical address and the sharing tags.
+// No BreadcrumbList structured data since the minimal pass: no page draws a breadcrumb, and
+// structured data describes only what a visitor can see.
+//
+// The home page passes hideNav, as on the live site: no header, so the title and the globe stand
+// alone (the page carries its own small rolling menu), and the live site's short footer, the CEPS
+// logo over the year.
+//
+// The font request asks for the épuré weights only (labs/review/epure-audit.md): Newsreader 400,
+// 500 and italic 400; Schibsted Grotesk 400 and 600; Spline Sans Mono 400. The home page uses no
+// other. A retired weight a page still asks for renders at the nearest loaded one (global.css
+// turns weight synthesis off on every page with the header).
 import '../styles/global.css';
+import Header from '../components/site/Header.astro';
+import Footer from '../components/site/Footer.astro';
+import { SITE_NAME, absoluteUrl } from '../lib/site/config';
+import { DEFAULT_DESCRIPTION, OG_IMAGE, canonicalUrl, cleanPath, pageTitle, todayIso, type Crumb } from '../lib/site/meta';
 
 interface Props {
   title?: string;
   description?: string;
-  // The homepage drops the whole header so the title and globe stand alone, and carries its own
-  // small rolling menu that appears on scroll instead. Interior pages keep the header.
+  /** Ask search engines not to index the page (preview-only pages, Placeholder profiles, the 404). */
+  noindex?: boolean;
+  /** The home page: the header keeps its row but drops its bottom rule. */
+  home?: boolean;
+  /** The home page as live: no skip link and no header, and the short footer (logo and year). */
   hideNav?: boolean;
+  /** Accepted from pages that set a wide content measure (PageFrame passes it). The header and
+      footer keep one measure on every page whatever it says, so the frame never moves sideways. */
+  wide?: boolean;
+  /** Accepted from a page that still passes its trail; nothing is drawn or written from it. */
+  breadcrumbs?: Crumb[];
 }
 
-const {
-  title = 'QSC Atlas',
-  description = 'How governments are migrating to quantum-safe cryptography, country by country.',
-  hideNav = false,
-} = Astro.props;
+const { title = SITE_NAME, description = DEFAULT_DESCRIPTION, noindex = false, home = false, hideNav = false } = Astro.props;
 
-const pageTitle = title === 'QSC Atlas' ? title : `${title} - QSC Atlas`;
-
-const nav = [
-  { href: '/map', label: 'Map' },
-  { href: '/countries', label: 'Countries' },
-  { href: '/methodology', label: 'Methodology' },
-  { href: '/documents', label: 'Documents' },
-  { href: '/about', label: 'About' },
-];
-const path = Astro.url.pathname;
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
-const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const pathname = cleanPath(Astro.url.pathname);
+const fullTitle = pageTitle(title);
+const canonical = canonicalUrl(pathname);
+const image = absoluteUrl(OG_IMAGE.path);
+const year = todayIso().slice(0, 4);
 ---
 
 <!doctype html>
@@ -34,94 +48,65 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{pageTitle}</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content={String(OG_IMAGE.width)} />
+    <meta property="og:image:height" content={String(OG_IMAGE.height)} />
+    <meta property="og:image:alt" content={OG_IMAGE.alt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={OG_IMAGE.alt} />
+
+    <!-- marks that scripts run, so the finder shows its field instead of the plain link; no layout shift -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Schibsted+Grotesk:wght@400;600&family=Spline+Sans+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    {!hideNav && (
-      <header class="site-header">
-        <a class="wordmark" href="/">QSC Atlas</a>
-        <nav class="site-nav" aria-label="Primary">
-          {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
-        </nav>
-      </header>
-    )}
-
-    <main>
+    {!hideNav && <a class="skip-link" href="#main">Skip to content</a>}
+    {!hideNav && <Header pathname={pathname} title={title} home={home} />}
+    <main id="main" class="page-main" tabindex="-1">
       <slot />
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <img class="ceps-logo" src="/ceps-logo.png" alt="CEPS" width="240" height="262" loading="lazy" />
-        <span class="footer-year mono">&copy; 2026</span>
-      </div>
-    </footer>
+    {
+      hideNav ? (
+        <footer class="home-footer">
+          <div class="home-footer-brand">
+            <img class="home-footer-logo" src="/ceps-logo.png" alt="CEPS" width="240" height="262" loading="lazy" />
+            <span class="home-footer-year mono">&copy; {year}</span>
+          </div>
+        </footer>
+      ) : (
+        <Footer pathname={pathname} title={title} />
+      )
+    }
 
     <style>
-      .site-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--space-6);
-        height: var(--header-h);
-        padding: 0 var(--space-6);
-        border-bottom: 1px solid var(--hairline);
-      }
-      .wordmark {
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        font-size: 1.1rem;
-      }
-      .site-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 var(--space-4);
-        font-size: 0.95rem;
-      }
-      .site-nav a {
-        color: var(--ink-muted);
-        text-decoration: none;
-        /* comfortable tap targets (~44px high) without changing the visual weight */
-        display: inline-flex;
-        align-items: center;
-        padding-block: var(--space-3);
-      }
-      .site-nav a:hover {
-        color: var(--ink);
-      }
-      .site-nav a[aria-current='page'] {
-        color: var(--ink);
-        text-decoration: underline;
-        text-decoration-color: var(--hairline);
-        text-underline-offset: 5px;
-      }
-      /* Phones: the wordmark takes its own row and the nav wraps beneath it. */
-      @media (max-width: 700px) {
-        .site-header {
-          height: auto;
-          min-height: var(--header-h);
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0;
-          padding: var(--space-2) var(--space-4);
-        }
-        .wordmark {
-          padding-block: var(--space-2);
-        }
-      }
-      main {
+      .page-main {
+        flex: 1 0 auto; /* the footer stays at the foot of a short page */
         min-height: 60vh;
-        flex: 1 0 auto; /* grow so the footer is pushed to the very bottom of the page */
       }
-      .site-footer {
+      .page-main:focus {
+        outline: none; /* the skip link moves focus here; the main area needs no ring */
+      }
+      /* the live home page's footer, as it was: the CEPS logo centred over the year */
+      .home-footer {
         margin-top: var(--space-16);
         padding: var(--space-10) var(--space-6);
         border-top: 1px solid var(--hairline);
@@ -129,26 +114,21 @@ const buildDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month
         font-size: 0.9rem;
         text-align: center;
       }
-      .footer-brand {
+      .home-footer-brand {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: var(--space-2);
       }
-      .ceps-logo {
+      .home-footer-logo {
         height: 56px;
         width: auto;
         display: block;
       }
-      .footer-year {
+      .home-footer-year {
         font-size: 0.8rem;
         color: var(--ink-faint);
         letter-spacing: 0.04em;
-      }
-      .footer-asof {
-        margin: var(--space-4) 0 0;
-        font-size: 0.78rem;
-        color: var(--ink-faint);
       }
     </style>
   </body>

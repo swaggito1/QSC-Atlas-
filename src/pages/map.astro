@@ -1,59 +1,391 @@
 ---
+// Countries, Map view (spec 6.2; the URL is kept). The same section and view switch as the list:
+// H1 "Countries", then the switch with Map current. The map shows every place with a profile,
+// filled by the coordination posture it records, and the page's one legend is ReadKey (posture
+// only, folded into one line under the map on phones). The shapes load from the site's own copy
+// first, with the CDN as fallback. The list view is the map's table and keyboard route.
+//
+// The site's one full-bleed break (the épuré pass, 4 October 2026): from 1100px the map spans
+// the window, up to 1440px, so the shapes are drawn as large as the screen allows; the key stands
+// in one row under it and the actions under the key, both inside the shell. Text never bleeds.
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { createRequire } from 'node:module';
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap';
+import type { MapPlace } from '../components/WorldMap';
 import ReadKey from '../components/ReadKey.astro';
-import { getCollection } from 'astro:content';
+import ViewSwitch from '../components/site/frame/ViewSwitch.astro';
+import { pageHref } from '../lib/site/gates';
+import { isEuMember } from '../lib/site/joins';
+import '../styles/lab.css';
 
-// The flat map (planisphere), reached from the globe. Same data, keyed by ccn3.
+// world-countries gives each ISO3 code its numeric code (the shapes' ids) and a centre point,
+// used for a dot where a place is too small for the 1:110m shapes.
 const require = createRequire(import.meta.url);
 let worldCountries: any = require('world-countries');
 if (!Array.isArray(worldCountries)) worldCountries = worldCountries.default ?? [];
-const CCN3: Record<string, string> = Object.fromEntries(worldCountries.map((c: any) => [c.cca3, c.ccn3]));
+const WC = new Map<string, any>(worldCountries.map((c: any) => [c.cca3, c]));
 
-const countries = await getCollection('countries');
-const mapProcess: Record<string, any> = {};
+// the site's own copy first (public/world-110m.json), then the same file from the CDN
+const SOURCES = ['/world-110m.json', 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'];
+
+const countries = (await getCollection('countries')).sort((a, b) => a.data.country.localeCompare(b.data.country, 'en'));
+const places: MapPlace[] = [];
+const offMap: { name: string; href: string | null }[] = [];
 for (const c of countries) {
   const d = c.data;
-  if (!d.coordinationPosture) continue;
-  const ccn3 = CCN3[d.iso3];
-  if (ccn3) mapProcess[String(Number(ccn3))] = { iso3: d.iso3, name: d.country, posture: d.coordinationPosture, role: d.standardsRole ?? null, confidence: d.confidence ?? null };
+  const href = pageHref(`/countries/${d.iso3.toLowerCase()}`);
+  const wc = WC.get(d.iso3);
+  if (!wc) {
+    offMap.push({ name: d.country, href });
+    continue;
+  }
+  const point: [number, number] | null = Array.isArray(wc.latlng) && wc.latlng.length === 2 ? [wc.latlng[1], wc.latlng[0]] : null;
+  places.push({
+    iso3: d.iso3,
+    name: d.country,
+    posture: d.coordinationPosture ?? null,
+    eu: isEuMember(d.iso3),
+    href,
+    shape: wc.ccn3 ? String(wc.ccn3) : `name:${wc.name?.common ?? ''}`,
+    point,
+  });
+}
+const listHref = pageHref('/countries');
+
+// Shapes in the site's copy of the map that no profile matches (Antarctica is never drawn). When
+// there are any, the key adds the paper swatch "No record in the Atlas", the way the map draws them.
+let absent = false;
+try {
+  const world = JSON.parse(readFileSync(join(process.cwd(), 'public/world-110m.json'), 'utf8'));
+  const keys = new Set(places.map((p) => p.shape));
+  absent = (world?.objects?.countries?.geometries ?? []).some((g: any) => {
+    if (String(g.id) === '010') return false;
+    const key = g.id != null ? String(g.id) : `name:${g.properties?.name ?? ''}`;
+    return !keys.has(key);
+  });
+} catch {
+  absent = false; // the key then says nothing it cannot check
 }
 ---
 
-<Base title="World map">
-  <div class="map-page">
-    <p class="back"><a href="/">&larr; Back to the globe</a></p>
-    <div class="map-key"><ReadKey /></div>
-    <WorldMap client:load mapProcess={mapProcess} />
-    <p class="map-note">Click a country to open its profile.</p>
+<Base
+  title="Map of countries"
+  description="A world map of the coordination posture each country's Atlas profile records: who it coordinates its migration to quantum-safe cryptography with."
+>
+  <div class="container ct">
+    <h1 class="ct-h1">Countries</h1>
+    <ViewSwitch section="countries" />
+    <p class="ct-lede">
+      Each country takes the colour of its coordination posture: who it coordinates its migration to quantum-safe
+      cryptography with, as its profile records it.
+    </p>
+  </div>
+  <div class="wm-grid">
+    <WorldMap client:load places={places} sources={SOURCES} listHref={listHref} offMap={offMap}>
+      <ReadKey roles={false} fold row absent={absent} />
+    </WorldMap>
   </div>
 </Base>
 
 <style>
-  .map-page {
-    max-width: var(--content-wide);
-    margin: 0 auto;
-    padding: var(--space-6) var(--space-6) var(--space-12);
+  /* the head in the frame's hand (frame.css .fr-q, .fr-lede), as on the list view */
+  .ct {
+    padding: var(--page-top) var(--shell-gutter) 0;
   }
-  .back {
-    font-size: var(--text-sm);
-    margin: 0 0 var(--space-5);
+  .ct-h1 {
+    max-width: var(--measure-heading);
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0;
   }
-  .back a {
+  .ct :global(.fr-views) {
+    margin-top: var(--gap-inline);
+  }
+  .ct-lede {
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
+    margin: var(--gap-inline) 0 0;
+    text-wrap: pretty;
+  }
+  @media (max-width: 639px) {
+    .ct-lede {
+      font-size: var(--type-body);
+    }
+  }
+</style>
+
+<style is:global>
+  /* The map's grid: the island's map, key and actions are its items (astro-island and astro-slot
+     are display: contents). Three tracks, the shell's column between two gutters that grow with
+     the window: the key and the actions stand in the shell's column, the map in it under 1100px
+     and across all three from 1100px, held to 1440px and centred. */
+  .wm-grid {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(var(--shell-gutter), 1fr)
+      [shell-start] minmax(0, var(--w-wide))
+      [shell-end] minmax(var(--shell-gutter), 1fr)
+      [full-end];
+    margin-top: var(--gap-group-lg);
+  }
+  .wm-grid > astro-island {
+    display: contents;
+  }
+  .wm-map,
+  .wm-key,
+  .wm-actions {
+    grid-column: shell;
+    min-width: 0;
+  }
+  @media (min-width: 1100px) {
+    .wm-map {
+      grid-column: full;
+      justify-self: center;
+      width: 100%;
+      max-width: 1440px;
+    }
+  }
+  /* the key: one row under the map, on its own hairline */
+  .wm-key {
+    margin-top: var(--gap-group);
+  }
+  .wm-actions {
+    margin-top: var(--gap-inline);
+  }
+
+  /* the map has no frame of its own: the shapes on paper, with nothing ruled around them */
+  .wm-frame {
+    position: relative;
+    aspect-ratio: 980 / 500;
+    overflow: hidden;
+  }
+  .wm-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+  }
+  .wm-shape,
+  .wm-dot {
+    stroke: var(--swatch-none-edge);
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+  }
+  /* a shape the Atlas holds no record for: paper under the same edge, so it reads as empty */
+  .wm-shape.is-absent {
+    stroke: color-mix(in srgb, var(--ink) 30%, transparent);
+  }
+  .wm-hit {
+    fill: transparent;
+  }
+  .wm-svg .is-link {
+    cursor: pointer;
+  }
+  .wm-hover {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.5px;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+  .wm-state {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: var(--space-4);
+    text-align: center;
+  }
+  /* without scripts the frame says so and points to the list, which holds the same records */
+  .wm-nojs {
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
     color: var(--ink-muted);
-    text-decoration: none;
   }
-  .back a:hover {
-    color: var(--ink);
+  .wm-nojs a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
-  .map-key {
-    margin: 0 0 var(--space-6);
+
+  /* the tooltip (lab.css .lab-tip, on the overlay surface): a name and its short posture label;
+     pinned on touch with "Open profile" */
+  .wm-tip {
+    align-items: flex-start;
+    white-space: normal;
+    max-width: min(16rem, 80%);
+    line-height: var(--leading-snug);
+    padding: var(--space-2) var(--space-3);
   }
-  .map-note {
-    margin: var(--space-4) 0 0;
-    font-size: var(--text-xs);
-    color: var(--ink-faint);
-    font-family: var(--font-mono);
+  .wm-tip .d {
+    margin-top: var(--gap-mark);
+  }
+  .wm-tip-text {
+    display: grid;
+    gap: 1px;
+  }
+  .wm-tip-name {
+    font-weight: var(--weight-ui-strong);
+  }
+  .wm-tip.is-pinned {
+    pointer-events: auto;
+  }
+  /* the pinned tip's link is teal through the kit (lab.css .lab-tip) */
+  .wm-tip-open {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* the actions: Zoom to Europe, the kit's toggle (lab.css .lab-btn, teal only while pressed),
+     and Show as a list, a quiet teal link; each at least 44px tall */
+  .wm-acts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-inline) var(--space-5);
+    margin: 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+  }
+  .wm-zoom.lab-btn {
+    font-size: var(--type-small);
+    padding-inline: var(--space-4);
+  }
+  .wm-act {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .wm-act:hover,
+  .wm-act:active {
+    color: var(--accent-strong);
+  }
+  .wm-hint {
+    margin: var(--gap-inline) 0 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+  }
+  .wm-off {
+    margin: var(--gap-mark) 0 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    line-height: var(--leading-normal);
+  }
+  /* the two profiles move to a new line together, never one alone */
+  .wm-off-links {
+    white-space: nowrap;
+  }
+  /* each profile link stands alone on its line, so it carries a 44px hit area that moves nothing */
+  .wm-off a {
+    position: relative;
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .wm-off a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .wm-off a:hover,
+  .wm-off a:active {
+    color: var(--accent-strong);
+  }
+
+  /* Phones: Zoom to Europe turns the frame square, so the EU's members fill it, and a tapped
+     place is named in a ruled line under the map instead of a tooltip over its neighbours. */
+  .wm-pick {
+    display: none;
+  }
+  @media (max-width: 699px) {
+    .wm-frame.is-zoomed {
+      aspect-ratio: 1 / 1;
+    }
+    /* the dot hangs, the words wrap beside it, and Open profile keeps the right edge */
+    .wm-pick {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: var(--space-3);
+      min-height: var(--target-min);
+      margin: 0;
+      padding: var(--gap-mark) 0;
+      border-bottom: var(--rule);
+      font-family: var(--font-instrument);
+      font-size: var(--type-small);
+      line-height: var(--leading-snug);
+    }
+    .wm-pick-d {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: var(--radius-mark);
+      box-shadow: inset 0 0 0 0.5px var(--swatch-none-edge);
+    }
+    .wm-pick-text {
+      min-width: 0;
+    }
+    .wm-pick-name {
+      font-weight: var(--weight-ui-strong);
+      color: var(--ink);
+    }
+    .wm-pick-m {
+      color: var(--ink-muted);
+    }
+    /* with nothing picked, the hint takes the whole line */
+    .wm-pick-hint {
+      grid-column: 1 / -1;
+      color: var(--ink-muted);
+    }
+    .wm-pick-open {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--target-min);
+      font-family: var(--font-instrument);
+      font-size: var(--type-small);
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    /* the line under the map already asks the visitor to select a country */
+    .wm-hint-sel {
+      display: none;
+    }
+    /* the picked place's ruled line already parts the map from the key: one rule, not two */
+    .wm-key {
+      margin-top: 0;
+    }
+    .wm-grid .wm-key .readkey {
+      border-top: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wm-act,
+    .wm-off a {
+      transition: none;
+    }
   }
 </style>

@@ -1,86 +1,426 @@
 ---
-// The migration timeline: a fixed axis 2025 to 2036 so countries are comparable.
-// The axis carries the dots and their years; every milestone is then spelled out
-// in a readable list beneath it. Only the final marker takes the process colour.
-// Ported from the QSC Atlas design system. Empty state is a calm statement.
-import { parseTimeline } from '../lib/parse';
-import { postureMeta } from '../lib/process';
+// The migration timeline (spec 7.1), first on every profile, directly under the title block
+// (Swann, 2 October 2026): a fixed axis 2025 to 2036 so places read alike, and every milestone
+// spelled out in a list beneath it, which is the axis's text alternative.
+//
+// Every marker is ink; only the "today" line is teal, the interface colour (palette A), and its
+// word is set in the interface face, since mono is for dates, numbers and codes only. A solid
+// marker is a line of the profile's own; an open marker is a line
+// the Atlas records, with a confirmed annotation, as restating the EU coordinated roadmap, a record
+// that reaches the place through EU membership. No marker takes a colour, and no year is drawn as
+// a deadline: each row carries its kind and bindingness where the Atlas has recorded them, and
+// says "not recorded" where it has not.
+//
+// Nothing is drawn where it did not happen. A year before 2025 is drawn in a short gutter to the
+// left of the axis, behind a break, with its own mark and its own year as the label; it never
+// shares a mark with a year on the axis or with another year. A year after 2036 would be drawn in
+// a gutter to the right in the same way. "Today"
+// is drawn at its place within the year, so it never falls on a whole-year mark.
+//
+// The caller passes the rows already read against the annotations sidecar (readTimeline in
+// src/lib/site/evidence.ts), so the page and the timeline use one reading of each line.
+//
+// What every row would say alike (often "kind and bindingness not recorded") is said once, in
+// the note above the list, with the rule that a date is not a legal deadline unless it is marked
+// set in law (foldTimelineMeta); each row keeps only the words that are its own.
+import { foldTimelineMeta } from '../lib/site/evidence';
+import type { TimelineLine } from '../lib/site/evidence';
+
+type TimelineRow = TimelineLine;
 
 interface Props {
-  raw: string | null | undefined;
-  process?: string | null;
-  target?: string | null;
+  rows: TimelineRow[];
+  name: string; // the place as it reads in a sentence ("the United Kingdom")
+  phased?: boolean; // the profile records completion as phased, with no fixed end
 }
-const { raw, process = null, target = null } = Astro.props;
+const { rows, name, phased = false } = Astro.props;
+
+// the words every row shares, said once above the list
+const fold = foldTimelineMeta(rows);
+const lowerFirst = (w: string) => (w ? w.charAt(0).toLowerCase() + w.slice(1) : w);
+const sharedWords = [fold.shared.map(lowerFirst).join(', '), fold.lead ? 'unconfirmed, preview only' : ''].filter(Boolean).join('; ');
 
 const AXIS_START = 2025;
 const AXIS_END = 2036;
-const pct = (year: number) => Math.max(0, Math.min(100, ((year - AXIS_START) / (AXIS_END - AXIS_START)) * 100));
+const pct = (at: number) => ((at - AXIS_START) / (AXIS_END - AXIS_START)) * 100;
 
-const items = parseTimeline(raw);
-const numeric = items.filter((m) => typeof m.year === 'number') as { year: number; label: string }[];
-const accent = postureMeta(process)?.color ?? 'var(--ink)';
-const today = new Date().getFullYear();
-const phased = target === 'Phased (no fixed end)' || items.some((m) => typeof m.year === 'string');
-const anchorFor = (p: number) => (p > 88 ? 'translateX(-100%)' : p < 12 ? 'translateX(0)' : 'translateX(-50%)');
+interface Group {
+  at: number;
+  years: { year: number; display: string }[];
+  solid: boolean;
+}
+const numeric = rows.filter((r): r is TimelineRow & { year: number } => typeof r.year === 'number');
+const groups = new Map<number, Group>(); // the years on the axis, one mark per year
+const offAxis = { before: new Map<string, Group>(), after: new Map<string, Group>() }; // one mark per year as written
+for (const r of numeric) {
+  const side = r.year < AXIS_START ? 'before' : r.year > AXIS_END ? 'after' : null;
+  const bucket = (side ? offAxis[side] : groups) as Map<string | number, Group>;
+  const key = side ? r.display : r.year;
+  const g = bucket.get(key) ?? { at: r.year, years: [], solid: false };
+  if (!g.years.some((y) => y.display === r.display)) g.years.push({ year: r.year, display: r.display });
+  if (!r.open) g.solid = true;
+  bucket.set(key, g);
+}
+const labelOf = (g: Group) => [...g.years].sort((a, b) => a.year - b.year).map((y) => y.display).join(', ');
+
+// a gutter beside the axis for the years off it: each year its own mark, in order, not to scale
+// (the break says so), each label starting where its mark is; widths in the labels' ch
+const LEAD = 3.5; // room for the dotted lead-in and the break, in ch
+function gutterOf(side: 'before' | 'after') {
+  const list = [...offAxis[side].values()].sort((a, b) => a.at - b.at);
+  if (!list.length) return null;
+  let at = side === 'after' ? LEAD : 0;
+  const marks = list.map((g) => {
+    const label = labelOf(g);
+    const m = { label, solid: g.solid, ch: at };
+    at += label.length + 1.5;
+    return m;
+  });
+  const width = at - 1.5 + (side === 'before' ? LEAD : 0);
+  return { marks, width, lastLabel: marks[marks.length - 1].label.length };
+}
+const before = gutterOf('before');
+const after = gutterOf('after');
+
+const marks = [...groups.values()]
+  .sort((a, b) => a.at - b.at)
+  .map((g) => ({ ...g, label: labelOf(g), p: pct(g.at), tier: 0 }));
+// a label close to the one before it moves up a line, so two years never print over each other
+marks.forEach((m, i) => {
+  const prev = marks[i - 1];
+  if (!prev) return;
+  const room = prev.label.length > 4 || m.label.length > 4 ? 3 : 2;
+  if (m.at - prev.at < room && prev.tier === 0) m.tier = 1;
+});
+const tiers = marks.some((m) => m.tier === 1) ? 2 : 1;
+const anchor = (p: number) => (p > 96 ? 'translateX(-100%)' : p < 4 ? 'translateX(0)' : 'translateX(-50%)');
+
+// the columns: a gutter for each side that holds a year off the axis
+const columns = [before ? `${before.width}ch` : null, 'minmax(0, 1fr)', after ? `${after.width}ch` : null].filter(Boolean).join(' ');
+
+// today, at its place within the year (the build's day), never on a whole-year mark
+const now = new Date();
+const todayAt = now.getFullYear() + (now.getMonth() + (now.getDate() - 1) / 31) / 12;
+const showToday = todayAt >= AXIS_START && todayAt <= AXIS_END;
+const todayP = pct(todayAt);
 ---
 
 {
-  items.length ? (
-    <figure class="tl" style={`--accent:${accent}`}>
-      <div class="track">
-        <div class="axis" />
-        {today >= AXIS_START && today <= AXIS_END && (
-          <div class="today" style={`left:${pct(today)}%`}>
-            <span class="today-label mono">today</span>
+  rows.length ? (
+    <figure class="tl">
+      {numeric.length > 0 && (
+        <div class="tl-axis" aria-hidden="true" style={`--cols:${columns};--tiers:${tiers}`}>
+          {before && (
+            <div class="gutter is-before">
+              <div class="lead" />
+              <span class="break" />
+              {before.marks.map((m) => (
+                <div class="mark" style={`left:calc(${m.ch}ch + 5px)`}>
+                  <span class="year" style="transform:translateX(-5px)">
+                    {m.label}
+                  </span>
+                  <span class:list={['dot', m.solid ? 'is-solid' : 'is-open']} />
+                </div>
+              ))}
+            </div>
+          )}
+          <div class="plot">
+            <div class="track">
+              <div class="axis" />
+              {marks.map((m) => (
+                <div class="mark" style={`left:${m.p}%`}>
+                  <span class:list={['year', 'mono', { 'tier-1': m.tier === 1 }]} style={`transform:${anchor(m.p)}`}>
+                    {m.label}
+                  </span>
+                  {m.tier === 1 && <span class="stem" />}
+                  <span class:list={['dot', m.solid ? 'is-solid' : 'is-open']} />
+                </div>
+              ))}
+            </div>
+            <div class="ends mono">
+              <span>{AXIS_START}</span>
+              {showToday && (
+                <>
+                  <span class="today" style={`left:${todayP}%`} />
+                  <span class:list={['today-label', { 'is-late': todayP > 70 }]} style={`left:${todayP}%`}>
+                    today
+                  </span>
+                </>
+              )}
+              <span>{AXIS_END}</span>
+            </div>
           </div>
-        )}
-        {numeric.map((m, i) => (
-          <div class="mark" style={`left:${pct(m.year)}%`}>
-            <span class="year mono" style={`transform:${anchorFor(pct(m.year))}`}>{m.display}</span>
-            <span class:list={['dot', { final: i === numeric.length - 1 }]} />
-          </div>
-        ))}
-        {phased && <span class="phased mono">phased &rarr;</span>}
-      </div>
-      <div class="ends mono">
-        <span>{AXIS_START}</span>
-        <span>{AXIS_END}</span>
-      </div>
+          {after && (
+            <div class="gutter is-after">
+              <div class="lead" style={`right:calc(${after.lastLabel}ch - 5px)`} />
+              <span class="break" />
+              {after.marks.map((m) => (
+                <div class="mark" style={`left:calc(${m.ch}ch + 5px)`}>
+                  <span class="year" style="transform:translateX(-5px)">
+                    {m.label}
+                  </span>
+                  <span class:list={['dot', m.solid ? 'is-solid' : 'is-open']} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+      <p class="tl-note">
+        {sharedWords && <>Every date on this timeline: {sharedWords}. </>}
+        A date here is not a legal deadline unless it is marked set in law.
+        {!sharedWords && <> Kind and bindingness appear where the Atlas has recorded them.</>}
+      </p>
       <ol class="rows">
-        {numeric.map((m, i) => (
-          <li>
-            <span class="row-year">
-              <span class:list={['rdot', { final: i === numeric.length - 1 }]} />
-              <span class="mono">{m.display}</span>
-            </span>
-            <span class="row-label">{m.label}</span>
-          </li>
-        ))}
+        {rows.map((r, i) => {
+          const own = fold.rows[i];
+          return (
+            <li>
+              <span class="row-year">
+                <span class:list={['rdot', r.open ? 'is-open' : 'is-solid']} aria-hidden="true" />
+                <span class="mono">{r.display}</span>
+              </span>
+              <span class="row-text">
+                <span class="row-label">{r.label}</span>
+                {(own.meta.length > 0 || own.lead) && (
+                  <span class="row-meta">
+                    {own.meta.join(' · ')}
+                    {own.lead && <span class="row-lead">{own.meta.length ? ' · ' : ''}unconfirmed, preview only</span>}
+                  </span>
+                )}
+              </span>
+            </li>
+          );
+        })}
       </ol>
+      {phased && <p class="phased">The profile records completion as phased, with no fixed end date.</p>}
     </figure>
   ) : (
-    <p class="empty">No published migration timeline.</p>
+    <p class="empty">The Atlas records no migration timeline for {name}.</p>
   )
 }
 
 <style>
-  .tl { margin: var(--space-5) 0 0; }
-  .track { position: relative; height: 40px; margin-top: 1.1em; }
-  .axis { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--ink); }
-  .today { position: absolute; top: -2px; bottom: 0; transform: translateX(-50%); border-left: 1px dashed var(--ink-muted); }
-  .today-label { position: absolute; top: -1.25em; left: 50%; transform: translateX(-50%); font-size: var(--text-2xs); color: var(--ink-muted); }
-  .mark { position: absolute; bottom: 0; }
-  .year { position: absolute; bottom: 12px; left: 0; font-size: var(--text-2xs); color: var(--ink); white-space: nowrap; }
-  .dot { position: absolute; bottom: -3px; left: 0; transform: translateX(-50%); width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
-  .dot.final { bottom: -5px; width: 11px; height: 11px; background: var(--accent); border: 2px solid var(--surface); }
-  .phased { position: absolute; right: 0; bottom: 12px; font-size: var(--text-2xs); color: var(--ink-muted); }
-  .ends { display: flex; justify-content: space-between; font-size: var(--text-2xs); color: var(--ink-faint); margin-top: var(--space-1); }
-  .rows { list-style: none; margin: var(--space-5) 0 0; padding: 0; display: grid; gap: var(--space-3); }
-  .rows li { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: baseline; }
-  .row-year { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--ink); }
-  .rdot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); flex: none; }
-  .rdot.final { background: var(--accent); }
-  .row-label { font-size: var(--text-sm); color: var(--ink-muted); line-height: 1.45; }
-  .empty { color: var(--ink-muted); font-style: italic; border-top: 2px solid var(--hairline); padding-top: var(--space-2); margin: var(--space-4) 0; }
+  .tl {
+    margin: 0;
+  }
+  /* the axis and its gutters share one grid; ch is the label face's, so a gutter fits its years */
+  .tl-axis {
+    display: grid;
+    grid-template-columns: var(--cols);
+    align-items: start;
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    font-size: var(--type-caption);
+  }
+  .plot {
+    position: relative;
+    min-width: 0;
+  }
+  .track,
+  .gutter {
+    position: relative;
+    height: calc(30px + (var(--tiers) - 1) * 18px);
+    margin-top: var(--space-2);
+  }
+  .axis {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--ink);
+  }
+  /* a year off the axis: a dotted lead-in to the axis and two short slashes for the break */
+  .lead {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px dotted var(--ink-muted);
+  }
+  .is-before .lead {
+    left: 5px;
+    right: 2.5ch;
+  }
+  .is-after .lead {
+    left: 2.5ch;
+  }
+  .break {
+    position: absolute;
+    bottom: -5px;
+    width: 1ch;
+    height: 12px;
+  }
+  .is-before .break {
+    right: 1.25ch;
+  }
+  .is-after .break {
+    left: 1.25ch;
+  }
+  .break::before,
+  .break::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 12px;
+    background: var(--ink-muted);
+    transform: rotate(24deg);
+  }
+  .break::before {
+    left: 1px;
+  }
+  .break::after {
+    left: 5px;
+  }
+  .mark {
+    position: absolute;
+    bottom: 0;
+  }
+  .year {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .year.tier-1 {
+    bottom: 30px;
+  }
+  .stem {
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    height: 22px;
+    border-left: var(--rule);
+  }
+  .dot {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-mark);
+    border: 2px solid var(--ink);
+    box-sizing: border-box;
+  }
+  .dot.is-solid {
+    background: var(--ink);
+  }
+  .dot.is-open {
+    background: var(--paper);
+  }
+  /* the axis's end years, with today between them: a short dashed teal tick from just under the
+     axis, clear of every mark, and its word beside it in teal, turned away from the nearer end */
+  .ends {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-2);
+    color: var(--ink-muted);
+  }
+  .today {
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    margin-left: -1px;
+    border-left: var(--rule-today);
+  }
+  .today-label {
+    position: absolute;
+    top: 0;
+    margin-left: 5px;
+    white-space: nowrap;
+    font-family: var(--font-instrument);
+    font-weight: var(--weight-ui-strong);
+    color: var(--accent);
+  }
+  .today-label.is-late {
+    margin-left: -5px;
+    transform: translateX(-100%);
+  }
+  /* the one note over the list: what every row shares, and the deadline rule */
+  .tl-note {
+    margin: var(--gap-group-lg) 0 0;
+    max-width: var(--measure);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+  }
+  .rows {
+    list-style: none;
+    margin: var(--gap-group) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .rows li {
+    display: grid;
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: baseline;
+  }
+  .row-year {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-inline);
+    font-size: var(--type-small);
+    color: var(--ink);
+  }
+  .rdot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-mark);
+    border: 1.5px solid var(--ink);
+    box-sizing: border-box;
+    flex: none;
+  }
+  .rdot.is-solid {
+    background: var(--ink);
+  }
+  /* solid against open must survive a printer that drops backgrounds */
+  .rdot,
+  .dot {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .row-text {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+  }
+  .row-label {
+    font-size: var(--type-control);
+    color: var(--ink);
+    line-height: var(--leading-snug);
+  }
+  .row-meta {
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    line-height: var(--leading-snug);
+  }
+  .row-lead {
+    font-style: italic;
+  }
+  .phased {
+    margin: var(--space-3) 0 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  /* the empty state: one italic muted sentence in the reading face */
+  .empty {
+    margin: 0;
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-style: italic;
+    color: var(--ink-muted);
+  }
+  @media print {
+    .tl-axis {
+      display: none;
+    }
+    .rows {
+      margin-top: var(--space-2);
+    }
+  }
 </style>

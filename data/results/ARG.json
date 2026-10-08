@@ -20,5 +20,16 @@
     "url": "https://www.arsat.com.ar/multimedia/comunicaciones-seguras/",
     "summary": "ARSAT page documenting a 2022 secure-communications initiative and conference on the threat quantum computing poses to public-key and symmetric cryptography, and ARSAT's development of quantum-resistant (post-quantum) communications methods for protecting government and national assets.",
     "included": false
+  },
+  {
+    "title": "CYBER.AR 2026: Comenzó el I Congreso de Ciberdefensa de la República Argentina",
+    "country": "ARG",
+    "issuingOrg": "Ministerio de Defensa",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.argentina.gob.ar/noticias/cyberar-2026-comenzo-el-i-congreso-de-ciberdefensa-de-la-republica-argentina",
+    "summary": "Ministry of Defence release announcing Argentina's first Cyber Defence Congress (CYBER.AR 2026), held 16 to 18 September 2026 with 56 symposia and exhibitions. The listed programme includes several post-quantum cryptography presentations, among them a PQC transition strategy and the design of a post-quantum cryptography experimentation laboratory for cyber defence.",
+    "included": true
   }
 ]

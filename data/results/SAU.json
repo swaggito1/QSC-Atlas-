@@ -64,5 +64,16 @@
     "url": "https://dga.gov.sa/en/digital-knowledge/quantum-computing-in-government-sector",
     "summary": "Digital Government Authority (DGA) digital-knowledge page on quantum computing in the government sector, including the threat quantum computing poses to traditional encryption. Explicit post-quantum cryptography reference could not be confirmed (page blocked direct fetch), so flagged for human review.",
     "included": false
+  },
+  {
+    "title": "The Saudi Cybersecurity Higher Education Framework (SCyber-Edu - 1: 2020)",
+    "country": "SAU",
+    "issuingOrg": "NCA",
+    "year": 2020,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://cdn.nca.gov.sa/ar/scyberedu_en.pdf",
+    "summary": "NCA framework, dated October 2020, that sets the program learning outcomes and the core and elective knowledge units for cybersecurity higher education programmes in Saudi Arabia. Its Advanced Cryptography knowledge unit lists Post Quantum Cryptography among the topics that must be included.",
+    "included": true
   }
 ]

@@ -119,5 +119,27 @@
     "url": "https://mpo.gov.cz/assets/cz/e-komunikace-a-posta/studie-k-narodnimu-planu-obnovy/2025/6/Kvantove-technologie-a-komunikace.pdf",
     "summary": "Study (June 2025) prepared for the Czech Ministry of Industry and Trade under the National Recovery Plan, surveying quantum technologies and communications and containing a dedicated section (3.2) on post-quantum cryptography (PQC) / quantum-safe cryptography (QSC), its advantages and the migration challenge.",
     "included": true
+  },
+  {
+    "title": "Zpráva o stavu kybernetické bezpečnosti České republiky za rok 2024",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/download/publikace/zpravy_o_stavu/Zpr%C3%A1va_o_stavu_kyberneticke_bezpecnosti_CR_za_rok_2024.pdf",
+    "summary": "NÚKIB's annual report on the state of cyber security in the Czech Republic for 2024, covering threats, actors, incidents and legislation. It has a short section on the quantum computer threat, post-quantum cryptography and harvest-now-decrypt-later attacks, stating that timely implementation of the NIST-derived PQC algorithms will be a key topic for 2025.",
+    "included": true
+  },
+  {
+    "title": "Letter of Support to the Position Paper on Quantum Key Distribution",
+    "country": "CZE",
+    "issuingOrg": "NÚKIB",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://nukib.gov.cz/en/infoservis-en/news/2163-letter-of-support-to-the-position-paper-on-quantum-key-distribution/",
+    "summary": "NÚKIB news item (19 September 2024) announcing its support for the QKD position paper by ANSSI, BSI, NLNCSA and the Swedish national communications security authority, which backs continued QKD research but says the priority should be the transition to post-quantum cryptography or symmetric encryption. It also notes that NÚKIB has introduced quantum-resistant cryptography on the NÚKIB Portal.",
+    "included": true
   }
 ]

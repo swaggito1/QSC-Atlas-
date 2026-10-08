@@ -229,5 +229,170 @@
     "url": "https://www.csa.gov.sg/resources/publications/quantum-safe-handbook-and-quantum-readiness-index/",
     "summary": "CSA public consultation resource page (open 23 Oct to 31 Dec 2025) inviting feedback on the Quantum-Safe Handbook and Quantum Readiness Index, which guide Critical Information Infrastructure owners and agencies in transitioning cryptographic assets to quantum-safe solutions.",
     "included": true
+  },
+  {
+    "title": "Quantum-Safe Migration Handbook (Version 1)",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://isomer-user-content.by.gov.sg/36/350e4bd5-fa25-4609-8e78-5e159d9da245/CSA%27s%20Quantum-Safe%20Handbook%20V1%20Dtd%2016%20Jul%2026.pdf",
+    "summary": "Final Version 1 of the Quantum-Safe Migration Handbook, developed by CSA with GovTech and IMDA and published on 16 July 2026 after the Oct-Dec 2025 public consultation, giving Singapore organisations no-regret moves, crown-jewel prioritisation and updated quantum-safe algorithm recommendations. It sets Singapore's requirements for CII owners: submit a quantum-safe migration plan by 31 March 2027, procure quantum-safe or quantum-safe-ready CII systems from 1 January 2028, and complete migration by 31 December 2031.",
+    "included": true
+  },
+  {
+    "title": "Quantum Readiness Index 2026 (Version 1)",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://isomer-user-content.by.gov.sg/36/9002b9b1-bb24-46de-8e16-e09458a14d22/Quantum%20Readiness%20Index%20dtd%2016%20Jul%2026%20V1.pdf",
+    "summary": "Final Version 1 of CSA's Quantum Readiness Index, published 16 July 2026 in consultation with A*STAR, SGTech, SpeQtral, evolutionQ, the World Economic Forum and consultancies, as a self-assessment tool companion to the Quantum-Safe Migration Handbook. It scores organisations across five domains (Risk Assessment, Governance, Technology, Training and Capability, External Engagements) with levels and recommendations for quantum-safe migration planning.",
+    "included": true
+  },
+  {
+    "title": "Remarks by Mr Chia Der Jiun, Managing Director, MAS, at the MAS Annual Report 2025/2026 Media Conference on 28 July 2026",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/news/speeches/2026/md-remarks-for-mas-ar-2025-2026",
+    "summary": "Remarks by the Managing Director of MAS announcing that MAS will issue a set of supervisory expectations later in 2026 setting clear expectations, milestones and timelines for financial institutions' migration towards quantum resilience, covering cryptographic asset inventories, prioritised migration of vulnerable assets, and technical and governance capabilities. He states the aim is for FIs to achieve quantum resilience before the end of the decade, building on the 2024 MAS advisory and technical work on quantum-resilient cryptography.",
+    "included": true
+  },
+  {
+    "title": "\"Trust in the Age of Transformative Technologies\" - Speech by Mr Alvin Tan, Minister of State and MAS Board Member, at Point Zero Forum on 23 June 2026",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mas.gov.sg/news/speeches/2026/trust-in-the-age-of-transformative-technologies",
+    "summary": "Ministerial speech naming quantum technology as one of three frontier technologies for finance and stating that MAS is co-funding quantum technology centres and providing security grants to help financial institutions transition to Post-Quantum Cryptography and Quantum Key Distribution. It links this to the nationwide Quantum-Safe Network and calls for quantum-resilient security to be built into tokenisation and agentic payment platforms.",
+    "included": true
+  },
+  {
+    "title": "Singapore Cyber Landscape 2025/2026",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/resources/publications/singapore-cyber-landscape-2025-2026/",
+    "summary": "CSA's annual national cyber landscape report, published 30 June 2026, reviewing the threat environment and Singapore's responses including industry commentary on the CSA/GovTech/IMDA Quantum-Safe Migration Handbook. It records quantum-safe as a new topic in the Singapore-Malaysia High Level Cybersecurity Roundtable and post-quantum cryptography among the CyberCall 2025 challenge statements.",
+    "included": true
+  },
+  {
+    "title": "CSA's Initiatives to Strengthen Singapore's Cyber Defences Amid an AI-Driven Threat Landscape",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/press-releases/csa-s-initiatives-to-strengthen-singapore-s-cyber-defences-amid-an-ai-driven-threat-landscape/",
+    "summary": "CSA press release of 30 June 2026 accompanying the Singapore Cyber Landscape report, stating that CSA continued advancing Singapore's National Quantum-Safe initiative by working with industry, academia and international partners to raise awareness of quantum risks, support migration planning and accelerate adoption of quantum-safe technologies.",
+    "included": true
+  },
+  {
+    "title": "RIE2030 Plan",
+    "country": "SGP",
+    "issuingOrg": "NRF",
+    "year": 2026,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://file.go.gov.sg/rie2030handbook.pdf",
+    "summary": "Singapore's national Research, Innovation and Enterprise plan for 2026-2030, released by the National Research Foundation on 31 August 2026 with S$37 billion of investment. It names quantum-safe capabilities as a priority domain of the National Cybersecurity R&D Programme alongside AI and OT security, and anchors the National Quantum-Safe Network among the five national-level quantum programmes.",
+    "included": true
+  },
+  {
+    "title": "RIE2025 Report",
+    "country": "SGP",
+    "issuingOrg": "NRF",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://file.go.gov.sg/rie2025report.pdf",
+    "summary": "National Research Foundation report of 31 August 2026 accounting for Singapore's research and innovation outcomes under RIE2025, including the five national quantum programmes. It records the National Quantum-Safe Network as a testbed for quantum-safe communication technologies and the growth of the quantum ecosystem since the 2024 National Quantum Strategy.",
+    "included": true
+  },
+  {
+    "title": "MCI Response to PQ on Quantum Computing Technology",
+    "country": "SGP",
+    "issuingOrg": "MCI",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mddi.gov.sg/newsroom/quantum-computing-technology/",
+    "summary": "Written ministerial answer of 29 November 2022 to Dr Tan Wu Meng's parliamentary question on the risk that quantum computing renders encryption vulnerable and the Government's plans to keep encrypted records secure. It says Singapore is monitoring NIST's post-quantum cryptography standardisation and launched the National Quantum-Safe Network as a testbed for quantum-safe technologies.",
+    "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography Report: Securing digital communications between Banque de France and Monetary Authority of Singapore",
+    "country": "SGP",
+    "issuingOrg": "MAS",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.mas.gov.sg/-/media/mas-media-library/news/media-releases/2024/bdf-and-mas-pqc-report.pdf",
+    "summary": "Joint Banque de France and MAS technical report (November 2024, running header Quantum-Safe Experiment Report 2024) on their cross-border experiment exchanging hybrid-signed and hybrid-encrypted emails using CRYSTALS-Kyber and CRYSTALS-Dilithium. It sets out the algorithm choices, experiment scope, protocol design and results.",
+    "included": true
+  },
+  {
+    "title": "Second U.S.-Singapore Critical and Emerging Technology Dialogue: Joint Fact Sheet",
+    "country": "SGP",
+    "issuingOrg": "MDDI",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mddi.gov.sg/newsroom/second-us-sg-critical-emerging-technology-dialogue-joint-fact-sheet/",
+    "summary": "Joint fact sheet of 31 July 2024, hosted by MDDI, listing outcomes of the second US-Singapore Critical and Emerging Technology Dialogue. Among them are continued cooperation on quantum-safe migration and post-quantum cryptography standardisation, plus possible work on cryptographic inventory, crypto agility and assurance of quantum-safe products.",
+    "included": true
+  },
+  {
+    "title": "Speech by SMS Janil Puthucheary at the Opening of the Quantum Technology Summit TechXLR8 Asia",
+    "country": "SGP",
+    "issuingOrg": "MCI",
+    "year": 2022,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.mddi.gov.sg/newsroom/sms-janil-at-the-opening-of-the-quantum-technology/",
+    "summary": "Ministerial speech of 1 June 2022 on Singapore's quantum technology investments. It warns of harvest-now-decrypt-later threats and says the National Quantum-Safe Network will trial quantum key distribution and post-quantum cryptography to help key sectors migrate to quantum-safe infrastructure.",
+    "included": true
+  },
+  {
+    "title": "Opening Address by Mr David Koh, Chief Executive, Cyber Security Agency of Singapore, for Cybersecurity Innovation Day 11 November 2024",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.csa.gov.sg/news-events/speeches/opening-address-by-mr-david-koh-ce-csa-for-cybersecurity-innovation-day-11-november-2024/",
+    "summary": "CSA Chief Executive's opening address at Cybersecurity Innovation Day 2024 on the CyberSG TIG Collaboration Centre, the launch of the November 2024 CyberCall edition (the second that year), and the CyberBoost support programmes for cybersecurity companies. It notes in passing that CyberCall projects have included development of post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Welcome Speech by SMS Janil Puthucheary at the Opening of the CyberSG Talent, Innovation and Growth Collaboration Centre on 15 July 2024",
+    "country": "SGP",
+    "issuingOrg": "CSA",
+    "year": 2024,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csa.gov.sg/news-events/speeches/opening-address-by-senior-minister-of-state-for-digital-development-and-information-tan-kiat-how-at-the-sicw-sg-cyber-safe-for-enterprises-event-on-17-oct-2024/",
+    "summary": "Ministerial speech opening the CyberSG TIG Collaboration Centre and announcing CyberCall awards. It cites pQCee, which will develop a quantum-safe public key infrastructure under CyberCall.",
+    "included": true
+  },
+  {
+    "title": "Fifteenth Parliament of Singapore (First Session) Order Paper Supplement No. 6",
+    "country": "SGP",
+    "issuingOrg": "Parliament of Singapore",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.parliament.gov.sg/docs/default-source/order-paper/order-paper-supplement-no-6.pdf",
+    "summary": "Order Paper Supplement of 26 February 2026 listing Committee of Supply notices of amendment to the FY2026 estimates. Under Head Q (MDDI), Mr Kenneth Tiong Boon Kiat files a cut titled on quantum-safe cryptography solutions and global consensus.",
+    "included": true
   }
 ]

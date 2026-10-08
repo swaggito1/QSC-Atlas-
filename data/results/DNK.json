@@ -86,5 +86,27 @@
     "url": "https://www.cfcs.dk/da/nyheder/2023/overgangen-til-kvantesikker-kryptografi/",
     "summary": "Centre for Cyber Security (CFCS) news item launching its theme article on the transition to quantum-safe cryptography, explaining the quantum threat and proposed steps to migrate to post-quantum cryptography. Separate news URL from the theme page already stored.",
     "included": true
+  },
+  {
+    "title": "Vejledning til NIS 2-loven: Implementering af cybersikkerhedsforanstaltninger",
+    "country": "DNK",
+    "issuingOrg": "SAMSIK",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://samsik.dk/wp-content/uploads/2025/08/Vejledning-til-implementering-af-cybersikkerhedsforanstaltninger.pdf",
+    "summary": "Guidance from Styrelsen for Samfundssikkerhed (1st edition, June 2025) to help public and private entities implement the cybersecurity risk-management measures required by the Danish NIS 2 law. Its worked cryptography example includes a checklist question on tracking developments such as post-quantum cryptography and on processes for upgrading algorithms and key lengths.",
+    "included": true
+  },
+  {
+    "title": "Uncertain times call for resilience and preparedness",
+    "country": "DNK",
+    "issuingOrg": "Danmarks Nationalbank",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.nationalbanken.dk/media/02yfl0ix/uncertain-times-call-for-resilience-and-preparedness.pdf",
+    "summary": "Danmarks Nationalbank's biannual financial stability review (Analysis No. 28, 25 November 2025). It names preparing to implement quantum-safe encryption as an area where financial-sector resilience should be strengthened, and cites the European Commission's call to secure critical infrastructure with quantum-safe encryption no later than 2030. It also cites the EU PQC roadmap and reports that preparations are under way in the Financial Sector Forum for Operational Resilience (FSOR).",
+    "included": true
   }
 ]

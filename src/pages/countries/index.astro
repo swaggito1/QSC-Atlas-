@@ -1,219 +1,679 @@
 ---
+// Countries, List view (spec 6.1): every profile in the Atlas, findable by name. The one quiet
+// meta line counted from the records (the kit's .meta-line), the view switch, a filter over all of
+// them, the coordination postures in POSTURE_ORDER as one table (name, standards role, latest
+// target; the posture's dot stands on its group heading only, Swann, 4 October 2026), then
+// every profile with no posture recorded as a compact alphabetical list in a details element, EU
+// Member States tagged. Rows are alphabetical inside each group and never sorted by year or by
+// any count. This list is also the map's table and keyboard route.
+//
+// The census is the home page's own count (lib/site/home.ts), so the two lines never disagree,
+// and the filter matches exactly as the header's country finder does (src/scripts/finder.ts):
+// a name, an ISO3 code or another name a visitor may type, accents and case aside.
+import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RoleBadge from '../../components/RoleBadge.astro';
-import { getCollection } from 'astro:content';
-import { POSTURE_ORDER, POSTURE_META } from '../../lib/process';
+import ViewSwitch from '../../components/site/frame/ViewSwitch.astro';
+import { POSTURE_ORDER, POSTURE_META, postureMeta, roleMeta } from '../../lib/process';
+import { pageHref } from '../../lib/site/gates';
+import { isEuMember } from '../../lib/site/joins';
+import { census as countCensus, supranationalRecords } from '../../lib/site/home';
+import aliasFile from '../../../data/site/country-aliases.json';
+import '../../styles/lab.css';
 
-// A census, not a card wall. Countries are grouped by coordination bloc, in the same
-// order as the map legend, so the single most important fact (which bloc a country
-// belongs to) organises the page. Within a bloc, a tight ruled list, target years in
-// a clean numeric column.
 const all = await getCollection('countries');
-const byPosture = (p: string) =>
-  all
-    .filter((c) => c.data.coordinationPosture === p)
-    .sort((a, b) => a.data.country.localeCompare(b.data.country));
-const groups = POSTURE_ORDER.map((p) => ({ meta: POSTURE_META[p], rows: byPosture(p) })).filter((g) => g.rows.length);
-const classified = all.filter((c) => c.data.coordinationPosture).length;
-const unclassified = all.length - classified;
+const byName = (a: (typeof all)[number], b: (typeof all)[number]) => a.data.country.localeCompare(b.data.country, 'en');
+
+// the census: inventory only, counted from the records as the home page counts them
+const c = countCensus(
+  all.map((e) => ({ iso3: e.data.iso3, country: e.data.country, coordinationPosture: e.data.coordinationPosture ?? null })),
+  supranationalRecords(),
+);
+const census = [
+  `${c.records} records`,
+  `${c.inBloc} in a coordination bloc`,
+  `${c.unaligned} ${POSTURE_META['engaged-unaligned'].label.toLowerCase()}`,
+  `${c.noPosture} with no posture recorded`,
+];
+
+const groups = POSTURE_ORDER.map((k) => ({
+  key: k,
+  meta: POSTURE_META[k],
+  rows: all.filter((e) => e.data.coordinationPosture === k).sort(byName),
+})).filter((g) => g.rows.length > 0);
+// a posture the Atlas does not know counts as none, as the census and the map read it
+const none = all.filter((e) => !postureMeta(e.data.coordinationPosture)).sort(byName);
+
+// the filter's keys: the name, the code and the finder's other names, matched in the browser
+const aliases = (aliasFile as { aliases: Record<string, string[]> }).aliases;
+const keysOf = (iso3: string, name: string) => ({
+  'data-iso': iso3.toUpperCase(),
+  'data-n': name,
+  'data-a': (aliases[iso3.toUpperCase()] ?? []).join('|') || undefined,
+});
+
+const hrefOf = (iso3: string) => pageHref(`/countries/${iso3.toLowerCase()}`);
+// How to read the Atlas is its own page again, as on the live site (Swann, 2 October 2026)
+const readHref = pageHref('/who');
+
+// The target column: a year in ink; a phrase the profile records ("None stated") or the absence of
+// one ("not recorded") in the muted hand, all in one case so the column reads as one.
+const YEAR = /^\d{4}$/;
+const targetText = (t: string | null | undefined) => (!t ? 'not recorded' : YEAR.test(t) ? t : t.charAt(0).toLowerCase() + t.slice(1));
 ---
 
-<Base title="Countries">
-  <div class="container">
-    <h1>Countries</h1>
-    <p class="status mono">
-      {all.length} profiles · {classified} placed in a coordination bloc · the map shows the same set
+<Base
+  title="Countries"
+  description="Every country profile in the QSC Atlas, grouped by the coordination posture it records, with its standards role and latest target."
+>
+  <div class="container ct">
+    <h1 class="ct-h1">Countries</h1>
+    <ViewSwitch section="countries" />
+    <p class="ct-lede">
+      Every profile in the Atlas, grouped by coordination posture: who a country coordinates its migration to
+      quantum-safe cryptography with.{
+        readHref && (
+          <>
+            {' '}
+            <a href={readHref}>How to read the Atlas</a> explains the colours and the role badges.
+          </>
+        )
+      }
     </p>
-    <input
-      type="search"
-      id="country-search"
-      class="country-search"
-      placeholder="Find a country"
-      aria-label="Find a country"
-      autocomplete="off"
-    />
-    <p class="no-match mono" id="no-match" hidden>No country matches that name.</p>
+    <ul class="meta-line ct-census">
+      {census.map((t) => <li><span class="ct-c">{t}</span></li>)}
+    </ul>
+
+    <div class="ct-filter js-only" role="search">
+      <label for="ct-q">Filter the list</label>
+      <input type="search" id="ct-q" class="field-line ct-input" placeholder="Name or ISO3 code" autocomplete="off" spellcheck="false" />
+    </div>
+    <p class="ct-nomatch" id="ct-nomatch" hidden>No record in the Atlas matches that name.</p>
+    <p class="sr-only" id="ct-live" aria-live="polite"></p>
 
     {
-      groups.map((g) => (
-        <section class="bloc">
-          <header class="bloc-head" style={`--bloc:${g.meta.color}`}>
-            <span class="bloc-sw" aria-hidden="true" />
-            <h2>{g.meta.label}</h2>
-            <span class="bloc-count mono">{g.rows.length}</span>
-          </header>
-          <ul class="census">
-            {g.rows.map((c) => (
-              <li class="row" style={`--bloc:${g.meta.color}`}>
-                <a class="row-name" href={`/countries/${c.data.iso3.toLowerCase()}`}>
-                  {c.data.country}
-                </a>
-                <span class="row-role">
-                  {c.data.standardsRole && <RoleBadge value={c.data.standardsRole} short />}
-                </span>
-                <span class="row-year mono">{c.data.targetCompletion ?? ''}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
+      groups.length > 0 && (
+        <div class="ct-posture" id="ct-posture">
+          <p class="ct-note" id="ct-target-note">
+            <span aria-hidden="true">*</span> A target, not a legal deadline, unless the profile marks it binding.
+          </p>
+          {/* Explicit table roles: on phones the rows are laid out as ruled lines (display: grid), and
+              the roles keep a screen reader reading them as a table there. */}
+          <table class="ct-table" role="table">
+            <caption class="sr-only">Profiles with a coordination posture, grouped by posture</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader" class="ct-col-name">Country</th>
+                <th scope="col" role="columnheader" class="ct-col-role">Standards role</th>
+                <th scope="col" role="columnheader" class="ct-col-yr" aria-describedby="ct-target-note">
+                  Latest target<span aria-hidden="true">*</span>
+                </th>
+              </tr>
+            </thead>
+            {
+              groups.map((g) => (
+                <tbody class="ct-g" role="rowgroup" style={`--c:${g.meta.color}`}>
+                  <tr class="ct-gh" role="row">
+                    <th colspan="3" scope="rowgroup" role="rowheader" id={`ct-g-${g.key}`}>
+                      <span class="ct-gh-in">
+                        <span class="ct-dot" aria-hidden="true" />
+                        <span class="ct-gh-label">{g.meta.label}</span>
+                        <span class="ct-gh-n">{g.rows.length}</span>
+                      </span>
+                    </th>
+                  </tr>
+                  {g.rows.map((e) => {
+                    const d = e.data;
+                    const href = hrefOf(d.iso3);
+                    const target = d.targetCompletion;
+                    return (
+                      <tr class="ct-row" role="row" {...keysOf(d.iso3, d.country)}>
+                        <th scope="row" role="rowheader" class="ct-name">
+                          {href ? (
+                            <a class="ct-nm row-link" href={href}>
+                              {d.country}
+                            </a>
+                          ) : (
+                            <span class="ct-nm">{d.country}</span>
+                          )}
+                        </th>
+                        <td class="ct-role" role="cell">
+                          {roleMeta(d.standardsRole) ? <RoleBadge value={d.standardsRole} short /> : <span class="ct-nr">not recorded</span>}
+                        </td>
+                        <td class:list={['ct-yr', { 'is-year': !!target && YEAR.test(target) }]} role="cell">
+                          {targetText(target)}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              ))
+            }
+          </table>
+        </div>
+      )
     }
 
     {
-      unclassified > 0 && (
-        <p class="tail mono">
-          {unclassified} further countries are on record with no coordination posture yet.
-        </p>
+      none.length > 0 && (
+        <details class="ct-none" id="no-posture">
+          <summary>
+            <span class="ct-none-dot" aria-hidden="true" />
+            <span class="ct-gh-label">No coordination posture recorded</span>
+            <span class="ct-gh-n">{none.length}</span>
+          </summary>
+          <p class="ct-none-note">A missing posture is a gap in the record, not a finding about the government.</p>
+          <ul class="ct-names">
+            {none.map((e) => {
+              const d = e.data;
+              const href = hrefOf(d.iso3);
+              return (
+                <li {...keysOf(d.iso3, d.country)}>
+                  {href ? (
+                    <a class="row-link" href={href}>
+                      {d.country}
+                    </a>
+                  ) : (
+                    <span>{d.country}</span>
+                  )}
+                  {isEuMember(d.iso3) && <span class="ct-tag">EU Member State</span>}
+                </li>
+              );
+            })}
+          </ul>
+        </details>
       )
     }
   </div>
-  <script is:inline>
-    (() => {
-      const input = document.getElementById('country-search');
-      if (!input) return;
-      const rows = Array.from(document.querySelectorAll('.row'));
-      const groups = Array.from(document.querySelectorAll('.bloc'));
-      const tail = document.querySelector('.tail');
-      const noMatch = document.getElementById('no-match');
-      const norm = (s) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
-      input.addEventListener('input', () => {
-        const q = norm(input.value.trim());
-        let shown = 0;
-        for (const r of rows) {
-          const name = norm(r.querySelector('.row-name')?.textContent || '');
-          const match = !q || name.includes(q);
-          r.style.display = match ? '' : 'none';
-          if (match) shown++;
-        }
-        for (const g of groups) {
-          const visible = Array.from(g.querySelectorAll('.row')).some((r) => r.style.display !== 'none');
-          g.style.display = visible ? '' : 'none';
-        }
-        if (tail) tail.style.display = q ? 'none' : '';
-        if (noMatch) noMatch.hidden = !(q && shown === 0);
-      });
-    })();
-  </script>
 </Base>
 
+<script>
+  // The filter: a name, an ISO3 code or another name for the place, matched by the header
+  // finder's own rule. Shows matching rows only; a group with none hides, and while a filter is
+  // on the group counts step aside, since they count the whole group. A match inside "No
+  // coordination posture recorded" opens it, and clearing the field puts it back as the visitor
+  // left it.
+  import { matchCountries } from '../../scripts/finder';
+  import type { FinderCountry } from '../../scripts/finder';
+
+  const input = document.getElementById('ct-q') as HTMLInputElement | null;
+  const posture = document.getElementById('ct-posture');
+  const none = document.getElementById('no-posture') as HTMLDetailsElement | null;
+  const noMatch = document.getElementById('ct-nomatch');
+  const live = document.getElementById('ct-live');
+  if (input) {
+    const rows = Array.from(document.querySelectorAll<HTMLElement>('.ct-row'));
+    const names = Array.from(document.querySelectorAll<HTMLElement>('.ct-names li'));
+    const bodies = Array.from(document.querySelectorAll<HTMLElement>('.ct-g'));
+    const counts = Array.from(document.querySelectorAll<HTMLElement>('.ct-gh-n'));
+    const list: FinderCountry[] = [...rows, ...names].map((el) => {
+      const a = el.dataset.a ? el.dataset.a.split('|') : [];
+      return { n: el.dataset.n ?? '', i: el.dataset.iso ?? '', ...(a.length ? { a } : {}) };
+    });
+    // the state the visitor left the last group in; a change the filter makes is not theirs
+    let userOpen = none?.open ?? false;
+    let expected: boolean | null = null;
+    none?.addEventListener('toggle', () => {
+      if (expected !== null && none.open === expected) {
+        expected = null;
+        return;
+      }
+      userOpen = none.open;
+    });
+    let timer = 0;
+    const run = () => {
+      const q = input.value.trim();
+      const hit = q ? new Set(matchCountries(list, q, Infinity).map((m) => m.i)) : null;
+      const shows = (el: HTMLElement) => !hit || hit.has(el.dataset.iso ?? '');
+      let inTable = 0;
+      let inNone = 0;
+      for (const r of rows) {
+        const ok = shows(r);
+        r.hidden = !ok;
+        if (ok) inTable++;
+      }
+      for (const b of bodies) b.hidden = !Array.from(b.querySelectorAll<HTMLElement>('.ct-row')).some((r) => !r.hidden);
+      for (const n of names) {
+        const ok = shows(n);
+        n.hidden = !ok;
+        if (ok) inNone++;
+      }
+      for (const n of counts) n.hidden = !!q;
+      if (posture) posture.hidden = inTable === 0;
+      if (none) {
+        none.hidden = !!q && inNone === 0;
+        const want = q ? inNone > 0 : userOpen;
+        if (none.open !== want) {
+          expected = want;
+          none.open = want;
+        }
+      }
+      const total = inTable + inNone;
+      if (noMatch) noMatch.hidden = !(q && total === 0);
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        if (live) live.textContent = q ? (total === 1 ? '1 profile matches.' : `${total} profiles match.`) : '';
+      }, 400);
+    };
+    input.addEventListener('input', run);
+    if (input.value) run();
+  }
+</script>
+
 <style>
-  .status {
-    color: var(--ink-faint);
-    font-size: var(--text-xs);
-    margin: 0 0 var(--space-4);
+  .ct {
+    /* the posture dot, one size in the group heads and on the last group's summary */
+    --ct-dot: 0.6rem;
+    padding: var(--page-top) var(--shell-gutter) 0;
   }
-  .country-search {
-    display: block;
-    width: 100%;
+  /* the head in the frame's hand (frame.css .fr-q, .fr-lede): the H1, the view switch directly
+     under it, the lede at the reading measure, the one meta line */
+  .ct-h1 {
+    max-width: var(--measure-heading);
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0;
+  }
+  .ct :global(.fr-views) {
+    margin-top: var(--gap-inline);
+  }
+  .ct-lede {
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
+    margin: var(--gap-inline) 0 var(--space-3);
+    text-wrap: pretty;
+  }
+  .ct-lede a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .ct-lede a:hover,
+  .ct-lede a:active {
+    color: var(--accent-strong);
+  }
+  /* the one meta line (global.css .meta-line): a line breaks only after a dot, never inside an
+     item, so each item's words are held together inside it */
+  .ct-census {
+    margin: 0 0 var(--gap-group-lg);
+    font-feature-settings: 'tnum' 1;
+  }
+  .ct-c {
+    white-space: nowrap;
+  }
+
+  /* the filter: the page's text field (.field-line in global.css) under a small label */
+  .ct-filter {
+    display: grid;
+    gap: var(--gap-mark);
     max-width: 22rem;
-    font-family: var(--font-instrument);
-    font-size: var(--text-base);
-    padding: var(--space-2) var(--space-3);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius);
-    background: var(--surface);
-    color: var(--ink);
-    margin: 0 0 var(--space-10);
+    margin: 0 0 var(--gap-group-lg);
   }
-  .country-search::placeholder {
-    color: var(--ink-faint);
-  }
-  .no-match {
+  .ct-filter label {
+    font-size: var(--type-small);
     color: var(--ink-muted);
-    font-size: var(--text-sm);
+  }
+  .ct-input {
+    width: 100%;
+  }
+  .ct-nomatch {
     margin: 0 0 var(--space-8);
+    font-family: var(--font-reading);
+    font-style: italic;
+    color: var(--ink-muted);
   }
-  .bloc {
-    margin-bottom: var(--space-12);
+
+  [hidden] {
+    display: none !important;
   }
-  .bloc-head {
+
+  /* the table and the note on its year column, read before the first year: rows of a name, a
+     value and a link, at the list width */
+  .ct-posture {
+    max-width: var(--w-list);
+  }
+  .ct-note {
+    max-width: var(--measure);
+    margin: 0 0 var(--gap-group);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+  }
+
+  /* the table: column heads in sentence case, held at the top while the rows scroll; each
+     posture's name a plain Newsreader heading in ink beside its dot, over one hairline, the only
+     dot of its group; hairlines between rows; the wash on the row under the pointer. Teal never
+     reads as a posture: a row's name is ink on a thin teal underline (global.css .row-link). */
+  .ct-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .ct-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--paper);
+    box-shadow: inset 0 -1px 0 var(--hairline);
+    text-align: left;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink-muted);
+    padding: var(--space-2) var(--space-2) var(--space-2) 0;
+    vertical-align: bottom;
+  }
+  .ct-table thead .ct-col-yr {
+    text-align: right;
+    padding-right: 0;
+  }
+  .ct-col-role {
+    width: 11rem;
+  }
+  .ct-col-yr {
+    width: 11rem;
+  }
+  /* the next posture is the next facet of one list: a related gap above its heading */
+  .ct-gh th {
+    padding: var(--gap-related) 0 var(--space-2);
+    border-bottom: var(--rule);
+    text-align: left;
+    font-weight: var(--weight-ui);
+  }
+  .ct-g:first-of-type .ct-gh th {
+    padding-top: var(--gap-group);
+  }
+  .ct-gh-in,
+  .ct-none summary {
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    padding-bottom: var(--space-2);
-    border-bottom: 2px solid var(--ink);
-    margin-bottom: var(--space-1);
   }
-  .bloc-sw {
-    width: 0.7em;
-    height: 0.7em;
-    border-radius: 50%;
-    background: var(--bloc);
+  .ct-gh-label {
+    font-family: var(--font-reading);
+    font-size: var(--type-section);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+  }
+  .ct-gh-n {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    font-feature-settings: 'tnum' 1;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .ct-dot {
+    display: inline-block;
+    width: var(--ct-dot);
+    height: var(--ct-dot);
+    border-radius: var(--radius-mark);
+    background: var(--c);
     flex: none;
   }
-  .bloc-head h2 {
-    font-family: var(--font-label);
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    font-weight: 400;
-    margin: 0;
+  /* the name, its baseline shared with the badge and the year */
+  .ct-row > * {
+    padding: 0 var(--space-2) 0 0;
+    border-bottom: var(--rule);
+    vertical-align: baseline;
   }
-  .bloc-count {
+  .ct-row {
+    transition: background-color var(--dur-fast) var(--ease-standard);
+  }
+  .ct-row:hover {
+    background: var(--wash);
+  }
+  .ct-name {
+    text-align: left;
+    font-weight: var(--weight-ui);
+  }
+  /* a name that opens a profile: ink on a thin teal underline, a 44px row; a short name ("Chad",
+     "Fiji") still has a 44px-wide hit area, which moves nothing */
+  .ct-nm {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    min-height: var(--target-min);
+    padding: var(--gap-mark) 0;
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-snug);
+  }
+  span.ct-nm {
+    color: var(--ink);
+  }
+  a.ct-nm,
+  .ct-names a {
+    position: relative;
+  }
+  a.ct-nm::after,
+  .ct-names a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .ct-nr {
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .ct-row > .ct-yr {
+    padding-right: 0;
+  }
+  /* a year in the mono face and in ink; a phrase ("none stated", "not recorded") in the
+     interface face, muted */
+  .ct-yr {
+    text-align: right;
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .ct-yr.is-year {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    font-feature-settings: 'tnum' 1;
+    color: var(--ink);
+  }
+
+  /* the last group: a native details element, so the browser's find-in-page still reaches it;
+     the next facet of the same list, a related gap below the table */
+  .ct-none {
+    max-width: var(--w-list);
+    margin-top: var(--gap-related);
+  }
+  .ct-none summary {
+    min-height: var(--target-min);
+    padding-bottom: var(--space-2);
+    border-bottom: var(--rule);
+    cursor: pointer;
+    list-style: none;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .ct-none summary::-webkit-details-marker {
+    display: none;
+  }
+  /* the kit's chevron, after the count, turning only when the visitor opens or closes it */
+  .ct-none summary::after {
+    content: '';
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin: 0 var(--space-1) 0 var(--space-1);
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform var(--dur-fast) var(--ease-standard);
+  }
+  .ct-none summary:hover,
+  .ct-none summary:active {
+    color: var(--accent-strong);
+  }
+  .ct-none summary:hover .ct-gh-label,
+  .ct-none summary:active .ct-gh-label {
+    color: inherit;
+  }
+  .ct-none[open] summary::after {
+    transform: translateY(2px) rotate(-135deg);
+  }
+  .ct-none summary .ct-gh-n {
     margin-left: auto;
-    color: var(--ink-faint);
-    font-size: var(--text-xs);
   }
-  .census {
+  .ct-none summary:has(.ct-gh-n[hidden])::after {
+    margin-left: auto;
+  }
+  /* the map's pale fill under its ink edge, as the map and its key draw no posture */
+  .ct-none-dot {
+    width: var(--ct-dot);
+    height: var(--ct-dot);
+    border-radius: var(--radius-mark);
+    background: var(--process-none);
+    box-shadow: inset 0 0 0 1px var(--swatch-none-edge);
+    flex: none;
+  }
+  .ct-none-note {
+    max-width: var(--measure);
+    margin: var(--space-3) 0 var(--space-2);
+    font-family: var(--font-reading);
+    font-style: italic;
+    font-size: var(--type-body);
+    color: var(--ink-muted);
+  }
+  .ct-names {
     list-style: none;
     margin: 0;
     padding: 0;
+    columns: 3;
+    column-gap: var(--space-8);
   }
-  .row {
-    display: grid;
-    grid-template-columns: 1fr auto 4em;
+  .ct-names li {
+    break-inside: avoid;
+    display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    gap: var(--space-4);
-    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-4);
-    border-bottom: 1px solid var(--hairline);
-    position: relative;
-    transition: background var(--dur-fast) var(--ease);
+    column-gap: var(--gap-inline);
+    border-bottom: var(--rule);
   }
-  .row::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--bloc);
-    opacity: 0.5;
-    transition: width var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
-  }
-  .row:hover {
-    background: var(--wash);
-  }
-  .row:hover::before {
-    width: 3px;
-    opacity: 1;
-  }
-  .row-name {
+  .ct-names a,
+  .ct-names li > span:first-child {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
     font-family: var(--font-reading);
-    font-size: var(--text-lg);
+    font-size: var(--type-body);
+    line-height: var(--leading-snug);
+  }
+  .ct-names li > span:first-child {
     color: var(--ink);
-    text-decoration: none;
   }
-  /* Stretch the link's tap area over the whole row, so the target is the full ~53px row
-     rather than the 29px text line. The other cells are plain text, so nothing competes. */
-  .row-name::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-  }
-  .row-name:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--hairline);
-    text-underline-offset: 3px;
-  }
-  .row-year {
+  .ct-tag {
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
     color: var(--ink-muted);
-    font-size: var(--text-sm);
-    text-align: right;
+    white-space: nowrap;
   }
-  .tail {
-    color: var(--ink-faint);
-    font-size: var(--text-xs);
-    border-top: 1px solid var(--hairline);
-    padding-top: var(--space-4);
+
+  @media (max-width: 999px) {
+    .ct-names {
+      columns: 2;
+    }
+  }
+
+  /* Phones: the table becomes ruled rows. Line one, the name with the year at the right; line
+     two, the role under the name. The heads follow the same two lines. */
+  @media (max-width: 639px) {
+    .ct-lede {
+      font-size: var(--type-body);
+    }
+    .ct-filter {
+      max-width: none;
+    }
+    .ct-table,
+    .ct-table tbody,
+    .ct-gh,
+    .ct-gh th {
+      display: block;
+    }
+    .ct-table thead {
+      display: block;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--paper);
+      box-shadow: inset 0 -1px 0 var(--hairline);
+    }
+    .ct-table thead tr,
+    .ct-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: var(--space-3);
+      align-items: baseline;
+    }
+    .ct-table thead th {
+      position: static;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+    }
+    .ct-table thead tr {
+      padding: var(--space-2) 0;
+      row-gap: 2px;
+    }
+    .ct-col-name,
+    .ct-name {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .ct-col-yr,
+    .ct-yr {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .ct-col-role,
+    .ct-role {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+    .ct-col-role,
+    .ct-col-yr {
+      width: auto;
+    }
+    .ct-row {
+      border-bottom: var(--rule);
+      padding-bottom: var(--space-2);
+    }
+    .ct-row > *,
+    .ct-row > .ct-yr {
+      padding: 0;
+      border-bottom: none;
+    }
+    .ct-row > .ct-role {
+      line-height: 1.2;
+    }
+    .ct-nm {
+      font-size: var(--type-body);
+      padding-bottom: 0;
+    }
+    .ct-names {
+      column-gap: var(--space-5);
+    }
+    .ct-names li {
+      column-gap: var(--gap-mark);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ct-lede a,
+    .ct-row,
+    .ct-none summary,
+    .ct-none summary::after {
+      transition: none;
+    }
   }
 </style>

@@ -1,9 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
 
+// Restored from the live page (2 October 2026), with one change Swann decided on 1 October: the
+// briefing offer is one plain sentence with the id "briefing", so old /about#briefing links still
+// land on it, with no heading and no button. "Dr" takes no full stop, in British style.
 // A curated set of the most recognisable participants from the two CEPS Task Forces (2023 and
 // 2025), spread across EU institutions, US and national agencies, big tech and academia. Shown as
-// one looping row of logos fetched from Brandfetch by domain (grayscale, colour on hover).
+// one looping row of logos fetched from Brandfetch by domain (grayscale, colour on hover); the
+// row is the page's one moving thing, and it pauses under the pointer, while a logo has keyboard
+// focus, and stops under reduced motion. A logo that fails to load hides its whole link, so no
+// empty link is left for a keyboard to land on.
+//
+// The minimal pass (2 October 2026): the page top every reading page shares, the H1 at the
+// display step, section headings in Newsreader at the section step, a section's gap between
+// sections and no rule or teal label. The wording is unchanged.
+//
+// The épuré pass (4 October 2026): one lede, the first paragraph, at the lede step in ink, and
+// the second as body text, so the eye reads them in order; every paragraph at the reading measure.
+// Who is behind it and Our Task Forces stand a related gap apart, the participants a subject's
+// gap below them. A portrait's alt is empty, since the name beside it in the same link already
+// names the person. No arrow after a link. The logo row itself is unchanged (Swann, 4 October
+// 2026), motion included.
 const partners = [
   // EU institutions
   { n: 'European Parliament', d: 'europarl.europa.eu' },
@@ -32,12 +49,12 @@ const partners = [
 <Base title="About">
   <div class="container about">
     <h1>About the QSC Atlas</h1>
-    <p class="prose credibility">
+    <p class="prose lead">
       An independent, evidence-based reference on how governments are migrating to quantum-safe
       cryptography, built only from official institutional sources and maintained alongside advisory
       work on the transition.
     </p>
-    <p class="prose lead">
+    <p class="prose intro">
       The Atlas is maintained within the Cybersecurity@CEPS Initiative at the Centre for European
       Policy Studies. How it classifies countries, and the sources behind every profile, are set out
       in the <a href="/methodology">methodology</a>.
@@ -50,12 +67,12 @@ const partners = [
           <img
             class="person-photo"
             src="/team/lorenzo-pupillo.jpeg"
-            alt="Dr. Lorenzo Pupillo"
+            alt=""
             width="179"
             height="270"
             loading="lazy"
           />
-          <span class="person-name">Dr. Lorenzo Pupillo</span>
+          <span class="person-name">Dr Lorenzo Pupillo</span>
           <span class="person-title">Head of the Cybersecurity@CEPS Initiative</span>
         </a>
       </li>
@@ -64,7 +81,7 @@ const partners = [
           <img
             class="person-photo"
             src="/team/swann-ashworth.jpeg"
-            alt="Swann Ashworth"
+            alt=""
             width="409"
             height="517"
             loading="lazy"
@@ -80,7 +97,7 @@ const partners = [
       <li>
         <h3>
           <a href="https://www.ceps.eu/ceps-publications/quantum-technologies-and-cybersecurity/" target="_blank" rel="noopener">
-            Quantum Technologies and Cybersecurity (2023) &rarr;
+            Quantum Technologies and Cybersecurity (2023)
           </a>
         </h3>
         <p class="prose">
@@ -93,7 +110,7 @@ const partners = [
       <li>
         <h3>
           <a href="https://www.ceps.eu/ceps-publications/strengthening-the-eu-transition-to-a-quantum-safe-world/" target="_blank" rel="noopener">
-            Strengthening the EU Transition to a Quantum-Safe World (2025) &rarr;
+            Strengthening the EU Transition to a Quantum-Safe World (2025)
           </a>
         </h3>
         <p class="prose">
@@ -113,12 +130,12 @@ const partners = [
           <div class="track" style="--dur:60s">
             {partners.map((p) => (
               <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-label={p.n} title={p.n}>
-                <img src={`https://cdn.brandfetch.io/domain/${p.d}?c=1id_IvDZKuDG7x0_nZE`} alt="" loading="lazy" onerror="this.style.display='none'" />
+                <img src={`https://cdn.brandfetch.io/domain/${p.d}?c=1id_IvDZKuDG7x0_nZE`} alt="" loading="lazy" onerror="this.parentElement.style.display='none'" />
               </a>
             ))}
             {partners.map((p) => (
               <a class="logo" href={`https://${p.d}`} target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-                <img src={`https://cdn.brandfetch.io/domain/${p.d}?c=1id_IvDZKuDG7x0_nZE`} alt="" loading="lazy" onerror="this.style.display='none'" />
+                <img src={`https://cdn.brandfetch.io/domain/${p.d}?c=1id_IvDZKuDG7x0_nZE`} alt="" loading="lazy" onerror="this.parentElement.style.display='none'" />
               </a>
             ))}
           </div>
@@ -126,48 +143,74 @@ const partners = [
       </div>
     </section>
 
-    <h2 id="briefing">Request a briefing</h2>
-    <p class="prose">
-      The Atlas is maintained alongside advisory work on the quantum-safe transition. For a briefing
-      tailored to your organisation or sector, get in touch.
-    </p>
-    <p>
-      <a class="briefing-link" href="mailto:lorenzo.pupillo@ceps.eu,swann.ashworth@ceps.eu?subject=QSC%20Atlas%20briefing">
-        Request a briefing
-      </a>
-    </p>
-    <p class="briefing-emails">
-      <a href="mailto:lorenzo.pupillo@ceps.eu">lorenzo.pupillo@ceps.eu</a>
-      &middot;
-      <a href="mailto:swann.ashworth@ceps.eu">swann.ashworth@ceps.eu</a>
+    <p class="prose briefing" id="briefing">
+      Lorenzo Pupillo and Swann Ashworth give briefings on the Atlas on request, at
+      <a href="mailto:lorenzo.pupillo@ceps.eu">lorenzo.pupillo@ceps.eu</a> or
+      <a href="mailto:swann.ashworth@ceps.eu">swann.ashworth@ceps.eu</a>.
     </p>
   </div>
 </Base>
 
 <style>
+  .about {
+    padding-top: var(--page-top);
+  }
   .about h1 {
+    max-width: var(--measure-heading);
     font-family: var(--font-reading);
+    font-size: var(--type-h1);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0 0 var(--gap-group-lg);
   }
   .about h2 {
     font-family: var(--font-reading);
-    margin-top: var(--space-16);
+    font-size: var(--type-section);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-snug);
+    margin: var(--gap-related) 0 0;
   }
+  /* the one lede, in ink at the lede step; the paragraph after it is body text */
   .lead {
-    font-size: var(--text-lg);
-  }
-  .lead a,
-  .tasks h3 a {
+    margin: 0;
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
     color: var(--ink);
+  }
+  .intro {
+    margin: var(--gap-group) 0 0;
+  }
+  .intro a,
+  .tasks h3 a,
+  .briefing a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    text-decoration-color: var(--hairline);
+    transition: color var(--dur-fast) var(--ease-standard);
   }
-  .lead a:hover,
-  .tasks h3 a:hover {
-    text-decoration-color: var(--ink);
+  /* a one-line title link still has a 44px-tall hit area, over the space around it */
+  .tasks h3 a {
+    position: relative;
   }
+  .tasks h3 a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .intro a:hover,
+  .tasks h3 a:hover,
+  .briefing a:hover,
+  .intro a:active,
+  .tasks h3 a:active,
+  .briefing a:active {
+    color: var(--accent-strong);
+  }
+  /* the participants' one line, under their subhead (unchanged with the logo row) */
   .credibility {
     color: var(--ink-muted);
-    font-size: var(--text-base);
+    font-size: var(--type-control);
     margin-top: 0;
   }
 
@@ -183,7 +226,7 @@ const partners = [
   .person {
     display: grid;
     justify-items: start;
-    gap: var(--space-1);
+    gap: var(--gap-mark);
     text-decoration: none;
     color: var(--ink);
     max-width: 12rem;
@@ -192,35 +235,42 @@ const partners = [
     width: 8.5rem;
     height: 10.6rem;
     object-fit: cover;
-    border: 1px solid var(--hairline);
+    border: var(--rule);
     margin-bottom: var(--space-2);
   }
+  /* the portrait opens the CEPS profile, so the name reads as the link: teal and underlined */
   .person-name {
     font-family: var(--font-instrument);
-    font-weight: 600;
-  }
-  .person:hover .person-name {
+    font-weight: var(--weight-ui-strong);
+    color: var(--accent);
     text-decoration: underline;
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    text-decoration-color: var(--ink);
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .person:hover .person-name,
+  .person:active .person-name {
+    color: var(--accent-strong);
   }
   .person-title {
-    font-size: var(--text-sm);
+    font-size: var(--type-small);
     color: var(--ink-muted);
   }
 
   /* Task forces: title link plus a two-sentence note. */
   .tasks {
     list-style: none;
-    margin: var(--space-5) 0 0;
+    margin: var(--gap-group-lg) 0 0;
     padding: 0;
     display: grid;
-    gap: var(--space-6);
-    max-width: var(--measure);
+    gap: var(--gap-group-lg);
   }
   .tasks h3 {
-    font-family: var(--font-instrument);
-    font-size: var(--text-base);
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
     margin: 0 0 var(--space-2);
   }
   .tasks .prose {
@@ -228,44 +278,22 @@ const partners = [
     margin: 0;
   }
 
-  .briefing-link {
-    display: inline-block;
-    border: 1px solid var(--ink);
-    border-radius: var(--radius);
-    padding: var(--space-2) var(--space-4);
-    text-decoration: none;
-    font-family: var(--font-instrument);
-  }
-  .briefing-link:hover {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .briefing-emails {
-    margin-top: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    color: var(--ink-muted);
-  }
-  .briefing-emails a {
-    color: var(--ink-muted);
-    text-underline-offset: 2px;
-    text-decoration-color: var(--hairline);
-  }
-  .briefing-emails a:hover {
-    color: var(--ink);
-    text-decoration-color: var(--ink);
+  /* the one sentence offering briefings, set apart from the logos above it as the section was */
+  .briefing {
+    margin-top: var(--gap-related);
   }
 
-  /* Participant logos: one looping row. */
+  /* Participant logos: one looping row, under a Newsreader subhead in ink; the participants are a
+     change of subject from the two Task Forces, a subject's gap above them */
   .partners {
-    margin-top: var(--space-16);
+    margin-top: var(--gap-subject);
   }
   .partners-head {
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    color: var(--ink);
     margin: 0 0 var(--space-2);
   }
   .marquees {
@@ -273,8 +301,10 @@ const partners = [
     display: grid;
     gap: var(--space-4);
   }
+  /* the padding leaves room for a logo's focus ring, which the clipped row would otherwise cut */
   .marquee {
     overflow: hidden;
+    padding: var(--space-1);
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
   }
@@ -288,7 +318,8 @@ const partners = [
   .marquee.is-rev .track {
     animation-direction: reverse;
   }
-  .marquee:hover .track {
+  .marquee:hover .track,
+  .marquee:focus-within .track {
     animation-play-state: paused;
   }
   @keyframes marq {
@@ -317,13 +348,13 @@ const partners = [
     filter: grayscale(0);
     opacity: 1;
   }
-  .marquee-credit {
-    margin: var(--space-3) 0 0;
-    font-family: var(--font-mono);
-    font-size: var(--text-2xs);
-    color: var(--ink-faint);
-  }
   @media (prefers-reduced-motion: reduce) {
+    .intro a,
+    .tasks h3 a,
+    .briefing a,
+    .person-name {
+      transition: none;
+    }
     .track {
       animation: none;
       flex-wrap: wrap;

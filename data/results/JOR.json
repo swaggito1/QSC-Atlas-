@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "title": "البنك المركزي الأردني يطلق خارطة الطريق القطاعية للانتقال إلى التشفير المقاوم للحوسبة الكمية (Quantum Computing)",
+    "country": "JOR",
+    "issuingOrg": "CBJ",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.cbj.gov.jo/AR/newsdetails/%D8%A7%D9%84%D8%A8%D9%86%D9%83_%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A_%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86%D9%8A_%D9%8A%D8%B7%D9%84%D9%82_%D8%AE%D8%A7%D8%B1%D8%B7%D8%A9_%D8%A7%D9%84%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D9%82%D8%B7%D8%A7%D8%B9%D9%8A%D8%A9_%D9%84%D9%84%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D8%AA%D8%B4%D9%81%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%85_%D9%84%D9%84%D8%AD%D9%88%D8%B3%D8%A8%D8%A9_%D8%A7%D9%84%D9%83%D9%85%D9%8A%D8%A9_Quantum_Computing",
+    "summary": "Central Bank of Jordan announcement that it has issued a sectoral roadmap for the financial and banking sectors to transition to encryption resistant to quantum computing, taking a phased approach to building technical and organisational readiness in line with international best practice. The roadmap itself is obtainable on request from the CBJ FinCERT by email.",
+    "included": true
+  },
+  {
+    "title": "2025-2028 Jordan Energy Sector Cyber Security Strategy",
+    "country": "JOR",
+    "issuingOrg": "NCSC-JO",
+    "year": 2025,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://ncsc.jo/ebv4.0/root_storage/ar/eb_list_page/energy_cs_strategy.pdf",
+    "summary": "Sector cyber security strategy for Jordan's energy sector covering 2025 to 2028 (dated March 2025), led by NCSC-JO with EMRC overseeing implementation and MEMR ensuring policy alignment. It names quantum computing as an emerging threat to traditional encryption and calls for proactive investment in quantum-resistant encryption.",
+    "included": true
+  }
+]

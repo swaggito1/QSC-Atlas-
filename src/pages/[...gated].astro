@@ -1,0 +1,42 @@
+---
+// Every gated page of the Atlas (spec 14 and 21.2): one page per entry of builtPages(), at its
+// path in the manifest (src/lib/site/routes.ts). A production build generates only the pages
+// whose gate is public, so a closed tool has no page, no route and no link; a preview or local
+// build generates every Atlas page, each one not yet public with the preview line and noindex.
+// Only a local build (Swann's machine) also generates the pages kept for him: the research and
+// elsewhere tools. The Standards overview (/standards) and the page of each standard are built
+// wherever the Cascade is (5 and 8 October 2026).
+//
+// A tool's own page renders its component from TOOL_COMPONENTS. Any other page, or a tool with no
+// component there, renders src/components/site/pages/<page key>/index.astro from PAGE_COMPONENTS.
+// With neither, the page is the plain planned page: one italic muted sentence. Both maps come
+// from src/components/lab/registry.ts, which holds only the components this build needs.
+import { loadTools } from '../lib/lab/load';
+import { builtPages } from '../lib/site/routes';
+import type { SitePage } from '../lib/site/routes';
+import type { LabTool } from '../lib/lab/types';
+import { PAGE_COMPONENTS, TOOL_COMPONENTS } from '../components/lab/registry';
+import PlannedPage from '../components/site/PlannedPage.astro';
+
+export function getStaticPaths() {
+  const tools = new Map(loadTools().tools.map((t) => [t.id, t]));
+  return builtPages().map((page) => ({
+    params: { gated: page.path.slice(1) },
+    props: { page, tool: page.toolId ? (tools.get(page.toolId) ?? null) : null },
+  }));
+}
+
+const { page, tool } = Astro.props as { page: SitePage; tool: LabTool | null };
+const Tool = tool ? TOOL_COMPONENTS[tool.id] : undefined;
+const Page = PAGE_COMPONENTS[page.key];
+---
+
+{
+  Tool ? (
+    <Tool tool={tool} page={page} />
+  ) : Page ? (
+    <Page page={page} tool={tool} {...(page.props ?? {})} />
+  ) : (
+    <PlannedPage page={page} tool={tool} />
+  )
+}

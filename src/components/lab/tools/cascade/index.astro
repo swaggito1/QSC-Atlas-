@@ -1,0 +1,217 @@
+---
+// The Standards Cascade page, /standards/cascade: the shared frame at the map page's width with
+// the question as its H1, the island (the orbit is laid out here, at build time; the globe and the
+// map load their country shapes in the browser), the method note and the sources. The island
+// hydrates on load: its view is kept in the query string, and a shared link must open the view it
+// names straight away. Every link the island offers is built here, through pageHref(), so the
+// island holds no route and never names a page this build does not have. The Cascade links to no
+// list of standards and no page of a standard (Swann, 2 October 2026). In production the loaders
+// drop every lead (verify: true), so no record still being checked reaches the page, and the
+// edges go to the island without their excerpts: a source's own words are for review only
+// (src/lib/site/review.ts), and a production page carries none of them, in its markup or its props.
+//
+// The standards body (Swann, 5 October 2026). The page is built as the NIST view, the default,
+// exactly as before. Each other body the island offers (?body=ietf, ?body=etsi...) also gets its
+// own words for the head and for About this view, built here into inert templates: the question,
+// the lede, the meta line (as of, the documents and the events that view reads), the note on the
+// targeted reading, the method and the sources. A small script swaps them in before the page is
+// first painted when the address names a body, and again whenever the island's choice changes
+// (the "cc:body" event), so the words above and below the island always describe what it draws.
+import LabLayout from '../../LabLayout.astro';
+import Sources from '../../Sources.astro';
+import FreshnessBadge from '../../FreshnessBadge.astro';
+import StartLine from '../../../site/frame/StartLine.astro';
+import CascadeTool, { BODIES_ID } from './CascadeTool.tsx';
+import { cascadeIslandBodies, loadCascade, loadCascadeBodies } from '../../../../lib/lab/cascade-data';
+import type { CascadeEdgeView } from '../../../../lib/lab/cascade-data';
+import { fill } from '../../../../lib/lab/exposure';
+import { formatDate } from '../../../../lib/lab/format';
+import { freshnessDays } from '../../../../lib/lab/freshness';
+import { pageHref } from '../../../../lib/site/gates';
+import { sourceWordsInBuild } from '../../../../lib/site/review-build';
+import { cascadeBodyOptions, cascadeLinks } from '../../../../lib/site/standards';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/lab-cascade.css';
+
+const { tool } = Astro.props as { tool: LabTool };
+const data = loadCascade({}, undefined, Astro.site?.origin);
+const { copy } = data;
+const sourceWords = sourceWordsInBuild();
+const words = (es: CascadeEdgeView[]) => (sourceWords ? es : es.map((e) => ({ ...e, passages: [] })));
+const edges = words(data.edges);
+
+// the other standards bodies: their views for the island, each edge and country sent once. The
+// options are a prop; the views wait in the page as JSON (#cc-bodies), which the island reads once
+// mounted, so the NIST view's props are exactly as before and the views cost no prop escaping.
+const others = loadCascadeBodies({}, undefined, Astro.site?.origin);
+const built = cascadeIslandBodies(data, others, cascadeBodyOptions());
+const { options: bodyOptions, ...views } = { ...built, extraEdges: words(built.extraEdges) };
+// a JSON island that no "</script>" inside a title or a quotation can close early
+const viewsJson = JSON.stringify(views).replace(/</g, '\\u003c');
+
+const links = cascadeLinks(
+  [...Object.values(data.info), ...Object.values(built.extraInfo)].map((i) => ({ iso3: i.iso3, name: i.name })),
+  [...data.edges, ...built.extraEdges].map((e) => e.documentUrl),
+);
+const reads = [
+  { label: fill(copy.readsDocs, { n: data.lineDocs }), href: pageHref('/documents') },
+  // the time line marks every event the Cascade holds: standards events and coordination events
+  { label: fill(copy.readsEventsCascade, { n: data.spine.length }), href: null },
+];
+const next = [
+  { label: copy.nextDocuments, href: pageHref('/documents') },
+  { label: copy.nextCountries, href: pageHref('/countries') },
+];
+
+// each other body's own words, for the templates below
+const fresh = freshnessDays(tool.id);
+const countLine = (n: number) => (n === 1 ? '1 source' : `${n} sources, by author then date`);
+// a hyphenated compound never breaks at its hyphen in the H1 (PageFrame does the same)
+const qParts = (q: string) => q.split(/(\S+-\S+)/);
+const alts = others.map((b) => ({
+  id: b.body.id,
+  question: fill(copy.questionBody, { body: b.body.label }),
+  lede: copy.ledeBody,
+  note: fill(copy.bodyNote, { body: b.body.label }),
+  reads: [
+    { label: fill(copy.readsDocs, { n: b.lineDocs }), href: pageHref('/documents') },
+    { label: fill(copy.readsEventsCascade, { n: b.spine.length }), href: null },
+  ],
+  asOf: b.asOf,
+  method: fill(copy.methodBody, { body: b.body.labelOr, corpusSize: b.corpusSize, lineDocs: b.lineDocs }),
+  sources: b.sources,
+}));
+// the address may name a body by any of its ids (?body=irtf opens the IETF and IRTF)
+const alias = Object.fromEntries(built.options.flatMap((o) => [[o.id, o.id], ...o.bodyIds.map((id) => [id, o.id])]));
+---
+
+<LabLayout
+  tool={tool}
+  question={copy.question}
+  lede={copy.lede}
+  description={copy.promise}
+  reads={reads}
+  next={next}
+  asOf={data.asOf}
+  sources={data.sources}
+  wide
+>
+  {
+    alts.length > 0 && (
+      <div hidden data-cc-alts={JSON.stringify(alias)}>
+        {alts.map((a) => (
+          <template data-cc-alt={a.id}>
+            <span data-part="q">{qParts(a.question).map((part, i) => (i % 2 ? <span class="fr-nb">{part}</span> : part))}</span>
+            <span data-part="lede">{a.lede}</span>
+            <StartLine reads={a.reads} asOf={a.asOf} freshnessDays={fresh} />
+            <p class="fr-note" data-part="note">{a.note}</p>
+            <span data-part="method">{a.method}</span>
+            <span data-part="count">{countLine(a.sources.length)}</span>
+            <Sources entries={a.sources} />
+            {a.asOf && (
+              <p data-part="asof">
+                <span class="fr-mono">{formatDate(a.asOf)}</span>
+                <FreshnessBadge verifiedAt={a.asOf} thresholdDays={fresh} />
+              </p>
+            )}
+          </template>
+        ))}
+      </div>
+    )
+  }
+  {others.length > 0 && <script is:inline type="application/json" id={BODIES_ID} set:html={viewsJson} />}
+  <script is:inline>
+    // The page's words follow the standards body the island shows (see the note at the top of
+    // index.astro). It runs as the page is read, so a link that names a body opens with that
+    // body's question; the parts below the island are swapped once the page is parsed. NIST's own
+    // words are kept, to be put back. With no other body in the build it does nothing.
+    (function () {
+      var box = document.querySelector('[data-cc-alts]');
+      if (!box) return;
+      var alias = JSON.parse(box.getAttribute('data-cc-alts') || '{}');
+      var kept = {};
+      var shown = 'nist';
+      var tpl = function (id) {
+        return box.querySelector('template[data-cc-alt="' + id + '"]');
+      };
+      var from = function (id, selector) {
+        var t = id === 'nist' ? null : tpl(id);
+        return t ? t.content.querySelector(selector) : null;
+      };
+      // a part's words: kept the first time, then the body's, or NIST's put back
+      var words = function (el, name, id, selector) {
+        if (!el) return;
+        if (!(name in kept)) kept[name] = el.innerHTML;
+        var alt = from(id, selector);
+        el.innerHTML = alt ? alt.innerHTML : kept[name];
+      };
+      // a whole element: kept the first time, then a copy of the body's, or NIST's put back
+      var swap = function (el, name, id, selector) {
+        if (!el) return;
+        if (!(name in kept)) kept[name] = el;
+        var alt = from(id, selector);
+        var next = alt ? alt.cloneNode(true) : kept[name];
+        if (next !== el) el.replaceWith(next);
+      };
+      var apply = function (id) {
+        if (id !== 'nist' && !tpl(id)) id = 'nist';
+        var head = document.querySelector('.fr-head');
+        words(document.getElementById('fr-q'), 'q', id, '[data-part="q"]');
+        words(head && head.querySelector(':scope > .fr-lede'), 'lede', id, '[data-part="lede"]');
+        swap(head && head.querySelector(':scope > .fr-facts'), 'facts', id, '.fr-facts');
+        // the note on the targeted reading follows the meta line, for another body only
+        var old = head && head.querySelector(':scope > [data-cc-note]');
+        if (old) old.remove();
+        var facts = head && head.querySelector(':scope > .fr-facts');
+        var note = from(id, '[data-part="note"]');
+        if (facts && note) {
+          var p = note.cloneNode(true);
+          p.removeAttribute('data-part');
+          p.setAttribute('data-cc-note', '');
+          facts.after(p);
+        }
+        // About this view: the method, the sources and the as-of date, once they are parsed
+        words(document.querySelector('[data-cc-method]'), 'method', id, '[data-part="method"]');
+        var src = document.querySelector('details[data-fr-src]');
+        words(src && src.querySelector(':scope > .fr-count'), 'count', id, '[data-part="count"]');
+        swap(src && src.querySelector(':scope > ol.apa'), 'sources', id, 'ol.apa');
+        var dts = document.querySelectorAll('.fr-about dt');
+        for (var i = 0; i < dts.length; i++) {
+          if (dts[i].textContent.trim() !== 'As of') continue;
+          var dd = dts[i].nextElementSibling;
+          swap(dd && dd.querySelector(':scope > p'), 'asof', id, '[data-part="asof"]');
+        }
+        shown = id;
+      };
+      var asked = (new URLSearchParams(window.location.search).get('body') || '').trim().toLowerCase();
+      if (alias[asked] && alias[asked] !== 'nist') apply(alias[asked]);
+      document.addEventListener('DOMContentLoaded', function () {
+        if (shown !== 'nist') apply(shown);
+      });
+      // the island's choice, and the body it opened on
+      document.addEventListener('cc:body', function (e) {
+        apply((e && e.detail) || 'nist');
+      });
+    })();
+  </script>
+  <CascadeTool
+    client:load
+    copy={data.copy}
+    orbit={data.orbit}
+    geo={data.geo}
+    edges={edges}
+    info={data.info}
+    standards={data.standards}
+    nistIds={data.nistIds}
+    spine={data.spine}
+    groups={data.groups}
+    endMonth={data.endMonth}
+    asOfLabel={data.asOf ? formatDate(data.asOf) : ''}
+    links={links}
+    sourceWordsAvailable={sourceWords}
+    bodyOptions={bodyOptions.length > 1 ? bodyOptions : undefined}
+  />
+  <Fragment slot="method">
+    <p data-cc-method>{fill(copy.method, { corpusSize: data.corpusSize, lineDocs: data.lineDocs })}</p>
+  </Fragment>
+</LabLayout>

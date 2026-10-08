@@ -1,0 +1,92 @@
+---
+// Target dates, /target-dates (spec 6.3): which target dates reach the places an organisation
+// operates in. Homed in Countries (the third view beside List and Map), gated by the "dates"
+// entry of data/lab/tools.json, so a production build with that entry private has no page here
+// and no link to it anywhere.
+//
+// The frame gives the question as H1, the section's view switch directly under it (views
+// "countries", where /countries and /map have it), the lede, the meta line, the standing note,
+// About this view and the preview line (no breadcrumb: the header shows Countries, the view
+// switch the page). It keeps the frame's standard width, as List and Map do, so the three views
+// share one column. The page adds the island: Where you operate, the readout, the view with its
+// key and filters, Show as a table, the quiet actions and Where to go next, whose last row is
+// "Also used in Prepare" (the épuré pass). The island renders the full table on the server too,
+// so without JavaScript the page reads as the head and that table.
+import PageFrame from '../../frame/PageFrame.astro';
+import TargetDates from './TargetDates.tsx';
+import { methodAnchorFor } from '../../frame/contracts';
+import { targetDatesData } from './data';
+import { fill, joinAnd, packRows } from './model';
+import { formatDate } from '../../../../lib/lab/format';
+import type { SitePage } from '../../../../lib/site/routes';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/target-dates.css';
+
+interface Props {
+  page: SitePage;
+  tool?: LabTool | null;
+}
+const { page, tool = null } = Astro.props;
+
+const data = targetDatesData();
+const { copy } = data;
+const promise = tool?.promise?.trim() ?? '';
+const question = page.question ?? (promise.endsWith('?') ? promise : page.title);
+---
+
+<PageFrame
+  question={question}
+  title={page.title}
+  section="countries"
+  gate={page.gate}
+  description={copy.description}
+  lede={copy.lede}
+  reads={data.reads}
+  asOf={data.asOf}
+  standingNote={copy.standingNote}
+  views="countries"
+  sources={data.sources}
+  methodAnchor={methodAnchorFor('dates')}
+  byline={tool?.byline ?? null}
+>
+  <div class="td">
+    {/* Until the island is live: a shared link (?in=) shows a quiet loading line in place of the
+        empty state, and a phone holds back the full table, so nothing flashes and jumps. If the
+        island has not come up after six seconds, the page stops waiting and shows the server's
+        view, the full table, so a visitor is never left without the dates; a shared link then says
+        that its places could not be drawn, never "No place chosen" (target-dates.css, .td--late).
+        The island takes over whenever it comes up. */}
+    <script is:inline>
+      (function (el) {
+        var shared = /[?&]in=[^&]/.test(location.search);
+        el.classList.add('td--wait');
+        if (shared) el.classList.add('td--in');
+        setTimeout(function () {
+          el.classList.remove('td--wait', 'td--in');
+          if (shared) el.classList.add('td--late');
+        }, 6000);
+      })(document.currentScript.parentElement);
+    </script>
+    <TargetDates
+      client:load
+      prepare={data.prepare}
+      packed={packRows(data.rows)}
+      audiences={data.audiences}
+      places={data.places}
+      withheld={data.withheld}
+      links={data.links}
+      copy={copy}
+      hasLeads={data.hasLeads}
+      asOfLabel={data.asOf ? formatDate(data.asOf) : ''}
+    />
+  </div>
+
+  <Fragment slot="method">
+    <p>{copy.method}</p>
+    <p>{copy.method2}</p>
+    {data.reread.length > 0 && <p>{fill(copy.methodReread, { places: joinAnd(data.reread) })}</p>}
+  </Fragment>
+  <Fragment slot="sources">
+    <p>{fill(copy.sourcesProfiles, { n: data.timelines })}</p>
+  </Fragment>
+</PageFrame>

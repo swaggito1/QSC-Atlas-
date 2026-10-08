@@ -152,5 +152,49 @@
     "url": "https://www.sto.nato.int/document/on-the-implementation-of-x509-compliant-quantum-safe-hybrid-certificates/",
     "summary": "NATO Science and Technology Organization meeting-proceedings paper (STO-MP-IST-SET-198) presenting a proof-of-concept implementation of hybrid X.509 certificates combining a classical signature (ECDSA) with the post-quantum algorithm CRYSTALS-Dilithium via a forked OpenSSL and the Open Quantum Safe library, to build a quantum-safe hybrid PKI for military operations. Authored by external researchers presented at a NATO STO symposium, so flagged for review rather than auto-included.",
     "included": false
+  },
+  {
+    "title": "Quantum Technology Roadmap",
+    "country": "NATO",
+    "issuingOrg": "NATO",
+    "year": 2026,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2026/09/29/quantum-technology-roadmap",
+    "summary": "NATO's Quantum Technology Roadmap, dated 29 September 2026, turns the Quantum Technology Strategy adopted in November 2023 into five Lines of Effort with timelines and stakeholders. It lists adopting and implementing post-quantum cryptography standards as ongoing, schedules the next update of the Action Plan for NATO's Response to the Quantum Threat to Cryptography for Q3 2027, and a NIAG study on industry readiness for quantum-resistant cryptographic solutions for Q2 2027.",
+    "included": true
+  },
+  {
+    "title": "A Cryptographic Trust Framework for Agentic Autonomy in Defence",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://publications.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-IST-210/MP-IST-210-2A.03.pdf",
+    "summary": "A paper in the STO IST-210 Research Symposium proceedings (STO-MP-IST-210), written by Burcot Autonomy Limited, proposing a cryptographic trust framework for agentic AI on military platforms. Following CNSA 2.0, the prototype builds in post-quantum cryptography for key security and digital signatures.",
+    "included": true
+  },
+  {
+    "title": "Technical Evaluation Report on the IST-209 Research Symposium (RSY) \"International Conference on Military Communication and Information Systems (ICMCIS) 2025\"",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://publications.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-IST-209/MP-IST-209-TER.pdf",
+    "summary": "The STO Technical Evaluation Report on the IST-209 Research Symposium (ICMCIS 2025), written by Prof. B. Madahar, reviews the symposium's tracks, papers and keynotes. Post-quantum cryptography appears only in passing: among the keywords, in a speaker's research topics, and among recommended future focus areas such as quantum safe cryptos.",
+    "included": true
+  },
+  {
+    "title": "NATO LVC Exercises as the Interoperability Solution to a Multi-National \"Iron Dome\"",
+    "country": "NATO",
+    "issuingOrg": "NATO STO",
+    "year": null,
+    "docType": "Report",
+    "tier": "T4",
+    "url": "https://publications.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-MSG-229/MP-MSG-229-15.pdf",
+    "summary": "A paper in the NATO STO MSG-229 meeting proceedings, by a single US-based author (contact e-mail at smbgservices.com), arguing that NATO live, virtual and constructive exercises can provide interoperability for a multinational missile-defence architecture. One section sets out requirements for post-quantum cryptography and proposes a so-called ZAPP/ZAPPER cryptography scheme.",
+    "included": true
   }
 ]

@@ -1,0 +1,817 @@
+/* QSC Atlas: the shared kit for tool, element and section pages, on the épuré tokens in
+   global.css (labs/review/epure-audit.md); the frame around the page (question, meta line, About
+   this view) is in frame.css. Whitespace before rules, no boxes around groups of controls, no
+   cards. CEPS teal (--accent) draws the eye to one thing a view: the one filled button
+   (.lab-btn--primary), or else the current tab, a chosen option or a pressed toggle. Every other
+   teal is text-weight (a link's words); the outlined button (.lab-btn) is ink. A map or chart never
+   uses teal, because there colour means coordination posture. Every control is at least 44px
+   tall, a plain radio or checkbox through its label row, and every one has its full state set:
+   default, hover, focus-visible, active, disabled, and busy where it waits on work. */
+
+:root {
+  --lab-faded: 0.18; /* the one opacity for marks that are out of focus */
+  --lab-target: var(--target-min); /* the smallest control height, 44px */
+}
+
+/* the tool's own column inside the frame; also the hook a tool's styles use */
+.lab {
+  min-width: 0;
+}
+
+/* section heads: a real heading is .section-h (Newsreader, global.css); a group of controls
+   may keep the small ink .section-label */
+
+/* a second as-of line, for a tool that has one ("Law as of 1 September 2026"): one quiet line in
+   the interface face, like the meta line it follows. Better still, pass lawAsOf to the frame and
+   it joins the meta line itself. */
+.lab-asof,
+.fr-asof2 {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+
+/* a standing note is the plain sentence of global.css (.note, with .lab-note as its older name):
+   ink-muted at the reading measure, a hairline above it, never a left rule */
+
+/* a section inside a tool: whitespace above it, no rule (add border-top: var(--rule) where a
+   separator is needed). The next facet of the same subject sits --gap-related below; a section
+   that changes the subject takes .lab-section--subject, --gap-subject */
+.lab-section {
+  margin-top: var(--gap-related);
+}
+.lab-section--subject {
+  margin-top: var(--gap-subject);
+}
+.lab-section > h2 {
+  margin-bottom: var(--gap-group);
+}
+
+/* a group of controls under one hairline, unboxed. A .section-label at its head is the group's
+   label and draws no rule of its own. */
+.lab-group {
+  border-top: var(--rule);
+  padding-top: var(--space-3);
+}
+@media (max-width: 639px) {
+  .lab-group {
+    padding-top: var(--space-2);
+  }
+}
+
+/* the site's empty state: one italic muted sentence under a hairline */
+.lab-planned {
+  max-width: var(--measure);
+  margin: 0;
+  padding-top: var(--space-3);
+  border-top: var(--rule);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* ---- the control kit --------------------------------------------------------------------
+   One of each, so every tool chooses and acts the same way. Every control has its states:
+   default, hover, focus-visible, active (pressed) and disabled, and busy where it waits on work,
+   with 150ms transitions on colour only. */
+
+/* a button. Its component tokens (--btn-*) change with its state, in the priority order of
+   ui-ux-pro-max: disabled, busy, active, focus, hover, default.
+   .lab-btn, the secondary: ink words inside a 1px ink-faint outline, the wash behind it on hover
+   and the stronger wash when pressed. It is quiet on purpose, so it never competes with the one
+   main button.
+   .lab-btn--primary, the one main button in a view: filled teal with white words, a shade deeper
+   on hover and when pressed. It is the view's one teal mass.
+   A pressed toggle (aria-pressed) is a current state, so it takes teal: the teal outline, the teal
+   wash and weight 600.
+   Disabled: ink-faint words on a hairline outline, and it does nothing. Busy (aria-busy) keeps
+   its look and shows the progress cursor while the page works.
+   .btn is the kit's older name for .lab-btn (the home page's .btn is its own, scoped there). */
+.btn,
+.lab-btn {
+  --btn-fg: var(--ink);
+  --btn-bg: transparent;
+  --btn-border: var(--ink-faint);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-inline);
+  min-height: var(--lab-target);
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--radius);
+  background-color: var(--btn-bg);
+  font-family: var(--font-instrument);
+  font-size: var(--type-control);
+  font-weight: var(--weight-ui);
+  line-height: var(--leading-snug);
+  color: var(--btn-fg);
+  text-decoration: none;
+  cursor: pointer;
+  /* colour only: the pressed toggle's inset shadow appears with its colours, never animated
+     (the motion budget allows colour, opacity and transform) */
+  transition:
+    color var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard);
+}
+.btn:hover,
+.lab-btn:hover {
+  --btn-border: var(--ink);
+  --btn-bg: var(--wash);
+}
+.btn:active,
+.lab-btn:active {
+  --btn-border: var(--ink);
+  --btn-bg: var(--wash-strong);
+}
+.btn--primary,
+.lab-btn--primary {
+  --btn-fg: var(--on-accent);
+  --btn-bg: var(--accent);
+  --btn-border: var(--accent);
+}
+.btn--primary:hover,
+.lab-btn--primary:hover,
+.btn--primary:active,
+.lab-btn--primary:active {
+  --btn-fg: var(--on-accent);
+  --btn-bg: var(--accent-strong);
+  --btn-border: var(--accent-strong);
+}
+/* a pressed toggle: the 1px teal outline doubled inside by a shadow, so nothing moves */
+.btn[aria-pressed='true'],
+.lab-btn[aria-pressed='true'] {
+  --btn-fg: var(--accent-strong);
+  --btn-bg: var(--accent-wash);
+  --btn-border: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+  font-weight: var(--weight-ui-strong);
+}
+.btn[aria-busy='true'],
+.lab-btn[aria-busy='true'] {
+  cursor: progress;
+}
+.btn:disabled,
+.lab-btn:disabled,
+.btn[aria-disabled='true'],
+.lab-btn[aria-disabled='true'] {
+  --btn-fg: var(--ink-faint);
+  --btn-bg: transparent;
+  --btn-border: var(--hairline);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible,
+.lab-btn:focus-visible,
+.lab-switch button:focus-visible,
+.lab-switch a:focus-visible,
+.lab-choice input:focus-visible,
+.lab-choice--boxed input:focus-visible + span,
+.lab-select:focus-visible,
+.lab-input:focus-visible,
+.share-btn:focus-visible,
+.lab-link:focus-visible,
+.lab-table summary:focus-visible,
+.lab-fold > summary:focus-visible,
+.lab-disclose > summary:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* a view switch, drawn as text tabs: words in the interface face, the others ink-muted, the
+   current one ink at weight 600 with a 2px teal underline. Hover gives a hairline underline,
+   pressing deepens the text, and a tab that cannot be chosen is ink-faint. The same hand serves
+   buttons (aria-pressed, aria-checked or .on) and links (aria-current), such as the Countries
+   switch "List, Map, Target dates" and the Readiness Check's "One by one, Checklist,
+   Assessment". */
+.lab-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-control);
+}
+.lab-switch .lbl {
+  color: var(--ink-muted);
+}
+.lab-switch button,
+.lab-switch a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  min-height: var(--lab-target);
+  cursor: pointer;
+  color: var(--ink-muted);
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 8px;
+  transition: color var(--dur-fast) var(--ease-standard), text-decoration-color var(--dur-fast) var(--ease-standard);
+}
+/* a short word ("List", "Map") still has a 44px-wide hit area; the gap between tabs is wider than
+   what it adds, so nothing overlaps or moves */
+.lab-switch button::after,
+.lab-switch a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.lab-switch button:hover,
+.lab-switch a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--hairline);
+}
+.lab-switch button:active,
+.lab-switch a:active {
+  color: var(--ink);
+}
+.lab-switch button[aria-pressed='true'],
+.lab-switch button[aria-checked='true'],
+.lab-switch button[aria-selected='true'],
+.lab-switch button.on,
+.lab-switch a[aria-current='page'],
+.lab-switch a[aria-current='true'] {
+  color: var(--ink);
+  font-weight: var(--weight-ui-strong);
+  text-decoration-color: var(--accent);
+}
+.lab-switch button:disabled,
+.lab-switch button[aria-disabled='true'] {
+  color: var(--ink-faint);
+  text-decoration-color: transparent;
+  cursor: not-allowed;
+}
+
+/* the choice control, for radios and checkboxes: plain and unboxed. Each option is the native
+   control ticked in teal beside its label, and the whole label row is the 44px target. The
+   others are ink-muted, the hovered and the chosen one ink; the chosen one also shows its filled
+   ring or ticked box, so a choice never rests on colour alone. Options wrap onto new lines and
+   never scroll sideways.
+   Markup: <div class="lab-choice"><label><input type="radio"><span>Label</span></label>...</div> */
+.lab-choice,
+.lab-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.lab-choice label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 100%;
+  min-height: var(--lab-target);
+  cursor: pointer;
+}
+.lab-choice input[type='radio'],
+.lab-choice input[type='checkbox'] {
+  flex: none;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: inherit;
+}
+.lab-choice span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-instrument);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.lab-choice label:hover span,
+.lab-choice label:active span,
+.lab-choice input:checked + span {
+  color: var(--ink);
+}
+.lab-choice label:has(input:disabled) {
+  cursor: not-allowed;
+}
+.lab-choice input:disabled + span {
+  color: var(--ink-faint);
+}
+
+/* the boxed variant, kept for the one place a large tap target is the point (the Readiness
+   Check's four answers): hairline boxes, each led by a small box (checkbox) or ring (radio). The
+   chosen one takes a teal border, weight 600 and a teal tick or dot. Add .lab-choice--boxed
+   beside .lab-choice. */
+.lab-choice--boxed {
+  gap: var(--space-2);
+}
+.lab-choice--boxed label {
+  display: inline-flex;
+  min-height: 0;
+}
+.lab-choice--boxed input[type='radio'],
+.lab-choice--boxed input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.lab-choice--boxed span {
+  position: relative;
+  min-height: var(--lab-target);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  font-size: var(--type-small);
+  transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+/* the marker: an empty box or ring in ink-muted, filled teal when chosen */
+.lab-choice--boxed input[type='checkbox'] + span::before,
+.lab-choice--boxed input[type='radio'] + span::before {
+  content: '';
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--ink-muted);
+  border-radius: var(--radius);
+  background: transparent;
+  transition: background-color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+/* a radio's ring is round, as the native control's is */
+.lab-choice--boxed input[type='radio'] + span::before {
+  border-radius: 50%;
+}
+.lab-choice--boxed label:hover span {
+  color: var(--ink);
+  border-color: var(--ink-muted);
+}
+.lab-choice--boxed label:active span {
+  border-color: var(--ink);
+}
+.lab-choice--boxed input:checked + span {
+  color: var(--ink);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent); /* a 2px teal border that moves nothing */
+  font-weight: var(--weight-ui-strong);
+}
+.lab-choice--boxed input:checked + span::before {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+/* a radio's dot: the paper ring inside the teal disc */
+.lab-choice--boxed input[type='radio']:checked + span::before {
+  box-shadow: inset 0 0 0 2.5px var(--paper);
+}
+/* a checkbox's tick, in white on the teal box */
+.lab-choice--boxed input[type='checkbox']:checked + span::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--space-4) + 5px);
+  top: 50%;
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid var(--on-accent);
+  border-bottom: 2px solid var(--on-accent);
+  transform: translateY(-62%) rotate(45deg);
+}
+.lab-choice--boxed input:disabled + span {
+  color: var(--ink-faint);
+  border-color: var(--hairline);
+  cursor: not-allowed;
+}
+
+/* a select, and a text field in the same hand: the Documents page's native select. A native
+   control keeps its own small radius; the field is drawn by its hairline, never a white box. */
+.lab-select,
+.lab-input {
+  font: inherit;
+  font-size: var(--type-small);
+  min-height: var(--lab-target);
+  padding: var(--space-2) var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background-color: var(--paper);
+  color: var(--ink);
+  max-width: 100%;
+  transition: border-color var(--dur-fast) var(--ease-standard);
+}
+.lab-select:hover,
+.lab-input:hover {
+  border-color: var(--ink-muted);
+}
+.lab-select:active,
+.lab-input:active,
+.lab-select:focus-visible,
+.lab-input:focus-visible {
+  border-color: var(--ink);
+}
+.lab-input::placeholder {
+  color: var(--ink-muted);
+}
+.lab-select:disabled,
+.lab-input:disabled {
+  color: var(--ink-faint);
+  border-color: var(--hairline);
+  cursor: not-allowed;
+}
+
+/* ---- the disclosure: one marker for every details element in the kit -------------------
+   A small chevron drawn in the text colour, pointing down when closed and up when open, so a
+   summary reads as a control. "Show as a table" (.lab-table), "Choose what to show"
+   (.lab-fold), any other disclosure (.lab-disclose) and the frame's "In Prepare" share it; the
+   frame moves its own after the label. It turns only when the visitor opens or closes it. */
+.lab-disclose > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--lab-target);
+  cursor: pointer;
+  list-style: none;
+}
+.lab-disclose > summary::-webkit-details-marker {
+  display: none;
+}
+.lab-table summary::before,
+.lab-fold > summary::before,
+.lab-disclose > summary::before,
+.fr-menu-d > summary::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+.lab-table details[open] > summary::before,
+details.lab-table[open] > summary::before,
+.lab-fold[open] > summary::before,
+.lab-disclose[open] > summary::before,
+.fr-menu-d[open] > summary::before {
+  transform: translateY(2px) rotate(-135deg);
+}
+.lab-disclose > summary:hover {
+  color: var(--ink);
+}
+.lab-disclose > summary:active {
+  color: var(--ink);
+}
+
+/* on phones a tool folds more than three controls into one "Choose what to show (n)" disclosure */
+.lab-fold > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--lab-target);
+  cursor: pointer;
+  font-size: var(--type-small);
+  color: var(--accent);
+  list-style: none;
+}
+.lab-fold > summary:hover,
+.lab-fold > summary:active {
+  color: var(--accent-strong);
+}
+.lab-fold > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* a separator dot, drawn by CSS in ink-faint: decoration that is never read aloud, copied or
+   measured as text (the words beside it keep ink or ink-muted) */
+.dot-sep {
+  color: var(--ink-faint);
+}
+.dot-sep::before {
+  content: '\00B7';
+  content: '\00B7' / '';
+}
+
+/* the quiet actions under a view: teal text links in the interface face, joined by middle dots */
+.share-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-2);
+  margin: var(--space-4) 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-faint);
+}
+.share-btn,
+.lab-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  min-height: var(--lab-target);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+/* a one-word action ("Print") still has a 44px-wide hit area */
+.share-btn::after,
+.lab-link::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.share-btn:hover,
+.lab-link:hover,
+.share-btn:active,
+.lab-link:active {
+  color: var(--accent-strong);
+}
+/* busy: the words stay, quieter, and the cursor says the page is working (Download image
+   while it draws the PNG); a second press does nothing */
+.share-btn[aria-busy='true'],
+.lab-link[aria-busy='true'] {
+  color: var(--ink-muted);
+  cursor: progress;
+}
+.share-btn:disabled,
+.lab-link:disabled,
+.share-btn[aria-disabled='true'],
+.lab-link[aria-disabled='true'] {
+  color: var(--ink-faint);
+  text-decoration-style: dashed;
+  cursor: not-allowed;
+}
+.share-status {
+  flex-basis: 100%;
+  margin: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+  min-height: 1.2em;
+}
+
+/* ---- "Show as a table": the table alternative every view carries --------------------- */
+
+.lab-table {
+  margin: var(--space-8) 0;
+  font-size: var(--type-small);
+  max-width: var(--w-wide);
+}
+.lab-table summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--lab-target);
+  padding: var(--space-1) 0;
+  cursor: pointer;
+  list-style: none;
+  color: var(--accent);
+}
+.lab-table summary::-webkit-details-marker {
+  display: none;
+}
+.lab-table summary:hover,
+.lab-table summary:active {
+  color: var(--accent-strong);
+}
+/* the disclosure keeps the kit's chevron (above), so "Show as a table" reads as a control */
+.lab-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-6);
+}
+.lab-table caption {
+  text-align: left;
+  font-weight: var(--weight-ui-strong);
+  padding: var(--space-2) 0;
+}
+.lab-table th[scope='col'] {
+  text-align: left;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink-muted);
+  border-bottom: var(--rule-head);
+  padding: var(--space-1) var(--space-2);
+  vertical-align: bottom;
+}
+.lab-table th[scope='row'] {
+  text-align: left;
+  font-weight: var(--weight-ui-strong);
+}
+.lab-table th[scope='row'],
+.lab-table td {
+  padding: var(--space-2);
+  border-top: var(--rule);
+  vertical-align: top;
+}
+/* the current row: the teal wash */
+.lab-table tbody tr.is-current,
+.lab-table tbody tr[aria-current='true'] {
+  background: var(--accent-wash);
+}
+.lab-table .num,
+.lab-table th.num {
+  text-align: right;
+}
+.lab-table .mono {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-data);
+  font-feature-settings: 'tnum' 1;
+}
+/* a wide table scrolls inside its own labelled, focusable region instead of widening the page;
+   4px of padding, taken back by the margin, leaves room for a link's focus ring at its edges */
+.lab-scroll {
+  overflow-x: auto;
+  padding-inline: var(--space-1);
+  margin-inline: calc(-1 * var(--space-1));
+}
+
+/* under 640px a table marked to stack becomes hairline-ruled rows: each cell on its own line,
+   named by its column head (the cell carries data-label) */
+@media (max-width: 639px) {
+  .lab-table table.is-stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .lab-table table.is-stack,
+  .lab-table table.is-stack tbody,
+  .lab-table table.is-stack tr,
+  .lab-table table.is-stack th[scope='row'],
+  .lab-table table.is-stack td {
+    display: block;
+    width: 100%;
+  }
+  /* the caption stays a full-width line above the rows (left as a table caption, it would take
+     the width of the first stacked cell and run down the edge one word at a time) */
+  .lab-table table.is-stack caption {
+    display: block;
+    width: 100%;
+  }
+  .lab-table table.is-stack tr {
+    padding: var(--space-3) 0;
+    border-top: var(--rule);
+  }
+  .lab-table table.is-stack th[scope='row'],
+  .lab-table table.is-stack td {
+    border-top: none;
+    padding: 2px 0;
+    text-align: left;
+  }
+  .lab-table table.is-stack td[data-label]::before {
+    content: attr(data-label) ' ';
+    display: block;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink-muted);
+  }
+}
+
+/* ---- marks and messages ------------------------------------------------------------------ */
+
+/* a tooltip: an overlay on the surface with the one shadow and a hairline edge, ink text, a
+   posture dot, the name and a muted short line */
+.lab-tip {
+  position: absolute;
+  transform: translate(-50%, -150%);
+  pointer-events: none;
+  background: var(--surface-overlay);
+  color: var(--ink);
+  border: var(--rule);
+  box-shadow: var(--shadow-panel);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-inline);
+  z-index: 5;
+}
+.lab-tip .d {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-mark);
+  flex: none;
+}
+.lab-tip .m {
+  color: var(--ink-muted);
+}
+.lab-tip .mono {
+  font-family: var(--font-mono);
+  color: var(--ink-muted);
+}
+/* a link inside a pinned tip is teal on the surface, with the teal focus ring; the selector
+   outranks a page's older paper-on-ink rule for the same link */
+.lab-tip :is(a, button):is([class], :not([class])) {
+  color: var(--accent);
+}
+.lab-tip :is(a, button):is([class], :not([class])):hover {
+  color: var(--accent-strong);
+}
+.lab-tip :is(a, button):is([class], :not([class])):focus-visible {
+  outline-color: var(--focus-ring);
+}
+
+/* loading and error lines, with a teal text retry */
+.lab-state {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.lab-state button {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--lab-target);
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.lab-state button:hover,
+.lab-state button:active {
+  color: var(--accent-strong);
+}
+.lab-state button:disabled {
+  color: var(--ink-faint);
+  cursor: not-allowed;
+}
+
+/* the instruction line under a map, in ink-muted and the interface face, held to the reading
+   measure so a wide view never sets a line of 150 characters */
+.lab-hint {
+  max-width: var(--measure);
+  margin: var(--space-3) 0 0;
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+  font-family: var(--font-instrument);
+}
+
+/* a posture chip: dot plus short label, no box (ProcessChip) */
+.lab-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.lab-chip .d {
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: var(--radius-mark);
+  flex: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .lab-btn,
+  .lab-switch button,
+  .lab-switch a,
+  .lab-choice span,
+  .lab-choice span::before,
+  .lab-select,
+  .lab-input,
+  .share-btn,
+  .lab-link,
+  .lab-table summary::before,
+  .lab-fold > summary::before,
+  .lab-disclose > summary::before,
+  .fr-menu-d > summary::before {
+    transition: none;
+  }
+}
+
+@media print {
+  .lab-table summary,
+  .lab-fold > summary {
+    display: none;
+  }
+  /* a disclosure that prints (the source list's count line) prints as a line of text */
+  .lab-disclose > summary::before {
+    display: none;
+  }
+}

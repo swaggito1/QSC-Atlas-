@@ -1,0 +1,507 @@
+{
+  "_about": "The reporting clocks one incident can start, checked against the article text in text/ and, for DORA, against Delegated Regulation (EU) 2025/301. Each step quotes the sentence that sets its time limit, with the number and unit as written. A regime with a hiddenReason is not shown.",
+  "regimes": [
+    {
+      "id": "nis2-art23",
+      "instrument": "NIS2 Directive (EU) 2022/2555",
+      "shortLabel": "NIS2",
+      "celex": "32022L2555",
+      "timeLimitCelex": null,
+      "articleRef": "Article 23(4)",
+      "who": "Essential and important entities, for significant incidents",
+      "recipient": "The CSIRT or, where applicable, the competent authority",
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "nis2-art23-early-warning",
+          "label": "Early warning",
+          "within": 24,
+          "unit": "hours",
+          "from": "becoming aware of the significant incident",
+          "fromKind": "aware",
+          "quote": "without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact;",
+          "locator": "Article 23(4)(a)"
+        },
+        {
+          "id": "nis2-art23-notification",
+          "label": "Incident notification",
+          "within": 72,
+          "unit": "hours",
+          "from": "becoming aware of the significant incident",
+          "fromKind": "aware",
+          "quote": "without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification,",
+          "locator": "Article 23(4)(b)"
+        },
+        {
+          "id": "nis2-art23-final",
+          "label": "Final report",
+          "within": 1,
+          "unit": "months",
+          "from": "submitting the incident notification",
+          "fromKind": "notification",
+          "quote": "a final report not later than one month after the submission of the incident notification under point (b), including the following:",
+          "locator": "Article 23(4)(d)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+          "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "They shall apply those measures from 18 October 2024.",
+          "locator": "Article 41(1), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+          "title": "Directive (EU) 2022/2555 (NIS2), consolidated text of 27.12.2022",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that, for the purpose of notification under paragraph 1, the entities concerned submit to the CSIRT or, where applicable, the competent authority:",
+          "locator": "Article 23(4)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-art15",
+      "instrument": "CER Directive (EU) 2022/2557",
+      "shortLabel": "CER",
+      "celex": "32022L2557",
+      "timeLimitCelex": null,
+      "articleRef": "Article 15(1)",
+      "who": "Critical entities identified by their Member State, from 10 months after they are notified of that identification",
+      "recipient": "The competent authority",
+      "status": "in-force",
+      "appliesFrom": null,
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "cer-art15-initial",
+          "label": "Initial notification",
+          "within": 24,
+          "unit": "hours",
+          "from": "becoming aware of the incident, unless operationally unable to do so",
+          "fromKind": "aware",
+          "quote": "Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification no later than 24 hours after becoming aware of an incident, followed, where relevant, by a detailed report no later than one month thereafter.",
+          "locator": "Article 15(1), first subparagraph"
+        },
+        {
+          "id": "cer-art15-detailed",
+          "label": "Detailed report, where relevant",
+          "within": 1,
+          "unit": "months",
+          "from": "the initial notification",
+          "fromKind": "notification",
+          "quote": "Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification no later than 24 hours after becoming aware of an incident, followed, where relevant, by a detailed report no later than one month thereafter.",
+          "locator": "Article 15(1), first subparagraph"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "For the critical entities concerned, Chapter III shall apply from 10 months after the date of the notification referred to in the first subparagraph of this paragraph.",
+          "locator": "Article 6(3), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By 17 July 2026, each Member State shall identify the critical entities for the sectors and subsectors set out in the Annex.",
+          "locator": "Article 6(1)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/32022L2557",
+          "title": "Directive (EU) 2022/2557 (CER), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that critical entities notify the competent authority, without undue delay, of incidents that significantly disrupt or have the potential to significantly disrupt the provision of essential services.",
+          "locator": "Article 15(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-art14-vuln",
+      "instrument": "Cyber Resilience Act, Regulation (EU) 2024/2847",
+      "shortLabel": "CRA",
+      "celex": "32024R2847",
+      "timeLimitCelex": null,
+      "articleRef": "Article 14(2)",
+      "who": "Manufacturers of products with digital elements, for actively exploited vulnerabilities in their products",
+      "recipient": "The CSIRT designated as coordinator and ENISA, at the same time, through the single reporting platform",
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "cra-art14-vuln-early-warning",
+          "label": "Early warning",
+          "within": 24,
+          "unit": "hours",
+          "from": "becoming aware of the actively exploited vulnerability",
+          "fromKind": "aware",
+          "quote": "an early warning notification of an actively exploited vulnerability, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it,",
+          "locator": "Article 14(2)(a)"
+        },
+        {
+          "id": "cra-art14-vuln-notification",
+          "label": "Vulnerability notification",
+          "within": 72,
+          "unit": "hours",
+          "from": "becoming aware of the actively exploited vulnerability",
+          "fromKind": "aware",
+          "quote": "unless the relevant information has already been provided, a vulnerability notification, without undue delay and in any event within 72 hours of the manufacturer becoming aware of the actively exploited vulnerability,",
+          "locator": "Article 14(2)(b)"
+        },
+        {
+          "id": "cra-art14-vuln-final",
+          "label": "Final report",
+          "within": 14,
+          "unit": "days",
+          "from": "a corrective or mitigating measure becoming available",
+          "fromKind": "fix",
+          "quote": "unless the relevant information has already been provided, a final report, no later than 14 days after a corrective or mitigating measure is available, including at least the following:",
+          "locator": "Article 14(2)(c)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.",
+          "locator": "Article 71(2), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By way of derogation from paragraph 2 of this Article, the obligations laid down in Article 14 shall apply to all products with digital elements that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.",
+          "locator": "Article 69(3)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA.",
+          "locator": "Article 14(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-art14-incident",
+      "instrument": "Cyber Resilience Act, Regulation (EU) 2024/2847",
+      "shortLabel": "CRA",
+      "celex": "32024R2847",
+      "timeLimitCelex": null,
+      "articleRef": "Article 14(4)",
+      "who": "Manufacturers of products with digital elements, for severe incidents having an impact on the security of their products",
+      "recipient": "The CSIRT designated as coordinator and ENISA, at the same time, through the single reporting platform",
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "cra-art14-incident-early-warning",
+          "label": "Early warning",
+          "within": 24,
+          "unit": "hours",
+          "from": "becoming aware of the severe incident",
+          "fromKind": "aware",
+          "quote": "an early warning notification of a severe incident having an impact on the security of the product with digital elements, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it,",
+          "locator": "Article 14(4)(a)"
+        },
+        {
+          "id": "cra-art14-incident-notification",
+          "label": "Incident notification",
+          "within": 72,
+          "unit": "hours",
+          "from": "becoming aware of the severe incident",
+          "fromKind": "aware",
+          "quote": "unless the relevant information has already been provided, an incident notification, without undue delay and in any event within 72 hours of the manufacturer becoming aware of the incident,",
+          "locator": "Article 14(4)(b)"
+        },
+        {
+          "id": "cra-art14-incident-final",
+          "label": "Final report",
+          "within": 1,
+          "unit": "months",
+          "from": "submitting the incident notification",
+          "fromKind": "notification",
+          "quote": "unless the relevant information has already been provided, a final report, within one month after the submission of the incident notification under point (b), including at least the following:",
+          "locator": "Article 14(4)(c)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.",
+          "locator": "Article 71(2), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By way of derogation from paragraph 2 of this Article, the obligations laid down in Article 14 shall apply to all products with digital elements that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.",
+          "locator": "Article 69(3)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R2847-20241120",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), consolidated text of 20.11.2024",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "A manufacturer shall notify any severe incident having an impact on the security of the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA.",
+          "locator": "Article 14(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-art19",
+      "instrument": "DORA, Regulation (EU) 2022/2554, with Commission Delegated Regulation (EU) 2025/301",
+      "shortLabel": "DORA",
+      "celex": "32022R2554",
+      "timeLimitCelex": "32025R0301",
+      "articleRef": "Article 19(4); Delegated Regulation (EU) 2025/301, Article 5(1)",
+      "who": "Financial entities, for major ICT-related incidents",
+      "recipient": "The relevant competent authority",
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "dora-art19-initial",
+          "label": "Initial notification",
+          "within": 4,
+          "unit": "hours",
+          "from": "classifying the incident as major, and no later than 24 hours after becoming aware of it",
+          "fromKind": "classified",
+          "quote": "for the initial report: as early as possible, but in any case, within four hours from the classification of the ICT-related incident as a major ICT-related incident and no later than 24 hours from the moment the financial entity has become aware of the ICT-related incident;",
+          "locator": "Delegated Regulation (EU) 2025/301, Article 5(1)(a)"
+        },
+        {
+          "id": "dora-art19-intermediate",
+          "label": "Intermediate report",
+          "within": 72,
+          "unit": "hours",
+          "from": "submitting the initial notification",
+          "fromKind": "notification",
+          "quote": "for the intermediate report: at the latest within 72 hours from the submission of the initial notification, even where the status or the handling of the incident have not changed as referred to in Article 19(4), point (b), of Regulation (EU) 2022/2554.",
+          "locator": "Delegated Regulation (EU) 2025/301, Article 5(1)(b)"
+        },
+        {
+          "id": "dora-art19-final",
+          "label": "Final report",
+          "within": 1,
+          "unit": "months",
+          "from": "submitting the intermediate report, or the latest updated intermediate report",
+          "fromKind": "intermediate",
+          "quote": "for the final report: no later than one month after either the submission of the intermediate report, or, where applicable, after the latest updated intermediate report.",
+          "locator": "Delegated Regulation (EU) 2025/301, Article 5(1)(c)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/32022R2554",
+          "title": "Regulation (EU) 2022/2554 (DORA), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "It shall apply from 17 January 2025.",
+          "locator": "Article 64, second paragraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/32022R2554",
+          "title": "Regulation (EU) 2022/2554 (DORA), text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall, within the time limits to be laid down in accordance with Article 20, first paragraph, point (a), point (ii), submit the following to the relevant competent authority:",
+          "locator": "Article 19(4)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/32025R0301",
+          "title": "Commission Delegated Regulation (EU) 2025/301, text published in the Official Journal",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall submit the initial notification and the intermediate and final reports as referred to in Article 19(4), points (a), (b) and (c), of Regulation (EU) 2022/2554 within the following time limits:",
+          "locator": "Delegated Regulation (EU) 2025/301, Article 5(1)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/cellar/36795cde-ef2b-11ef-981b-01aa75ed71a1/xml/object?decoding=en",
+          "title": "CELLAR object notice for CELEX 32025R0301",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "<RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type=\"date\"> <VALUE>2025-03-12</VALUE> <YEAR>2025</YEAR> <MONTH>03</MONTH> <DAY>12</DAY> <ANNOTATION> <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>",
+          "locator": "RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-art33",
+      "instrument": "GDPR, Regulation (EU) 2016/679",
+      "shortLabel": "GDPR",
+      "celex": "32016R0679",
+      "timeLimitCelex": null,
+      "articleRef": "Article 33(1)",
+      "who": "Controllers, for personal data breaches, unless the breach is unlikely to result in a risk to people's rights and freedoms",
+      "recipient": "The competent supervisory authority",
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "hiddenReason": null,
+      "steps": [
+        {
+          "id": "gdpr-art33-notification",
+          "label": "Notification to the supervisory authority",
+          "within": 72,
+          "unit": "hours",
+          "from": "becoming aware of the breach, where feasible",
+          "fromKind": "aware",
+          "quote": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "locator": "Article 33(1)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+          "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "It shall apply from 25 May 2018.",
+          "locator": "Article 99(2)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02016R0679-20160504",
+          "title": "Regulation (EU) 2016/679 (GDPR), consolidated text of 04.05.2016",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.",
+          "locator": "Article 33(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-art73",
+      "instrument": "AI Act, Regulation (EU) 2024/1689",
+      "shortLabel": "AI Act",
+      "celex": "32024R1689",
+      "timeLimitCelex": null,
+      "articleRef": "Article 73",
+      "who": "Providers of high-risk AI systems placed on the Union market, for serious incidents",
+      "recipient": "The market surveillance authorities of the Member States where the incident occurred",
+      "status": "applies-from",
+      "appliesFrom": null,
+      "hiddenReason": "Article 73 falls under the AI Act's general date of 2 August 2026, but the rules that decide which AI systems are high-risk apply only from 2 December 2027 or 2 August 2028, so the date from which this clock runs needs a legal reading before it is shown.",
+      "steps": [
+        {
+          "id": "aiact-art73-report",
+          "label": "Serious incident report",
+          "within": 15,
+          "unit": "days",
+          "from": "the provider or deployer becoming aware of the serious incident",
+          "fromKind": "aware",
+          "quote": "The report referred to in paragraph 1 shall be made immediately after the provider has established a causal link between the AI system and the serious incident or the reasonable likelihood of such a link, and, in any event, not later than 15 days after the provider or, where applicable, the deployer, becomes aware of the serious incident.",
+          "locator": "Article 73(2)"
+        },
+        {
+          "id": "aiact-art73-widespread",
+          "label": "Report, widespread infringement or serious disruption of critical infrastructure",
+          "within": 2,
+          "unit": "days",
+          "from": "the provider or deployer becoming aware of the incident",
+          "fromKind": "aware",
+          "quote": "Notwithstanding paragraph 2 of this Article, in the event of a widespread infringement or a serious incident as defined in Article 3, point (49)(b), the report referred to in paragraph 1 of this Article shall be provided immediately, and not later than two days after the provider or, where applicable, the deployer becomes aware of that incident.",
+          "locator": "Article 73(3)"
+        },
+        {
+          "id": "aiact-art73-death",
+          "label": "Report, death of a person",
+          "within": 10,
+          "unit": "days",
+          "from": "the provider or deployer becoming aware of the serious incident",
+          "fromKind": "aware",
+          "quote": "Notwithstanding paragraph 2, in the event of the death of a person, the report shall be provided immediately after the provider or the deployer has established, or as soon as it suspects, a causal relationship between the high-risk AI system and the serious incident, but not later than 10 days after the date on which the provider or, where applicable, the deployer becomes aware of the serious incident.",
+          "locator": "Article 73(4)"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+          "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "It shall apply from 2 August 2026.",
+          "locator": "Article 113, second paragraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+          "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Chapter III, Sections 1, 2, and 3, with the exception of Article 6(5), shall apply from: (i) 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III; and",
+          "locator": "Article 113, third paragraph, point (c)(i)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+          "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "(ii) 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I;",
+          "locator": "Article 113, third paragraph, point (c)(ii)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "http://publications.europa.eu/resource/celex/02024R1689-20260727",
+          "title": "Regulation (EU) 2024/1689 (AI Act), consolidated text of 27.07.2026",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "locator": "Article 73(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

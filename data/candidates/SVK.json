@@ -1,56 +1,86 @@
 [
   {
-    "title": "National Security Authority Slovakia's Post - LinkedIn",
-    "url": "https://www.linkedin.com/posts/nbusk_postkvantov%C3%A1-kryptografia-ste-pripraven%C3%AD-activity-7434896170511912961-XQ9v",
-    "description": "POSTKVANTOVÁ KRYPTOGRAFIA - STE PRIPRAVENÍ NA TO, ČO PRICHÁDZA? Prečo algoritmy RSA a ECC neobstoja v ére kvantových počítačov a prečo je ...",
+    "title": "SPRÁVA O KYBERNETICKEJ BEZPEČNOSTI",
+    "url": "https://www.nbu.gov.sk/data/att/3967.pdf",
+    "description": "Kvantové počítače a postkvantová kryptografia. Povedomie o kvantových technológiách, ako aj o postkvantovom šifrovaní je veľmi nízke. Spoločnosť na. Slovensku ...",
     "markdown": ""
   },
   {
-    "title": "Stratégia rozvoja kvantového počítania a postkvantová kryptografia ...",
-    "url": "https://www.youtube.com/watch?v=CU-MLSGZuEM",
-    "description": "Stratégia rozvoja kvantového počítania a postkvantová kryptografia na Slovensku ... Slovakia – The Country That Shouldn't Exist | 4K ...",
-    "markdown": ""
-  },
-  {
-    "title": "Národný - POSTKVANTOVÁ KRYPTOGRAFIA - Facebook",
-    "url": "https://www.facebook.com/narodnybezpecnostnyurad/photos/postkvantov%C3%A1-kryptografia-ste-pripraven%C3%AD-na-to-%C4%8Do-prich%C3%A1dzapre%C4%8Do-algoritmy-rsa-a/1238078805118141/",
-    "description": "POSTKVANTOVÁ KRYPTOGRAFIA - STE PRIPRAVENÍ NA TO, ČO PRICHÁDZA? Prečo algoritmy RSA a ECC neobstoja v ére kvantových počítačov a prečo je ...",
-    "markdown": ""
-  },
-  {
-    "title": "DISKUSIA Stratégia rozvoja kvantového počítania a postkvantová ...",
-    "url": "https://www.itapa.sk/19963-en/diskusia-strategia-rozvoja-kvantoveho-pocitania-a-postkvantova-kryptografia-na-slovensku/",
-    "description": "DISCUSSION \"Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia\" · How a quantum computer works and where we are today.",
-    "markdown": ""
-  },
-  {
-    "title": "Čo je postkvantová kryptografia a hrozba PQC? | Mastercard Slovakia",
+    "title": "Čo je postkvantová kryptografia a hrozba PQC?",
     "url": "https://www.mastercard.com/sk/sk/news-and-trends/stories/2025/what-is-post-quantum-cryptography.html",
     "description": "Postkvantová kryptografia je súhrnný termín pre nové šifrovacie metódy určené na odolávanie útokom kvantových počítačov. Normy PQC na celom ...",
     "markdown": ""
   },
   {
-    "title": "Postkvantové šifrovanie už teraz? A v našom smartfóne? Zajtra už ...",
-    "url": "https://zive.aktuality.sk/clanok/5DbD3JH/postkvantove-sifrovanie-uz-teraz-a-v-nasom-smartfone-zajtra-uz-bude-neskoro/",
-    "description": "Odpoveď odborníkov je postkvantová kryptografia (post-quantum cryptography). Zatiaľ čo kryptografia predstavuje celý obor, ktorý skúma princípy ...",
-    "markdown": ""
-  },
-  {
-    "title": "Éra postkvantovej bezpečnosti je s nami už roky. A oficiálny začiatok ...",
+    "title": "Éra postkvantovej bezpečnosti je s nami už roky. A oficiálny ...",
     "url": "https://www.linkedin.com/pulse/%C3%A9ra-postkvantovej-bezpe%C4%8Dnosti-je-nami-u%C5%BE-roky-ofici%C3%A1lny-3dwsf",
-    "description": "Po roku 2030 už tradičné šifrovanie nebude považované za dostatočné, ak nebude doplnené o postkvantovú kryptografiu.",
+    "description": "Preto postkvantová kryptografie vyvíja a zavádza šifrovacie algoritmy odolné voči budúcim útokom kvantových počítačov, aby chránila dnešnú aj dlhodobú ...",
     "markdown": ""
   },
   {
-    "title": "Éra postkvantovej bezpečnosti sa začala. Má aj oficiálny začiatok ...",
-    "url": "https://www.pressreader.com/slovakia/hospodarske-noviny-9zzt/20251212/281913074439682?srsltid=AfmBOooWnZIRMVUSZEahgvI6PRRAA0gVIPCgpvIAWKFHK3rE8MZV7v8i",
+    "title": "POSTKVANTOVÁ KRYPTOGRAFIA - STE PRIPRAVENÍ NA TO, ČO ...",
+    "url": "https://www.facebook.com/narodnybezpecnostnyurad/posts/postkvantov%C3%A1-kryptografia-ste-pripraven%C3%AD-na-to-%C4%8Do-prich%C3%A1dzapre%C4%8Do-algoritmy-rsa-a/1238079905118031/",
+    "description": "POSTKVANTOVÁ KRYPTOGRAFIA - STE PRIPRAVENÍ NA TO, ČO PRICHÁDZA? Prečo algoritmy RSA a ECC neobstoja v ére kvantových počítačov a prečo je ...",
+    "markdown": ""
+  },
+  {
+    "title": "DISKUSIA Stratégia rozvoja kvantového počítania a ...",
+    "url": "https://www.itapa.sk/19963-en/diskusia-strategia-rozvoja-kvantoveho-pocitania-a-postkvantova-kryptografia-na-slovensku/",
+    "description": "DISCUSSION \"Strategy for the Development of Quantum Computing and Post-Quantum Cryptography in Slovakia\" · How a quantum computer works and where we are today.",
+    "markdown": ""
+  },
+  {
+    "title": "Postkvantové šifrovanie už teraz? A v našom smartfóne? Zajtra už bude ...",
+    "url": "https://zive.aktuality.sk/clanok/5DbD3JH/postkvantove-sifrovanie-uz-teraz-a-v-nasom-smartfone-zajtra-uz-bude-neskoro/",
+    "description": "Postkvantová kryptografia je nesmierne dôležitá na zabezpečenie ochrany citlivých údajov a komunikácie v prípade útokov z kvantových počítačov.",
+    "markdown": ""
+  },
+  {
+    "title": "Postkvantová kryptografia",
+    "url": "https://kis.stuba.sk/arl-stu/en/detail-stu_us_cat-stuzp87588-Postkvantova-kryptografia/",
+    "description": "Postkvantová kryptografia ; Mikulec, Ján (Author) - FEI Ústav informatiky a matematiky · Zajac, Pavol Z1 (Thesis advisor) - FEI Ústav informatiky a matematiky.",
+    "markdown": ""
+  },
+  {
+    "title": "National Security Authority Slovakia's Post",
+    "url": "https://www.linkedin.com/posts/nbusk_postkvantov%C3%A1-kryptografia-ste-pripraven%C3%AD-activity-7434896170511912961-XQ9v",
+    "description": "POSTKVANTOVÁ KRYPTOGRAFIA - STE PRIPRAVENÍ NA TO, ČO PRICHÁDZA? Prečo algoritmy RSA a ECC neobstoja v ére kvantových počítačov a prečo je ...",
+    "markdown": ""
+  },
+  {
+    "title": "Éra postkvantovej bezpečnosti sa začala. Má aj oficiálny začiatok",
+    "url": "https://www.pressreader.com/slovakia/hospodarske-noviny-9zzt/20251212/281913074439682?srsltid=AfmBOoqjcwNDAh3_pvr4aM-miNhT7at_Y0AmBOMGwqc1pXLtoJTM_8fH",
     "description": "Preto postkvantová kryptografia vyvíja a zavádza šifrovacie algoritmy odolné voči budúcim útokom kvantových počítačov, aby chránila dnešnú aj dlhodobú ...",
     "markdown": ""
   },
   {
-    "title": "Post Quantum Government Initiatives by Country and Region - GSMA",
+    "title": "Post Quantum Government Initiatives by Country and Region",
     "url": "https://www.gsma.com/newsroom/post-quantum-government-initiatives-by-country-and-region/",
-    "description": "The scope of this document is to provide a summary of countries with active PQC programs as context for the Post Quantum Telco analysis. Slovakia NIST SK-2025 ...",
+    "description": "| Country | PQC Algorithms Under Consideration | Published Guidance | Timeline (summary) |\n|-|-|-|-|\n| Slovakia | NIST | SK-2025 | PQC algorithm guidance |\n\n## Annex A References\n| **Ref** | **Doc Number** | **Title** |\n|-|-|-|\n| ACN-2024 |  | Crittografia Post-Quantum e Quantistica: Preparazione alla Minaccia Quantistica, ACN (Agenzia per la Cybersicurezza Nazionale, Italy), July 2024   [https://www.acn.gov.it/portale/documents/20119/85999/ACN\\_Crittografia\\_Quantum\\_Safe.pdf](https://www.acn.gov.it/portale/documents/20119/85999/ACN\\_Crittografia\\_Quantum\\_Safe.pdf) |\n| ASD-2025a |  | Planning for post-quantum cryptography, 22 Sep 2025   [[https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography](https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography)](https://www.cyber.gov.au/business-government/secure-design/quantum/planning-for-post-quantum-cryptography) [[https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf](https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf)](https://www.cyber.gov.au/sites/default/files/2025-09/Planning%20for%20post-quantum%20cryptography%20%28September%202025%29.pdf) |\n| CCN.ES-2022 | CCN-TEC 009 | Recommendations for a safe post-quantum transition, centro criptológico nacional, Dec 2022   [https://www.ccn.cni.es/index.php/es/docman/documentos-publicos/boletines-pytec/499-ccn-tec-009-recomendaciones-transicion-postcuantica-segura-english/file](https://www.ccn.cni.es/index.php/es/docman/documentos-publicos/boletines-pytec/499-ccn-tec-009-recomendaciones-transicion-postcuantica-segura-english/file)   Recomendaciones para una transición postcuántica Segura, centro criptológico nacional, Dec 2022   [https://www.ccn.cni.es/eu/docman/documentos-publicos/boletines-pytec/495-ccn-tec-009-recomendaciones-transicion-postcuantica-segura/file](https://www.ccn.cni.es/eu/docman/documentos-publicos/boletines-pytec/495-ccn-tec-009-recomendaciones-transicion-postcuantica-segura/file) |\n| CISA-2021 |  | Preparing for Post-Quantum Cryptography, CISA (US Cybersecurity and Infrastructure Security Agency), October 2021   [[https://www.dhs.gov/sites/default/files/publications/post-quantum\\_cryptography\\_infographic\\_october\\_2021\\_508.pdf](https://www.dhs.gov/sites/default/files/publications/post-quantum\\_cryptography\\_infographic\\_october\\_2021\\_508.pdf)](https://www.dhs.gov/sites/default/files/publications/post-quantum_cryptography_infographic_october_2021_508.pdf) |\n| CISA-2022 |  | CISA Insights: Preparing Critical Infrastructure for Post-Quantum Cryptography, CISA (US Cybersecurity and Infrastructure Security Agency), Aug 2022   [https://www.cisa.gov/sites/default/files/publications/cisa\\_insight\\_post\\_quantum\\_cryptography\\_508.pdf](https://www.cisa.gov/sites/default/files/publications/cisa\\_insight\\_post\\_quantum\\_cryptography\\_508.pdf) |\n| CISA-2024 |  | Strategy for Migrating to Automated Post-Quantum Cryptography Discovery and Inventory Tools, CISA (US Cybersecurity and Infrastructure Security Agency), Aug 2024   [https://www.cisa.gov/sites/default/files/2024-09/Strategy-for-Migrating-to-Automated-PQC-Discovery-and-Inventory-Tools.pdf](https://www.cisa.gov/sites/default/files/2024-09/Strategy-for-Migrating-to-Automated-PQC-Discovery-and-Inventory-Tools.pdf) |\n| CISA-2026b |  | Product Categories for Technologies That Use Post-Quantum Cryptography Standards, January 23, 2026   [[https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards)](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards) |\n| EC-2024 | C(2024) 2393 final | Commission Recommendation of 11.4.2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography   [[https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography](https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography)](https://digital-strategy.ec.europa.eu/en/library/recommendation-coordinated-implementation-roadmap-transition-post-quantum-cryptography) |\n| G7-2026 |  | G7 CYBER EXPERT GROUP STATEMENT ON Advancing a Coordinated Roadmap for the Transition to Post-Quantum Cryptography in the Financial Sector, January 2026   [[https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf](https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf)](https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf) |\n| JAPAN-2022 | GL-2004-2022 | CRYPTREC Cryptographic Technology Guideline – Post-Quantum Cryptography, Cryptography Research and Evaluation Committees, 2022   [https://www.cryptrec.go.jp/report/cryptrec-gl-2004-2022.pdf](https://www.cryptrec.go.jp/report/cryptrec-gl-2004-2022.pdf) |\n| NCSC-2025d |  | Assured Cyber Security Consultancy: Post-quantum cryptography (PQC) pilot   [[https://www.ncsc.gov.uk/schemes/assured-cyber-security-consultancy/pqc-pilot](https://www.ncsc.gov.uk/schemes/assured-cyber-security-consultancy/pqc-pilot)](https://www.ncsc.gov.uk/schemes/assured-cyber-security-consultancy/pqc-pilot) |",
+    "markdown": ""
+  },
+  {
+    "title": "Post-Quantum Cryptography Initiative",
+    "url": "https://www.cisa.gov/topics/risk-management/quantum",
+    "description": "# Post-Quantum Cryptography Initiative\n## CISA Approach\n- **Provide Technical Guidance and Risk Management Strategies for PQC Implementation (** [**Executive Order [EO] 14412**](https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/) **)**: CISA consults with NIST and the National Security Agency (NSA) to provide federal departments and agencies with technical guidance on PQC implementation, including best practices and risk management strategies. Additionally, CISA works with Sector Risk Management Agencies (SRMA) to assist critical infrastructure owners and operators in developing PQC migration planning.\n- [**Product Category Identification**](https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards)**(** [**EO 14306**](https://www.federalregister.gov/documents/2025/06/11/2025-10804/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694)**)**: CISA develops and regularly updates a list of product categories that include technologies that support or plan to support PQC standard algorithms.\n\n## PQC Related Resources\n### NIST Guidance\n- [**PQC Federal Information Processing Standards (FIPS)**](https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved) **.** On August 13, 2024, NIST approved three PQC standards—FIPS 203, FIPS 204, and FIPS 205—to help protect federal systems from future quantum computing threats.\n- [**Post-Quantum Cryptography Project**](https://csrc.nist.gov/projects/post-quantum-cryptography) **.** The NIST PQC Project leads the effort to evaluate and standardize cryptographic algorithms that can withstand quantum computing threats.\n- [**Cryptographic Module Validation Program**](https://csrc.nist.gov/projects/cryptographic-module-validation-program) **.** This joint effort between NIST and Canada’s Centre for Cyber Security certifies encryption modules that meet FIPS 140-2 and FIPS 140-3 standards. It supports ongoing FIPS 140-3 validations and provides a transition plan for older FIPS 140-2 modules through 2026.\n- [**Cryptographic Algorithm Validation Program**](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program) **.** This program uses automated testing to check whether vendors’ FIPS-approved cryptographic algorithms work correctly before they can be certified by National Voluntary Laboratory Accreditation Program-accredited labs and listed as validated.\n\n### GSA Guidance\n- [**PQC Buyers Guide**](https://buy.gsa.gov/api/system/files/documents/final-508c-pqc_buyer-s_guide_2025.pdf) **.** GSA designed this guide to enable agencies to safeguard existing systems from both classical and quantum computer-based risks and maintain the confidentiality and integrity of data communications.\n\n### DHS Guidance\n- [**DHS PQC Roadmap**](https://www.dhs.gov/quantum) **.** This roadmap, jointly produced by DHS and NIST, outlines the risks posed by advances in quantum computing and guides organizations in preparing for the transition to PQC through inventory, planning, and risk-based modernization of cryptographic systems.\n\n### NSA Guidance\n- [**CNSA 2.0 and Quantum Computing FAQ**](https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/1/CSI_CNSA_2.0_FAQ_.PDF). This document clarifies Commercial National Security Algorithm Suite 2.0 (CNSA 2.0) requirements for National Security Systems (NSS) and recommended guidance for the Department of War (DoW) and the Defense Industrial Base (DIB).\n- [**NSA Post-Quantum Cybersecurity Resources**](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/). This resources page outlines NSA’s guidance on quantum-resistant cryptography, naming approved algorithms under Committee on National Security Systems Policy 15 and advising caution with quantum key distribution until current technical limits are resolved.",
+    "markdown": ""
+  },
+  {
+    "title": "Securing the Nation Against Advanced Cryptographic Attacks",
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/",
+    "description": "“post-quantum cryptography” or “PQC” means those cryptographic algorithms or methods that are designed to be resistant to attack by both a ...",
+    "markdown": ""
+  },
+  {
+    "title": "Meeting U.S. Government Post-Quantum Cryptography ...",
+    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
+    "description": "This guide explains the federal PQC mandate, key requirements, and how solutions like IGEL and wolfSSL enable crypto-agility and long-term ...",
+    "markdown": ""
+  },
+  {
+    "title": "Slovakia quantum cryptography strategy",
+    "url": "https://decentcybersecurity.eu/slovakia-quantum-cryptography-strategy/",
+    "description": "Slovakia's quantum cryptography strategy sets new standards for secure communication and national resilience in the post-quantum era.",
     "markdown": ""
   },
   {
@@ -60,99 +90,99 @@
     "markdown": ""
   },
   {
-    "title": "Slovakia's Quantum Cryptography Strategy Is Shaping The Future",
-    "url": "https://decentcybersecurity.eu/slovakia-quantum-cryptography-strategy/",
-    "description": "Slovakia's quantum cryptography strategy sets new standards for secure communication and national resilience in the post-quantum era.",
+    "title": "Applus+ Laboratories' Post",
+    "url": "https://www.linkedin.com/posts/applus-laboratories_appluslaboratories-cryptography-quantum-activity-7343585331817975808-SFCL",
+    "description": "Government guidance on #Post-Quantum #Cryptography (PQC) migration is accelerating. Organizations should be planning for #PQC migration now. ...",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography | Homeland Security",
-    "url": "https://www.dhs.gov/quantum",
-    "description": "DHS's new guidance will help organizations prepare for the transition to post-quantum cryptography by identifying, prioritizing, and protecting potentially ...",
+    "title": "GUIDANCE FOR POST- QUANTUM CRYPTOGRAPHY",
+    "url": "https://www.cmorg.org.uk/sites/default/files/2025-06/CMORG%20-%20Guidance%20for%20Post-Quantum%20Cryptography%20-%20April%202025%20-%20TLP%20CLEAR%20(1).pdf",
+    "description": "# 8 CONCLUSION\\\n## GUIDANCE FOR POST-QUANTUM CRYPTOGRAPHY\\\n- \n  - *  \n  \n|  |  |  | GUIDANCE FOR POST-QUANTUM CRYPTOGRAPHY |  \n| --- | --- | --- | --- |  \n| 9 | • • • • • • • • • • • • • • • • • • TLP CLEAR | APPENDIX: SUGGESTED READING AND RESOURCES Agence Nationale De La Sécurité Des Systèmes D'information (ANSSI) ANSSI views on the post-quantum cryptography transition, December 2023. Cybersecurity and Infrastructure Security Agency (CISA) Quantum-Readiness: Migration To Post-Quantum Cryptography, August 2023. European Telecommunications Standards Institute (ETSI) June 2015 Federal Office for Information Security (BSI) Quantum technologies and post-quantum cryptography, n.d. Securing Tomorrow, Today: Transition to Post-Quantum Cryptography, November 2024. Financial Services Information Sharing and Analysis Center (FS-ISAC) Preparing for a post-quantum world by managing cryptographic risk, March 2023. Building Cryptographic Agility in the Financial Sector, October 2024. The Impact of Quantum Computing on the Payment Card Industry, February 2025. Global Risk Institute Quantum Threat Timeline Report, December 2023. National Cyber Security Centre (NCSC) Migrating to Post-Quantum Cryptography (PQC), n.d. Preparing for quantum-safe cryptography, n.d. Quantum security technologies, n.d. Timelines for migration to PQC Guidance, n.d. National Institute of Standards and Technology (NIST) NIST SP 1800-38A: Executive Summary (Preliminary Draft), 2023-04 Application Discovery Tools (Preliminary Draft), 2023-12 NIST SP 1800-38C: Quantum-Resistant Performance Report (Preliminary Draft), 2023-12 World Economic Forum Quantum Security for the Financial Sector, 2024 | Quantum Safe Cryptography and Security: An introduction, benefits, enablers and challenges, TR 103 619: Migration strategies and recommendations to Quantum Safe schemes, July 2020. NIST SP 1800-38B: Approach, Architecture, and Security Characteristics of Public Key Cryptography Technology Interoperability and PAGE 8 |",
     "markdown": ""
   },
   {
-    "title": "Migrating from Traditional Algorithms to Post-Quantum Cryptography",
-    "url": "https://www.wileyconnect.com/migrating-from-traditional-algorithms-to-post-quantum-cryptography-what-your-organization-needs-to-know",
-    "description": "Key Federal Government Reports and Guidance on PQC · PQC Transition Plans and Deadlines for Federal Systems · Key Federal Transition Steps.",
-    "markdown": ""
-  },
-  {
-    "title": "PQC Roadmaps and Transition Guidance - PQShield",
-    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
-    "description": "This resource is designed to show a central view of how governments and agencies around the world are building compliance regulations to help navigate the ...",
-    "markdown": ""
-  },
-  {
-    "title": "CISA Issues Federal Buying Guidance for Post-Quantum Cryptography",
-    "url": "https://thequantuminsider.com/2026/01/27/cisa-issues-federal-buying-guidance-for-post-quantum-cryptography/",
-    "description": "CISA issued new federal guidance identifying technology product categories where post-quantum cryptography is widely available.",
-    "markdown": ""
-  },
-  {
-    "title": "Meeting U.S. Government Post-Quantum Cryptography (PQC ...",
-    "url": "https://www.igel.com/blog/post-quantum-cryptography-federal-requirements/",
-    "description": "This guide explains the federal PQC mandate, key requirements, and how solutions like IGEL and wolfSSL enable crypto-agility and long-term ...",
-    "markdown": ""
-  },
-  {
-    "title": "Migration to Post-Quantum Cryptography - NCCoE",
+    "title": "Migration to Post-Quantum Cryptography",
     "url": "https://www.nccoe.nist.gov/applied-cryptography/migration-to-pqc",
-    "description": "The Migration to Post-Quantum Cryptography project seeks to demonstrate practices that reduce the value of y. For our project, quantum safe describes digital ...",
+    "description": "Migration to post-quantum cryptography requires action to understand the use of quantum-vulnerable public-key algorithms in hardware, software, and services and ...",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA Recommend ...",
-    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
-    "description": "“Post-quantum cryptography is about proactively developing and building capabilities to secure critical information and systems from being ...",
+    "title": "Post-Quantum Cryptography Migration in the United States",
+    "url": "https://www.rstreet.org/?post_type=research&p=100378",
+    "description": "this paper examines how the United States can approach PQC migration across critical infrastructure through a risk-based lens.",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography Initiative | CISA",
-    "url": "https://www.cisa.gov/topics/risk-management/quantum",
-    "description": "CISA's Post-Quantum Cryptography (PQC) Initiative will unify and drive efforts with interagency and industry partners to address threats posed by quantum.",
+    "title": "Jaime Gómez García's Post",
+    "url": "https://www.linkedin.com/posts/jaime-gomez-garcia_pqc-qsff-activity-7314988114861551616-Adob",
+    "description": "NCSC suggests using the PQC migration as a chance to improve overall cybersecurity posture.”. It is aligned to a Keynote speech i did at CyberQ ...",
     "markdown": ""
   },
   {
-    "title": "EU roadmap for post-quantum cryptography by 2030 - LinkedIn",
+    "title": "Post-Quantum Cryptography: CISA, NIST, and NSA ...",
+    "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/article/3498776/post-quantum-cryptography-cisa-nist-and-nsa-recommend-how-to-prepare-now/",
+    "description": "The report contains recommendations for organizations to develop a quantum-readiness roadmap and prepare for future implementation of the post- ...",
+    "markdown": ""
+  },
+  {
+    "title": "PQC Roadmaps and Transition Guidance",
+    "url": "https://pqshield.com/pqc-transition-roadmaps-and-guidance/",
+    "description": "CNSA 2.0 provides a detailed roadmap for migration, with the goal of complete transition for all NSS to quantum-resistance by 2035.",
+    "markdown": ""
+  },
+  {
+    "title": "From Strategy to Implementation: The White House ...",
+    "url": "https://www.centerforcybersecuritypolicy.org/insights-and-research/from-strategy-to-implementation-the-white-house-accelerates-the-federal-transition-to-post-quantum-cryptography",
+    "description": "The White House's new executive order accelerates the federal government's transition to quantum-resistant security through new migration ...",
+    "markdown": ""
+  },
+  {
+    "title": "National Cybersecurity Center of Excellence (NCCoE ...",
+    "url": "https://www.federalregister.gov/documents/2021/10/13/2021-22223/national-cybersecurity-center-of-excellence-nccoe-migration-to-post-quantum-cryptography",
+    "description": "Migration to Post-Quantum Cryptography. Migration to Post-Quantum Cryptography project. This notice is the initial step for the National ...",
+    "markdown": ""
+  },
+  {
+    "title": "EU Commission Roadmap Targets 2030 for Post-Quantum ...",
     "url": "https://www.linkedin.com/posts/marinivezic_eu-commission-roadmap-targets-2030-for-post-quantum-activity-7343324661071474689-qNH9",
-    "description": "Slovakia steps into the quantum era On October 8, 2025, the National Security ... Great post from National Cyber Security Centre, Ireland (NCSC-IE) ...",
+    "description": "The European Commission has just unveiled a coordinated roadmap for the EU's transition to post-quantum cryptography (PQC) – with a clear ...",
     "markdown": ""
   },
   {
-    "title": "Q-Day Clock: Enterprise Post-Quantum Migration Imperative",
-    "url": "https://labs.cloudsecurityalliance.org/research/strategic-post-quantum-cryptography-migration-enterprise-roa/",
-    "description": "The National Security Agency's CNSA 2.0 framework provides a concrete implementation timeline extending through 2031 for national security ...",
+    "title": "A Coordinated Implementation Roadmap for the Transition to Post ...",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+    "description": "[Accept all cookies](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography#accept) [Accept only essential cookies](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography#refuse)\n\n# A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography\nIt includes a set of recommendations that Member States need to implement for a synchronised transition to PQC, as well as measures to ensure that all stakeholders are well informed on the quantum threat to cryptography.",
     "markdown": ""
   },
   {
-    "title": "Post-Quantum Cryptography Preparation National Cybersecurity ...",
-    "url": "https://www.safelogic.com/blog/national-cybersecurity-strategy-calls-for-migration-to-post-quantum-cryptography",
-    "description": "The White House National Cybersecurity Strategy calls for the public and private sectors to begin planning for the migration to post-quantum cryptography.",
-    "markdown": ""
-  },
-  {
-    "title": "Quantum Roadmap and Strategy - evolutionQ",
+    "title": "Quantum Roadmap and Strategy",
     "url": "https://www.evolutionq.com/services/quantum-roadmap-strategy",
-    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029. Without preparation and a clear roadmap to ...",
-    "markdown": ""
-  },
-  {
-    "title": "[PDF] G7-CEG-Quantum-Roadmap.pdf",
-    "url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
-    "description": "Recognizing the cryptographic risks that quantum computers may introduce to financial systems, the CEG has developed this roadmap to encourage a coordinated ...",
-    "markdown": ""
-  },
-  {
-    "title": "How to Prepare A Post-Quantum Cryptography Plan - Fortinet",
-    "url": "https://www.fortinet.com/resources/articles/post-quantum-cryptography-preparation",
-    "description": "Post-quantum cryptography safeguards long-lived data against emerging quantum-enabled risks that threaten today's encryption.",
+    "description": "Quantum computing is advancing rapidly and could render current cryptographic systems unsafe by as early as 2029.",
     "markdown": ""
   },
   {
     "title": "EU post-quantum cryptography roadmap: is a timeline alone ...",
     "url": "https://www.telefonica.com/en/communication-room/blog/eu-post-quantum-cryptography-roadmap-timeline-sufficient/",
-    "description": "The EU has set quantum-safe cryptography transition deadlines: deployment starts in 2026, concluding by 2030 for critical use cases, ...",
+    "description": "# EU post-quantum cryptography roadmap: is a timeline alone sufficient?\nThe EU has set quantum-safe cryptography transition deadlines: deployment starts in 2026, concluding by 2030 for critical use cases, and by 2035 for all remaining systems.\n\n## Companies preparing ahead for the quantum-challenge\n- **By the end of 2030:** High-risk use cases (e.g. financial, health) or critical infrastructures (e.g. energy, telecommunications) must be transitioned to quantum-safe (PQC) algorithms.\n\n## A trusted technological partner in quantum and quantum-safe technologies\nThe company is already making strides towards quantum-safe networks by integrating an additional layer of protection through quantum-resistant technologies.\n\nIn this context, [Telefónica’s Quantum-Safe Networks offer communication and cybersecurity solutions](https://www.telefonicaempresas.es/grandes-empresas/tecnologias/redes-quantum-safe/) designed to protect companies’ critical communications and data against the threats posed by quantum computing.",
+    "markdown": ""
+  },
+  {
+    "title": "Your practical roadmap to quantum-safe security",
+    "url": "https://conscia.com/blog/roadmap-to-quantum-safe-security/",
+    "description": "Build a practical post-quantum cryptography roadmap. Understand emerging standards and regulatory momentum.",
+    "markdown": ""
+  },
+  {
+    "title": "NCSC's Roadmap for Quantum-Safe Cryptography",
+    "url": "https://locktera.com/2024/10/16/roadmap-for-quantum-safe-cryptography/",
+    "description": "The UK National Cyber Security Centre (NCSC) has issued a number of recommendations for preparing for quantum-safe cryptographic systems.",
+    "markdown": ""
+  },
+  {
+    "title": "EU Roadmap for Post-Quantum Cryptography | PDF",
+    "url": "https://www.scribd.com/document/969400285/Roadmap-on-Postquantum-Cryptography",
+    "description": "Roadmap on Postquantum Cryptography - Free download as PDF File. Support cryptographic agility and a quantum-safe upgrade path. Quantum-safe cryptography – ...",
     "markdown": ""
   }
 ]

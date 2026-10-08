@@ -1,0 +1,100 @@
+---
+// The page a gated address gets while nothing renders it yet (spec 21.2): the shared frame with
+// the preview line and noindex, then one italic muted sentence. The H1 is the
+// page's question (spec 2, from the manifest or the registry's promise), else its name. Only a
+// preview or local build ever generates it, because a page stays private until it exists.
+//
+// It is never a dead end: the section's view switch ("List · Map · Target dates") and the built
+// pages one level below it (the seven guides, the standards) are listed, so every page of the
+// manifest stays reachable by links. A child already offered by the side menu or the view switch
+// is not listed twice. With no breadcrumb, a page that has neither the side menu nor a view switch
+// gets one quiet link back to its nearest built parent.
+// The épuré pass (4 October 2026): the pages below are an index, so each name is ink on a thin
+// teal underline (global.css .row-link), at the list width.
+import PageFrame from './frame/PageFrame.astro';
+import { pageCrumbs, sectionMenu, viewSwitch } from './frame/contracts';
+import { childPages } from '../../lib/site/routes';
+import type { SitePage } from '../../lib/site/routes';
+import type { LabTool } from '../../lib/lab/types';
+
+interface Props {
+  page: SitePage;
+  tool?: LabTool | null;
+}
+const { page, tool = null } = Astro.props;
+
+const promise = tool?.promise?.trim() ?? '';
+const question = page.question ?? (promise.endsWith('?') ? promise : page.title);
+const section = page.section === 'research' || page.section === 'elsewhere' ? null : page.section;
+const breadcrumb = pageCrumbs(page);
+
+// the view switch of spec 3.5: on the Countries views and on the Standards list
+const views = page.section === 'countries' ? 'countries' : page.path === '/standards' ? 'standards' : null;
+
+const offered = new Set([
+  ...(section === 'prepare' ? sectionMenu('prepare', page.path).map((m) => m.href) : []),
+  ...(views ? viewSwitch(views, page.path).map((v) => v.href) : []),
+]);
+const below = childPages(page.path)
+  .filter((c) => !offered.has(c.path))
+  .map((c) => ({ label: c.title, href: c.path }));
+
+// a quiet way back, only where neither the side menu nor a view switch gives one
+const parent = [...breadcrumb.slice(0, -1)].reverse().find((c) => c.href) ?? null;
+const back = section !== 'prepare' && !views && parent ? parent : null;
+---
+
+<PageFrame
+  question={question}
+  title={page.title}
+  breadcrumb={breadcrumb}
+  back={back}
+  section={section}
+  gate={page.gate}
+  views={views}
+  description="This page is being built."
+  about={false}
+>
+  <p class="fr-empty">This page is being built.</p>
+  {
+    below.length > 0 && (
+      <nav class="pp-below" aria-label={page.title}>
+        <ul>
+          {below.map((c) => (
+            <li>
+              <a class="row-link" href={c.href}>
+                {c.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
+</PageFrame>
+
+<style>
+  /* the pages below this one: a plain list between hairlines, one 44px row per link */
+  .pp-below {
+    max-width: var(--w-list);
+    margin-top: var(--gap-group-lg);
+  }
+  .pp-below ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: var(--rule);
+  }
+  .pp-below li {
+    border-bottom: var(--rule);
+  }
+  .pp-below a {
+    display: flex;
+    align-items: center;
+    min-height: var(--target-min);
+    padding: var(--gap-inline) 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-control);
+    line-height: var(--leading-snug);
+  }
+</style>

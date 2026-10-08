@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`the orbit layout > is deterministic: the same data gives the same coordinates 1`] = `
+[
+  [
+    "USA",
+    689.59,
+    283.35,
+  ],
+  [
+    "GBR",
+    767.48,
+    644.69,
+  ],
+  [
+    "FRA",
+    388.37,
+    695.7,
+  ],
+  [
+    "CHN",
+    208.48,
+    256.25,
+  ],
+]
+`;

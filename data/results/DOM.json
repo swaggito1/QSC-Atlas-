@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Instituto Criptográfico Nacional | República Dominicana",
+    "country": "DOM",
+    "issuingOrg": "ICN",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://icn.gob.do/",
+    "summary": "This is the official portal of the Dominican Republic's Instituto Criptográfico Nacional. It sets out the institute's mandate for national cryptographic policy, cryptographic standards and the national PKI. Strategic objective OE4 (Amenazas Emergentes) is the transition to post-quantum cryptography, and the portal also lists post-quantum cryptography as a research and innovation function and as a training module.",
+    "included": true
+  }
+]

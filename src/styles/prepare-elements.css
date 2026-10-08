@@ -1,0 +1,647 @@
+/* QSC Atlas: the Prepare pages beside the hub and the Check, on the épuré system of
+   labs/review/epure-audit.md: the guides (/prepare/guides) and each guide's page, the inventory
+   template (/prepare/inventory), the migration approach (/prepare/approach) and the supplier
+   letter (/prepare/suppliers), spec 5.2.
+   They sit inside the shared frame (frame.css), which draws the H1, the lede and the one meta
+   line, and use its kit (lab.css, global.css): one .lab-btn--primary for a page's main action,
+   the plain choice control, the select and text field, the disclosure marker, the quiet .fr-act
+   line, .row-link for a list whose every row is a link, and .quote for a source's words.
+   Ink on warm paper. Teal marks only what a visitor can act on: the one filled button, and links
+   as text-weight words; in a list of links the words are ink on a thin teal underline. Section
+   heads are Newsreader in ink; rows sit on hairlines; whitespace separates sections, the related
+   gap between the facets of one page. Widths follow the content: reading text at the measure,
+   rows at the list width (--w-list). The reading face carries what a visitor reads and sends,
+   the interface face the labels and meta lines, the mono face only numbers and codes. Every
+   control is at least 44px tall or has a 44px hit area. Nothing moves unless the visitor acts,
+   and nothing at all under reduced motion. */
+
+.pe {
+  min-width: 0;
+}
+/* a control that needs JavaScript stays hidden until the page can run it; the kit's display rules
+   (.btn, .fr-actions) would otherwise override the hidden attribute */
+.pe [hidden] {
+  display: none !important;
+}
+
+/* ---- heads and text ------------------------------------------------------------------- */
+
+.pe-sec {
+  margin-top: var(--section-gap);
+}
+.pe-sec:first-child {
+  margin-top: 0;
+}
+
+/* a section head: Newsreader at the section step, in ink (the kit's .section-h) */
+.pe-h2 {
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-section);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  margin: 0 0 var(--gap-group);
+  max-width: var(--measure);
+  color: var(--ink);
+  text-wrap: balance;
+}
+/* a head inside a section: Newsreader at the lede step, in ink */
+.pe-h3s {
+  font-family: var(--font-reading);
+  font-weight: var(--weight-heading);
+  font-size: var(--type-lede);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  margin: 0;
+  color: var(--ink);
+}
+/* a name in a list (a route, a print head): the interface face, weight 600 */
+.pe-h3 {
+  font-family: var(--font-instrument);
+  font-weight: var(--weight-ui-strong);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.pe-para {
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  margin: 0;
+  max-width: var(--measure);
+  text-wrap: pretty;
+}
+.pe-small {
+  margin: var(--gap-inline) 0 0;
+  max-width: var(--measure);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+  text-wrap: pretty;
+}
+
+/* a quiet line of who issued it, where in it, and when it was read: the interface face at the
+   small step, ink-muted, items joined by middle dots */
+.pe-meta {
+  margin: var(--gap-mark) 0 0;
+  max-width: var(--measure);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.pe-meta > span:not(:last-child)::after {
+  content: '\00B7';
+  content: '\00B7' / '';
+  margin: 0 0.5em;
+  color: var(--ink-faint);
+}
+/* a source in brackets after a line ("(Canadian roadmap, Section 3.2)"): small and muted */
+.pe-tag,
+.inv-tag,
+.su-tag {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+
+/* links in the reading text: teal and underlined, a shade deeper on hover. A list whose every
+   row is a link marks its links .row-link (global.css): ink words on a thin teal underline */
+.pe a:not(.lab-btn):not(.row-link) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.pe a:not(.lab-btn):not(.row-link):hover,
+.pe a:not(.lab-btn):not(.row-link):active {
+  color: var(--accent-strong);
+}
+.pe a:focus-visible,
+.pe button:focus-visible,
+.pe summary:focus-visible,
+.pe textarea:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.pe-meta a {
+  white-space: nowrap; /* "Open the document" wraps as a whole; the locators may still wrap */
+}
+/* a link standing alone in a meta or source line ("NCSC timelines", "Open the document") is one
+   line of small text, so an empty box grows its hit area to 44px and moves nothing */
+.pe-meta a,
+.pe-tag a,
+.inv-tag a,
+.su-tag a {
+  position: relative;
+}
+.pe-meta a::after,
+.pe-tag a::after,
+.inv-tag a::after,
+.su-tag a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.pe-meta + .pe-para {
+  margin-top: var(--gap-group);
+}
+
+/* ---- the first action ------------------------------------------------------------------- */
+
+.pe-go {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-inline) var(--gap-group-lg);
+  margin: 0;
+}
+.pe-go-note {
+  margin-top: var(--space-3);
+}
+.pe a.lab-btn {
+  text-decoration: none;
+}
+
+/* a quiet text action, 44px tall: Print beside the download, a teal link in the interface face */
+.pe-act {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+/* a one-word action still has a 44px-wide hit area */
+.pe-act::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.pe-act:hover,
+.pe-act:active {
+  color: var(--accent-strong);
+}
+.pe-act[hidden] {
+  display: none;
+}
+
+/* ---- a source's own words (for review only, inside SourceWords) ----------------------------
+   The kit's quotation (.quote, .quote-source in global.css): indented, in Newsreader, inside
+   curly quotation marks, with the document and the place under it. No left rule. */
+
+.pe-words {
+  margin: var(--gap-group) 0 0;
+  max-width: var(--measure);
+}
+.pe-words .quote {
+  margin: 0;
+}
+/* ANSSI's words keep French quotation marks */
+.pe-words .quote[lang='fr'] > p {
+  quotes: '\00AB\00A0' '\00A0\00BB';
+}
+/* the source under the words, on the quotation's indent */
+.pe-src {
+  display: grid;
+  justify-items: start;
+  gap: 2px;
+  padding-left: var(--space-6);
+}
+/* the source link's hit area reaches 44px over the quotation above and the line below, neither
+   of which is a link, so nothing on the line moves */
+.pe-src a {
+  position: relative;
+}
+.pe-src a::before {
+  content: '';
+  position: absolute;
+  inset: -12px 0;
+}
+.pe-src-meta {
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+
+/* "In the Readiness Check": the actions a page draws on; the label in the interface face, then
+   one action a line */
+/* "In the Readiness Check" is a list whose every row is a link: each action's words are a
+   .row-link, ink on a thin teal underline */
+.pe-from {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0 var(--space-4);
+  margin: var(--gap-group) 0 0;
+  max-width: var(--w-list);
+  font-size: var(--type-small);
+  line-height: var(--leading-snug);
+}
+.pe-from-l {
+  margin: 0;
+  padding-top: 0.7rem;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink-muted);
+}
+/* one action a line with its guide's name beside it: an index row, not reading text, so it takes
+   the list width rather than the reading measure, which would break a short action before its guide */
+.pe-from-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* the action's link covers its whole row, at least 44px tall, so the row is the target (as the
+   Prepare hub's rows are) */
+.pe-from-a {
+  position: relative;
+  min-height: var(--target-min);
+  padding: 0.7rem 0 0.4rem;
+}
+.pe-from-a > a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.pe-from-g {
+  margin-left: var(--space-2);
+  white-space: nowrap;
+  color: var(--ink-muted);
+}
+@media (max-width: 639px) {
+  .pe-from {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- the approach worksheet ------------------------------------------------------------------- */
+
+.pe-ws {
+  max-width: var(--w-list);
+}
+/* what to do, before the first control */
+.pe-ws .pe-ws-intro {
+  margin-top: 0;
+}
+/* the heads and every row share one grid; the third track holds Remove, which keeps its place
+   (out of sight) on a lone empty row, so the heads stay over their controls */
+.pe-ws-head,
+.pe-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) 5.5rem;
+  gap: var(--space-2) var(--space-3);
+  align-items: end;
+}
+.pe-ws-head {
+  margin-top: var(--gap-group-lg);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink-muted);
+}
+.pe-rows {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+}
+.pe-row + .pe-row {
+  margin-top: var(--space-2);
+}
+.pe-row .lab-input,
+.pe-row .lab-select {
+  width: 100%;
+}
+.pe-remove {
+  width: 5.5rem;
+}
+.pe-remove.is-idle {
+  visibility: hidden;
+}
+.pe-ws-add {
+  margin: var(--gap-group) 0 0;
+}
+.pe-ws .fr-actions {
+  margin-top: var(--gap-group);
+}
+.pe-ws .fr-actions .fr-act {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+/* the status line under the actions, with Undo beside it after Clear all or Remove */
+.pe-status {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-3);
+}
+.pe-ws .pe-status .fr-status {
+  flex-basis: auto;
+}
+.pe-ws .pe-status .fr-act {
+  color: var(--accent);
+}
+.pe-ws .pe-status .fr-act:hover {
+  color: var(--accent-strong);
+}
+.pe-ws .pe-privacy {
+  margin-top: var(--space-3);
+}
+/* on phones a row is the name with Remove beside it, then the route at full width, so the longer
+   route names are never cut short */
+@media (max-width: 639px) {
+  .pe-ws-head {
+    display: none;
+  }
+  .pe-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'name remove'
+      'route route';
+    padding: var(--space-3) 0;
+    border-top: var(--rule);
+  }
+  .pe-row .pe-cell-name {
+    grid-area: name;
+  }
+  .pe-row .pe-cell-route {
+    grid-area: route;
+  }
+  .pe-row .pe-remove {
+    grid-area: remove;
+    width: auto;
+  }
+  .pe-row .pe-remove.is-idle {
+    display: none;
+  }
+  .pe-row:has(.pe-remove.is-idle) .pe-cell-name {
+    grid-column: 1 / -1;
+  }
+  .pe-row + .pe-row {
+    margin-top: 0;
+  }
+  .pe-row:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+  /* the column heads are hidden here, so each field shows its own label ("System 1", "Route 1",
+     the words a screen reader already hears) instead of leaving the placeholder as its only name */
+  .pe-row .pe-cell-name > label.fr-sr,
+  .pe-row .pe-cell-route > label.fr-sr {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    margin: 0 0 var(--gap-mark);
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
+  }
+}
+
+/* ---- the supplier letter ------------------------------------------------------------------- */
+
+/* the chooser: a group of controls under one hairline (.lab-group), held to the measure the
+   letter's questions use, so its rule ends where theirs do */
+.pe-choose {
+  max-width: var(--measure);
+}
+.pe-choose .section-label {
+  margin: 0 0 var(--space-2);
+}
+/* the live count on its own line under the chooser, then the note on the starting choice */
+.pe-count {
+  margin: var(--space-2) 0 0;
+  font-size: var(--type-small);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.pe-choose .pe-hint {
+  margin-top: var(--space-1);
+}
+/* the covering paragraph: the box grows with its text, so nothing of it is hidden at 390 */
+.pe-letter-para {
+  display: block;
+  width: 100%;
+  max-width: var(--measure);
+  min-height: 9rem;
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  resize: vertical;
+  field-sizing: content;
+}
+
+.pe-qs-all {
+  counter-reset: pe-q;
+}
+.pe-qgroup {
+  margin-top: var(--gap-related);
+  max-width: var(--measure);
+}
+.pe-qgroup:first-of-type {
+  margin-top: var(--gap-group-lg);
+}
+/* a group of questions: its head in Newsreader at the lede step, then the questions on hairlines */
+.pe-gh {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.pe-qs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: var(--rule);
+}
+.pe-qi {
+  counter-increment: pe-q;
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  padding: var(--gap-group) 0 var(--space-3);
+  border-bottom: var(--rule);
+}
+.pe-qi::before {
+  content: counter(pe-q) '.';
+  padding-top: 0.25em;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.pe-qi[hidden],
+.pe-qgroup[hidden] {
+  display: none;
+}
+.pe-qt {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  text-wrap: pretty;
+}
+.pe-tag {
+  white-space: nowrap;
+}
+.pe-letter-actions {
+  margin-top: var(--gap-related);
+}
+.pe-letter-actions .fr-act {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* shown only when the page is printed */
+.pe-print-only {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .pe-qi {
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+  }
+  .pe-tag {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pe a:not(.lab-btn),
+  .pe-act {
+    transition: none;
+  }
+}
+
+/* ---- print: each element prints as the thing it is ------------------------------------------- */
+
+@media print {
+  .pe-go,
+  .pe-go-note,
+  .pe-ws-add,
+  .pe-remove,
+  .pe-ws-head,
+  .pe-rows,
+  .pe-privacy,
+  .pe-ws-intro,
+  .pe-choose,
+  .pe-letter-para,
+  .pe-letter-note,
+  .pe-letter-actions,
+  .pe-ws .fr-actions {
+    display: none !important;
+  }
+  .pe-print-only {
+    display: block;
+  }
+  .pe-sec,
+  .pe-qgroup {
+    break-inside: avoid-page;
+  }
+  .pe-qi {
+    break-inside: avoid;
+  }
+  .pe-words .quote,
+  .pe-qt,
+  .pe-para {
+    font-size: 10.5pt;
+  }
+  .pe-print-table {
+    width: 100%;
+    margin-top: var(--space-4);
+    border-collapse: collapse;
+    font-size: 10pt;
+  }
+  .pe-print-table th,
+  .pe-print-table td {
+    text-align: left;
+    padding: 4pt 8pt 4pt 0;
+    border-top: 0.5pt solid var(--ink-faint);
+  }
+  .pe-print-table thead th {
+    border-top: none;
+    border-bottom: 1pt solid var(--ink);
+    font-family: var(--font-instrument);
+    font-size: 9pt;
+    font-weight: var(--weight-ui-strong);
+  }
+  /* on paper the letter's heads and rules print in ink */
+  .pe-gh {
+    color: var(--ink);
+  }
+  .pe-qs,
+  .pe-qi {
+    border-color: var(--ink-faint);
+  }
+  /* the letter prints as the letter Copy as text gives: the covering paragraph, the questions
+     under their heads with their bracketed sources, then the sources. The Atlas's own frame
+     (header, question, About this view with its byline and citation, footer) stays off the
+     paper, so nothing on it reads as a sender or a sign-off. */
+  body:has(.pe-letter) .site-header,
+  body:has(.pe-letter) .site-footer,
+  .fr-main:has(.pe-letter) .fr-head,
+  .fr-main:has(.pe-letter) .fr-about,
+  .pe-letter .pe-letter-sec > .pe-h2 {
+    display: none !important;
+  }
+  .pe-letter .pe-sec {
+    margin-top: 12pt;
+  }
+  .pe-letter .pe-choose + .pe-sec {
+    margin-top: 0;
+  }
+  .pe-letter-sources {
+    margin-top: 18pt;
+    max-width: var(--measure);
+  }
+  .pe-letter-sources ul {
+    list-style: none;
+    margin: 6pt 0 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  .pe-letter-sources li + li {
+    margin-top: 3pt;
+  }
+  .pe-letter-sources li[hidden] {
+    display: none;
+  }
+  .pe-letter-print {
+    font-family: var(--font-reading);
+    font-size: 11pt;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    margin: 0 0 12pt;
+  }
+}

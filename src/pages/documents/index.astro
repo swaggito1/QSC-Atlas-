@@ -1,29 +1,577 @@
 ---
-import Base from '../../layouts/Base.astro';
-import DocumentsTool from '../../components/DocumentsTool';
+// Documents (spec 9): where is the primary document I can cite?
+//
+// Every included institutional document, findable by country, issuer, type, tier and year, and
+// by words in its title or summary. The first 50 rows are drawn here as plain HTML, so the page
+// stays light on a phone and readable without scripts; the page's script (DocumentsTool.tsx)
+// loads /data/documents.json for "Show 50 more" and for any filter, reads the filters from the
+// URL and writes them back. Each row carries the anchor #doc-{docId} (spec 16.4), its country
+// links to the profile, and the quiet notes come from documentNotes() for the tools this build
+// shows, each standard or guide they name linked to its page. The tier key stands above the
+// list, so the Tier field and choice are explained before the first row. Rows are sorted by
+// country, then newest first; never by any count.
+//
+// The minimal pass (2 October 2026): one meta line under the lede (As of, then the two
+// downloads), the search over the five choices as plain native selects in one row that wraps on
+// phones, and the results as a clean list: each row's title and summary, then its country,
+// issuer, year, type and tier on one line. The rows stay a table in the markup (rowHtml in
+// src/lib/site/documents.ts draws them for the build and the script alike); only the styles set
+// them as a list, with each field named for screen readers.
+//
+// The épuré pass (4 October 2026): the head in the frame's hand, every text at the reading
+// measure, the list at the list width. The search is the kit's boxed field (lab.css .lab-input),
+// the same hand as the five native selects beside it, so the form has one hand. Each row's title
+// and country are index links, ink on a thin teal underline (global.css .row-link); a standard or
+// a guide named inside a note's sentence stays a teal link. The row a link points at keeps the
+// teal wash of the current state and no left rule.
 import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { YEAR_NONE, documentRows, documentsPage, issuerTable, placeNames } from '../../lib/site/documents';
+import { allDocumentNotes, standardHref } from '../../lib/site/evidence';
+import { cascadeFiles, guides, loadIssuerAliases, standardShortName } from '../../lib/site/joins';
+import { pageHref } from '../../lib/site/gates';
+import { formatDay, todayIso } from '../../lib/site/meta';
+import countries from '../../../data/countries.json';
+import '../../styles/lab.css';
+import '../../styles/frame.css';
 
-// The documents research tool is a client island so it can search and filter
-// instantly. We pass it every document as a prebuilt list to index with Fuse.js.
-const documents = (await getCollection('documents')).map((d) => d.data);
-const countryNames = Object.fromEntries(
-  (await getCollection('countries')).map((c) => [c.data.iso3, c.data.country]),
+const [docs, profiles] = await Promise.all([getCollection('documents'), getCollection('countries')]);
+const names = placeNames(
+  profiles.map((p) => p.data),
+  countries as { iso3: string; name: string }[],
 );
+const rows = documentRows(
+  docs.map((d) => d.data),
+  names,
+);
+// as of the day the index was built, the same day the downloads carry (see documents.json.ts)
+const asOf = formatDay(todayIso());
+
+// the names a quiet note can hold, each linked to its page when this build has it: a standard's
+// short name ("FIPS 203") and a verified guide's short label ("NCSC timelines")
+const noteLinks: [string, string | null][] = [
+  ...cascadeFiles().standards.map((s): [string, string | null] => {
+    const name = standardShortName(s.label);
+    return [name, standardHref(name)];
+  }),
+  ...guides()
+    .filter((g) => g.verified)
+    .map((g): [string, string | null] => [g.shortLabel, pageHref(`/prepare/guides/${g.id}`)]),
+];
+
+const jsonHref = pageHref('/data/documents.json');
+const page = documentsPage({
+  rows,
+  profileHref: (iso3) => pageHref(`/countries/${iso3.toLowerCase()}`),
+  notes: allDocumentNotes(), // notes for the tools this build shows, by docId
+  noteLinks,
+  aliases: issuerTable(loadIssuerAliases().aliases),
+  dataHref: jsonHref,
+});
+const { census, options } = page;
+
+const csvHref = pageHref('/data/documents.csv');
+const sourcesHref = pageHref('/methodology#sources');
+// A tier is set by what the issuer does, not by its prestige: short labels taken from the
+// methodology's own definitions (/methodology#sources, after the scraper brief). TIER_WORDS in
+// src/lib/site/documents.ts still holds the older words for the downloads; until its owner
+// changes it (labs/review/requests/documents.md), the page reads these.
+const TIER_SHORT: Readonly<Record<string, string>> = {
+  T1: 'sets or oversees policy',
+  T2: 'puts policy into practice',
+  T3: 'independent evaluation and certification',
+  T4: 'research capacity',
+};
+const tierOption = (t: string) => (TIER_SHORT[t] ? `${t}, ${TIER_SHORT[t]}` : t);
+const tierKey = Object.entries(TIER_SHORT)
+  .map(([t, w]) => `${t} ${w}`)
+  .join(', ');
+// the two downloads, after As of on the one meta line
+const actions = [
+  csvHref && { href: csvHref, label: 'Download CSV', download: 'qsc-atlas-documents.csv' },
+  jsonHref && { href: jsonHref, label: 'Download JSON', download: 'qsc-atlas-documents.json' },
+].filter((a): a is { href: string; label: string; download?: string } => !!a);
+
 ---
 
-<Base title="Documents">
-  <div class="container">
-    <h1>Documents</h1>
-    <p class="prose intro">
-      Every institutional source the Atlas is built from. Search the full text, or filter by
-      country, type, year and tier.
+<Base
+  title="Documents"
+  description="The institutional documents the QSC Atlas is built from, with issuer, country, year, type and source tier. Search titles and summaries, filter by country, issuer, type, tier and year, or download the index as CSV or JSON."
+>
+  <div class="container dx" id="dx">
+    <script is:inline>
+      // A link with filters (?country=DEU) shows the filtered rows, not the first 50 for a moment:
+      // the rows wait, hidden, until the page's script has drawn the view. If that script never
+      // starts, they come back after five seconds.
+      (function () {
+        var el = document.getElementById('dx');
+        if (!el) return;
+        var p = new URLSearchParams(location.search);
+        var keys = ['country', 'org', 'type', 'tier', 'year', 'q'];
+        for (var i = 0; i < keys.length; i++) {
+          if ((p.get(keys[i]) || '').trim()) {
+            el.setAttribute('data-pending', '');
+            break;
+          }
+        }
+        setTimeout(function () {
+          if (!el.hasAttribute('data-live')) el.removeAttribute('data-pending');
+        }, 5000);
+      })();
+    </script>
+
+    <h1 class="dx-h1">Documents</h1>
+    <p class="dx-lede">
+      The institutional documents the Atlas is built from: <span class="dx-n">{census.records}</span> records from
+      <span class="dx-n">{census.places}</span> countries and organisations, each with its source tier. Search titles and
+      summaries, or filter by country, issuer, type, tier and year.
     </p>
-    <DocumentsTool client:load documents={documents} countryNames={countryNames} />
+    {
+      (asOf || actions.length > 0) && (
+        <ul class="meta-line dx-meta">
+          {/* the items on one line of source, so no stray space stands before a dot */}
+          {asOf && <li><span class="dx-nw">As of {asOf}</span></li>}{actions.map((a) => <li><a class="dx-nw" href={a.href} download={a.download}>{a.label}</a></li>)}
+        </ul>
+      )
+    }
+
+    <form class="dx-controls js-only" role="search" aria-label="Search and filter the documents">
+      <div class="dx-search">
+        <label for="dx-q">Search titles and summaries</label>
+        <input type="search" id="dx-q" name="q" class="lab-input" placeholder="A word or a phrase" autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="dx-filters" id="dx-filters">
+        <div class="dx-f dx-f--country">
+          <label for="dx-country">Country</label>
+          <select id="dx-country" name="country" class="lab-select">
+            <option value="">All countries</option>
+            {options.places.map(([code, name]) => <option value={code}>{name}</option>)}
+          </select>
+        </div>
+        <div class="dx-f dx-f--org">
+          <label for="dx-org">Issuer</label>
+          <select id="dx-org" name="org" class="lab-select">
+            <option value="">All issuers</option>
+          </select>
+        </div>
+        <div class="dx-f">
+          <label for="dx-type">Type</label>
+          <select id="dx-type" name="type" class="lab-select">
+            <option value="">All types</option>
+            {options.types.map((t) => <option value={t}>{t}</option>)}
+          </select>
+        </div>
+        <div class="dx-f">
+          <label for="dx-tier">Tier</label>
+          <select id="dx-tier" name="tier" class="lab-select">
+            <option value="">All tiers</option>
+            {options.tiers.map((t) => <option value={t}>{tierOption(t)}</option>)}
+          </select>
+        </div>
+        <div class="dx-f">
+          <label for="dx-year">Year</label>
+          <select id="dx-year" name="year" class="lab-select">
+            <option value="">All years</option>
+            {options.years.map((y) => <option value={String(y)}>{y}</option>)}
+            {options.yearUnknown && <option value={YEAR_NONE}>Not recorded</option>}
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <p class="dx-key">
+      Tier is set by what the issuer does, not by its prestige: {tierKey}. <span class="dx-n">{census.lowerTier}</span> of the
+      <span class="dx-n">{census.records}</span> records are at tier 3 or 4.{' '}
+      {
+        sourcesHref && (
+          <>
+            <a href={sourcesHref}>How the Atlas chooses its sources</a>.
+          </>
+        )
+      }
+    </p>
+
+    <div class="dx-status-row">
+      <p class="dx-status" id="dx-status">
+        <span class="dx-ssr">{page.status}</span><span class="dx-wait">loading the documents</span>
+      </p>
+      <button type="button" class="share-btn dx-clear" id="dx-clear" hidden>Clear filters</button>
+      <button type="button" class="share-btn" id="dx-retry" hidden>Try again</button>
+    </div>
+    <p class="sr-only" id="dx-live" aria-live="polite"></p>
+
+    <div class="dx-results">
+      <table class="dx-table" id="dx-table">
+        <caption class="sr-only">Documents in the Atlas, by country, then newest first</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="dx-c-doc">Document</th>
+            <th scope="col" class="dx-c-place">Country</th>
+            <th scope="col" class="dx-c-org">Issuer</th>
+            <th scope="col" class="dx-c-year">Year</th>
+            <th scope="col" class="dx-c-type">Type</th>
+            <th scope="col" class="dx-c-tier">Tier</th>
+          </tr>
+        </thead>
+        <tbody set:html={page.firstHtml} />
+      </table>
+      {
+        page.more && (
+          <div class="dx-more">
+            <button type="button" class="btn js-only" id="dx-more">
+              {page.more}
+            </button>
+            {csvHref && jsonHref && (
+              <p class="nojs-only dx-nojs">
+                The first {page.shown} of {census.records} documents. Every document is in the downloads:{' '}
+                <a href={csvHref}>CSV</a> and <a href={jsonHref}>JSON</a>.
+              </p>
+            )}
+          </div>
+        )
+      }
+    </div>
+
+    <script is:inline type="application/json" data-dx-config set:html={page.configJson} />
   </div>
 </Base>
 
-<style>
-  .intro {
-    margin-bottom: var(--space-8);
+<script>
+  import { mountDocuments } from '../../components/DocumentsTool';
+  const root = document.getElementById('dx');
+  if (root) mountDocuments(root);
+</script>
+
+<style is:global>
+  /* The rows are drawn twice over, by the build and by the page's script, so these rules are
+     global and every selector starts at .dx. Ink on paper with teal for the interface (palette
+     A): teal links, the teal wash and a 2px teal edge on the row a link points at; whitespace
+     between the head, the controls and the list, and hairlines between the rows. */
+  .dx {
+    padding: var(--page-top) var(--shell-gutter) 0;
+  }
+  .dx-h1 {
+    max-width: var(--measure-heading);
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0;
+  }
+  .dx-lede {
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
+    margin: var(--gap-inline) 0 var(--space-3);
+    text-wrap: pretty;
+  }
+  .dx-n {
+    font-feature-settings: 'lnum' 1, 'tnum' 1;
+  }
+  /* As of · Download CSV · Download JSON: the one meta line (global.css .meta-line), whose links
+     carry the kit's 44px hit area; a line breaks only after a dot, never inside an item */
+  .dx-meta .dx-nw {
+    white-space: nowrap;
+  }
+
+  /* ---- the controls: the search, then the five choices in one row; no box, no rule ---- */
+  /* the form stands at the list's width, so its right edge meets the rows' */
+  .dx-controls {
+    display: grid;
+    gap: var(--gap-group);
+    max-width: var(--w-list);
+    margin-top: var(--gap-related);
+  }
+  .dx-search,
+  .dx-f {
+    display: grid;
+    gap: var(--gap-mark);
+    min-width: 0;
+  }
+  .dx-search .lab-input {
+    width: 100%;
+  }
+  .dx-search label,
+  .dx-f label {
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .dx-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--gap-group);
+  }
+  /* five filters at 8rem and four gaps fit the list width in one row (704px of 768px), so the
+     Year select never wraps alone onto a second row at full width; on phones they pair up */
+  .dx-f {
+    flex: 1 1 8rem;
+  }
+  .dx-f--country,
+  .dx-f--org {
+    flex-grow: 1.5;
+  }
+  .dx-f .lab-select {
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+
+  /* ---- the tier key, then the line over the rows ---- */
+  .dx-key {
+    max-width: var(--measure);
+    margin: var(--gap-group-lg) 0 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+  }
+  .dx-status-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 var(--space-4);
+    min-height: var(--target-min);
+    margin: var(--gap-related) 0 var(--gap-inline);
+  }
+  .dx-status {
+    margin: 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-muted);
+  }
+  /* Clear filters and Try again: the quiet teal text actions of the kit (lab.css .share-btn) */
+  .dx-status.is-empty {
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-style: italic;
+  }
+  .dx-wait {
+    display: none;
+  }
+  .dx[data-pending] .dx-ssr {
+    display: none;
+  }
+  .dx[data-pending] .dx-wait {
+    display: inline;
+  }
+  .dx[data-pending] .dx-results {
+    visibility: hidden;
+  }
+
+  /* ---- the results: a clean list. The table's column heads go (each field is named for screen
+     readers by its .dx-k label), and each row is a block: the title and summary, then country,
+     issuer, year, type and tier on one line, joined with middle dots. ---- */
+  .dx-results {
+    max-width: var(--w-list);
+  }
+  .dx-table,
+  .dx-table tbody,
+  .dx-row {
+    display: block;
+  }
+  .dx-table[hidden] {
+    display: none;
+  }
+  .dx-table thead {
+    display: none;
+  }
+  .dx-table tbody {
+    border-top: var(--rule);
+  }
+  .dx-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: var(--space-5) 0;
+    border-bottom: var(--rule);
+    scroll-margin-top: var(--space-6);
+  }
+  .dx-row > td {
+    display: block;
+    padding: 0;
+    border: 0;
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
+    overflow-wrap: anywhere;
+  }
+  .dx-row > .dx-doc {
+    flex: 1 0 100%;
+    margin-bottom: var(--gap-inline);
+    color: var(--ink);
+  }
+  /* each dot ends the item before it, so a line breaks only after a dot, never before one */
+  .dx-row > td:not(.dx-doc):not(:last-child)::after {
+    content: '\00B7';
+    content: '\00B7' / '';
+    margin: 0 var(--gap-inline);
+    color: var(--ink-faint);
+  }
+  /* the title: Newsreader at the body step, an index link (global.css .row-link), held to the
+     reading measure at its own size and no wider than its words */
+  .dx-title {
+    display: block;
+    width: fit-content;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    color: var(--ink);
+    overflow-wrap: break-word;
+  }
+  /* a title link stands alone on its line, so its hit area reaches 44px and moves nothing: up
+     into the row's own padding above it (20px) and down over the summary, which holds no link;
+     the downward reach stops short of the notes, whose standard names are links */
+  a.dx-title {
+    position: relative;
+  }
+  a.dx-title::after {
+    content: '';
+    position: absolute;
+    inset: -14px -4px -8px;
+  }
+  .dx-sum {
+    max-width: var(--measure);
+    margin: var(--gap-mark) 0 0;
+    font-family: var(--font-reading);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+    overflow-wrap: break-word;
+  }
+  /* a note is a sentence, so the interface face, not mono */
+  .dx-notes {
+    list-style: none;
+    max-width: var(--measure);
+    margin: var(--gap-inline) 0 0;
+    padding: 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-muted);
+  }
+  /* a standard or a guide a note names, linked to its page; kept whole on one line ("FIPS 204",
+     never "FIPS" and "204" on two), and wrapped inside itself only when longer than the line */
+  .dx-notes a {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .dx-notes a:hover,
+  .dx-notes a:active {
+    color: var(--accent-strong);
+  }
+  /* the country: an index link (global.css .row-link) with a 44px target around a short name,
+     which moves nothing */
+  .dx-place a {
+    position: relative;
+  }
+  .dx-place a::after {
+    content: '';
+    position: absolute;
+    inset: var(--hit-inset);
+  }
+  .dx-row > .dx-year,
+  .dx-row > .dx-tier {
+    font-feature-settings: 'tnum' 1;
+  }
+  .dx-nr {
+    color: var(--ink-muted);
+  }
+  .dx-lbl {
+    display: inline;
+  }
+  /* the field names, for screen readers only, now that the column heads are gone */
+  .dx-k {
+    display: inline;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* the row a link points at, the current row: the teal wash of the current state behind it,
+     reaching a little past the text on both sides; no left rule */
+  .dx-row.is-target,
+  .dx-row:target {
+    background: var(--accent-wash);
+    box-shadow:
+      calc(-1 * var(--space-3)) 0 0 var(--accent-wash),
+      var(--space-3) 0 0 var(--accent-wash);
+  }
+
+  /* ---- more rows ---- */
+  .dx-more {
+    margin-top: var(--gap-group-lg);
+  }
+  .dx-more[hidden],
+  .dx-status-row [hidden] {
+    display: none;
+  }
+  .dx-nojs {
+    max-width: var(--measure);
+    margin: 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .dx-nojs a,
+  .dx-key a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .dx-nojs a:hover,
+  .dx-key a:hover,
+  .dx-nojs a:active,
+  .dx-key a:active {
+    color: var(--accent-strong);
+  }
+
+  /* ---- phones: the choices wrap two to a line; 16px, so a phone does not zoom the page when
+     a choice takes focus ---- */
+  @media (max-width: 639px) {
+    .dx-lede {
+      font-size: var(--type-body);
+    }
+    .dx-controls {
+      margin-top: var(--gap-group-lg);
+    }
+    .dx-f .lab-select,
+    .dx-search .lab-input {
+      font-size: var(--type-control);
+    }
+    .dx-status-row {
+      margin-top: var(--gap-group-lg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dx-notes a,
+    .dx-nojs a,
+    .dx-key a {
+      transition: none;
+    }
+  }
+
+  @media print {
+    .dx-controls,
+    .dx-status-row button,
+    .dx-more {
+      display: none !important;
+    }
+    .dx[data-pending] .dx-results {
+      visibility: visible;
+    }
   }
 </style>

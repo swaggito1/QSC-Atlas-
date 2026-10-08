@@ -53,5 +53,16 @@
     "url": "https://www.digital.gov.my/en-GB/siaran/MYNIC'S-Preparing-For-Tomorrow's-Threat:-The-Impact-Of-Quantum-Computing-On-Internet-Security",
     "summary": "Ministry of Digital speech/announcement (21 April 2026) for a MYNIC programme on quantum computing's impact on internet security, stating that quantum computing can break existing cryptographic codes and that the transition to post-quantum cryptography (PQC) has become an urgent necessity, including replacing at-risk DNSSEC protocols. Delivered with NACSA and MYNIC participation.",
     "included": true
+  },
+  {
+    "title": "Arahan Ketua Eksekutif No. 9: Penyediaan Data dan Maklumat Pelaksanaan Migrasi Kriptografi Pasca Kuantum oleh Entiti Infrastruktur Maklumat Kritikal Negara",
+    "country": "MYS",
+    "issuingOrg": "NACSA",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.nacsa.gov.my/doc/Arahan%20KE%20NACSA%20No.%209.pdf",
+    "summary": "Directive of the NACSA Chief Executive, issued under the Cyber Security Act 2024 [Act 854]. It requires national critical information infrastructure entities to prepare post-quantum cryptography migration data and submit it to NACSA within three months of a written notice, using an annexed form. The form covers a cryptographic inventory, SBOM and CBOM, a risk and dependency assessment, a migration timeline and resource needs. PTPKM coordinates collection under NACSA supervision, and sector leads coordinate and monitor their own sectors. The directive takes effect on 22 September 2025. The form asks each entity to plan the five national phases (Assess, Select, Validate, Deploy, Monitor), each of the first four lasting at most six months; the dates it gives, July 2025 through July 2027 onwards, are only examples.",
+    "included": true
   }
 ]

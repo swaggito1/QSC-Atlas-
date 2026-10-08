@@ -1,0 +1,208 @@
+---
+// The designed not-found page. It offers the finder and the sections that are built, and it
+// never names a page that is not: every link comes from primaryNav(). A gated address in
+// production also ends here, so the page says nothing about what used to be or will be there.
+//
+// The épuré pass (4 October 2026): the head in the frame's hand, texts at the reading measure,
+// the sections an index of links whose names are ink on a thin teal underline (global.css
+// .row-link), so the view keeps one teal mass.
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import CountryFinder from '../components/site/CountryFinder.astro';
+import { CORRECTIONS_EMAIL, PREVIOUS_HOST, originMoved } from '../lib/site/config';
+import { reportHref } from '../lib/site/meta';
+import { primaryNav } from '../lib/site/nav';
+import { builtPages, staticPagePaths } from '../lib/site/routes';
+
+const sections = primaryNav();
+// The pages this build has, for the lower-case offer below: the fixed pages (a redirected address
+// such as /who is left out), the gated pages whose gate is shown, and one profile per country.
+// Written into the page, so the check needs no request and can never name a page that is not built.
+// Research pages never go on a public page (decision 8), so none is listed even in a local build.
+const gated = builtPages().filter((p) => p.section !== 'research' && p.section !== 'elsewhere');
+const pages = [...new Set([...staticPagePaths(), ...gated.map((p) => p.path)])].sort().join(' ');
+const codes = (await getCollection('countries'))
+  .map((c) => c.data.iso3.toLowerCase())
+  .sort()
+  .join(' ');
+// Only true once the site has moved to qscatlas.org and the old host redirects (spec 15.2).
+const moved = originMoved();
+const report = reportHref(CORRECTIONS_EMAIL, 'Broken link', '/404');
+---
+
+<Base title="No page at this address" description="No page at this address. Find a country or start from a section of the QSC Atlas." noindex>
+  <div class="nf">
+    <h1 class="nf-title">No page at this address</h1>
+    <p class="nf-lede prose">
+      The address may be mistyped, or the page may have moved. Find a country by name, or start from one of the sections below.
+    </p>
+    <p class="nf-case prose" hidden data-pages={pages} data-codes={codes}>
+      Addresses on this site are in lower case: try <a class="nf-lower" href="/">the same address in lower case</a>.
+    </p>
+    {
+      moved && (
+        <p class="nf-note prose">Old addresses on {PREVIOUS_HOST} redirect to the same page here.</p>
+      )
+    }
+
+    <div class="nf-finder">
+      <CountryFinder id="finder-404" variant="page" />
+    </div>
+
+    <nav class="nf-sections" aria-label="Start from a section">
+      <ul>
+        <li>
+          <a href="/">
+            <span class="nf-label row-link">Home</span>
+            <span class="nf-q">What is the QSC Atlas, and where do I start?</span>
+          </a>
+        </li>
+        {
+          sections.map((s) => (
+            <li>
+              <a href={s.href}>
+                <span class="nf-label row-link">{s.label}</span>
+                <span class="nf-q">{s.question}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <p class="nf-report">
+      Followed a link on this site to get here? <a class="nf-report-link" href={report}>Report the broken link</a>.
+    </p>
+  </div>
+</Base>
+
+<script is:inline>
+  (() => {
+    const path = location.pathname;
+    // A mixed-case address offers its lower-case twin only when this build has that page (the
+    // list is written in at build time), so the line never names a gated or missing page.
+    const lower = path.toLowerCase().replace(/\/+$/, '') || '/';
+    const p = document.querySelector('.nf-case');
+    const a = document.querySelector('.nf-lower');
+    if (lower !== path && p && a) {
+      const pages = (p.dataset.pages || '').split(' ');
+      const code = /^\/countries\/([a-z0-9]+)$/.exec(lower);
+      if (pages.includes(lower) || (code && (p.dataset.codes || '').split(' ').includes(code[1]))) {
+        a.setAttribute('href', lower + location.search);
+        a.textContent = lower;
+        p.hidden = false;
+      }
+    }
+    // every report link on the page (the page's own, the menu's, the footer's) names the address tried
+    const from = encodeURIComponent('(/404)');
+    const to = encodeURIComponent('(' + path + ')');
+    document.querySelectorAll('a[href^="mailto:"]').forEach((r) => {
+      const h = r.getAttribute('href');
+      if (h && h.includes(from)) r.setAttribute('href', h.replace(from, to));
+    });
+  })();
+</script>
+
+<style>
+  .nf {
+    max-width: var(--shell-max);
+    margin: 0 auto;
+    padding: var(--page-top) var(--shell-gutter) 0;
+  }
+  .nf-title {
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0 0 var(--gap-group);
+    max-width: var(--measure-heading);
+  }
+  .nf-lede,
+  .nf-case,
+  .nf-note {
+    margin: 0 0 var(--space-3);
+    max-width: var(--measure);
+    color: var(--ink);
+  }
+  /* an address is a code: mono, at the size of the words around it */
+  .nf-case a {
+    font-family: var(--font-mono);
+    font-weight: var(--weight-data);
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .nf-finder {
+    margin: var(--gap-related) 0;
+    max-width: 28rem;
+  }
+  .nf-sections ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: var(--w-list);
+    border-top: var(--rule);
+  }
+  .nf-sections li {
+    border-bottom: var(--rule);
+  }
+  .nf-sections a {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--gap-mark) var(--space-6);
+    min-height: var(--target-min);
+    padding: var(--space-3) 0;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  /* each section's name is the link: an index link (global.css .row-link), its underline
+     deepening while the row is under the pointer or pressed */
+  .nf-label {
+    font-weight: var(--weight-ui-strong);
+  }
+  .nf-sections a:hover .nf-label,
+  .nf-sections a:focus-visible .nf-label {
+    text-decoration-color: var(--accent-strong);
+    text-decoration-thickness: 2px;
+  }
+  .nf-sections a:active .nf-label {
+    color: var(--accent-strong);
+    text-decoration-color: var(--accent-strong);
+    text-decoration-thickness: 2px;
+  }
+  .nf-q {
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    color: var(--ink-muted);
+    line-height: var(--leading-snug);
+  }
+  .nf-report {
+    max-width: var(--measure);
+    margin: var(--gap-related) 0 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .nf-report a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .nf-report a:hover,
+  .nf-report a:active {
+    color: var(--accent-strong);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nf-report a {
+      transition: none;
+    }
+  }
+  @media (max-width: 599.98px) {
+    .nf-sections a {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

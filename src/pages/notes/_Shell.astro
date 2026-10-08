@@ -1,0 +1,33 @@
+---
+// The page around the notes list and each note (src/pages/notes): the site's shell, the preview
+// line and noindex on a page that is not public yet (a preview build before the pages a note
+// introduces are public, or a draft in a local build), and the frame's column and head, so the
+// title stands where every section page's question stands. Astro builds no route from it, since
+// its name starts with "_".
+import Base from '../../layouts/Base.astro';
+import PreviewBanner from '../../components/lab/PreviewBanner.astro';
+import '../../styles/lab.css';
+import '../../styles/frame.css';
+import '../../styles/notes.css';
+
+interface Props {
+  heading: string; // the H1
+  title: string; // the <title>, before the site's name
+  description: string; // the meta description
+  preview: boolean; // the page is not public yet: the preview line and noindex
+}
+const { heading, title, description, preview } = Astro.props;
+---
+
+<Base title={title} description={description} noindex={preview}>
+  {preview && <PreviewBanner />}
+  <div class="fr fr-w">
+    <article class="fr-main nt" aria-labelledby="nt-h">
+      <header class="fr-head">
+        <h1 class="fr-q" id="nt-h">{heading}</h1>
+        <slot name="head" />
+      </header>
+      <slot />
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,2788 @@
+{
+  "_about": "Post-quantum standards with the names a document might use for each. The eleven records with cascade: true are the Standards Cascade’s own, every identifier, title and status confirmed on its publisher’s page on 30 September 2026; the Cascade, the profiles’ standards rows and the documents’ notes read those only. The records with cascade: false belong to the Standards overview; each identifier, title, status and builds-on link was read at its body’s own source on 5 October 2026. buildsOn lists only standards a specification uses, quoted in provenance; a report that surveys other standards, or names them only in an informative bibliography, builds on none. bodyStatus gives the body’s own status words, a standards lifecycle kept apart from the legal lifecycle and from bindingness; bodyStatus and statusDate are null where no source the Atlas holds states them. Pre-standard names are the algorithm names used before a standard renamed them, or before a national standard exists; draft names are the Internet-Drafts an RFC was published from.",
+  "standards": [
+    {
+      "id": "FIPS-203",
+      "label": "FIPS 203 (ML-KEM)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "key-establishment",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2024-08-13",
+      "statusPrecision": "day",
+      "deliverable": "fips",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "synonyms": [
+        {
+          "text": "FIPS 203",
+          "type": "official"
+        },
+        {
+          "text": "ML-KEM",
+          "type": "official"
+        },
+        {
+          "text": "Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+          "type": "official"
+        },
+        {
+          "text": "CRYSTALS-Kyber",
+          "type": "pre-standard"
+        },
+        {
+          "text": "Kyber",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/fips/203/final",
+          "title": "FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "FIPS 203 Module-Lattice-Based Key-Encapsulation Mechanism Standard ... Date Published: August 13, 2024 ... This standard specifies a key-encapsulation mechanism called ML-KEM.",
+          "locator": "Publication page header and abstract",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+          "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+          "publisher": "National Institute of Standards and Technology",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The standard is based on the CRYSTALS-Kyber algorithm, which has been renamed ML-KEM, short for Module-Lattice-Based Key-Encapsulation Mechanism.",
+          "locator": "News release of August 13, 2024, list of the three standards (FIPS 203)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "FIPS-204",
+      "label": "FIPS 204 (ML-DSA)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "signature",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2024-08-13",
+      "statusPrecision": "day",
+      "deliverable": "fips",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/pubs/fips/204/final",
+      "synonyms": [
+        {
+          "text": "FIPS 204",
+          "type": "official"
+        },
+        {
+          "text": "ML-DSA",
+          "type": "official"
+        },
+        {
+          "text": "Module-Lattice-Based Digital Signature Standard",
+          "type": "official"
+        },
+        {
+          "text": "CRYSTALS-Dilithium",
+          "type": "pre-standard"
+        },
+        {
+          "text": "Dilithium",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/fips/204/final",
+          "title": "FIPS 204, Module-Lattice-Based Digital Signature Standard",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "FIPS 204 Module-Lattice-Based Digital Signature Standard ... Date Published: August 13, 2024 ... This standard specifies ML-DSA, a set of algorithms that can be used to generate and verify digital signatures.",
+          "locator": "Publication page header and abstract",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+          "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+          "publisher": "National Institute of Standards and Technology",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "FIPS 204, intended as the primary standard for protecting digital signatures. The standard uses the CRYSTALS-Dilithium algorithm, which has been renamed ML-DSA, short for Module-Lattice-Based Digital Signature Algorithm.",
+          "locator": "News release of August 13, 2024, list of the three standards (FIPS 204)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "FIPS-205",
+      "label": "FIPS 205 (SLH-DSA)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "signature",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2024-08-13",
+      "statusPrecision": "day",
+      "deliverable": "fips",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/pubs/fips/205/final",
+      "synonyms": [
+        {
+          "text": "FIPS 205",
+          "type": "official"
+        },
+        {
+          "text": "SLH-DSA",
+          "type": "official"
+        },
+        {
+          "text": "Stateless Hash-Based Digital Signature Standard",
+          "type": "official"
+        },
+        {
+          "text": "SPHINCS+",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/fips/205/final",
+          "title": "FIPS 205, Stateless Hash-Based Digital Signature Standard",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "FIPS 205 Stateless Hash-Based Digital Signature Standard ... Date Published: August 13, 2024 ... This standard specifies the stateless hash-based digital signature algorithm (SLH-DSA). ... SLH-DSA is based on SPHINCS+, which was selected for standardization as part of the NIST Post-Quantum Cryptography Standardization process.",
+          "locator": "Publication page header and abstract",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "FIPS-206",
+      "label": "FIPS 206 (FN-DSA)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "signature",
+      "standardStatus": "selected",
+      "bodyStatus": "selected for ongoing standardization",
+      "statusDate": null,
+      "statusPrecision": null,
+      "deliverable": "fips",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms",
+      "synonyms": [
+        {
+          "text": "FIPS 206",
+          "type": "official"
+        },
+        {
+          "text": "FN-DSA",
+          "type": "official"
+        },
+        {
+          "text": "FALCON",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+          "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+          "publisher": "National Institute of Standards and Technology",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Similarly, when the draft FIPS 206 standard built around FALCON is released, the algorithm will be dubbed FN-DSA, short for FFT (fast-Fourier transform) over NTRU-Lattice-Based Digital Signature Algorithm.",
+          "locator": "News release of August 13, 2024, closing paragraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms",
+          "title": "Selected Algorithms, PQC Standardization Process",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "FALCON (2022) FIPS coming soon",
+          "locator": "Table of selected digital signature algorithms, FALCON row",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+          "title": "Post-Quantum Cryptography project",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "In addition to the three algorithms specified in the initial FIPS standards, the Falcon digital signature algorithm and HQC key encapsulation mechanism were selected for ongoing standardization; that process is underway.",
+          "locator": "Project overview, section 'Ongoing PQC Standardization Process' (page updated August 05, 2026)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "HQC",
+      "label": "HQC",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "key-establishment",
+      "standardStatus": "selected",
+      "bodyStatus": "selected for standardization",
+      "statusDate": "2025-03-11",
+      "statusPrecision": "day",
+      "deliverable": "fips",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/news/2025/hqc-announced-as-a-4th-round-selection",
+      "synonyms": [
+        {
+          "text": "HQC",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/news/2025/hqc-announced-as-a-4th-round-selection",
+          "title": "NIST PQC Standardization Process | HQC Announced as a 4th Round Selection",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "HQC Announced as a 4th Round Selection March 11, 2025 ... After a thorough evaluation in the Fourth Round of the NIST Post-Quantum Cryptography (PQC) Standardization Process, NIST has selected HQC for standardization. ... HQC will be the second PQC key-encapsulation mechanism (KEM), following ML-KEM.",
+          "locator": "News item, headline, date, first and third paragraphs",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms",
+          "title": "Selected Algorithms, PQC Standardization Process",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "HQC (2025) FIPS coming soon.",
+          "locator": "Table 'Selected Algorithms: Key-Encapsulation Mechanisms', HQC row",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "SP-800-208",
+      "label": "NIST SP 800-208 (LMS and XMSS)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "stateful-signature",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2020-10",
+      "statusPrecision": "month",
+      "deliverable": "nist-sp",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/pubs/sp/800/208/final",
+      "synonyms": [
+        {
+          "text": "SP 800-208",
+          "type": "official"
+        },
+        {
+          "text": "NIST SP 800-208",
+          "type": "official"
+        },
+        {
+          "text": "Recommendation for Stateful Hash-Based Signature Schemes",
+          "type": "official"
+        },
+        {
+          "text": "LMS",
+          "type": "official"
+        },
+        {
+          "text": "XMSS",
+          "type": "official"
+        },
+        {
+          "text": "Leighton-Micali Signature",
+          "type": "official"
+        },
+        {
+          "text": "eXtended Merkle Signature Scheme",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/sp/800/208/final",
+          "title": "NIST SP 800-208, Recommendation for Stateful Hash-Based Signature Schemes",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "NIST SP 800-208 Recommendation for Stateful Hash-Based Signature Schemes ... Date Published: October 2020 ... This recommendation specifies two algorithms that can be used to generate a digital signature, both of which are stateful hash-based signature schemes: the Leighton-Micali Signature (LMS) system and the eXtended Merkle Signature Scheme (XMSS)",
+          "locator": "Publication page header and abstract",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "NIST-IR-8547",
+      "label": "NIST IR 8547 (transition to post-quantum standards)",
+      "body": "NIST",
+      "bodyId": "nist",
+      "kind": "transition",
+      "standardStatus": "draft",
+      "bodyStatus": "Initial Public Draft",
+      "statusDate": "2024-11-12",
+      "statusPrecision": "day",
+      "deliverable": "nist-ir",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": null,
+      "url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+      "synonyms": [
+        {
+          "text": "NIST IR 8547",
+          "type": "official"
+        },
+        {
+          "text": "IR 8547",
+          "type": "official"
+        },
+        {
+          "text": "Transition to Post-Quantum Cryptography Standards",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+          "title": "NIST IR 8547 (Initial Public Draft), Transition to Post-Quantum Cryptography Standards",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "NIST IR 8547 (Initial Public Draft) Transition to Post-Quantum Cryptography Standards ... Date Published: November 12, 2024 Comments Due: January 10, 2025 (public comment period is CLOSED)",
+          "locator": "Publication page header",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/publications",
+          "title": "Post-Quantum Cryptography: Publications",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "IR 8547 Transition to Post-Quantum Cryptography Standards Draft 11/12/2024",
+          "locator": "Project publications list as shown on 30 September 2026 (status column)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+          "title": "NIST IR 8547 (Initial Public Draft), Transition to Post-Quantum Cryptography Standards",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "This report describes NIST’s expected approach to transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes.",
+          "locator": "Publication page, abstract (first sentence)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ETSI-TS-103-744",
+      "label": "ETSI TS 103 744 (hybrid key establishment)",
+      "body": "ETSI",
+      "bodyId": "etsi",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2026-02-05",
+      "statusPrecision": "day",
+      "deliverable": "etsi-ts",
+      "normative": true,
+      "version": "V1.2.2",
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203"
+      ],
+      "cascade": true,
+      "national": null,
+      "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/",
+      "synonyms": [
+        {
+          "text": "ETSI TS 103 744",
+          "type": "official"
+        },
+        {
+          "text": "TS 103 744",
+          "type": "official"
+        },
+        {
+          "text": "Quantum-safe Hybrid Key Establishment",
+          "type": "official"
+        },
+        {
+          "text": "Quantum-safe Hybrid Key Exchanges",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.02.02_60/ts_103744v010202p.pdf",
+          "title": "ETSI TS 103 744 V1.2.2 (2026-02), CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "ETSI TS 103 744 V1.2.2 (2026-02) CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment TECHNICAL SPECIFICATION",
+          "locator": "Cover page of V1.2.2, the latest version in the ETSI deliver directory (versions 1.1.1 of 2020-12, 1.2.1 of 2025-03, 1.2.2 of 2026-02)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.02.02_60/ts_103744v010202p.pdf",
+          "title": "ETSI TS 103 744 V1.2.2 (2026-02), CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Hybrid Key Establishments are constructions that combine a traditional key establishment method, such as elliptic curve Diffie Hellman [1], with a quantum-safe key encapsulation mechanism, such as Module-Lattice-based Key Encapsulation Mechanism (ML-KEM) [11], into a single key establishment method.",
+          "locator": "Introduction, p. 5; reference [11] is FIPS 203",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.01.01_60/ts_103744v010101p.pdf",
+          "title": "ETSI TS 103 744 V1.1.1 (2020-12)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "TS 103 744 - V1.1.1 - CYBER; Quantum-safe Hybrid Key Exchanges",
+          "locator": "Document title in the PDF metadata of V1.1.1",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=75485",
+          "title": "ETSI Work Programme, work item RTS/CYBER-QSC-0031 (TS 103 744)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "RTS/CYBER-QSC-0031 TS 103 744 CYBER QSC Current Status (Click to View Full Schedule) Latest Version Cover Date Standstill Creation Date Publication (2026-02-05) 1.2.2 2026-02-05",
+          "locator": "Work item report, Current Status, Latest Version and Cover Date columns",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/",
+          "title": "www.etsi.org - /deliver/etsi_ts/103700_103799/103744/",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[To Parent Directory] 12/23/2020 9:21 AM <dir> 01.01.01_60 3/25/2025 1:50 PM <dir> 01.02.01_60 2/5/2026 3:58 PM <dir> 01.02.02_60",
+          "locator": "Deliver directory listing (three versions; 01.02.02_60 is the latest)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.02.02_60/ts_103744v010202p.pdf",
+          "title": "ETSI TS 103 744 V1.2.2 (2026-02), CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ETSI TS 103 744 V1.2.2 (2026-02) TECHNICAL SPECIFICATION CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment",
+          "locator": "Cover page",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.02.02_60/ts_103744v010202p.pdf",
+          "title": "ETSI TS 103 744 V1.2.2 (2026-02), CYBER; Quantum-Safe Cryptography (QSC); Quantum-safe Hybrid Key Establishment",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The present document specifies several methods for deriving cryptographic keys from multiple shared secrets. The shared secrets are established using existing traditional key establishment schemes, like Elliptic Curve Diffie-Hellman (ECDH) in NIST SP800-56Ar3 [1], and new quantum-safe Key Encapsulation Mechanisms (KEMs).",
+          "locator": "Clause 1, Scope, p. 6",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.02.02_60/ts_103744v010202p.pdf",
+          "title": "ETSI Work Programme, work item RTS/CYBER-QSC-0031 (TS 103 744)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[11] FIPS 203: \"Module-Lattice-Based Key-Encapsulation Mechanism Standard\".",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "KOR-KPQC",
+      "label": "KpqC algorithms (South Korea)",
+      "body": "KpqC research group (South Korea)",
+      "bodyId": "kpqc",
+      "kind": "national-suite",
+      "standardStatus": "national",
+      "bodyStatus": "Final specification documents",
+      "statusDate": "2026-01-30",
+      "statusPrecision": "day",
+      "deliverable": "national",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": "KOR",
+      "url": "https://kpqc.or.kr/contents/03_exhibit/sub_03.html",
+      "synonyms": [
+        {
+          "text": "KpqC",
+          "type": "official"
+        },
+        {
+          "text": "AIMer",
+          "type": "official"
+        },
+        {
+          "text": "HAETAE",
+          "type": "official"
+        },
+        {
+          "text": "NTRU+",
+          "type": "official"
+        },
+        {
+          "text": "SMAUG-T",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://kpqc.or.kr/contents/03_exhibit/sub_03.html",
+          "title": "KpqC Algorithms",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "KpqC Algorithms (January 30, 2026) The final specification documents for the KpqC algorithms are provided below.",
+          "locator": "KpqC Algorithms page, header",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://kpqc.or.kr/competition_02.html",
+          "title": "KpqC Competition Round 2",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Selected Algorithms from the KpqC Competition Round 2 (January 16, 2025) After careful consideration during Round 2 of the KpqC competition, the KpqC team is pleased to announce the final algorithms. Round2 candidates Digital Signature PKE/KEM AIMer NTRU+ HAETAE SMAUG-T",
+          "locator": "Competition page, Round 2 result announcement and table (columns: Digital Signature, PKE/KEM)",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://kpqc.or.kr/contents/03_exhibit/board.html?board_id=board_competition&mode=view&no=12",
+          "title": "KpqC 알고리즘 표준화 관련 안내",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "작성일 2026-04-22 15:57:31 ... KEM 2종(NTRU+, SMAUG-T)의 KS 제정 제안이 제출되었으며, Signature 알고리즘 2종(AIMer, HAETAE)은 추후 표준 제정 제안을 위해 검토가 이루어지고 있습니다.",
+          "locator": "Competition notice board, notice of 22 April 2026 on standardisation",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "CHN-NGCC",
+      "label": "Next-generation commercial cryptographic algorithms (China)",
+      "body": "Institute of Commercial Cryptography Standards (ICCS), China",
+      "bodyId": "iccs",
+      "kind": "national-suite",
+      "standardStatus": "national",
+      "bodyStatus": "first-round evaluation",
+      "statusDate": "2026-09-20",
+      "statusPrecision": "day",
+      "deliverable": "national",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": "CHN",
+      "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_1937428197396713472.html",
+      "synonyms": [
+        {
+          "text": "NGCC",
+          "type": "official"
+        },
+        {
+          "text": "Next-generation Commercial Cryptographic Algorithms Program",
+          "type": "official"
+        },
+        {
+          "text": "NGCC-PK",
+          "type": "official"
+        },
+        {
+          "text": "新一代商用密码算法",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_1937428197396713472.html",
+          "title": "Announcement on Launching the Next-generation Commercial Cryptographic Algorithms Program (NGCC)",
+          "publisher": "Institute of Commercial Cryptography Standards (ICCS)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Announcement on Launching the Next-generation Commercial Cryptographic Algorithms Program (NGCC) 2025-02-05 ... In response to the threat of quantum computing and to promote the standardization of the next-generation commercial cryptographic algorithms, the Institute of Commercial Cryptography Standards (ICCS) is launching a global program to call for proposals for next-generation public-key cryptographic algorithms (NGCC-PK)",
+          "locator": "English notice, title, date and first sentence",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1937422988373135360/content_1937422988373135360.html",
+          "title": "关于开展新一代商用密码算法征集活动的公告",
+          "publisher": "商用密码标准研究院",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "关于开展新一代商用密码算法征集活动的公告 2025-02-05 ... 为应对量子计算威胁，推动新一代商用密码算法标准制定，按照密码行业标准化技术委员会工作安排，我院将面向全球陆续开展新一代公钥密码算法、密码杂凑算法、分组密码算法征集活动",
+          "locator": "Chinese notice, title, date and first sentence",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_2100875480644800512.html",
+          "title": "NGCC: First-Round Candidate Public-Key Cryptographic Algorithms",
+          "publisher": "Institute of Commercial Cryptography Standards (ICCS)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "NGCC: First-Round Candidate Public-Key Cryptographic Algorithms 2026-09-20 ... hereby announces the list of 84 candidates that will be moving on to the first-round evaluation. The first-round evaluation is expected to be completed by June 2027.",
+          "locator": "English notice of 20 September 2026",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RUS-GOST-PQ",
+      "label": "Russian national post-quantum schemes (Kodieum, Shipovnik)",
+      "body": "Technical Committee for Standardisation 26 (Russia)",
+      "bodyId": "tc26",
+      "kind": "national-suite",
+      "standardStatus": "national",
+      "bodyStatus": null,
+      "statusDate": null,
+      "statusPrecision": null,
+      "deliverable": "national",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": true,
+      "national": "RUS",
+      "url": "https://tc26.ru/news/novosti-kriptografii/v-rossii-razrabotan-kriptograficheskiy-mekhanizm-sposobnyy-vyderzhivat-ataki-kvantovykh-kompyuterov.html",
+      "synonyms": [
+        {
+          "text": "Кодиеум",
+          "type": "pre-standard"
+        },
+        {
+          "text": "Шиповник",
+          "type": "pre-standard"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://tc26.ru/news/novosti-kriptografii/v-rossii-razrabotan-kriptograficheskiy-mekhanizm-sposobnyy-vyderzhivat-ataki-kvantovykh-kompyuterov.html",
+          "title": "В России разработан криптографический механизм, способный выдерживать атаки квантовых компьютеров.",
+          "publisher": "Технический комитет по стандартизации «Криптографическая защита информации» (ТК 26)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "29.03.2024 Сотрудники российской компании «Криптонит» разработали криптографический механизм «Кодиеум». ... На данный момент новый механизм проходит процедуры обсуждения и разработки проекта методических рекомендаций по стандартизации. После этого он будет опубликован для открытого обсуждения на сайте ТК26.",
+          "locator": "TC 26 site, section 'Новости криптографии' (cryptography news); the item links to CNews as its source",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://tc26.ru/news/novosti-kriptografii/v-rossii-razrabotan-kriptograficheskiy-mekhanizm-sposobnyy-vyderzhivat-ataki-kvantovykh-kompyuterov.html",
+          "title": "В России разработан криптографический механизм, способный выдерживать атаки квантовых компьютеров.",
+          "publisher": "Технический комитет по стандартизации «Криптографическая защита информации» (ТК 26)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "На этом же классе задач основан и другой постквантовый алгоритм защиты, который также разработали в «Криптоните» — схема постквантовой электронной подписи «Шиповник».",
+          "locator": "Same news item of 29.03.2024, section 'Как работает «Кодиеум»'",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://tc26.ru/about/structure/",
+          "title": "Структура",
+          "publisher": "Технический комитет по стандартизации «Криптографическая защита информации» (ТК 26)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Рабочая группа 2.5 Постквантовые криптографические механизмы",
+          "locator": "Committee structure page, working groups of subcommittee 2",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-8391",
+      "label": "RFC 8391 (XMSS)",
+      "body": "IRTF",
+      "bodyId": "irtf",
+      "kind": "stateful-signature",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2018-05",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc8391/",
+      "synonyms": [
+        {
+          "text": "RFC 8391",
+          "type": "official"
+        },
+        {
+          "text": "XMSS: eXtended Merkle Signature Scheme",
+          "type": "official"
+        },
+        {
+          "text": "draft-irtf-cfrg-xmss-hash-based-signatures",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc8391/",
+          "title": "RFC 8391 - XMSS: eXtended Merkle Signature Scheme",
+          "publisher": "IRTF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (May 2018) ... Was draft-irtf-cfrg-xmss-hash-based-signatures (cfrg RG) ... RFC stream Internet Research Task Force (IRTF) ... This note describes the eXtended Merkle Signature Scheme (XMSS), a hash-based digital signature system that is based on existing descriptions in scientific literature.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it; RFC stream line",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-8554",
+      "label": "RFC 8554 (Leighton-Micali hash-based signatures)",
+      "body": "IRTF",
+      "bodyId": "irtf",
+      "kind": "stateful-signature",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2019-04",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc8554/",
+      "synonyms": [
+        {
+          "text": "RFC 8554",
+          "type": "official"
+        },
+        {
+          "text": "Leighton-Micali Hash-Based Signatures",
+          "type": "official"
+        },
+        {
+          "text": "draft-mcgrew-hash-sigs",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc8554/",
+          "title": "RFC 8554 - Leighton-Micali Hash-Based Signatures",
+          "publisher": "IRTF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (April 2019) ... Was draft-mcgrew-hash-sigs (cfrg RG) ... RFC stream Internet Research Task Force (IRTF) ... This note describes a digital-signature system based on cryptographic hash functions, following the seminal work in this area of Lamport, Diffie, Winternitz, and Merkle, as adapted by Leighton and Micali in 1995.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it; RFC stream line",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9802",
+      "label": "RFC 9802 (HSS and XMSS in X.509 certificates)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2025-06",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "SP-800-208",
+        "RFC-8554",
+        "RFC-8391"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9802/",
+      "synonyms": [
+        {
+          "text": "RFC 9802",
+          "type": "official"
+        },
+        {
+          "text": "Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-lamps-x509-shbs",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9802/",
+          "title": "RFC 9802 - Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (June 2025) ... Was draft-ietf-lamps-x509-shbs (lamps WG) ... This document specifies algorithm identifiers and ASN.1 encoding formats for the following stateful Hash-Based Signature (HBS) schemes: Hierarchical Signature System (HSS), eXtended Merkle Signature Scheme (XMSS), and XMSS^MT (a multi-tree variant of XMSS).",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9802/",
+          "title": "RFC 9802 - Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The security requirements of [SP800208] MUST be taken into account. ... [SP800208] Cooper, D., Apon, D., Dang, Q., Davidson, M., Dworkin, M.,",
+          "locator": "Names SP-800-208, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9802/",
+          "title": "RFC 9802 - Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The public key and signature values identify the hash function and the height used in the HSS tree. [RFC8554] and [SP800208] define these values",
+          "locator": "Names RFC-8554, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9802/",
+          "title": "RFC 9802 - Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The public key and signature values identify the hash function and the height used in the XMSS tree. [RFC8391] and [SP800208] define these values",
+          "locator": "Names RFC-8391, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9954",
+      "label": "RFC 9954 (hybrid key exchange in TLS 1.3)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2026-07",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9954/",
+      "synonyms": [
+        {
+          "text": "RFC 9954",
+          "type": "official"
+        },
+        {
+          "text": "Hybrid Key Exchange in TLS 1.3",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-tls-hybrid-design",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9954/",
+          "title": "RFC 9954 - Hybrid Key Exchange in TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (July 2026) ... Was draft-ietf-tls-hybrid-design (tls WG) ... This document provides a construction for hybrid key exchange in the Transport Layer Security (TLS) protocol version 1.3.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-10024",
+      "label": "RFC 10024 (hybrid ML-KEM key agreement for TLS 1.3)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2026-08",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203",
+        "RFC-9954"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc10024/",
+      "synonyms": [
+        {
+          "text": "RFC 10024",
+          "type": "official"
+        },
+        {
+          "text": "Post-Quantum Traditional (PQ/T) Hybrid Key Agreement Mechanisms for TLS 1.3",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-tls-ecdhe-mlkem",
+          "type": "draft-name"
+        },
+        {
+          "text": "draft-kwiatkowski-tls-ecdhe-mlkem",
+          "type": "draft-name"
+        },
+        {
+          "text": "Post-quantum hybrid ECDHE-MLKEM Key Agreement for TLSv1.3",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc10024/",
+          "title": "RFC 10024 - Post-Quantum Traditional (PQ/T) Hybrid Key Agreement Mechanisms for TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (August 2026) Was draft-ietf-tls-ecdhe-mlkem (tls WG) ... This document defines three hybrid key agreement mechanisms for TLS 1.3 -- X25519MLKEM768, SecP256r1MLKEM768, and SecP384r1MLKEM1024 -- that combine the post-quantum ML-KEM (Module-Lattice-Based Key Encapsulation Mechanism) with an ECDHE (Ephemeral Elliptic Curve Diffie-Hellman) exchange.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc10024/",
+          "title": "RFC 10024 - Post-Quantum Traditional (PQ/T) Hybrid Key Agreement Mechanisms for TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ML-KEM is a key encapsulation mechanism (KEM) defined in [NIST-FIPS-203]. It is designed to withstand cryptanalytic attacks from quantum computers.",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc10024/",
+          "title": "RFC 10024 - Post-Quantum Traditional (PQ/T) Hybrid Key Agreement Mechanisms for TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[RFC9954] defines a framework for combining traditional key exchanges with next-generation key exchange in TLS 1.3. ... This document applies the framework in [RFC9954] to ML-KEM and specifies code points for the hybrid groups.",
+          "locator": "Names RFC-9954, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-tls-mlkem",
+      "label": "draft-ietf-tls-mlkem (ML-KEM key agreement for TLS 1.3)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: RFC Ed Queue, RFC Editor status: “blocked: Stream Hold”",
+      "statusDate": "2026-09-16",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mlkem/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-tls-mlkem",
+          "type": "official"
+        },
+        {
+          "text": "ML-KEM Post-Quantum Key Agreement for TLS 1.3",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mlkem/",
+          "title": "draft-ietf-tls-mlkem-11 - ML-KEM Post-Quantum Key Agreement for TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (tls WG) ... Last updated 2026-09-24 (Latest revision 2026-09-16) ... Intended RFC status Informational ... WG state Submitted to IESG for Publication ... IESG state RFC Ed Queue ... RFC Editor status blocked: Stream Hold",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); RFC Editor panel; history entry of 2026-09-24",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mlkem/",
+          "title": "draft-ietf-tls-mlkem-11 - ML-KEM Post-Quantum Key Agreement for TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ML-KEM [FIPS203] is a FIPS standard for post-quantum [RFC9794] key establishment via a lattice-based key encapsulation mechanism (KEM).",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-8784",
+      "label": "RFC 8784 (preshared keys in IKEv2 for post-quantum security)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2020-06",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc8784/",
+      "synonyms": [
+        {
+          "text": "RFC 8784",
+          "type": "official"
+        },
+        {
+          "text": "Mixing Preshared Keys in the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-quantum Security",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-ipsecme-qr-ikev2",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc8784/",
+          "title": "RFC 8784 - Mixing Preshared Keys in the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-quantum Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (June 2020) ... Was draft-ietf-ipsecme-qr-ikev2 (ipsecme WG) ... The possibility of quantum computers poses a serious challenge to cryptographic algorithms deployed widely today.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9370",
+      "label": "RFC 9370 (multiple key exchanges in IKEv2)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2023-05",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9370/",
+      "synonyms": [
+        {
+          "text": "RFC 9370",
+          "type": "official"
+        },
+        {
+          "text": "Multiple Key Exchanges in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-ipsecme-ikev2-multiple-ke",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9370/",
+          "title": "RFC 9370 - Multiple Key Exchanges in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (May 2023) ... Updates RFC 7296 Was draft-ietf-ipsecme-ikev2-multiple-ke (ipsecme WG) ... This document describes how to extend the Internet Key Exchange Protocol Version 2 (IKEv2) to allow multiple key exchanges to take place while computing a shared secret during a Security Association (SA) setup.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it; \"Updates\" line",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9867",
+      "label": "RFC 9867 (preshared keys in further IKEv2 exchanges)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2025-11",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "RFC-8784"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9867/",
+      "synonyms": [
+        {
+          "text": "RFC 9867",
+          "type": "official"
+        },
+        {
+          "text": "Mixing Preshared Keys in the IKE_INTERMEDIATE and CREATE_CHILD_SA Exchanges of the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-Quantum Security",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-ipsecme-ikev2-qr-alt",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9867/",
+          "title": "RFC 9867 - Mixing Preshared Keys in the IKE_INTERMEDIATE and CREATE_CHILD_SA Exchanges of the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-Quantum Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (November 2025) Was draft-ietf-ipsecme-ikev2-qr-alt (ipsecme WG) ... An Internet Key Exchange Protocol Version 2 (IKEv2) extension defined in RFC 8784 allows IPsec traffic to be protected against someone storing VPN communications and decrypting them later",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9867/",
+          "title": "RFC 9867 - Mixing Preshared Keys in the IKE_INTERMEDIATE and CREATE_CHILD_SA Exchanges of the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-Quantum Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This specification defines an alternative way to provide protection against quantum computers, which is similar to the solution defined in RFC 8784, but it also protects the initial IKEv2 SA.",
+          "locator": "Names RFC-8784, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-ipsecme-ikev2-mlkem",
+      "label": "draft-ietf-ipsecme-ikev2-mlkem (ML-KEM in IKEv2)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: RFC Ed Queue",
+      "statusDate": "2026-07-05",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203",
+        "RFC-9370"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-ikev2-mlkem/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-ipsecme-ikev2-mlkem",
+          "type": "official"
+        },
+        {
+          "text": "Post-quantum Key Exchange with ML-KEM in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-ikev2-mlkem/",
+          "title": "draft-ietf-ipsecme-ikev2-mlkem-09 - Post-quantum Key Exchange with ML-KEM in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (ipsecme WG) ... Last updated 2026-08-13 (Latest revision 2026-07-05) ... Intended RFC status Proposed Standard ... WG state Submitted to IESG for Publication ... IESG state RFC Ed Queue ... RFC Editor status Awaiting First editor",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); RFC Editor panel",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-ikev2-mlkem/",
+          "title": "draft-ietf-ipsecme-ikev2-mlkem-09 - Post-quantum Key Exchange with ML-KEM in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This document specifies how to use ML-KEM [FIPS203] as a key exchange in IKEv2, either by itself or alongside a traditional key exchange.",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-ikev2-mlkem/",
+          "title": "draft-ietf-ipsecme-ikev2-mlkem-09 - Post-quantum Key Exchange with ML-KEM in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ML-KEM key exchanges can be negotiated in IKE_INTERMEDIATE, CREATE_CHILD_SA, or IKE_FOLLOWUP_KE messages as defined in the Multiple Key Exchanges in IKEv2 specification [RFC9370].",
+          "locator": "Names RFC-9370, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-ipsecme-hybrid-kem-ikev2-frodo",
+      "label": "draft-ietf-ipsecme-hybrid-kem-ikev2-frodo (FrodoKEM in IKEv2)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, WG state: WG Document",
+      "statusDate": "2026-08-11",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "RFC-9370"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-hybrid-kem-ikev2-frodo/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-ipsecme-hybrid-kem-ikev2-frodo",
+          "type": "official"
+        },
+        {
+          "text": "Post-quantum Key Exchange in IKEv2 with FrodoKEM",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-hybrid-kem-ikev2-frodo/",
+          "title": "draft-ietf-ipsecme-hybrid-kem-ikev2-frodo-03 - Post-quantum Key Exchange in IKEv2 with FrodoKEM",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (ipsecme WG) ... Last updated 2026-08-11 ... Intended RFC status (None) ... WG state WG Document ... IESG state I-D Exists ... draft-ietf-ipsecme-hybrid-kem-ikev2-frodo-03 ... Intended status: Standards Track",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); draft front page (revision 03)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsecme-hybrid-kem-ikev2-frodo/",
+          "title": "draft-ietf-ipsecme-hybrid-kem-ikev2-frodo-03 - Post-quantum Key Exchange in IKEv2 with FrodoKEM",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This specification is a profile of the Multiple Key Exchanges in IKEv2 specification [RFC9370] and registers new algorithm identifiers for FrodoKEM key exchanges in IKEv2.",
+          "locator": "Names RFC-9370, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9941",
+      "label": "RFC 9941 (sntrup761 and X25519 hybrid key exchange for SSH)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2026-04",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9941/",
+      "synonyms": [
+        {
+          "text": "RFC 9941",
+          "type": "official"
+        },
+        {
+          "text": "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-sshm-ntruprime-ssh",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9941/",
+          "title": "RFC 9941 - Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (April 2026) Was draft-ietf-sshm-ntruprime-ssh (sshm WG) ... This document describes a widely deployed hybrid key exchange method in the Secure Shell (SSH) protocol that is based on Streamlined NTRU Prime sntrup761 and X25519 with SHA-512.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-10042",
+      "label": "RFC 10042 (hybrid ML-KEM key exchange for SSH)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2026-08",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc10042/",
+      "synonyms": [
+        {
+          "text": "RFC 10042",
+          "type": "official"
+        },
+        {
+          "text": "Post-Quantum/Traditional Hybrid Key Exchange with the Module-Lattice-Based Key-Encapsulation Mechanism for Use in SSH",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-sshm-mlkem-hybrid-kex",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc10042/",
+          "title": "RFC 10042 - Post-Quantum/Traditional Hybrid Key Exchange with the Module-Lattice-Based Key-Encapsulation Mechanism for Use in SSH",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (August 2026) ... Was draft-ietf-sshm-mlkem-hybrid-kex (sshm WG) ... This document defines Post-Quantum Traditional (PQ/T) Hybrid key exchange methods based on the quantum-resistant Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM) standard and traditional Elliptic-Curve Diffie-Hellman (ECDH) key exchange schemes.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc10042/",
+          "title": "RFC 10042 - Post-Quantum/Traditional Hybrid Key Exchange with the Module-Lattice-Based Key-Encapsulation Mechanism for Use in SSH",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The post-quantum KEM used in this document is the Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM). ML-KEM was standardized in 2024 [FIPS203] with three parameter variants, ML-KEM-512, ML-KEM-768, and ML-KEM-1024.",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-hpke-pq",
+      "label": "draft-ietf-hpke-pq (post-quantum and hybrid KEMs for HPKE)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, WG state: WG Document",
+      "statusDate": "2026-07-06",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203",
+        "draft-irtf-cfrg-hybrid-kems"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-hpke-pq/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-hpke-pq",
+          "type": "official"
+        },
+        {
+          "text": "Post-Quantum and Post-Quantum/Traditional Hybrid Algorithms for HPKE",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-hpke-pq/",
+          "title": "draft-ietf-hpke-pq-05 - Post-Quantum and Post-Quantum/Traditional Hybrid Algorithms for HPKE",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (hpke WG) ... Last updated 2026-07-06 ... Intended RFC status (None) ... WG state WG Document ... IESG state I-D Exists ... draft-ietf-hpke-pq-05 ... Intended status: Standards Track",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); draft front page (revision 05)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-hpke-pq/",
+          "title": "draft-ietf-hpke-pq-05 - Post-Quantum and Post-Quantum/Traditional Hybrid Algorithms for HPKE",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ML-KEM, X25519, and P-256/P-384 are defined in [FIPS203], [RFC7748], and [FIPS186], respectively.",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-hpke-pq/",
+          "title": "draft-ietf-hpke-pq-05 - Post-Quantum and Post-Quantum/Traditional Hybrid Algorithms for HPKE",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "These KEMs satisfy the KEM interface defined in [GENERIC]. ... [GENERIC] Connolly, D., Barnes, R., and P. Grubbs, \"Hybrid PQ/T Key Encapsulation Mechanisms\", Work in Progress, Internet-Draft, draft-irtf-cfrg-hybrid-kems-12",
+          "locator": "Names draft-irtf-cfrg-hybrid-kems, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-mls-pq-ciphersuites",
+      "label": "draft-ietf-mls-pq-ciphersuites (ML-KEM cipher suites for MLS)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, WG state: In WG Last Call",
+      "statusDate": "2026-07-21",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203",
+        "FIPS-204",
+        "draft-ietf-hpke-pq",
+        "draft-ietf-tls-mldsa",
+        "draft-irtf-cfrg-hybrid-kems"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-mls-pq-ciphersuites",
+          "type": "official"
+        },
+        {
+          "text": "ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (mls WG) ... Last updated 2026-10-01 (Latest revision 2026-07-21) ... Intended RFC status Proposed Standard ... WG state In WG Last Call ... IESG state I-D Exists",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "we define ciphersuites that use the post-quantum secure Module-Lattice-Based KEM (ML-KEM) [MLKEM] together with appropriate symmetric algorithms ... [MLKEM] \"Module-lattice-based key-encapsulation mechanism standard\", National Institute of Standards and Technology (U.S.), DOI 10.6028/nist.fips.203, August 2024",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "either traditional or Module-Lattice-Based Digital Signature Algorithm (ML-DSA) [MLDSA] post-quantum signature algorithms. ... [MLDSA] \"Module-lattice-based digital signature standard\", National Institute of Standards and Technology (U.S.), DOI 10.6028/nist.fips.204, August 2024",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "For the PQ/T hybrid KEMs and the pure ML-KEM HPKE integration, we use the KEMs defined in [I-D.ietf-hpke-pq].",
+          "locator": "Names draft-ietf-hpke-pq, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The signature schemes for ML-DSA-44, ML-DSA-65, and ML-DSA-87 [MLDSA] are defined in [I-D.ietf-tls-mldsa].",
+          "locator": "Names draft-ietf-tls-mldsa, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-mls-pq-ciphersuites/",
+          "title": "draft-ietf-mls-pq-ciphersuites-06 - ML-KEM and Hybrid Cipher Suites for Messaging Layer Security",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "For security considerations related to the KEMs used in this document, please see the documents that define those KEMs [I-D.ietf-hpke-pq] and [I-D.irtf-cfrg-hybrid-kems].",
+          "locator": "Names draft-irtf-cfrg-hybrid-kems, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-irtf-cfrg-hybrid-kems",
+      "label": "draft-irtf-cfrg-hybrid-kems (hybrid KEMs)",
+      "body": "IRTF",
+      "bodyId": "irtf",
+      "kind": "hybrid",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IRTF state: Waiting for Document Shepherd Revised I-D Needed",
+      "statusDate": "2026-07-06",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-irtf-cfrg-hybrid-kems/",
+      "synonyms": [
+        {
+          "text": "draft-irtf-cfrg-hybrid-kems",
+          "type": "official"
+        },
+        {
+          "text": "Hybrid PQ/T Key Encapsulation Mechanisms",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-irtf-cfrg-hybrid-kems/",
+          "title": "draft-irtf-cfrg-hybrid-kems-12 - Hybrid PQ/T Key Encapsulation Mechanisms",
+          "publisher": "IRTF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (cfrg RG) ... Last updated 2026-07-24 (Latest revision 2026-07-06) ... RFC stream Internet Research Task Force (IRTF) Intended RFC status Informational ... IRTF state Waiting for Document Shepherd Revised I-D Needed ... IESG state I-D Exists::Revised I-D Needed",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (IRTF state) and IESG panel (IESG state)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9881",
+      "label": "RFC 9881 (ML-DSA in X.509)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2025-10",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-204"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9881/",
+      "synonyms": [
+        {
+          "text": "RFC 9881",
+          "type": "official"
+        },
+        {
+          "text": "Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA)",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-lamps-dilithium-certificates",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9881/",
+          "title": "RFC 9881 - Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (October 2025) ... Was draft-ietf-lamps-dilithium-certificates (lamps WG) ... Digital signatures are used within X.509 certificates and Certificate Revocation Lists (CRLs), and to sign messages.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9881/",
+          "title": "RFC 9881 - Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This document specifies the conventions for using FIPS 204, the Module-Lattice-Based Digital Signature Algorithm (ML-DSA) in Internet X.509 certificates and CRLs.",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9909",
+      "label": "RFC 9909 (SLH-DSA in X.509)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2025-12",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-205"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9909/",
+      "synonyms": [
+        {
+          "text": "RFC 9909",
+          "type": "official"
+        },
+        {
+          "text": "Algorithm Identifiers for the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA)",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-lamps-x509-slhdsa",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9909/",
+          "title": "RFC 9909 - Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (December 2025) ... Was draft-ietf-lamps-x509-slhdsa (lamps WG) ... This document specifies the conventions for using the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA) in the X.509 Public Key Infrastructure.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9909/",
+          "title": "RFC 9909 - Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The Stateless Hash-Based Digital Signature Algorithm (SLH-DSA) is a quantum-resistant digital signature scheme standardized in [FIPS205] by the US National Institute of Standards and Technology (NIST) Post-Quantum Cryptography (PQC) project [NIST-PQC].",
+          "locator": "Names FIPS-205, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9763",
+      "label": "RFC 9763 (related certificates for multiple authentications)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2025-06",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9763/",
+      "synonyms": [
+        {
+          "text": "RFC 9763",
+          "type": "official"
+        },
+        {
+          "text": "Related Certificates for Use in Multiple Authentications within a Protocol",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-lamps-cert-binding-for-multi-auth",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9763/",
+          "title": "RFC 9763 - Related Certificates for Use in Multiple Authentications within a Protocol",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (June 2025) ... Was draft-ietf-lamps-cert-binding-for-multi-auth (lamps WG) ... This document defines a new Certificate Signing Request (CSR) attribute, relatedCertRequest, and a new X.509 certificate extension, RelatedCertificate.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-lamps-pq-composite-sigs",
+      "label": "draft-ietf-lamps-pq-composite-sigs (composite ML-DSA in X.509)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: RFC Ed Queue",
+      "statusDate": "2026-04-21",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-204",
+        "RFC-9881"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-sigs/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-lamps-pq-composite-sigs",
+          "type": "official"
+        },
+        {
+          "text": "Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in X.509 Public Key Infrastructure",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-sigs/",
+          "title": "draft-ietf-lamps-pq-composite-sigs-19 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (lamps WG) ... Last updated 2026-10-02 (Latest revision 2026-04-21) ... Intended RFC status Proposed Standard ... WG state Submitted to IESG for Publication ... IESG state RFC Ed Queue ... RFC Editor status In Progress (Second Edit)",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); RFC Editor panel",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-sigs/",
+          "title": "draft-ietf-lamps-pq-composite-sigs-19 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This specification creates PQ/T Hybrids with the Module-Lattice-Based Digital Signature Algorithm (ML-DSA), defined in [FIPS.204] as the Post-Quantum (PQ) component.",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-sigs/",
+          "title": "draft-ietf-lamps-pq-composite-sigs-19 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Composite ML-DSA is a PQ/T hybrid signature scheme which combines ML-DSA as specified in [FIPS.204] and [RFC9881] with one of RSASSA-PKCS1-v1_5 or RSASSA-PSS algorithms defined in [RFC8017]",
+          "locator": "Names RFC-9881, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-lamps-pq-composite-kem",
+      "label": "draft-ietf-lamps-pq-composite-kem (composite ML-KEM in X.509)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "pki",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: IESG Evaluation::Revised I-D Needed",
+      "statusDate": "2026-09-01",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-kem/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-lamps-pq-composite-kem",
+          "type": "official"
+        },
+        {
+          "text": "Composite ML-KEM for use in X.509 Public Key Infrastructure",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-kem/",
+          "title": "draft-ietf-lamps-pq-composite-kem-21 - Composite ML-KEM for use in X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (lamps WG) ... Last updated 2026-09-03 (Latest revision 2026-09-01) ... Intended RFC status Proposed Standard ... WG state Submitted to IESG for Publication ... IESG state IESG Evaluation::Revised I-D Needed ... Has 2 DISCUSSes.",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); ballot summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-kem/",
+          "title": "draft-ietf-lamps-pq-composite-kem-21 - Composite ML-KEM for use in X.509 Public Key Infrastructure",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This specification creates PQ/T Hybrids with the Module-Lattice-based Key Encapsulation Mechanism (ML-KEM), defined in [FIPS.203] as the PQ component.",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-lamps-cms-composite-sigs",
+      "label": "draft-ietf-lamps-cms-composite-sigs (composite ML-DSA in CMS)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "signature",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: RFC Ed Queue",
+      "statusDate": "2026-05-22",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "draft-ietf-lamps-pq-composite-sigs",
+        "FIPS-204"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-composite-sigs/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-lamps-cms-composite-sigs",
+          "type": "official"
+        },
+        {
+          "text": "Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in Cryptographic Message Syntax (CMS)",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-composite-sigs/",
+          "title": "draft-ietf-lamps-cms-composite-sigs-05 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in Cryptographic Message Syntax (CMS)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (lamps WG) ... Last updated 2026-10-01 (Latest revision 2026-05-22) ... Intended RFC status Proposed Standard ... WG state Submitted to IESG for Publication ... IESG state RFC Ed Queue ... RFC Editor status Awaiting Second editor",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); RFC Editor panel",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-composite-sigs/",
+          "title": "draft-ietf-lamps-cms-composite-sigs-05 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in Cryptographic Message Syntax (CMS)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This document acts as a companion to [I-D.ietf-lamps-pq-composite-sigs] by providing conventions for using Composite ML-DSA algorithms within the Cryptographic Message Syntax (CMS) [RFC5652].",
+          "locator": "Names draft-ietf-lamps-pq-composite-sigs, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-lamps-cms-composite-sigs/",
+          "title": "draft-ietf-lamps-cms-composite-sigs-05 - Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in Cryptographic Message Syntax (CMS)",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[I-D.ietf-lamps-pq-composite-sigs] defines a collection of signature algorithms, referred to as Composite ML-DSA, which combine ML-DSA [FIPS.204] with RSASSA-PKCS1-v1.5 [RFC8017], RSASSA-PSS [RFC8017], ECDSA (Section 6 of [FIPS.186-5]), Ed25519 [RFC8410], and Ed448 [RFC8410].",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "draft-ietf-tls-mldsa",
+      "label": "draft-ietf-tls-mldsa (ML-DSA in TLS 1.3)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "draft",
+      "bodyStatus": "Active Internet-Draft, IESG state: RFC Ed Queue, RFC Editor status: “blocked: Stream Hold”",
+      "statusDate": "2026-09-11",
+      "statusPrecision": "day",
+      "deliverable": "internet-draft",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-204",
+        "RFC-9881"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mldsa/",
+      "synonyms": [
+        {
+          "text": "draft-ietf-tls-mldsa",
+          "type": "official"
+        },
+        {
+          "text": "Use of ML-DSA in TLS 1.3",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mldsa/",
+          "title": "draft-ietf-tls-mldsa-06 - Use of ML-DSA in TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type Active Internet-Draft (tls WG) ... Last updated 2026-09-28 (Latest revision 2026-09-11) ... Intended RFC status Informational ... WG state Submitted to IESG for Publication ... IESG state RFC Ed Queue ... RFC Editor status blocked: Stream Hold",
+          "locator": "Datatracker document page: Document panel (Type, Last updated, Intended RFC status), Stream panel (WG state) and IESG panel (IESG state); RFC Editor panel; history entry of 2026-09-24",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mldsa/",
+          "title": "draft-ietf-tls-mldsa-06 - Use of ML-DSA in TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This memo specifies how the post-quantum signature scheme ML-DSA (FIPS 204) is used for authentication in TLS 1.3.",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-tls-mldsa/",
+          "title": "draft-ietf-tls-mldsa-06 - Use of ML-DSA in TLS 1.3",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This document maps three new SignatureScheme values for the three ML-DSA parameter sets listed in Section 4, Table 1 of [FIPS204] to the SignatureAlgorithmIdentifiers from [RFC9881] as follows.",
+          "locator": "Names RFC-9881, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9980",
+      "label": "RFC 9980 (post-quantum cryptography in OpenPGP)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "protocol",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Proposed Standard",
+      "statusDate": "2026-06",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203",
+        "FIPS-204",
+        "FIPS-205"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9980/",
+      "synonyms": [
+        {
+          "text": "RFC 9980",
+          "type": "official"
+        },
+        {
+          "text": "Post-Quantum Cryptography in OpenPGP",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-openpgp-pqc",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9980/",
+          "title": "RFC 9980 - Post-Quantum Cryptography in OpenPGP",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Proposed Standard (June 2026) ... Was draft-ietf-openpgp-pqc (openpgp WG) ... This document defines a post-quantum public key algorithm extension for the OpenPGP protocol, extending RFC 9580.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9980/",
+          "title": "RFC 9980 - Post-Quantum Cryptography in OpenPGP",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The algorithms defined in this extension were chosen for standardization by the US National Institute of Standards and Technology (NIST) in mid-2022 [NISTIR-8413] as the result of the NIST Post-Quantum Cryptography Standardization process initiated in 2016 [NIST-PQC]. ML-KEM [FIPS-203] was selected as a Key Encapsulation Mechanism (KEM).",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9980/",
+          "title": "RFC 9980 - Post-Quantum Cryptography in OpenPGP",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ML-DSA [FIPS-204] and SLH-DSA [FIPS-205] were selected as signature schemes.",
+          "locator": "Names FIPS-204, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9794",
+      "label": "RFC 9794 (terminology for hybrid schemes)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "terminology",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2025-06",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9794/",
+      "synonyms": [
+        {
+          "text": "RFC 9794",
+          "type": "official"
+        },
+        {
+          "text": "Terminology for Post-Quantum Traditional Hybrid Schemes",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-pquip-pqt-hybrid-terminology",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9794/",
+          "title": "RFC 9794 - Terminology for Post-Quantum Traditional Hybrid Schemes",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (June 2025) Was draft-ietf-pquip-pqt-hybrid-terminology (pquip WG) ... One aspect of the transition to post-quantum algorithms in cryptographic protocols is the development of hybrid schemes that incorporate both post-quantum and traditional asymmetric algorithms. This document defines terminology for such schemes.",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "RFC-9955",
+      "label": "RFC 9955 (hybrid signature spectrums)",
+      "body": "IETF",
+      "bodyId": "ietf",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "RFC, Informational",
+      "statusDate": "2026-07",
+      "statusPrecision": "month",
+      "deliverable": "rfc",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "RFC-9794",
+        "RFC-9954"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://datatracker.ietf.org/doc/rfc9955/",
+      "synonyms": [
+        {
+          "text": "RFC 9955",
+          "type": "official"
+        },
+        {
+          "text": "Hybrid Signature Spectrums",
+          "type": "official"
+        },
+        {
+          "text": "draft-ietf-pquip-hybrid-signature-spectrums",
+          "type": "draft-name"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9955/",
+          "title": "RFC 9955 - Hybrid Signature Spectrums",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Document Type RFC - Informational (July 2026) Was draft-ietf-pquip-hybrid-signature-spectrums (pquip WG) ... This document describes classification of design goals and security considerations for hybrid digital signature schemes",
+          "locator": "Datatracker document page: Document panel (Type, Was) and the Abstract of the RFC text shown below it",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://datatracker.ietf.org/doc/rfc9955/",
+          "title": "RFC 9955 - Hybrid Signature Spectrums",
+          "publisher": "IETF",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "We follow existing documents on hybrid terminology [RFC9794] and hybrid key encapsulation mechanisms (KEMs) [RFC9954] to enable settling on a consistent language.",
+          "locator": "Names RFC-9794, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ETSI-TR-103-619",
+      "label": "ETSI TR 103 619 (migration strategies)",
+      "body": "ETSI",
+      "bodyId": "etsi",
+      "kind": "migration",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2020-07-21",
+      "statusPrecision": "day",
+      "deliverable": "etsi-tr",
+      "normative": false,
+      "version": "V1.1.1",
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103619/01.01.01_60/tr_103619v010101p.pdf",
+      "synonyms": [
+        {
+          "text": "ETSI TR 103 619",
+          "type": "official"
+        },
+        {
+          "text": "TR 103 619",
+          "type": "official"
+        },
+        {
+          "text": "Migration strategies and recommendations to Quantum Safe schemes",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=54407",
+          "title": "ETSI Work Programme, work item DTR/CYBER-QSC-0013 (TR 103 619)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "DTR/CYBER-QSC-0013 TR 103 619 CYBER QSC Current Status (Click to View Full Schedule) Latest Version Cover Date Standstill Creation Date Publication (2020-07-21) 1.1.1 2020-07-21",
+          "locator": "Work item report, Current Status, Latest Version and Cover Date columns",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103619/01.01.01_60/tr_103619v010101p.pdf",
+          "title": "ETSI TR 103 619 V1.1.1 (2020-07), CYBER; Migration strategies and recommendations to Quantum Safe schemes",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ETSI TR 103 619 V1.1.1 (2020-07) TECHNICAL REPORT CYBER; Migration strategies and recommendations to Quantum Safe schemes",
+          "locator": "Cover page",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103619/01.01.01_60/tr_103619v010101p.pdf",
+          "title": "ETSI TR 103 619 V1.1.1 (2020-07), CYBER; Migration strategies and recommendations to Quantum Safe schemes",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The present document addresses the problem of migration to an environment in a Fully Quantum Safe Cryptographic State (FQSCS) from a non-Quantum Safe Cryptographic State. The present document provides recommendations and guidance to ensure safe transition between the two (2) states.",
+          "locator": "Clause 1, Scope, p. 5",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103619/",
+          "title": "www.etsi.org - /deliver/etsi_tr/103600_103699/103619/",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[To Parent Directory] 7/21/2020 10:08 AM <dir> 01.01.01_60",
+          "locator": "Deliver directory listing (one version only)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ETSI-TR-103-692",
+      "label": "ETSI TR 103 692 (state management for stateful signatures)",
+      "body": "ETSI",
+      "bodyId": "etsi",
+      "kind": "implementation-guidance",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2021-11-08",
+      "statusPrecision": "day",
+      "deliverable": "etsi-tr",
+      "normative": false,
+      "version": "V1.1.1",
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103692/01.01.01_60/tr_103692v010101p.pdf",
+      "synonyms": [
+        {
+          "text": "ETSI TR 103 692",
+          "type": "official"
+        },
+        {
+          "text": "TR 103 692",
+          "type": "official"
+        },
+        {
+          "text": "State management for stateful authentication mechanisms",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=58982",
+          "title": "ETSI Work Programme, work item DTR/CYBER-QSC-0016 (TR 103 692)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "DTR/CYBER-QSC-0016 TR 103 692 CYBER QSC Current Status (Click to View Full Schedule) Latest Version Cover Date Standstill Creation Date Publication (2021-11-08) 1.1.1 2021-11-08",
+          "locator": "Work item report, Current Status, Latest Version and Cover Date columns",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103692/01.01.01_60/tr_103692v010101p.pdf",
+          "title": "ETSI TR 103 692 V1.1.1 (2021-11), CYBER; State management for stateful authentication mechanisms",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ETSI TR 103 692 V1.1.1 (2021-11) TECHNICAL REPORT CYBER; State management for stateful authentication mechanisms",
+          "locator": "Cover page",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103692/01.01.01_60/tr_103692v010101p.pdf",
+          "title": "ETSI TR 103 692 V1.1.1 (2021-11), CYBER; State management for stateful authentication mechanisms",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The present document is limited to discussion of the characteristics of the state object, the reuse of the state index, and of architectural and operational considerations for deploying stateful hash-based signatures.",
+          "locator": "Clause 1, Scope, p. 6",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103600_103699/103692/",
+          "title": "www.etsi.org - /deliver/etsi_tr/103600_103699/103692/",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[To Parent Directory] 11/8/2021 9:44 AM <dir> 01.01.01_60",
+          "locator": "Deliver directory listing (one version only)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ETSI-TR-103-966",
+      "label": "ETSI TR 103 966 (deployment of hybrid schemes)",
+      "body": "ETSI",
+      "bodyId": "etsi",
+      "kind": "hybrid",
+      "standardStatus": "final",
+      "bodyStatus": "Published",
+      "statusDate": "2024-10-07",
+      "statusPrecision": "day",
+      "deliverable": "etsi-tr",
+      "normative": false,
+      "version": "V1.1.1",
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.etsi.org/deliver/etsi_tr/103900_103999/103966/01.01.01_60/tr_103966v010101p.pdf",
+      "synonyms": [
+        {
+          "text": "ETSI TR 103 966",
+          "type": "official"
+        },
+        {
+          "text": "TR 103 966",
+          "type": "official"
+        },
+        {
+          "text": "Deployment Considerations for Hybrid Schemes",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=64284",
+          "title": "ETSI Work Programme, work item DTR/CYBER-QSC-0021 (TR 103 966)",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "DTR/CYBER-QSC-0021 TR 103 966 CYBER QSC Current Status (Click to View Full Schedule) Latest Version Cover Date Standstill Creation Date Publication (2024-10-07) 1.1.1 2024-10-07",
+          "locator": "Work item report, Current Status, Latest Version and Cover Date columns",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103900_103999/103966/01.01.01_60/tr_103966v010101p.pdf",
+          "title": "ETSI TR 103 966 V1.1.1 (2024-10), CYBER Security (CYBER); Quantum-Safe Cryptography (QSC); Deployment Considerations for Hybrid Schemes",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "ETSI TR 103 966 V1.1.1 (2024-10) TECHNICAL REPORT CYBER Security (CYBER); Quantum-Safe Cryptography (QSC); Deployment Considerations for Hybrid Schemes",
+          "locator": "Cover page",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103900_103999/103966/01.01.01_60/tr_103966v010101p.pdf",
+          "title": "ETSI TR 103 966 V1.1.1 (2024-10), CYBER Security (CYBER); Quantum-Safe Cryptography (QSC); Deployment Considerations for Hybrid Schemes",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The present document explores issues around combining traditional and post-quantum algorithms to construct hybrid cryptographic schemes. ... The present document does not provide guidance on whether or not to use hybrid schemes.",
+          "locator": "Clause 1, Scope, p. 6",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.etsi.org/deliver/etsi_tr/103900_103999/103966/",
+          "title": "www.etsi.org - /deliver/etsi_tr/103900_103999/103966/",
+          "publisher": "ETSI",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[To Parent Directory] 10/7/2024 12:53 PM <dir> 01.01.01_60",
+          "locator": "Deliver directory listing (one version only)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ISO-IEC-14888-4",
+      "label": "ISO/IEC 14888-4:2024 (stateful hash-based signatures)",
+      "body": "ISO/IEC",
+      "bodyId": "iso-iec",
+      "kind": "stateful-signature",
+      "standardStatus": "final",
+      "bodyStatus": "International Standard published [60.60]",
+      "statusDate": "2024-06-24",
+      "statusPrecision": "day",
+      "deliverable": "iso-is",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.iso.org/standard/80492.html",
+      "synonyms": [
+        {
+          "text": "ISO/IEC 14888-4",
+          "type": "official"
+        },
+        {
+          "text": "ISO/IEC 14888-4:2024",
+          "type": "official"
+        },
+        {
+          "text": "Stateful hash-based mechanisms",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.iso.org/standard/80492.html",
+          "title": "ISO/IEC 14888-4:2024 - Information security - Digital signatures with appendix - Part 4: Stateful hash-based mechanisms",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Status : Published Publication date : 2024-06 Stage : International Standard published [60.60] Edition : 1 Number of pages : 56 Technical Committee : ISO/IEC JTC 1/SC 27",
+          "locator": "Standard page, General information",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/80492.html",
+          "title": "ISO/IEC 14888-4:2024, life cycle",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "50.60 2024-05-02 Close of voting. Proof returned by secretariat 60 Publication 60.00 2024-05-02 International Standard under publication 60.60 2024-06-24 International Standard published",
+          "locator": "Standard page, Life cycle panel",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/80492.html",
+          "title": "ISO/IEC 14888-4:2024, abstract",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "This document specifies stateful digital signature mechanisms with appendix, where the level of security is determined by the security properties of the underlying hash function.",
+          "locator": "Standard page, Abstract",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/80492.html",
+          "title": "Preview ISO/IEC 14888-4:2024",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "2 Normative references There are no normative references in this document.",
+          "locator": "Public preview (Read sample), clause 2; bibliography entries [2], [3] and [12] give the buildsOn excerpts",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ISO-IEC-18033-2-AMD2",
+      "label": "ISO/IEC 18033-2:2006/Amd 2:2026 (asymmetric ciphers, amendment 2)",
+      "body": "ISO/IEC",
+      "bodyId": "iso-iec",
+      "kind": "kem",
+      "standardStatus": "final",
+      "bodyStatus": "International Standard published [60.60]",
+      "statusDate": "2026-06-05",
+      "statusPrecision": "day",
+      "deliverable": "iso-amd",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "FIPS-203"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.iso.org/standard/86890.html",
+      "synonyms": [
+        {
+          "text": "ISO/IEC 18033-2:2006/Amd 2:2026",
+          "type": "official"
+        },
+        {
+          "text": "ISO/IEC 18033-2:2006/Amd 2",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "ISO/IEC 18033-2:2006/Amd 2:2026 - Information technology - Security techniques - Encryption algorithms - Part 2: Asymmetric ciphers - Amendment 2",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Status : Published Publication date : 2026-06 Stage : International Standard published [60.60] Edition : 1 Number of pages : 58 Technical Committee : ISO/IEC JTC 1/SC 27",
+          "locator": "Standard page, General information",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "ISO/IEC 18033-2:2006/Amd 2:2026, life cycle",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "50.60 2026-05-01 Close of voting. Proof returned by secretariat 60 Publication 60.00 2026-05-01 International Standard under publication 60.60 2026-06-05 International Standard published",
+          "locator": "Standard page, Life cycle panel",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "Preview ISO/IEC 18033-2:2006/Amd 2:2026, table of contents",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Table of Contents Foreword 13 The Classic McEliece KEM 13.1 General ... 14 FrodoKEM 14.1 General ... 15 ML-KEM key encapsulation mechanism 15.1 General",
+          "locator": "Public preview (Read sample), table of contents",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "Preview ISO/IEC 18033-2:2006/Amd 2:2026, table of contents",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Annex D Resources and implementation guidance for Classic McEliece Annex E Resources and implementation guidance for FrodoKEM E.1 Specification and security E.2 Implementation guidance Annex F Resources and implementation guidance for ML-KEM",
+          "locator": "Public preview (Read sample), table of contents, annexes",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.iso.org/standard/86890.html",
+          "title": "ISO/IEC 18033-2:2006/Amd 2:2026 - Information technology - Security techniques - Encryption algorithms - Part 2: Asymmetric ciphers - Amendment 2",
+          "publisher": "ISO",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "[80] National Institute of Standards and Technology. Federal Information Processing Standards Publication (FIPS) 203 Module-Lattice-based Key-Encapsulation Mechanism Standard. (U.S. Department of Commerce, Washington, DC), August 2024. Available at https://csrc.nist.gov/pubs/fips/203/final",
+          "locator": "Names FIPS-203, which this standard builds on",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "ITU-T-X509",
+      "label": "ITU-T X.509 (alternative algorithm extensions)",
+      "body": "ITU-T",
+      "bodyId": "itu-t",
+      "kind": "pki",
+      "standardStatus": "final",
+      "bodyStatus": "In force",
+      "statusDate": "2019-10-14",
+      "statusPrecision": "day",
+      "deliverable": "itu-rec",
+      "normative": true,
+      "version": "X.509 (10/19)",
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://www.itu.int/rec/T-REC-X.509-201910-I/en",
+      "synonyms": [
+        {
+          "text": "ITU-T X.509",
+          "type": "official"
+        },
+        {
+          "text": "Recommendation X.509",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://www.itu.int/rec/T-REC-X.509-201910-I/en",
+          "title": "X.509 : Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Recommendation X.509 (10/19) Approved in 2019-10-14 Status : In force",
+          "locator": "Recommendation page for X.509 (10/19)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.itu.int/dms_pubrec/itu-t/rec/x/T-REC-X.509-201910-I!!TOC-HTM-E.htm",
+          "title": "Table of contents, ITU-T Rec. X.509 (10/2019)",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "9.8 Alternative cryptographic algorithms and digital signature extensions 9.8.1 Introduction 9.8.2 Subject alternative public key information extension 9.8.3 Alternative signature algorithm extension 9.8.4 Alternative signature value",
+          "locator": "Table of contents, clause 9.8",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.509-201910-I!!PDF-E&type=items",
+          "title": "Rec. ITU-T X.509 (10/2019) | ISO/IEC 9594-8:2020",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "There is a need to provide capabilities for easy migration within a PKI from one set of cryptographic algorithms to another more suitable set of cryptographic algorithms. The following cryptographic algorithm and digital signature extensions are defined for that purpose:",
+          "locator": "Clause 9.8.1, p. 58",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.itu.int/rec/T-REC-X.509/en",
+          "title": "X.509 : Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "X.509 (2019) Corrigendum 2 (10/23) In force X.509 (2019) Amendment 1 (10/24) Miscellaneous enhancements In force X.509 (2019) Corrigendum 3 (07/26) In force (prepublished) X.509 (2019) Corrigendum 1 (10/21) In force",
+          "locator": "Recommendation X.509 overview, In force components table",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.itu.int/dms_pubrec/itu-t/rec/x/T-REC-X.509-202410-I!Amd1!SUM-HTM-E.htm",
+          "title": "Summary, X.509 (2019) Amendment 1 (10/24)",
+          "publisher": "ITU",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Recommendation ITU-T X.509 (2019) | International Standard ISO/IEC 9594-8:2020, Amendment 1 introduces text updates to facilitate separation between cybersecurity ASN.1 modules and directory ASN.1 modules.",
+          "locator": "Amendment 1 summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "X9-146",
+      "label": "X9.146 (quantum-safe TLS handshake extension)",
+      "body": "ANSI X9",
+      "bodyId": "x9",
+      "kind": "protocol",
+      "standardStatus": "in-development",
+      "bodyStatus": "Listed under “Current Standard Projects” as X9.146-202X",
+      "statusDate": "2025-01-27",
+      "statusPrecision": "day",
+      "deliverable": "x9-standard",
+      "normative": true,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [
+        "ITU-T-X509"
+      ],
+      "cascade": false,
+      "national": null,
+      "url": "https://x9.org/wp-content/uploads/2026/01/POW-2025-V4.pdf",
+      "synonyms": [
+        {
+          "text": "X9.146",
+          "type": "official"
+        },
+        {
+          "text": "Quantum-Safe TLS Handshake Extension",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://x9.org/wp-content/uploads/2026/01/POW-2025-V4.pdf",
+          "title": "ASC X9 Program of Work, Rev-2.4, January 27, 2025",
+          "publisher": "Accredited Standards Committee X9",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "X9F5 Chair - Tim Hollebeek X9F5 Vice Chair - Clay Epstein Current Standard Projects 1. X9.146-202X Quantum-Safe TLS Handshake Extension",
+          "locator": "Section 10.3, X9F5 Financial PKIs Work Group, p. 32 (cover: Rev-2.4, January 27, 2025)",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://x9.org/standards/x9-project-status/x9f-data-information-security-subcommittee-project-status/",
+          "title": "X9F Data and Information Security Subcommittee - Project Status",
+          "publisher": "Accredited Standards Committee X9",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "X9.146 Quantum-Safe TLS Handshake Extension Project Description| The TLS protocol and X.509 certificates are widely used in the financial services for (i) optional client mutual ... authentication and (ii) key establishment, both needing certificate validation.",
+          "locator": "X9F project status page, X9.146 entry (undated; ends 'To participate in the development of this standard click here'); the ellipsis replaces a stray control character in the page text",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://x9.org/standards/x9-project-status/x9f-data-information-security-subcommittee-project-status/",
+          "title": "X9F Data and Information Security Subcommittee - Project Status",
+          "publisher": "Accredited Standards Committee X9",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Call For Experts ASC X9 TR 63 Test Plan for X9.146 QTLS Project Description| The X9.146 test plan needs to be published and available as a TR for (a) testing the X9.146 TLS protocol extension for interoperability by others, and (b) socializing the adoption of the X9.146 standard across the global financial services industry.",
+          "locator": "X9F project status page, first entry",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://x9.org/standards/x9-project-status/x9f-data-information-security-subcommittee-project-status/",
+          "title": "ASC X9 Program of Work, Rev-2.4, January 27, 2025",
+          "publisher": "Accredited Standards Committee X9",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "The most recent version of X.509, published in late 2019, allows certificates to contain two digital signatures, a native digital signature and an alternate digital signature. The TLS protocol is unaware of this new X.509 capability and unable to process an alternative signature.",
+          "locator": "Names ITU-T-X509, which this standard builds on",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "CEN-CLC-JT022002",
+      "label": "CEN/CLC JTC 22 WI JT022002 (QKD and PQC compared)",
+      "body": "CEN-CENELEC",
+      "bodyId": "cen-cenelec",
+      "kind": "transition",
+      "standardStatus": "in-development",
+      "bodyStatus": "Under Drafting",
+      "statusDate": "2024-01-17",
+      "statusPrecision": "day",
+      "deliverable": "cen-wi",
+      "normative": false,
+      "version": null,
+      "supersedes": null,
+      "buildsOn": [],
+      "cascade": false,
+      "national": null,
+      "url": "https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:79066,25&cs=122C7321F9E80BB84442A3C5274D7C58C",
+      "synonyms": [
+        {
+          "text": "JT022002",
+          "type": "official"
+        },
+        {
+          "text": "An equitable analysis and comparison of both technologies",
+          "type": "official"
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-10-05",
+      "provenance": [
+        {
+          "url": "https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:79066,25&cs=122C7321F9E80BB84442A3C5274D7C58C",
+          "title": "CEN-CENELEC project page, prCEN/CLC/TR XXX (WI JT022002)",
+          "publisher": "CEN-CENELEC",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "Project Reference prCEN/CLC/TR XXX Title QKD and PQC – An equitable analysis and comparison of both technologies Work Item Number JT022002 Abstract/Scope This document provides an equitable analysis of how the Quantum Key Distribution (QKD) and Post-quantum Cryptography (PQC) technologies relate to each other.",
+          "locator": "Project page, Project Reference, Title, Work Item Number and Abstract/Scope fields",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://standards.cencenelec.eu/ords/f?p=205:22:::::FSP_ORG_ID,FSP_LANG_ID:3197951,25&cs=1066809BE01B5D4C6C5F09BEBB99C7257",
+          "title": "CEN/CLC/JTC 22 Work programme",
+          "publisher": "CEN-CENELEC",
+          "retrievedAt": "2026-10-05",
+          "excerpt": "prCEN/CLC/TR XXX (WI=JT022002) QKD and PQC – An equitable analysis and comparison of both technologies Under Drafting 2024-01-17 2024-01-17 2024-07-17",
+          "locator": "JTC 22 work programme table (columns: Project reference, Status, Initial Date, Current Stage, Next Stage, Forecasted voting date)",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    }
+  ]
+}

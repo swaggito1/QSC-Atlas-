@@ -20,5 +20,16 @@
     "url": "https://research.rada.gov.ua/uploads/documents/33304.pdf",
     "summary": "A parliamentary research PDF from the Research Service of Ukraine's parliament that repeatedly matched Ukrainian-language post-quantum cryptography searches. Its full text could not be parsed to confirm an explicit PQC reference, so it is flagged for human review rather than auto-included.",
     "included": false
+  },
+  {
+    "title": "Key international and Ukrainian news in cybersecurity domain, January 2024",
+    "country": "UKR",
+    "issuingOrg": "NSDC",
+    "year": 2024,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.rnbo.gov.ua/en/Diialnist/6788.html",
+    "summary": "Monthly digest from the National Security and Defense Council of Ukraine covering key international and Ukrainian cybersecurity news for January 2024. Among its items, it notes that quantum computing and post-quantum encryption concern security agencies again, citing NATO's first quantum strategy and NSA discussions.",
+    "included": true
   }
 ]

@@ -1,0 +1,27 @@
+---
+// The optional "Not for you?" line (spec 11, item 7): one muted line that sends a visitor who
+// came with another question to the page that answers it. "Comparing whole countries? Compare
+// target dates". The question part stays muted and the rest is the link; with no question mark
+// the whole text is the link. No arrow follows it: a link already leads somewhere, and the arrow
+// is kept for the rows of Where to go next (épuré audit, finding 22). An arrow written into the
+// text is dropped here. Nothing renders when the destination is not built.
+import '../../../styles/frame.css';
+
+interface Props {
+  text: string;
+  href: string | null;
+}
+const { text, href } = Astro.props;
+const q = text.indexOf('? ');
+const lead = q >= 0 ? text.slice(0, q + 1) : '';
+const link = (q >= 0 ? text.slice(q + 2) : text).replace(/\s*→\s*$/, '');
+---
+
+{
+  href && link && (
+    <p class="fr-nfy">
+      {lead && `${lead} `}
+      <a href={href}>{link}</a>
+    </p>
+  )
+}

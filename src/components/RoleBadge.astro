@@ -1,7 +1,7 @@
 ---
-// The standards-role annotation: whose algorithms a country runs. Rendered as small
-// uppercase muted text, not a second boxed chip competing with the posture. Renders
-// nothing when no role is recorded.
+// The standards-role annotation: whose algorithms a country runs. Rendered as muted text in
+// sentence case at the small step, weight 400, not a second boxed chip competing with the
+// posture. Renders nothing when no role is recorded.
 import { roleMeta } from '../lib/process';
 
 interface Props {
@@ -17,9 +17,8 @@ const meta = roleMeta(value);
 <style>
   .role-badge {
     font-family: var(--font-instrument);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui);
     color: var(--ink-muted);
     white-space: nowrap;
   }

@@ -1,0 +1,379 @@
+{
+  "_about": "What to record about each system that uses cryptography, in the guides’ own words (spec 5.2): the per-system facts of section 3.2 of the Canadian roadmap, the two facts about data in the NCSC’s discovery and assessment, the NCSC’s migration approach for each system, and the EU roadmap’s advice on a standard format. Every record was read at its source on 1 October 2026. A field with column false is advice about the inventory as a whole and never a column of the template. The template CSV is a header row only, each header naming its source.",
+  "notes": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is important to not be overwhelmed in completing the discovery and to begin with an initial, incomplete inventory with actions to iteratively improve the data.",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ca-start-incomplete",
+      "text": "Start with an initial, incomplete inventory and improve it as you go, rather than waiting for a complete one.",
+      "source": "ca-roadmap"
+    }
+  ],
+  "fields": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The information gathered in this phase will be used to create an inventory that should include the following information per system:",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "system",
+      "label": "System",
+      "record": "The system the row describes. The roadmap asks for each of the facts below per system.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "system components employing cryptography",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "components",
+      "label": "Components that use cryptography",
+      "record": "Each part of the system that uses cryptography.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "vendor and product version for each of the components",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "vendor-version",
+      "label": "Vendor and product version",
+      "record": "Who makes each of those components, and which version is in use.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "security controls that rely upon the identified cryptography",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "controls",
+      "label": "Security controls that rely on it",
+      "record": "The security controls that depend on that cryptography.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "applicable network security zones",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "zones",
+      "label": "Network security zones",
+      "record": "The network security zones that apply to the system.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "current cryptographic configurations",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "configuration",
+      "label": "Current cryptographic configuration",
+      "record": "How the cryptography is configured today.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "hosting platform",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "These may be hosted on-premises, within contracted IT platforms, or a cloud service provider, or under employee possession.",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "hosting",
+      "label": "Hosting platform",
+      "record": "Where the system is hosted: on premises, on a contracted IT platform, with a cloud service provider, or on a device an employee holds.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "system dependencies",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "dependencies",
+      "label": "System dependencies",
+      "record": "The other systems and components this one depends on.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "relevant service contracts and expiry dates",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "contracts",
+      "label": "Service contracts and expiry dates",
+      "record": "The service contracts that cover the system, and when each one ends.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "expected refresh year for the system or its components",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "refresh",
+      "label": "Expected refresh year",
+      "record": "The year the system or its components are due to be refreshed.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "responsible departmental point of contact",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "contact",
+      "label": "Point of contact",
+      "record": "The person in your organisation who is responsible for the system.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "if the system should be prioritized for migration",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "It is recommended that any systems susceptible to a HNDL threat be a high priority for migrating to PQC.",
+          "locator": "Section 3.2 Identification",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "priority",
+      "label": "Priority for migration",
+      "record": "Whether the system should move first. The roadmap gives high priority to any system open to harvest now, decrypt later.",
+      "source": "ca-roadmap",
+      "locator": "Section 3.2 Identification",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "forming a record of the data you hold (including its expected lifetime and its value to an adversary)",
+          "locator": "Planning your PQC migration, Discovery and assessment",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "data-lifetime",
+      "label": "Expected lifetime of the data",
+      "record": "How long the data the system holds is expected to need protecting.",
+      "source": "ncsc-timelines",
+      "locator": "Planning your PQC migration, Discovery and assessment",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "forming a record of the data you hold (including its expected lifetime and its value to an adversary)",
+          "locator": "Planning your PQC migration, Discovery and assessment",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "data-value",
+      "label": "Value of the data to an adversary",
+      "record": "What the data the system holds would be worth to an attacker.",
+      "source": "ncsc-timelines",
+      "locator": "Planning your PQC migration, Discovery and assessment",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "You will need to decide on an approach for the migration of each system, service or product that you are responsible for.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "approach",
+      "label": "Migration approach",
+      "record": "The route you choose for the system: one of the NCSC’s five options, or one of the two cases where it says no choice is needed.",
+      "source": "ncsc-timelines",
+      "locator": "Planning your PQC migration, Migration strategy selection",
+      "column": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Using a standardised format for a cryptographic inventory, like CBOM (Cryptographic Bill of Materials, an extension of the SBOM standard), is recommended.",
+          "locator": "p. 11, section 6.2 First Steps, Support mature cryptographic asset management",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "format",
+      "label": "A standard format",
+      "record": "Keep the inventory in a standard format where you can. The EU roadmap recommends one such as CBOM, the Cryptographic Bill of Materials, an extension of the SBOM standard.",
+      "source": "eu-roadmap",
+      "locator": "p. 11, section 6.2 First Steps, Support mature cryptographic asset management",
+      "column": false
+    }
+  ]
+}

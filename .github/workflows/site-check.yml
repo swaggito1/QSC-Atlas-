@@ -1,0 +1,39 @@
+# qscatlas.org: the release gate on every pull request (spec 14.5 and 23, package site-checks).
+# It runs offline: the site builds from the JSON copy (ATLAS_OFFLINE=1), so no Notion secret is
+# read or needed, and the comparison with Notion reports that it was skipped. lab:check validates
+# the lab data, runs the tests and scans the house style; site:check scans the source for
+# hard-coded links to gated pages, builds each release mode (every flag as in tools.json, a
+# preview with every Atlas tool, and each Atlas tool alone) and checks every built page, the
+# sitemap and robots.txt. Nothing is deployed and VERCEL is never set, so a forced flag can only
+# act inside this job.
+name: site-check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: site-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  site-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      ATLAS_OFFLINE: '1'
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Lab data, tests and house style
+        run: npm run lab:check
+      - name: Source, release modes and built pages
+        run: npm run site:check

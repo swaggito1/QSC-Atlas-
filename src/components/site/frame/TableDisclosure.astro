@@ -1,0 +1,33 @@
+---
+// "Show as a table" (spec 11, item 11): the table alternative every view carries, behind a
+// native details element so it is one step away and works without JavaScript. Date tools pass
+// openOnPhones: below 640px it opens by default, where a table reads better than a chart.
+// The table goes in the slot; give it class "is-stack" and data-label on each cell and it
+// becomes hairline-ruled rows under 640px (lab.css).
+import '../../../styles/lab.css';
+
+interface Props {
+  summary?: string;
+  open?: boolean;
+  openOnPhones?: boolean;
+  id?: string;
+}
+const { summary = 'Show as a table', open = false, openOnPhones = false, id } = Astro.props;
+---
+
+<details class="lab-table" open={open} data-fr-open-phones={openOnPhones ? '' : undefined} id={id}>
+  <summary>{summary}</summary>
+  <slot />
+</details>
+
+<script>
+  // below 640px a date tool's table starts open; the visitor's own choice is never overridden
+  if (window.matchMedia('(max-width: 639px)').matches) {
+    document.querySelectorAll<HTMLDetailsElement>('details[data-fr-open-phones]:not([data-fr-touched])').forEach((d) => {
+      d.open = true;
+    });
+  }
+  document.querySelectorAll<HTMLDetailsElement>('details[data-fr-open-phones]').forEach((d) => {
+    d.querySelector('summary')?.addEventListener('click', () => d.setAttribute('data-fr-touched', ''));
+  });
+</script>

@@ -1,0 +1,115 @@
+# QSC Atlas Labs: the weekly watch. Fetches every enabled source in labs/config/watchlist.yaml,
+# commits updated snapshots and state to main, and when anything changed runs the lab-triage
+# skill and opens one pull request per proposal. Nothing merges here.
+# Secrets: CLAUDE_CODE_OAUTH_TOKEN (claude setup-token) and LAB_BOT_TOKEN (fine-grained token,
+# this repository only, contents and pull requests write), so the pull requests trigger lab-gate.
+name: lab-watch
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated watchlist ids to run (blank runs all enabled sources)"
+        required: false
+        default: ""
+
+concurrency:
+  group: lab-watch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      changed: ${{ steps.watch.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install PDF text extraction
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: npm ci
+      - name: Fetch, normalise, hash and diff every enabled source
+        id: watch
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+        run: node scripts/lab/watch.mjs --only "$ONLY" --out labs/.watch/changes.json
+      - name: Commit updated snapshots and state
+        run: |
+          git config user.name "qsc-atlas-lab-bot"
+          git config user.email "lab-bot@users.noreply.github.com"
+          git add data/lab/watch
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lab-watch): update source snapshots"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v7
+        with:
+          name: lab-changes
+          path: labs/.watch/changes.json
+          if-no-files-found: ignore
+
+  triage:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.LAB_BOT_TOKEN || github.token }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: lab-changes
+          path: labs/.watch
+      - name: Read the pinned triage model from autonomy.yaml
+        id: model
+        run: node -e "const y=require('yaml');const fs=require('fs');console.log('name='+y.parse(fs.readFileSync('labs/config/autonomy.yaml','utf8')).model.pinned)" >> "$GITHUB_OUTPUT"
+      - name: Triage changes into proposals (Claude)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # The workflow's own token: the triage step only reads the repository and writes local
+          # files, so the Claude GitHub App does not need to be installed.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "/lab-triage labs/.watch/changes.json"
+          claude_args: |
+            --model ${{ steps.model.outputs.name }}
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebFetch,Bash(git show *),Bash(git log *),Bash(node scripts/lab/*),Bash(node labs/tools/style-scan.mjs *)"
+      - name: Validate proposals mechanically
+        # a failing proposal is reported here; open-prs.mjs skips it and still opens the valid ones
+        continue-on-error: true
+        run: node scripts/lab/check-proposals.mjs labs/.watch/proposals
+      - name: Open one pull request per proposal
+        env:
+          GH_TOKEN: ${{ secrets.LAB_BOT_TOKEN }}
+        run: node scripts/lab/open-prs.mjs labs/.watch/proposals
+      - name: Keep the proposals and the triage log with the run
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: lab-proposals
+          path: labs/.watch/proposals
+          if-no-files-found: ignore

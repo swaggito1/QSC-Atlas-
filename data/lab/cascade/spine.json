@@ -1,0 +1,374 @@
+{
+  "_about": "Spine of the Standards Cascade: the dated standards events that edges attach to, the coordination milestones and the sovereign branches. Each entry was read on the issuing body's own page on 30 September 2026, with a verbatim excerpt. The relation on each sovereign branch is carried over from the seed as analytical coding; the excerpts confirm only the event and its date.",
+  "spine": [
+    {
+      "id": "nist-call",
+      "date": "2016-12-20",
+      "precision": "day",
+      "label": "NIST opens its call for post-quantum public-key algorithms, with nominations due by 30 November 2017.",
+      "body": "NIST",
+      "kind": "nist",
+      "standards": [],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/news/2016/public-key-post-quantum-cryptographic-algorithms",
+          "title": "Announcing Request for Nominations for Public-Key Post-Quantum Cryptographic Algorithms",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Announcing Request for Nominations for Public-Key Post-Quantum Cryptographic Algorithms December 20, 2016 ... The purpose of this notice is to announce that nominations for post-quantum candidate algorithms may now be submitted, up until the final deadline of November 30, 2017.",
+          "locator": "News item, headline, date and third paragraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nist-selection",
+      "date": "2022-07-05",
+      "precision": "day",
+      "label": "NIST selects CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON and SPHINCS+ for standardisation.",
+      "body": "NIST",
+      "kind": "nist",
+      "standards": [
+        "FIPS-203",
+        "FIPS-204",
+        "FIPS-205",
+        "FIPS-206"
+      ],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4",
+          "title": "PQC Standardization Process: Announcing Four Candidates to be Standardized, Plus Fourth Round Candidates",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "PQC Standardization Process: Announcing Four Candidates to be Standardized, Plus Fourth Round Candidates July 05, 2022 ... NIST will recommend two primary algorithms to be implemented for most use cases: CRYSTALS-KYBER (key-establishment) and CRYSTALS-Dilithium (digital signatures). In addition, the signature schemes FALCON and SPHINCS+ will also be standardized.",
+          "locator": "News item, headline, date and section 'PQC Standardization'",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "rus-gost",
+      "date": "2024-03-29",
+      "precision": "day",
+      "label": "Russia's cryptography standards committee, TC 26, reports that Kodieum, a national post-quantum key exchange, is being discussed and drafted as a methodological recommendation for standardisation.",
+      "body": "Technical Committee for Standardisation 26, Cryptographic Information Protection (Russia)",
+      "kind": "sovereign",
+      "standards": [
+        "RUS-GOST-PQ"
+      ],
+      "iso3": "RUS",
+      "relation": "fork",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://tc26.ru/news/novosti-kriptografii/v-rossii-razrabotan-kriptograficheskiy-mekhanizm-sposobnyy-vyderzhivat-ataki-kvantovykh-kompyuterov.html",
+          "title": "В России разработан криптографический механизм, способный выдерживать атаки квантовых компьютеров.",
+          "publisher": "Технический комитет по стандартизации «Криптографическая защита информации» (ТК 26)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "29.03.2024 Сотрудники российской компании «Криптонит» разработали криптографический механизм «Кодиеум». ... На данный момент новый механизм проходит процедуры обсуждения и разработки проекта методических рекомендаций по стандартизации. После этого он будет опубликован для открытого обсуждения на сайте ТК26.",
+          "locator": "TC 26 site, section 'Новости криптографии' (cryptography news); the item links to CNews as its source",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://tc26.ru/about/structure/",
+          "title": "Структура",
+          "publisher": "Технический комитет по стандартизации «Криптографическая защита информации» (ТК 26)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Рабочая группа 2.5 Постквантовые криптографические механизмы",
+          "locator": "Committee structure page, working groups of subcommittee 2",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "eu-rec-2024-1101",
+      "date": "2024-04-11",
+      "precision": "day",
+      "label": "The European Commission adopts Recommendation (EU) 2024/1101, asking Member States to agree a coordinated roadmap for the move to post-quantum cryptography.",
+      "body": "European Commission",
+      "kind": "coordination",
+      "standards": [],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://publications.europa.eu/resource/cellar/c7056d4f-f869-11ee-a251-01aa75ed71a1.0006.03/DOC_1",
+          "title": "Commission Recommendation (EU) 2024/1101 of 11 April 2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography",
+          "publisher": "Publications Office of the European Union (Official Journal of the European Union, L series)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Official Journal of the European Union EN L series 2024/1101 12.4.2024 COMMISSION RECOMMENDATION (EU) 2024/1101 of 11 April 2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography",
+          "locator": "Official Journal header and title (CELEX 32024H1101, ELI http://data.europa.eu/eli/reco/2024/1101/oj). Read from CELLAR because EUR-Lex refused the automated client",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://publications.europa.eu/resource/cellar/c7056d4f-f869-11ee-a251-01aa75ed71a1.0006.03/DOC_1",
+          "title": "Commission Recommendation (EU) 2024/1101 of 11 April 2024 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography",
+          "publisher": "Publications Office of the European Union (Official Journal of the European Union, L series)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The Post-Quantum Cryptography Coordinated Implementation Roadmap should be available after a period of two years following the publication of this Recommendation",
+          "locator": "Section 2, Coordinated Implementation Roadmap addressing the transition to Post-Quantum Cryptography",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "fips-203-204-205",
+      "date": "2024-08-13",
+      "precision": "day",
+      "label": "NIST publishes its first three post-quantum standards: FIPS 203 (ML-KEM), FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA).",
+      "body": "NIST",
+      "kind": "nist",
+      "standards": [
+        "FIPS-203",
+        "FIPS-204",
+        "FIPS-205"
+      ],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved",
+          "title": "Announcing Approval of Three Federal Information Processing Standards (FIPS) for Post-Quantum Cryptography",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Announcing Approval of Three Federal Information Processing Standards (FIPS) for Post-Quantum Cryptography August 13, 2024 ... The Secretary of Commerce has approved three Federal Information Processing Standards (FIPS) for post-quantum cryptography: FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard FIPS 204, Module-Lattice-Based Digital Signature Standard FIPS 205, Stateless Hash-Based Digital Signature Standard",
+          "locator": "News item, headline, date and opening list",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nist-ir-8547-draft",
+      "date": "2024-11-12",
+      "precision": "day",
+      "label": "NIST releases IR 8547 as an initial public draft: quantum-vulnerable algorithms disallowed after 2035, and those at 112-bit strength deprecated after 2030. It was still a draft on 30 September 2026.",
+      "body": "NIST",
+      "kind": "nist",
+      "standards": [
+        "NIST-IR-8547"
+      ],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+          "title": "NIST IR 8547 (Initial Public Draft), Transition to Post-Quantum Cryptography Standards",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "NIST IR 8547 (Initial Public Draft) Transition to Post-Quantum Cryptography Standards ... Date Published: November 12, 2024 Comments Due: January 10, 2025 (public comment period is CLOSED)",
+          "locator": "Publication page header",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf",
+          "title": "NIST IR 8547 ipd, Transition to Post-Quantum Cryptography Standards",
+          "publisher": "National Institute of Standards and Technology",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "ECDSA [FIPS186] 112 bits of security strength Deprecated after 2030 Disallowed after 2035",
+          "locator": "Section 4.1.1, Table 2 (quantum-vulnerable digital signature algorithms), p. 13; table cells read along the first row",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/publications",
+          "title": "Post-Quantum Cryptography: Publications",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "IR 8547 Transition to Post-Quantum Cryptography Standards Draft 11/12/2024",
+          "locator": "Project publications list as shown on 30 September 2026 (status column)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "kor-kpqc",
+      "date": "2025-01-16",
+      "precision": "day",
+      "label": "South Korea's KpqC competition names four national post-quantum algorithms: AIMer and HAETAE for signatures, NTRU+ and SMAUG-T for key encapsulation.",
+      "body": "KpqC research group (South Korea)",
+      "kind": "sovereign",
+      "standards": [
+        "KOR-KPQC"
+      ],
+      "iso3": "KOR",
+      "relation": "parallel-interoperable",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://kpqc.or.kr/competition_02.html",
+          "title": "KpqC Competition Round 2",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Selected Algorithms from the KpqC Competition Round 2 (January 16, 2025) After careful consideration during Round 2 of the KpqC competition, the KpqC team is pleased to announce the final algorithms. Round2 candidates Digital Signature PKE/KEM AIMer NTRU+ HAETAE SMAUG-T",
+          "locator": "Competition page, Round 2 result announcement and table (columns: Digital Signature, PKE/KEM)",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://kpqc.or.kr/contents/03_exhibit/board.html?board_id=board_competition&mode=view&no=9&cate=",
+          "title": "양자내성암호 국가공모전 2라운드(최종) 결과 발표",
+          "publisher": "양자내성암호연구단 (KpqC research group)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "작성일 2025-01-16 15:30:31 ... 「양자내성암호 국가공모전」의 2라운드(최종) 알고리즘 4종을 아래와 같이 발표합니다. (국가정보원 홈페이지 공지사항 참조) A. 전자서명 - AIMer - HAETAE B. 공개키암호/키설정 - NTRU+ - SMAUG-T",
+          "locator": "Competition notice board, notice of 16 January 2025",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "chn-ngcc",
+      "date": "2025-02-05",
+      "precision": "day",
+      "label": "China's Institute of Commercial Cryptography Standards launches a global call for next-generation commercial cryptographic algorithms, citing the threat of quantum computing.",
+      "body": "Institute of Commercial Cryptography Standards (ICCS), China",
+      "kind": "sovereign",
+      "standards": [
+        "CHN-NGCC"
+      ],
+      "iso3": "CHN",
+      "relation": "fork",
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.niccs.org.cn/niccs/Notice/pc/content/content_1937428197396713472.html",
+          "title": "Announcement on Launching the Next-generation Commercial Cryptographic Algorithms Program (NGCC)",
+          "publisher": "Institute of Commercial Cryptography Standards (ICCS)",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Announcement on Launching the Next-generation Commercial Cryptographic Algorithms Program (NGCC) 2025-02-05 ... In response to the threat of quantum computing and to promote the standardization of the next-generation commercial cryptographic algorithms, the Institute of Commercial Cryptography Standards (ICCS) is launching a global program to call for proposals for next-generation public-key cryptographic algorithms (NGCC-PK)",
+          "locator": "English notice, title, date and first sentence",
+          "sourceClass": "new-institutional"
+        },
+        {
+          "url": "https://www.niccs.org.cn/symmbzyjy/tzgg/pc/content/1937422988373135360/content_1937422988373135360.html",
+          "title": "关于开展新一代商用密码算法征集活动的公告",
+          "publisher": "商用密码标准研究院",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "关于开展新一代商用密码算法征集活动的公告 2025-02-05 ... 为应对量子计算威胁，推动新一代商用密码算法标准制定，按照密码行业标准化技术委员会工作安排，我院将面向全球陆续开展新一代公钥密码算法、密码杂凑算法、分组密码算法征集活动",
+          "locator": "Chinese notice, title, date and first sentence",
+          "sourceClass": "new-institutional"
+        }
+      ]
+    },
+    {
+      "id": "hqc-selection",
+      "date": "2025-03-11",
+      "precision": "day",
+      "label": "NIST selects HQC as its second post-quantum key-encapsulation mechanism, a backup to ML-KEM.",
+      "body": "NIST",
+      "kind": "nist",
+      "standards": [
+        "HQC"
+      ],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://csrc.nist.gov/news/2025/hqc-announced-as-a-4th-round-selection",
+          "title": "NIST PQC Standardization Process | HQC Announced as a 4th Round Selection",
+          "publisher": "NIST Computer Security Resource Center",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "HQC Announced as a 4th Round Selection March 11, 2025 ... After a thorough evaluation in the Fourth Round of the NIST Post-Quantum Cryptography (PQC) Standardization Process, NIST has selected HQC for standardization. ... HQC will be the second PQC key-encapsulation mechanism (KEM), following ML-KEM.",
+          "locator": "News item, headline, date, first and third paragraphs",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+          "title": "NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption",
+          "publisher": "National Institute of Standards and Technology",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "NIST plans to issue a draft standard incorporating the HQC algorithm in about a year, with a finalized standard expected in 2027.",
+          "locator": "News release of March 11, 2025, summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "uk-ncsc-timelines",
+      "date": "2025-03-20",
+      "precision": "day",
+      "label": "The UK NCSC sets three migration milestones: goals, discovery and an initial plan by 2028, the highest-priority migration by 2031, and full migration by 2035.",
+      "body": "National Cyber Security Centre (United Kingdom)",
+      "kind": "coordination",
+      "standards": [
+        "FIPS-203",
+        "FIPS-204",
+        "FIPS-205",
+        "SP-800-208"
+      ],
+      "iso3": "GBR",
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The key milestones are: By 2028 Define your migration goals ... By 2031 Carry out your early, highest-priority PQC migration activities ... By 2035 Complete migration to PQC of all your systems, services and products ... Published 20 March 2025 Reviewed 20 March 2025 Version 1.0",
+          "locator": "Executive summary and page footer",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The PQC algorithms that will be the most widely used were standardised by NIST in 2024: ML-KEM (FIPS 203) ML-DSA (FIPS 204) SLH-DSA (FIPS 205) These supplement two earlier algorithms with a more limited set of uses: LMS, XMSS (NIST SP 800-208)",
+          "locator": "Section 'Maturity of PQC technology'",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "eu-nis-cg-roadmap",
+      "date": "2025-06-23",
+      "precision": "day",
+      "label": "EU Member States publish their coordinated roadmap through the NIS Cooperation Group: start the move to post-quantum cryptography by the end of 2026, and protect high-risk uses by the end of 2030.",
+      "body": "NIS Cooperation Group (EU Member States, supported by the European Commission)",
+      "kind": "coordination",
+      "standards": [],
+      "iso3": null,
+      "relation": null,
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography",
+          "publisher": "European Commission, Shaping Europe's digital future",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Publication 23 June 2025 The EU Member States, supported by the Commission, issued a roadmap and timeline to start using a more complex form of cybersecurity, the so-called post-quantum cryptography (PQC).",
+          "locator": "Library page, publication date and summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/post-quantum-cryptography",
+          "title": "Post-Quantum Cryptography",
+          "publisher": "European Commission, Shaping Europe's digital future",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "adopted the Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography in June 2025. ... All Member States should start transitioning to PQC by the end of 2026. At the same time, the protection of high-risk use cases should be transitioned to PQC as soon as possible, no later than by the end of 2030.",
+          "locator": "Policy page, paragraph on the NIS Cooperation Group work stream",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

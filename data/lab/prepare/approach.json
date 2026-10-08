@@ -1,0 +1,163 @@
+{
+  "_about": "The NCSC’s migration options for a system that does not rely on commodity technology, the two cases where it says no choice is needed, and its note on legacy systems, each read at its source on 1 October 2026 (Timelines for migration to post-quantum cryptography, Planning your PQC migration, Migration strategy selection). Labels are the NCSC’s own names for the options; summaries are the Atlas’s plain words.",
+  "options": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "In-place migration: replacing the vulnerable PKC components with PQC equivalents, making minimal changes to the rest of the system.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "in-place",
+      "label": "In-place migration",
+      "summary": "Replace the vulnerable public-key components with post-quantum equivalents, and change as little else as possible."
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Re-platform: switching the service to a new or upgraded platform that does offer PQC compatibility, perhaps taking the opportunity this exercise provides to review your broader architectural choices.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "re-platform",
+      "label": "Re-platform",
+      "summary": "Move the service to a new or upgraded platform that supports post-quantum cryptography, perhaps reviewing wider architecture choices at the same time."
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Retire the service: setting a future date for withdrawing it to avoid the necessity for migration.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "retire",
+      "label": "Retire the service",
+      "summary": "Set a future date to withdraw the service, so that it never needs migrating."
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Run until end-of-life, where a system is likely to be decommissioned or deprecated anyway within a defined timeframe.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "run-to-end",
+      "label": "Run until end-of-life",
+      "summary": "Keep the system running where it is due to be decommissioned or deprecated anyway, within a defined timeframe."
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Tolerate the risk: continuing to operate without a mitigation to the quantum computing threat.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "tolerate",
+      "label": "Tolerate the risk",
+      "summary": "Keep operating the system with no mitigation against the quantum threat."
+    }
+  ],
+  "notes": [
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "You may also have some systems that are not vulnerable to quantum computing attack (for example, because there is no PKC in use), in which case no action is required.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "no-pkc",
+      "label": "No public-key cryptography: no action",
+      "text": "A system that uses no public-key cryptography is not open to quantum attack, and the NCSC says no action is required.",
+      "noChoice": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Where you rely entirely on commodity platforms, it is likely that upgrades to PQC will be delivered by your service provider.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "In such cases you will not need to make wholesale changes beyond routine improvements that will come through normal, timely refresh of your commodity hardware (such as laptops, phones, servers and routers).",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "commodity",
+      "label": "Commodity platform: provider upgrades",
+      "text": "Where a system rests entirely on commodity platforms, the upgrade to post-quantum cryptography will most likely come from your service provider, through the normal refresh of laptops, phones, servers and routers.",
+      "noChoice": true
+    },
+    {
+      "verify": false,
+      "verifiedAt": "2026-10-01",
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Conversely, you may already have some legacy systems (long-lived physical infrastructure, old IT platforms and systems relying on outdated protocols) that are not capable of being transitioned to support PQC. Your strategy will need to account for this.",
+          "locator": "Planning your PQC migration, Migration strategy selection",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "legacy",
+      "label": null,
+      "text": "Some legacy systems cannot be moved to post-quantum cryptography at all: long-lived physical infrastructure, old IT platforms and systems that rely on outdated protocols. The NCSC says your strategy still has to account for them.",
+      "noChoice": false
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+---
+// The inventory template, /prepare/inventory (spec 5.2): what to record about each system that
+// uses cryptography. It opens with the template's download (a header row only, each column naming
+// its source) and one line on how to use it, then the fields as one numbered table, grouped by the
+// guide they come from: the column's number in the CSV, the field, and what to record in plain
+// words. Advice on the inventory as a whole (the EU roadmap's standard format) follows the table,
+// and the Readiness Check actions the page draws on close it. The guides' own words are kept for
+// review inside SourceWords (Words.astro), never shown to a visitor. On phones each row reads as
+// the number and field, then what to record. Nothing is entered here, stored or sent.
+//
+// Computed by src/lib/site/prepare-elements.ts; every visible string of the Atlas's own is in
+// data/lab/prepare/elements-copy.json.
+//
+// Épuré (labs/review/epure-audit.md): Download the template is the view's one filled button; the
+// table runs the page's column, each "What to record" at the reading measure; the guide named in
+// a bracketed source carries a 44px hit area (prepare-elements.css).
+import LabLayout from '../../../lab/LabLayout.astro';
+import Words from './Words.astro';
+import QuotedFrom from './QuotedFrom.astro';
+import { inventoryModel } from '../../../../lib/site/prepare-elements';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  tool: LabTool;
+}
+const { tool } = Astro.props;
+const m = inventoryModel();
+const c = m.copy;
+const start = m.start[0] ?? null;
+const tables = m.groups.filter((g) => g.rows.some((r) => r.column));
+const whole = m.groups.flatMap((g) => g.rows.filter((r) => !r.column).map((r) => ({ r, guide: g.guide })));
+const [headPre, headPost = ''] = c.groupHead.split('{guide}');
+// "p. 11" from "p. 11, section 6.2 First Steps, ...": the page alone when the locator opens on one
+const shortWhere = (loc: string) => {
+  const first = loc.split(', ')[0];
+  return /^(printed )?pp?\.\s/i.test(first) ? first : loc;
+};
+---
+
+<LabLayout
+  tool={tool}
+  question={c.question}
+  lede={m.lede}
+  description={m.description}
+  reads={m.reads}
+  asOf={m.asOf}
+  sources={m.sources}
+  next={m.next}
+>
+  <div class="pe pe-inv">
+    <div class="pe-go">
+      {
+        m.csv && (
+          <a class="lab-btn lab-btn--primary pe-dl" href={m.csv.href} download={m.csv.filename}>
+            {c.download}
+          </a>
+        )
+      }
+      <button type="button" class="pe-act" data-pe-print hidden>{m.common.print}</button>
+    </div>
+    {m.csv && <p class="pe-small pe-go-note">{c.downloadNote}</p>}
+
+    <p class="pe-para inv-how">
+      {c.howTo}
+      {
+        start && (
+          <>
+            {' '}
+            {start.text}
+            {' '}
+            <span class="inv-tag">{start.tag}</span>
+          </>
+        )
+      }
+    </p>
+    {start && <Words quotes={start.quotes} />}
+
+    <table class="inv">
+      <caption class="fr-sr">{c.question}</caption>
+      <thead>
+        <tr>
+          <th scope="col" class="inv-n">{c.colNo}</th>
+          <th scope="col">{c.colField}</th>
+          <th scope="col">{c.colRecord}</th>
+        </tr>
+      </thead>
+      {
+        tables.map((g) => (
+          <tbody>
+            <tr class="inv-g">
+              <th scope="colgroup" colspan="3" id={`inv-g-${g.guide.id}`}>
+                <span class="inv-gh">
+                  {headPre}
+                  {g.guide.href ? <a href={g.guide.href}>{g.guide.shortLabel}</a> : g.guide.shortLabel}
+                  {headPost}
+                </span>
+                <span class="pe-meta inv-gm">
+                  {g.where && <span>{g.where}</span>}
+                  {g.doc && (
+                    <span>
+                      <a href={g.doc.url} rel="noopener">
+                        {m.common.openSource}
+                      </a>
+                    </span>
+                  )}
+                </span>
+                {g.scope && <span class="inv-scope">{g.scope}</span>}
+              </th>
+            </tr>
+            {g.rows
+              .filter((r) => r.column)
+              .map((r) => (
+                <tr id={`field-${r.id}`}>
+                  <td class="inv-n">{r.n}</td>
+                  <th scope="row" class="inv-f">
+                    {r.label}
+                  </th>
+                  <td class="inv-r">
+                    {r.record}
+                    <Words quotes={r.quotes} />
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        ))
+      }
+    </table>
+
+    {
+      whole.length > 0 && (
+        <section class="inv-whole" aria-labelledby="inv-whole-h">
+          <h2 class="pe-h2" id="inv-whole-h">
+            {c.wholeHead}
+          </h2>
+          {whole.map(({ r, guide }) => (
+            <>
+              <p class="pe-para inv-whole-p" id={`field-${r.id}`}>
+                {r.record}{' '}
+                <span class="inv-tag">
+                  ({guide.href ? <a href={guide.href}>{guide.shortLabel}</a> : guide.shortLabel}, {shortWhere(r.locator)})
+                </span>
+              </p>
+              <Words quotes={r.quotes} />
+            </>
+          ))}
+        </section>
+      )
+    }
+
+    <QuotedFrom actions={m.actions} label={m.common.quotedFrom} />
+  </div>
+
+  <Fragment slot="method">
+    {m.method.map((p) => <p>{p}</p>)}
+  </Fragment>
+</LabLayout>
+
+<style>
+  /* one line on how to use the template, under the download */
+  .inv-how {
+    margin-top: var(--gap-group-lg);
+  }
+
+  /* the fields: one plain table, a hairline under each row, each guide's head in Newsreader */
+  .inv {
+    width: 100%;
+    margin-top: var(--gap-related);
+    border-collapse: collapse;
+    font-size: var(--type-control);
+    line-height: var(--leading-normal);
+  }
+  .inv thead th {
+    padding: 0 var(--space-4) var(--space-2) 0;
+    text-align: left;
+    vertical-align: bottom;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink-muted);
+  }
+  .inv tbody th,
+  .inv tbody td {
+    padding: var(--space-3) var(--space-4) var(--space-3) 0;
+    border-bottom: var(--rule);
+    text-align: left;
+    vertical-align: top;
+  }
+  .inv tbody tr > :last-child {
+    padding-right: 0;
+  }
+  .inv-g th {
+    padding-top: var(--space-8);
+    font-weight: var(--weight-ui);
+  }
+  .inv tbody:first-of-type .inv-g th {
+    padding-top: var(--gap-group);
+  }
+  .inv-gh {
+    display: block;
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+  }
+  .inv-gm {
+    display: block;
+    margin-top: var(--gap-mark);
+  }
+  /* 44px hit areas that move nothing and never overlap: the guide's name grows upwards, into the
+     room above the group, and "Open the document" grows downwards */
+  .inv-gh a,
+  .inv-gm a {
+    position: relative;
+  }
+  .inv-gh a::after,
+  .inv-gm a::after {
+    content: '';
+    position: absolute;
+    inset: min(0px, 100% - var(--target-min)) 0 0;
+  }
+  .inv-gm a::after {
+    inset: 0 0 min(0px, 100% - var(--target-min));
+  }
+  .inv-scope {
+    display: block;
+    max-width: var(--measure);
+    margin-top: var(--gap-mark);
+    font-size: var(--type-small);
+    line-height: var(--leading-normal);
+    color: var(--ink-muted);
+  }
+  /* the column's number in the CSV */
+  .inv-n {
+    width: 4.5rem;
+    font-family: var(--font-mono);
+    font-feature-settings: 'tnum' 1;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .inv-f {
+    width: 30%;
+    font-family: var(--font-instrument);
+    font-weight: var(--weight-ui-strong);
+  }
+  .inv-r {
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    max-width: var(--measure);
+    text-wrap: pretty;
+  }
+
+  .inv-whole {
+    margin-top: var(--section-gap);
+  }
+  .inv-whole-p {
+    margin-top: var(--gap-group);
+  }
+
+  /* phones: each row reads as its number and field, then what to record under them */
+  @media (max-width: 639px) {
+    .inv thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    .inv,
+    .inv tbody,
+    .inv tr {
+      display: block;
+    }
+    .inv tbody tr:not(.inv-g) {
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: var(--space-1) 0;
+      padding: var(--space-3) 0;
+      border-bottom: var(--rule);
+    }
+    .inv tbody tr:not(.inv-g) > * {
+      display: block;
+      width: auto;
+      padding: 0;
+      border: 0;
+    }
+    .inv-g th {
+      display: block;
+      padding: var(--space-6) 0 var(--space-3);
+    }
+    .inv tbody:first-of-type .inv-g th {
+      padding-top: 0;
+    }
+    .inv-n {
+      padding-top: 0.15em !important;
+    }
+    .inv-r {
+      grid-column: 2;
+    }
+  }
+
+  @media print {
+    .inv-g th {
+      padding-top: var(--space-4);
+    }
+    .inv tbody tr {
+      break-inside: avoid;
+    }
+  }
+</style>
+
+<script>
+  // Print appears only where the page can print
+  document.querySelectorAll<HTMLButtonElement>('[data-pe-print]').forEach((b) => {
+    b.hidden = false;
+    b.addEventListener('click', () => window.print());
+  });
+</script>

@@ -31,5 +31,16 @@
     "url": "https://www.dpmc.govt.nz/sites/default/files/2026-02/nz-cyber-security-strategy-2026-30.pdf",
     "summary": "New Zealand's national cyber security strategy (DPMC, February 2026) warns that within the strategy's timeframe quantum computing has the potential to render current encryption methods obsolete, and commits the GCSB to refresh its Cryptographic Products Management Infrastructure to ensure government ICT is prepared for the emerging needs of a post-quantum world. This is the first NZ national-strategy-level acknowledgement of the post-quantum transition.",
     "included": true
+  },
+  {
+    "title": "Securing space: Cyber security for low earth orbit satellite communications",
+    "country": "NZL",
+    "issuingOrg": "NCSC-NZ",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.ncsc.govt.nz/assets/guidance/Documents/Securing-space-Cyber-Security-for-low-earth-orbit-satellite-communications.pdf",
+    "summary": "Joint guidance authored by ASD's ACSC with the Australian Space Agency, the Canadian Centre for Cyber Security, the NSA and NCSC-NZ, setting out cyber security risks, mitigations and procurement questions for users of low earth orbit satellite communication services. It says preparing for PQC is essential, calls for key management aligned with PQC standards and approved quantum-safe standards for stored data, and suggests asking providers for their post-quantum migration plan.",
+    "included": true
   }
 ]

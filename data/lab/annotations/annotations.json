@@ -1,0 +1,981 @@
+{
+  "_about": "Kind, lifecycle status, bindingness and scope of profile timeline lines and regulation lines, which the profile fields do not record. Each row matches exactly one line in data/profiles/{ISO3}.json by year and a substring of its label (match). A row with verify true is a lead: shown in preview, stripped in production, until Swann confirms it. See README.md.",
+  "dates": [
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "bel-2030-eu-roadmap",
+      "iso3": "BEL",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "bel-2035-eu-roadmap",
+      "iso3": "BEL",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cyp-2030-eu-roadmap",
+      "iso3": "CYP",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cyp-2035-eu-roadmap",
+      "iso3": "CYP",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cze-2030-eu-roadmap",
+      "iso3": "CZE",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "cze-2035-eu-roadmap",
+      "iso3": "CZE",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "dnk-2030-eu-roadmap",
+      "iso3": "DNK",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "dnk-2035-eu-roadmap",
+      "iso3": "DNK",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "grc-2030-eu-roadmap",
+      "iso3": "GRC",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "grc-2035-eu-roadmap",
+      "iso3": "GRC",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "hrv-2030-eu-roadmap",
+      "iso3": "HRV",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "hrv-2035-eu-roadmap",
+      "iso3": "HRV",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "irl-2030-eu-roadmap",
+      "iso3": "IRL",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "irl-2035-eu-roadmap",
+      "iso3": "IRL",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ita-2030-eu-roadmap",
+      "iso3": "ITA",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "ita-2035-eu-roadmap",
+      "iso3": "ITA",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "lva-2030-eu-roadmap",
+      "iso3": "LVA",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "lva-2035-eu-roadmap",
+      "iso3": "LVA",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "prt-2030-eu-roadmap",
+      "iso3": "PRT",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "prt-2035-eu-roadmap",
+      "iso3": "PRT",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "rou-2030-eu-roadmap",
+      "iso3": "ROU",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "rou-2035-eu-roadmap",
+      "iso3": "ROU",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "high-risk use cases should be transitioned to PQC as soon as possible, no later than the end of 2030.",
+          "locator": "p. 3, Executive Summary",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Quantum-safe software and firmware upgrades are enabled by default.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2030",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "svn-2030-eu-roadmap",
+      "iso3": "SVN",
+      "year": 2030,
+      "match": "High-risk use cases migrated",
+      "kind": "priority",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for medium-risk use cases has been completed.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "title": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1, Version 1.1",
+          "publisher": "NIS Cooperation Group",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The PQC transition for low-risk use cases has been completed as much as feasible.",
+          "locator": "p. 7, Timeline for the transition to PQC, By 31.12.2035",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "svn-2035-eu-roadmap",
+      "iso3": "SVN",
+      "year": 2035,
+      "match": "Full migration of all systems complete",
+      "kind": "complete",
+      "restates": "eu-roadmap",
+      "status": "published",
+      "bindingness": "soft-law",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Carry out a full discovery exercise (assessing your estate to understand which services and infrastructure that depend on cryptography need to be upgraded to PQC)",
+          "locator": "Executive summary, key milestones, By 2028",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The NCSC recognises the need both to offer guidance on some of the early-stage migration activities, and to set some indicative timelines that UK industry, government and regulators can follow.",
+          "locator": "Executive summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "gbr-2028-ncsc-timelines",
+      "iso3": "GBR",
+      "year": 2028,
+      "match": "Complete discovery of systems and services using cryptography",
+      "kind": "plan",
+      "restates": "ncsc-timelines",
+      "status": "published",
+      "bindingness": "guidance",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Carry out your early, highest-priority PQC migration activities",
+          "locator": "Executive summary, key milestones, By 2031",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The NCSC recognises the need both to offer guidance on some of the early-stage migration activities, and to set some indicative timelines that UK industry, government and regulators can follow.",
+          "locator": "Executive summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "gbr-2031-ncsc-timelines",
+      "iso3": "GBR",
+      "year": 2031,
+      "match": "Complete migration of highest-priority systems and services",
+      "kind": "priority",
+      "restates": "ncsc-timelines",
+      "status": "published",
+      "bindingness": "guidance",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Complete migration to PQC of all your systems, services and products",
+          "locator": "Executive summary, key milestones, By 2035",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "title": "Timelines for migration to post-quantum cryptography",
+          "publisher": "National Cyber Security Centre",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "The NCSC recognises the need both to offer guidance on some of the early-stage migration activities, and to set some indicative timelines that UK industry, government and regulators can follow.",
+          "locator": "Executive summary",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "gbr-2035-ncsc-timelines",
+      "iso3": "GBR",
+      "year": 2035,
+      "match": "Complete migration of all systems, services and products",
+      "kind": "complete",
+      "restates": "ncsc-timelines",
+      "status": "published",
+      "bindingness": "guidance",
+      "scope": null
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "End of 2031: Completion of PQC migration of high priority systems",
+          "locator": "Section 4, Milestones and deliverables",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Milestones and deliverables for federal departments and agencies are as follows:",
+          "locator": "Section 4, Milestones and deliverables",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This publication outlines the Cyber Centre’s recommended roadmap for the Government of Canada (GC) to migrate non-classified IT systems",
+          "locator": "Overview",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "can-2031-ca-roadmap",
+      "iso3": "CAN",
+      "year": 2031,
+      "match": "High-priority Government of Canada systems migrated",
+      "kind": "priority",
+      "restates": "ca-roadmap",
+      "status": "published",
+      "bindingness": "guidance",
+      "scope": "Federal departments and agencies"
+    },
+    {
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "End of 2035: Completion of PQC migration of remaining systems",
+          "locator": "Section 4, Milestones and deliverables",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "Milestones and deliverables for federal departments and agencies are as follows:",
+          "locator": "Section 4, Milestones and deliverables",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "title": "Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+          "publisher": "Canadian Centre for Cyber Security",
+          "retrievedAt": "2026-10-01",
+          "excerpt": "This publication outlines the Cyber Centre’s recommended roadmap for the Government of Canada (GC) to migrate non-classified IT systems",
+          "locator": "Overview",
+          "sourceClass": "trusted-institutional"
+        }
+      ],
+      "id": "can-2035-ca-roadmap",
+      "iso3": "CAN",
+      "year": 2035,
+      "match": "Remaining Government of Canada systems migrated",
+      "kind": "complete",
+      "restates": "ca-roadmap",
+      "status": "published",
+      "bindingness": "guidance",
+      "scope": "Federal departments and agencies"
+    }
+  ],
+  "instruments": []
+}

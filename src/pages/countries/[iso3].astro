@@ -1,17 +1,38 @@
 ---
+// One static page per profile, in lower case (/countries/deu, /countries/euu, /countries/nato).
+// Each page gathers the documents whose Country matches the profile's ISO3 or name, its EU
+// membership (data/lab/shared/memberships.json, never inferred from posture), the 27 Member
+// States on the EU's own profile, and whether its Notion fields differ from the JSON copy.
+//
+// No breadcrumb (the minimal pass): the header shows the section, and the page starts at the
+// shell's one page top. The referrer-based "← Back" script is gone: "Back" is ambiguous after a
+// search.
+// A Placeholder profile carries noindex but stays listed and findable.
+// The mirror check (spec 16.6): a profile whose Notion Migration Timeline or Last Updated differs
+// from data/profiles prints one preview-only line and a build warning; production only logs.
 import Base from '../../layouts/Base.astro';
 import ProfilePanel from '../../components/ProfilePanel.astro';
 import { getCollection } from 'astro:content';
-import { POSTURE_META } from '../../lib/process';
-import evaluations from '../../../data/evaluations.json';
+import { euMembers, placeName } from '../../lib/site/joins';
+import { latestDay } from '../../lib/site/meta';
+import { describeDifference, mirrorDiff } from '../../lib/site/mirror';
+import { pageHref, productionBuild } from '../../lib/site/gates';
 
-// One static page per country. Each page also gathers the documents whose
-// Country matches this country's ISO3 or name, for the Key documents section.
 export async function getStaticPaths() {
   const countries = await getCollection('countries');
   const documents = await getCollection('documents');
+  const members = euMembers();
+  const production = productionBuild();
+  const offline = (process.env.ATLAS_OFFLINE ?? '') === '1';
+  // the footer's "Data as of": the latest profile Updated date, for the Placeholder line
+  const dataAsOf = latestDay(countries.map((c) => c.data.lastUpdated));
+  const names = new Map(countries.map((c) => [c.data.iso3.toUpperCase(), c.data.country]));
+  const memberList = [...members]
+    .map((iso3) => ({ iso3, name: names.get(iso3) ?? placeName(iso3), href: pageHref(`/countries/${iso3.toLowerCase()}`) }))
+    .sort((a, b) => a.name.localeCompare(b.name, 'en-GB'));
+
   return countries.map((c) => {
-    const iso3 = c.data.iso3;
+    const iso3 = c.data.iso3.toUpperCase();
     const name = c.data.country.toUpperCase();
     const docs = documents
       .filter((d) => {
@@ -19,43 +40,50 @@ export async function getStaticPaths() {
         return dc === iso3 || dc === name;
       })
       .map((d) => d.data);
-    const evaluation = (evaluations as Record<string, any>)[iso3] ?? null;
-    const posture = c.data.coordinationPosture;
-    const blocColor = posture && (POSTURE_META as any)[posture] ? (POSTURE_META as any)[posture].color : null;
-    return { params: { iso3: iso3.toLowerCase() }, props: { country: c.data, documents: docs, evaluation, blocColor } };
+    // offline, the page reads the JSON copy itself, so there is nothing to compare
+    const diffs = offline ? [] : mirrorDiff({ iso3, migrationTimeline: c.data.migrationTimeline, lastUpdated: c.data.lastUpdated });
+    for (const d of diffs) console.warn(`[profile mirror] ${describeDifference(d)}`);
+    return {
+      params: { iso3: iso3.toLowerCase() },
+      props: {
+        country: c.data,
+        documents: docs,
+        isMember: iso3 !== 'EUU' && members.has(iso3),
+        members: iso3 === 'EUU' ? memberList : [],
+        mirrorNote: !production && diffs.length > 0,
+        dataAsOf,
+      },
+    };
   });
 }
 
-const { country, documents, evaluation, blocColor } = Astro.props;
+const { country, documents, isMember, members, mirrorNote, dataAsOf } = Astro.props;
+const path = `/countries/${country.iso3.toLowerCase()}`;
+const crumbs = [
+  { label: 'Countries', href: '/countries' },
+  { label: country.country, href: path },
+];
+const placeholder = country.dataStatus === 'Placeholder';
+const description =
+  country.summary ??
+  `${country.country} in the QSC Atlas, a record of how governments are migrating to quantum-safe cryptography, from institutional sources.`;
 ---
 
-<Base title={country.country} description={country.summary ?? undefined}>
-  <div class="container">
-    <p class="back"><a id="back-link" href="/countries">&larr; All countries</a></p>
-    <ProfilePanel country={country} documents={documents} evaluation={evaluation} blocColor={blocColor} />
+<Base title={country.country} description={description} noindex={placeholder} breadcrumbs={crumbs}>
+  <div class="container profile-page">
+    <ProfilePanel
+      country={country}
+      documents={documents}
+      isMember={isMember}
+      members={members}
+      mirrorNote={mirrorNote}
+      dataAsOf={dataAsOf}
+    />
   </div>
-  <script is:inline>
-    (() => {
-      const a = document.getElementById('back-link');
-      if (!a) return;
-      try {
-        if (document.referrer && new URL(document.referrer).origin === location.origin) {
-          a.textContent = '← Back';
-          a.setAttribute('href', '#');
-          a.addEventListener('click', (e) => { e.preventDefault(); history.back(); });
-        }
-      } catch (e) {}
-    })();
-  </script>
 </Base>
 
 <style>
-  .back {
-    font-size: 0.85rem;
-    margin-bottom: var(--space-6);
-  }
-  .back a {
-    color: var(--ink-muted);
-    text-decoration: none;
+  .profile-page {
+    padding-top: var(--page-top);
   }
 </style>

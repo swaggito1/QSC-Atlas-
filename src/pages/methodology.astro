@@ -1,368 +1,703 @@
 ---
+// The methodology (spec 10): how the Atlas is built, and where its record stops. Every live
+// anchor stays (#axes #regulatory #verification #sources), with #inclusion and
+// #dates added, and one anchor per shown tool (#target-dates #prepare #exposure #eu-rules
+// #standards, the anchors methodAnchorFor() in the frame points at). A tool's section, and its
+// line in the contents, exist only when shown(id) is true, so a build in which every tool is
+// private names none of them.
+//
+// Colour appears only as the coordination posture, from POSTURE_META. The standards roles are
+// shown as the badge the profiles carry, with no colour. The evaluative layer and the credibility
+// gauge were removed from the site (Swann, 4 October 2026).
+//
+// The épuré pass (4 October 2026): sections are spaced by subject. What is included, the two
+// axes, the regulatory layer, dates and verification stand a related gap apart; Sources and
+// tiers, and the first tool's section, where the tools begin, open a new subject a subject's
+// gap below. The contents rail marks the section in view with the one teal rule of a navigation
+// rail (--rule-current) and nothing else: no track down every item, and a hover changes only
+// the words' colour. No link carries an arrow: the arrow marks a Where to go next row only.
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import AxisMatrix from '../components/AxisMatrix.astro';
-import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
-import CredibilityGauge from '../components/CredibilityGauge';
-import ReadingProgress from '../components/ReadingProgress.astro';
-import evaluations from '../../data/evaluations.json';
+import RoleBadge from '../components/RoleBadge.astro';
+import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER } from '../lib/process';
+import { INSTRUMENT_STATUS_META } from '../lib/regulation';
+import { DATE_KINDS, LIFECYCLE_STATUSES } from '../lib/lab/schema';
+import { link, pageHref, shown, shownTools } from '../lib/site/gates';
+import { nameInSentence } from '../lib/site/joins';
+import datesCopy from '../../data/lab/dates/copy.json';
+import '../styles/lab.css';
 
-const fra = (evaluations as Record<string, any>)['FRA'] ?? null;
+const countries = await getCollection('countries');
 
-// The methodology page (brief 4.2, 9.3, Part 11): the full model behind the Atlas, as a long
-// reading page with a sticky in-page contents. Two axes, the regulatory layer, the evaluative
-// layer with the six criteria and scoring, the verification rules, a live credibility gauge for
-// an example country, and the sources. Monochrome, no globe.
+// the standard-maker the Atlas records, by name, from the profiles themselves
+const makers = countries
+  .filter((c) => c.data.standardsRole === 'setter')
+  .map((c) => c.data.country)
+  .sort((a, b) => a.localeCompare(b, 'en-GB'));
+const makerLine = makers.length === 1 ? ` The Atlas records one: ${nameInSentence(makers[0])}.` : '';
 
 const postureDef: Record<string, string> = {
-  'NIST-bloc': 'Works to the standards and cadence the United States sets through NIST. The largest group.',
-  EU: 'Migrates in step with the EU coordinated roadmap, on its 2030 and 2035 milestones, over the NIST algorithms underneath.',
+  'NIST-bloc': 'Works to the standards and cadence the United States sets through NIST.',
+  EU: 'Migrates in step with the EU coordinated roadmap and its target dates, over the NIST algorithms underneath.',
   'sovereign-bloc': 'Builds and mandates its own national algorithms, independent of NIST. The only real fork in the baseline.',
-  'engaged-unaligned': 'Active on the transition, but committed to no bloc, standard, or timeline.',
+  'engaged-unaligned': 'Active on the transition, but committed to no bloc, standard or timeline.',
 };
 const roleDef: Record<string, string> = {
-  setter: 'Writes the standards others adopt. Today there is one: the United States.',
+  setter: `Writes the standards others adopt.${makerLine}`,
   contextualiser: 'Adopts the baseline but adds national requirements, such as mandatory hybrid deployment or certification.',
   taker: 'Adopts the baseline broadly as published, without a substantial national overlay.',
   'sovereign-developer': 'Designs and standardises its own post-quantum algorithms.',
 };
 
-const criteria = [
-  ['Relevance', 'R1 transition plan; R2 threat articulation'],
-  ['Coherence', 'C1 policy integration; C2 consultation'],
-  ['Effectiveness', 'E1 milestones; E2 inventory duty; E3 measurement'],
-  ['Efficiency', 'Ef1 proportionate instrument mix'],
-  ['Governance quality', 'G1 mandate and authority; G2 capacity and skills'],
-  ['Impact (structured-for)', 'I1 exposure-reducing adoption'],
+// the vocabularies of #dates, read from the data contract and the words the date views use
+const lower = (w: string) => w.charAt(0).toLowerCase() + w.slice(1);
+const kindWords = DATE_KINDS.map((k, i) => {
+  const w = (datesCopy.copy.kind as Record<string, string>)[k] ?? k;
+  return i === 0 ? w : lower(w);
+});
+const statusWord = (s: string) => lower((datesCopy.copy.status as Record<string, string>)[s] ?? s);
+const SOFT_STATUSES = new Set(['published', 'superseded']);
+const hardStatuses = LIFECYCLE_STATUSES.filter((s) => !SOFT_STATUSES.has(s)).map(statusWord);
+const softStatuses = LIFECYCLE_STATUSES.filter((s) => SOFT_STATUSES.has(s)).map(statusWord);
+const bindingWords = Object.values(INSTRUMENT_STATUS_META).map((m) => lower(m.label));
+const list = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+const orList = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} or ${xs[xs.length - 1]}`);
+
+// The tier of a document is set by what its issuer does, not by its prestige (the scraper
+// brief's definitions, in plain words).
+const tiers = [
+  ['T1', 'Sets or oversees policy: national cyber agencies, ministries, regulators, parliaments, government strategies, binding directives, funding calls and certification announcements.'],
+  ['T2', 'Puts policy into practice: pilots by telecoms operators and banks, vendor products tied to a government programme, guidance from industry associations and funded consortium projects.'],
+  ['T3', 'Independent evaluation, testing and certification: evaluation labs, Common Criteria or EUCC certifications, security evaluation reports and testbeds.'],
+  ['T4', 'Research capacity: participation in standards committees, research done for agencies, funded research programmes and submissions to the NIST competition. A count of publications alone never qualifies.'],
 ];
 
-const toc = [
+// ---- one section per shown tool ------------------------------------------------------------
+
+const title = (id: string) => shownTools().find((t) => t.id === id)?.title ?? null;
+const elements = (['suppliers', 'inventory'] as const).filter((id) => shown(id)).map((id) => title(id)!);
+
+interface ToolSection {
+  id: string; // the anchor
+  heading: string;
+  paras: string[];
+  open: { label: string; href: string | null }[];
+}
+const toolSections: ToolSection[] = [];
+
+if (shown('dates')) {
+  toolSections.push({
+    id: 'target-dates',
+    heading: title('dates')!,
+    paras: [
+      `${title('dates')} lists each line of a country profile's migration timeline and each dated target of the guides the Atlas quotes: the guides a place issues itself and, for an EU Member State, the EU coordinated roadmap, which reaches it through membership and is drawn with an open marker.`,
+      'The kind of date and its bindingness come from the guide\'s own record or from an annotation checked against its source; where neither exists the row says not recorded. Places are listed in alphabetical order and are never ranked.',
+    ],
+    open: [{ label: `Open ${title('dates')}`, href: link('dates') }],
+  });
+}
+if (shown('readiness')) {
+  const names = [title('readiness')!, ...elements];
+  toolSections.push({
+    id: 'prepare',
+    heading: 'Prepare',
+    paras: [
+      `${list(names.map((n, i) => (i === 0 ? `The ${n}` : `the ${lower(n)}`)))} ${names.length === 1 ? 'quotes' : 'quote'} published guidance. Each action carries the issuing body's own words, with the page or section they come from and the date the Atlas read them, under a label and a summary that are the Atlas's. Words in another language stay in that language.`,
+      'Every date the guides set is a target set by guidance or a recommendation, and none is a legal deadline. Nothing is scored or totalled, and the order on the page is not a sequence: the guides themselves say their steps can overlap. The marks a visitor makes stay in the page address after the # sign and are sent nowhere.',
+    ],
+    open: [{ label: 'Open Prepare', href: pageHref('/prepare') }],
+  });
+}
+if (shown('exposure')) {
+  toolSections.push({
+    id: 'exposure',
+    heading: title('exposure')!,
+    paras: [
+      `The ${title('exposure')} sets how long data must stay secret and how long a migration will take, both entered by the visitor, against the ranges experts gave in a published survey for when a cryptographically relevant quantum computer might exist. The Atlas makes no estimate of its own.`,
+      'Between the surveyed horizons the band is joined by straight lines, drawn dashed because they are interpolation, never survey figures. A default keeping period appears only where a law or an official rule sets one, and the tool names the rule.',
+    ],
+    open: [{ label: `Open the ${title('exposure')}`, href: link('exposure') }],
+  });
+}
+if (shown('rulebook')) {
+  toolSections.push({
+    id: 'eu-rules',
+    heading: 'EU rules',
+    paras: [
+      `${title('rulebook')} reads EU instruments only, and within them only the articles that decide who is in scope and what follows an incident. It does not read national law, guidance or supervisory practice, and it does not say whether an organisation is compliant.`,
+      'Answers are matched against rules written as data, each citing the paragraph it comes from; an answer of not sure never counts as no. Reporting deadlines are counted from the starting points each act sets, and Commission proposals appear only on request, labelled as proposals.',
+    ],
+    open: [{ label: `Open ${title('rulebook')}`, href: link('rulebook') }],
+  });
+}
+if (shown('cascade')) {
+  toolSections.push({
+    id: 'standards',
+    heading: 'Standards',
+    paras: [
+      'A standard appears beside a government where one of that government\'s institutional documents names it, placed at the date the document carries. The relation is read from the document\'s own words: it adopts the standard, adopts it with national requirements of its own, names it without adopting it, or runs a national process instead.',
+      `The ${title('cascade')} records references, which are no proof that anything is deployed, and a missing line means only that the Atlas holds no such document.`,
+    ],
+    open: [
+      { label: 'Open Standards', href: pageHref('/standards') },
+      { label: `Open the ${title('cascade')}`, href: link('cascade') },
+    ],
+  });
+}
+
+const toc: [string, string][] = [
+  ['inclusion', 'What is included'],
   ['axes', 'The two axes'],
   ['regulatory', 'The regulatory layer'],
-  ['evaluative', 'The evaluative layer'],
-  ['verification', 'Verification rules'],
-  ['gauge', 'The credibility gauge'],
-  ['sources', 'Sources'],
+  ['dates', 'Dates'],
+  ['sources', 'Sources and tiers'],
+  ['verification', 'Verification'],
+  ...toolSections.map((t) => [t.id, t.heading] as [string, string]),
 ];
+const documents = pageHref('/documents');
+const countriesHref = pageHref('/countries');
 ---
 
-<Base title="Methodology" description="The full model behind the QSC Atlas: the two-axis classification, the regulatory layer, the evaluative governance-credibility layer with its six criteria and scoring, and the verification rules.">
-  <ReadingProgress />
-  <div class="container method-page">
-    <nav class="toc" aria-label="On this page">
-      <p class="toc-head">On this page</p>
-      <ol>
-        {toc.map(([id, label]) => <li><a href={`#${id}`} data-spy={id}>{label}</a></li>)}
-      </ol>
+<Base
+  title="Methodology"
+  description="How the QSC Atlas is built and where its record stops: what it includes, the two axes, the regulatory layer, how dates are labelled, the source tiers and verification."
+>
+  <div class="mt">
+    <header class="mt-head">
+      <h1 class="mt-h1">Methodology</h1>
+      <p class="mt-lede">
+        How the Atlas places each country, which documents it reads, how it labels dates and instruments, and where its
+        record stops.
+      </p>
+    </header>
+
+    <nav class="mt-toc" aria-label="On this page">
+      <details class="mt-toc-d lab-disclose" data-toc>
+        <summary>On this page</summary>
+        <ol>
+          {
+            toc.map(([id, label]) => (
+              <li>
+                <a href={`#${id}`} data-spy={id}>
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </details>
+      <script is:inline>
+        // open beside the page from 900px before the first paint, so nothing shifts; folded on phones
+        (function () {
+          var d = document.querySelector('[data-toc]');
+          if (d && window.matchMedia('(min-width: 900px)').matches) d.open = true;
+        })();
+      </script>
     </nav>
 
-    <article class="method-body">
-      <h1>Methodology</h1>
-      <p class="prose lead">
-        The Atlas reads every country on two axes, records the instrument behind each position, and
-        then scores how credible the plan is. Each layer is built only from official sources, and
-        every claim links to the document it rests on.
-      </p>
-
-      <section id="axes">
-        <h2>The two axes</h2>
+    <article class="mt-body">
+      <section id="inclusion" aria-labelledby="h-inclusion">
+        <h2 id="h-inclusion">What is included</h2>
         <p class="prose">
-          Two different things are easy to confuse, so the Atlas records both. An EU member
-          coordinates through the European roadmap, yet the algorithms it deploys are the American
-          NIST standards. The map colour shows which collective transition a country coordinates
-          with; a badge on its profile shows whose algorithms it actually runs. A country active but
-          committed to no bloc, standard or timeline is shown as engaged but unaligned: it sits on the
-          posture axis but not yet on the role axis.
+          The Atlas is built from institutional documents only: if a document is not public, it is not in the Atlas, and
+          where a document exists in several languages, the original language is authoritative.
+        </p>
+      </section>
+
+      <section id="axes" aria-labelledby="h-axes">
+        <h2 id="h-axes">The two axes</h2>
+        <p class="prose">
+          Two different things are easy to confuse, so the Atlas records both. An EU member coordinates through the
+          European roadmap, yet the algorithms it deploys are the American NIST standards. The map colour shows which
+          collective transition a country coordinates with; a badge on its profile shows the role it plays in standards. A
+          country active on the transition but committed to no bloc, standard or timeline is shown as engaged but
+          unaligned: it has a place on the posture axis and none on the role axis.
         </p>
         <AxisMatrix />
-        <h3 class="sub">Coordination posture, the map colour</h3>
-        <dl class="ref">
+        <h3 class="mt-h3">Coordination posture, the map colour</h3>
+        <dl class="mt-ref">
           {
             POSTURE_ORDER.map((k) => (
-              <div class="ref-row" style={`--c:${POSTURE_META[k].color}`}>
-                <span class="ref-sw" aria-hidden="true" />
-                <dt>{POSTURE_META[k].label}</dt>
-                <dd class="prose">{postureDef[k]}</dd>
+              <div>
+                <dt>
+                  <span class="mt-dot" style={`--c:${POSTURE_META[k].color}`} aria-hidden="true" />
+                  {POSTURE_META[k].label}
+                </dt>
+                <dd>{postureDef[k]}</dd>
               </div>
             ))
           }
+          <div>
+            <dt>
+              <span class="mt-dot mt-dot--none" aria-hidden="true" />
+              No coordination posture recorded
+            </dt>
+            <dd>The Atlas holds no record that places the country in any of the four.</dd>
+          </div>
         </dl>
-        <h3 class="sub">Standards role, the profile badge</h3>
-        <dl class="ref">
+        <h3 class="mt-h3">Standards role, the profile badge</h3>
+        <dl class="mt-ref">
           {
             ROLE_ORDER.map((k) => (
-              <div class="ref-row" style={`--c:${ROLE_META[k].color}`}>
-                <span class="ref-sw" aria-hidden="true" />
-                <dt>{ROLE_META[k].label}</dt>
-                <dd class="prose">{roleDef[k]}</dd>
+              <div>
+                <dt>
+                  <RoleBadge value={k} />
+                </dt>
+                <dd>{roleDef[k]}</dd>
               </div>
             ))
           }
         </dl>
       </section>
 
-      <section id="regulatory">
-        <h2>The regulatory layer</h2>
+      <section id="regulatory" aria-labelledby="h-reg">
+        <h2 id="h-reg">The regulatory layer</h2>
         <p class="prose">
-          Each profile records the main regulation behind a country's posture, whether it is
-          binding, soft-law or absent, and the plain obligation it places on organisations. This
-          turns a label into what an organisation must actually do, and shows where post-quantum
-          migration is mandated rather than merely encouraged. Binding EU duties under NIS2 and DORA
-          read differently from a soft national roadmap, which reads differently again from nothing
-          at all.
+          Each profile records the main regulation behind a country's posture, whether it is binding, soft law or absent,
+          and the plain obligation it places on organisations. This turns a label into what an organisation must do, and
+          shows where post-quantum migration is mandated rather than encouraged. Binding EU duties under NIS2 and DORA
+          read differently from a soft national roadmap, which reads differently again from nothing at all. Each
+          instrument line carries its bindingness where the Atlas has recorded it, {orList(bindingWords)}, and a
+          Commission proposal reads Proposal, not law.
         </p>
       </section>
 
-      <section id="evaluative">
-        <h2>The evaluative layer</h2>
+      <section id="dates" aria-labelledby="h-dates">
+        <h2 id="h-dates">Dates</h2>
         <p class="prose">
-          The evaluative layer asks not whether a plan exists but how credible it is. It adapts
-          Paglieri et al.'s (2025) six-criteria comparative method for national quantum strategies,
-          sharpened by Vance's (2025) split of evaluation into process, impact and cost-benefit,
-          with two checks drawn from the CEPS governance recommendations (Pupillo et al., 2025) and
-          the threat criterion from Pupillo et al. (2023). It sits inside the governance of
-          expectations (Budde and Konrad, 2019): a score is a reading at a date, not a verdict.
+          A date in the Atlas is a target unless a binding instrument sets it, and the word deadline is kept for dates set
+          in binding law. Where the Atlas has recorded them, a date carries its kind and two separate labels for the
+          instrument behind it.
         </p>
+        <dl class="mt-ref mt-ref--terms">
+          <div>
+            <dt>Kind of date</dt>
+            <dd>{list(kindWords)}: the kinds the Atlas assigns to the guides' milestones, and to other dates where it has recorded one.</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>
+              Where the instrument stands in its life: {list(hardStatuses)}, and for soft instruments {list(softStatuses)}.
+              A Commission proposal is never shown as law.
+            </dd>
+          </div>
+          <div>
+            <dt>Bindingness</dt>
+            <dd>
+              How far it binds anyone: {list(bindingWords)}. Set in law means a binding instrument sets the date; set in
+              guidance means soft law or guidance does.
+            </dd>
+          </div>
+        </dl>
         <p class="prose">
-          Six criteria become eleven sub-criteria, each scored 0 (absent), 1 (partial) or 2
-          (present), and reported as a six-axis profile rather than a single number.
+          Status and bindingness are never merged into one scale. Where a kind, a status or a bindingness is not
+          recorded, the Atlas says not recorded and infers nothing from a label, a posture or a year.
         </p>
-        <table class="crit">
-          <thead>
-            <tr><th scope="col">Criterion</th><th scope="col">Sub-criteria</th></tr>
-          </thead>
-          <tbody>
-            {criteria.map(([c, s]) => <tr><th scope="row">{c}</th><td>{s}</td></tr>)}
-          </tbody>
-        </table>
       </section>
 
-      <section id="verification">
-        <h2>Verification rules</h2>
-        <ul class="rules prose">
-          <li>No sub-score is recorded unless it traces to a sourced instrument. An unsupported axis
-            reads as <em>not assessed</em>, never a default, and each axis is the mean of the
-            sub-criteria that could be assessed.</li>
-          <li>A second reviewer scores each country independently, and the two reconcile before a
-            profile is shown.</li>
-          <li>The Atlas confidence grade is carried onto each axis, so a country on thin evidence
-            reads as tentative.</li>
+      <section id="sources" class="mt-subject" aria-labelledby="h-sources">
+        <h2 id="h-sources">Sources and tiers</h2>
+        <p class="prose">
+          Every country profile rests on institutional documents from government bodies, national agencies, regulators,
+          parliaments and standards organisations. Each document carries a tier, set by what its issuer does, not by the
+          issuer's prestige.
+        </p>
+        <dl class="mt-ref mt-ref--tiers">
+          {
+            tiers.map(([t, d]) => (
+              <div>
+                <dt class="mono">{t}</dt>
+                <dd>{d}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class="prose">
+          {
+            documents ? (
+              <>
+                The full set, with each document's issuer, year, type and tier, is in <a href={documents}>Documents</a>, and
+                each profile lists the documents recorded for its country.
+              </>
+            ) : (
+              'Each profile lists the documents recorded for its country.'
+            )
+          }
+        </p>
+      </section>
+
+      <section id="verification" aria-labelledby="h-verif">
+        <h2 id="h-verif">Verification</h2>
+        <ul class="mt-rules prose">
+          <li>
+            A profile's interpretive fields, its posture, role, summary, migration timeline and the rest, are claims; the
+            documents are the evidence. A reviewer checks the claims against the country's documents and records the
+            verdict on the profile as Verified or Corrected. A profile that has not been reviewed carries neither.
+          </li>
+          <li>
+            A date on a profile's migration timeline comes from a sourced institutional document and is never filled
+            from memory. Some profiles restate dates another body has set, such as the targets of the EU coordinated
+            roadmap for its Member States.
+          </li>
+          <li>
+            A profile with a coordination posture carries a confidence grade for that posture, High, Medium or Low, so a
+            placement on thin evidence reads as tentative.
+          </li>
+          <li>
+            Records kept beside the profiles, such as the kind and bindingness of a date, carry their own evidence: the
+            source's address, the day it was read, an excerpt of at most 60 words and the class of the source. A record
+            awaiting confirmation is a lead, and leads never appear on the public site.
+          </li>
         </ul>
       </section>
 
-      <section id="gauge">
-        <h2>The credibility gauge</h2>
-        <p class="prose">
-          The instrument the layer produces: a six-axis reading, each axis linked to the source
-          behind it, so the reading is auditable rather than asserted. It appears on each country
-          profile, beside the regulatory basis.
-        </p>
-        <p class="prose">
-          France, an EU contextualiser, scores high on relevance, coherence, efficiency, governance
-          and impact, and a step lower on effectiveness: ANSSI publishes a phased roadmap and France
-          adopts the NIST baseline with mandatory hybridisation under binding EU instruments, while
-          effectiveness sits lower because the milestones are not-earlier-than windows.
-        </p>
-        <div class="gauge-slot">
-          {
-            fra ? (
-              <CredibilityGauge client:idle evaluation={fra} countryName="France" blocColor={POSTURE_META.EU.color} />
-            ) : (
-              <p class="empty">No example evaluation available.</p>
-            )
-          }
-        </div>
-      </section>
+      {
+        toolSections.map((t, i) => (
+          <section id={t.id} aria-labelledby={`h-${t.id}`} class:list={{ 'mt-subject': i === 0 }}>
+            <h2 id={`h-${t.id}`}>{t.heading}</h2>
+            {t.paras.map((p) => (
+              <p class="prose">{p}</p>
+            ))}
+            {t.open.some((o) => o.href) && (
+              <p class="mt-open">
+                {t.open
+                  .filter((o): o is { label: string; href: string } => Boolean(o.href))
+                  .map((o) => (
+                    <a href={o.href}>{o.label}</a>
+                  ))}
+              </p>
+            )}
+          </section>
+        ))
+      }
 
-      <section id="sources">
-        <h2>Sources</h2>
-        <p class="prose">
-          Every country position rests on official institutional documents, government bodies,
-          national agencies and standards organisations. The full, searchable set is in the
-          <a href="/documents">Documents</a> tool, and each country profile links to the documents it
-          rests on.
-        </p>
-      </section>
+      {
+        countriesHref && (
+          <p class="mt-close">
+            <a href={countriesHref}>Find a country</a>
+          </p>
+        )
+      }
     </article>
   </div>
 
   <script>
-    // Scrollspy: mark the section currently in view in the sticky contents. Degrades to nothing
-    // without JS; the reading-progress line is handled by the ReadingProgress component.
+    // The contents: open beside the page from 900px (the inline script under it opens it before
+    // the first paint); folded under the head on narrower screens, where the visitor opens it.
+    // Without scripts it is folded on every width and opens from its summary. The section in view
+    // is marked in the contents with the 2px teal rule of a navigation rail.
     (() => {
+      const d = document.querySelector<HTMLDetailsElement>('[data-toc]');
+      const wide = window.matchMedia('(min-width: 900px)');
+      const fit = () => {
+        if (d) d.open = wide.matches;
+      };
+      fit();
+      wide.addEventListener('change', fit);
+      // following a contents link on a phone folds the list again
+      d?.querySelectorAll('a').forEach((a) =>
+        a.addEventListener('click', () => {
+          if (!wide.matches && d) d.open = false;
+        }),
+      );
+
       const links = new Map<string, Element>();
-      document.querySelectorAll('.toc a[data-spy]').forEach((a) => links.set(a.getAttribute('data-spy') || '', a));
-      const sections = Array.from(document.querySelectorAll('.method-body section[id]'));
+      document.querySelectorAll('.mt-toc a[data-spy]').forEach((a) => links.set(a.getAttribute('data-spy') || '', a));
+      const sections = Array.from(document.querySelectorAll('.mt-body section[id]'));
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+      const mark = (id: string | null) => {
+        for (const [k, a] of links) {
+          if (k === id) a.setAttribute('aria-current', 'location');
+          else a.removeAttribute('aria-current');
+        }
+      };
+      // above the band the observer watches (15% from the top), the first section is the current one
+      const atTop = () => sections[0].getBoundingClientRect().top > window.innerHeight * 0.15;
       const spy = new IntersectionObserver(
         (entries) => {
-          for (const e of entries) {
-            if (!e.isIntersecting) continue;
-            const id = e.target.getAttribute('id');
-            for (const [k, a] of links) a.classList.toggle('is-current', k === id);
-          }
+          // the contents stand beside the page only from 900px; narrower, nothing is marked
+          if (!wide.matches) return;
+          if (atTop()) return mark(sections[0].getAttribute('id'));
+          for (const e of entries) if (e.isIntersecting) mark(e.target.getAttribute('id'));
         },
         { rootMargin: '-15% 0px -75% 0px', threshold: 0 },
       );
       for (const s of sections) spy.observe(s);
+      let ticking = false;
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(() => {
+            ticking = false;
+            if (wide.matches && atTop()) mark(sections[0].getAttribute('id'));
+          });
+        },
+        { passive: true },
+      );
     })();
   </script>
 </Base>
 
 <style>
-  .method-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
+  /* The page: the head over the reading column; from 900px the contents stand in a sticky column
+     to the left of both. */
+  .mt {
     max-width: var(--content-max);
-  }
-  @media (min-width: 900px) {
-    .method-page {
-      grid-template-columns: 14rem minmax(0, 1fr);
-      gap: var(--space-12);
-      align-items: start;
-    }
-    .toc {
-      position: sticky;
-      top: var(--space-8);
-    }
-  }
-  .toc-head {
-    font-family: var(--font-instrument);
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
-    margin: 0 0 var(--space-3);
-  }
-  .toc ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: var(--page-top) var(--shell-gutter) 0;
     display: grid;
-    gap: var(--space-2);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'head' 'toc' 'body';
   }
-  .toc a {
-    color: var(--ink-muted);
-    text-decoration: none;
-    font-size: var(--text-sm);
-    border-left: 2px solid transparent;
-    padding-left: var(--space-3);
-    margin-left: -2px;
-    transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+  .mt-head {
+    grid-area: head;
+    max-width: var(--measure);
   }
-  .toc a:hover {
-    color: var(--ink);
+  .mt-toc {
+    grid-area: toc;
   }
-  /* scrollspy: the section currently in view */
-  .toc a.is-current {
-    color: var(--ink);
-    font-weight: var(--weight-semibold);
-    border-left-color: var(--ink);
-  }
-  .method-body {
+  .mt-body {
+    grid-area: body;
     min-width: 0;
   }
-  .method-body h1 {
+  @media (min-width: 900px) {
+    .mt {
+      grid-template-columns: 13rem minmax(0, 1fr);
+      grid-template-areas: 'toc head' 'toc body';
+      column-gap: var(--space-12);
+      align-items: start;
+    }
+    /* the 4px of padding, taken back by the margin, leaves room for a link's focus ring, which
+       the scrolling list would otherwise cut at its edges */
+    .mt-toc {
+      position: sticky;
+      top: var(--space-8);
+      align-self: start;
+      padding: var(--space-2) var(--space-1) var(--space-1);
+      margin-inline: calc(-1 * var(--space-1));
+      max-height: calc(100vh - var(--space-16));
+      overflow-y: auto;
+    }
+  }
+
+  .mt-h1 {
+    max-width: var(--measure-heading);
     font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--type-scene);
-    margin: 0 0 var(--space-4);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-h1);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
+    margin: 0 0 var(--gap-group);
   }
-  .lead {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-8);
-  }
-  .method-body section {
-    padding: var(--space-8) 0;
-    border-top: 1px solid var(--hairline);
-  }
-  .method-body h2 {
+  .mt-lede {
+    max-width: var(--measure);
     font-family: var(--font-reading);
-    font-weight: 500;
-    font-size: var(--text-xl);
-    margin: 0 0 var(--space-4);
-  }
-  .sub {
-    font-family: var(--font-instrument);
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
-    margin: var(--space-8) 0 var(--space-3);
-  }
-  .ref {
+    font-size: var(--type-lede);
+    line-height: var(--leading-normal);
     margin: 0;
+    text-wrap: pretty;
+  }
+  @media (max-width: 639px) {
+    /* as the frame's lede steps down on phones, so the head reads as one H1 over one sentence */
+    .mt-lede {
+      font-size: var(--type-body);
+    }
+  }
+
+  /* contents: a disclosure under the head on phones, an open column with the 2px rule from 900px */
+  .mt-toc-d {
+    margin-top: var(--gap-group-lg);
+    border-top: var(--rule);
+    border-bottom: var(--rule);
+  }
+  .mt-toc-d > summary {
+    font-size: var(--type-small);
+    color: var(--accent);
+  }
+  .mt-toc-d > summary:hover,
+  .mt-toc-d > summary:active {
+    color: var(--accent-strong);
+  }
+  .mt-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 var(--space-2);
     display: grid;
-    gap: 0;
   }
-  .ref-row {
-    display: grid;
-    grid-template-columns: 1em minmax(9em, 14em) 1fr;
-    gap: var(--space-3) var(--space-5);
-    align-items: baseline;
-    padding: var(--space-3) 0;
-    border-top: 1px solid var(--hairline);
+  .mt-toc a {
+    display: flex;
+    align-items: center;
+    min-height: var(--target-min);
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-standard);
   }
-  .ref-row:last-child {
-    border-bottom: 1px solid var(--hairline);
-  }
-  .ref-sw {
-    width: 0.8em;
-    height: 0.8em;
-    border-radius: 50%;
-    background: var(--c);
-    align-self: center;
-  }
-  .ref dt {
-    font-weight: 600;
+  .mt-toc a:hover,
+  .mt-toc a:active,
+  .mt-toc a[aria-current] {
     color: var(--ink);
   }
-  .ref dd {
-    margin: 0;
-    font-size: var(--text-base);
-    color: var(--ink-muted);
+  @media (min-width: 900px) {
+    .mt-toc-d {
+      margin-top: 0;
+      border: none;
+    }
+    .mt-toc-d[open] > summary {
+      display: none;
+    }
+    .mt-toc ol {
+      padding: 0;
+    }
+    /* room for the rule, drawn on the current section only */
+    .mt-toc a {
+      padding-left: var(--space-3);
+      border-left: 2px solid transparent;
+    }
+    /* the current section: the rail's 2px teal rule, the text in ink at weight 600 */
+    .mt-toc a[aria-current] {
+      font-weight: var(--weight-ui-strong);
+      border-left: var(--rule-current);
+    }
   }
-  .crit {
-    border-collapse: collapse;
-    width: 100%;
-    font-size: var(--text-sm);
-    margin-top: var(--space-4);
+
+  /* sections: no rule, heads in the reading face (the kit's .section-h step); the next facet of
+     the same subject a related gap below, a new subject a subject's gap; a subhead is the lede
+     step in the same face */
+  .mt-body section {
+    margin-top: var(--gap-related);
   }
-  .crit th[scope='col'] {
-    text-align: left;
+  .mt-body section.mt-subject {
+    margin-top: var(--gap-subject);
+  }
+  .mt-body section:first-child {
+    margin-top: var(--gap-related);
+  }
+  .mt-body h2 {
+    font-family: var(--font-reading);
+    font-weight: var(--weight-heading);
+    font-size: var(--type-section);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-snug);
+    margin: 0 0 var(--gap-group);
+  }
+  .mt-h3 {
+    font-family: var(--font-reading);
+    font-size: var(--type-lede);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-snug);
+    margin: var(--gap-related) 0 var(--space-3);
+  }
+  .mt-body .prose {
+    margin: 0 0 var(--gap-group);
+  }
+  .mt-body .prose:last-child {
+    margin-bottom: 0;
+  }
+  .mt-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .mt-body a:hover,
+  .mt-body a:active {
+    color: var(--accent-strong);
+  }
+
+  /* reference rows: a term and its definition, hairline-ruled, never boxed */
+  .mt-ref {
+    margin: 0 0 var(--gap-group);
+    max-width: var(--w-list);
+    border-top: var(--rule);
+  }
+  /* one label column for every list on the page, so the text column starts on one line */
+  .mt-ref > div {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: var(--gap-mark) var(--space-6);
+    padding: var(--space-3) 0;
+    border-bottom: var(--rule);
+  }
+  .mt-ref dt {
+    display: flex;
+    align-items: flex-start;
+    align-self: start;
+    gap: var(--gap-inline);
     font-family: var(--font-instrument);
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
-    border-bottom: 1px solid var(--ink);
-    padding: var(--space-2) var(--space-3);
+    font-weight: var(--weight-ui-strong);
+    font-size: var(--type-small);
+    padding-top: 3px;
   }
-  .crit th[scope='row'] {
-    text-align: left;
-    font-weight: 600;
-    white-space: nowrap;
-    vertical-align: top;
-    padding: var(--space-2) var(--space-3);
-    border-top: 1px solid var(--hairline);
+  .mt-ref dd {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    line-height: var(--leading-relaxed);
+    color: var(--ink);
   }
-  .crit td {
-    padding: var(--space-2) var(--space-3);
-    border-top: 1px solid var(--hairline);
-    color: var(--ink-muted);
+  @media (max-width: 639px) {
+    .mt-ref > div {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
-  .rules {
+  .mt-dot {
+    width: 0.7em;
+    height: 0.7em;
+    margin-top: 0.38em; /* centred on the label's first line */
+    border-radius: var(--radius-mark);
+    background: var(--c);
+    flex: none;
+  }
+  /* the map's pale fill under its ink edge, as the map and its key draw no posture */
+  .mt-dot--none {
+    background: var(--process-none);
+    box-shadow: inset 0 0 0 1px var(--swatch-none-edge);
+  }
+
+  .mt-rules {
     margin: 0;
     padding-left: var(--space-5);
     display: grid;
     gap: var(--space-3);
   }
-  .gauge-slot {
-    margin-top: var(--space-4);
-    min-height: 4rem;
+
+
+  .mt-open,
+  .mt-close {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--space-6);
+    margin: var(--gap-inline) 0 0;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
   }
-  .empty {
-    color: var(--ink-muted);
-    font-style: italic;
-    margin: 0;
+  .mt-open a,
+  .mt-close a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-mark);
+    min-height: var(--target-min);
+  }
+  /* the closing link: the page's change of subject, onward */
+  .mt-close {
+    margin-top: var(--gap-subject);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mt-toc a,
+    .mt-body a {
+      transition: none;
+    }
+  }
+  @media print {
+    .mt-toc {
+      display: none;
+    }
   }
 </style>

@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Understanding E-Commerce and the treatment of FinTechs in the National Payment System (Edition 4, 2022)",
+    "country": "NAM",
+    "issuingOrg": "BoN",
+    "year": 2022,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bon.com.na/CMSTemplates/Bon/Files/bon.com.na/27/27ded0ec-5ae8-4443-86e8-f55f19da0297.pdf",
+    "summary": "Public awareness edition from the Bank of Namibia's National Payment System Department explaining e-commerce, what FinTechs are, and how the Bank's FinTech Innovations Regulatory Framework treats innovations not covered by existing regulation. Quantum-safe cryptography is listed only as one example of FinTech technologies.",
+    "included": true
+  }
+]

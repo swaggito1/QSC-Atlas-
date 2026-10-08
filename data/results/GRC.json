@@ -53,5 +53,16 @@
     "url": "https://cyber.gov.gr/ston-dimokrito-to-proto-ergastirio-kyvernosfaleias-stin-kvantiki-epochi-me-titlo-q-prep-2026-quantum-readiness-in-practice/",
     "summary": "Announcement by the Greek National Cybersecurity Authority (EAK), with the Demokritos quantum institute, of the first national quantum-era cybersecurity workshop (3-5 Feb 2026), explicitly centred on the transition to Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD) infrastructures.",
     "included": true
+  },
+  {
+    "title": "Νέες χρηματοδοτικές ευκαιρίες στον τομέα της κυβερνοασφάλειας από το Ευρωπαϊκό Κέντρο Αρμοδιοτήτων για την Κυβερνοασφάλεια (ECCC)",
+    "country": "GRC",
+    "issuingOrg": "NCSA",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://cyber.gov.gr/nees-chrimatodotikes-eykairies-ston-tomea-tis-kyvernoasfaleias-apo-to-eyropaiko-kentro-armodiotiton-gia-tin-kyvernoasfaleia-eccc/",
+    "summary": "Announcement by Greece's National Cybersecurity Authority (19 June 2025) of two ECCC funding calls under the Digital Europe Programme and Horizon Europe, totalling 145.5 million euros. The listed funded topics include transition to post-quantum PKI, security evaluations of PQC primitives, secure PQC implementations and integration of PQC algorithms into high-level protocols.",
+    "included": true
   }
 ]

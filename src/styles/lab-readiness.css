@@ -1,0 +1,916 @@
+/* QSC Atlas: the Readiness Check, a guided self-assessment, on the épuré system of
+   labs/review/epure-audit.md. Built on the global.css tokens and the shared kit in lab.css
+   (.lab-choice and its boxed variant, .lab-disclose, .lab-switch, .lab-btn, .share-btn,
+   .section-label). Ink on warm paper. Teal marks only what a visitor can act on or the current
+   state: links, the chosen answer, the Next button, the current view and the current group's
+   rule. Section heads are ink, in Newsreader; separators are hairlines, and whitespace comes
+   first. The four answers are the one boxed control on the page, because a large target is the
+   point there; every other choice is a plain radio or checkbox. No posture dot: the Check asks
+   what to do, and posture is answered elsewhere. No cards. Widths follow the content: text at the
+   reading measure, rows and the tool's blocks at the list width (--w-list). Every control is at
+   least 44px tall or has a 44px hit area. Nothing moves unless the visitor acts, and nothing moves
+   when the island takes over from the first paint. */
+
+.rd-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.rd-hint {
+  max-width: var(--measure);
+  margin: 0 0 var(--flow);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.rd-empty {
+  max-width: var(--measure);
+  margin: var(--space-3) 0;
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+.rd-nw {
+  white-space: nowrap;
+}
+/* a dot closes the item before it; the space after it lets the line break there */
+.rd-tool .dot-sep {
+  margin: 0 0 0 0.45em;
+}
+
+/* text buttons: a question's label in the checklist and the assessment. Each list has a link on
+   every row, so the buttons carry the kit's index hand (.row-link in global.css): ink words on a
+   thin teal underline that deepens on hover, and the view keeps one teal mass */
+.rd-link,
+.rd-row-q {
+  position: relative;
+  display: inline;
+  font: inherit;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.rd-link:focus-visible,
+.rd-row-q:focus-visible,
+.rd-gbtn:focus-visible,
+.rd-guide:focus-visible,
+.rd-els a:focus-visible,
+.rd-where a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- before you start: the guides and whom you answer for -------------------------------- */
+
+/* the setup row ends where the answers, the groups and the actions end: the list width */
+.rd-setup {
+  display: grid;
+  gap: var(--space-2) var(--space-8);
+  max-width: var(--w-list);
+  margin: 0 0 var(--space-3);
+}
+@media (min-width: 760px) {
+  .rd-setup {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+  .rd-guides-panel {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+.rd-guides-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-3);
+  min-width: 0;
+}
+.rd-guides-now {
+  margin: 0;
+  font-size: var(--type-small);
+  color: var(--ink);
+  min-width: 0;
+}
+/* the labels in front of the setup's controls: sentence case in the interface face */
+.rd-k {
+  margin-right: var(--space-2);
+  color: var(--ink-muted);
+}
+.rd-legend {
+  padding: 0;
+  margin: 0 0 var(--gap-mark);
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui-strong);
+  color: var(--ink);
+}
+.rd-gn {
+  white-space: nowrap;
+}
+.rd-change {
+  font-size: var(--type-small);
+}
+.rd-fs {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.rd-opt {
+  color: var(--ink-muted);
+  font-weight: var(--weight-ui);
+}
+.rd-guides-panel {
+  padding: var(--space-3) 0 var(--space-2);
+  border-top: var(--rule);
+}
+.rd-guides-panel[hidden] {
+  display: none;
+}
+.rd-choice {
+  margin: 0 0 var(--space-2);
+}
+.rd-guides-panel .rd-hint {
+  margin: 0 0 var(--space-1);
+}
+.rd-about {
+  max-width: var(--measure);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.rd-about > summary {
+  color: var(--ink-muted);
+}
+.rd-about > summary:hover {
+  color: var(--ink);
+}
+.rd-about ul {
+  list-style: none;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.rd-about li {
+  display: grid;
+  gap: 2px;
+}
+.rd-about-name {
+  color: var(--ink);
+}
+.rd-about-meta {
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+}
+
+/* ---- the three views ------------------------------------------------------------------ */
+
+.rd-views {
+  margin: 0 0 var(--flow);
+}
+
+/* ---- one question at a time ----------------------------------------------------------- */
+
+/* the current question: no frame of its own. The chosen answer and Next are the view's teal. Its
+   block takes the list width, so the four answers fit one row; its words keep the measure. */
+.rd-q {
+  max-width: var(--w-list);
+  scroll-margin-top: var(--space-2);
+}
+/* where the visitor is: "Governance, question 1 of 3", quiet, in the interface face */
+.rd-pos {
+  margin: 0 0 var(--space-2);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+.rd-q-h {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  text-wrap: balance;
+}
+.rd-q-h:focus,
+.rd-view-h:focus {
+  outline: none;
+}
+.rd-q-h:focus-visible,
+.rd-view-h:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+/* a question still being checked: one quiet word on a dashed edge, the site's mark for what is
+   provisional */
+.rd-lead {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-weight: var(--weight-ui);
+  letter-spacing: 0;
+  color: var(--ink-muted);
+  border: 1px dashed var(--ink-muted);
+  border-radius: var(--radius);
+  padding: 0 var(--space-1);
+  margin-left: var(--space-2);
+  vertical-align: middle;
+}
+.rd-q-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-4);
+  margin: 0;
+  font-size: var(--type-small);
+}
+.rd-from {
+  color: var(--ink);
+}
+.rd-due {
+  color: var(--ink-muted);
+}
+/* the guide's name links to its page, with a 44px hit area that adds no height */
+.rd-guide {
+  position: relative;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.rd-guide::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.rd-guide:hover {
+  color: var(--accent-strong);
+}
+
+/* "More": a quiet disclosure, ink-muted until it is hovered or open */
+.rd-more {
+  font-size: var(--type-small);
+}
+.rd-more > summary {
+  display: inline-flex;
+  color: var(--ink-muted);
+}
+.rd-more > summary:hover,
+.rd-more[open] > summary {
+  color: var(--ink);
+}
+.rd-more-body {
+  padding: 0 0 var(--space-3);
+}
+.rd-desc {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  line-height: var(--leading-normal);
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.rd-audience {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-2);
+  font-style: italic;
+  color: var(--ink-muted);
+}
+/* the pages that do the question's job: one index link (.row-link) a line */
+.rd-els {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rd-els li {
+  display: flex;
+  align-items: center;
+  min-height: var(--lab-target);
+}
+.rd-els a {
+  position: relative;
+}
+.rd-els a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.rd-where {
+  max-width: var(--measure);
+  margin: var(--space-2) 0 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}
+.rd-where a {
+  position: relative;
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.rd-where a:hover {
+  color: var(--accent-strong);
+}
+.rd-where a::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+/* a source's own words, for review only (?review=1 in a local or preview build) */
+.rd-words blockquote {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-reading);
+}
+.rd-words blockquote p {
+  margin: 0;
+}
+.rd-fr {
+  margin: 0;
+  font-size: var(--type-small);
+}
+
+/* the four answers: the kit's boxed variant (.lab-choice--boxed), in one row where they fit */
+.rd-answers {
+  border: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  min-width: 0;
+}
+.rd-answers .lab-choice span {
+  white-space: nowrap;
+}
+.rd-step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin: var(--flow) 0 0;
+}
+.rd-step .lab-btn {
+  min-width: 6.5rem;
+}
+
+/* ---- every group, to jump to: a quiet list, as the side menu lists the pages ---------------
+   Each group is a text row, ink-muted, with the visitor's own count beside it. The group of the
+   question on screen is ink at weight 600 with the rail's current rule (--rule-current) down its
+   left edge, the one rule the list draws; hover and press change the words' colour only. */
+
+.rd-groups {
+  max-width: var(--w-list);
+  margin: var(--gap-related) 0 0;
+}
+.rd-groups-h {
+  margin: 0 0 var(--space-2);
+}
+.rd-groups ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 640px) {
+  .rd-groups ul {
+    columns: 2;
+    column-gap: var(--space-8);
+  }
+  .rd-groups li {
+    break-inside: avoid;
+  }
+}
+.rd-gbtn {
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+  width: 100%;
+  min-height: var(--lab-target);
+  padding: var(--space-2) 0 var(--space-2) var(--space-3);
+  border: none;
+  /* the current rule's room is kept on every row, so marking one moves nothing */
+  border-left: var(--rule-current);
+  border-left-color: transparent;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.rd-gbtn:hover,
+.rd-gbtn:active {
+  color: var(--ink);
+}
+.rd-gbtn[aria-current='step'] {
+  color: var(--ink);
+  border-left: var(--rule-current);
+}
+.rd-gbtn[aria-current='step'] .rd-gname {
+  font-weight: var(--weight-ui-strong);
+}
+.rd-gbtn:disabled {
+  color: var(--ink-faint);
+  cursor: not-allowed;
+}
+.rd-gname {
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+}
+.rd-gcount {
+  font-size: var(--type-small);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-snug);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.rd-gbtn:disabled .rd-gcount {
+  color: var(--ink-faint);
+  white-space: normal;
+}
+
+/* ---- the checklist ------------------------------------------------------------------------ */
+
+.rd-view-h {
+  margin: var(--space-3) 0 var(--space-2);
+  font-family: var(--font-reading);
+  font-size: var(--type-section);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+}
+/* on screen only when chosen, as the assessment is */
+.rd-list {
+  display: none;
+  max-width: var(--w-list);
+}
+.rd-list[data-on] {
+  display: block;
+}
+.rd-lg {
+  margin-top: var(--gap-related);
+}
+/* a group's head in the checklist and the noscript list: Newsreader at the lede step, in ink */
+.rd-lg-h,
+.rd-ns-h {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.rd-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: var(--rule);
+}
+.rd-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11.5rem;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: var(--rule);
+}
+.rd-row-q {
+  display: flex;
+  align-items: center;
+  min-height: var(--lab-target);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+  padding: var(--space-1) 0;
+}
+.rd-row-a {
+  width: 100%;
+}
+
+/* ---- the assessment ------------------------------------------------------------------------ */
+
+/* on screen only when chosen; always what the page prints */
+.rd-asx {
+  display: none;
+  max-width: var(--w-list);
+}
+.rd-asx[data-on] {
+  display: block;
+}
+.rd-asx-with {
+  max-width: var(--measure);
+  margin: 0 0 var(--gap-group-lg);
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+/* "Take these first" and "Group by group": two sections, each opening on a hairline with its
+   head in Newsreader at the lede step, in ink */
+.rd-asx-h3 {
+  margin: 0 0 var(--gap-group);
+  padding-top: var(--gap-group);
+  border-top: var(--rule);
+  font-family: var(--font-reading);
+  font-size: var(--type-lede);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.rd-first {
+  margin: 0 0 var(--gap-related);
+}
+.rd-steps {
+  margin: 0;
+  padding: 0 0 0 1.4em;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+}
+.rd-steps li::marker {
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+.rd-steps .rd-link {
+  font-family: var(--font-reading);
+  line-height: var(--leading-snug);
+}
+.rd-steps .rd-link::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.rd-step-meta {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.rd-rule,
+.rd-targets,
+.rd-faq {
+  max-width: var(--measure);
+  margin: var(--space-3) 0 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+}
+.rd-rule {
+  margin-top: var(--flow-lg);
+  color: var(--ink-muted);
+}
+.rd-targets {
+  color: var(--ink);
+}
+.rd-faq {
+  padding-top: var(--space-3);
+  border-top: var(--rule);
+  font-family: var(--font-reading);
+  font-size: var(--type-body);
+  color: var(--ink);
+}
+/* each group a row under a hairline: its name and counts, then the questions by answer */
+.rd-ag {
+  padding: var(--flow) 0;
+  border-bottom: var(--rule);
+}
+.rd-ag:first-of-type {
+  padding-top: 0;
+}
+.rd-ag-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-4);
+  margin: 0 0 var(--space-2);
+}
+.rd-ag-h {
+  margin: 0;
+  font-family: var(--font-instrument);
+  font-size: var(--type-control);
+  font-weight: var(--weight-ui-strong);
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.rd-ag-counts {
+  margin: 0;
+  font-size: var(--type-small);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+.rd-ag-dl {
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.rd-ag-row {
+  display: grid;
+  gap: 0 var(--space-4);
+}
+@media (min-width: 640px) {
+  .rd-ag-row {
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+  }
+}
+.rd-ag-row dt {
+  font-size: var(--type-small);
+  line-height: 1.9;
+  color: var(--ink-muted);
+}
+/* the answer's name stands level with the first question beside it, on that row's 44px line */
+@media (min-width: 640px) {
+  .rd-ag-row dt {
+    line-height: var(--lab-target);
+  }
+}
+.rd-ag-row dd {
+  margin: 0;
+}
+.rd-ag-row ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rd-ag-row li {
+  display: flex;
+  align-items: center;
+  min-height: var(--lab-target);
+  font-size: var(--type-control);
+  line-height: var(--leading-snug);
+}
+/* the question's first line is set where a single line would be, so the answer's name beside it stays
+   level with it when the question wraps (it was centred on the two lines, a half line low) */
+.rd-ag-row .rd-link {
+  display: flex;
+  align-items: flex-start;
+  min-height: var(--lab-target);
+  padding-block: calc((var(--lab-target) - var(--leading-snug) * 1em) / 2);
+}
+
+/* ---- the quiet actions -------------------------------------------------------------------- */
+
+.rd-actbar {
+  max-width: var(--w-list);
+  margin-top: var(--gap-related);
+  padding-top: var(--gap-group);
+  border-top: var(--rule);
+}
+.rd-privacy {
+  max-width: var(--measure);
+  margin: 0;
+  font-size: var(--type-small);
+  line-height: var(--leading-normal);
+  color: var(--ink-muted);
+}
+.rd-actbar .share-bar {
+  margin: var(--space-1) 0 0;
+}
+/* a separator and the button after it never part, so a wrapped line never ends on a dot */
+.rd-act {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.rd-act .dot-sep {
+  margin: 0 var(--space-2) 0 0;
+}
+/* undo after Clear answers: a teal text button with a 44px hit area */
+.rd-undo {
+  position: relative;
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.rd-undo::after {
+  content: '';
+  position: absolute;
+  inset: var(--hit-inset);
+}
+.rd-undo:hover {
+  color: var(--accent-strong);
+}
+.rd-undo:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.rd-fallback {
+  width: 100%;
+  font-family: var(--font-instrument);
+  font-size: var(--type-small);
+}
+
+/* ---- without JavaScript: every question, grouped ------------------------------------------- */
+
+.rd-noscript {
+  max-width: var(--w-list);
+}
+.rd-ns-h {
+  margin-top: var(--gap-group-lg);
+}
+.rd-ns-list {
+  margin: 0 0 var(--gap-group);
+  padding-left: 1.2em;
+  font-size: var(--type-control);
+  line-height: var(--leading-normal);
+}
+.rd-ns-guide {
+  font-size: var(--type-small);
+  color: var(--ink-muted);
+}
+
+.rd-print-only {
+  display: none;
+}
+
+/* ---- the first paint of a link that asks for a view (?view=list or ?view=assessment) --------
+   The page's inline script marks <html> with data-rd-view before the island's HTML is drawn, and
+   until the island is live (data-live) the asked view stands where the first question would:
+   the question is not drawn, no group is marked as current, and the view switch shows the asked
+   tab as chosen. The island then opens the same view, so nothing on screen moves. */
+html[data-rd-view] .rd-tool:not([data-live]) .rd-q {
+  display: none;
+}
+html[data-rd-view='list'] .rd-tool:not([data-live]) .rd-list,
+html[data-rd-view='assessment'] .rd-tool:not([data-live]) .rd-asx {
+  display: block;
+}
+html[data-rd-view] .rd-tool:not([data-live]) .rd-gbtn[aria-current='step'] {
+  color: var(--ink-muted);
+  border-left-color: transparent;
+}
+html[data-rd-view] .rd-tool:not([data-live]) .rd-gbtn[aria-current='step'] .rd-gname {
+  font-weight: var(--weight-ui);
+}
+html[data-rd-view] .rd-tool:not([data-live]) .rd-views button[aria-pressed='true'] {
+  color: var(--ink-muted);
+  font-weight: var(--weight-ui);
+  text-decoration-color: transparent;
+}
+/* an address with answers in it (#d=, #u=, #n=, #x=): the island fills the view from them once it
+   is live, so the group list and the actions under the view wait until then. They appear rather
+   than move, and appearing is not a layout shift. */
+html[data-rd-answers] .rd-tool:not([data-live]) .rd-groups,
+html[data-rd-answers] .rd-tool:not([data-live]) .rd-actbar {
+  display: none;
+}
+html[data-rd-view='list'] .rd-tool:not([data-live]) .rd-views li:nth-child(2) button,
+html[data-rd-view='assessment'] .rd-tool:not([data-live]) .rd-views li:nth-child(3) button {
+  color: var(--ink);
+  font-weight: var(--weight-ui-strong);
+  text-decoration-color: var(--accent);
+}
+
+/* ---- phones ---------------------------------------------------------------------------- */
+
+@media (max-width: 639px) {
+  .rd-q-h {
+    font-size: var(--type-lede);
+  }
+  .rd-view-h {
+    font-size: var(--type-lede);
+  }
+  .rd-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  /* on a 390px phone the question, its four answers and Next stay close together */
+  .rd-answers {
+    margin-top: var(--space-2);
+  }
+  .rd-step {
+    margin-top: var(--space-3);
+  }
+  /* the four answers as two even rows of two, each box the full half width */
+  .rd-answers .lab-choice {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rd-answers .lab-choice label,
+  .rd-answers .lab-choice span {
+    width: 100%;
+  }
+  .rd-actbar .share-bar {
+    column-gap: var(--space-4);
+  }
+  .rd-act .dot-sep {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-gbtn,
+  .rd-link,
+  .rd-row-q {
+    transition: none;
+  }
+}
+
+/* ---- print: the assessment alone, in ink ------------------------------------------------ */
+
+@media print {
+  body:has(.rd-tool) .site-header,
+  body:has(.rd-tool) .site-footer,
+  body:has(.rd-tool) .fr-head,
+  body:has(.rd-tool) .fr-about,
+  .rd .rd-setup,
+  .rd .rd-views,
+  .rd .rd-q,
+  .rd .rd-list,
+  .rd .rd-empty,
+  .rd .rd-groups,
+  .rd .rd-actbar,
+  .rd .rd-noscript {
+    display: none !important;
+  }
+  /* on paper the page is the white surface, and its words and rules ink */
+  body:has(.rd-tool) {
+    --paper: var(--surface);
+    background: var(--surface);
+  }
+  .rd .rd-asx {
+    display: block;
+    max-width: none;
+    color: var(--ink);
+  }
+  .rd .rd-print-only {
+    display: block;
+  }
+  .rd .rd-print-title {
+    margin: 0 0 2pt;
+    font-family: var(--font-instrument);
+    font-size: 9pt;
+  }
+  .rd .rd-view-h {
+    margin: 0 0 4pt;
+    font-size: 18pt;
+  }
+  /* on paper the heads and their rules print in ink */
+  .rd .rd-asx-h3,
+  .rd .rd-ag-h {
+    color: var(--ink);
+    border-top-color: var(--ink);
+  }
+  .rd .rd-asx-with,
+  .rd .rd-rule,
+  .rd .rd-targets,
+  .rd .rd-faq {
+    font-size: 10pt;
+    color: var(--ink);
+  }
+  .rd .rd-first {
+    margin-bottom: 14pt;
+    break-inside: avoid;
+  }
+  .rd .rd-ag {
+    break-inside: avoid;
+    padding: 6pt 0;
+  }
+  .rd .rd-ag-row li {
+    min-height: 0;
+    padding: 1pt 0;
+  }
+  .rd .rd-ag-row dt {
+    line-height: 1.5;
+  }
+  .rd .rd-link {
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .rd .rd-step-meta,
+  .rd .rd-ag-counts,
+  .rd .rd-ag-row dt {
+    color: var(--ink-muted);
+  }
+  .rd .rd-print-from {
+    margin-top: 14pt;
+    font-family: var(--font-instrument);
+    font-size: 8pt;
+    overflow-wrap: anywhere;
+  }
+}

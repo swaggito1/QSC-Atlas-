@@ -1,0 +1,47 @@
+{
+  "_about": "Seed for the Exposure Clock probability band. Every value is a lead until confirmed against the report itself with a page reference. The 10 and 15 year ranges were read on the evolutionQ summary page on 30 September 2026. The other horizons must be extracted from the report.",
+  "survey": {
+    "title": "Quantum Threat Timeline Report 2025",
+    "authors": ["Michele Mosca", "Marco Piani"],
+    "publishers": ["Global Risk Institute", "evolutionQ"],
+    "edition": 7,
+    "experts": 26,
+    "published": "2026-03",
+    "summaryUrl": "https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2025",
+    "reportUrl": null,
+    "definitionVerbatim": null,
+    "horizonBaseYear": null,
+    "howRangesAreBuilt": null,
+    "verify": true
+  },
+  "points": [
+    { "horizonYears": 5, "lower": null, "upper": null, "page": null, "verify": true, "note": "Extract from the report." },
+    { "horizonYears": 10, "lower": 0.28, "upper": 0.49, "page": null, "verify": true, "note": "Seen on the evolutionQ summary page: 28 to 49 per cent within 10 years. Confirm in the report and add the page." },
+    { "horizonYears": 15, "lower": 0.51, "upper": 0.70, "page": null, "verify": true, "note": "Seen on the evolutionQ summary page: 51 to 70 per cent within 15 years. Confirm in the report and add the page." },
+    { "horizonYears": 20, "lower": null, "upper": null, "page": null, "verify": true, "note": "Extract from the report." },
+    { "horizonYears": 30, "lower": null, "upper": null, "page": null, "verify": true, "note": "Extract from the report." }
+  ],
+  "context": [
+    {
+      "date": "2026-03-19",
+      "publisher": "Global Risk Institute",
+      "title": "Quantum Briefing: Developments in Quantum Technology and in Regulations Addressing the Quantum Threat",
+      "url": "https://globalriskinstitute.org/publication/quantum-briefing-developments-in-quantum-technology-and-in-regulations-addressing-the-quantum-threat/",
+      "use": "Reports BSI guidance to phase out traditional public-key cryptography by 2030 to 2031 for high-security use cases. Confirm against BSI's own publication before showing it as a German deadline.",
+      "verify": true
+    },
+    {
+      "date": "2026-06-22",
+      "publisher": "Global Risk Institute",
+      "title": "Quantum Briefing: Recent Quantum-Computing Progress and its Implications for Cybersecurity",
+      "url": "https://globalriskinstitute.org/publication/quantum-briefing-recent-quantum-computing-progress-and-its-implications-for-cybersecurity/",
+      "use": "States that new research may be shortening the timeline again. Show as context beside the band, never as a change to the band's numbers.",
+      "verify": true
+    }
+  ],
+  "method": {
+    "reference": "Mosca, M. (2018). Cybersecurity in an era with quantum computers: Will we be ready? IEEE Security & Privacy, 16(5), 38 to 41.",
+    "doi": null,
+    "verify": true
+  }
+}

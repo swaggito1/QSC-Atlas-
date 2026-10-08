@@ -119,5 +119,27 @@
     "url": "https://www.cert-in.org.in/PDF/TechnicalGuidelines-on-SBOM,QBOM&CBOM,AIBOM_and_HBOM_ver2.0.pdf",
     "summary": "CERT-In technical guidelines (Version 2.0, dated 09.07.2025) covering Software, Quantum, Cryptographic, AI and Hardware Bills of Materials, including a Quantum Bill of Materials (QBOM) and Cryptographic BOM (CBOM) with a dedicated 'Quantum-Readiness and Migration Strategy' section to support organisational transition to post-quantum cryptography.",
     "included": true
+  },
+  {
+    "title": "Cyber Security Framework and Guidelines for Space",
+    "country": "IND",
+    "issuingOrg": "CERT-In",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.cert-in.org.in/PDF/CyberSecurityFrameworkGuideline_for_space.pdf",
+    "summary": "Framework and guidelines from CERT-In (MeitY), developed with the SatCom Industry Association, setting cybersecurity principles, segment-wise controls, incident reporting and governance duties for India's space and satellite communication ecosystem. Its data-security and communication-link controls call for a phased rollout of post-quantum secure algorithms and mandate quantum-resistant algorithms for user data transmission, citing the NIST PQC programme.",
+    "included": true
+  },
+  {
+    "title": "CERT-In Samvaad 2026: 2nd Edition Conference Proceedings",
+    "country": "IND",
+    "issuingOrg": "CERT-In",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.cert-in.org.in/PDF/CP_Samvaad-2026.pdf",
+    "summary": "Proceedings of CERT-In's second Samvaad conference (27 to 29 April 2026, Goa) on future-ready cybersecurity audits, recording its deliberations, launches such as the AMBAK audit monitoring platform, and full-length technical papers grouped by domain. One domain, Quantum, PQC, Crypto-Agility and Cryptographic Assurance, holds four papers on PQC readiness audits, crypto-agility, post-quantum secure manufacturing and Crypto BOM and Quantum BOM assessment.",
+    "included": true
   }
 ]

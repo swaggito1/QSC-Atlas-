@@ -1,0 +1,52 @@
+# QSC Atlas Labs: record the outcome of each closed lab-watch pull request in the trust ledger.
+# Runs when such a pull request closes, and again when a closed one is labelled, so a review
+# label added after closing replaces the "unlabelled" row (upsert by pull request number).
+# A divergence:status-misread or divergence:factual label demotes the pair immediately.
+name: lab-ledger
+
+on:
+  pull_request:
+    types: [closed, labeled]
+
+concurrency:
+  group: lab-ledger
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  append:
+    if: github.event.pull_request.state == 'closed' && contains(github.event.pull_request.labels.*.name, 'lab-watch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Append the review outcome to the trust ledger
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_MERGED: ${{ github.event.pull_request.merged }}
+          PR_CLOSED_AT: ${{ github.event.pull_request.closed_at }}
+          PR_LABELS: ${{ toJson(github.event.pull_request.labels.*.name) }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_AUTO_MERGED: ${{ github.event.pull_request.auto_merge != null }}
+        run: node scripts/lab/ledger-append.mjs
+      - name: Commit the ledger row
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          git config user.name "qsc-atlas-lab-bot"
+          git config user.email "lab-bot@users.noreply.github.com"
+          git add labs/ledger/trust-ledger.csv labs/config/autonomy.yaml
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lab-ledger): record outcome of PR $PR_NUMBER"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

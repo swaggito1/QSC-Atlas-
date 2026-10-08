@@ -1,15 +1,59 @@
 ---
-// The country profile: the heart of the site. Renders the sections in the brief's
-// order with calm empty states, alongside a sticky "at a glance" rail that surfaces
-// the load-bearing facts (legal status, target, document count, verification, date).
-// Institution names link through to the Documents tool pre-filtered to that issuer.
+// The country profile (spec 7.1). One question: what has this government published, and how
+// binding is it. The answer first, the evidence one step away (the minimal pass, 2 October 2026).
+// Top to bottom: the title block and the EU membership line; the migration timeline, first on
+// every profile (Swann, 2 October 2026); the at-a-glance rail (beside the reading column on wide
+// screens, under the timeline on phones and in print), which holds only what the body does not
+// show: the coordination posture with its confidence, the standards role and the Updated date;
+// the summary; Across the Atlas; Rules that apply, led by the bindingness in words; standards,
+// algorithms and the hybrid stance; international standards processes; governmental and
+// standards bodies; the EU's Member States (on the EU profile); the key institutional documents,
+// the first ten then the rest behind "Show all"; About this page, a closed disclosure at the foot.
+//
+// Sections are Newsreader headings in ink with no rule between them, spaced by subject (the épuré
+// pass, 4 October 2026): the timeline, the summary and Across the Atlas are one subject, a related
+// gap apart; Rules that apply, Standards and algorithms and the documents each open a new
+// question, a subject's gap above them; the processes, the bodies and the Member States follow
+// the standards as their next facets. Every list whose rows are links (the bodies, the Member
+// States, the documents) sets its names in ink on a thin teal underline (global.css .row-link).
+// Nothing is said twice: the timeline's shared row words are one line, the rail repeats none of
+// the body, and About this page holds only the sources, the citation and corrections.
+//
+// A profile with no timeline keeps the quiet empty line in the timeline's place, so every full
+// profile has one shape and the absence is the first thing read. A Placeholder profile shows the
+// timeline only when it has lines (none does today): its page stays one invitation, not a row of
+// empty sections, and its posture stays in its title block, since it has no rail.
+//
+// The rules the page keeps:
+// - no year is ever placed under a legal label: the rail holds no year and no legal label, and
+//   the bindingness words lead Rules that apply, which holds no year; a target is never called a
+//   deadline;
+// - lifecycle status and bindingness are two labels, never one scale, and a proposal reads
+//   "Proposal, not law" with no bindingness label;
+// - kind, status and bindingness come from the annotations sidecar or are not shown; nothing is
+//   inferred from a label, and in production unconfirmed annotations never reach the page;
+// - every link into a tool or a gated page goes through link(), pageHref() or standardHref(),
+//   which give null when the page is not built, and null renders nothing; nothing links to EU
+//   rules, which has left the site;
+// - no score, ranking, percentage or tally of the country.
+// A Placeholder profile shows only its title block, any timeline lines, any evidence rows that
+// reach it, any documents, and one line inviting a missing document.
+// The internal analyticalNote field is never read here (see docs/REGULATORY_LAYER_SPEC.md).
 import ProcessChip from './ProcessChip.astro';
 import RoleBadge from './RoleBadge.astro';
 import MigrationTimeline from './MigrationTimeline.astro';
-import { parseNameRole, parseList, parseRegulation } from '../lib/parse';
-import { legalStatusMeta, instrumentStatusMeta, deriveLegalStatus } from '../lib/regulation';
-import CredibilityGauge from './CredibilityGauge';
-import type { Evaluation } from '../lib/evaluation';
+import AcrossTheAtlas from './site/AcrossTheAtlas.astro';
+import CiteThis from './site/frame/CiteThis.astro';
+import ReportError from './site/frame/ReportError.astro';
+import { parseNameRole, parseList } from '../lib/parse';
+import { pageHref } from '../lib/site/gates';
+import { bindingWords, readRules, readTimeline, standardHref, timelineLinks } from '../lib/site/evidence';
+import { joinAnd, loadIssuerAliases, nameInSentence } from '../lib/site/joins';
+import { issuerTable, matchesOrg } from '../lib/site/documents';
+import { docId } from '../lib/site/docid';
+import { correctionHref, citeText } from '../lib/site/cite';
+import { formatDay } from '../lib/site/meta';
+import '../styles/frame.css';
 
 interface CountryData {
   country: string;
@@ -18,8 +62,6 @@ interface CountryData {
   govActors?: string | null;
   standardFamilies?: string | null;
   algorithms?: string | null;
-  dominantProcess?: string | null;
-  secondaryProcess?: string | null;
   coordinationPosture?: string | null;
   standardsRole?: string | null;
   mainRegulation?: string | null;
@@ -32,6 +74,7 @@ interface CountryData {
   targetCompletion?: string | null;
   verificationStatus?: string | null;
   lastUpdated?: string | null;
+  dataStatus?: string | null;
 }
 interface DocData {
   title: string;
@@ -40,177 +83,296 @@ interface DocData {
   tier?: string | null;
   url?: string | null;
 }
+interface Member {
+  iso3: string;
+  name: string;
+  href: string | null;
+}
 interface Props {
   country: CountryData;
   documents?: DocData[];
-  evaluation?: Evaluation | null;
-  blocColor?: string | null;
+  isMember?: boolean; // an EU Member State (data/lab/shared/memberships.json)
+  members?: Member[]; // the EU profile only: the 27 Member States
+  mirrorNote?: boolean; // preview only: the Notion fields differ from data/profiles
+  dataAsOf?: string | null; // the latest profile Updated date, for the Placeholder line
 }
-const { country, documents = [], evaluation = null, blocColor = null } = Astro.props;
+const {
+  country,
+  documents = [],
+  isMember = false,
+  members = [],
+  mirrorNote = false,
+  dataAsOf = null,
+} = Astro.props;
+
+const iso3 = country.iso3.toUpperCase();
+const path = `/countries/${iso3.toLowerCase()}`;
+const name = country.country;
+const inSentence = nameInSentence(name);
+const placeholder = country.dataStatus === 'Placeholder';
+const euHref = isMember ? pageHref('/countries/euu') : null;
+
+// ---- rules that apply, the rail's bindingness and the timeline, read once (evidence.ts) ---------
+
+const regulations = readRules(iso3, country.mainRegulation);
+const { words: bindingText, scopeNote } = bindingWords(country.legalStatus, regulations);
+const timeline = readTimeline(iso3, country.migrationTimeline, isMember);
+const phased = country.targetCompletion === 'Phased (no fixed end)';
+// the same rules as the dates row of Across the Atlas (evidence.ts)
+const tlLinks = timelineLinks(iso3, country.migrationTimeline);
+
+// ---- standards, bodies, documents ------------------------------------------------------------
 
 const families = parseList(country.standardFamilies);
 const algorithms = parseList(country.algorithms);
+/** A standard's page for a name as the profile writes it ("NIST FIPS 203" finds FIPS 203). */
+const stdHref = (n: string) => standardHref(n) ?? (/^NIST\s+/i.test(n) ? standardHref(n.replace(/^NIST\s+/i, '')) : null);
+const familyItems = families.map((f) => ({ text: f, href: stdHref(f) }));
+const algorithmItems = algorithms.map((a) => ({ text: a, href: stdHref(a) }));
 const govActors = parseNameRole(country.govActors);
 const participation = parseNameRole(country.processParticipation);
-const regulations = parseRegulation(country.mainRegulation).map((r) => ({
-  ...r,
-  statusMeta: instrumentStatusMeta(r.status),
-}));
-const legal =
-  legalStatusMeta(country.legalStatus) ??
-  (regulations.length ? legalStatusMeta(deriveLegalStatus(regulations.map((r) => r.status))) : null);
-const orgLink = (org: string) => `/documents?org=${encodeURIComponent(org)}`;
+// an issuer opens this country's documents under that name (an acronym such as NCSC is shared
+// across borders), and is linked only when this profile holds at least one of them
+const issuers = issuerTable(loadIssuerAliases().aliases);
+const orgLink = (org: string) =>
+  documents.some((d) => matchesOrg({ issuingOrg: d.issuingOrg ?? null, country: iso3 }, org, issuers))
+    ? pageHref(`/documents?country=${iso3}&org=${encodeURIComponent(org)}`)
+    : null;
+
+// the documents as a compact list, newest first: title, issuer and year, with its entry in
+// Documents; the notes and the tier are one step away, on that entry
+const docs = [...documents]
+  .sort((a, b) => (b.year ?? -Infinity) - (a.year ?? -Infinity) || a.title.localeCompare(b.title, 'en-GB'))
+  .map((d) => {
+    const id = d.url ? docId(d.url) : null;
+    return {
+      ...d,
+      meta: [d.issuingOrg, d.year].filter((v) => v !== null && v !== undefined && v !== '').join(' · '),
+      rowHref: id ? pageHref(`/documents?country=${iso3}#doc-${id}`) : null,
+    };
+  });
+const DOCS_SHOWN = 10; // the first ten stand open; "Show all" discloses the rest
+const docGroups = [
+  { items: docs.slice(0, DOCS_SHOWN), more: false },
+  { items: docs.slice(DOCS_SHOWN), more: true },
+].filter((g) => g.items.length > 0);
+const allDocsHref = docs.length ? pageHref(`/documents?country=${iso3}`) : null;
+const tierCounts = (() => {
+  const counts = new Map<string, number>();
+  for (const d of docs) if (d.tier) counts.set(d.tier, (counts.get(d.tier) ?? 0) + 1);
+  return [...counts.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([tier, n]) => `${n} ${/^T\d$/.test(tier) ? `tier ${tier.slice(1)}` : tier}`);
+})();
+const methodSources = pageHref('/methodology#sources');
+
+// ---- the rail, the rules' lead line and About this page ----------------------------------------
+
+// the bindingness in words leads Rules that apply; with no instrument listed it says only what
+// the empty line under it does not already say
+const bindingLine = bindingText && (regulations.length > 0 || bindingText !== 'None recorded') ? `${bindingText}${scopeNote ? `; ${scopeNote}` : ''}.` : null;
+
 const verifiedLabel =
   country.verificationStatus === 'Verified'
     ? 'Verified against sources'
     : country.verificationStatus === 'Corrected'
       ? 'Corrected from sources'
       : null;
+const updated = formatDay(country.lastUpdated);
+const citation = citeText({ title: `${name}: country profile`, path, asOf: country.lastUpdated ?? null });
+const reportHref = correctionHref(name, path);
+const placeholderAsOf = formatDay(dataAsOf);
+// the timeline leads every full profile, with its empty line where it has none; a Placeholder
+// shows it only when it has lines
+const showTimeline = !placeholder || timeline.length > 0;
+const hybrid = country.hybridDeployment?.trim() || 'None stated';
 ---
 
-<article class="profile">
+<article class:list={['profile', { 'is-placeholder': placeholder }]}>
+  {mirrorNote && <p class="mirror-note">The JSON copy of this profile differs from Notion; run the dump.</p>}
   <header class="profile-head">
-    <h1>{country.country}</h1>
-    <ProcessChip value={country.coordinationPosture} />
-    {country.standardsRole && <RoleBadge value={country.standardsRole} />}
-  </header>
-
-  <div class="profile-body">
-    <aside class="ataglance">
-      <p class="ag-head">At a glance</p>
-      <dl class="ag-list">
-        {legal && (
-          <div>
-            <dt>Legal status</dt>
-            <dd>{legal.label}</dd>
-          </div>
-        )}
-        {country.targetCompletion && (
-          <div>
-            <dt>Target</dt>
-            <dd class="mono">{country.targetCompletion}</dd>
-          </div>
-        )}
-        <div>
-          <dt>Documents</dt>
-          <dd class="mono">{documents.length}</dd>
-        </div>
-        {verifiedLabel && (
-          <div>
-            <dt>Sources</dt>
-            <dd class="verified">{verifiedLabel}</dd>
-          </div>
-        )}
-        {country.lastUpdated && (
-          <div>
-            <dt>Updated</dt>
-            <dd class="mono">{country.lastUpdated}</dd>
-          </div>
-        )}
-      </dl>
-    </aside>
-
-    <div class="profile-main">
-      {/* 1. Summary */}
+    <div class="title-row">
+      <h1>{name}</h1>
       {
-        country.summary ? (
-          <p class="prose summary">{country.summary}</p>
-        ) : (
-          <p class="empty">No summary in the public record.</p>
+        placeholder && (
+          <>
+            <ProcessChip value={country.coordinationPosture} />
+            {country.standardsRole && <RoleBadge value={country.standardsRole} />}
+          </>
         )
       }
+    </div>
+    {
+      isMember && (
+        <p class="member-line">
+          EU Member State
+          {euHref && (
+            <>
+              <span class="sep" aria-hidden="true">
+                ·
+              </span>
+              <a href={euHref}>The EU's profile</a>
+            </>
+          )}
+        </p>
+      )
+    }
+  </header>
 
-      {/* Lead row: governance credibility (left) beside the regulatory basis (right).
-          The analytical note is intentionally not rendered: it is an internal field,
-          redacted from the public build (see docs/REGULATORY_LAYER_SPEC.md). */}
-      <section class={`lead-row${evaluation ? ' has-gauge' : ''}`}>
-        {
-          evaluation && (
-            <div class="lead-col gauge-col">
-              <h2>Governance credibility</h2>
-              <CredibilityGauge client:idle evaluation={evaluation} countryName={country.country} blocColor={blocColor ?? '#6b7280'} />
+  <div class:list={['profile-body', { 'is-placeholder': placeholder, 'has-lead': showTimeline }]}>
+    {
+      showTimeline && (
+        <section class="lead-block" id="timeline" aria-labelledby="timeline-h">
+          <h2 class="section-h" id="timeline-h">Migration timeline</h2>
+          <MigrationTimeline rows={timeline} name={inSentence} phased={phased} />
+          {timeline.length > 0 && tlLinks.length > 0 && (
+            <p class="tl-links">
+              {tlLinks.map((l) => (
+                <a href={l.href}>{l.label}</a>
+              ))}
+            </p>
+          )}
+        </section>
+      )
+    }
+
+    {
+      !placeholder && (
+        <aside class="ataglance" aria-labelledby="ag-h">
+          <h2 class="sr-only" id="ag-h">At a glance</h2>
+          <dl class="ag-list">
+            <div class="ag-item">
+              <dt>Coordinates with</dt>
+              <dd>
+                <ProcessChip value={country.coordinationPosture} />
+                {country.coordinationPosture && country.confidence && <span class="ag-sub">{country.confidence} confidence</span>}
+              </dd>
             </div>
-          )
-        }
-        <div class="lead-col reg">
-          <h2>Regulatory basis</h2>
-          {
-            regulations.length ? (
+            {country.standardsRole && (
+              <div class="ag-item">
+                <dt>Standards role</dt>
+                <dd>
+                  <RoleBadge value={country.standardsRole} />
+                </dd>
+              </div>
+            )}
+            {updated && (
+              <div class="ag-item">
+                <dt>Updated</dt>
+                <dd class="mono">{updated}</dd>
+              </div>
+            )}
+          </dl>
+        </aside>
+      )
+    }
+
+    <div class="profile-main">
+      {country.summary ? <p class="prose summary">{country.summary}</p> : !placeholder && <p class="empty summary">No summary in the public record.</p>}
+
+      <AcrossTheAtlas
+        input={{
+          iso3,
+          name,
+          posture: country.coordinationPosture ?? null,
+          dataStatus: country.dataStatus ?? null,
+          migrationTimeline: country.migrationTimeline ?? null,
+          mainRegulation: country.mainRegulation ?? null,
+          standardFamilies: country.standardFamilies ?? null,
+          algorithms: country.algorithms ?? null,
+          lastUpdated: country.lastUpdated ?? null,
+        }}
+      />
+
+      {
+        !placeholder && (
+          <section class="block block--subject" id="rules" aria-labelledby="rules-h">
+            <h2 class="section-h" id="rules-h">Rules that apply</h2>
+            {bindingLine && <p class="rules-lead">{bindingLine}</p>}
+            {regulations.length ? (
               <ul class="reg-list">
                 {regulations.map((r) => (
                   <li>
                     <span class="reg-name">{r.instrument}</span>
                     <span class="reg-tags">
                       {r.level && <span class="reg-level">{r.level}</span>}
-                      {r.statusMeta && (
-                        <span class={`reg-status${r.statusMeta.binding ? ' is-binding' : ''}`}>
-                          {r.statusMeta.label}
+                      {r.proposal ? (
+                        <span class="reg-pair">
+                          <span class="reg-v is-proposal">Proposal, not law</span>
                         </span>
+                      ) : (
+                        <>
+                          {r.status && (
+                            <span class="reg-pair">
+                              <span class="reg-k">Status</span> <span class="reg-v">{r.status}</span>
+                            </span>
+                          )}
+                          {r.bindingness && (
+                            <span class="reg-pair">
+                              <span class="reg-k">Bindingness</span>{' '}
+                              <span class:list={['reg-v', { 'is-binding': r.bindingness.binding }]}>{r.bindingness.label}</span>
+                            </span>
+                          )}
+                        </>
                       )}
+                      {r.scope && <span class="reg-scope">{r.scope}</span>}
                     </span>
                   </li>
                 ))}
               </ul>
             ) : (
-              <p class="empty">No governing instrument identified.</p>
-            )
-          }
-          {legal && (
-            <p class="legal-status">
-              Legal status: <strong>{legal.label}</strong>
-            </p>
-          )}
-          {country.obligation && <p class="obligation prose">{country.obligation}</p>}
-        </div>
-      </section>
+              <p class="empty">No governing instrument recorded.</p>
+            )}
+            {country.obligation && <p class="obligation prose">{country.obligation}</p>}
+          </section>
+        )
+      }
 
-      {/* 2. Standards and algorithms */}
-      <section class="block">
-        <h2>Standards and algorithms</h2>
-        {
-          families.length || algorithms.length ? (
+      {
+        !placeholder && (
+          <section class="block block--subject" aria-labelledby="std-h">
+            <h2 class="section-h" id="std-h">Standards and algorithms</h2>
+            {familyItems.length === 0 && algorithmItems.length === 0 && <p class="empty std-empty">No standards or algorithms recorded.</p>}
             <dl class="data">
-              {families.length > 0 && (
+              {familyItems.length > 0 && (
                 <div>
                   <dt>Standard families</dt>
-                  <dd>{families.join(', ')}</dd>
+                  <dd>
+                    {familyItems.map((f, i) => (
+                      <>
+                        {i > 0 && ', '}
+                        {f.href ? <a href={f.href}>{f.text}</a> : f.text}
+                      </>
+                    ))}
+                  </dd>
                 </div>
               )}
-              {algorithms.length > 0 && (
+              {algorithmItems.length > 0 && (
                 <div>
                   <dt>Algorithms</dt>
-                  <dd class="mono">{algorithms.join(', ')}</dd>
+                  <dd class="mono">
+                    {algorithmItems.map((a, i) => (
+                      <>
+                        {i > 0 && ', '}
+                        {a.href ? <a href={a.href}>{a.text}</a> : a.text}
+                      </>
+                    ))}
+                  </dd>
                 </div>
               )}
+              <div>
+                <dt>Hybrid stance</dt>
+                <dd>{hybrid}</dd>
+              </div>
             </dl>
-          ) : (
-            <p class="empty">No standards or algorithms specified.</p>
-          )
-        }
-      </section>
+          </section>
+        )
+      }
 
-      {/* 3. Hybrid stance */}
-      <section class="block">
-        <h2>Hybrid stance</h2>
-        <p class="hybrid">{country.hybridDeployment?.trim() || 'None stated'}</p>
-      </section>
-
-      {/* 4. Migration timeline */}
-      <section class="block">
-        <h2>Migration timeline</h2>
-        <MigrationTimeline
-          raw={country.migrationTimeline}
-          process={country.coordinationPosture}
-          target={country.targetCompletion}
-        />
-        {country.targetCompletion && <p class="target mono">Target completion: {country.targetCompletion}</p>}
-      </section>
-
-      {/* 5. International standards processes */}
       {
-        participation.length > 0 && (
-          <section class="block">
-            <h2>International standards processes</h2>
+        !placeholder && participation.length > 0 && (
+          <section class="block" aria-labelledby="proc-h">
+            <h2 class="section-h" id="proc-h">International standards processes</h2>
             <ul class="actors">
               {participation.map((p) => (
                 <li>
@@ -223,278 +385,679 @@ const verifiedLabel =
         )
       }
 
-      {/* 6. Standards-body actors */}
-      <section class="block">
-        <h2>Governmental and standards bodies</h2>
-        {
-          govActors.length ? (
-            <ul class="actors">
-              {govActors.map((a) => (
+      {
+        !placeholder && (
+          <section class="block" aria-labelledby="bodies-h">
+            <h2 class="section-h" id="bodies-h">Governmental and standards bodies</h2>
+            {govActors.length ? (
+              <ul class="actors">
+                {govActors.map((a) => {
+                  const href = orgLink(a.name);
+                  return (
+                    <li>
+                      {href ? (
+                        <a class="actor-name row-link" href={href}>
+                          {a.name}
+                        </a>
+                      ) : (
+                        <span class="actor-name">{a.name}</span>
+                      )}
+                      {a.role && <span class="actor-role">{a.role}</span>}
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p class="empty">No institutional actors recorded.</p>
+            )}
+          </section>
+        )
+      }
+
+      {
+        members.length > 0 && (
+          <section class="block" id="member-states" aria-labelledby="members-h">
+            <h2 class="section-h" id="members-h">Member States</h2>
+            <p class="members-lede">
+              The <span class="mono">{members.length}</span> EU Member States, each with its own profile. EU law reaches every one of them;
+              each keeps its own coordination posture.
+            </p>
+            <ul class="members">
+              {members.map((m) => (
                 <li>
-                  <a class="actor-name" href={orgLink(a.name)}>
-                    {a.name}
-                  </a>
-                  {a.role && <span class="actor-role">{a.role}</span>}
+                  {m.href ? (
+                    <a class="row-link" href={m.href}>
+                      {m.name}
+                    </a>
+                  ) : (
+                    m.name
+                  )}
                 </li>
               ))}
             </ul>
-          ) : (
-            <p class="empty">No institutional actors identified.</p>
-          )
-        }
-      </section>
+          </section>
+        )
+      }
 
-      {/* 7. Key documents */}
-      <section class="block">
-        <h2>Key institutional documents</h2>
-        {
-          documents.length ? (
-            <ul class="docs">
-              {documents.map((d) => (
-                <li>
-                  <a href={d.url ?? '#'} target={d.url ? '_blank' : undefined} rel={d.url ? 'noopener' : undefined}>
-                    {d.title}
-                  </a>
-                  <span class="doc-meta mono">
-                    {[d.issuingOrg, d.year, d.tier].filter(Boolean).join(' · ')}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p class="empty">No documents indexed for this country.</p>
-          )
-        }
-      </section>
+      {
+        docs.length > 0 ? (
+          <section class="block block--subject" id="documents" aria-labelledby="docs-h">
+            <h2 class="section-h" id="docs-h">Key institutional documents</h2>
+            {docGroups.map((g) => {
+              const list = (
+                <ul class="docs">
+                  {g.items.map((d) => (
+                    <li>
+                      <span class="doc-text">
+                        {d.url ? (
+                          <a class="doc-title row-link" href={d.url} target="_blank" rel="noopener">
+                            {d.title}
+                          </a>
+                        ) : (
+                          <span class="doc-title">{d.title}</span>
+                        )}
+                        {d.meta && <span class="doc-meta">{d.meta}</span>}
+                      </span>
+                      {d.rowHref && (
+                        <a class="doc-row row-link" href={d.rowHref}>
+                          Entry in Documents<span class="sr-only">: {d.title}</span>
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              );
+              return g.more ? (
+                <details class="docs-more" data-profile-open>
+                  <summary>
+                    <span class="when-shut">
+                      Show all <span class="mono">{docs.length}</span> documents
+                    </span>
+                    <span class="when-open">Show fewer</span>
+                  </summary>
+                  {list}
+                </details>
+              ) : (
+                list
+              );
+            })}
+            {allDocsHref && (
+              <p class="all-docs">
+                <a href={allDocsHref}>{docs.length === 1 ? 'Open it in Documents' : 'Open them in Documents'}</a>
+              </p>
+            )}
+          </section>
+        ) : placeholder ? (
+          <p class="placeholder-line">
+            The Atlas holds no institutional document for {inSentence}{placeholderAsOf ? <> as of <span class="mono">{placeholderAsOf}</span>.</> : '.'} Know an official document we have missed? <a href={reportHref}>Report it</a>.
+          </p>
+        ) : (
+          <section class="block block--subject" id="documents" aria-labelledby="docs-h">
+            <h2 class="section-h" id="docs-h">Key institutional documents</h2>
+            <p class="empty">
+              The Atlas holds no institutional document for {inSentence}. Know an official document we have missed? <a href={reportHref}>Report it</a>.
+            </p>
+          </section>
+        )
+      }
 
-      <p class="profile-cta">
-        Advising on this transition, or your own sector's? <a href="/about#briefing">Request a briefing &rarr;</a>
-      </p>
+      {
+        !placeholder && (
+          <section class="fr-about about-page" id="cite" aria-labelledby="about-h">
+            <details class="fr-about-d" data-profile-open>
+              <summary class="fr-about-sum">
+                <h2 class="fr-h" id="about-h">About this page</h2>
+              </summary>
+              <dl class="fr-kv">
+                <div>
+                  <dt>Sources</dt>
+                  <dd>
+                    <p>
+                      {docs.length ? (
+                        <>
+                          Built from <span class="mono">{docs.length}</span> institutional {docs.length === 1 ? 'document' : 'documents'}
+                          {tierCounts.length > 0 && <>: {joinAnd(tierCounts)}</>}.
+                        </>
+                      ) : (
+                        'No institutional document recorded.'
+                      )}
+                      {methodSources && (
+                        <>
+                          {' '}
+                          <a class="fr-link" href={methodSources}>
+                            How sources are tiered
+                          </a>
+                        </>
+                      )}
+                    </p>
+                    {verifiedLabel && <p>{verifiedLabel}.</p>}
+                  </dd>
+                </div>
+                <div>
+                  <dt>How to cite</dt>
+                  <dd>
+                    <CiteThis text={citation} />
+                  </dd>
+                </div>
+                <div class="fr-report-row">
+                  <dt>Corrections</dt>
+                  <dd>
+                    <ReportError title={name} path={path} label="Report an error in this profile" />
+                  </dd>
+                </div>
+              </dl>
+            </details>
+          </section>
+        )
+      }
     </div>
   </div>
 </article>
+
+<script>
+  // Printing opens the rest of the documents and About this page, then puts both back as the
+  // visitor left them.
+  const folds = Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-profile-open]'));
+  let before: boolean[] = [];
+  window.addEventListener('beforeprint', () => {
+    before = folds.map((d) => d.open);
+    folds.forEach((d) => (d.open = true));
+  });
+  window.addEventListener('afterprint', () => {
+    folds.forEach((d, i) => (d.open = before[i] ?? d.open));
+  });
+</script>
 
 <style>
   .profile {
     max-width: none;
   }
+  /* preview only: one line on the preview rule, in the interface face (it is a sentence) */
+  .mirror-note {
+    margin: 0 0 var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: var(--rule-preview);
+    font-family: var(--font-instrument);
+    font-size: var(--type-caption);
+    color: var(--ink);
+  }
   .profile-head {
+    margin-bottom: var(--gap-related);
+  }
+  .title-row {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-2) var(--space-4);
     flex-wrap: wrap;
-    margin-bottom: var(--space-6);
   }
   .profile-head h1 {
     font-family: var(--font-reading);
-    font-size: 2rem;
+    font-size: var(--type-h1);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tight);
     margin: 0;
   }
+  .member-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 var(--gap-inline);
+    margin: var(--gap-mark) 0 0;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .member-line a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+  }
+  .member-line .sep {
+    color: var(--ink-muted);
+  }
+
+  /* Under 980px one column in reading order: the timeline, the rail, then the reading column,
+     a section's gap apart. From 980px the timeline heads the reading column and the rail stands
+     beside both, its first label level with the timeline's heading; the reading column holds the
+     left edge and the rail's right edge meets the shell's. Whitespace parts them, never a rule. */
   .profile-body {
     display: grid;
-    gap: var(--space-8);
+    gap: var(--gap-related);
   }
-  .profile-main {
+  .profile-main,
+  .lead-block {
     min-width: 0;
   }
   @media (min-width: 980px) {
     .profile-body {
       grid-template-columns: minmax(0, 40rem) 14rem;
+      justify-content: space-between;
       align-items: start;
-      gap: var(--space-12);
+      gap: 0 var(--space-12);
     }
-    .profile-main {
+    .lead-block {
       grid-column: 1;
       grid-row: 1;
     }
+    .profile-main {
+      grid-column: 1;
+      grid-row: 2;
+    }
     .ataglance {
       grid-column: 2;
-      grid-row: 1;
+      grid-row: 1 / span 2;
       position: sticky;
       top: var(--space-8);
     }
+    .has-lead .profile-main {
+      margin-top: var(--gap-related);
+    }
+    .profile-body.is-placeholder {
+      grid-template-columns: minmax(0, 40rem);
+    }
   }
+
+  /* ---- the rail: the posture with its confidence, the standards role, the Updated date --------- */
   .ataglance {
-    border-top: 2px solid var(--ink);
-    padding-top: var(--space-3);
-  }
-  .ag-head {
-    font-family: var(--font-label);
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
-    margin: 0 0 var(--space-3);
+    padding-top: 0.35rem; /* its first label stands level with the timeline's heading */
   }
   .ag-list {
     margin: 0;
     display: grid;
-    gap: var(--space-3);
+    gap: var(--gap-group);
   }
-  .ag-list div {
+  .ag-item {
     display: grid;
     gap: 2px;
+    min-width: 0;
   }
   .ag-list dt {
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--ink-faint);
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
+    color: var(--ink-muted);
   }
   .ag-list dd {
     margin: 0;
-    font-size: var(--text-sm);
+    font-size: var(--type-small);
     color: var(--ink);
   }
-  .verified {
-    font-weight: 600;
+  .ag-list dd :global(.process-chip),
+  .ag-list dd :global(.role-badge) {
+    font-size: var(--type-control);
+    color: var(--ink);
   }
-  .summary {
-    margin: 0 0 var(--space-6);
+  .ag-list dd :global(.role-badge) {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
-  .lead-row {
-    padding: var(--space-6) 0;
-    border-top: 1px solid var(--hairline);
+  .ag-sub {
+    display: block;
+    margin-top: 2px;
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+    line-height: var(--leading-snug);
   }
-  .lead-row.has-gauge {
-    display: grid;
-    gap: var(--space-6) var(--space-8);
-  }
-  @media (min-width: 720px) {
-    .lead-row.has-gauge {
-      grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
-      align-items: start;
+  @media (max-width: 979px) {
+    /* under the timeline on phones and tablets: the posture and the role side by side */
+    .ag-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--gap-group) var(--space-5);
     }
   }
-  .lead-col {
-    min-width: 0;
+
+  /* ---- the reading column: Newsreader headings in ink (.section-h), a section's gap apart ------ */
+  .summary {
+    margin: 0;
   }
+  /* the next facet of the same subject: a related gap; a new question: a subject's gap */
   .block {
-    padding: var(--space-6) 0;
-    border-top: 1px solid var(--hairline);
+    margin-top: var(--gap-related);
   }
-  .block h2,
-  .lead-row h2 {
-    font-family: var(--font-label);
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
+  .block--subject {
+    margin-top: var(--gap-subject);
+  }
+  /* the first thing in the column (Across the Atlas on a Placeholder) takes no gap above it */
+  .profile-main > :global(:first-child) {
+    margin-top: 0;
+  }
+
+  /* rules that apply: the bindingness in words first, then each instrument with its level,
+     Status and Bindingness as two labels */
+  .rules-lead {
+    margin: 0 0 var(--gap-group);
+    font-size: var(--type-control);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink);
+  }
+  .reg-list {
+    list-style: none;
+    margin: 0 0 var(--gap-group-lg);
+    padding: 0;
+    display: grid;
+    gap: var(--gap-group);
+  }
+  .reg-list li {
+    display: grid;
+    gap: var(--gap-mark);
+    max-width: var(--measure);
+  }
+  .reg-name {
+    font-weight: var(--weight-ui-strong);
+    line-height: var(--leading-snug);
+  }
+  .reg-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--gap-mark) var(--space-4);
+    font-size: var(--type-small);
+  }
+  .reg-level,
+  .reg-k {
     color: var(--ink-muted);
-    font-weight: 400;
-    margin-bottom: var(--space-3);
+  }
+  .reg-pair {
+    white-space: nowrap;
+  }
+  .reg-v {
+    color: var(--ink);
+  }
+  .reg-v.is-binding {
+    font-weight: var(--weight-ui-strong);
+  }
+  .reg-v.is-proposal {
+    font-weight: var(--weight-ui-strong);
+    font-style: italic;
+  }
+  .reg-scope {
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+  .obligation {
+    margin: 0;
+  }
+
+  /* standards, algorithms and the hybrid stance: one list of terms */
+  .std-empty {
+    margin-bottom: var(--gap-group);
   }
   .data {
     margin: 0;
     display: grid;
-    gap: var(--space-3);
+    gap: var(--gap-group);
   }
   .data dt {
-    font-size: 0.78rem;
+    font-size: var(--type-small);
     color: var(--ink-muted);
   }
   .data dd {
     margin: 0;
   }
-  .hybrid {
-    margin: 0;
-    font-size: 1.05rem;
-  }
-  .reg-list {
-    list-style: none;
-    margin: 0 0 var(--space-3);
-    padding: 0;
-    display: grid;
-    gap: var(--space-3);
-  }
-  .reg-list li {
+
+  /* the two links under the timeline */
+  .tl-links {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-2) var(--space-3);
+    gap: 0 var(--space-6);
+    margin: var(--gap-inline) 0 0;
   }
-  .reg-name {
-    font-weight: 600;
-  }
-  .reg-tags {
+  .tl-links a {
     display: inline-flex;
-    align-items: baseline;
-    gap: var(--space-3);
-    flex-shrink: 0;
+    align-items: center;
+    min-height: var(--target-min);
+    font-size: var(--type-small);
   }
-  .reg-level,
-  .reg-status {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--ink-faint);
-    white-space: nowrap;
-  }
-  .reg-status.is-binding {
-    color: var(--ink);
-    font-weight: 600;
-  }
-  .legal-status {
-    margin: 0 0 var(--space-3);
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-  }
-  .legal-status strong {
-    color: var(--ink);
-  }
-  .obligation {
-    margin: 0;
-  }
+
   .actors,
   .docs {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    gap: var(--space-3);
+    gap: var(--gap-group);
+  }
+  /* an instrument, a process or a body over its role, held to the reading measure */
+  .actors li {
+    max-width: var(--measure);
   }
   .actor-name {
-    font-weight: 600;
-  }
-  .profile a {
-    color: var(--ink);
-    text-decoration-color: var(--hairline);
-    text-underline-offset: 2px;
-  }
-  .profile a:hover {
-    text-decoration-color: var(--ink);
+    font-weight: var(--weight-ui-strong);
   }
   .actor-role {
     display: block;
-    font-size: 0.85rem;
+    font-size: var(--type-small);
     color: var(--ink-muted);
+  }
+  /* a link looks like a link: teal and underlined, a shade deeper on hover or press; a row of a
+     list of links keeps the kit's ink on a teal underline (.row-link) */
+  .profile a:not(.row-link) {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--dur-fast) var(--ease-standard);
+  }
+  .profile a:not(.row-link):hover,
+  .profile a:not(.row-link):active {
+    color: var(--accent-strong);
+  }
+  /* the inline links of the page reach a 44px target through vertical padding, which an inline
+     box adds to its hit area without moving its line */
+  .data dd a,
+  a.actor-name {
+    padding-block: calc((var(--target-min) - 1.15em) / 2);
+  }
+
+  /* the EU's Member States */
+  .members-lede {
+    margin: 0 0 var(--space-3);
+    max-width: var(--measure);
+    font-size: var(--type-small);
+    color: var(--ink-muted);
+  }
+  .members {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 0 var(--space-5);
+  }
+  .members a {
+    display: flex;
+    align-items: center;
+    min-height: var(--target-min);
+  }
+
+  /* documents, a compact list: the title and its issuer and year on the left, the entry in
+     Documents on the right, so the two links of a row sit side by side and each keeps a 44px
+     target without crowding the other */
+  .docs {
+    gap: var(--space-3);
   }
   .docs li {
     display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--space-4);
+    align-items: start;
+  }
+  .doc-text {
+    display: grid;
     gap: 2px;
+    justify-items: start;
+    min-width: 0;
+  }
+  .doc-title {
+    line-height: var(--leading-snug);
+    overflow-wrap: break-word;
+  }
+  /* the title's hit area reaches 44px: up into the gap above the row, down over its own record
+     line, which holds no link */
+  a.doc-title {
+    position: relative;
+  }
+  a.doc-title::before {
+    content: '';
+    position: absolute;
+    inset: -11px -4px;
   }
   .doc-meta {
-    font-size: 0.78rem;
+    font-size: var(--type-small);
+    font-feature-settings: 'tnum' 1;
     color: var(--ink-muted);
   }
-  .target {
-    font-size: 0.8rem;
-    color: var(--ink-muted);
+  .profile .doc-row {
+    display: block;
+    min-height: var(--target-min);
+    max-width: 5.75rem;
+    font-size: var(--type-small);
+    line-height: 1.4rem;
+    text-align: right;
+  }
+  @media (min-width: 640px) {
+    .profile .doc-row {
+      max-width: none;
+      white-space: nowrap;
+    }
+  }
+  /* the rest of the list, behind one control: "Show all 42 documents", then "Show fewer" */
+  .docs-more > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--target-min);
     margin-top: var(--space-2);
+    cursor: pointer;
+    list-style: none;
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--accent);
+    transition: color var(--dur-fast) var(--ease-standard);
   }
-  .empty {
-    color: var(--ink-muted);
-    font-style: italic;
+  .docs-more > summary::-webkit-details-marker {
+    display: none;
+  }
+  .docs-more > summary > span {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .docs-more > summary::after {
+    content: '';
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform var(--dur-fast) var(--ease-standard);
+  }
+  .docs-more[open] > summary::after {
+    transform: translateY(2px) rotate(-135deg);
+  }
+  .docs-more > summary:hover,
+  .docs-more > summary:active {
+    color: var(--accent-strong);
+  }
+  .docs-more[open] > summary {
+    margin-bottom: var(--space-3);
+  }
+  .docs-more:not([open]) .when-open,
+  .docs-more[open] .when-shut {
+    display: none;
+  }
+  .all-docs {
+    margin: var(--space-2) 0 0;
+  }
+  .all-docs a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-min);
+    font-size: var(--type-small);
+  }
+
+  .placeholder-line {
     margin: 0;
-  }
-  .profile-cta {
-    margin-top: var(--space-8);
-    padding-top: var(--space-6);
-    border-top: 1px solid var(--hairline);
-    font-size: var(--text-sm);
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-style: italic;
     color: var(--ink-muted);
   }
-  .profile-cta a {
-    color: var(--ink);
-    white-space: nowrap;
+  /* a date in mono takes the size of the words around it */
+  .placeholder-line .mono {
+    font-style: normal;
+  }
+
+  /* About this page: the frame's closed disclosure at the foot (frame.css .fr-about) */
+  .about-page {
+    max-width: none;
+  }
+  /* the empty state: one italic muted sentence in the reading face */
+  .empty {
+    margin: 0;
+    max-width: var(--measure);
+    font-family: var(--font-reading);
+    font-size: var(--type-body);
+    font-style: italic;
+    color: var(--ink-muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .profile a:not(.row-link),
+    .docs-more > summary,
+    .docs-more > summary::after {
+      transition: none;
+    }
+  }
+
+  /* ---- print (spec 7.4): the title, the dates, the rail under them, the rules, every document
+     and the citation, with the address of every outside link -------------------------------- */
+  @media print {
+    :global(.site-header),
+    :global(.site-footer),
+    :global(.skip-link) {
+      display: none !important;
+    }
+    .profile-body {
+      display: block;
+    }
+    .lead-block {
+      padding-bottom: var(--space-6);
+    }
+    .ataglance {
+      position: static;
+      margin-bottom: var(--space-6);
+      break-inside: avoid;
+    }
+    .ag-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .member-line a,
+    .member-line .sep,
+    .tl-links,
+    .doc-row,
+    .docs-more > summary,
+    .all-docs,
+    .mirror-note {
+      display: none !important;
+    }
+    .block {
+      break-inside: auto;
+    }
+    .reg-list li,
+    .docs li {
+      break-inside: avoid;
+    }
+    .docs a[href^='http']::after,
+    .about-page a[href^='http']::after {
+      content: ' (' attr(href) ')';
+      font-family: var(--font-instrument);
+      font-size: 8pt;
+      color: var(--ink-muted);
+      overflow-wrap: anywhere;
+    }
+    .profile a {
+      text-decoration: none;
+    }
   }
 </style>

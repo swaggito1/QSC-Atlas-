@@ -1,0 +1,43 @@
+# TEMPLATE. Prompt 00 finalises this file and installs it as .github/workflows/lab-ledger.yml.
+name: lab-ledger
+
+# Runs when a lab-watch pull request closes, and again when a closed one is labelled,
+# so a review label added after closing replaces the "unlabelled" row (upsert by PR number).
+on:
+  pull_request:
+    types: [closed, labeled]
+
+concurrency:
+  group: lab-ledger
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  append:
+    if: github.event.pull_request.state == 'closed' && contains(github.event.pull_request.labels.*.name, 'lab-watch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Append the review outcome to the trust ledger
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_MERGED: ${{ github.event.pull_request.merged }}
+          PR_CLOSED_AT: ${{ github.event.pull_request.closed_at }}
+          PR_LABELS: ${{ toJson(github.event.pull_request.labels.*.name) }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_AUTO_MERGED: ${{ github.event.pull_request.auto_merge != null }}
+        run: node scripts/lab/ledger-append.mjs
+      - name: Commit the ledger row
+        run: |
+          git config user.name "qsc-atlas-lab-bot"
+          git config user.email "lab-bot@users.noreply.github.com"
+          git add labs/ledger/trust-ledger.csv labs/config/autonomy.yaml
+          git diff --cached --quiet || git commit -m "chore(lab-ledger): record outcome of PR ${{ github.event.pull_request.number }}"
+          git push

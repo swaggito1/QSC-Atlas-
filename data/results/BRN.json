@@ -9,5 +9,27 @@
     "url": "https://www.csb.gov.bn/csb-organises-programme-quantum-technologies-and-post-quantum-security",
     "summary": "Cyber Security Brunei (the national cyber security agency) press release announcing the first Quantum Technology and Post-Quantum Cryptography (PQC) Workshop, co-hosted with Malaysia's NACSA and PTPKM, attended by national agencies, regulators and banks to assess Brunei Darussalam's readiness on post-quantum cryptography and align national effort towards PQC migration.",
     "included": true
+  },
+  {
+    "title": "Post-Quantum Cryptography (PQC) Migration Framework",
+    "country": "BRN",
+    "issuingOrg": "CSB",
+    "year": null,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.csb.gov.bn/post-quantum-cryptography-migration-framework",
+    "summary": "Cyber Security Brunei's national framework for moving Government agencies, Critical Information Infrastructure Owners and private-sector organisations to quantum-safe cryptography, citing the harvest now, decrypt later risk to RSA and ECC. It sets a five-phase risk-based migration strategy (Assess, Select, Validate, Deploy, Monitor), with vulnerable algorithms deprecated by 2030 and full migration completed by 2035.",
+    "included": true
+  },
+  {
+    "title": "Cyber Security Brunei Announces the Return of STACK 2026",
+    "country": "BRN",
+    "issuingOrg": "CSB",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.csb.gov.bn/cyber-security-brunei-announces-return-stack-2026",
+    "summary": "Cyber Security Brunei press release dated 5 June 2026 announcing STACK 2026, a three-day conference held 8-10 June 2026. One programme highlight is a consultation session, \"Brunei's Post-Quantum Cryptography (PQC) Migration Framework\", that introduces CSB's national roadmap for the transition to quantum-resistant cryptography. Stakeholders from government, critical information infrastructure sectors and academia are invited to take part.",
+    "included": true
   }
 ]

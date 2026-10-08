@@ -1,0 +1,17 @@
+---
+// "Report an error" (spec 11, item 14): a mailto link to the corrections address
+// (CORRECTIONS_EMAIL in src/lib/site/config.ts), with the page named in the subject:
+// "Correction: {title} ({path})". The only thing the Atlas asks of a visitor.
+import { correctionHref } from '../../../lib/site/cite';
+import '../../../styles/frame.css';
+
+interface Props {
+  title: string; // the page or tool name for the subject
+  path?: string; // defaults to the current page
+  label?: string;
+}
+const { title, path = Astro.url.pathname, label = 'Report an error in this view' } = Astro.props;
+const href = correctionHref(title, path);
+---
+
+<a class="fr-link fr-report" href={href}>{label}</a>

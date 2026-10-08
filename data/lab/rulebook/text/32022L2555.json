@@ -1,0 +1,829 @@
+{
+  "_about": "Verbatim text of the in-scope articles of Directive (EU) 2022/2555 (NIS2), read on 2026-09-30 from the consolidated version of 2022-12-27 (CELEX 02022L2555-20221227) through CELLAR. Consolidation markers and footnote call numbers are left out; each paragraph, subparagraph and point is one entry.",
+  "celex": "32022L2555",
+  "consolidatedVersion": "2022-12-27",
+  "sourceUrl": "http://publications.europa.eu/resource/celex/02022L2555-20221227",
+  "retrievedAt": "2026-09-30",
+  "articles": [
+    {
+      "id": "art2",
+      "ref": "Article 2",
+      "sourceTitle": "Scope",
+      "theme": "scope",
+      "paragraphs": [
+        {
+          "id": "32022L2555/art2/par1",
+          "ref": "Article 2(1)",
+          "quote": "This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide their services or carry out their activities within the Union.",
+          "crossRefs": [
+            "Annex I or II",
+            "Article 2",
+            "the Annex",
+            "Recommendation 2003/361/EC",
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par1/sub-2",
+          "ref": "Article 2(1), second subparagraph",
+          "quote": "Article 3(4) of the Annex to that Recommendation shall not apply for the purposes of this Directive.",
+          "crossRefs": [
+            "Article 3(4)",
+            "the Annex"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par2",
+          "ref": "Article 2(2)",
+          "quote": "Regardless of their size, this Directive also applies to entities of a type referred to in Annex I or II, where:",
+          "crossRefs": [
+            "Annex I or II"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-a",
+          "ref": "Article 2(2)(a)",
+          "quote": "services are provided by:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-a/pt-i",
+          "ref": "Article 2(2)(a)(i)",
+          "quote": "providers of public electronic communications networks or of publicly available electronic communications services;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-a/pt-ii",
+          "ref": "Article 2(2)(a)(ii)",
+          "quote": "trust service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-a/pt-iii",
+          "ref": "Article 2(2)(a)(iii)",
+          "quote": "top-level domain name registries and domain name system service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-b",
+          "ref": "Article 2(2)(b)",
+          "quote": "the entity is the sole provider in a Member State of a service which is essential for the maintenance of critical societal or economic activities;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-c",
+          "ref": "Article 2(2)(c)",
+          "quote": "disruption of the service provided by the entity could have a significant impact on public safety, public security or public health;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-d",
+          "ref": "Article 2(2)(d)",
+          "quote": "disruption of the service provided by the entity could induce a significant systemic risk, in particular for sectors where such disruption could have a cross-border impact;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-e",
+          "ref": "Article 2(2)(e)",
+          "quote": "the entity is critical because of its specific importance at national or regional level for the particular sector or type of service, or for other interdependent sectors in the Member State;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-f",
+          "ref": "Article 2(2)(f)",
+          "quote": "the entity is a public administration entity:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-f/pt-i",
+          "ref": "Article 2(2)(f)(i)",
+          "quote": "of central government as defined by a Member State in accordance with national law; or",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par2/pt-f/pt-ii",
+          "ref": "Article 2(2)(f)(ii)",
+          "quote": "at regional level as defined by a Member State in accordance with national law that, following a risk-based assessment, provides services the disruption of which could have a significant impact on critical societal or economic activities.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par3",
+          "ref": "Article 2(3)",
+          "quote": "Regardless of their size, this Directive applies to entities identified as critical entities under Directive (EU) 2022/2557.",
+          "crossRefs": [
+            "Directive (EU) 2022/2557"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par4",
+          "ref": "Article 2(4)",
+          "quote": "Regardless of their size, this Directive applies to entities providing domain name registration services.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par5",
+          "ref": "Article 2(5)",
+          "quote": "Member States may provide for this Directive to apply to:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par5/pt-a",
+          "ref": "Article 2(5)(a)",
+          "quote": "public administration entities at local level;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par5/pt-b",
+          "ref": "Article 2(5)(b)",
+          "quote": "education institutions, in particular where they carry out critical research activities.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par6",
+          "ref": "Article 2(6)",
+          "quote": "This Directive is without prejudice to the Member States’ responsibility for safeguarding national security and their power to safeguard other essential State functions, including ensuring the territorial integrity of the State and maintaining law and order.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par7",
+          "ref": "Article 2(7)",
+          "quote": "This Directive does not apply to public administration entities that carry out their activities in the areas of national security, public security, defence or law enforcement, including the prevention, investigation, detection and prosecution of criminal offences.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par8",
+          "ref": "Article 2(8)",
+          "quote": "Member States may exempt specific entities which carry out activities in the areas of national security, public security, defence or law enforcement, including the prevention, investigation, detection and prosecution of criminal offences, or which provide services exclusively to the public administration entities referred to in paragraph 7 of this Article, from the obligations laid down in Article 21 or 23 with regard to those activities or services. In such cases, the supervisory and enforcement measures referred to in Chapter VII shall not apply in relation to those specific activities or services. Where the entities carry out activities or provide services exclusively of the type referred to in this paragraph, Member States may decide also to exempt those entities from the obligations laid down in Articles 3 and 27.",
+          "crossRefs": [
+            "paragraph 7",
+            "Article 21 or 23",
+            "Chapter VII",
+            "Articles 3 and 27"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par9",
+          "ref": "Article 2(9)",
+          "quote": "Paragraphs 7 and 8 shall not apply where an entity acts as a trust service provider.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par10",
+          "ref": "Article 2(10)",
+          "quote": "This Directive does not apply to entities which Member States have exempted from the scope of Regulation (EU) 2022/2554 in accordance with Article 2(4) of that Regulation.",
+          "crossRefs": [
+            "Regulation (EU) 2022/2554",
+            "Article 2(4)"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par11",
+          "ref": "Article 2(11)",
+          "quote": "The obligations laid down in this Directive shall not entail the supply of information the disclosure of which would be contrary to the essential interests of Member States’ national security, public security or defence.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art2/par12",
+          "ref": "Article 2(12)",
+          "quote": "This Directive applies without prejudice to Regulation (EU) 2016/679, Directive 2002/58/EC, Directives 2011/93/EU and 2013/40/EU of the European Parliament and of the Council and Directive (EU) 2022/2557.",
+          "crossRefs": [
+            "Regulation (EU) 2016/679",
+            "Directive 2002/58/EC",
+            "Directives 2011/93/EU",
+            "2013/40/EU",
+            "Directive (EU) 2022/2557"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par13",
+          "ref": "Article 2(13)",
+          "quote": "Without prejudice to Article 346 TFEU, information that is confidential pursuant to Union or national rules, such as rules on business confidentiality, shall be exchanged with the Commission and other relevant authorities in accordance with this Directive only where that exchange is necessary for the application of this Directive. The information exchanged shall be limited to that which is relevant and proportionate to the purpose of that exchange. The exchange of information shall preserve the confidentiality of that information and protect the security and commercial interests of entities concerned.",
+          "crossRefs": [
+            "Article 346 TFEU"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par14",
+          "ref": "Article 2(14)",
+          "quote": "Entities, the competent authorities, the single points of contact and the CSIRTs shall process personal data to the extent necessary for the purposes of this Directive and in accordance with Regulation (EU) 2016/679, in particular such processing shall rely on Article 6 thereof.",
+          "crossRefs": [
+            "Regulation (EU) 2016/679",
+            "Article 6"
+          ]
+        },
+        {
+          "id": "32022L2555/art2/par14/sub-2",
+          "ref": "Article 2(14), second subparagraph",
+          "quote": "The processing of personal data pursuant to this Directive by providers of public electronic communications networks or providers of publicly available electronic communications services shall be carried out in accordance with Union data protection law and Union privacy law, in particular Directive 2002/58/EC.",
+          "crossRefs": [
+            "Directive 2002/58/EC"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art3",
+      "ref": "Article 3",
+      "sourceTitle": "Essential and important entities",
+      "theme": "scope",
+      "paragraphs": [
+        {
+          "id": "32022L2555/art3/par1",
+          "ref": "Article 3(1)",
+          "quote": "For the purposes of this Directive, the following entities shall be considered to be essential entities:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-a",
+          "ref": "Article 3(1)(a)",
+          "quote": "entities of a type referred to in Annex I which exceed the ceilings for medium-sized enterprises provided for in Article 2(1) of the Annex to Recommendation 2003/361/EC;",
+          "crossRefs": [
+            "Annex I",
+            "Article 2(1)",
+            "the Annex",
+            "Recommendation 2003/361/EC"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-b",
+          "ref": "Article 3(1)(b)",
+          "quote": "qualified trust service providers and top-level domain name registries as well as DNS service providers, regardless of their size;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-c",
+          "ref": "Article 3(1)(c)",
+          "quote": "providers of public electronic communications networks or of publicly available electronic communications services which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC;",
+          "crossRefs": [
+            "Article 2",
+            "the Annex",
+            "Recommendation 2003/361/EC"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-d",
+          "ref": "Article 3(1)(d)",
+          "quote": "public administration entities referred to in Article 2(2), point (f)(i);",
+          "crossRefs": [
+            "Article 2(2), point (f)(i)"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-e",
+          "ref": "Article 3(1)(e)",
+          "quote": "any other entities of a type referred to in Annex I or II that are identified by a Member State as essential entities pursuant to Article 2(2), points (b) to (e);",
+          "crossRefs": [
+            "Annex I or II",
+            "Article 2(2), points (b) to (e)"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-f",
+          "ref": "Article 3(1)(f)",
+          "quote": "entities identified as critical entities under Directive (EU) 2022/2557, referred to in Article 2(3) of this Directive;",
+          "crossRefs": [
+            "Directive (EU) 2022/2557",
+            "Article 2(3)"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par1/pt-g",
+          "ref": "Article 3(1)(g)",
+          "quote": "if the Member State so provides, entities which that Member State identified before 16 January 2023 as operators of essential services in accordance with Directive (EU) 2016/1148 or national law.",
+          "crossRefs": [
+            "Directive (EU) 2016/1148"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par2",
+          "ref": "Article 3(2)",
+          "quote": "For the purposes of this Directive, entities of a type referred to in Annex I or II which do not qualify as essential entities pursuant to paragraph 1 of this Article shall be considered to be important entities. This includes entities identified by Member States as important entities pursuant to Article 2(2), points (b) to (e).",
+          "crossRefs": [
+            "Annex I or II",
+            "paragraph 1",
+            "Article 2(2), points (b) to (e)"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par3",
+          "ref": "Article 3(3)",
+          "quote": "By 17 April 2025, Member States shall establish a list of essential and important entities as well as entities providing domain name registration services. Member States shall review and, where appropriate, update that list on a regular basis and at least every two years thereafter.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par4",
+          "ref": "Article 3(4)",
+          "quote": "For the purpose of establishing the list referred to in paragraph 3, Member States shall require the entities referred to in that paragraph to submit at least the following information to the competent authorities:",
+          "crossRefs": [
+            "paragraph 3"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par4/pt-a",
+          "ref": "Article 3(4)(a)",
+          "quote": "the name of the entity;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par4/pt-b",
+          "ref": "Article 3(4)(b)",
+          "quote": "the address and up-to-date contact details, including email addresses, IP ranges and telephone numbers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par4/pt-c",
+          "ref": "Article 3(4)(c)",
+          "quote": "where applicable, the relevant sector and subsector referred to in Annex I or II; and",
+          "crossRefs": [
+            "Annex I or II"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par4/pt-d",
+          "ref": "Article 3(4)(d)",
+          "quote": "where applicable, a list of the Member States where they provide services falling within the scope of this Directive.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par4/sub-2",
+          "ref": "Article 3(4), second subparagraph",
+          "quote": "The entities referred to in paragraph 3 shall notify any changes to the details submitted pursuant to the first subparagraph of this paragraph without delay, and, in any event, within two weeks of the date of the change.",
+          "crossRefs": [
+            "paragraph 3",
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par4/sub-3",
+          "ref": "Article 3(4), third subparagraph",
+          "quote": "The Commission, with the assistance of the European Union Agency for Cybersecurity (ENISA), shall without undue delay provide guidelines and templates regarding the obligations laid down in this paragraph.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par4/sub-4",
+          "ref": "Article 3(4), fourth subparagraph",
+          "quote": "Member States may establish national mechanisms for entities to register themselves.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par5",
+          "ref": "Article 3(5)",
+          "quote": "By 17 April 2025 and every two years thereafter, the competent authorities shall notify:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art3/par5/pt-a",
+          "ref": "Article 3(5)(a)",
+          "quote": "the Commission and the Cooperation Group of the number of essential and important entities listed pursuant to paragraph 3 for each sector and subsector referred to in Annex I or II; and",
+          "crossRefs": [
+            "paragraph 3",
+            "Annex I or II"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par5/pt-b",
+          "ref": "Article 3(5)(b)",
+          "quote": "the Commission of relevant information about the number of essential and important entities identified pursuant to Article 2(2), points (b) to (e), the sector and subsector referred to in Annex I or II to which they belong, the type of service that they provide, and the provision, from among those laid down in Article 2(2), points (b) to (e), pursuant to which they were identified.",
+          "crossRefs": [
+            "Article 2(2), points (b) to (e)",
+            "Annex I or II"
+          ]
+        },
+        {
+          "id": "32022L2555/art3/par6",
+          "ref": "Article 3(6)",
+          "quote": "Until 17 April 2025 and upon request of the Commission, Member States may notify the Commission of the names of the essential and important entities referred to in paragraph 5, point (b).",
+          "crossRefs": [
+            "paragraph 5, point (b)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art21",
+      "ref": "Article 21",
+      "sourceTitle": "Cybersecurity risk-management measures",
+      "theme": "risk-management",
+      "paragraphs": [
+        {
+          "id": "32022L2555/art21/par1",
+          "ref": "Article 21(1)",
+          "quote": "Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par1/sub-2",
+          "ref": "Article 21(1), second subparagraph",
+          "quote": "Taking into account the state-of-the-art and, where applicable, relevant European and international standards, as well as the cost of implementation, the measures referred to in the first subparagraph shall ensure a level of security of network and information systems appropriate to the risks posed. When assessing the proportionality of those measures, due account shall be taken of the degree of the entity’s exposure to risks, the entity’s size and the likelihood of occurrence of incidents and their severity, including their societal and economic impact.",
+          "crossRefs": [
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par2",
+          "ref": "Article 21(2)",
+          "quote": "The measures referred to in paragraph 1 shall be based on an all-hazards approach that aims to protect network and information systems and the physical environment of those systems from incidents, and shall include at least the following:",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-a",
+          "ref": "Article 21(2)(a)",
+          "quote": "policies on risk analysis and information system security;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-b",
+          "ref": "Article 21(2)(b)",
+          "quote": "incident handling;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-c",
+          "ref": "Article 21(2)(c)",
+          "quote": "business continuity, such as backup management and disaster recovery, and crisis management;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-d",
+          "ref": "Article 21(2)(d)",
+          "quote": "supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-e",
+          "ref": "Article 21(2)(e)",
+          "quote": "security in network and information systems acquisition, development and maintenance, including vulnerability handling and disclosure;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-f",
+          "ref": "Article 21(2)(f)",
+          "quote": "policies and procedures to assess the effectiveness of cybersecurity risk-management measures;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-g",
+          "ref": "Article 21(2)(g)",
+          "quote": "basic cyber hygiene practices and cybersecurity training;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-h",
+          "ref": "Article 21(2)(h)",
+          "quote": "policies and procedures regarding the use of cryptography and, where appropriate, encryption;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-i",
+          "ref": "Article 21(2)(i)",
+          "quote": "human resources security, access control policies and asset management;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par2/pt-j",
+          "ref": "Article 21(2)(j)",
+          "quote": "the use of multi-factor authentication or continuous authentication solutions, secured voice, video and text communications and secured emergency communication systems within the entity, where appropriate.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art21/par3",
+          "ref": "Article 21(3)",
+          "quote": "Member States shall ensure that, when considering which measures referred to in paragraph 2, point (d), of this Article are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures. Member States shall also ensure that, when considering which measures referred to in that point are appropriate, entities are required to take into account the results of the coordinated security risk assessments of critical supply chains carried out in accordance with Article 22(1).",
+          "crossRefs": [
+            "paragraph 2, point (d)",
+            "Article 22(1)"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par4",
+          "ref": "Article 21(4)",
+          "quote": "Member States shall ensure that an entity that finds that it does not comply with the measures provided for in paragraph 2 takes, without undue delay, all necessary, appropriate and proportionate corrective measures.",
+          "crossRefs": [
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par5",
+          "ref": "Article 21(5)",
+          "quote": "By 17 October 2024, the Commission shall adopt implementing acts laying down the technical and the methodological requirements of the measures referred to in paragraph 2 with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers.",
+          "crossRefs": [
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par5/sub-2",
+          "ref": "Article 21(5), second subparagraph",
+          "quote": "The Commission may adopt implementing acts laying down the technical and the methodological requirements, as well as sectoral requirements, as necessary, of the measures referred to in paragraph 2 with regard to essential and important entities other than those referred to in the first subparagraph of this paragraph.",
+          "crossRefs": [
+            "paragraph 2",
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par5/sub-3",
+          "ref": "Article 21(5), third subparagraph",
+          "quote": "When preparing the implementing acts referred to in the first and second subparagraphs of this paragraph, the Commission shall, to the extent possible, follow European and international standards, as well as relevant technical specifications. The Commission shall exchange advice and cooperate with the Cooperation Group and ENISA on the draft implementing acts in accordance with Article 14(4), point (e).",
+          "crossRefs": [
+            "first and second subparagraphs",
+            "Article 14(4), point (e)"
+          ]
+        },
+        {
+          "id": "32022L2555/art21/par5/sub-4",
+          "ref": "Article 21(5), fourth subparagraph",
+          "quote": "Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 39(2).",
+          "crossRefs": [
+            "Article 39(2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art23",
+      "ref": "Article 23",
+      "sourceTitle": "Reporting obligations",
+      "theme": "incident-reporting",
+      "paragraphs": [
+        {
+          "id": "32022L2555/art23/par1",
+          "ref": "Article 23(1)",
+          "quote": "Each Member State shall ensure that essential and important entities notify, without undue delay, its CSIRT or, where applicable, its competent authority in accordance with paragraph 4 of any incident that has a significant impact on the provision of their services as referred to in paragraph 3 (significant incident). Where appropriate, entities concerned shall notify, without undue delay, the recipients of their services of significant incidents that are likely to adversely affect the provision of those services. Each Member State shall ensure that those entities report, inter alia, any information enabling the CSIRT or, where applicable, the competent authority to determine any cross-border impact of the incident. The mere act of notification shall not subject the notifying entity to increased liability.",
+          "crossRefs": [
+            "paragraph 4",
+            "paragraph 3"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par1/sub-2",
+          "ref": "Article 23(1), second subparagraph",
+          "quote": "Where the entities concerned notify the competent authority of a significant incident under the first subparagraph, the Member State shall ensure that that competent authority forwards the notification to the CSIRT upon receipt.",
+          "crossRefs": [
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par1/sub-3",
+          "ref": "Article 23(1), third subparagraph",
+          "quote": "In the case of a cross-border or cross-sectoral significant incident, Member States shall ensure that their single points of contact are provided in due time with relevant information notified in accordance with paragraph 4.",
+          "crossRefs": [
+            "paragraph 4"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par2",
+          "ref": "Article 23(2)",
+          "quote": "Where applicable, Member States shall ensure that essential and important entities communicate, without undue delay, to the recipients of their services that are potentially affected by a significant cyber threat any measures or remedies that those recipients are able to take in response to that threat. Where appropriate, the entities shall also inform those recipients of the significant cyber threat itself.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par3",
+          "ref": "Article 23(3)",
+          "quote": "An incident shall be considered to be significant if:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par3/pt-a",
+          "ref": "Article 23(3)(a)",
+          "quote": "it has caused or is capable of causing severe operational disruption of the services or financial loss for the entity concerned;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par3/pt-b",
+          "ref": "Article 23(3)(b)",
+          "quote": "it has affected or is capable of affecting other natural or legal persons by causing considerable material or non-material damage.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4",
+          "ref": "Article 23(4)",
+          "quote": "Member States shall ensure that, for the purpose of notification under paragraph 1, the entities concerned submit to the CSIRT or, where applicable, the competent authority:",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-a",
+          "ref": "Article 23(4)(a)",
+          "quote": "without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-b",
+          "ref": "Article 23(4)(b)",
+          "quote": "without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident, including its severity and impact, as well as, where available, the indicators of compromise;",
+          "crossRefs": [
+            "point (a)"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-c",
+          "ref": "Article 23(4)(c)",
+          "quote": "upon the request of a CSIRT or, where applicable, the competent authority, an intermediate report on relevant status updates;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-d",
+          "ref": "Article 23(4)(d)",
+          "quote": "a final report not later than one month after the submission of the incident notification under point (b), including the following:",
+          "crossRefs": [
+            "point (b)"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-d/pt-i",
+          "ref": "Article 23(4)(d)(i)",
+          "quote": "a detailed description of the incident, including its severity and impact;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-d/pt-ii",
+          "ref": "Article 23(4)(d)(ii)",
+          "quote": "the type of threat or root cause that is likely to have triggered the incident;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-d/pt-iii",
+          "ref": "Article 23(4)(d)(iii)",
+          "quote": "applied and ongoing mitigation measures;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-d/pt-iv",
+          "ref": "Article 23(4)(d)(iv)",
+          "quote": "where applicable, the cross-border impact of the incident;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par4/pt-e",
+          "ref": "Article 23(4)(e)",
+          "quote": "in the event of an ongoing incident at the time of the submission of the final report referred to in point (d), Member States shall ensure that entities concerned provide a progress report at that time and a final report within one month of their handling of the incident.",
+          "crossRefs": [
+            "point (d)"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par4/sub-2",
+          "ref": "Article 23(4), second subparagraph",
+          "quote": "By way of derogation from the first subparagraph, point (b), a trust service provider shall, with regard to significant incidents that have an impact on the provision of its trust services, notify the CSIRT or, where applicable, the competent authority, without undue delay and in any event within 24 hours of becoming aware of the significant incident.",
+          "crossRefs": [
+            "first subparagraph",
+            "point (b)"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par5",
+          "ref": "Article 23(5)",
+          "quote": "The CSIRT or the competent authority shall provide, without undue delay and where possible within 24 hours of receiving the early warning referred to in paragraph 4, point (a), a response to the notifying entity, including initial feedback on the significant incident and, upon request of the entity, guidance or operational advice on the implementation of possible mitigation measures. Where the CSIRT is not the initial recipient of the notification referred to in paragraph 1, the guidance shall be provided by the competent authority in cooperation with the CSIRT. The CSIRT shall provide additional technical support if the entity concerned so requests. Where the significant incident is suspected to be of criminal nature, the CSIRT or the competent authority shall also provide guidance on reporting the significant incident to law enforcement authorities.",
+          "crossRefs": [
+            "paragraph 4, point (a)",
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par6",
+          "ref": "Article 23(6)",
+          "quote": "Where appropriate, and in particular where the significant incident concerns two or more Member States, the CSIRT, the competent authority or the single point of contact shall inform, without undue delay, the other affected Member States and ENISA of the significant incident. Such information shall include the type of information received in accordance with paragraph 4. In so doing, the CSIRT, the competent authority or the single point of contact shall, in accordance with Union or national law, preserve the entity’s security and commercial interests as well as the confidentiality of the information provided.",
+          "crossRefs": [
+            "paragraph 4"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par7",
+          "ref": "Article 23(7)",
+          "quote": "Where public awareness is necessary to prevent a significant incident or to deal with an ongoing significant incident, or where disclosure of the significant incident is otherwise in the public interest, a Member State’s CSIRT or, where applicable, its competent authority, and, where appropriate, the CSIRTs or the competent authorities of other Member States concerned, may, after consulting the entity concerned, inform the public about the significant incident or require the entity to do so.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art23/par8",
+          "ref": "Article 23(8)",
+          "quote": "At the request of the CSIRT or the competent authority, the single point of contact shall forward notifications received pursuant to paragraph 1 to the single points of contact of other affected Member States.",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par9",
+          "ref": "Article 23(9)",
+          "quote": "The single point of contact shall submit to ENISA every three months a summary report, including anonymised and aggregated data on significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with Article 30. In order to contribute to the provision of comparable information, ENISA may adopt technical guidance on the parameters of the information to be included in the summary report. ENISA shall inform the Cooperation Group and the CSIRTs network about its findings on notifications received every six months.",
+          "crossRefs": [
+            "paragraph 1",
+            "Article 30"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par10",
+          "ref": "Article 23(10)",
+          "quote": "The CSIRTs or, where applicable, the competent authorities shall provide to the competent authorities under Directive (EU) 2022/2557 information about significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with Article 30 by entities identified as critical entities under Directive (EU) 2022/2557.",
+          "crossRefs": [
+            "Directive (EU) 2022/2557",
+            "paragraph 1",
+            "Article 30"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par11",
+          "ref": "Article 23(11)",
+          "quote": "The Commission may adopt implementing acts further specifying the type of information, the format and the procedure of a notification submitted pursuant to paragraph 1 of this Article and to Article 30 and of a communication submitted pursuant to paragraph 2 of this Article.",
+          "crossRefs": [
+            "paragraph 1",
+            "Article 30",
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par11/sub-2",
+          "ref": "Article 23(11), second subparagraph",
+          "quote": "By 17 October 2024, the Commission shall, with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, as well as providers of online marketplaces, of online search engines and of social networking services platforms, adopt implementing acts further specifying the cases in which an incident shall be considered to be significant as referred to in paragraph 3. The Commission may adopt such implementing acts with regard to other essential and important entities.",
+          "crossRefs": [
+            "paragraph 3"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par11/sub-3",
+          "ref": "Article 23(11), third subparagraph",
+          "quote": "The Commission shall exchange advice and cooperate with the Cooperation Group on the draft implementing acts referred to in the first and second subparagraphs of this paragraph in accordance with Article 14(4), point (e).",
+          "crossRefs": [
+            "first and second subparagraphs",
+            "Article 14(4), point (e)"
+          ]
+        },
+        {
+          "id": "32022L2555/art23/par11/sub-4",
+          "ref": "Article 23(11), fourth subparagraph",
+          "quote": "Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 39(2).",
+          "crossRefs": [
+            "Article 39(2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art26",
+      "ref": "Article 26",
+      "sourceTitle": "Jurisdiction and territoriality",
+      "theme": "jurisdiction",
+      "paragraphs": [
+        {
+          "id": "32022L2555/art26/par1",
+          "ref": "Article 26(1)",
+          "quote": "Entities falling within the scope of this Directive shall be considered to fall under the jurisdiction of the Member State in which they are established, except in the case of:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art26/par1/pt-a",
+          "ref": "Article 26(1)(a)",
+          "quote": "providers of public electronic communications networks or providers of publicly available electronic communications services, which shall be considered to fall under the jurisdiction of the Member State in which they provide their services;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art26/par1/pt-b",
+          "ref": "Article 26(1)(b)",
+          "quote": "DNS service providers, TLD name registries, entities providing domain name registration services, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, as well as providers of online marketplaces, of online search engines or of social networking services platforms, which shall be considered to fall under the jurisdiction of the Member State in which they have their main establishment in the Union under paragraph 2;",
+          "crossRefs": [
+            "paragraph 2"
+          ]
+        },
+        {
+          "id": "32022L2555/art26/par1/pt-c",
+          "ref": "Article 26(1)(c)",
+          "quote": "public administration entities, which shall be considered to fall under the jurisdiction of the Member State which established them.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2555/art26/par2",
+          "ref": "Article 26(2)",
+          "quote": "For the purposes of this Directive, an entity as referred to in paragraph 1, point (b), shall be considered to have its main establishment in the Union in the Member State where the decisions related to the cybersecurity risk-management measures are predominantly taken. If such a Member State cannot be determined or if such decisions are not taken in the Union, the main establishment shall be considered to be in the Member State where cybersecurity operations are carried out. If such a Member State cannot be determined, the main establishment shall be considered to be in the Member State where the entity concerned has the establishment with the highest number of employees in the Union.",
+          "crossRefs": [
+            "paragraph 1, point (b)"
+          ]
+        },
+        {
+          "id": "32022L2555/art26/par3",
+          "ref": "Article 26(3)",
+          "quote": "If an entity as referred to in paragraph 1, point (b), is not established in the Union, but offers services within the Union, it shall designate a representative in the Union. The representative shall be established in one of those Member States where the services are offered. Such an entity shall be considered to fall under the jurisdiction of the Member State where the representative is established. In the absence of a representative in the Union designated under this paragraph, any Member State in which the entity provides services may take legal actions against the entity for the infringement of this Directive.",
+          "crossRefs": [
+            "paragraph 1, point (b)"
+          ]
+        },
+        {
+          "id": "32022L2555/art26/par4",
+          "ref": "Article 26(4)",
+          "quote": "The designation of a representative by an entity as referred to in paragraph 1, point (b), shall be without prejudice to legal actions, which could be initiated against the entity itself.",
+          "crossRefs": [
+            "paragraph 1, point (b)"
+          ]
+        },
+        {
+          "id": "32022L2555/art26/par5",
+          "ref": "Article 26(5)",
+          "quote": "Member States that have received a request for mutual assistance in relation to an entity as referred to in paragraph 1, point (b), may, within the limits of that request, take appropriate supervisory and enforcement measures in relation to the entity concerned that provides services or which has a network and information system on their territory.",
+          "crossRefs": [
+            "paragraph 1, point (b)"
+          ]
+        }
+      ]
+    }
+  ]
+}

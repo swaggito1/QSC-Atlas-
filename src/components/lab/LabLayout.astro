@@ -1,0 +1,119 @@
+---
+// The frame around a tool page: PageFrame (src/components/site/frame), given the tool.
+// Every tool renders in the same anatomy whether or not its own package has passed the new
+// props yet:
+//   no breadcrumb (the header shows the section, the Prepare side menu the page); the tool's
+//   trail still names the page;
+//   H1 is the question when one is given, else the tool's title;
+//   lede is the given lede, else the tool's promise when it does not repeat the question;
+//   one quiet meta line: the as-of date (with "due for a check" once stale), the law-as-of date,
+//   what it reads and the time it takes;
+//   the section's view switch for a tool homed in Countries or Standards;
+//   the tool itself; Where to go next; the About this view disclosure with the sources, the
+//   as-of date and "verified n days ago", who it is written for, "Nothing you enter leaves this
+//   page", byline, method note and link, citation, the standing note on compliance and Report
+//   an error.
+// The "head" slot keeps working for a second as-of line; "method" and "sources" go to About
+// this view. Each is forwarded as it is (an empty slot renders nothing; About this view tests
+// its own slots for content). A tool that is not public carries the preview line and noindex in
+// preview builds.
+import PageFrame from '../site/frame/PageFrame.astro';
+import { methodAnchorFor, pageHref, toolCrumbs, toolSection } from '../site/frame/contracts';
+import type { LinkItem } from '../site/frame/contracts';
+import type { SourceEntry } from '../../lib/lab/format';
+import { freshnessDays } from '../../lib/lab/freshness';
+import { toolCitation } from '../../lib/site/cite';
+import type { LabTool } from '../../lib/lab/types';
+
+interface Props {
+  tool: LabTool;
+  promise?: string; // defaults to tool.promise; the lede when no lede is given
+  asOf?: string | null; // the most recent verifiedAt in the tool's data (latestVerifiedAt)
+  sources?: SourceEntry[];
+  obligations?: boolean; // the standing note on compliance, kept in About this view
+  description?: string; // meta description; defaults to the lede
+  wide?: boolean; // the map page's wider measure, for tools built around a map
+  // the frame's props (spec 21.2)
+  question?: string;
+  lede?: string | null;
+  reads?: LinkItem[];
+  writtenFor?: string | null;
+  minutes?: number | null;
+  local?: boolean;
+  notForYou?: { text: string; href: string | null } | null;
+  standingNote?: string | null;
+  standingNoteIn?: 'head' | 'about';
+  lawAsOf?: string | null;
+  next?: LinkItem[];
+  methodAnchor?: string | null;
+  facts?: string[];
+}
+
+const OBLIGATIONS_NOTE =
+  'The Atlas is a research instrument. It does not tell you whether you are compliant; confirm obligations with counsel.';
+
+const { tool, asOf = null, sources = [], obligations = false, wide = false } = Astro.props;
+const promise = Astro.props.promise ?? tool.promise ?? null;
+const question = Astro.props.question ?? tool.title;
+// the promise stands in for a missing lede, unless it repeats the question: several promises
+// in the registry are word for word the H1 a page would ask
+const norm = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\s.?!]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+const lede = Astro.props.lede !== undefined ? Astro.props.lede : promise && norm(promise) !== norm(question) ? promise : null;
+
+// one standing note at most: the page's own, else the note on compliance in About this view
+const standingNote = Astro.props.standingNote ?? (obligations ? OBLIGATIONS_NOTE : null);
+const standingNoteIn = Astro.props.standingNote ? (Astro.props.standingNoteIn ?? 'head') : 'about';
+
+// until a tool's package passes its own, it closes on the two pages every build has, both of
+// them back into the evidence
+const next: LinkItem[] = Astro.props.next ?? [
+  { label: 'Every country the Atlas records', href: pageHref('/countries') },
+  { label: 'The institutional documents behind the records', href: pageHref('/documents') },
+];
+
+// a tool homed in Countries or Standards is one view of its section, so it carries the section's
+// view switch ("Overview · Cascade"); Prepare tools have the side menu instead
+const section = toolSection(tool);
+const views = section === 'countries' || section === 'standards' ? section : null;
+
+const path = Astro.url.pathname;
+---
+
+<PageFrame
+  question={question}
+  breadcrumb={toolCrumbs(tool)}
+  section={section}
+  views={views}
+  gate={tool.id}
+  title={tool.title}
+  description={Astro.props.description ?? lede ?? promise ?? question}
+  lede={lede}
+  reads={Astro.props.reads ?? []}
+  writtenFor={Astro.props.writtenFor ?? null}
+  minutes={Astro.props.minutes ?? null}
+  local={Astro.props.local ?? false}
+  asOf={asOf}
+  freshnessDays={freshnessDays(tool.id)}
+  lawAsOf={Astro.props.lawAsOf ?? null}
+  facts={Astro.props.facts ?? []}
+  notForYou={Astro.props.notForYou ?? null}
+  standingNote={standingNote}
+  standingNoteIn={standingNoteIn}
+  next={next}
+  sources={sources}
+  methodAnchor={Astro.props.methodAnchor !== undefined ? Astro.props.methodAnchor : methodAnchorFor(tool.id)}
+  byline={tool.byline}
+  citation={toolCitation(tool, asOf, { path })}
+  wide={wide}
+>
+  <slot name="head" slot="asof" />
+  <slot />
+  <slot name="method" slot="method" />
+  <slot name="sources" slot="sources" />
+</PageFrame>

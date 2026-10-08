@@ -1,0 +1,13 @@
+---
+// Retired in the minimal pass (labs/review/minimal-spec.md, "Meta and chrome"): the Atlas has two
+// levels, and a breadcrumb earns its place only at three or more, so no page draws one. The header
+// shows the section and the Prepare side menu shows the page. The component stays only so a page
+// that still imports it keeps building, and it renders nothing; remove the import when that page
+// is next touched. A page that would otherwise have no way back passes `back` to PageFrame.
+import type { Crumb } from './contracts';
+
+interface Props {
+  items?: Crumb[];
+  hasEnd?: boolean;
+}
+---

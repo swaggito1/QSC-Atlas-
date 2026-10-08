@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Cyber and Operational Resilience Framework for All Local Banks and Financial Institutions",
+    "country": "KWT",
+    "issuingOrg": "CBK",
+    "year": 2025,
+    "docType": "Regulation",
+    "tier": "T1",
+    "url": "https://www.cbk.gov.kw/ar/images/corf-170113_v10_tcm11-170113.pdf",
+    "summary": "The Central Bank of Kuwait's Cyber and Operational Resilience Framework (CORF, version 1.0, first released 3 December 2025) replaces the 2020 Cybersecurity Framework for local banks and financial institutions. Its emerging technologies section (7.1.4) requires regulated entities to start adopting quantum-resistant cryptographic algorithms, periodically assess cryptographic practices, develop a quantum readiness strategy with migration timelines and milestones, and test quantum-resistant algorithms before deployment.",
+    "included": true
+  }
+]

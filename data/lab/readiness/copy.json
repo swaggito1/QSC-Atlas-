@@ -1,0 +1,136 @@
+{
+  "_about": "Every visitor-facing string of the Readiness Check. Templates use {name} placeholders filled by src/lib/lab/readiness.ts and the page. British English, no dashes, no score language, and no source words: a source's own words reach the page only in a review build opened with ?review=1 (src/lib/site/review.ts). Keys the server alone renders (question, lede, description, minutes, noscript, elements, next and method) are not sent to the island. statusPhrase, kindLabel and targetsNote are also read by the guide pages, through src/lib/site/prepare-hub.ts.",
+  "copy": {
+    "question": "What does published guidance ask an organisation to do?",
+    "lede": "Answer one question at a time, then see what you have done and what to take first.",
+    "description": "A guided self-assessment against published post-quantum migration guidance: one question at a time, then what you have done, what is under way and what to take first, with each guide's target dates. No score, and nothing leaves the page.",
+    "minutes": "10",
+
+    "setupHead": "Before you start",
+    "guidesLabel": "Guides",
+    "guidesChange": "Change",
+    "guidesChangeName": "Change the guides",
+    "guidesClose": "Close",
+    "guidesNone": "none chosen",
+    "sourcesLegend": "The guides you follow",
+    "sourcesHint": "The Check starts with the EU roadmap and the NCSC timelines. Each guide you add brings its own questions.",
+    "aboutSummary": "Who each guide is written for",
+    "sourceMeta": "{issuer} · {status} · {bindingness} · written for {audience}",
+    "roleLegend": "You answer for",
+    "roleOptional": "optional",
+    "role": {
+      "organisation": "An organisation",
+      "public-administration": "A public administration"
+    },
+    "roleIn": {
+      "organisation": "an organisation",
+      "public-administration": "a public administration"
+    },
+
+    "viewsLabel": "View",
+    "viewOne": "One by one",
+    "viewList": "Checklist",
+    "viewAssessment": "Assessment",
+
+    "position": "{group}, question {n} of {count}",
+    "fromGuide": "From the",
+    "more": "More",
+    "whereSaid": "Where it says so:",
+    "sourceLink": "Source",
+    "inFrench": "The source's words are in French.",
+    "lead": "checking",
+    "answerLegend": "Where you stand",
+    "answer": {
+      "done": "Done",
+      "in-progress": "In progress",
+      "not-started": "Not started",
+      "not-applicable": "Not applicable"
+    },
+    "unanswered": "Not answered",
+    "back": "Back",
+    "next": "Next",
+    "nextGroup": "Next: {group}",
+    "toAssessment": "See your assessment",
+    "groupsNav": "Go to a group",
+    "groupCount": "{n} of {count} answered",
+    "groupNone": "no questions in your guides",
+    "noQuestions": "Choose at least one guide to see its questions.",
+
+    "listHead": "Every question",
+    "listIntro": "Choose an answer beside each question, or open one to read more about it.",
+
+    "asxHead": "Your assessment",
+    "asxWith": "From your answers, with {guides}.",
+    "asxWithRole": "From your answers for {role}, with {guides}.",
+    "asxEmpty": "Answer a question and your assessment builds up here, group by group.",
+    "asxFirstHead": "Take these first",
+    "asxFirstRule": "Steps you marked in progress or not started, the earliest target first; steps with no target date come after.",
+    "asxFirstNone": "Mark a question in progress or not started and it can appear here.",
+    "asxTarget": "target {when}, {guide}",
+    "asxNoTarget": "no target date in your guides",
+    "asxEuFaq": {
+      "organisation": "The EU roadmap's FAQ encourages every organisation to make an inventory of cryptographic assets and dependency maps, involve the supply chain and perform a quantum risk analysis, and says entities in scope of NIS2 should at a minimum do so.",
+      "public-administration": "The EU roadmap's FAQ says entities in scope of NIS2, public administrations among them, should at a minimum make an inventory of cryptographic assets and dependency maps, involve the supply chain and perform a quantum risk analysis."
+    },
+    "asxGroupsHead": "Group by group",
+    "asxCount": "{n} {answer}",
+
+    "targetsNote": "Every date here is a target set by guidance or a recommendation. None is a legal deadline.",
+    "statusPhrase": {
+      "eu-roadmap": "a recommendation, not a legal deadline",
+      "ncsc-timelines": "a target date in guidance, not a legal deadline",
+      "ncsc-next-steps": "guidance, not a legal deadline",
+      "ca-roadmap": "a recommended target for federal departments, not a legal deadline",
+      "anssi-faq": "advice that carries no regulatory obligation, not a legal deadline",
+      "cisa-factsheet": "guidance, not a legal deadline",
+      "nl-handbook": "guidance, not a legal deadline"
+    },
+    "kindLabel": {
+      "plan": "plan",
+      "priority": "priority systems",
+      "complete": "completion",
+      "procurement": "procurement",
+      "other": "other"
+    },
+    "targetBy": "target {dates}",
+    "targetAlso": "also {dates} in the {source}",
+    "targetNone": "no target date",
+
+    "privacy": "Your answers stay in this page and in its address, after the # sign, a part browsers do not send to any server. The Atlas sends and stores nothing. Bookmark the page or copy the link to come back to them.",
+    "copyLink": "Copy link",
+    "downloadCsv": "Download CSV",
+    "print": "Print",
+    "clear": "Clear answers",
+    "copied": "Link copied. It opens this page with your guides and answers.",
+    "copyFailed": "The link could not be copied here. It is in the box below; select it and copy it.",
+    "csvDone": "CSV downloaded.",
+    "cleared": "Answers cleared.",
+    "undo": "undo",
+    "restored": "Answers restored.",
+    "csvHeader": "Question,Group,Guide,Target,Your answer,Source address,Where in the source",
+    "printTitle": "Readiness Check: your assessment",
+    "printFrom": "From {url}, printed {date}.",
+
+    "noscriptHead": "Every question, group by group",
+    "noscript": "With JavaScript the Check asks one question at a time and builds your assessment. Without it, here is every question the guides ask, to read or print.",
+
+    "elements": {
+      "exposure": "Check how long your data must stay secret",
+      "inventory": "Record each system's cryptography",
+      "suppliers": "Write to your suppliers"
+    },
+
+    "nextGuides": "The guides behind the questions, and who each is written for",
+    "nextExposure": "How long your data must stay secret: the Exposure Clock",
+
+    "method1": "The Readiness Check draws on the EU coordinated implementation roadmap of the NIS Cooperation Group and its FAQ, the UK NCSC's migration timelines and its Next steps white paper, the Canadian Centre for Cyber Security's roadmap ITSM.40.001, ANSSI's FAQ on post-quantum cryptography, the CISA, NSA and NIST quantum-readiness factsheet, and the Dutch PQC Migration Handbook by AIVD, CWI and TNO. Each question is one action a guide asks for, in the Atlas's words, with a link to the guide. {checked}",
+    "checkedOn": "The source's words behind each question were read and checked on {date}.",
+    "checkedBetween": "The source's words behind each question were read and checked between {first} and {last}.",
+    "checkedNone": "Each question rests on the source's own words.",
+    "method2": "Every date is a target. The EU roadmap is a recommendation, the NCSC, the Canadian Centre for Cyber Security and the other issuers publish guidance, and ANSSI says its recommendations carry no regulatory obligation today outside the areas French rules already cover. A question shows another guide's target date only where that date names the same step, completing the migration for one.",
+    "method3": "The guides write for different readers. The EU roadmap addresses Member States and their national roadmaps; its FAQ says entities in scope of NIS2, public administrations and critical infrastructure providers among them, should at a minimum take four of the First Steps (an inventory of cryptographic assets, dependency maps, involving the supply chain and a quantum risk analysis), and encourages every organisation to. The Canadian roadmap is written for federal departments and their non-classified systems, and the NCSC timelines mainly for large organisations, critical national infrastructure and bespoke IT. Where a question turns a national or sectoral step into an organisational one, its More says so.",
+    "method4": "There is no score, percentage or overall reading. The assessment sorts your own answers group by group and counts them only inside a group. The guides do not weigh their actions against each other, and a total would add a judgement none of them makes.",
+    "method5": "Take these first lists up to three steps you marked in progress or not started, by the earliest target date your chosen guides set for each, then those with no target date. It orders by date alone and weighs nothing else.",
+    "method6": "The order of the groups is not a sequence. The EU roadmap says its prepare, plan and act steps are not consecutive phases, and its FAQ says the Next Steps need not wait for the First Steps, nor planning for a complete inventory. The Canadian roadmap expects its phases to overlap, and the Dutch Handbook advises against waiting for one step to finish before starting the next. The CEPS Task Force report on the EU transition makes the same case, recommending modular packages that can start independently instead of a rigid sequence (Pupillo et al., 2025)."
+  }
+}

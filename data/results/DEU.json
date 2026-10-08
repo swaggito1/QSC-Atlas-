@@ -295,5 +295,203 @@
     "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2025/250310_Aktualisierung_TR-02102.html",
     "summary": "BSI press release (10 March 2025) announcing an update to the TR-02102 technical guideline that extends the cryptographic recommendations to address the quantum-computer threat, recommending post-quantum algorithms (ML-KEM, ML-DSA, SLH-DSA, FrodoKEM, Classic McEliece, XMSS, LMS) and migration of high-security applications by 2030 in coordination with 17 European partners.",
     "included": true
+  },
+  {
+    "title": "Sicheres Cloud-Computing: BSI veröffentlicht C5:2026",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/260407_C5_Cloud_Computing.html",
+    "summary": "BSI press release of 7 April 2026 announcing publication of the C5:2026 cloud computing criteria catalogue, stating that post-quantum cryptography and confidential computing are addressed explicitly in the new generation of C5 for the first time. Marks the point at which PQC enters Germany's cloud attestation regime.",
+    "included": true
+  },
+  {
+    "title": "C5:2026 Criteria Catalogue (Cloud Computing Compliance Criteria Catalogue)",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2026,
+    "docType": "Standard",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/CloudComputing/ComplianceControlsCatalogue/2026/C5_2026.html",
+    "summary": "The C5:2026 criteria catalogue itself, the successor to C5:2020, expanded from 121 to 168 criteria across 17 topic areas including cryptography and key management, and dedicatedly addressing post-quantum cryptography for the first time. Published in English and in a machine-readable format.",
+    "included": true
+  },
+  {
+    "title": "#nis2know: Kryptografische Verfahren – Konzepte und Prozesse",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/NIS-2-Infopakete/NIS-2-kryptografische-Verfahren/NIS-2-kryptografische-Verfahren_node.html",
+    "summary": "BSI information package for NIS-2 regulated entities on cryptographic procedures, instructing them to take account of the migration to post-quantum cryptography and to trial first pilot environments in line with BSI recommendations. References the 2021 guide 'Kryptografie quantensicher gestalten', the August 2024 joint statement and the June 2025 EU roadmap.",
+    "included": true
+  },
+  {
+    "title": "Risiken im Fokus 2026 – Trend 1: Digitalisierung (Quantum Computing: Post Quantum Cryptography rückt in den Fokus)",
+    "country": "DEU",
+    "issuingOrg": "BaFin",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bafin.de/DE/Aufsicht/Fokusrisiken/Fokusrisiken_2026/RIF_Trend_1_digitalisierung/RIF_Trend_1_digitalisierung_node.html",
+    "summary": "BaFin's 2026 risks-in-focus publication contains a dedicated post-quantum cryptography section stating that financial-sector firms must already act to identify quantum-endangered data and draw up a protection concept with a concrete implementation timeframe applying post-quantum cryptography, given the harvest-now-decrypt-later threat. BaFin also states it will set out supervisory expectations on quantum computing to regulated entities in 2026.",
+    "included": true
+  },
+  {
+    "title": "Post-Quanten-Kryptografie: BSI veröffentlicht Handlungsempfehlungen",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2020,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Alle-Meldungen-News/Meldungen/Post-Quanten-Kryptografie_260320.html",
+    "summary": "BSI news item of 26 March 2020 announcing an eight-page set of recommendations for action on migrating to post-quantum cryptography, stating that post-quantum cryptography will become the long-term standard and that organisations should assess the transition within their risk management, particularly for long-lived protected information.",
+    "included": true
+  },
+  {
+    "title": "Migration to Post Quantum Cryptography – Recommendations for action by the BSI",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2020,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/Migration_to_Post_Quantum_Cryptography.html",
+    "summary": "BSI recommendations for action (dated 24 August 2020) on the transition to post-quantum cryptographic mechanisms. The foundational BSI PQC migration document that the later 2021 guide and the TR-02102 recommendations build on.",
+    "included": true
+  },
+  {
+    "title": "Kryptografie quantensicher gestalten – Grundlagen, Entwicklungen, Empfehlungen",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2021,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Broschueren/Kryptografie-quantensicher-gestalten.html",
+    "summary": "BSI guide published in December 2021 that updates and extends the 2020 PQC migration recommendations, summarising the state of research on quantum-safe cryptography, the connections between recent developments, current measures and open research questions. Still cited as the reference guide in BSI's NIS-2 material.",
+    "included": true
+  },
+  {
+    "title": "Bundestag printed paper 21/3915: Federal Government answer on the Hightech Agenda, covering the national post-quantum cryptography roadmap",
+    "country": "DEU",
+    "issuingOrg": "Bundestag",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://dserver.bundestag.de/btd/21/039/2103915.pdf",
+    "summary": "Federal Government answer to a Kleine Anfrage (Drucksache 21/3433, Die Linke) on the Hightech Agenda, stating that the EU roadmap requires member states to produce a first national roadmap for the transition to post-quantum cryptography by the end of 2026 and that a corresponding German document is being prepared within the Federal Government, to be published once complete.",
+    "included": true
+  },
+  {
+    "title": "Bundestag printed paper 21/5183: Kleine Anfrage on the reorientation of cybersecurity research",
+    "country": "DEU",
+    "issuingOrg": "Bundestag",
+    "year": 2026,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://dserver.bundestag.de/btd/21/051/2105183.pdf",
+    "summary": "Bundestag printed paper of 2 April 2026 asking how the Federal Government will align the priorities of new cybersecurity research funding with the existing framework programme, in which artificial intelligence and quantum technologies such as post-quantum cryptography were already emphasised.",
+    "included": true
+  },
+  {
+    "title": "Bundestag printed paper 21/765: Kleine Anfrage on the quantum-computer threat to encryption",
+    "country": "DEU",
+    "issuingOrg": "Bundestag",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://dserver.bundestag.de/btd/21/007/2100765.pdf",
+    "summary": "Kleine Anfrage of 7 July 2025 referring to the Federal Government's stated goal of presenting a strategy for the migration to post-quantum cryptography in Germany by 2026, and to the quantum-computer threat to encryption including cryptocurrencies. Answered in Drucksache 21/928, where BSI classifies the quantum threat as a very serious risk.",
+    "included": true
+  },
+  {
+    "title": "Hightech Agenda Deutschland – Quantentechnologien (technology roadmap dossier)",
+    "country": "DEU",
+    "issuingOrg": "BMFTR",
+    "year": null,
+    "docType": "Strategy",
+    "tier": "T1",
+    "url": "https://www.bmftr.bund.de/DE/Technologie/HightechAgenda/DossierHightechAgenda/Dossier_HightechAgenda/_documents/2_quantentechnologien.html",
+    "summary": "BMFTR dossier page for the quantum technologies strand of the Hightech Agenda Deutschland, whose roadmap was presented in May 2026. States that quantum-safe encryption ('quantensichere Verschlüsselung') increases trust in information, communication and identification technologies, and frames the goal of future-proof cybersecurity in the quantum age.",
+    "included": true
+  },
+  {
+    "title": "Project Leap proves the viability of a quantum-safe financial system",
+    "country": "DEU",
+    "issuingOrg": "Bundesbank",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.bundesbank.de/en/press/press-releases/project-leap-proves-the-viability-of-a-quantum-safe-financial-system--808404",
+    "summary": "Deutsche Bundesbank press release on Project Leap, run with the BIS Innovation Hub Eurosystem Centre and Banque de France, in which test payment messages were transmitted through a quantum-resistant VPN tunnel between servers in Paris and Frankfurt to demonstrate protection of critical financial data using post-quantum cryptography.",
+    "included": true
+  },
+  {
+    "title": "Quantensichere Kryptografie: Bundesdruckerei entwickelt Prototypen einer Vertrauensinfrastruktur für Einsatz in Behörden",
+    "country": "DEU",
+    "issuingOrg": "Bundesdruckerei",
+    "year": null,
+    "docType": "Announcement",
+    "tier": "T2",
+    "url": "https://www.bundesdruckerei.de/de/newsroom/pressemitteilungen/quantensichere-kryptografie-bundesdruckerei-entwickelt-prototypen-einer-vertrauensinfrastruktur",
+    "summary": "Press release from the federally owned Bundesdruckerei on a prototype quantum-computer-safe public key infrastructure in test operation for use by public authorities, with the BSI supporting the selection of the cryptographic mechanisms and a hybrid classical/quantum-safe PKI envisaged for the transition phase. State-owned company rather than a government or standards domain, flagged for review.",
+    "included": false
+  },
+  {
+    "title": "Post-Quanten-Kryptografie: G7 Cyber Expert Group veröffentlicht Fahrplan",
+    "country": "DEU",
+    "issuingOrg": "BaFin",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Meldung/2026/meldung_2026_01_14_g7_cyber_expert_group_fahrplan_post-quanten-kryptographie.html",
+    "summary": "BaFin notice of 14 January 2026 reporting that the G7 Cyber Expert Group, with BaFin participating, published a roadmap to promote the transition to post-quantum cryptography in the financial sector. It says the financial industry must now move to quantum-safe methods and that the non-binding approach foresees migration of critical systems by 2030.",
+    "included": true
+  },
+  {
+    "title": "Aktueller Umsetzungsstand des Handlungskonzeptes Quantentechnologien der Bundesregierung (Antwort der Bundesregierung, Drucksache 20/14986)",
+    "country": "DEU",
+    "issuingOrg": "Bundestag",
+    "year": 2025,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://dserver.bundestag.de/btd/20/149/2014986.pdf",
+    "summary": "Federal Government answer of 14 February 2025 (Bundestag printed paper 20/14986) to a CDU/CSU Kleine Anfrage on the implementation status of the quantum technologies action plan. In its joint answer to questions 62-66 it says that, working on the hypothesis that cryptographically relevant quantum computers will be available in the early 2030s, the government has initiated the transition to post-quantum cryptography in the high-security area. It notes a BSI-initiated paper in which security authorities from 18 EU member states call for prioritising PQC migration and protecting the most sensitive applications by end-2030. It says the government is involved in drafting an EU roadmap for the coordinated PQC transition, with the Interior Ministry and BSI co-leading the NIS Cooperation Group workstream alongside France and the Netherlands. It also mentions BSI quantum-safe recommendations since 2020 and approved classified-use devices with quantum-safe key exchange, and Annex 10 lists funded PQC projects.",
+    "included": true
+  },
+  {
+    "title": "Market Survey on Cryptography and Quantum Computing",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Crypto/Marktumfrage_EN_Kryptografie_Quantencomputing.pdf?__blob=publicationFile&v=3",
+    "summary": "Joint survey by the BSI and KPMG Germany of organisations on their awareness of the quantum threat and the status of their migration to quantum-safe cryptography. It finds that few participants expect to become quantum-safe in good time and refers organisations to the BSI's quantum-safe cryptography recommendations.",
+    "included": true
+  },
+  {
+    "title": "Studie \"Entwicklungsstand Quantencomputer\" aktualisiert",
+    "country": "DEU",
+    "issuingOrg": "BSI",
+    "year": 2025,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Alle-Meldungen-News/Meldungen/Aktualisierung_Studie_Quantencomputer_251219.html",
+    "summary": "BSI news item of 19 December 2025 announcing an update of its study on the development status of quantum computers. Citing the store-now-decrypt-later risk, the BSI urgently recommends switching to quantum-safe cryptography.",
+    "included": true
+  },
+  {
+    "title": "Risiken für die Cybersicherheit durch Quantentechnologien",
+    "country": "DEU",
+    "issuingOrg": "Bundestag",
+    "year": 2023,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-964024",
+    "summary": "Bundestag hib press note of 30 August 2023 summarising the Federal Government answer in Drucksache 20/8104 on cybersecurity risks from quantum technologies. It reports the government's aim to produce a strategy for migration to post-quantum cryptography in Germany by 2026 and the BSI's early PQC migration recommendations.",
+    "included": true
   }
 ]

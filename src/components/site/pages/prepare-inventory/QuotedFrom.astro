@@ -1,0 +1,39 @@
+---
+// The Readiness Check actions an element draws on (spec 12: each element links to the actions it
+// is quoted from, and back). The label names where the link leads, "In the Readiness Check", then
+// one action a line, each linking to /prepare/check?action=..., with the short name of the guide
+// it is quoted from beside it; so every field, route and question leads back to an action and from
+// there to a document. An action whose link is null (the Check is not built) shows as plain text;
+// with no actions nothing is rendered. Every row is a link, so each action's words are an index
+// link (.row-link): ink on a thin teal underline (Swann, 4 October 2026).
+import type { ActionRef } from '../../../../lib/site/prepare-elements';
+import '../../../../styles/prepare-elements.css';
+
+interface Props {
+  actions: ActionRef[];
+  label: string; // copy.common.quotedFrom: "In the Readiness Check"
+}
+const { actions, label } = Astro.props;
+---
+
+{
+  actions.length > 0 && (
+    <div class="pe-from">
+      <p class="pe-from-l">{label}</p>
+      <ul class="pe-from-list">
+        {actions.map((a) => (
+          <li class="pe-from-a">
+            {a.href ? (
+              <a class="row-link" href={a.href}>
+                {a.label}
+              </a>
+            ) : (
+              a.label
+            )}
+            <span class="pe-from-g">{a.guide}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

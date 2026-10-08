@@ -1,49 +1,142 @@
 ---
-// "How to read the Atlas": the one key that explains both encodings at once, so the
-// legend is never more than a glance away. Colour = coordination posture (the map and
-// globe colour); the badge = standards role. Reused on the home hero and the flat map.
+// "How to read the Atlas": the one key for the map and the globe. Colour is the coordination
+// posture, drawn exactly as the map and the globe draw it (the posture's colour from POSTURE_META,
+// a solid fill under the same thin ink edge, "Engaged but unaligned" included), plus the pale fill
+// of a country with no posture recorded. The badge column names the standards roles the country
+// list shows beside each name; a page that shows no badge leaves it out (roles={false}), and
+// with it the caption, which the page's own lede says already.
+//
+// absent: the map leaves a shape the Atlas holds no record for in the paper colour; the key then
+// names it too, "No record in the Atlas", kept apart from "No coordination posture recorded".
+//
+// fold: on phones (under 700px) the key folds into one line under the map, a native details
+// element whose summary is that line; from 700px the summary is hidden and the key stays open.
+// Without scripts the key is simply open at every width.
+//
+// row: the map's key stands in one row under the full-width map from 700px, its label and its
+// swatches on one line that wraps (the épuré pass, 4 October 2026).
 import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/process';
+
+interface Props {
+  /** Show the standards role column (the badge). The map, which shows no badge, passes false. */
+  roles?: boolean;
+  /** Fold into a one-line disclosure on phones. */
+  fold?: boolean;
+  /** The view leaves places with no record unfilled; name that swatch too. */
+  absent?: boolean;
+  /** Set the label and the swatches in one row (the map's key under the map). */
+  row?: boolean;
+}
+const { roles = true, fold = false, absent = false, row = false } = Astro.props;
+
+const postures = POSTURE_ORDER.map((k) => POSTURE_META[k]);
+const NONE_LABEL = 'No coordination posture recorded';
+const ABSENT_LABEL = 'No record in the Atlas';
+const uid = `rk-${Math.random().toString(36).slice(2, 8)}`;
+const Wrap = fold ? 'details' : 'div';
+const caption = roles ? 'Two questions: who a country coordinates its migration with, and whose algorithms it runs.' : null;
 ---
 
-<div class="readkey">
-  <div class="col">
-    <p class="col-head">Colour: the bloc it coordinates with</p>
-    <ul>
-      {
-        POSTURE_ORDER.map((k) => (
-          <li>
-            <span class="sw" style={`--c:${POSTURE_META[k].color}`} aria-hidden="true" />
-            {POSTURE_META[k].label}
+<div class:list={['readkey', { 'readkey--fold': fold, 'readkey--posture': !roles, 'readkey--row': row }]} data-readkey>
+  <Wrap class="rk" open={fold ? true : undefined}>
+    {
+      fold && (
+        <summary class="rk-sum">
+          <span class="rk-dots" aria-hidden="true">
+            {postures.map((m) => (
+              <span class="sw" style={`--c:${m.color}`} />
+            ))}
+            <span class="sw sw--none" />
+            {absent && <span class="sw sw--absent" />}
+          </span>
+          <span>What the colours mean</span>
+        </summary>
+      )
+    }
+    <div class="rk-cols">
+      <div class="col">
+        <p class="col-head" id={`${uid}-c`}>Colour: coordination posture</p>
+        <ul aria-labelledby={`${uid}-c`}>
+          {
+            postures.map((m) => (
+              <li>
+                <span class="sw" style={`--c:${m.color}`} aria-hidden="true" />
+                {m.label}
+              </li>
+            ))
+          }
+          <li class="none">
+            <span class="sw sw--none" aria-hidden="true" />
+            {NONE_LABEL}
           </li>
-        ))
+          {
+            absent && (
+              <li class="none">
+                <span class="sw sw--absent" aria-hidden="true" />
+                {ABSENT_LABEL}
+              </li>
+            )
+          }
+        </ul>
+      </div>
+      {
+        roles && (
+          <div class="col">
+            <p class="col-head" id={`${uid}-r`}>Badge: standards role</p>
+            <ul aria-labelledby={`${uid}-r`}>
+              {ROLE_ORDER.map((k) => (
+                <li>
+                  <span class="role">{ROLE_META[k].short}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
       }
-    </ul>
-  </div>
-  <div class="col">
-    <p class="col-head">Badge: the role it plays</p>
-    <ul>
-      {ROLE_ORDER.map((k) => <li><span class="role">{ROLE_META[k].short}</span></li>)}
-    </ul>
-  </div>
-  <p class="cap">Two questions: which bloc a country migrates with, and whose algorithms it runs.</p>
+      {caption && <p class="cap">{caption}</p>}
+    </div>
+  </Wrap>
+  {
+    fold && (
+      <script is:inline>
+        (function () {
+          var root = document.currentScript && document.currentScript.parentElement;
+          var d = root && root.querySelector('details.rk');
+          if (!d || !window.matchMedia) return;
+          var mq = window.matchMedia('(max-width: 699px)');
+          var set = function () {
+            d.open = !mq.matches;
+          };
+          set();
+          if (mq.addEventListener) mq.addEventListener('change', set);
+        })();
+      </script>
+    )
+  }
 </div>
 
 <style>
   .readkey {
+    /* the map's country edge, so a swatch is drawn exactly as the shape it names */
+    --rk-edge: var(--swatch-none-edge);
+    max-width: 34rem;
+    padding: var(--space-4) 0;
+    border-top: var(--rule);
+  }
+  .rk-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4) var(--space-8);
-    max-width: 34rem;
-    padding: var(--space-4) 0;
-    border-top: 1px solid var(--hairline);
-    border-bottom: 1px solid var(--hairline);
   }
+  .readkey--posture .rk-cols {
+    grid-template-columns: 1fr;
+  }
+  /* the label of a group of swatches (global.css .section-label's hand): ink, small, weight 600 */
   .col-head {
-    font-family: var(--font-label);
-    font-size: var(--text-2xs);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
-    color: var(--ink-muted);
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui-strong);
+    color: var(--ink);
     margin: 0 0 var(--space-2);
   }
   .readkey ul {
@@ -51,39 +144,128 @@ import { POSTURE_ORDER, POSTURE_META, ROLE_ORDER, ROLE_META } from '../lib/proce
     margin: 0;
     padding: 0;
     display: grid;
-    gap: var(--space-1);
+    gap: var(--gap-mark);
   }
   .readkey li {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
-    font-size: var(--text-sm);
+    gap: var(--gap-inline);
+    font-size: var(--type-small);
+    line-height: var(--leading-snug);
     color: var(--ink);
   }
+  .readkey li.none {
+    color: var(--ink-muted);
+  }
   .sw {
-    width: 0.7em;
-    height: 0.7em;
-    border-radius: 50%;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: var(--radius-mark);
     background: var(--c);
+    box-shadow: inset 0 0 0 0.5px var(--rk-edge);
     flex: none;
   }
+  .sw--none {
+    --c: var(--process-none);
+    box-shadow: inset 0 0 0 1px var(--rk-edge);
+  }
+  /* paper under a lighter edge, as the map draws a shape with no record */
+  .sw--absent {
+    --c: var(--paper);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 30%, transparent);
+  }
   .role {
-    font-family: var(--font-label);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    font-family: var(--font-instrument);
+    font-size: var(--type-small);
+    font-weight: var(--weight-ui);
     color: var(--ink-muted);
   }
   .cap {
     grid-column: 1 / -1;
     margin: 0;
-    font-size: var(--text-xs);
-    color: var(--ink-faint);
+    font-family: var(--font-reading);
+    font-size: var(--type-small);
     font-style: italic;
+    color: var(--ink-muted);
+  }
+
+  /* the folded key: one line on phones, the open key from 700px with no summary at all */
+  .rk-sum {
+    display: none;
+  }
+  @media (max-width: 699px) {
+    .readkey--fold {
+      padding: 0;
+    }
+    .rk-sum {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      min-height: var(--target-min, 44px);
+      cursor: pointer;
+      list-style: none;
+      font-size: var(--type-small);
+      color: var(--ink);
+    }
+    .rk-sum::-webkit-details-marker {
+      display: none;
+    }
+    /* the kit's chevron (lab.css), drawn after the line, turning only when the visitor opens it */
+    .rk-sum::after {
+      content: '';
+      flex: none;
+      width: 6px;
+      height: 6px;
+      margin-left: auto;
+      margin-right: var(--space-2);
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform var(--dur-fast) var(--ease-standard);
+    }
+    details[open] > .rk-sum::after {
+      transform: translateY(2px) rotate(-135deg);
+    }
+    .rk-dots {
+      display: inline-flex;
+      gap: 3px;
+    }
+    .readkey--fold .rk-cols {
+      padding: var(--space-2) 0 var(--space-4);
+    }
+  }
+  /* one row: the label, then the swatches, on one line that wraps between swatches only */
+  @media (min-width: 700px) {
+    .readkey--row {
+      max-width: none;
+      padding: var(--space-3) 0 0;
+    }
+    .readkey--row .col {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: var(--gap-inline) var(--space-6);
+    }
+    .readkey--row .col-head {
+      margin: 0;
+    }
+    .readkey--row ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap-inline) var(--space-5);
+    }
+    .readkey--row li {
+      white-space: nowrap;
+    }
   }
   @media (max-width: 560px) {
-    .readkey {
+    .rk-cols {
       grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rk-sum::after {
+      transition: none;
     }
   }
 </style>

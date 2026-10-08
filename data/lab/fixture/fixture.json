@@ -1,0 +1,41 @@
+{
+  "_about": "Test data for the lab watch pipeline (prompt 00, Step 10). It describes no real instrument and is never loaded by a page.",
+  "records": [
+    {
+      "id": "fixture-directive",
+      "label": "Fixture Directive (test only)",
+      "date": "2026-01-20",
+      "precision": "day",
+      "status": "proposal",
+      "statusHistory": [
+        {
+          "status": "proposal",
+          "date": "2026-01-20",
+          "precision": "day",
+          "provenance": {
+            "url": "https://github.com/swaggito1/QSC-Atlas-/blob/main/labs/fixtures/fixture-test.html",
+            "title": "Fixture Directive (test only)",
+            "publisher": "QSC Atlas test fixture",
+            "retrievedAt": "2026-09-30",
+            "excerpt": "Published by the Commission on 20 January 2026.",
+            "locator": "Status",
+            "sourceClass": "trusted-institutional"
+          }
+        }
+      ],
+      "verify": false,
+      "verifiedAt": "2026-09-30",
+      "provenance": [
+        {
+          "url": "https://github.com/swaggito1/QSC-Atlas-/blob/main/labs/fixtures/fixture-test.html",
+          "title": "Fixture Directive (test only)",
+          "publisher": "QSC Atlas test fixture",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Current status: proposal.",
+          "locator": "Status",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

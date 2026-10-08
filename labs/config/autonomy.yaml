@@ -1,0 +1,72 @@
+# QSC Atlas Labs: autonomy tiers for the watch and triage routine.
+# Rules and rationale: labs/context/04-trust-ledger.md.
+#
+# tier values
+#   shadow      open a pull request, record would_auto_merge (eligible if graduated) in the ledger, never merge
+#   review      open a pull request for Swann; same as shadow but the evidence window has ended
+#   auto-merge  merge automatically once the gate workflow passes; only after graduation
+#
+# Transitions and who applies them:
+#   demotion on a status misread or factual error   scripts/lab/ledger-append.mjs (immediately)
+#   end of the shadow window (shadow to review)      scripts/lab/ledger-report.mjs (monthly)
+#   model change re-shadow and its expiry            scripts/lab/ledger-report.mjs, and ledger-append.mjs if it runs first
+#   graduation (review to auto-merge)                only by Swann merging a pull request from propose-graduation.mjs
+# The workflows read model.pinned from this file; do not hard-code the model elsewhere.
+
+model:
+  # The triage model. Changing it sends every graduated pair back to shadow for 14 days.
+  pinned: claude-opus-5-5
+  changed_at: 2026-09-30
+
+window:
+  shadow_days: 30
+  started_at: null          # set by prompt 00 when the first weekly run completes
+  graduation:
+    min_consecutive: 30
+    min_accept_or_minor_rate: 0.95
+    max_status_misreads: 0
+    max_factual_errors: 0
+  demotion_days: 60
+  model_change_reshadow_days: 14
+
+never_graduate:
+  item_types: [profile-proposal, status-change, survey-update, narrative-draft]
+  tools: []
+  # Files whose changes always wait for Swann, as globs ("*" matches within one folder).
+  # The Rulebook's obligations, regimes, scope rules and proposals never graduate: only
+  # metadata additions to acts.json from CELLAR can.
+  files:
+    - data/lab/rulebook/obligations.json
+    - data/lab/rulebook/regimes.json
+    - data/lab/rulebook/scope-rules.json
+    - data/lab/rulebook/proposals.json
+    - data/lab/rulebook/text/*.json
+  # Rules that need to read the change itself (for example a Cascade edge whose relation
+  # is "fork") live in scripts/lab/autonomy-rules/*.mjs; prompt 02 adds that one.
+  note: Anything that would change a legal deadline, a probability or a classification shown to a visitor stays in review permanently.
+
+pairs:
+  - class: trusted-institutional
+    item_type: new-record
+    tier: shadow
+    since: null
+  - class: trusted-institutional
+    item_type: field-change
+    tier: shadow
+    since: null
+  - class: new-institutional
+    item_type: new-record
+    tier: shadow
+    since: null
+  - class: new-institutional
+    item_type: field-change
+    tier: shadow
+    since: null
+  - class: secondary
+    item_type: new-record
+    tier: shadow
+    since: null
+  - class: secondary
+    item_type: field-change
+    tier: shadow
+    since: null

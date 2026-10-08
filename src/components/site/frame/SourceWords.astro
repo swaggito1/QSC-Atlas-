@@ -1,0 +1,22 @@
+---
+// Wraps the verbatim words of a source. A visitor never sees them: production builds leave them
+// out of the HTML, and local and preview builds hide them until the page is opened with ?review=1.
+// See src/lib/site/review.ts. Use it for excerpts and quotes only; a source's name, date and link
+// stay visible, because they tell a visitor where a statement comes from.
+import { sourceWordsInBuild } from '../../../lib/site/review-build';
+import '../../../styles/frame.css';
+
+interface Props {
+  inline?: boolean; // a span inside a sentence instead of a block
+}
+const { inline = false } = Astro.props;
+const show = sourceWordsInBuild();
+const Tag = inline ? 'span' : 'div';
+---
+
+{show && <Tag class="src-words" data-src-words><slot /></Tag>}
+
+<script>
+  import { reviewRequested } from '../../../lib/site/review';
+  if (reviewRequested()) document.documentElement.classList.add('is-review');
+</script>

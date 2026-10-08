@@ -1,0 +1,114 @@
+{
+  "_about": "Seed for the incident clocks in Rulebook in Motion. Each regime lists the steps an organisation must report, the time limit and the event the clock starts from. All values are leads from working knowledge and Swann's drafts; confirm each against the article text on EUR-Lex, quote the sentence that sets the limit, and record the CELEX and paragraph before setting verify to false.",
+  "regimes": [
+    {
+      "id": "nis2-art23",
+      "instrument": "NIS2 Directive (EU) 2022/2555",
+      "celex": "32022L2555",
+      "article": "Article 23(4)",
+      "who": "Essential and important entities, for significant incidents",
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "steps": [
+        { "label": "Early warning", "within": 24, "unit": "hours", "from": "becoming aware of the significant incident" },
+        { "label": "Incident notification", "within": 72, "unit": "hours", "from": "becoming aware of the significant incident" },
+        { "label": "Final report", "within": 1, "unit": "months", "from": "submission of the incident notification" }
+      ],
+      "notes": "Intermediate reports on request are not timed. Article 23(9) quarterly summary to ENISA is anonymised and aggregated.",
+      "verify": true
+    },
+    {
+      "id": "cer-art15",
+      "instrument": "CER Directive (EU) 2022/2557",
+      "celex": "32022L2557",
+      "article": "Article 15(1)",
+      "who": "Critical entities designated by a Member State",
+      "status": "in-force",
+      "appliesFrom": null,
+      "steps": [
+        { "label": "Notification", "within": 24, "unit": "hours", "from": "becoming aware of the incident, unless operationally unable" },
+        { "label": "Detailed report", "within": 1, "unit": "months", "from": "the notification, where relevant" }
+      ],
+      "notes": "Applies only to entities a Member State has designated; the tool cannot decide designation.",
+      "verify": true
+    },
+    {
+      "id": "cra-art14-vuln",
+      "instrument": "Cyber Resilience Act Regulation (EU) 2024/2847",
+      "celex": "32024R2847",
+      "article": "Article 14(2)",
+      "who": "Manufacturers of products with digital elements, for actively exploited vulnerabilities",
+      "status": "applies-from",
+      "appliesFrom": "2026-09-11",
+      "steps": [
+        { "label": "Early warning", "within": 24, "unit": "hours", "from": "becoming aware of the actively exploited vulnerability" },
+        { "label": "Vulnerability notification", "within": 72, "unit": "hours", "from": "becoming aware" },
+        { "label": "Final report", "within": 14, "unit": "days", "from": "a corrective or mitigating measure becoming available" }
+      ],
+      "notes": "Reports go through the single reporting platform to the CSIRT coordinator and ENISA. Confirm the application date in Article 71.",
+      "verify": true
+    },
+    {
+      "id": "cra-art14-incident",
+      "instrument": "Cyber Resilience Act Regulation (EU) 2024/2847",
+      "celex": "32024R2847",
+      "article": "Article 14(4)",
+      "who": "Manufacturers of products with digital elements, for severe incidents affecting product security",
+      "status": "applies-from",
+      "appliesFrom": "2026-09-11",
+      "steps": [
+        { "label": "Early warning", "within": 24, "unit": "hours", "from": "becoming aware of the severe incident" },
+        { "label": "Incident notification", "within": 72, "unit": "hours", "from": "becoming aware" },
+        { "label": "Final report", "within": 1, "unit": "months", "from": "submission of the incident notification" }
+      ],
+      "notes": null,
+      "verify": true
+    },
+    {
+      "id": "dora-art19",
+      "instrument": "DORA Regulation (EU) 2022/2554 with its delegated rules on incident reporting",
+      "celex": "32022R2554",
+      "article": "Article 19 and the delegated act setting time limits",
+      "who": "Financial entities, for major ICT-related incidents",
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "steps": [
+        { "label": "Initial notification", "within": 4, "unit": "hours", "from": "classification of the incident as major, and no later than 24 hours from becoming aware" },
+        { "label": "Intermediate report", "within": 72, "unit": "hours", "from": "submission of the initial notification" },
+        { "label": "Final report", "within": 1, "unit": "months", "from": "the latest intermediate report" }
+      ],
+      "notes": "The time limits sit in a delegated or implementing act rather than in Article 19 itself. Resolve which act and record its CELEX.",
+      "verify": true
+    },
+    {
+      "id": "gdpr-art33",
+      "instrument": "GDPR Regulation (EU) 2016/679",
+      "celex": "32016R0679",
+      "article": "Article 33(1)",
+      "who": "Controllers, for personal data breaches",
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "steps": [
+        { "label": "Notification to the supervisory authority", "within": 72, "unit": "hours", "from": "becoming aware of the breach, where feasible" }
+      ],
+      "notes": "Not required where the breach is unlikely to result in a risk to rights and freedoms.",
+      "verify": true
+    },
+    {
+      "id": "aiact-art73",
+      "instrument": "AI Act Regulation (EU) 2024/1689",
+      "celex": "32024R1689",
+      "article": "Article 73",
+      "who": "Providers of high-risk AI systems, for serious incidents",
+      "status": "applies-from",
+      "appliesFrom": null,
+      "steps": [
+        { "label": "Serious incident report", "within": 15, "unit": "days", "from": "becoming aware of the serious incident" },
+        { "label": "Report, widespread infringement or critical infrastructure disruption", "within": 2, "unit": "days", "from": "becoming aware" },
+        { "label": "Report, death of a person", "within": 10, "unit": "days", "from": "becoming aware" }
+      ],
+      "notes": "The application date for high-risk obligations may have been moved by the Digital Omnibus on AI. Resolve the current date before showing this regime at all; if unresolved, hide it and say why.",
+      "verify": true
+    }
+  ]
+}

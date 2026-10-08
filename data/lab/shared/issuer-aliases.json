@@ -1,0 +1,26 @@
+{
+  "_about": "Other names for issuing organisations, so a link or a search that uses one name finds the documents the Atlas records under another. alias is the other name; issuingOrg is the Issuing Organisation exactly as the Atlas documents record it (data/results); iso3 is the country of those documents. One alias may resolve to several organisations, one row each. Every alias comes from a name already in the Atlas data: a guide's issuer in data/lab/readiness/readiness.json, a Gov Actors line of a profile, a document summary or a quoted excerpt (see basis). scripts/lab/invariants/site.mjs checks that each row matches at least one included document.",
+  "aliases": [
+    { "alias": "National Cyber Security Centre", "issuingOrg": "NCSC", "iso3": "GBR", "basis": "issuer of ncsc-timelines and ncsc-next-steps in readiness.json" },
+    { "alias": "National Cyber Security Centre", "issuingOrg": "NCSC-NL", "iso3": "NLD", "basis": "NLD Gov Actors line for NCSC-NL" },
+    { "alias": "Canadian Centre for Cyber Security", "issuingOrg": "CCCS", "iso3": "CAN", "basis": "issuer of ca-roadmap in readiness.json; CAN Gov Actors line for CCCS" },
+    { "alias": "Cyber Centre", "issuingOrg": "CCCS", "iso3": "CAN", "basis": "short form used in CAN document summaries" },
+    { "alias": "CISA, NSA and NIST", "issuingOrg": "CISA", "iso3": "USA", "basis": "issuer of cisa-factsheet in readiness.json" },
+    { "alias": "CISA, NSA and NIST", "issuingOrg": "NSA", "iso3": "USA", "basis": "issuer of cisa-factsheet in readiness.json" },
+    { "alias": "CISA, NSA and NIST", "issuingOrg": "NIST", "iso3": "USA", "basis": "issuer of cisa-factsheet in readiness.json" },
+    { "alias": "Cybersecurity and Infrastructure Security Agency", "issuingOrg": "CISA", "iso3": "USA", "basis": "USA Gov Actors line for CISA" },
+    { "alias": "National Security Agency", "issuingOrg": "NSA", "iso3": "USA", "basis": "USA Gov Actors line for NSA" },
+    { "alias": "National Institute of Standards and Technology", "issuingOrg": "NIST", "iso3": "USA", "basis": "USA Gov Actors line for NIST" },
+    { "alias": "AIVD, CWI and TNO", "issuingOrg": "AIVD", "iso3": "NLD", "basis": "issuer of nl-handbook in readiness.json" },
+    { "alias": "General Intelligence and Security Service", "issuingOrg": "AIVD", "iso3": "NLD", "basis": "NLD Gov Actors line for AIVD" },
+    { "alias": "NIS CG", "issuingOrg": "NIS Cooperation Group", "iso3": "EUU", "basis": "short form in the roadmap excerpt quoted in readiness.json" },
+    { "alias": "Federal Office for Information Security", "issuingOrg": "BSI", "iso3": "DEU", "basis": "DEU Gov Actors line for BSI" },
+    { "alias": "ANSSI", "issuingOrg": "ANSSI (with BSI, NCSC-NL and other EU member states)", "iso3": "FRA", "basis": "issuer of anssi-faq in readiness.json; the joint statement is recorded under ANSSI with its co-signers" },
+    { "alias": "EU Agency for Cybersecurity", "issuingOrg": "ENISA", "iso3": "EUU", "basis": "EUU Gov Actors line for ENISA" },
+    { "alias": "Department for Science, Innovation and Technology", "issuingOrg": "DSIT", "iso3": "GBR", "basis": "GBR Gov Actors line for DSIT" },
+    { "alias": "Treasury Board Secretariat", "issuingOrg": "TBS", "iso3": "CAN", "basis": "CAN Gov Actors line for TBS" },
+    { "alias": "Ministry of the Interior and Kingdom Relations", "issuingOrg": "BZK", "iso3": "NLD", "basis": "NLD Gov Actors line for BZK" },
+    { "alias": "Office of Management and Budget", "issuingOrg": "OMB", "iso3": "USA", "basis": "USA Gov Actors line for OMB" },
+    { "alias": "Office of the National Cyber Director", "issuingOrg": "ONCD", "iso3": "USA", "basis": "USA Gov Actors line for ONCD" }
+  ]
+}

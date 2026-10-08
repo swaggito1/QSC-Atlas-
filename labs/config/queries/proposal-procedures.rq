@@ -1,0 +1,66 @@
+# proposal-procedures.rq
+#
+# What it returns: the procedure stage events CELLAR records for three Commission
+# proposals, one row per event:
+#   COM(2026) 11, CELEX 52026PC0011, procedure 2026/0011/COD,
+#     Cybersecurity Act revision (ENISA, certification framework, ICT supply chain)
+#   COM(2026) 13, CELEX 52026PC0013, procedure 2026/0012/COD,
+#     Directive amending NIS2 (Directive (EU) 2022/2555)
+#   COM(2025) 837, CELEX 52025PC0837, procedure 2025/0360/COD,
+#     Digital Omnibus, including the single entry point for incident reporting
+#
+# Columns:
+#   procedure       interinstitutional procedure reference, e.g. 2026/0012/COD
+#   proposal_celex  CELEX of the Commission proposal that opened the procedure
+#   event_date      date of the event, YYYY-MM-DD
+#   event_type      event code from the EU event authority table,
+#                   e.g. ADP_PROPLEG_byCOM, REF_OF_byEP, DELIB_COREPER_byCONSIL
+#   event_label_en  English label of that code
+#   institution     institution that carried out the event (COM, EP, CONSIL, EESC)
+#   phase           procedure phase code (PROP = proposal, RDG1 = first reading)
+#
+# Notes:
+#   Sorted by procedure, then date, then event type, institution and phase.
+#   Event identifiers and document references are left out on purpose: Council
+#   meeting documents are reissued (REV 1, REV 2) and would cause false alerts.
+#   Two events of the same type, institution and phase on the same day collapse
+#   into one row.
+#   Council working party meetings (DELIB_WP_byCONSIL) are most of the events and
+#   occur most weeks, so the FILTER near the end of the WHERE block leaves them out:
+#   the watcher reports stage changes only. Comment the FILTER out to see them.
+#   CELEX literals must be typed ^^xsd:string: plain literals match nothing here.
+
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?procedure ?proposal_celex ?event_date ?event_type
+       (MIN(?label0) AS ?event_label_en) ?institution ?phase
+WHERE {
+  VALUES ?proposal_celex { "52025PC0837"^^xsd:string "52026PC0011"^^xsd:string "52026PC0013"^^xsd:string }
+  ?proposal cdm:resource_legal_id_celex ?proposal_celex ;
+            cdm:act_preparatory_initiates_dossier ?dossier .
+  ?dossier cdm:procedure_code_interinstitutional_reference_procedure ?proc .
+  BIND(STR(?proc) AS ?procedure)
+  ?event cdm:event_legal_part_of_dossier ?dossier .
+
+  OPTIONAL { ?event cdm:event_legal_date ?d }
+  BIND(COALESCE(STR(?d), "") AS ?event_date)
+
+  OPTIONAL {
+    ?event cdm:event_legal_has_type_concept_type_event_legal ?et .
+    OPTIONAL { ?et skos:prefLabel ?l FILTER(LANG(?l) = "en") }
+  }
+  BIND(COALESCE(REPLACE(STR(?et), "^.*/", ""), "") AS ?event_type)
+  BIND(COALESCE(STR(?l), "") AS ?label0)
+
+  OPTIONAL { ?event cdm:event_legal_initiated_by_institution ?i }
+  BIND(COALESCE(REPLACE(STR(?i), "^.*/", ""), "") AS ?institution)
+
+  OPTIONAL { ?event cdm:event_legal_occurs_in_procedure-phase ?ph }
+  BIND(COALESCE(REPLACE(STR(?ph), "^.*/", ""), "") AS ?phase)
+
+  FILTER(?event_type != "DELIB_WP_byCONSIL")  # stage changes only, see header
+}
+GROUP BY ?procedure ?proposal_celex ?event_date ?event_type ?institution ?phase
+ORDER BY ?procedure ?event_date ?event_type ?institution ?phase ?proposal_celex

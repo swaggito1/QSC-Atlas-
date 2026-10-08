@@ -1,0 +1,1650 @@
+{
+  "_about": "Draft obligations for Rulebook in Motion, one per duty per addressee, drawn from the article texts in text/ as read on 2026-09-30. Each excerpt is copied verbatim from the quote of the paragraph the record names (a second or third excerpt, where present, comes from the paragraph its locator names). Every plain-language action is a draft awaiting Swann Ashworth’s approval, so every record keeps verify: true. Duties that fall on Member States, authorities, the Commission or ENISA are left out. NIS2 and CER duties reach entities through the national measures that transpose each Directive.",
+  "obligations": [
+    {
+      "id": "nis2-21-1-risk-measures",
+      "celex": "32022L2555",
+      "articleRef": "Article 21(1)",
+      "paragraphId": "32022L2555/art21/par1",
+      "addressee": "essential and important entities",
+      "trigger": null,
+      "action": "Take appropriate, proportionate technical, operational and organisational measures to manage security risks to your network and information systems and prevent or minimise incidents’ impact.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services.",
+          "locator": "Article 21(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-21-2-minimum-measures",
+      "celex": "32022L2555",
+      "articleRef": "Article 21(2)",
+      "paragraphId": "32022L2555/art21/par2",
+      "addressee": "essential and important entities",
+      "trigger": null,
+      "action": "Base your risk-management measures on an all-hazards approach and include at least those listed, such as incident handling, business continuity, supply chain security and cryptography.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The measures referred to in paragraph 1 shall be based on an all-hazards approach that aims to protect network and information systems and the physical environment of those systems from incidents, and shall include at least the following:",
+          "locator": "Article 21(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-21-4-corrective-measures",
+      "celex": "32022L2555",
+      "articleRef": "Article 21(4)",
+      "paragraphId": "32022L2555/art21/par4",
+      "addressee": "essential and important entities",
+      "trigger": "finding that it does not comply with the measures in Article 21(2)",
+      "action": "Take all necessary, appropriate and proportionate corrective measures without undue delay.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that an entity that finds that it does not comply with the measures provided for in paragraph 2 takes, without undue delay, all necessary, appropriate and proportionate corrective measures.",
+          "locator": "Article 21(4)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-1-notify-significant-incident",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(1)",
+      "paragraphId": "32022L2555/art23/par1",
+      "addressee": "essential and important entities",
+      "trigger": "a significant incident",
+      "action": "Notify the CSIRT or, where applicable, the competent authority without undue delay of any incident with a significant impact on the provision of your services.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Each Member State shall ensure that essential and important entities notify, without undue delay, its CSIRT or, where applicable, its competent authority in accordance with paragraph 4 of any incident that has a significant impact on the provision of their services as referred to in paragraph 3 (significant incident).",
+          "locator": "Article 23(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-1-inform-recipients",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(1)",
+      "paragraphId": "32022L2555/art23/par1",
+      "addressee": "essential and important entities",
+      "trigger": "a significant incident likely to adversely affect the provision of its services",
+      "action": "Where appropriate, notify the recipients of your services without undue delay of significant incidents likely to adversely affect the provision of those services.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where appropriate, entities concerned shall notify, without undue delay, the recipients of their services of significant incidents that are likely to adversely affect the provision of those services.",
+          "locator": "Article 23(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-2-cyber-threat-recipients",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(2)",
+      "paragraphId": "32022L2555/art23/par2",
+      "addressee": "essential and important entities",
+      "trigger": "a significant cyber threat potentially affecting recipients of its services",
+      "action": "Where applicable, tell service recipients potentially affected by a significant cyber threat, without undue delay, what measures they can take; where appropriate, describe the threat.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where applicable, Member States shall ensure that essential and important entities communicate, without undue delay, to the recipients of their services that are potentially affected by a significant cyber threat any measures or remedies that those recipients are able to take in response to that threat.",
+          "locator": "Article 23(2)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where appropriate, the entities shall also inform those recipients of the significant cyber threat itself.",
+          "locator": "Article 23(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-a-early-warning",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4)(a)",
+      "paragraphId": "32022L2555/art23/par4/pt-a",
+      "addressee": "essential and important entities",
+      "trigger": "becoming aware of a significant incident",
+      "action": "Submit an early warning without undue delay and within 24 hours, indicating, where applicable, suspected unlawful or malicious acts or possible cross-border impact.",
+      "clockId": "nis2-art23",
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact",
+          "locator": "Article 23(4)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-b-incident-notification",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4)(b)",
+      "paragraphId": "32022L2555/art23/par4/pt-b",
+      "addressee": "essential and important entities",
+      "trigger": "becoming aware of a significant incident",
+      "action": "Submit an incident notification without undue delay and within 72 hours, with an initial assessment of severity and impact and, where available, indicators of compromise.",
+      "clockId": "nis2-art23",
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident, including its severity and impact, as well as, where available, the indicators of compromise",
+          "locator": "Article 23(4)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-c-intermediate-report",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4)(c)",
+      "paragraphId": "32022L2555/art23/par4/pt-c",
+      "addressee": "essential and important entities",
+      "trigger": "a request from the CSIRT or the competent authority",
+      "action": "Submit an intermediate report on relevant status updates when the CSIRT or, where applicable, the competent authority requests one.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "upon the request of a CSIRT or, where applicable, the competent authority, an intermediate report on relevant status updates",
+          "locator": "Article 23(4)(c)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-d-final-report",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4)(d)",
+      "paragraphId": "32022L2555/art23/par4/pt-d",
+      "addressee": "essential and important entities",
+      "trigger": "submitting the incident notification",
+      "action": "Within one month of the incident notification, submit a final report detailing the incident, likely threat or root cause, mitigation measures and any cross-border impact.",
+      "clockId": "nis2-art23",
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "a final report not later than one month after the submission of the incident notification under point (b), including the following:",
+          "locator": "Article 23(4)(d)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-e-progress-report",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4)(e)",
+      "paragraphId": "32022L2555/art23/par4/pt-e",
+      "addressee": "essential and important entities",
+      "trigger": "an incident still ongoing when the final report is due",
+      "action": "Where the incident is ongoing at the final report deadline, submit a progress report then and a final report within one month of handling it.",
+      "clockId": "nis2-art23",
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "in the event of an ongoing incident at the time of the submission of the final report referred to in point (d), Member States shall ensure that entities concerned provide a progress report at that time and a final report within one month of their handling of the incident.",
+          "locator": "Article 23(4)(e)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "nis2-23-4-trust-service-24h",
+      "celex": "32022L2555",
+      "articleRef": "Article 23(4), second subparagraph",
+      "paragraphId": "32022L2555/art23/par4/sub-2",
+      "addressee": "trust service providers",
+      "trigger": "becoming aware of a significant incident that has an impact on the provision of its trust services",
+      "action": "Notify the CSIRT or, where applicable, the competent authority without undue delay and within 24 hours, in place of the deadline in Article 23(4)(b).",
+      "clockId": "nis2-art23",
+      "scopeRuleIds": [
+        "nis2-size",
+        "nis2-listed-service",
+        "nis2-critical-entity"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2024-10-18",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+          "title": "Directive (EU) 2022/2555 (NIS 2 Directive)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "By way of derogation from the first subparagraph, point (b), a trust service provider shall, with regard to significant incidents that have an impact on the provision of its trust services, notify the CSIRT or, where applicable, the competent authority, without undue delay and in any event within 24 hours of becoming aware of the significant incident.",
+          "locator": "Article 23(4), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-15-1-notify-incidents",
+      "celex": "32022L2557",
+      "articleRef": "Article 15(1)",
+      "paragraphId": "32022L2557/art15/par1",
+      "addressee": "critical entities",
+      "trigger": "an incident that significantly disrupts, or has the potential to significantly disrupt, the provision of essential services",
+      "action": "Notify the competent authority without undue delay of incidents that significantly disrupt, or could significantly disrupt, the provision of essential services.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cer-designated"
+      ],
+      "status": "in-force",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 on the resilience of critical entities",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that critical entities notify the competent authority, without undue delay, of incidents that significantly disrupt or have the potential to significantly disrupt the provision of essential services.",
+          "locator": "Article 15(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-15-1-initial-notification",
+      "celex": "32022L2557",
+      "articleRef": "Article 15(1)",
+      "paragraphId": "32022L2557/art15/par1",
+      "addressee": "critical entities",
+      "trigger": "becoming aware of an incident",
+      "action": "Unless operationally unable to do so, submit an initial notification no later than 24 hours after becoming aware of an incident.",
+      "clockId": "cer-art15",
+      "scopeRuleIds": [
+        "cer-designated"
+      ],
+      "status": "in-force",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 on the resilience of critical entities",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification no later than 24 hours after becoming aware of an incident",
+          "locator": "Article 15(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cer-15-1-detailed-report",
+      "celex": "32022L2557",
+      "articleRef": "Article 15(1)",
+      "paragraphId": "32022L2557/art15/par1",
+      "addressee": "critical entities",
+      "trigger": "the initial notification of an incident",
+      "action": "Where relevant, follow the initial notification with a detailed report no later than one month thereafter.",
+      "clockId": "cer-art15",
+      "scopeRuleIds": [
+        "cer-designated"
+      ],
+      "status": "in-force",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557",
+          "title": "Directive (EU) 2022/2557 on the resilience of critical entities",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification no later than 24 hours after becoming aware of an incident, followed, where relevant, by a detailed report no later than one month thereafter.",
+          "locator": "Article 15(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-1-essential-requirements",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(1)",
+      "paragraphId": "32024R2847/art13/par1",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "placing a product with digital elements on the market",
+      "action": "Ensure the product has been designed, developed and produced in accordance with the essential cybersecurity requirements in Part I of Annex I.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "When placing a product with digital elements on the market, manufacturers shall ensure that it has been designed, developed and produced in accordance with the essential cybersecurity requirements set out in Part I of Annex I.",
+          "locator": "Article 13(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-2-risk-assessment",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(2)",
+      "paragraphId": "32024R2847/art13/par2",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": null,
+      "action": "Assess the product’s cybersecurity risks and take the outcome into account from planning through maintenance, to minimise risks, prevent incidents and minimise their impact.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "manufacturers shall undertake an assessment of the cybersecurity risks associated with a product with digital elements and take the outcome of that assessment into account during the planning, design, development, production, delivery and maintenance phases of the product with digital elements with a view to minimising cybersecurity risks, preventing incidents and minimising their impact",
+          "locator": "Article 13(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-5-component-due-diligence",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(5)",
+      "paragraphId": "32024R2847/art13/par5",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "integrating components sourced from third parties",
+      "action": "Exercise due diligence so integrated third-party components, including non-commercial free and open-source software, do not compromise the product’s cybersecurity.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "For the purpose of complying with paragraph 1, manufacturers shall exercise due diligence when integrating components sourced from third parties so that those components do not compromise the cybersecurity of the product with digital elements, including when integrating components of free and open-source software that have not been made available on the market in the course of a commercial activity.",
+          "locator": "Article 13(5)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-6-component-vulnerabilities",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(6)",
+      "paragraphId": "32024R2847/art13/par6",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "identifying a vulnerability in a component integrated in the product, including an open-source component",
+      "action": "Report a vulnerability found in an integrated component to whoever manufactures or maintains it, and address and remediate it under Part II of Annex I.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Manufacturers shall, upon identifying a vulnerability in a component, including in an open source-component, which is integrated in the product with digital elements report the vulnerability to the person or entity manufacturing or maintaining the component, and address and remediate the vulnerability in accordance with the vulnerability handling requirements set out in Part II of Annex I.",
+          "locator": "Article 13(6)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-8-vulnerability-handling",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(8)",
+      "paragraphId": "32024R2847/art13/par8",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "placing a product with digital elements on the market",
+      "action": "Throughout the support period, ensure the product’s vulnerabilities, including in its components, are handled effectively and in line with Part II of Annex I.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Manufacturers shall ensure, when placing a product with digital elements on the market, and for the support period, that vulnerabilities of that product, including its components, are handled effectively and in accordance with the essential cybersecurity requirements set out in Part II of Annex I.",
+          "locator": "Article 13(8)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-8-support-period",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(8), second subparagraph",
+      "paragraphId": "32024R2847/art13/par8/sub-2",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": null,
+      "action": "Determine a support period that reflects the product’s expected time in use: at least five years, or the expected use time if shorter.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Manufacturers shall determine the support period so that it reflects the length of time during which the product is expected to be in use, taking into account, in particular, reasonable user expectations, the nature of the product, including its intended purpose, as well as relevant Union law determining the lifetime of products with digital elements.",
+          "locator": "Article 13(8), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Without prejudice to the second subparagraph, the support period shall be at least five years. Where the product with digital elements is expected to be in use for less than five years, the support period shall correspond to the expected use time.",
+          "locator": "Article 13(8), third subparagraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-12-technical-documentation",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(12)",
+      "paragraphId": "32024R2847/art13/par12",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "placing a product with digital elements on the market",
+      "action": "Before placing the product on the market, draw up the technical documentation referred to in Article 31.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Before placing a product with digital elements on the market, manufacturers shall draw up the technical documentation referred to in Article 31.",
+          "locator": "Article 13(12)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-13-21-corrective-measures",
+      "celex": "32024R2847",
+      "articleRef": "Article 13(21)",
+      "paragraphId": "32024R2847/art13/par21",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "knowing or having reason to believe, from placing on the market and for the support period, that the product or the manufacturer’s processes do not conform to the essential cybersecurity requirements in Annex I",
+      "action": "Immediately take the corrective measures needed to bring the product or your processes into conformity, or withdraw or recall the product, as appropriate.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "applies-from",
+      "appliesFrom": "2027-12-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "manufacturers who know or have reason to believe that the product with digital elements or the processes put in place by the manufacturer are not in conformity with the essential cybersecurity requirements set out in Annex I shall immediately take the corrective measures necessary to bring that product with digital elements or the manufacturer’s processes into conformity",
+          "locator": "Article 13(21)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "or to withdraw or recall the product, as appropriate.",
+          "locator": "Article 13(21)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-1-notify-exploited-vulnerability",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(1)",
+      "paragraphId": "32024R2847/art14/par1",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of an actively exploited vulnerability in the product",
+      "action": "Notify any actively exploited vulnerability in the product to the CSIRT designated as coordinator and ENISA simultaneously, through the single reporting platform.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA. The manufacturer shall notify that actively exploited vulnerability via the single reporting platform established pursuant to Article 16.",
+          "locator": "Article 14(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-2-a-vulnerability-early-warning",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(2)(a)",
+      "paragraphId": "32024R2847/art14/par2/pt-a",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of an actively exploited vulnerability",
+      "action": "Submit an early warning without undue delay and within 24 hours, naming, where applicable, the Member States where you know the product was made available.",
+      "clockId": "cra-art14-vuln",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "an early warning notification of an actively exploited vulnerability, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it, indicating, where applicable, the Member States on the territory of which the manufacturer is aware that their product with digital elements has been made available",
+          "locator": "Article 14(2)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-2-b-vulnerability-notification",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(2)(b)",
+      "paragraphId": "32024R2847/art14/par2/pt-b",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of an actively exploited vulnerability",
+      "action": "Unless already provided, submit a vulnerability notification without undue delay and within 72 hours, with general information on the product, the exploit and the vulnerability.",
+      "clockId": "cra-art14-vuln",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "unless the relevant information has already been provided, a vulnerability notification, without undue delay and in any event within 72 hours of the manufacturer becoming aware of the actively exploited vulnerability, which shall provide general information, as available, about the product with digital elements concerned, the general nature of the exploit and of the vulnerability concerned",
+          "locator": "Article 14(2)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-2-c-vulnerability-final-report",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(2)(c)",
+      "paragraphId": "32024R2847/art14/par2/pt-c",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "a corrective or mitigating measure becoming available",
+      "action": "Unless already provided, submit a final report within 14 days after a corrective or mitigating measure is available, covering the vulnerability, known exploiters and remedies.",
+      "clockId": "cra-art14-vuln",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "unless the relevant information has already been provided, a final report, no later than 14 days after a corrective or mitigating measure is available, including at least the following",
+          "locator": "Article 14(2)(c)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-3-notify-severe-incident",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(3)",
+      "paragraphId": "32024R2847/art14/par3",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of a severe incident having an impact on the security of the product",
+      "action": "Notify any severe incident affecting the product’s security to the CSIRT designated as coordinator and ENISA simultaneously, through the single reporting platform.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "A manufacturer shall notify any severe incident having an impact on the security of the product with digital elements that it becomes aware of simultaneously to the CSIRT designated as coordinator, in accordance with paragraph 7 of this Article, and to ENISA. The manufacturer shall notify that incident via the single reporting platform established pursuant to Article 16.",
+          "locator": "Article 14(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-4-a-incident-early-warning",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(4)(a)",
+      "paragraphId": "32024R2847/art14/par4/pt-a",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of a severe incident having an impact on the security of the product",
+      "action": "Submit an early warning without undue delay and within 24 hours, stating at least whether unlawful or malicious acts are suspected.",
+      "clockId": "cra-art14-incident",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "an early warning notification of a severe incident having an impact on the security of the product with digital elements, without undue delay and in any event within 24 hours of the manufacturer becoming aware of it, including at least whether the incident is suspected of being caused by unlawful or malicious acts",
+          "locator": "Article 14(4)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-4-b-incident-notification",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(4)(b)",
+      "paragraphId": "32024R2847/art14/par4/pt-b",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of a severe incident having an impact on the security of the product",
+      "action": "Unless already provided, submit an incident notification without undue delay and within 72 hours, with an initial assessment and any corrective or mitigating measures taken.",
+      "clockId": "cra-art14-incident",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "unless the relevant information has already been provided, an incident notification, without undue delay and in any event within 72 hours of the manufacturer becoming aware of the incident, which shall provide general information, where available, about the nature of the incident, an initial assessment of the incident, as well as any corrective or mitigating measures taken",
+          "locator": "Article 14(4)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-4-c-incident-final-report",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(4)(c)",
+      "paragraphId": "32024R2847/art14/par4/pt-c",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "submitting the incident notification",
+      "action": "Unless already provided, submit a final report within one month of the incident notification, detailing the incident, likely threat or root cause, and mitigation measures.",
+      "clockId": "cra-art14-incident",
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "unless the relevant information has already been provided, a final report, within one month after the submission of the incident notification under point (b), including at least the following",
+          "locator": "Article 14(4)(c)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "cra-14-8-inform-users",
+      "celex": "32024R2847",
+      "articleRef": "Article 14(8)",
+      "paragraphId": "32024R2847/art14/par8",
+      "addressee": "manufacturers of products with digital elements",
+      "trigger": "becoming aware of an actively exploited vulnerability or a severe incident having an impact on the security of the product",
+      "action": "Inform impacted users, and where appropriate all users, of the vulnerability or incident and, where necessary, of mitigation and corrective measures they can deploy.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "cra-products"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2026-09-11",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+          "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "the manufacturer shall inform the impacted users of the product with digital elements, and where appropriate all users, of that vulnerability or incident and, where necessary, of any risk mitigation and corrective measures that the users can deploy to mitigate the impact of that vulnerability or incident",
+          "locator": "Article 14(8)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-17-1-incident-management-process",
+      "celex": "32022R2554",
+      "articleRef": "Article 17(1)",
+      "paragraphId": "32022R2554/art17/par1",
+      "addressee": "financial entities",
+      "trigger": null,
+      "action": "Define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents.",
+          "locator": "Article 17(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-17-2-record-and-follow-up",
+      "celex": "32022R2554",
+      "articleRef": "Article 17(2)",
+      "paragraphId": "32022R2554/art17/par2",
+      "addressee": "financial entities",
+      "trigger": null,
+      "action": "Record all ICT-related incidents and significant cyber threats; set procedures to monitor, handle and follow up incidents, identifying, documenting and addressing root causes.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall record all ICT-related incidents and significant cyber threats. Financial entities shall establish appropriate procedures and processes to ensure a consistent and integrated monitoring, handling and follow-up of ICT-related incidents, to ensure that root causes are identified, documented and addressed in order to prevent the occurrence of such incidents.",
+          "locator": "Article 17(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-17-3-process-elements",
+      "celex": "32022R2554",
+      "articleRef": "Article 17(3)",
+      "paragraphId": "32022R2554/art17/par3",
+      "addressee": "financial entities",
+      "trigger": null,
+      "action": "Ensure the incident management process includes early warning indicators, classification procedures, assigned roles, communication and client notification plans, management reporting and response procedures.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The ICT-related incident management process referred to in paragraph 1 shall:",
+          "locator": "Article 17(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-18-1-classify-incidents",
+      "celex": "32022R2554",
+      "articleRef": "Article 18(1)",
+      "paragraphId": "32022R2554/art18/par1",
+      "addressee": "financial entities",
+      "trigger": null,
+      "action": "Classify ICT-related incidents and determine their impact based on clients and counterparts affected, duration, geographical spread, data losses, criticality of services and economic impact.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall classify ICT-related incidents and shall determine their impact based on the following criteria:",
+          "locator": "Article 18(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-18-2-classify-cyber-threats",
+      "celex": "32022R2554",
+      "articleRef": "Article 18(2)",
+      "paragraphId": "32022R2554/art18/par2",
+      "addressee": "financial entities",
+      "trigger": null,
+      "action": "Classify cyber threats as significant based on the criticality of services at risk, clients or counterparts targeted and the geographical spread of areas at risk.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall classify cyber threats as significant based on the criticality of the services at risk, including the financial entity’s transactions and operations, number and/or relevance of clients or financial counterparts targeted and the geographical spread of the areas at risk.",
+          "locator": "Article 18(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-1-report-major-incidents",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(1)",
+      "paragraphId": "32022R2554/art19/par1",
+      "addressee": "financial entities",
+      "trigger": "a major ICT-related incident",
+      "action": "Report major ICT-related incidents to the relevant competent authority, through the initial notification and reports set out in Article 19(4).",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall report major ICT-related incidents to the relevant competent authority as referred to in Article 46 in accordance with paragraph 4 of this Article.",
+          "locator": "Article 19(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-2-voluntary-cyber-threats",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(2)",
+      "paragraphId": "32022R2554/art19/par2",
+      "addressee": "financial entities",
+      "trigger": "a significant cyber threat deemed relevant to the financial system, service users or clients",
+      "action": "You may voluntarily notify significant cyber threats to the relevant competent authority when you deem them relevant to the financial system, service users or clients.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities may, on a voluntary basis, notify significant cyber threats to the relevant competent authority when they deem the threat to be of relevance to the financial system, service users or clients.",
+          "locator": "Article 19(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-3-inform-clients-incident",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(3)",
+      "paragraphId": "32022R2554/art19/par3",
+      "addressee": "financial entities",
+      "trigger": "a major ICT-related incident that has an impact on the financial interests of clients",
+      "action": "Without undue delay once aware, inform your clients about the major incident and the measures taken to mitigate its adverse effects.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where a major ICT-related incident occurs and has an impact on the financial interests of clients, financial entities shall, without undue delay as soon as they become aware of it, inform their clients about the major ICT-related incident and about the measures that have been taken to mitigate the adverse effects of such incident.",
+          "locator": "Article 19(3)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-3-inform-clients-threat",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(3), second subparagraph",
+      "paragraphId": "32022R2554/art19/par3/sub-2",
+      "addressee": "financial entities",
+      "trigger": "a significant cyber threat",
+      "action": "Where applicable, inform potentially affected clients of any appropriate protection measures they may consider taking.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "In the case of a significant cyber threat, financial entities shall, where applicable, inform their clients that are potentially affected of any appropriate protection measures which the latter may consider taking.",
+          "locator": "Article 19(3), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-4-a-initial-notification",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(4)(a)",
+      "paragraphId": "32022R2554/art19/par4",
+      "addressee": "financial entities",
+      "trigger": "a major ICT-related incident",
+      "action": "Submit an initial notification to the relevant competent authority within the time limits laid down under Article 20.",
+      "clockId": "dora-art19",
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Financial entities shall, within the time limits to be laid down in accordance with Article 20, first paragraph, point (a), point (ii), submit the following to the relevant competent authority:",
+          "locator": "Article 19(4)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "an initial notification;",
+          "locator": "Article 19(4)(a)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-4-b-intermediate-report",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(4)(b)",
+      "paragraphId": "32022R2554/art19/par4/pt-b",
+      "addressee": "financial entities",
+      "trigger": "a significant change in the status or handling of the major ICT-related incident",
+      "action": "Submit an intermediate report as soon as the incident’s status or handling changes significantly, then updated notifications as appropriate, including on the authority’s request.",
+      "clockId": "dora-art19",
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "an intermediate report after the initial notification referred to in point (a), as soon as the status of the original incident has changed significantly or the handling of the major ICT-related incident has changed based on new information available",
+          "locator": "Article 19(4)(b)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "followed, as appropriate, by updated notifications every time a relevant status update is available, as well as upon a specific request of the competent authority",
+          "locator": "Article 19(4)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "dora-19-4-c-final-report",
+      "celex": "32022R2554",
+      "articleRef": "Article 19(4)(c)",
+      "paragraphId": "32022R2554/art19/par4/pt-c",
+      "addressee": "financial entities",
+      "trigger": "completing the root cause analysis",
+      "action": "Submit a final report once the root cause analysis is complete, whether or not mitigation is in place, and actual impact figures can replace estimates.",
+      "clockId": "dora-art19",
+      "scopeRuleIds": [
+        "dora-financial"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2025-01-17",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+          "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "a final report, when the root cause analysis has been completed, regardless of whether mitigation measures have already been implemented, and when the actual impact figures are available to replace estimates.",
+          "locator": "Article 19(4)(c)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-33-1-notify-authority",
+      "celex": "32016R0679",
+      "articleRef": "Article 33(1)",
+      "paragraphId": "32016R0679/art33/par1",
+      "addressee": "controllers",
+      "trigger": "becoming aware of a personal data breach",
+      "action": "Notify the competent supervisory authority without undue delay and, where feasible, within 72 hours, unless a risk to people’s rights and freedoms is unlikely.",
+      "clockId": "gdpr-art33",
+      "scopeRuleIds": [
+        "gdpr-controller"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "locator": "Article 33(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-33-1-reasons-for-delay",
+      "celex": "32016R0679",
+      "articleRef": "Article 33(1)",
+      "paragraphId": "32016R0679/art33/par1",
+      "addressee": "controllers",
+      "trigger": "notifying the supervisory authority later than 72 hours after becoming aware of the breach",
+      "action": "If you do not notify the supervisory authority within 72 hours, give reasons for the delay with the notification.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "gdpr-controller"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.",
+          "locator": "Article 33(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-33-2-processor-notifies-controller",
+      "celex": "32016R0679",
+      "articleRef": "Article 33(2)",
+      "paragraphId": "32016R0679/art33/par2",
+      "addressee": "processors",
+      "trigger": "becoming aware of a personal data breach",
+      "action": "Notify the controller without undue delay after becoming aware of a personal data breach.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "gdpr-controller-no"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The processor shall notify the controller without undue delay after becoming aware of a personal data breach.",
+          "locator": "Article 33(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-33-5-document-breaches",
+      "celex": "32016R0679",
+      "articleRef": "Article 33(5)",
+      "paragraphId": "32016R0679/art33/par5",
+      "addressee": "controllers",
+      "trigger": null,
+      "action": "Document every personal data breach, covering the facts, its effects and the remedial action taken, so the supervisory authority can verify compliance with Article 33.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "gdpr-controller"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The controller shall document any personal data breaches, comprising the facts relating to the personal data breach, its effects and the remedial action taken. That documentation shall enable the supervisory authority to verify compliance with this Article.",
+          "locator": "Article 33(5)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-34-1-communicate-data-subjects",
+      "celex": "32016R0679",
+      "articleRef": "Article 34(1)",
+      "paragraphId": "32016R0679/art34/par1",
+      "addressee": "controllers",
+      "trigger": "a personal data breach likely to result in a high risk to the rights and freedoms of natural persons",
+      "action": "Communicate the breach to the data subject without undue delay, subject to the exceptions and the public communication alternative in Article 34(3).",
+      "clockId": null,
+      "scopeRuleIds": [
+        "gdpr-controller"
+      ],
+      "status": "in-force",
+      "appliesFrom": "2018-05-25",
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay.",
+          "locator": "Article 34(1)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The communication to the data subject referred to in paragraph 1 shall not be required if any of the following conditions are met:",
+          "locator": "Article 34(3)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+          "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "In such a case, there shall instead be a public communication or similar measure whereby the data subjects are informed in an equally effective manner.",
+          "locator": "Article 34(3)(c)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-1-report-serious-incidents",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(1)",
+      "paragraphId": "32024R1689/art73/par1",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "a serious incident",
+      "action": "Report any serious incident to the market surveillance authorities of the Member States where it occurred.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred.",
+          "locator": "Article 73(1)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-2-report-deadline",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(2)",
+      "paragraphId": "32024R1689/art73/par2",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "establishing a causal link, or the reasonable likelihood of one, between the AI system and a serious incident",
+      "action": "Report immediately once a causal link, or its reasonable likelihood, is established, and no later than 15 days after you or the deployer become aware.",
+      "clockId": "aiact-art73",
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "The report referred to in paragraph 1 shall be made immediately after the provider has established a causal link between the AI system and the serious incident or the reasonable likelihood of such a link, and, in any event, not later than 15 days after the provider or, where applicable, the deployer, becomes aware of the serious incident.",
+          "locator": "Article 73(2)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-3-widespread-or-infrastructure",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(3)",
+      "paragraphId": "32024R1689/art73/par3",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "a widespread infringement, or a serious incident that is a serious and irreversible disruption of the management or operation of critical infrastructure",
+      "action": "For a widespread infringement or serious, irreversible disruption of critical infrastructure, report immediately and within two days of you or the deployer becoming aware.",
+      "clockId": "aiact-art73",
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Notwithstanding paragraph 2 of this Article, in the event of a widespread infringement or a serious incident as defined in Article 3, point (49)(b), the report referred to in paragraph 1 of this Article shall be provided immediately, and not later than two days after the provider or, where applicable, the deployer becomes aware of that incident.",
+          "locator": "Article 73(3)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "a serious and irreversible disruption of the management or operation of critical infrastructure;",
+          "locator": "Article 3, point (49)(b)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-4-death",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(4)",
+      "paragraphId": "32024R1689/art73/par4",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "a serious incident involving the death of a person",
+      "action": "Where a person dies, report immediately once you or the deployer establish or suspect a causal link, and within 10 days of becoming aware.",
+      "clockId": "aiact-art73",
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "the report shall be provided immediately after the provider or the deployer has established, or as soon as it suspects, a causal relationship between the high-risk AI system and the serious incident, but not later than 10 days after the date on which the provider or, where applicable, the deployer becomes aware of the serious incident.",
+          "locator": "Article 73(4)",
+          "sourceClass": "trusted-institutional"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "in the event of the death of a person",
+          "locator": "Article 73(4)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-6-investigate",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(6)",
+      "paragraphId": "32024R1689/art73/par6",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "reporting a serious incident",
+      "action": "Without delay, carry out the necessary investigations into the serious incident and the AI system, including a risk assessment and corrective action.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "Following the reporting of a serious incident pursuant to paragraph 1, the provider shall, without delay, perform the necessary investigations in relation to the serious incident and the AI system concerned. This shall include a risk assessment of the incident, and corrective action.",
+          "locator": "Article 73(6)",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    },
+    {
+      "id": "aiact-73-6-cooperate",
+      "celex": "32024R1689",
+      "articleRef": "Article 73(6), second subparagraph",
+      "paragraphId": "32024R1689/art73/par6/sub-2",
+      "addressee": "providers of high-risk AI systems placed on the Union market",
+      "trigger": "investigating a reported serious incident",
+      "action": "Cooperate with competent authorities and, where relevant, the notified body; inform the authorities before altering the AI system in ways that may affect cause evaluation.",
+      "clockId": null,
+      "scopeRuleIds": [
+        "ai-high-risk"
+      ],
+      "status": "applies-from",
+      "appliesFrom": null,
+      "verify": true,
+      "verifiedAt": null,
+      "provenance": [
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+          "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          "publisher": "Publications Office of the European Union",
+          "retrievedAt": "2026-09-30",
+          "excerpt": "shall cooperate with the competent authorities, and where relevant with the notified body concerned, during the investigations referred to in the first subparagraph, and shall not perform any investigation which involves altering the AI system concerned in a way which may affect any subsequent evaluation of the causes of the incident, prior to informing the competent authorities of such action.",
+          "locator": "Article 73(6), second subparagraph",
+          "sourceClass": "trusted-institutional"
+        }
+      ]
+    }
+  ]
+}

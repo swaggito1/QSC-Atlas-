@@ -1,0 +1,61 @@
+{
+  "_about": "For each of the seven guides the Readiness Check quotes (data/lab/readiness/readiness.json, by framework id), the URLs of the included rows in data/results that record the documents the guide is quoted from, written exactly as data/results writes them, or unmapped true with a note. The note says how each URL was joined: by the same address, or by title when the guide quotes a different address, and names any of the guide's documents the Atlas does not record. scripts/lab/invariants/site.mjs checks that every URL is an included row of data/results and that every guide in readiness.json appears here once.",
+  "guides": [
+    {
+      "id": "eu-roadmap",
+      "urls": [
+        "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography"
+      ],
+      "unmapped": false,
+      "note": "Joined by title. The guide quotes the roadmap PDF, Part 1, Version 1.1; the Atlas row is the digital-strategy.ec.europa.eu library page titled A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography. The NIS Cooperation Group's questions and answers on the roadmap have no record in the Atlas documents."
+    },
+    {
+      "id": "ncsc-timelines",
+      "urls": [
+        "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines"
+      ],
+      "unmapped": false,
+      "note": "Joined by the same address."
+    },
+    {
+      "id": "ncsc-next-steps",
+      "urls": [
+        "https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography"
+      ],
+      "unmapped": false,
+      "note": "Joined by title: both rows are titled Next steps in preparing for post-quantum cryptography. The guide quotes the /whitepaper/ address; the Atlas row has the /paper/ address."
+    },
+    {
+      "id": "ca-roadmap",
+      "urls": [
+        "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001"
+      ],
+      "unmapped": false,
+      "note": "Joined by the same address."
+    },
+    {
+      "id": "anssi-faq",
+      "urls": [
+        "https://cyber.gouv.fr/enjeux-technologiques/cryptographie-post-quantique/faq-pqc/"
+      ],
+      "unmapped": false,
+      "note": "Joined by the same address."
+    },
+    {
+      "id": "cisa-factsheet",
+      "urls": [
+        "https://www.cisa.gov/resources-tools/resources/quantum-readiness-migration-post-quantum-cryptography"
+      ],
+      "unmapped": false,
+      "note": "Joined by title: both are titled Quantum-Readiness: Migration to Post-Quantum Cryptography. The guide quotes the PDF; the Atlas row is the CISA resource page."
+    },
+    {
+      "id": "nl-handbook",
+      "urls": [
+        "https://english.aivd.nl/documents/2024/12/3/the-pqc-migration-handbook"
+      ],
+      "unmapped": false,
+      "note": "Joined by title. The guide quotes the TNO copy of the second edition; the Atlas row is the AIVD page titled The PQC Migration Handbook (revised and extended second edition)."
+    }
+  ]
+}

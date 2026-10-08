@@ -1,0 +1,66 @@
+---
+// The EU rules tool (Rulebook in Motion; its route is in data/lab/tools.json): the frame around
+// the island. The H1 is the visitor's question, the lede one sentence, and under the facts line
+// one standing note keeps the caveats in view: EU instruments only, and no legal advice. Everything
+// else the page can say (the scope line with its count of obligations that mention cryptography,
+// the method, the sources) waits in About this view. The tool stands on its own, so it can live
+// on a site of its own: it links to no Prepare page, no other tool and not to the methodology;
+// its only links into the Atlas are country profiles, by their full address (rulebookLinks).
+// The law's own words reach the island only in a build that may carry them (sourceWordsInBuild),
+// and show only on a page opened for review. The AI Act stays one of the six acts (decision 6),
+// with no link to any AI page and its Article 73 regime hidden by its record in regimes.json.
+import LabLayout from '../../LabLayout.astro';
+import RulebookTool from './RulebookTool.tsx';
+import { INSTRUMENTS, THEMES, countWord, islandCopy, islandData, loadRulebook, rulebookLinks, scopeLine } from '../../../../lib/lab/rulebook-data';
+import { fill } from '../../../../lib/lab/exposure';
+import { sourceWordsInBuild } from '../../../../lib/site/review-build';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/lab-rulebook.css';
+
+const { tool } = Astro.props as { tool: LabTool };
+const data = loadRulebook();
+const { copy } = data;
+const links = rulebookLinks(data);
+const acts = data.scope.acts;
+const scope = scopeLine(copy, data.scope);
+const sourceWords = sourceWordsInBuild();
+const island = islandData(data, sourceWords);
+---
+
+<LabLayout
+  tool={tool}
+  question={copy.question}
+  lede={fill(copy.lede, { acts: countWord(acts) })}
+  description={fill(copy.description, { acts: countWord(acts) })}
+  local
+  asOf={data.asOf}
+  lawAsOf={data.lawAsOf !== data.asOf ? data.lawAsOf : null}
+  sources={data.sources}
+  standingNote={copy.standing}
+  standingNoteIn="head"
+  next={links.next}
+  methodAnchor={null}
+  wide
+>
+  <RulebookTool
+    client:load
+    copy={islandCopy(copy)}
+    articles={island.articles}
+    regimes={island.regimes}
+    obligations={island.obligations}
+    proposals={data.proposals}
+    sectors={data.sectors}
+    sizeClasses={data.sizeClasses}
+    rules={island.rules}
+    memberStates={data.memberStates}
+    lawAsOf={data.lawAsOf}
+    instruments={INSTRUMENTS.map((i) => ({ celex: i.celex, short: i.short }))}
+    themes={[...THEMES]}
+    profiles={links.profiles}
+    sourceWordsAvailable={sourceWords}
+  />
+  <Fragment slot="method">
+    <p>{scope.parts.map((p) => ('mono' in p ? <span class="mono">{p.mono}</span> : p.text))}</p>
+    <p>{fill(copy.method, { acts: countWord(acts) })}</p>
+  </Fragment>
+</LabLayout>

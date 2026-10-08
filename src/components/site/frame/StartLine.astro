@@ -1,0 +1,60 @@
+---
+// The meta line at the start of a page (spec 11, item 6, after the minimal pass): one quiet line
+// in the interface face, ink-muted, items joined by middle dots, each item linking to its record
+// where it has one:
+//   "As of {date}", with ", due for a check" only when the data is past its freshness threshold;
+//   "Law as of {date}" where the page has one;
+//   what the page reads, with counts ("Reads target dates for 38 countries");
+//   "About {n} minutes" where the visitor enters something;
+//   further plain facts.
+// "verified n days ago", "Written for", "Nothing you enter leaves this page", how to cite and
+// how to report an error are in About this view at the foot of the page, so the line stays
+// short enough never to wrap on a desktop.
+// A line break can fall only after a dot, never before one, and never inside a date or a
+// duration. Items sit on one line each in this file: whitespace inside an li would let a break
+// fall before the next dot. Items with a null href that are not plain facts (a link to a page
+// that is not built) are dropped by the caller, never here: a read with href null is still a
+// fact and shows as text.
+import FreshnessBadge from '../../lab/FreshnessBadge.astro';
+import { formatDate } from '../../../lib/lab/format';
+import type { LinkItem } from './contracts';
+import '../../../styles/frame.css';
+
+interface Props {
+  reads?: LinkItem[];
+  minutes?: number | null;
+  asOf?: string | null; // undefined: no as-of item; null: "No value here has been verified against its source"
+  freshnessDays?: number | null; // when set, the as-of date says "due for a check" once it is stale
+  lawAsOf?: string | null;
+  extra?: string[]; // further plain items, such as "no score", each set in sentence case here ("No score")
+}
+const { reads = [], minutes = null, asOf, freshnessDays = null, lawAsOf = null, extra = [] } = Astro.props;
+const hasAsOf = asOf !== undefined;
+const any = reads.length > 0 || Boolean(minutes) || hasAsOf || Boolean(lawAsOf) || extra.length > 0;
+---
+
+{
+  any && (
+    <ul class="fr-facts">
+      {hasAsOf &&
+        (asOf ? (
+          <>
+            <li><span class="fr-nw">{`As of ${formatDate(asOf)}`}</span></li>
+            {freshnessDays !== null && (
+              <li class="fr-fresh"><FreshnessBadge verifiedAt={asOf} thresholdDays={freshnessDays} bare /></li>
+            )}
+          </>
+        ) : (
+          <li>No value here has been verified against its source</li>
+        ))}
+      {lawAsOf && <li><span class="fr-nw">{`Law as of ${formatDate(lawAsOf)}`}</span></li>}
+      {reads.map((r) => (
+        <li>{r.href ? <a href={r.href}>{r.label}</a> : r.label}</li>
+      ))}
+      {typeof minutes === 'number' && minutes > 0 && <li><span class="fr-nw">{`About ${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`}</span></li>}
+      {extra.map((x) => (
+        <li>{x.charAt(0).toUpperCase() + x.slice(1)}</li>
+      ))}
+    </ul>
+  )
+}

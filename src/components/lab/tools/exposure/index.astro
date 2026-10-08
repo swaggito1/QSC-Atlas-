@@ -1,0 +1,62 @@
+---
+// The Exposure Clock page (spec 5.2): the shared frame with the visitor's question as H1, the
+// facts line, "Not for you?", the island, Where to go next and About this view with the method
+// note and the sources. Every link is built at build time (link() and pageHref() in
+// exposure-data.ts), so a page that is not built is never named, here or in the island's props.
+// The survey's own definition of the machine is a source's words: SourceWords keeps it out of a
+// production build and hidden elsewhere until ?review=1, and the island never receives it. The
+// words behind each period under the first slider reach the island only in a build that may carry
+// them (sourceWordsAvailable), and show only with ?review=1.
+import LabLayout from '../../LabLayout.astro';
+import SourceWords from '../../../site/frame/SourceWords.astro';
+import ExposureClock from './ExposureClock.tsx';
+import { loadExposure } from '../../../../lib/lab/exposure-data';
+import { fill } from '../../../../lib/lab/exposure';
+import { formatDate } from '../../../../lib/lab/format';
+import { sourceWordsInBuild } from '../../../../lib/site/review-build';
+import type { LabTool } from '../../../../lib/lab/types';
+import '../../../../styles/lab-exposure.css';
+
+const { tool } = Astro.props as { tool: LabTool };
+// the Atlas is cited at the address astro.config.mjs gives the site
+const data = loadExposure({}, undefined, Astro.site?.origin);
+const { copy, frame } = data;
+// the method note around the definition, which goes between its two halves
+const [methodBefore, methodAfter = ''] = fill(copy.method, { surveyTitle: data.survey?.title ?? 'expert survey' }).split('{definition}');
+---
+
+<LabLayout
+  tool={tool}
+  question={copy.question}
+  lede={copy.lede}
+  promise={copy.promise}
+  description={copy.intro}
+  asOf={data.asOf}
+  sources={data.sources}
+  reads={frame.reads}
+  local
+  notForYou={frame.notForYou}
+  next={frame.next}
+>
+  <ExposureClock
+    client:load
+    copy={data.copy}
+    survey={data.survey}
+    surveyRows={data.surveyRows}
+    surveyStale={data.surveyStale}
+    presets={data.presets}
+    jurisdictions={data.jurisdictions}
+    deadlines={data.deadlines}
+    links={data.links}
+    postures={data.postures}
+    buildYear={data.buildYear}
+    origin={data.origin}
+    asOfLabel={data.asOf ? formatDate(data.asOf) : ''}
+    sourceWordsAvailable={sourceWordsInBuild()}
+  />
+  <Fragment slot="method">
+    <p>
+      {methodBefore}{data.surveyDefinition && <SourceWords inline>“{data.surveyDefinition}”</SourceWords>}{methodAfter}
+    </p>
+  </Fragment>
+</LabLayout>

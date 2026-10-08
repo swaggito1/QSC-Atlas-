@@ -1,0 +1,11 @@
+{
+  "_about": "Reviewed exceptions to the word rules of scripts/site/lib/dist.mjs: a sentence a visitor reads that uses a word correctly in a way the rule cannot tell. An entry names the page, the exact phrase (matched without regard to case, and only where the phrase covers the match), the rule it answers (the start of the rule's text) and a reason a reviewer can verify on the page. An entry whose page is built but whose phrase no longer occurs is reported as a warning, so an edited sentence is judged again. Keep the list short. A record's wording is Swann's to change in Notion, and copy that breaks a rule is reworded where it is written; neither belongs here.",
+  "entries": [
+    {
+      "page": "/commentary",
+      "phrase": "drew some of them as hard deadlines",
+      "rule": "the word \"deadline\"",
+      "reason": "The correction note on the commentary names the earlier version's error (decision 4, 1 October 2026); it calls no date a deadline."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "_about": "Verbatim text of the in-scope articles of Directive (EU) 2022/2557 (CER), read on 2026-09-30 from the text published in the Official Journal through CELLAR, because CELLAR holds no English expression of its consolidated version. Footnote call numbers are left out; each paragraph, subparagraph and point is one entry.",
+  "celex": "32022L2557",
+  "consolidatedVersion": null,
+  "sourceUrl": "http://publications.europa.eu/resource/celex/32022L2557",
+  "retrievedAt": "2026-09-30",
+  "articles": [
+    {
+      "id": "art6",
+      "ref": "Article 6",
+      "sourceTitle": "Identification of critical entities",
+      "theme": "scope",
+      "paragraphs": [
+        {
+          "id": "32022L2557/art6/par1",
+          "ref": "Article 6(1)",
+          "quote": "By 17 July 2026, each Member State shall identify the critical entities for the sectors and subsectors set out in the Annex.",
+          "crossRefs": [
+            "the Annex"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par2",
+          "ref": "Article 6(2)",
+          "quote": "When a Member State identifies critical entities pursuant to paragraph 1, it shall take into account the outcomes of its Member State risk assessment and its strategy and shall apply all of the following criteria:",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par2/pt-a",
+          "ref": "Article 6(2)(a)",
+          "quote": "the entity provides one or more essential services;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art6/par2/pt-b",
+          "ref": "Article 6(2)(b)",
+          "quote": "the entity operates, and its critical infrastructure is located, on the territory of that Member State; and",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art6/par2/pt-c",
+          "ref": "Article 6(2)(c)",
+          "quote": "an incident would have significant disruptive effects, as determined in accordance with Article 7(1), on the provision by the entity of one or more essential services or on the provision of other essential services in the sectors set out in the Annex that depend on that or those essential services.",
+          "crossRefs": [
+            "Article 7(1)",
+            "the Annex"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par3",
+          "ref": "Article 6(3)",
+          "quote": "Each Member State shall establish a list of the critical entities identified pursuant to paragraph 2 and ensure that those critical entities are notified that they have been identified as critical entities within one month of that identification. Member States shall inform those critical entities of their obligations under Chapters III and IV and the date from which those obligations apply to them, without prejudice to Article 8. Member States shall inform critical entities in the sectors set out in points 3, 4 and 8 of the table in the Annex that they have no obligations under Chapters III and IV, unless national measures provide otherwise.",
+          "crossRefs": [
+            "paragraph 2",
+            "Chapters III and IV",
+            "Article 8",
+            "the Annex"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par3/sub-2",
+          "ref": "Article 6(3), second subparagraph",
+          "quote": "For the critical entities concerned, Chapter III shall apply from 10 months after the date of the notification referred to in the first subparagraph of this paragraph.",
+          "crossRefs": [
+            "Chapter III",
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par4",
+          "ref": "Article 6(4)",
+          "quote": "Member States shall ensure that their competent authorities under this Directive notify the competent authorities under Directive (EU) 2022/2555 of the identity of the critical entities that they have identified under this Article within one month of that identification. That notification shall specify, where applicable, that the critical entities concerned are entities in the sectors set out in points 3, 4 and 8 of the table in the Annex to this Directive and have no obligations under Chapters III and IV thereof.",
+          "crossRefs": [
+            "Directive (EU) 2022/2555",
+            "the Annex",
+            "Chapters III and IV"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par5",
+          "ref": "Article 6(5)",
+          "quote": "Member States shall, where necessary and in any event at least every four years, review and, where appropriate, update the list of identified critical entities referred to in paragraph 3. Where those updates lead to the identification of additional critical entities, paragraphs 3 and 4 shall apply to those additional critical entities. In addition, Member States shall ensure that entities that are no longer identified as critical entities following any such update are notified in due time of that fact and the fact that they are no longer subject to the obligations under Chapter III from the date of receipt of that notification.",
+          "crossRefs": [
+            "paragraph 3",
+            "paragraphs 3 and 4",
+            "Chapter III"
+          ]
+        },
+        {
+          "id": "32022L2557/art6/par6",
+          "ref": "Article 6(6)",
+          "quote": "The Commission shall, in cooperation with the Member States, develop recommendations and non-binding guidelines to support Member States in identifying critical entities.",
+          "crossRefs": []
+        }
+      ]
+    },
+    {
+      "id": "art15",
+      "ref": "Article 15",
+      "sourceTitle": "Incident notification",
+      "theme": "incident-reporting",
+      "paragraphs": [
+        {
+          "id": "32022L2557/art15/par1",
+          "ref": "Article 15(1)",
+          "quote": "Member States shall ensure that critical entities notify the competent authority, without undue delay, of incidents that significantly disrupt or have the potential to significantly disrupt the provision of essential services. Member States shall ensure that, unless operationally unable to do so, critical entities submit an initial notification no later than 24 hours after becoming aware of an incident, followed, where relevant, by a detailed report no later than one month thereafter. In order to determine the significance of a disruption, the following parameters shall, in particular, be taken into account:",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art15/par1/pt-a",
+          "ref": "Article 15(1)(a)",
+          "quote": "the number and proportion of users affected by the disruption;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art15/par1/pt-b",
+          "ref": "Article 15(1)(b)",
+          "quote": "the duration of the disruption;",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art15/par1/pt-c",
+          "ref": "Article 15(1)(c)",
+          "quote": "the geographical area affected by the disruption, taking into account whether the area is geographically isolated.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art15/par1/sub-2",
+          "ref": "Article 15(1), second subparagraph",
+          "quote": "Where an incident has or might have a significant impact on the continuity of the provision of essential services to or in six or more Member States, the competent authorities of the Member States affected by the incident shall notify the Commission of that incident.",
+          "crossRefs": []
+        },
+        {
+          "id": "32022L2557/art15/par2",
+          "ref": "Article 15(2)",
+          "quote": "Notifications as referred to in paragraph 1, first subparagraph, shall include any available information necessary to enable the competent authority to understand the nature, cause and possible consequences of the incident, including any available information necessary to determine any cross-border impact of the incident. Such notifications shall not subject critical entities to increased liability.",
+          "crossRefs": [
+            "paragraph 1, first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2557/art15/par3",
+          "ref": "Article 15(3)",
+          "quote": "On the basis of the information provided by a critical entity in a notification as referred to in paragraph 1, the relevant competent authority, via the single point of contact, shall inform the single point of contact of other affected Member States where the incident has or might have a significant impact on critical entities and the continuity of the provision of essential services to or in one or more other Member States.",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        },
+        {
+          "id": "32022L2557/art15/par3/sub-2",
+          "ref": "Article 15(3), second subparagraph",
+          "quote": "Single points of contact sending and receiving information pursuant to the first subparagraph shall, in accordance with Union or national law, treat that information in a way that respects its confidentiality and protects the security and commercial interest of the critical entity concerned.",
+          "crossRefs": [
+            "first subparagraph"
+          ]
+        },
+        {
+          "id": "32022L2557/art15/par4",
+          "ref": "Article 15(4)",
+          "quote": "As soon as possible following a notification as referred to in paragraph 1, the competent authority concerned shall provide the critical entity concerned with relevant follow-up information, including information that could support that critical entity’s effective response to the incident in question. Member States shall inform the public where they determine that it would be in the public interest to do so.",
+          "crossRefs": [
+            "paragraph 1"
+          ]
+        }
+      ]
+    }
+  ]
+}

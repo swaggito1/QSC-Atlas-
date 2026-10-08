@@ -53,5 +53,16 @@
     "url": "https://www.gov.il/BlobFolder/news/cyber_strategy_2025/he/Israel%20National%20Cyber%20Security%20Strategy%202025.pdf",
     "summary": "Israel National Cyber Directorate national cyber security strategy (February 2025) setting Israel's cyber-resilience vision and objectives; multiple official sources state it places 'readiness for the quantum era' as a strategic axis, but an explicit post-quantum-cryptography reference inside the document text could not be verified during this pass, so it is flagged for human review.",
     "included": false
+  },
+  {
+    "title": "עקרונות פרק 5 חלק 2 של ואסנאר",
+    "country": "ISR",
+    "issuingOrg": "IMOD DECA",
+    "year": 2025,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://mod.gov.il/media/dcch0beg/%D7%9B%D7%A0%D7%A1-%D7%A6%D7%95-%D7%94%D7%A6%D7%95%D7%A4%D7%9F-752025.pdf",
+    "summary": "Presentation by the Israeli Ministry of Defense's Defense Export Controls Agency (exportctrl.mod.gov.il) explaining the principles of Wassenaar Category 5 Part 2 (information security) export controls, including the general exemptions and the criteria for a 'described security algorithm'. It lists quantum algorithms (post-quantum, quantum-safe or quantum-resistant) as one basis for a described security algorithm, alongside symmetric and asymmetric key-length thresholds.",
+    "included": true
   }
 ]

@@ -218,5 +218,60 @@
     "url": "https://www.cydcampus.admin.ch/dam/en/sd-web/pWaa63DWOMpF/Quantum_Technologies_Trends_and_Implications_for_Cyberdefence_semi-annual_report_20251_PUBLIC.pdf",
     "summary": "First-half 2025 semi-annual research report by the federal Cyber-Defence Campus (armasuisse Science and Technology, DDPS) surveying quantum-technology trends for cyber defence, including post-quantum cryptography and quantum-safe migration; flagged for review as agency research output rather than a policy or standards document.",
     "included": false
+  },
+  {
+    "title": "FINMA Guidance 05/2026: Quantum computing",
+    "country": "CHE",
+    "issuingOrg": "FINMA",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://finma.ch/en/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20260709-finma-aufsichtsmitteilung-05-2026.pdf?sc_lang=en",
+    "summary": "Supervisory guidance of 9 July 2026 in which the Swiss Financial Market Supervisory Authority reports a survey of 60 authorised banks, insurers, asset managers and financial market infrastructures showing that 72% have taken no measures on quantum-safe cryptography and only 8% have a PQC roadmap. FINMA states that existing principles-based operational-risk and governance requirements already cover quantum risk, and recommends a board-approved PQC strategy, a cryptographic inventory, crypto-agility, PQC-ready outsourcing arrangements and a PQC roadmap drawn up by mid-2027 at the latest.",
+    "included": true
+  },
+  {
+    "title": "FINMA guidance on quantum computing (press release, 9 July 2026)",
+    "country": "CHE",
+    "issuingOrg": "FINMA",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T1",
+    "url": "https://www.finma.ch/en/news/2026/07/20260709-mm-am-05-26/",
+    "summary": "FINMA press release announcing Guidance 05/2026, reporting that supervised institutions largely lack a clear roadmap and forward-looking planning for migration to quantum-safe encryption. It sets out FINMA's expectation that institutions address the risk from cryptographically relevant quantum computers in their governance and risk management and move towards crypto-agility.",
+    "included": true
+  },
+  {
+    "title": "Empfohlene Algorithmen - Abkündigung RSA (Terminierung RSA)",
+    "country": "CHE",
+    "issuingOrg": "BIT (FOITT)",
+    "year": 2026,
+    "docType": "Roadmap",
+    "tier": "T1",
+    "url": "https://www.bit.admin.ch/dam/en/sd-web/AxB62cQzpkmh/empfohlene-algorithmen-abk%C3%BCndigung-rsa-de.pdf",
+    "summary": "Federal Office of Information Technology, Systems and Telecommunication document (dated 24 February 2026 on the BIT PQC page) setting out recommended algorithms and a dated RSA sunset plan, citing NIST and ETSI advice to begin post-quantum cryptography migration immediately and 'harvest now, decrypt later' risk. It phases the transition as 2024-2026 inventory and PQC pilots, 2026-2029 migration of critical systems with hybrid algorithms and PKI updates, 2030-2034 full changeover with no new RSA applications, and complete deactivation of RSA from 2035, naming CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON and SPHINCS+ as recommended PQC algorithms.",
+    "included": true
+  },
+  {
+    "title": "Präsentation: Anpassungen Schlüssellängen für Zertifikate - Informationen aus der Swiss Government PKI",
+    "country": "CHE",
+    "issuingOrg": "BIT (FOITT)",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.bit.admin.ch/dam/en/sd-web/Y3VvNiomi5DR/pr%C3%A4sentation-anpassungen-schl%C3%BCssell%C3%A4ngen-de.pdf",
+    "summary": "Swiss Government PKI briefing presentation (slide date 24 February 2026, listed 9 March 2026) explaining that quantum computers threaten all RSA-based procedures, that 'harvest now, decrypt later' attacks are already occurring, and that retrofitting PQC into existing PKI is operationally complex. It sets out the Swiss Government PKI roadmap: shortened TLS certificate lifetimes from March 2026, increased key lengths for Classes A, B, C and E by 2027, a new PKI engine from 2027, support for hybrid cryptography and hybrid test certificates already available.",
+    "included": true
+  },
+  {
+    "title": "Jahresreporting der Forschungsprogramme Cyberspace und Cyber & Intelligence Analytics",
+    "country": "CHE",
+    "issuingOrg": "armasuisse",
+    "year": 2026,
+    "docType": "Announcement",
+    "tier": "T4",
+    "url": "https://www.ar.admin.ch/de/news-jahresreporting-3a-3b-de",
+    "summary": "armasuisse news item, dated 30 March 2026, on the annual reporting of its Cyberspace and Cyber & Intelligence Analytics research programmes. It notes that a Cyber-Defence Campus PhD fellow presented new post-quantum cryptography approaches based on knot theory.",
+    "included": true
   }
 ]

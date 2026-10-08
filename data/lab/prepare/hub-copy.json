@@ -1,0 +1,22 @@
+{
+  "_about": "Every visitor-facing string of the Prepare hub (/prepare), filled by src/lib/site/prepare-hub.ts. The H1 is the section's question (PREPARE_QUESTION in src/lib/site/routes.ts); the group names and lines come from data/lab/readiness/readiness.json, and every count is computed. The hub shows no source's words. British English, no dashes, no score language.",
+  "copy": {
+    "hubLede": "Answer one question at a time to see what published guidance asks of you, and what to take first.",
+    "hubLedeShort": "Where to begin on post-quantum cryptography, with tools the Atlas builds from published sources.",
+    "standingNote": "Every date in the Readiness Check is a target set by guidance or a recommendation. None is a legal deadline.",
+
+    "start": "Start the Check",
+
+    "groupsHead": "What the guides ask",
+    "groupsIntro": "{groups} groups of questions, to take in any order. The counts are for {guides}, the guides the Check starts with.",
+    "groupCount": "{n} questions",
+    "groupCountOne": "1 question",
+
+    "guidesLink": "The {count} guides behind the questions",
+
+    "otherExposure": "How long your data must stay secret: the Exposure Clock",
+    "otherDates": "Target dates where you operate",
+
+    "aboutHead": "About this section"
+  }
+}

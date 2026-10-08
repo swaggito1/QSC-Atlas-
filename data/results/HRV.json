@@ -9,5 +9,38 @@
     "url": "https://www.cert.hr/webinar-qubiti-napadaju-kako-pripremiti-obranu-od-kvantne-prijetnje/",
     "summary": "National CERT.hr webinar notice addressing the quantum threat and how organisations can prepare a defence, explicitly covering post-quantum cryptography (postkvantna kriptografija), qubits, superposition and quantum cryptography.",
     "included": true
+  },
+  {
+    "title": "Prilog C: Katalog kontrola",
+    "country": "HRV",
+    "issuingOrg": "ZSIS",
+    "year": 2026,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.zsis.hr/UserDocsImages/Samoprocjena/Prilog%20C%20-%20Katalog%20kontrola.pdf",
+    "summary": "Control catalogue (Annex C, version 1.1, revised 11 March 2026) published by the Information Systems Security Bureau for cybersecurity self-assessment. Control KRIP-005, application of quantum-resistant cryptography, covers evaluating existing cryptographic systems, planning migration to quantum-resistant algorithms and updating cryptographic policies, scored on a five-level maturity scale.",
+    "included": true
+  },
+  {
+    "title": "Prilog B: Okvir za evaluaciju mjera upravljanja kibernetičkim sigurnosnim rizicima",
+    "country": "HRV",
+    "issuingOrg": "ZSIS",
+    "year": null,
+    "docType": "Guidance",
+    "tier": "T1",
+    "url": "https://www.zsis.hr/UserDocsImages/Samoprocjena/Prilog%20B%20-%20Okvir%20za%20evaluaciju.pdf",
+    "summary": "Evaluation framework (Annex B, version 1.0) for self-assessment under Article 51 of the Regulation on Cybersecurity (Narodne novine 135/24), part of the Information Systems Security Bureau's self-assessment guidelines. It lists sub-measure 10.6, to use quantum-resistant cryptography against future threats where possible according to assessed risk, and sets maturity thresholds for control KRIP-005, assessed only where an entity adopts the sub-measure voluntarily.",
+    "included": true
+  },
+  {
+    "title": "CroQCI: Croatian Quantum Communication Infrastructure project",
+    "country": "HRV",
+    "issuingOrg": "CERT.hr",
+    "year": null,
+    "docType": "Report",
+    "tier": "T2",
+    "url": "https://www.cert.hr/projekti/",
+    "summary": "CERT.hr's projects page describes CroQCI, the Croatian Quantum Communication Infrastructure project, which ran from 1 January 2023 to 30 June 2025. The project includes building and testing devices and systems that combine quantum, post-quantum, classical and quantum-enhanced solutions.",
+    "included": true
   }
 ]

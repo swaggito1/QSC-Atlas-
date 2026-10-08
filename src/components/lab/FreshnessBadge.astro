@@ -1,0 +1,76 @@
+---
+// "verified N days ago", in the interface face (mono is for the date beside it, not for words).
+// Past the tool's threshold it turns to ink and adds a
+// plain note, ", due for a check": the words carry the warning, with no box and no colour
+// (colour is reserved for posture). The count is computed at build time and refreshed in the
+// browser, so a page that has not been rebuilt for a while still tells the truth about its age.
+// Two forms:
+//   default: joined to a date before it by its own middle dot, as the site joins its metadata
+//   ("ANSSI · 2026 · T1"); the box is display: contents, so in a wrapping flex row the dot stays
+//   at the end of the date and the words move to the next line, and a word joiner (U+2060)
+//   before the dot keeps that true when the line flows as plain text. The dot is drawn by CSS,
+//   so it is decoration only, and the markup has no stray whitespace for a line to break at;
+//   bare: the words alone, for the meta line, which draws its own dots and shows only "due for a
+//   check", and only when the data is due for one (frame.css), so the line stays one line.
+import { daysSince } from '../../lib/lab/freshness';
+
+interface Props {
+  verifiedAt: string; // YYYY-MM-DD
+  thresholdDays: number;
+  bare?: boolean;
+}
+const { verifiedAt, thresholdDays, bare = false } = Astro.props;
+const days = daysSince(verifiedAt);
+const stale = days > thresholdDays;
+const text = (n: number) => (n <= 0 ? 'verified today' : n === 1 ? 'verified 1 day ago' : `verified ${n} days ago`);
+---
+
+<span
+  class:list={['fresh', { 'is-stale': stale, 'fresh--bare': bare }]}
+  data-lab-fresh
+  data-verified={verifiedAt}
+  data-threshold={thresholdDays}
+>
+{!bare && <span class="fresh-sep" aria-hidden="true"></span>}{!bare && ' '}<span class="fresh-words"><span data-lab-fresh-text>{text(days)}</span><span class="fresh-note" data-lab-fresh-note hidden={!stale}><span class="fresh-comma">, </span>due for a check</span></span></span>
+
+<script>
+  // one script for every badge on the page (Astro bundles it once): recount the days in the
+  // visitor's browser, so a page that has not been rebuilt for a while still tells the truth
+  const DAY = 86400000;
+  const now = new Date();
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  document.querySelectorAll<HTMLElement>('[data-lab-fresh]').forEach((el) => {
+    const n = Math.floor((today - Date.parse(`${el.dataset.verified}T00:00:00Z`)) / DAY);
+    if (!Number.isFinite(n)) return;
+    const stale = n > Number(el.dataset.threshold);
+    el.classList.toggle('is-stale', stale);
+    const text = el.querySelector('[data-lab-fresh-text]');
+    if (text) text.textContent = n <= 0 ? 'verified today' : n === 1 ? 'verified 1 day ago' : `verified ${n} days ago`;
+    const note = el.querySelector<HTMLElement>('[data-lab-fresh-note]');
+    if (note) note.hidden = !stale;
+  });
+</script>
+
+<style>
+  .fresh {
+    display: contents; /* the dot and the words wrap as separate pieces; colour and size still inherit */
+    font-family: var(--font-instrument);
+    color: var(--ink-muted);
+  }
+  .fresh--bare {
+    display: inline;
+    font-size: inherit;
+  }
+  /* the dot is drawn by CSS, so it is decoration only; the word joiner keeps it on the date's
+     line when the words wrap */
+  .fresh-sep {
+    color: var(--ink-faint);
+  }
+  .fresh-sep::before {
+    content: '\2060\00B7';
+    content: '\2060\00B7' / '';
+  }
+  .fresh.is-stale {
+    color: var(--ink);
+  }
+</style>

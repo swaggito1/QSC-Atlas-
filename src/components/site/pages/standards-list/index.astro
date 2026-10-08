@@ -1,0 +1,135 @@
+---
+// The Standards overview, /standards: the Standards section's front page (Swann, 5 October 2026,
+// option c of labs/review/standards-beyond-nist.md). Every standard the Atlas records, grouped by
+// the body that publishes it (NIST, the IETF and IRTF, ETSI, ISO/IEC, ITU-T, ANSI X9,
+// CEN-CENELEC, then the national processes), each body with one line saying what it is. Each
+// row gives the standard's kind, its status in the body's own words and the date of that status,
+// what it builds on, and the governments whose documents cite it; the documents themselves are
+// one step away, behind a disclosure, each linked, with its issuer, date and the identifier as
+// it wrote it. A source's own words sit inside SourceWords: never in production, hidden in a
+// preview until ?review=1. Computed by src/lib/site/standards.ts (standardsOverviewModel);
+// every visible string is in data/lab/cascade/copy.json or in the records.
+//
+// Built wherever the Standards Cascade is (its gate, in src/lib/site/routes.ts), with the view
+// switch "Overview · Cascade" under the H1. A preview or production build shows verified records
+// only; a build on Swann's machine also shows the leads, each marked "lead, not yet verified".
+// A row names its standard's own page wherever the build has it, which is wherever the Cascade
+// is (8 October 2026).
+// Each body the Standards Cascade offers (every body here but the national processes, once a
+// government's verified document cites it) closes its head with a quiet "See it in the Cascade",
+// to the Cascade on that body (/standards/cascade?body=etsi; NIST, the default, needs no
+// parameter).
+import PageFrame from '../../frame/PageFrame.astro';
+import SourceWords from '../../frame/SourceWords.astro';
+import { standardsOverviewModel } from '../../../../lib/site/standards';
+import type { SitePage } from '../../../../lib/site/routes';
+import '../../../../styles/standards.css';
+
+interface Props {
+  page: SitePage;
+}
+const { page } = Astro.props;
+const m = standardsOverviewModel();
+const c = m.copy;
+---
+
+<PageFrame
+  question={page.question ?? page.title}
+  title={page.title}
+  section="standards"
+  views="standards"
+  gate={page.gate}
+  description={m.lede}
+  lede={m.lede}
+  reads={m.reads}
+  asOf={m.asOf}
+  standingNote={m.note}
+  next={m.next}
+  sources={m.sources}
+  methodAnchor="standards"
+>
+  <div class="so">
+    {
+      m.sections.map((sec) => (
+        <section class="so-section" aria-labelledby={`so-${sec.id}`}>
+          <h2 class="so-h" id={`so-${sec.id}`}>
+            {sec.heading}
+          </h2>
+          {sec.intro && <p class="so-about">{sec.intro}</p>}
+          {/* no white space inside the lines below: the lead mark draws its own dot and space */}
+          {sec.bodies.length === 1 && sec.bodies[0].description && (
+            <p class="so-about">{sec.bodies[0].description}{sec.bodies[0].lead && <span class="so-lead">{c.leadMark}</span>}</p>
+          )}
+          {sec.bodies.length > 1 && (
+            <dl class="so-bodies">
+              {sec.bodies.map((b) => (
+                <div class="so-body">
+                  <dt>{b.name}</dt>
+                  <dd>{b.description}{b.lead && <span class="so-lead">{c.leadMark}</span>}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+          {/* the Cascade on this body (5 October 2026): a quiet index link, for every body it offers */}
+          {sec.cascade && (
+            <p class="so-cascade"><a class="row-link so-cascade-link" href={sec.cascade.href}>{sec.cascade.label}</a></p>
+          )}
+          <ol class="so-rows">
+            {sec.rows.map((r) => (
+              <li class="so-row" id={r.anchor}>
+                <h3 class="so-name">{r.href ? <a class="row-link so-name-link" href={r.href}>{r.label}</a> : <span>{r.label}</span>}{r.lead && <span class="so-lead">{c.leadMark}</span>}</h3>
+                <ul class="meta-line so-facts">
+                  {r.facts.map((f) => (
+                    <li>{f.text}{f.mono && <>{f.text ? ' ' : ''}<span class="mono">{f.mono}</span></>}</li>
+                  ))}
+                </ul>
+                {r.buildsOn.length > 0 && (
+                  <p class="so-line">
+                    {c.buildsOnLabel}{' '}
+                    {r.buildsOn.map((b, i) => (
+                      <>
+                        {i > 0 && (i === r.buildsOn.length - 1 ? ' and ' : ', ')}
+                        {b.href ? <a class="link so-inline" href={b.href}>{b.label}</a> : b.label}
+                      </>
+                    ))}
+                  </p>
+                )}
+                <p class="so-line">{r.cited}</p>
+                {r.note && <p class="so-about so-about--row">{r.note}</p>}
+                {r.docs.length > 0 && (
+                  <details class="lab-disclose so-evidence">
+                    <summary>{r.docsLabel}</summary>
+                    <ol class="so-docs">
+                      {r.docs.map((d) => (
+                        <li class="so-doc">
+                          <p class="so-doc-head"><a class="link so-doc-title" href={d.url} rel="noopener">{d.title}</a>{d.lead && <span class="so-lead">{c.leadMark}</span>}</p>
+                          <ul class="meta-line so-doc-meta">
+                            {/* the items on one line of source, so no stray space stands before a dot */}
+                            <li>{d.issuer}</li><li>{d.country}</li><li>{d.dateText ? <span class="mono">{d.dateText}</span> : c.docUndated}</li>
+                          </ul>
+                          {d.writtenAs && (
+                            <p class="so-written">
+                              {c.writtenAs} <span class="mono">{d.writtenAs}</span>
+                            </p>
+                          )}
+                          <SourceWords>
+                            {d.passages.map((p) => (
+                              <p class="so-quote">
+                                {p.excerpt}
+                                {p.locator && <span class="so-quote-at">{p.locator}</span>}
+                              </p>
+                            ))}
+                          </SourceWords>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</PageFrame>

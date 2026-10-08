@@ -1,0 +1,158 @@
+# QSC Atlas Labs: sources the weekly watch pipeline monitors.
+# Read by scripts/lab/watch.mjs (built in prompt 00). One entry per source.
+#
+# Fields
+#   id           stable identifier, used for the snapshot file name
+#   tool         exposure | cascade | rulebook | shared | fixture
+#   kind         html | pdf | sparql | zenodo | internal-diff (url may be a local path for html and pdf)
+#   url          address to fetch (html, pdf, zenodo) or endpoint (sparql)
+#   query        path to a .rq file under labs/config/queries/ (sparql only)
+#   extract      optional CSS selector or text anchor to narrow the watched region
+#   class        trusted-institutional | new-institutional | secondary
+#   cadence      weekly | monthly
+#   confirmed    false until the first run of prompt 00 has fetched it successfully
+#   enabled      false keeps the entry listed but skipped
+#   why          one line on what a change here would mean for the tool
+#
+# Rule: never guess a replacement address. If a url fails, search for the current one,
+# and if it cannot be found set enabled: false and report it.
+
+sources:
+
+  # Exposure Clock
+  - id: gri-publications
+    tool: exposure
+    kind: html
+    url: https://globalriskinstitute.org/read/
+    extract: "#searchresults .elementor-loop-container"
+    class: secondary
+    cadence: monthly
+    confirmed: true
+    enabled: true
+    why: The Global Risk Institute's publications index, where a new Quantum Threat Timeline edition or quantum briefing would appear. The old /publications/ address now redirects here. The list covers every GRI topic, so most changes will be no-ops for triage; a quantum-filtered RSS feed exists (https://globalriskinstitute.org/feed/?post_type=publication&s=quantum) if the watcher gains a feed kind.
+  - id: evolutionq-publications
+    tool: exposure
+    kind: html
+    url: https://www.evolutionq.com/resources/quantum-safe-publications
+    extract: .resources_list
+    class: secondary
+    cadence: monthly
+    confirmed: true
+    enabled: true
+    why: evolutionQ's publications index, which lists each Quantum Threat Timeline edition and briefing. The old /publications address returns 404; the site navigation and sitemap point here. The 2025 report page (https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2025) is the fallback.
+  - id: ncsc-uk-pqc-timelines
+    tool: exposure
+    kind: html
+    url: https://www.ncsc.gov.uk/guidance/pqc-migration-timelines
+    extract: "#block-ennerdale-mainpagecontent .c-layout-sidebar-right"
+    class: trusted-institutional
+    cadence: monthly
+    confirmed: true
+    enabled: true
+    why: UK migration milestones shown as deadline markers. The extract includes the Published, Reviewed and Version panel, where a revision shows.
+  - id: nist-ir-8547
+    tool: exposure
+    kind: html
+    url: https://csrc.nist.gov/pubs/ir/8547/ipd
+    extract: "#body-section"
+    class: trusted-institutional
+    cadence: monthly
+    confirmed: true
+    enabled: true
+    why: NIST deprecation and disallowance dates for quantum-vulnerable algorithms. Still the initial public draft on 30 September 2026 (no final or second draft found); the history block on this page is where a successor would be announced.
+  - id: atlas-profile-timelines
+    tool: exposure
+    kind: internal-diff
+    url: data/profiles/
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: A merged change to any migrationTimeline or targetCompletion updates deadline markers at the next build. Informational only; no pull request.
+
+  # Standards Cascade
+  - id: nist-pqc-project
+    tool: cascade
+    kind: html
+    url: https://csrc.nist.gov/projects/post-quantum-cryptography
+    extract: "#overview"
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: New FIPS, drafts or selections add milestones to the spine of the cascade.
+  - id: nist-pqc-publications
+    tool: cascade
+    kind: html
+    url: https://csrc.nist.gov/projects/post-quantum-cryptography/publications
+    extract: "#project-pubs-list"
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: The project's publications table, where a new FIPS, SP or IR draft appears first.
+  - id: atlas-results-diff
+    tool: cascade
+    kind: internal-diff
+    url: data/results/
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    candidates: cascade
+    informational: false
+    why: New included documents may reference a standard and become candidate edges. The change entry lists newCandidates (documents naming a standard that are not yet verified edges or rejected) for the triage step to read.
+
+  # Rulebook in Motion
+  - id: cellar-base-acts
+    tool: rulebook
+    kind: sparql
+    url: http://publications.europa.eu/webapi/rdf/sparql
+    query: labs/config/queries/base-acts-amendments.rq
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: Amendments, corrigenda, consolidated versions, delegated and implementing acts, repeals and new Commission proposals to amend each watched base act.
+  - id: cellar-proposal-procedures
+    tool: rulebook
+    kind: sparql
+    url: http://publications.europa.eu/webapi/rdf/sparql
+    query: labs/config/queries/proposal-procedures.rq
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: Stage events (referral, committee report, Coreper, Council, plenary, adoption) of the procedures behind COM(2026) 11, COM(2026) 13 and the Digital Omnibus COM(2025) 837, from CELLAR procedure metadata. Council working party meetings are filtered out.
+  - id: com-2026-13-page
+    tool: rulebook
+    kind: html
+    url: https://digital-strategy.ec.europa.eu/en/library/proposal-directive-regards-simplification-measures-and-alignment-cybersecurity-act
+    extract: "#block-cnt-theme-pageheader, #block-cnt-theme-main-page-content"
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: The Commission page for the NIS2 targeted amendments; used to resolve the procedure and any revised text.
+  - id: oeil-com-2026-13
+    tool: rulebook
+    kind: html
+    url: https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0012(COD)
+    extract: "#section1, #section3, #section6, #section9"
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: true
+    why: Parliament and Council stage of the NIS2 amendments, procedure 2026/0012(COD). The extract covers basic information with status, key events, the documentation gateway and the final act, and skips key players and meetings, which change often. The oeil.secure host redirects here.
+
+  # Test fixture (prompt 00, Step 10). A local page that proves the pipeline end to end.
+  # Keep it disabled: enable it only locally, for a test run, and disable it again after.
+  - id: fixture-test
+    tool: fixture
+    kind: html
+    url: labs/fixtures/fixture-test.html
+    class: trusted-institutional
+    cadence: weekly
+    confirmed: true
+    enabled: false
+    why: Test only. A change to the fixture page should become a proposal against data/lab/fixture/fixture.json.

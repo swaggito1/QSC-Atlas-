@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Cybersecurity Report: 32nd Edition, October - December 2023",
+    "country": "KEN",
+    "issuingOrg": "KE-CIRT/CC (Communications Authority of Kenya)",
+    "year": 2023,
+    "docType": "Report",
+    "tier": "T1",
+    "url": "https://www.ca.go.ke/sites/default/files/2024-02/Cyber%20Security%20Report%20Q2%202023-2024.pdf",
+    "summary": "Quarterly cybersecurity report of the National KE-CIRT/CC, hosted by the Communications Authority of Kenya, covering October to December 2023. It says that under the Authority's 2023 to 2027 strategic plan the focus will shift to emerging technologies including quantum computing and post-quantum cryptography, and its future insights section calls PQC a necessity to protect sensitive data.",
+    "included": true
+  }
+]

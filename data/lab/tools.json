@@ -1,0 +1,131 @@
+{
+  "_about": "Registry of the Atlas tools: one entry per tool, with its section, its route, the old addresses that redirect to it, the tools it requires and its release gates. The public flag decides whether a production build carries the tool's pages and links; preview deployments and local builds carry every Atlas tool. A tool goes public only after Swann records Lorenzo Pupillo's no-objection in the pull request; then empty its gates list, set public to true, set publishedAt, and make its legacy redirects permanent in vercel.json. Tools of site ai are never built on the Atlas; tools of site research are built only on Swann's machine; tools of site elsewhere are kept for another website: built only on Swann's machine, at a route under /elsewhere, and never linked or named from an Atlas page (Swann, 2 October 2026). The migration approach is kept the same way, off the Atlas, until Swann decides its return (5 October 2026); vercel.json sends its old address, /prepare/approach, to /prepare. The Standards Cascade's gate also covers the Standards overview (/standards), built wherever the Cascade is (5 October 2026), and the page of each standard, built only on Swann's machine. On 8 October 2026 Swann confirmed in writing that Lorenzo Pupillo has no objection, and the six Atlas tools (readiness, exposure, cascade, dates, inventory, suppliers) went public on www.qscatlas.app; the release notes follow on their own dates.",
+  "tools": [
+    {
+      "id": "readiness",
+      "title": "Readiness Check",
+      "section": "prepare",
+      "route": "/prepare/check",
+      "legacyRoutes": [
+        "/lab/readiness"
+      ],
+      "requires": [],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "id": "exposure",
+      "title": "Exposure Clock",
+      "section": "prepare",
+      "route": "/prepare/exposure",
+      "legacyRoutes": [
+        "/lab/exposure-clock"
+      ],
+      "requires": [],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "promise": "How long must your data stay secret, and will today’s encryption last that long?",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "id": "rulebook",
+      "title": "Rulebook in Motion",
+      "site": "elsewhere",
+      "route": "/elsewhere/eu-rules",
+      "legacyRoutes": [],
+      "requires": [],
+      "byline": "Swann Ashworth",
+      "public": false,
+      "status": "preview",
+      "gates": [
+        "lorenzo-no-objection",
+        "legal-disclaimer-reviewed"
+      ],
+      "promise": "Answer a few questions about your organisation and see which EU cyber rules plausibly apply, and the reporting deadlines one incident can start."
+    },
+    {
+      "id": "cascade",
+      "title": "Standards Cascade",
+      "section": "standards",
+      "route": "/standards/cascade",
+      "legacyRoutes": [
+        "/lab/cascade"
+      ],
+      "requires": [],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "promise": "Watch the post-quantum standards spread from one standards body to the world’s agencies, and see where the world forks.",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "id": "dates",
+      "title": "Target dates",
+      "section": "countries",
+      "route": "/target-dates",
+      "legacyRoutes": [],
+      "requires": [],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "promise": "Which target dates reach the places you operate in?",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "id": "inventory",
+      "title": "Inventory template",
+      "section": "prepare",
+      "route": "/prepare/inventory",
+      "legacyRoutes": [],
+      "requires": [
+        "readiness"
+      ],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "promise": "What should we record about each system?",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "id": "approach",
+      "title": "Migration approach",
+      "site": "elsewhere",
+      "route": "/elsewhere/approach",
+      "legacyRoutes": [],
+      "requires": [
+        "readiness"
+      ],
+      "byline": "Swann Ashworth",
+      "public": false,
+      "status": "planned",
+      "gates": [
+        "lorenzo-no-objection"
+      ],
+      "promise": "Which migration route fits each system?"
+    },
+    {
+      "id": "suppliers",
+      "title": "Supplier letter",
+      "section": "prepare",
+      "route": "/prepare/suppliers",
+      "legacyRoutes": [],
+      "requires": [
+        "readiness"
+      ],
+      "byline": "Swann Ashworth",
+      "public": true,
+      "status": "public",
+      "gates": [],
+      "promise": "What do we ask our suppliers?",
+      "publishedAt": "2026-10-08"
+    }
+  ]
+}

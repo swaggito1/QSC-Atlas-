@@ -1,0 +1,38 @@
+---
+// "Where to go next" (spec 3.5 and 11, item 13): one to three links that close a page, one of
+// them back into the evidence (a profile, a guide page, a document row). A link whose
+// destination is not built (href null) is skipped, and with nothing left the section is not
+// rendered at all: no empty head, no hint of a page that does not exist.
+import type { LinkItem } from './contracts';
+import '../../../styles/frame.css';
+
+interface Props {
+  links: LinkItem[];
+  heading?: string;
+}
+const { heading = 'Where to go next' } = Astro.props;
+const links = (Astro.props.links ?? []).filter((l): l is { label: string; href: string } => Boolean(l?.href && l.label)).slice(0, 3);
+const id = 'fr-next-h';
+---
+
+{
+  links.length > 0 && (
+    <nav class="fr-next" aria-labelledby={id}>
+      <h2 class="fr-h" id={id}>
+        {heading}
+      </h2>
+      <ul>
+        {links.map((l) => (
+          <li>
+            <a href={l.href}>
+              <span class="fr-next-label">{l.label}</span>
+              <span class="fr-next-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

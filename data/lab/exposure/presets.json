@@ -1,0 +1,689 @@
+{
+  "_about": "Kinds of data for the Exposure Clock, each with the periods institutional sources document for how long that data stays protected: the x of Mosca's inequality. basis says which period the source sets: confidentiality (how long the information must stay secret), closure (how long access is barred) or retention (only how long a record is kept, at most a lower bound). defaults holds fixed periods, noEnd duties with no end in time. iso3 null is a general value for anywhere the Atlas holds nothing closer; euMembers carries an EU rule to each Member State without a period of its own. The post-quantum guides the Atlas quotes (the EU coordinated roadmap and its FAQ, the NCSC's Next steps white paper, ITSM.40.001, the ANSSI FAQ, the CISA, NSA and NIST factsheet, the NIST IR 8547 draft and the Dutch PQC Migration Handbook) were read on 4 October 2026: they name kinds of data with long confidentiality needs and thresholds such as at least 10 years, but set no period for any kind of data, so none is recorded here. A kind of data with no period for a place has none documented; the tool says so.",
+  "presets": [
+    {
+      "id": "citizen-health-records",
+      "label": "Citizen health records",
+      "description": "Medical files that hospitals, doctors and health services keep about their patients.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "FRA",
+          "years": 25,
+          "basis": "closure",
+          "basisNote": "France's Heritage Code keeps archives covered by medical secrecy closed until 25 years after the patient's death, or 120 years after their birth when the date of death is not known. The count starts at death, so the period from today is longer.",
+          "sourceName": "Code du patrimoine, article L213-2",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "2° Vingt-cinq ans à compter de la date du décès de l'intéressé, pour les documents dont la communication porte atteinte au secret médical. Si la date du décès n'est pas connue, le délai est de cent vingt ans à compter de la date de naissance de la personne en cause ;",
+              "locator": "Article L213-2, I, 2° (version in force since 31 July 2021)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "ESP",
+          "years": 50,
+          "basis": "closure",
+          "basisNote": "Spain's Historical Heritage Act keeps documents with clinical or other personal data closed to the public for 50 years from their date, or until 25 years after the person's death when that date is known, unless the person consents.",
+          "sourceName": "Ley 16/1985 del Patrimonio Histórico Español, artículo 57",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-12534",
+              "title": "Ley 16/1985, de 25 de junio, del Patrimonio Histórico Español",
+              "publisher": "Agencia Estatal Boletín Oficial del Estado",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "no podrán ser públicamente consultados sin que medie consentimiento expreso de los afectados o hasta que haya transcurrido un plazo de veinticinco años desde su muerte, si su fecha es conocida o, en otro caso, de cincuenta años, a partir de la fecha de los documentos.",
+              "locator": "Artículo 57.1.c)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-12534",
+              "title": "Ley 16/1985, de 25 de junio, del Patrimonio Histórico Español",
+              "publisher": "Agencia Estatal Boletín Oficial del Estado",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "c) Los documentos que contengan datos personales de carácter policial, procesal, clínico o de cualquier otra índole que puedan afectar a la seguridad de las personas, a su honor, a la intimidad de su vida privada y familiar y a su propia imagen,",
+              "locator": "Artículo 57.1.c)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "ITA",
+          "years": 70,
+          "basis": "closure",
+          "basisNote": "Italy's Cultural Heritage Code keeps archive documents whose data could reveal a person's health closed to free consultation for 70 years from their date.",
+          "sourceName": "Codice dei beni culturali e del paesaggio, articolo 122",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art122",
+              "title": "Decreto legislativo 22 gennaio 2004, n. 42 (Codice dei beni culturali e del paesaggio), articolo 122",
+              "publisher": "Normattiva",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "che diventano consultabili quaranta anni dopo la loro data. Il termine è di settanta anni se i dati sono idonei a rivelare lo stato di salute, la vita sessuale o rapporti riservati di tipo familiare.",
+              "locator": "Articolo 122, comma 1, lettera b) (text in force since 31 July 2014)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art122",
+              "title": "Decreto legislativo 22 gennaio 2004, n. 42 (Codice dei beni culturali e del paesaggio), articolo 122",
+              "publisher": "Normattiva",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "I documenti conservati negli archivi di Stato e negli archivi storici delle regioni, degli altri enti pubblici territoriali nonché di ogni altro ente ed istituto pubblico sono liberamente consultabili, ad eccezione:",
+              "locator": "Articolo 122, comma 1",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "USA",
+          "years": 50,
+          "basis": "confidentiality",
+          "basisNote": "Under the HIPAA Privacy Rule, health information stays protected until the person has been dead for 50 years. The count starts at death, so the period from today is longer.",
+          "sourceName": "45 CFR 160.103, HIPAA Privacy Rule",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.103",
+              "title": "45 CFR 160.103 Definitions",
+              "publisher": "Electronic Code of Federal Regulations (eCFR)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "and (iv) Regarding a person who has been deceased for more than 50 years.",
+              "locator": "§ 160.103, definition of protected health information, paragraph (2)(iv)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.103",
+              "title": "45 CFR 160.103 Definitions",
+              "publisher": "Electronic Code of Federal Regulations (eCFR)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(2) Protected health information excludes individually identifiable health information:",
+              "locator": "§ 160.103, definition of protected health information, paragraph (2)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ],
+      "noEnd": [
+        {
+          "iso3": "DEU",
+          "basis": "confidentiality",
+          "basisNote": "Section 203 of the German Criminal Code bars doctors and other health professionals from disclosing a patient's secrets, and the bar still applies after the patient's death.",
+          "sourceName": "Strafgesetzbuch, § 203",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.gesetze-im-internet.de/stgb/__203.html",
+              "title": "Strafgesetzbuch (StGB) § 203 Verletzung von Privatgeheimnissen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(5) Die Absätze 1 bis 4 sind auch anzuwenden, wenn der Täter das fremde Geheimnis nach dem Tod des Betroffenen unbefugt offenbart.",
+              "locator": "§ 203 Absatz 5",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/stgb/__203.html",
+              "title": "Strafgesetzbuch (StGB) § 203 Verletzung von Privatgeheimnissen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(1) Wer unbefugt ein fremdes Geheimnis, namentlich ein zum persönlichen Lebensbereich gehörendes Geheimnis oder ein Betriebs- oder Geschäftsgeheimnis, offenbart, das ihm als 1. Arzt, Zahnarzt, Tierarzt, Apotheker oder Angehörigen eines anderen Heilberufs,",
+              "locator": "§ 203 Absatz 1 Nummer 1",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tax-records",
+      "label": "Tax records",
+      "description": "Returns, assessments and other files a tax administration keeps about people and businesses.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "DEU",
+          "years": 60,
+          "basis": "closure",
+          "basisNote": "Under section 11(3) of the German Federal Archives Act, federal archive records covered by tax secrecy (section 30 of the Fiscal Code) may be used by the public only 60 years after they were created.",
+          "sourceName": "Bundesarchivgesetz, § 11",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.gesetze-im-internet.de/barchg_2017/__11.html",
+              "title": "Bundesarchivgesetz (BArchG) § 11 Schutzfristen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(3) Archivgut des Bundes, das aus Unterlagen besteht, die der Geheimhaltungspflicht nach § 6 Absatz 1 Satz 1 und Absatz 4 unterliegen, darf erst 60 Jahre nach seiner Entstehung genutzt werden.",
+              "locator": "§ 11 Absatz 3",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/barchg_2017/__6.html",
+              "title": "Bundesarchivgesetz (BArchG) § 6 Anbietung und Abgabe von Unterlagen, die einer Geheimhaltungs-, Vernichtungs- oder Löschungspflicht unterliegen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(4) Unterlagen, die den Rechtsvorschriften des Bundes über die Geheimhaltung oder dem Steuergeheimnis nach § 30 der Abgabenordnung unterliegen oder Angaben über Verhältnisse eines anderen oder fremde Betriebs- oder Geschäftsgeheimnisse enthalten,",
+              "locator": "§ 6 Absatz 4",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identity-registry",
+      "label": "Identity and civil registry data",
+      "description": "Birth, marriage and death records, population registers and the data behind identity documents.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "FRA",
+          "years": 75,
+          "basis": "closure",
+          "basisNote": "France's Heritage Code keeps birth and marriage registers closed for 75 years from the day each register is closed.",
+          "sourceName": "Code du patrimoine, article L213-2",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "e) Pour les registres de naissance et de mariage de l'état civil, à compter de leur clôture ;",
+              "locator": "Article L213-2, I, 4° e) (version in force since 31 July 2021)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "4° Soixante-quinze ans à compter de la date du document ou du document le plus récent inclus dans le dossier, ou un délai de vingt-cinq ans à compter de la date du décès de l'intéressé si ce dernier délai est plus bref :",
+              "locator": "Article L213-2, I, 4°",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "DEU",
+          "years": 110,
+          "basis": "closure",
+          "basisNote": "Germany's Civil Status Act keeps the birth register under its own access rules for 110 years (marriages 80, deaths 30): certificates go to the person, their spouse or partner, ancestors and descendants, and to others only with a legal interest. Archive law applies after that.",
+          "sourceName": "Personenstandsgesetz, § 5 and § 61",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.gesetze-im-internet.de/pstg/__5.html",
+              "title": "Personenstandsgesetz (PStG) § 5 Fortführung der Personenstandsregister",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(5) Für die Fortführung der Personenstandsregister und der Sicherungsregister gelten folgende Fristen: 1. für Eheregister und Lebenspartnerschaftsregister 80 Jahre; 2. für Geburtenregister 110 Jahre; 3. für Sterberegister 30 Jahre;",
+              "locator": "§ 5 Absatz 5",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/pstg/__61.html",
+              "title": "Personenstandsgesetz (PStG) § 61 Allgemeine Vorschriften für die Benutzung",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(1) Die §§ 62 bis 66 gelten für die Benutzung der bei den Standesämtern geführten Personenstandsregister und Sammelakten bis zum Ablauf der in § 5 Abs. 5 festgelegten Fristen.",
+              "locator": "§ 61 Absatz 1 Satz 1",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/pstg/__62.html",
+              "title": "Personenstandsgesetz (PStG) § 62 Urkundenerteilung, Auskunft, Einsicht",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(1) Personenstandsurkunden sind auf Antrag den Personen zu erteilen, auf die sich der Registereintrag bezieht, sowie deren Ehegatten, Lebenspartnern, Vorfahren und Abkömmlingen. Andere Personen haben ein Recht auf Erteilung von Personenstandsurkunden, wenn sie ein rechtliches Interesse glaubhaft machen;",
+              "locator": "§ 62 Absatz 1",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classified-government",
+      "label": "Classified government information",
+      "description": "Information a government has formally classified to protect national security.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "USA",
+          "years": 25,
+          "basis": "confidentiality",
+          "basisNote": "Executive Order 13526 marks information for declassification after 10 years unless its sensitivity calls for up to 25, and declassifies classified records of permanent historical value automatically at 25 years, with exemptions.",
+          "sourceName": "Executive Order 13526, sections 1.5 and 3.3",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.archives.gov/isoo/policy-documents/cnsi-eo.html",
+              "title": "Executive Order 13526, Classified National Security Information",
+              "publisher": "U.S. National Archives, Information Security Oversight Office",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "information shall be marked for declassification 10 years from the date of the original decision, unless the original classification authority otherwise determines that the sensitivity of the information requires that it be marked for declassification for up to 25 years from the date of the original decision.",
+              "locator": "Sec. 1.5(b)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.archives.gov/isoo/policy-documents/cnsi-eo.html",
+              "title": "Executive Order 13526, Classified National Security Information",
+              "publisher": "U.S. National Archives, Information Security Oversight Office",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(a) Subject to paragraphs (b)–(d) and (g)–(j) of this section, all classified records that (1) are more than 25 years old and (2) have been determined to have permanent historical value under title 44, United States Code, shall be automatically declassified whether or not the records have been reviewed.",
+              "locator": "Sec. 3.3(a)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "DEU",
+          "years": 30,
+          "basis": "confidentiality",
+          "basisNote": "Germany's federal rules on classified information end the lowest grade after 30 years and say a higher grade should not run past 30 years unless a stated reason requires it.",
+          "sourceName": "Verschlusssachenanweisung (VSA), § 16",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_13032023_SII554001405.htm",
+              "title": "Allgemeine Verwaltungsvorschrift zum materiellen Geheimschutz (Verschlusssachenanweisung, VSA) vom 13. März 2023",
+              "publisher": "Federal Ministry of the Interior (verwaltungsvorschriften-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(2) Der Herausgeber hat für VS-VERTRAULICH oder höher eingestufte Verschlusssachen den Zeitpunkt des Ablaufs der Einstufung zu bestimmen. Die Einstufungsfrist hat sich hierbei an der aus der Begründung für die Einstufung resultierenden voraussichtlichen Dauer der Schutzbedürftigkeit der Verschlusssache zu orientieren. Die Einstufungsfrist soll 30 Jahre nicht überschreiten.",
+              "locator": "§ 16 Absatz 2",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_13032023_SII554001405.htm",
+              "title": "Allgemeine Verwaltungsvorschrift zum materiellen Geheimschutz (Verschlusssachenanweisung, VSA) vom 13. März 2023",
+              "publisher": "Federal Ministry of the Interior (verwaltungsvorschriften-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(1) Die Einstufung einer Verschlusssache des Geheimhaltungsgrades VS-NUR FÜR DEN DIENSTGEBRAUCH ist auf 30 Jahre befristet.",
+              "locator": "§ 16 Absatz 1 Satz 1",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "FRA",
+          "years": 50,
+          "basis": "closure",
+          "basisNote": "France's Heritage Code keeps archives that would harm national defence secrecy, and were classified for that reason, closed for 50 years, and their classification ends on the day they open. Some military, nuclear and intelligence records stay closed longer.",
+          "sourceName": "Code du patrimoine, article L213-2",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "3° Cinquante ans à compter de la date du document ou du document le plus récent inclus dans le dossier, pour les documents dont la communication porte atteinte au secret de la défense nationale, et qui ont pour ce motif fait l'objet d'une mesure de classification mentionnée à l'article 413-9 du code pénal,",
+              "locator": "Article L213-2, I, 3° (version in force since 31 July 2021)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "Toute mesure de classification mentionnée à l'article 413-9 du code pénal prend automatiquement fin à la date à laquelle le document qui en a fait l'objet devient communicable de plein droit en application du présent chapitre.",
+              "locator": "Article L213-2, III",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diplomatic",
+      "label": "Diplomatic communications",
+      "description": "Messages and reports exchanged between a foreign ministry, its embassies and other governments.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "FRA",
+          "years": 25,
+          "basis": "closure",
+          "basisNote": "France's Heritage Code keeps archives that would harm the conduct of foreign relations closed for 25 years, and for 50 years where they would harm the State's fundamental interests in foreign policy.",
+          "sourceName": "Code du patrimoine, article L213-2",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "1° Vingt-cinq ans à compter de la date du document ou du document le plus récent inclus dans le dossier :",
+              "locator": "Article L213-2, I, 1° (version in force since 31 July 2021)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "a) Pour les documents dont la communication porte atteinte au secret des délibérations du Gouvernement et des autorités responsables relevant du pouvoir exécutif, à la conduite des relations extérieures,",
+              "locator": "Article L213-2, I, 1° a)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "ou porte atteinte aux intérêts fondamentaux de l'Etat dans la conduite de la politique extérieure,",
+              "locator": "Article L213-2, I, 3°",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "ITA",
+          "years": 50,
+          "basis": "closure",
+          "basisNote": "Italy's Cultural Heritage Code keeps archive documents declared confidential on the State's foreign or domestic policy closed to free consultation for 50 years from their date.",
+          "sourceName": "Codice dei beni culturali e del paesaggio, articolo 122",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art122",
+              "title": "Decreto legislativo 22 gennaio 2004, n. 42 (Codice dei beni culturali e del paesaggio), articolo 122",
+              "publisher": "Normattiva",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "a) di quelli dichiarati di carattere riservato, ai sensi dell'articolo 125, relativi alla politica estera o interna dello Stato, che diventano consultabili cinquanta anni dopo la loro data;",
+              "locator": "Articolo 122, comma 1, lettera a) (text in force since 31 July 2014)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "EUU",
+          "years": 30,
+          "basis": "closure",
+          "basisNote": "The EU institutions may refuse access to a document to protect international relations for at most 30 years; for classified documents the refusal may continue after that.",
+          "sourceName": "Regulation (EC) No 1049/2001, Article 4",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001R1049",
+              "title": "Regulation (EC) No 1049/2001 of the European Parliament and of the Council of 30 May 2001 regarding public access to European Parliament, Council and Commission documents",
+              "publisher": "EUR-Lex",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "The exceptions may apply for a maximum period of 30 years. In the case of documents covered by the exceptions relating to privacy or commercial interests and in the case of sensitive documents, the exceptions may, if necessary, continue to apply after this period.",
+              "locator": "Article 4(7)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001R1049",
+              "title": "Regulation (EC) No 1049/2001 of the European Parliament and of the Council of 30 May 2001 regarding public access to European Parliament, Council and Commission documents",
+              "publisher": "EUR-Lex",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "1. The institutions shall refuse access to a document where disclosure would undermine the protection of: (a) the public interest as regards: - public security, - defence and military matters, - international relations,",
+              "locator": "Article 4(1)(a)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "law-enforcement",
+      "label": "Law enforcement case files",
+      "description": "Investigation files, evidence and case records kept by police and prosecutors.",
+      "publicAdmin": true,
+      "defaults": [
+        {
+          "iso3": "GBR",
+          "years": 100,
+          "basis": "closure",
+          "basisNote": "Under section 63(4) of the Freedom of Information Act 2000, the law enforcement exemption can keep information in a record closed for at most 100 years, counted from the year after the record was created.",
+          "sourceName": "Freedom of Information Act 2000, section 63",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legislation.gov.uk/ukpga/2000/36/section/63",
+              "title": "Freedom of Information Act 2000, section 63: Removal of exemptions: historical records generally",
+              "publisher": "legislation.gov.uk (The National Archives)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "Information cannot be exempt information by virtue of section 31 after the end of the period of one hundred years beginning with the year following that in which the record containing the information was created.",
+              "locator": "section 63(4)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legislation.gov.uk/ukpga/2000/36/section/31",
+              "title": "Freedom of Information Act 2000, section 31: Law enforcement",
+              "publisher": "legislation.gov.uk (The National Archives)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "Information which is not exempt information by virtue of section 30 is exempt information if its disclosure under this Act would, or would be likely to, prejudice—",
+              "locator": "section 31(1)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "FRA",
+          "years": 75,
+          "basis": "closure",
+          "basisNote": "France's Heritage Code keeps records of judicial police investigations closed for 75 years, or until 25 years after the person's death if that comes sooner, and for 100 years where they concern a minor.",
+          "sourceName": "Code du patrimoine, article L213-2",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "4° Soixante-quinze ans à compter de la date du document ou du document le plus récent inclus dans le dossier, ou un délai de vingt-cinq ans à compter de la date du décès de l'intéressé si ce dernier délai est plus bref :",
+              "locator": "Article L213-2, I, 4° (version in force since 31 July 2021)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "b) Pour les documents relatifs aux enquêtes réalisées par les services de la police judiciaire ;",
+              "locator": "Article L213-2, I, 4° b)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043887707",
+              "title": "Code du patrimoine, article L213-2",
+              "publisher": "Légifrance",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "5° Cent ans à compter de la date du document ou du document le plus récent inclus dans le dossier, ou un délai de vingt-cinq ans à compter de la date du décès de l'intéressé si ce dernier délai est plus bref, pour les documents mentionnés au 4° qui se rapportent à une personne mineure.",
+              "locator": "Article L213-2, I, 5°",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "ESP",
+          "years": 50,
+          "basis": "closure",
+          "basisNote": "Spain's Historical Heritage Act keeps documents with police or court data on people closed to the public for 50 years from their date, or until 25 years after the person's death when that date is known, unless the person consents.",
+          "sourceName": "Ley 16/1985 del Patrimonio Histórico Español, artículo 57",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-12534",
+              "title": "Ley 16/1985, de 25 de junio, del Patrimonio Histórico Español",
+              "publisher": "Agencia Estatal Boletín Oficial del Estado",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "no podrán ser públicamente consultados sin que medie consentimiento expreso de los afectados o hasta que haya transcurrido un plazo de veinticinco años desde su muerte, si su fecha es conocida o, en otro caso, de cincuenta años, a partir de la fecha de los documentos.",
+              "locator": "Artículo 57.1.c)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-12534",
+              "title": "Ley 16/1985, de 25 de junio, del Patrimonio Histórico Español",
+              "publisher": "Agencia Estatal Boletín Oficial del Estado",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "c) Los documentos que contengan datos personales de carácter policial, procesal, clínico o de cualquier otra índole que puedan afectar a la seguridad de las personas, a su honor, a la intimidad de su vida privada y familiar y a su propia imagen,",
+              "locator": "Artículo 57.1.c)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "ITA",
+          "years": 40,
+          "basis": "closure",
+          "basisNote": "Italy's Cultural Heritage Code keeps archive documents with data on criminal proceedings closed to free consultation for 40 years from their date.",
+          "sourceName": "Codice dei beni culturali e del paesaggio, articolo 122",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art122",
+              "title": "Decreto legislativo 22 gennaio 2004, n. 42 (Codice dei beni culturali e del paesaggio), articolo 122",
+              "publisher": "Normattiva",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "b) di quelli contenenti i dati sensibili nonché i dati relativi a provvedimenti di natura penale espressamente indicati dalla normativa in materia di trattamento dei dati personali, che diventano consultabili quaranta anni dopo la loro data.",
+              "locator": "Articolo 122, comma 1, lettera b) (text in force since 31 July 2014)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trade-secrets",
+      "label": "Industrial designs and trade secrets",
+      "description": "Designs, formulas and know-how that a company keeps secret to stay ahead of competitors.",
+      "publicAdmin": false,
+      "defaults": [],
+      "noEnd": [
+        {
+          "iso3": null,
+          "basis": "confidentiality",
+          "basisNote": "WIPO's guide to trade secrets explains that a trade secret is protected for as long as it meets the conditions for protection, above all staying secret. The Atlas uses this wherever it holds no rule of the place's own.",
+          "sourceName": "WIPO Guide to Trade Secrets and Innovation",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.wipo.int/web-publications/wipo-guide-to-trade-secrets-and-innovation/en/part-iii-basics-of-trade-secret-protection.html",
+              "title": "WIPO Guide to Trade Secrets and Innovation, Part III: Basics of trade secret protection",
+              "publisher": "World Intellectual Property Organization",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "No registration is necessary to obtain trade secret protection. As long as the information qualifies as a trade secret, it is protected indefinitely.",
+              "locator": "Part III, section 1.1",
+              "sourceClass": "new-institutional"
+            },
+            {
+              "url": "https://www.wipo.int/web-publications/wipo-guide-to-trade-secrets-and-innovation/en/part-iii-basics-of-trade-secret-protection.html",
+              "title": "WIPO Guide to Trade Secrets and Innovation, Part III: Basics of trade secret protection",
+              "publisher": "World Intellectual Property Organization",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "Trade secrets can be protected for an unlimited period of time, unless they cease to meet the criteria for trade secret protection.",
+              "locator": "Part III, section 1.3",
+              "sourceClass": "new-institutional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "financial-transactions",
+      "label": "Financial transaction records",
+      "description": "Records of payments, transfers and accounting entries kept by banks and businesses.",
+      "publicAdmin": false,
+      "defaults": [
+        {
+          "iso3": "DEU",
+          "years": 10,
+          "basis": "retention",
+          "basisNote": "Section 147(3) of the German Fiscal Code requires books and records to be kept for ten years and accounting vouchers for eight, counted from the end of the calendar year of the last entry.",
+          "sourceName": "Abgabenordnung, § 147",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://www.gesetze-im-internet.de/ao_1977/__147.html",
+              "title": "Abgabenordnung (AO) § 147 Ordnungsvorschriften für die Aufbewahrung von Unterlagen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(3) Die in Absatz 1 Nummer 1 und 4a aufgeführten Unterlagen sind zehn Jahre, die in Absatz 1 Nummer 4 aufgeführten Unterlagen acht Jahre und die sonstigen in Absatz 1 aufgeführten Unterlagen sechs Jahre aufzubewahren, sofern nicht in anderen Steuergesetzen kürzere Aufbewahrungsfristen zugelassen sind.",
+              "locator": "§ 147 Absatz 3 Satz 1",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/ao_1977/__147.html",
+              "title": "Abgabenordnung (AO) § 147 Ordnungsvorschriften für die Aufbewahrung von Unterlagen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "1. Bücher und Aufzeichnungen, Inventare, Jahresabschlüsse, Lageberichte, die Eröffnungsbilanz sowie die zu ihrem Verständnis erforderlichen Arbeitsanweisungen und sonstigen Organisationsunterlagen,",
+              "locator": "§ 147 Absatz 1 Nummer 1",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://www.gesetze-im-internet.de/ao_1977/__147.html",
+              "title": "Abgabenordnung (AO) § 147 Ordnungsvorschriften für die Aufbewahrung von Unterlagen",
+              "publisher": "Federal Ministry of Justice (gesetze-im-internet.de)",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(4) Die Aufbewahrungsfrist beginnt mit dem Schluss des Kalenderjahrs, in dem die letzte Eintragung in das Buch gemacht,",
+              "locator": "§ 147 Absatz 4",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        },
+        {
+          "iso3": "EUU",
+          "euMembers": true,
+          "years": 5,
+          "basis": "retention",
+          "basisNote": "The EU anti-money laundering directive has every Member State require banks and other obliged entities to keep transaction records for five years after a business relationship ends.",
+          "sourceName": "Directive (EU) 2015/849, Article 40",
+          "verify": false,
+          "verifiedAt": "2026-10-04",
+          "provenance": [
+            {
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02015L0849-20240709",
+              "title": "Directive (EU) 2015/849 of the European Parliament and of the Council of 20 May 2015 on the prevention of the use of the financial system for the purposes of money laundering or terrorist financing (consolidated text)",
+              "publisher": "EUR-Lex",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "(b) the supporting evidence and records of transactions, consisting of the original documents or copies admissible in judicial proceedings under the applicable national law, which are necessary to identify transactions, for a period of five years after the end of a business relationship with their customer or after the date of an occasional transaction.",
+              "locator": "Article 40(1)(b)",
+              "sourceClass": "trusted-institutional"
+            },
+            {
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02015L0849-20240709",
+              "title": "Directive (EU) 2015/849 of the European Parliament and of the Council of 20 May 2015 on the prevention of the use of the financial system for the purposes of money laundering or terrorist financing (consolidated text)",
+              "publisher": "EUR-Lex",
+              "retrievedAt": "2026-10-04",
+              "excerpt": "1. Member States shall require obliged entities to retain the following documents and information in accordance with national law for the purpose of preventing, detecting and investigating, by the FIU or by other competent authorities, possible money laundering or terrorist financing:",
+              "locator": "Article 40(1)",
+              "sourceClass": "trusted-institutional"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+---
+// The frame around every tool, element and section page (spec 11), after the minimal pass
+// (labs/review/minimal-spec.md). One anatomy:
+//
+// Top     1. the preview line (non-production builds, gate not public) and noindex
+//         2. no breadcrumb: the header shows the section and the side menu the page. A page that
+//            would otherwise have no way back passes `back` for one quiet link over the H1
+//         3. the side menu (Prepare pages): a rail at 1100px and wider, folded into one
+//            "In Prepare" row at the top of the page below that
+//         4. the question as H1; the page's name stays in the side menu and the <title>
+//            then the section's view switch (Countries: List, Map, Target dates) directly under
+//            it, where /countries and /map place it, so the control never moves between views
+//         5. the lede, one sentence
+//         6. one quiet meta line: as of, law as of, what the page reads, the time it takes;
+//            a named slot ("asof") follows it for a page that still has a second line
+//         7. "Not for you?" (optional)
+//         8. at most one standing note, a plain sentence (or kept for About this view:
+//            standingNoteIn "about")
+// Body    the page's own content: inputs, the view and its
+//         readout, "Show as a table" (TableDisclosure) and the quiet actions (ShareBar in an
+//         island, QuietActions on a static page)
+// Bottom  13. "Where to go next" (links whose destination is not built are skipped)
+//         14. "About this view", a disclosure: sources, as of with "verified n days ago", who
+//             the page is written for, "Nothing you enter leaves this page", byline, method,
+//             citation, note, corrections
+//
+// Slots: default (the body), "head" and "asof" (under the facts line), "method" and
+// "sources" (About this view), "after" (between the body and Where to go next). Every named
+// slot is forwarded as it is: an empty one renders nothing, and About this view tests its
+// slots for content itself, because a slot forwarded under a condition always looks present
+// to Astro.slots.has.
+//
+// Source order: the "In Prepare" row (under 1100px), the page, then the side menu. From 1100px
+// the grid puts the menu in the left column beside the page, so a keyboard reaches the question
+// before the ten menu links.
+import Base from '../../../layouts/Base.astro';
+import PreviewBanner from '../../lab/PreviewBanner.astro';
+import SideMenu from './SideMenu.astro';
+import StartLine from './StartLine.astro';
+import NotForYou from './NotForYou.astro';
+import ViewSwitch from './ViewSwitch.astro';
+import WhereNext from './WhereNext.astro';
+import AboutThisView from './AboutThisView.astro';
+import { cleanPath, isPreviewPage, sectionMenu } from './contracts';
+import type { Crumb, LinkItem, Section } from './contracts';
+import type { SourceEntry } from '../../../lib/lab/format';
+import '../../../styles/lab.css';
+import '../../../styles/frame.css';
+
+interface Props {
+  question: string; // the H1: the visitor's question
+  questionLang?: string | null; // the H1's language when it is not the page's (a guide's own title, "fr")
+  breadcrumb?: Crumb[]; // no longer drawn; its last label still names the page when no title is given
+  back?: Crumb | null; // a quiet way back, only for a page that would otherwise have none
+  section?: Section | null; // "prepare" adds the side menu
+  gate?: string | null; // a tool id, "prepare-any", or null for a public page
+  title?: string; // the <title> and the name in the facts line; defaults to the last crumb
+  description?: string;
+  lede?: string | null;
+  reads?: LinkItem[];
+  writtenFor?: string | null;
+  minutes?: number | null;
+  local?: boolean;
+  asOf?: string | null; // undefined: the page has no as-of date at all
+  freshnessDays?: number | null;
+  lawAsOf?: string | null;
+  facts?: string[]; // further plain facts-line items
+  notForYou?: { text: string; href: string | null } | null;
+  standingNote?: string | null;
+  standingNoteIn?: 'head' | 'about';
+  views?: 'countries' | 'standards' | null; // the section's view switch
+  next?: LinkItem[];
+  sources?: SourceEntry[];
+  methodAnchor?: string | null;
+  byline?: string | null;
+  citation?: string; // a ready citation; otherwise built from the title, path and as-of date
+  wide?: boolean;
+  about?: boolean; // false leaves out About this view (a page that has its own)
+}
+
+const {
+  question,
+  questionLang = null,
+  breadcrumb = [],
+  back = null,
+  section = null,
+  gate = null,
+  description,
+  lede = null,
+  reads = [],
+  writtenFor = null,
+  minutes = null,
+  local = false,
+  asOf,
+  freshnessDays = null,
+  lawAsOf = null,
+  facts = [],
+  notForYou = null,
+  standingNote = null,
+  standingNoteIn = 'head',
+  views = null,
+  next = [],
+  sources = [],
+  methodAnchor = null,
+  byline = null,
+  citation,
+  wide = false,
+  about = true,
+} = Astro.props;
+
+const path = cleanPath(Astro.url.pathname);
+const last = breadcrumb.length ? breadcrumb[breadcrumb.length - 1].label : null;
+const title = Astro.props.title ?? last ?? question;
+const backLink = back && back.href && back.label ? { label: back.label, href: back.href } : null;
+
+// a hyphenated compound ("post-quantum", "public-key") never breaks at its hyphen in the H1
+const qParts = question.split(/(\S+-\S+)/);
+
+const preview = isPreviewPage(gate);
+const menu = section === 'prepare' ? sectionMenu('prepare', path) : [];
+const hasMenu = menu.length > 0;
+
+const width = { 'fr-w--wide': wide, 'fr-w--menu': hasMenu };
+---
+
+<Base title={title} description={description ?? lede ?? question} noindex={preview} wide={wide || hasMenu}>
+  {preview && <PreviewBanner wide={wide} menu={hasMenu} />}
+  <div class:list={['fr', 'fr-w', width]}>
+    <div class:list={['fr-grid', { 'fr-grid--menu': hasMenu }]}>
+      {
+        hasMenu && (
+          <div class="fr-fold-row">
+            <SideMenu items={menu} variant="fold" />
+          </div>
+        )
+      }
+      <article class="fr-main lab" aria-labelledby="fr-q">
+        <header class="fr-head lab-head">
+          {
+            backLink && (
+              <p class="fr-back">
+                <a class="fr-back-a" href={backLink.href}>
+                  <span aria-hidden="true">&larr;&nbsp;</span>
+                  {backLink.label}
+                </a>
+              </p>
+            )
+          }
+          <h1 class="fr-q" id="fr-q" lang={questionLang ?? undefined}>{qParts.map((part, i) => (i % 2 ? <span class="fr-nb">{part}</span> : part))}</h1>
+          {views && <ViewSwitch section={views} />}
+          {lede && <p class="fr-lede">{lede}</p>}
+          <StartLine reads={reads} minutes={minutes} asOf={asOf} freshnessDays={freshnessDays} lawAsOf={lawAsOf} extra={facts} />
+          <slot name="asof" />
+          <slot name="head" />
+          {notForYou && <NotForYou text={notForYou.text} href={notForYou.href} />}
+          {standingNote && standingNoteIn === 'head' && <p class="fr-note">{standingNote}</p>}
+        </header>
+
+        <div class="fr-body">
+          <slot />
+        </div>
+
+        <slot name="after" />
+
+        <WhereNext links={next} />
+
+        {
+          about && (
+            <AboutThisView
+              title={title}
+              path={path}
+              sources={sources}
+              asOf={asOf}
+              lawAsOf={lawAsOf}
+              freshnessDays={freshnessDays}
+              writtenFor={writtenFor}
+              local={local}
+              byline={byline}
+              methodAnchor={methodAnchor}
+              citation={citation}
+              standingNote={standingNoteIn === 'about' ? standingNote : null}
+            >
+              <slot name="method" slot="method" />
+              <slot name="sources" slot="sources" />
+            </AboutThisView>
+          )
+        }
+      </article>
+      {hasMenu && <SideMenu items={menu} variant="rail" />}
+    </div>
+  </div>
+</Base>
