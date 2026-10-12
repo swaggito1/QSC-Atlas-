@@ -1,0 +1,78 @@
+Publications <https://csrc.nist.gov/publications>
+
+NIST IR 8547
+(Initial Public Draft)
+
+Transition to Post-Quantum Cryptography Standards
+
+<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcsrc.nist.gov%2Fpubs%2Fir%2F8547%2Fipd>
+<https://x.com/share?url=https%3A%2F%2Fcsrc.nist.gov%2Fpubs%2Fir%2F8547%2Fipd>
+<https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fcsrc.nist.gov%2Fpubs%2Fir%2F8547%2Fipd&source=csrc.nist.gov>
+<https://csrc.nist.gov/cdn-cgi/l/email-protection>
+
+Documentation
+
+Topics
+
+Date Published: November 12, 2024
+
+Comments Due: January 10, 2025 (public comment period is CLOSED)
+
+Email Questions to:
+
+[email protected] <https://csrc.nist.gov/cdn-cgi/l/email-protection>
+
+Planning Note (01/21/2025):
+
+The public comments received <https://csrc.nist.gov/files/pubs/ir/8547/ipd/docs/nist-ir-8547-ipd-comments-received.pdf> are now available.
+
+Author(s)
+
+Dustin Moody (NIST), Ray Perlner (NIST), Andrew Regenscheid (NIST), Angela Robinson (NIST), David Cooper (NIST)
+
+Announcement
+
+This report describes NIST’s expected approach to transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes. It identifies existing quantum-vulnerable cryptographic standards and the current quantum-resistant standards that will be used in the migration. This report should inform the efforts and timelines of federal agencies, industry, and standards organizations for migrating information technology products, services, and infrastructure to PQC. Comments received on this draft will be used to revise this transition plan and feed into other algorithm- and application-specific guidance for the transition to PQC.
+
+NOTE: A call for patent claims is included on page ii of this draft. For additional information, see the Information Technology Laboratory (ITL) Patent Policy – Inclusion of Patents in ITL Publications <https://www.nist.gov/itl/publications-0/itl-patent-policy-inclusion-patents-itl-publications>.
+
+Abstract
+
+This report describes NIST’s expected approach to transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes. It identifies existing quantum-vulnerable cryptographic standards and the quantum-resistant standards to which information technology products and services will need to transition. It is intended to foster engagement with industry, standards organizations, and relevant agencies to facilitate and accelerate the adoption of post-quantum cryptography.
+
+This report describes NIST’s expected approach to transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes. It identifies existing quantum-vulnerable cryptographic standards and the quantum-resistant standards to which...
+See full abstract
+
+This report describes NIST’s expected approach to transitioning from quantum-vulnerable cryptographic algorithms to post-quantum digital signature algorithms and key-establishment schemes. It identifies existing quantum-vulnerable cryptographic standards and the quantum-resistant standards to which information technology products and services will need to transition. It is intended to foster engagement with industry, standards organizations, and relevant agencies to facilitate and accelerate the adoption of post-quantum cryptography.
+
+Hide full abstract
+
+Keywords
+
+cryptography; post-quantum cryptography; public key cryptography; quantum computing
+
+Control Families
+
+None selected
+
+Documentation
+
+Publication:
+
+https://doi.org/10.6028/NIST.IR.8547.ipd <https://doi.org/10.6028/NIST.IR.8547.ipd>
+
+Download URL <https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf>
+
+Supplemental Material:
+
+Public comments received (pdf) <https://csrc.nist.gov/files/pubs/ir/8547/ipd/docs/nist-ir-8547-ipd-comments-received.pdf>
+
+Document History:
+
+11/12/24: IR 8547 (Draft)
+
+Topics
+
+Security and Privacy
+
+post-quantum cryptography <https://csrc.nist.gov/topics/security-and-privacy/cryptography/post-quantum-cryptography>

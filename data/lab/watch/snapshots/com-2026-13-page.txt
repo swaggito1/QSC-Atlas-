@@ -1,0 +1,39 @@
+Proposal for a Directive as regards simplification measures and alignment with the Cybersecurity Act
+
+POLICY AND LEGISLATION
+
+Publication 20 January 2026
+
+The Commission has proposed a new cybersecurity package to further strengthen the EU's cybersecurity resilience and capabilities.
+
+AdobeStock © InfiniteFlow
+
+The package introduces measures to simplify compliance with EU cybersecurity rules and risk-management requirements for companies operating in the EU, complementing the single-entry point for incident reporting proposed in the Digital Omnibus <https://digital-strategy.ec.europa.eu/en/policies/digital-rulebook>. Targeted amendments to the NIS2 Directive <https://digital-strategy.ec.europa.eu/en/policies/nis2-directive> aim to increase legal clarity by simplifying jurisdictional rules, streamlining the collection of data on ransomware attacks and facilitating the supervision of cross-border entities with ENISA's reinforced coordinating role.
+
+You can download the Proposal and its annex below.
+
+Downloads
+
+1. COM(2026) 13 - Directive Proposal for simplification measures and alignment with the Cybersecurity Act
+
+Download <https://ec.europa.eu/newsroom/dae/redirection/document/123729>
+
+2. COM(2026) 13 - Annex to the Directive Proposal for simplification measures and alignment with the Cybersecurity Act
+
+Download <https://ec.europa.eu/newsroom/dae/redirection/document/123728>
+
+Related content
+
+Press release
+
+20 January 2026
+
+Commission strengthens EU cybersecurity resilience and capabilities <https://digital-strategy.ec.europa.eu/en/news/commission-strengthens-eu-cybersecurity-resilience-and-capabilities>
+
+Europe faces daily cyber and hybrid attacks on essential services and democratic institutions, carried out by sophisticated state and criminal groups.
+
+Last update
+
+21 January 2026
+
+Print as PDF <https://digital-strategy.ec.europa.eu/en/node/15659/printable/pdf>

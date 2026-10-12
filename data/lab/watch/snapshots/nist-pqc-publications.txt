@@ -1,0 +1,84 @@
+Series & Number
+Title
+Status
+Released
+
+CSWP 39upd1
+Considerations for Achieving Crypto Agility: Strategies and Practices <https://csrc.nist.gov/pubs/cswp/39/upd1/considerations-for-achieving-crypto-agility/final>
+Final
+06/29/2026
+
+Other 2026/954
+Black-box validation of Falcon key generation under numerical instability <https://csrc.nist.gov/pubs/other/2026/05/16/black-box-validation-of-falcon-key-generation-unde/final>
+Final
+05/16/2026
+
+IR 8610
+Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8610/final>
+Final
+05/14/2026
+
+SP 800-133 Rev. 3
+Recommendation for Cryptographic Key Generation <https://csrc.nist.gov/pubs/sp/800/133/r3/ipd>
+Draft
+04/17/2026
+
+SP 800-230
+Additional SLH-DSA Parameter Sets for Limited Signature Use Cases <https://csrc.nist.gov/pubs/sp/800/230/ipd>
+Draft
+04/13/2026
+
+SP 800-227
+Recommendations for Key-Encapsulation Mechanisms <https://csrc.nist.gov/pubs/sp/800/227/final>
+Final
+09/18/2025
+
+IR 8545
+Status Report on the Fourth Round of the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8545/final>
+Final
+03/11/2025
+
+IR 8547
+Transition to Post-Quantum Cryptography Standards <https://csrc.nist.gov/pubs/ir/8547/ipd>
+Draft
+11/12/2024
+
+IR 8528
+Status Report on the First Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8528/final>
+Final
+10/24/2024
+
+FIPS 203
+Module-Lattice-Based Key-Encapsulation Mechanism Standard <https://csrc.nist.gov/pubs/fips/203/final>
+Final
+08/13/2024
+
+FIPS 204
+Module-Lattice-Based Digital Signature Standard <https://csrc.nist.gov/pubs/fips/204/final>
+Final
+08/13/2024
+
+FIPS 205
+Stateless Hash-Based Digital Signature Standard <https://csrc.nist.gov/pubs/fips/205/final>
+Final
+08/13/2024
+
+IR 8413
+Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8413/upd1/final>
+Final
+09/29/2022
+
+IR 8309
+Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8309/final>
+Final
+07/22/2020
+
+IR 8240
+Status Report on the First Round of the NIST Post-Quantum Cryptography Standardization Process <https://csrc.nist.gov/pubs/ir/8240/final>
+Final
+01/31/2019
+
+IR 8105
+Report on Post-Quantum Cryptography <https://csrc.nist.gov/pubs/ir/8105/final>
+Final
+04/28/2016

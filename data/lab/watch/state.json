@@ -1,3 +1,120 @@
 {
-  "sources": {}
+  "sources": {
+    "atlas-profile-timelines": {
+      "commit": "3092c22bb89b3a138915ff8e408487222fe02052",
+      "consecutiveFailures": 0,
+      "kind": "internal-diff",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z"
+    },
+    "atlas-results-diff": {
+      "commit": "3092c22bb89b3a138915ff8e408487222fe02052",
+      "consecutiveFailures": 0,
+      "kind": "internal-diff",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z"
+    },
+    "cellar-base-acts": {
+      "bytes": 37715,
+      "consecutiveFailures": 0,
+      "hash": "11a8939657720ec0953ccf6967bba0a149a670fd5edb8de0852ca559ccb5422e",
+      "kind": "sparql",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "cellar-proposal-procedures": {
+      "bytes": 3705,
+      "consecutiveFailures": 0,
+      "hash": "3a56794e784e79b398ec3e3b12044257d7a7547f4fbaee819f2af30a62466d5a",
+      "kind": "sparql",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "com-2026-13-page": {
+      "bytes": 1898,
+      "consecutiveFailures": 0,
+      "hash": "65efb3a52e9c0ae1c967fd8a86bdbafcb230cd83ac2b681929acc1624170fc89",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "evolutionq-publications": {
+      "bytes": 4122,
+      "consecutiveFailures": 0,
+      "hash": "93987536cbf67e49548f3b29a3045efbe32a83b9a2f240c5f9d0e72f7f7ccf0b",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "gri-publications": {
+      "bytes": 2264,
+      "consecutiveFailures": 0,
+      "hash": "447265e8a6d0f9e816a327c402f764f3097c60ad879635c1b6b680d6c24b4285",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "ncsc-uk-pqc-timelines": {
+      "bytes": 31632,
+      "consecutiveFailures": 0,
+      "hash": "492b4535bbd32401e959624ec16428a6ac9794401de9975555e56dbaab30c1dc",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "nist-ir-8547": {
+      "bytes": 4123,
+      "consecutiveFailures": 0,
+      "hash": "0198a3cedc8787d878c3add700faa3b438b095144d29bc7127c1ba2ad443a0b4",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "nist-pqc-project": {
+      "bytes": 4524,
+      "consecutiveFailures": 0,
+      "hash": "8ec3db574c99ad1a81b89b4ee6626c6dbc83abb9aae9c0149bd85c3fbf449bb5",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "nist-pqc-publications": {
+      "bytes": 2505,
+      "consecutiveFailures": 0,
+      "hash": "056d260a73e1729008970a65a2c4241d6fccdcc1e312647d291477f5b70bf2f9",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    },
+    "oeil-com-2026-13": {
+      "bytes": 2752,
+      "consecutiveFailures": 0,
+      "hash": "cbfea09e8a30718b7e2490426d9ff9c70c9db76b579f49b7903f6bde5912c296",
+      "kind": "html",
+      "lastAttempt": "2026-10-12T13:08:56.000Z",
+      "lastError": null,
+      "lastFetch": "2026-10-12T13:08:56.000Z",
+      "truncated": false
+    }
+  }
 }

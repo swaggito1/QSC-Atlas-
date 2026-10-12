@@ -1,0 +1,59 @@
+Quantum Briefing June 2026
+
+Dr. Michele Mosca, Dr. Marco Piani, Global Risk Institute, June 2026
+View Report <https://frequency.evolutionq.com/quantum-briefing-june26>View ReportView Report <https://www.evolutionq.com/publications/quantum-briefing-june-2026>
+
+Quantum Threat Timeline Research Report 2025
+
+Dr. Michele Mosca, Dr. Marco Piani, Global Risk Institute, March 2026
+View Report <https://frequency.evolutionq.com/quantum-threat-timeline-report-2025>View ReportView Report <https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2025>
+
+Quantum Threat Timeline Research Report 2024
+
+Dr. Michele Mosca, Dr. Marco Piani, Global Risk Institute, December 2024.
+View Report <https://frequency.evolutionq.com/quantum-threat-timeline-2024>View ReportView Report <https://www.evolutionq.com/publications/quantum-threat-timeline-research-report-2024>
+
+Quantum Threat Timeline: Executive Perspectives on Barriers to Action
+
+John Mulholland, Sarah McCarthy, Global Risk Institute, July 2024
+View Report <https://globalriskinstitute.org/publication/quantum-threat-timeline-executive-perspectives-on-barriers-to-action/>View ReportView Report <https://www.evolutionq.com/publications/quantum-threat-timeline-executive-perspectives-2024>
+
+Quantum Threat Timeline Research Report 2023
+
+Dr. Michele Mosca, Dr. Marco Piani, Global Risk Institute, December 2023.
+View Report <https://globalriskinstitute.org/publication/2023-quantum-threat-timeline-report/>View ReportView Report <https://www.evolutionq.com/publications/quantum-threat-timeline-2023>
+
+Quantum Threat Timeline Research Report 2022
+
+Dr. Michele Mosca, Dr. Marco Piani, Global Risk Institute, December 2022.
+View Report <https://globalriskinstitute.org/publication/2022-quantum-threat-timeline-report/>View ReportView Report <https://www.evolutionq.com/publications/quantum-threat-timeline-2022>
+
+Quantum Random Number Generators Report
+
+Dr. Marco Piani, Dr. Michele Mosca and Brian Neill, CISSP, 13 January 2021.
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/64514fe1fa591ca8eacfb515_qrng-report-2021-evolutionQ.pdf>View Report <https://www.evolutionq.com/publications/quantum-random-number-generators-report>
+
+Quantum-Proofing the Blockchain
+
+Vlad Gheorghiu, Sergey Gorbunov, Michele Mosca, and Bill Munson, Blockchain Research Institute, November 2017.
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/63f6f0ea39759c82c40f319b_mosca_quantum-proofing-the-blockchain_blockchain-research-institute.pdf>View Report <https://www.evolutionq.com/publications/quantum-proofing-the-blockchain>
+
+A Methodology for Quantum Risk Assessment
+
+Michele Mosca and John Mulholland, Global Risk Institute, 5 January 2017.
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/648c8e28cfee25748915738f_a-methodology-for-quantum-risk-assessment-pdf.pdf>View Report <https://www.evolutionq.com/publications/quantum-risk-assessment>
+
+Cybersecurity in an era with quantum computers: will we be ready?
+
+Michele Mosca, Cryptology ePrint Archive, Report 2015/1075 (2015).
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/63f3aab8c1fab5b7e92ee3dc_2015-1075.pdf>View Report <https://www.evolutionq.com/publications/cybersecurity-with-quantum-computers>
+
+A Quantum of Prevention for our Cyber-Security
+
+Michele Mosca, Global Risk Institute, 5 September 2016.
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/63f3aa95a1e6ca514ad4e28e_gri---a-quantum-of-prevention-for-our-cybersecurity.pdf>View Report <https://www.evolutionq.com/publications/a-quantum-of-prevention-for-our-cyber-security>
+
+Quantum Safe Cryptography and Security
+
+An introduction, benefits, enablers and challenges European Telecommunications Standards Institute (2014). ISBN 979-10-92620-03-0.
+View ReportView Report <https://cdn.prod.website-files.com/63ef0996726f31b9968ba679/63ef09c1c320f61e630a8873_quantum-safe-whitepaper.1.0.0.pdf>View Report <https://www.evolutionq.com/publications/quantum-safe-cryptography-and-security>

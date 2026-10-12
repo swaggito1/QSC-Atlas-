@@ -1,0 +1,57 @@
+Short URL: https://www.nist.gov/pqcrypto <https://www.nist.gov/pqcrypto>
+
+For a plain-language introduction to post-quantum cryptography, see What Is Post-Quantum Cryptography? <https://www.nist.gov/cybersecurity/what-post-quantum-cryptography>
+
+PQC Standards | Migration to PQC | Ongoing PQC Standardization Process
+
+NIST’s Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat of quantum computers—machines that may be years or decades away but could eventually break many of today’s widely used cryptographic systems. Through a multi-year international competition involving industry, academia, and governments, NIST released the principal three PQC standards in 2024 <https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards> and is developing additional standards to serve as backups or alternatives. Organizations should begin applying these standards now to migrate their systems to quantum-resistant cryptography.
+
+Alongside these standards, NIST conducts foundational cryptographic research; collaborates with industry and federal partners <https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms> to guide organizations preparing for PQC migration; and administers the Cryptographic Module Validation Program <https://csrc.nist.gov/projects/cryptographic-module-validation-program> to promote validated, trustworthy cryptography. These efforts both protect data and information systems and sustain U.S. leadership in quantum information science and cryptographic innovation.
+
+PQC Standards
+
+In August 2024, NIST released its principal PQC standards (as Federal Information Processing Standards, or FIPS), specifying key establishment and digital signature schemes based on candidates evaluated and selected through this multi-year process.
+
+<https://csrc.nist.gov/pubs/fips/203/final>
+
+FIPS 203
+
+Module-Lattice-Based
+
+Key-Encapsulation Mechanism Standard <https://csrc.nist.gov/pubs/fips/203/final>
+
+(ML-KEM)
+
+<https://csrc.nist.gov/pubs/fips/204/final>
+
+FIPS 204
+
+Module-Lattice-Based
+
+Digital Signature Standard <https://csrc.nist.gov/pubs/fips/204/final>
+
+(ML-DSA)
+
+<https://csrc.nist.gov/pubs/fips/205/final>
+
+FIPS 205
+
+Stateless Hash-Based
+
+Digital Signature Standard <https://csrc.nist.gov/pubs/fips/205/final>
+
+(SLH-DSA)
+
+Migration to PQC
+
+With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography. Cybersecurity products, services, and protocols will need updates, and organizations must identify where vulnerable algorithms are used and plan to replace or update them. Under the transition timeline in NIST IR 8547 <https://csrc.nist.gov/pubs/ir/8547/ipd>, NIST will deprecate and ultimately remove quantum-vulnerable algorithms from its standards by 2035, with high-risk systems transitioning much earlier.
+
+The Migration to Post-Quantum Project <https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms> at the National Cybersecurity Center of Excellence is working with industry, academia, and federal partners to accelerate this shift by demonstrating tools to find and prioritize vulnerable systems, supporting interoperable solutions, and developing migration guidance.
+
+Ongoing PQC Standardization Process
+
+NIST expects that the two digital signature standards (ML-DSA and SLH-DSA) and key-encapsulation mechanism standard (ML-KEM) will provide the foundation for most deployments of post-quantum cryptography. They can and should be put into use now.
+
+NIST continues to evaluate the security and performance of innovative algorithms in order to identify additional candidates for standardization. In addition to the three algorithms specified in the initial FIPS standards, the Falcon digital signature algorithm <https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4> and HQC key encapsulation mechanism <https://csrc.nist.gov/news/2025/hqc-announced-as-a-4th-round-selection> were selected for ongoing standardization; that process is underway.
+
+This process continues with a longer-term effort that solicited additional algorithms for digital signature schemes that could serve as a backup to ML-DSA or that could address unique use cases. Learn more on the Additional Digital Signature Schemes <https://csrc.nist.gov/projects/pqc-dig-sig> page.
