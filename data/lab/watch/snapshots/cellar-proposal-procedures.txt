@@ -21,12 +21,14 @@ procedure	proposal_celex	event_date	event_type	event_label_en	institution	phase
 2025/0360/COD	52025PC0837	2026-10-07	ADP_MAND_NGT_INST_COREPER_byCONSIL	Adoption of negotiating mandate by Coreper	CONSIL	RDG1
 2025/0360/COD	52025PC0837	2026-10-11	ADP_MAND_NGT_INST_COREPER_byCONSIL	Adoption of negotiating mandate by Coreper	CONSIL	RDG1
 2025/0360/COD	52025PC0837	2026-10-13	DELIB_byCONSIL	Deliberations in Council	CONSIL	RDG1
+2025/0360/COD	52025PC0837	2026-10-21	ADP_MAND_NGT_INST_COREPER_byCONSIL	Adoption of negotiating mandate by Coreper	CONSIL	RDG1
 2026/0011/COD	52026PC0011	2026-01-21	ADP_PROPLEG_byCOM	Adoption of legislative proposal by the Commission	COM	PROP
 2026/0011/COD	52026PC0011	2026-03-25	REF_OF_byEP	Referral of the legislative proposal to the EP committee responsible (announced in plenary)	EP	RDG1
 2026/0011/COD	52026PC0011	2026-04-29	OPI_byEESC	European Economic and Social Committee opinion	EESC	RDG1
 2026/0011/COD	52026PC0011	2026-06-03	DELIB_COREPER_byCONSIL	Deliberations in Coreper	CONSIL	RDG1
 2026/0011/COD	52026PC0011	2026-06-09	DELIB_byCONSIL	Deliberations in Council	CONSIL	RDG1
 2026/0011/COD	52026PC0011	2026-09-18	REP_R1_byEP_CMT	EP committee draft report	EP	RDG1
+2026/0011/COD	52026PC0011	2026-10-13	TABLAMEND_byEP_CMT	Tabling of amendments in the EP committee responsible	EP	RDG1
 2026/0012/COD	52026PC0013	2026-01-21	ADP_PROPLEG_byCOM	Adoption of legislative proposal by the Commission	COM	PROP
 2026/0012/COD	52026PC0013	2026-03-25	REF_OF_byEP	Referral of the legislative proposal to the EP committee responsible (announced in plenary)	EP	RDG1
 2026/0012/COD	52026PC0013	2026-04-29	OPI_byEESC	European Economic and Social Committee opinion	EESC	RDG1
@@ -34,3 +36,4 @@ procedure	proposal_celex	event_date	event_type	event_label_en	institution	phase
 2026/0012/COD	52026PC0013	2026-06-09	DELIB_byCONSIL	Deliberations in Council	CONSIL	RDG1
 2026/0012/COD	52026PC0013	2026-09-17	REP_R1_byEP_CMT	EP committee draft report	EP	RDG1
 2026/0012/COD	52026PC0013	2026-09-24	REP_R1_byEP_CMT	EP committee draft report	EP	RDG1
+2026/0012/COD	52026PC0013	2026-10-13	TABLAMEND_byEP_CMT	Tabling of amendments in the EP committee responsible	EP	RDG1
