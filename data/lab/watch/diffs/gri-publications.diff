@@ -1,27 +1,59 @@
 ===================================================================
---- a/data/lab/watch/snapshots/gri-publications.txt	2026-10-12T13:08:56.000Z
-+++ b/data/lab/watch/snapshots/gri-publications.txt	2026-10-19T10:44:49.561Z
-@@ -1,3 +1,11 @@
-+Regulations and Standards, Risk Management, Sustainable Finance
+--- a/data/lab/watch/snapshots/gri-publications.txt	2026-10-19T10:44:49.561Z
++++ b/data/lab/watch/snapshots/gri-publications.txt	2026-11-02T13:28:18.641Z
+@@ -1,3 +1,27 @@
++Geopolitical Risks, Sustainable Finance, Technology Innovations
 +
-+October 15, 2026
++October 27, 2026
 +
-+OSFI Guidance on Cat Bonds: Implications for the Canadian Financial System
++The Evolving Governance of Defence-Related Finance: Considerations for Canadian Financial Institutions
 +
-+Read More <https://globalriskinstitute.org/publication/osfi-guidance-on-cat-bonds-implications-for-the-canadian-financial-system/>
++Read More <https://globalriskinstitute.org/publication/the-evolving-governance-of-defence-related-finance-considerations-for-canadian-financial-institutions/>
 +
- Pension, Risk Management
++Regulations and Standards, Macroeconomic Risks, Risk Management
++
++October 26, 2026
++
++Regulatory Divergence and Global Fragmentation—Basel and Beyond
++
++Read More <https://globalriskinstitute.org/publication/regulatory-divergence-and-global-fragmentation-basel-and-beyond/>
++
++Financial Risks, Regulations and Standards, Technology Innovations
++
++October 26, 2026
++
++Hidden in Plain Sight: The Risk Dynamics of Buy Now Pay Later Loans
++
++Read More <https://globalriskinstitute.org/publication/hidden-in-plain-sight-the-risk-dynamics-of-buy-now-pay-later-loans/>
++
+ Regulations and Standards, Risk Management, Sustainable Finance
  
- October 1, 2026
-@@ -61,11 +69,3 @@
- Closing Europe’s Risk Capital Gap: The Role of Funded Pensions
+ October 15, 2026
+@@ -45,27 +69,3 @@
+ The Mandate Blindspot in Your Portfolio: Why Missing Suppliers Means Lost Performance
  
- Read More <https://globalriskinstitute.org/publication/closing-europes-risk-capital-gap-the-role-of-funded-pensions/>
+ Read More <https://globalriskinstitute.org/publication/the-mandate-blindspot-in-your-portfolio-why-missing-suppliers-means-lost-performance/>
 -
--Risk Management, Operational Resilience
+-Geopolitical Risks, Operational Resilience, Risk Management
 -
 -September 30, 2026
 -
--Indigenous Equity Participation and Non-Market Risk in Infrastructure Investment
+-Chokepoint Shock Maps: Firm-Level Portfolio Stress for Geoeconomic Risk
 -
--Read More <https://globalriskinstitute.org/publication/indigenous-equity-participation-and-non-market-risk-in-infrastructure-investment/>
+-Read More <https://globalriskinstitute.org/publication/chokepoint-shock-maps-firm-level-portfolio-stress-for-geoeconomic-risk/>
+-
+-Geopolitical Risks, Operational Resilience, Risk Management
+-
+-September 30, 2026
+-
+-Measuring Tail Geopolitical Risk
+-
+-Read More <https://globalriskinstitute.org/publication/measuring-tail-geopolitical-risk/>
+-
+-Financial Risks, Pension
+-
+-September 30, 2026
+-
+-Closing Europe’s Risk Capital Gap: The Role of Funded Pensions
+-
+-Read More <https://globalriskinstitute.org/publication/closing-europes-risk-capital-gap-the-role-of-funded-pensions/>

@@ -1,0 +1,21 @@
+===================================================================
+--- a/data/lab/watch/snapshots/nist-ir-8547.txt	2026-10-26T11:05:03.662Z
++++ b/data/lab/watch/snapshots/nist-ir-8547.txt	2026-11-02T13:28:18.641Z
+@@ -3,6 +3,8 @@
+ NIST IR 8547
+ (Initial Public Draft)
+ 
++Obsoleted on October 27, 2026 by IR 8547 <https://csrc.nist.gov/pubs/ir/8547/final>
++
+ Transition to Post-Quantum Cryptography Standards
+ 
+ <https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcsrc.nist.gov%2Fpubs%2Fir%2F8547%2Fipd>
+@@ -71,6 +73,8 @@
+ 
+ 11/12/24: IR 8547 (Draft)
+ 
++10/27/26: IR 8547 (Final) <https://csrc.nist.gov/pubs/ir/8547/final>
++
+ Topics
+ 
+ Security and Privacy

@@ -1,0 +1,12 @@
+===================================================================
+--- a/data/lab/watch/snapshots/nist-pqc-project.txt	2026-10-26T11:05:03.662Z
++++ b/data/lab/watch/snapshots/nist-pqc-project.txt	2026-11-02T13:28:18.641Z
+@@ -44,7 +44,7 @@
+ 
+ Migration to PQC
+ 
+-With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography. Cybersecurity products, services, and protocols will need updates, and organizations must identify where vulnerable algorithms are used and plan to replace or update them. Under the transition timeline in NIST IR 8547 <https://csrc.nist.gov/pubs/ir/8547/ipd>, NIST will deprecate and ultimately remove quantum-vulnerable algorithms from its standards by 2035, with high-risk systems transitioning much earlier.
++With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography. Cybersecurity products, services, and protocols will need updates, and organizations must identify where vulnerable algorithms are used and plan to replace or update them. Under the transition timeline in NIST IR 8547 <https://csrc.nist.gov/pubs/ir/8547/final>, NIST will deprecate and ultimately remove quantum-vulnerable algorithms from its standards by 2035, with high-risk systems transitioning much earlier.
+ 
+ The Migration to Post-Quantum Project <https://www.nccoe.nist.gov/crypto-agility-considerations-migrating-post-quantum-cryptographic-algorithms> at the National Cybersecurity Center of Excellence is working with industry, academia, and federal partners to accelerate this shift by demonstrating tools to find and prioritize vulnerable systems, supporting interoperable solutions, and developing migration guidance.
+ 
