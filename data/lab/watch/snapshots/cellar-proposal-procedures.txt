@@ -22,6 +22,8 @@ procedure	proposal_celex	event_date	event_type	event_label_en	institution	phase
 2025/0360/COD	52025PC0837	2026-10-11	ADP_MAND_NGT_INST_COREPER_byCONSIL	Adoption of negotiating mandate by Coreper	CONSIL	RDG1
 2025/0360/COD	52025PC0837	2026-10-13	DELIB_byCONSIL	Deliberations in Council	CONSIL	RDG1
 2025/0360/COD	52025PC0837	2026-10-21	ADP_MAND_NGT_INST_COREPER_byCONSIL	Adoption of negotiating mandate by Coreper	CONSIL	RDG1
+2025/0360/COD	52025PC0837	2026-11-04	OPI_R1_byEP_CMT	Adoption of an opinion by the EP opinion-giving committee	EP	RDG1
+2025/0360/COD	52025PC0837	2026-11-19	DELIB_byCONSIL	Deliberations in Council	CONSIL	RDG1
 2026/0011/COD	52026PC0011	2026-01-21	ADP_PROPLEG_byCOM	Adoption of legislative proposal by the Commission	COM	PROP
 2026/0011/COD	52026PC0011	2026-03-25	REF_OF_byEP	Referral of the legislative proposal to the EP committee responsible (announced in plenary)	EP	RDG1
 2026/0011/COD	52026PC0011	2026-04-29	OPI_byEESC	European Economic and Social Committee opinion	EESC	RDG1
