@@ -4,37 +4,38 @@
       "commit": "3092c22bb89b3a138915ff8e408487222fe02052",
       "consecutiveFailures": 0,
       "kind": "internal-diff",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z"
+      "lastFetch": "2026-11-16T13:36:45.110Z"
     },
     "atlas-results-diff": {
       "commit": "3092c22bb89b3a138915ff8e408487222fe02052",
       "consecutiveFailures": 0,
       "kind": "internal-diff",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z"
+      "lastFetch": "2026-11-16T13:36:45.110Z"
     },
     "cellar-base-acts": {
-      "bytes": 37715,
+      "bytes": 38312,
       "consecutiveFailures": 0,
-      "hash": "11a8939657720ec0953ccf6967bba0a149a670fd5edb8de0852ca559ccb5422e",
+      "hash": "cfce601d4ff5be1c183877d131dd21999c6e90967440452333af1298dc8ecc1c",
       "kind": "sparql",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
+      "lastChange": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "cellar-proposal-procedures": {
-      "bytes": 4276,
+      "bytes": 4633,
       "consecutiveFailures": 0,
-      "hash": "07d95c77353d2e548f3836ed592ff8bbd617fce63d149fad94ec10b829b2921f",
+      "hash": "3167fcc77884588c3acf4c8fe2a513b641166678304c8469e7a2764bfb127c41",
       "kind": "sparql",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
-      "lastChange": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
+      "lastChange": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "com-2026-13-page": {
@@ -42,30 +43,31 @@
       "consecutiveFailures": 0,
       "hash": "65efb3a52e9c0ae1c967fd8a86bdbafcb230cd83ac2b681929acc1624170fc89",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "evolutionq-publications": {
-      "bytes": 4122,
+      "bytes": 4396,
       "consecutiveFailures": 0,
-      "hash": "93987536cbf67e49548f3b29a3045efbe32a83b9a2f240c5f9d0e72f7f7ccf0b",
+      "hash": "372f9b8caedbae53e7a337bb245c897eea8b8fb63306198266595629d9f9594f",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
+      "lastChange": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "gri-publications": {
-      "bytes": 2362,
+      "bytes": 2591,
       "consecutiveFailures": 0,
-      "hash": "f7aca21b4ab9baf8377234d8ca6000331328e25e90548ce104e5d41a858227c2",
+      "hash": "54eb6a9edafd5c227e535ad54f150f17e5fed1f49397507b92b9a0d2b43a0a83",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
-      "lastChange": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
+      "lastChange": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "ncsc-uk-pqc-timelines": {
@@ -73,9 +75,9 @@
       "consecutiveFailures": 0,
       "hash": "492b4535bbd32401e959624ec16428a6ac9794401de9975555e56dbaab30c1dc",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "nist-ir-8547": {
@@ -83,10 +85,10 @@
       "consecutiveFailures": 0,
       "hash": "dca9473d4a9f222d6672db4ca1fd6b8d7bb0f836b5469bb3e1f5c7baecdb5a0c",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastChange": "2026-11-02T13:28:18.641Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "nist-pqc-project": {
@@ -94,10 +96,10 @@
       "consecutiveFailures": 0,
       "hash": "981e27b285f2cfbec0000f48432ad7aff7906adb58f3f50eb71df784b47626b6",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastChange": "2026-11-02T13:28:18.641Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "nist-pqc-publications": {
@@ -105,10 +107,10 @@
       "consecutiveFailures": 0,
       "hash": "d0e27f485b250d2754c7255fc1392e0c9c4d4796e14ed7e67a88bc7a2476027a",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastChange": "2026-11-02T13:28:18.641Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     },
     "oeil-com-2026-13": {
@@ -116,10 +118,10 @@
       "consecutiveFailures": 0,
       "hash": "9d20a94bb2aba25286b054270eb036f4fb3ce55d75e51b1eceaf67066bf53c8d",
       "kind": "html",
-      "lastAttempt": "2026-11-09T13:52:18.634Z",
+      "lastAttempt": "2026-11-16T13:36:45.110Z",
       "lastChange": "2026-10-26T11:05:03.662Z",
       "lastError": null,
-      "lastFetch": "2026-11-09T13:52:18.634Z",
+      "lastFetch": "2026-11-16T13:36:45.110Z",
       "truncated": false
     }
   }
